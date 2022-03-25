@@ -1,0 +1,716 @@
+<Type Name="ProjectTargetInstance" FullName="Microsoft.Build.Execution.ProjectTargetInstance">
+  <TypeSignature Language="C#" Value="public sealed class ProjectTargetInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProjectTargetInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectTargetInstance" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProjectTargetInstance" />
+  <TypeSignature Language="F#" Value="type ProjectTargetInstance = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore">
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={_name} Count={_children.Count} Condition={_condition} Inputs={_inputs} Outputs={_outputs} DependsOnTargets={_dependsOnTargets}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={_name} Count={_children.Count} Condition={_condition} Inputs={_inputs} Outputs={_outputs} DependsOnTargets={_dependsOnTargets}")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={_name} Count={_children.Count} Condition={_condition} Inputs={_inputs} Outputs={_outputs} DependsOnTargets={_dependsOnTargets} BeforeTargets={_beforeTargets} AfterTargets={_afterTargets}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={_name} Count={_children.Count} Condition={_condition} Inputs={_inputs} Outputs={_outputs} DependsOnTargets={_dependsOnTargets} BeforeTargets={_beforeTargets} AfterTargets={_afterTargets}")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={name} Count={children.Count} Condition={condition} Inputs={inputs} Outputs={outputs} DependsOnTargets={dependsOnTargets}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={name} Count={children.Count} Condition={condition} Inputs={inputs} Outputs={outputs} DependsOnTargets={dependsOnTargets}")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Wraps a target element
+            </summary>
+    <remarks>
+            This is an immutable class.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterTargets">
+      <MemberSignature Language="C#" Value="public string AfterTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AfterTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.AfterTargets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AfterTargets As String" />
+      <MemberSignature Language="F#" Value="member this.AfterTargets : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.AfterTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated semicolon separated list of targets it runs after.
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation AfterTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation AfterTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.AfterTargetsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AfterTargetsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.AfterTargetsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.AfterTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the afterTargets
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeTargets">
+      <MemberSignature Language="C#" Value="public string BeforeTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BeforeTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BeforeTargets As String" />
+      <MemberSignature Language="F#" Value="member this.BeforeTargets : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated semicolon separated list of targets it runs before.
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargetsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BeforeTargetsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.BeforeTargetsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the beforeTargets
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTargetInstanceChild&gt; Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Execution.ProjectTargetInstanceChild&gt; Children" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Children" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Children As IList(Of ProjectTargetInstanceChild)" />
+      <MemberSignature Language="F#" Value="member this.Children : System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTargetInstanceChild&gt;" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTargetInstanceChild&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Children below the target. The build iterates through this to get each task to execute.
+            This is an ordered collection.
+            This is a read-only list; the ProjectTargetInstance class is immutable.
+            This collection does not contain the OnError target references.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Condition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Condition As String" />
+      <MemberSignature Language="F#" Value="member this.Condition : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated condition on the task.
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.ConditionLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConditionLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.ConditionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the condition, if any
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnTargets">
+      <MemberSignature Language="C#" Value="public string DependsOnTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DependsOnTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DependsOnTargets As String" />
+      <MemberSignature Language="F#" Value="member this.DependsOnTargets : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated semicolon separated list of targets it depends on.
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargetsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DependsOnTargetsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.DependsOnTargetsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the dependsOnTargets
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.FullPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullPath As String" />
+      <MemberSignature Language="F#" Value="member this.FullPath : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Full path to the file from which this target originated.
+            If it originated in a project that was not loaded and has never been
+            given a path, returns an empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inputs">
+      <MemberSignature Language="C#" Value="public string Inputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Inputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Inputs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Inputs As String" />
+      <MemberSignature Language="F#" Value="member this.Inputs : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Inputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated inputs on the target element.
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation InputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation InputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.InputsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InputsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.InputsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.InputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the inputs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepDuplicateOutputs">
+      <MemberSignature Language="C#" Value="public string KeepDuplicateOutputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeepDuplicateOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeepDuplicateOutputs As String" />
+      <MemberSignature Language="F#" Value="member this.KeepDuplicateOutputs : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated condition on which we will trim duplicate outputs from the target outputs
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepDuplicateOutputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeepDuplicateOutputsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.KeepDuplicateOutputsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the KeepDuplicatOutputs attribute
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Location" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.Location : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the original element
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnErrorChildren">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectOnErrorInstance&gt; OnErrorChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Execution.ProjectOnErrorInstance&gt; OnErrorChildren" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.OnErrorChildren" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OnErrorChildren As IList(Of ProjectOnErrorInstance)" />
+      <MemberSignature Language="F#" Value="member this.OnErrorChildren : System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectOnErrorInstance&gt;" Usage="Microsoft.Build.Execution.ProjectTargetInstance.OnErrorChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectOnErrorInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The children below the target which refer to OnError targets.
+            This is an ordered collection.
+            This is a read-only list; the ProjectTargetInstance class is immutable.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public string Outputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Outputs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Outputs As String" />
+      <MemberSignature Language="F#" Value="member this.Outputs : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated outputs on the target element
+            May be empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation OutputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation OutputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.OutputsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.OutputsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.OutputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the outputs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Returns">
+      <MemberSignature Language="C#" Value="public string Returns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Returns" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Returns" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Returns As String" />
+      <MemberSignature Language="F#" Value="member this.Returns : string" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Returns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unevaluated return values on the target element
+            May be empty string or null, if no return value is specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ReturnsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ReturnsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.ReturnsLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnsLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.ReturnsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectTargetInstance.ReturnsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location of the returns
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tasks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectTaskInstance&gt; Tasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Execution.ProjectTaskInstance&gt; Tasks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Tasks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tasks As ICollection(Of ProjectTaskInstance)" />
+      <MemberSignature Language="F#" Value="member this.Tasks : System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectTaskInstance&gt;" Usage="Microsoft.Build.Execution.ProjectTargetInstance.Tasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectTaskInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Just the tasks below this target, if any.
+            Other kinds of children are not included.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,532 @@
+<Type Name="ProjectStartedEventArgs" FullName="Microsoft.Build.Framework.ProjectStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class ProjectStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ProjectStartedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ProjectStartedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectStartedEventArgs&#xA;Inherits BuildStatusEventArgs" />
+  <TypeSignature Language="F#" Value="type ProjectStartedEventArgs = class&#xA;    inherit BuildStatusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Arguments for project started events
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProjectStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, targetNames As String, properties As IEnumerable, items As IEnumerable)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ProjectStartedEventArgs : string * string * string * string * System.Collections.IEnumerable * System.Collections.IEnumerable -&gt; Microsoft.Build.Framework.ProjectStartedEventArgs" Usage="new Microsoft.Build.Framework.ProjectStartedEventArgs (message, helpKeyword, projectFile, targetNames, properties, items)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <param name="properties">list of properties</param>
+        <param name="items">list of items</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, targetNames As String, properties As IEnumerable, items As IEnumerable, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ProjectStartedEventArgs : string * string * string * string * System.Collections.IEnumerable * System.Collections.IEnumerable * DateTime -&gt; Microsoft.Build.Framework.ProjectStartedEventArgs" Usage="new Microsoft.Build.Framework.ProjectStartedEventArgs (message, helpKeyword, projectFile, targetNames, properties, items, eventTimestamp)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="projectFile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetNames" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <param name="properties">list of properties</param>
+        <param name="items">list of items</param>
+        <param name="eventTimestamp">The <see cref="T:System.DateTime" /> of the event.</param>
+        <summary>
+            This constructor allows event data to be initialized. Also the timestamp can be set
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (projectId As Integer, message As String, helpKeyword As String, projectFile As String, targetNames As String, properties As IEnumerable, items As IEnumerable, parentBuildEventContext As BuildEventContext)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ProjectStartedEventArgs : int * string * string * string * string * System.Collections.IEnumerable * System.Collections.IEnumerable * Microsoft.Build.Framework.BuildEventContext -&gt; Microsoft.Build.Framework.ProjectStartedEventArgs" Usage="new Microsoft.Build.Framework.ProjectStartedEventArgs (projectId, message, helpKeyword, projectFile, targetNames, properties, items, parentBuildEventContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="message" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="projectFile" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetNames" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">project id</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <param name="properties">list of properties</param>
+        <param name="items">list of items</param>
+        <param name="parentBuildEventContext">event context info for the parent project</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (projectId As Integer, message As String, helpKeyword As String, projectFile As String, targetNames As String, properties As IEnumerable, items As IEnumerable, parentBuildEventContext As BuildEventContext, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ProjectStartedEventArgs : int * string * string * string * string * System.Collections.IEnumerable * System.Collections.IEnumerable * Microsoft.Build.Framework.BuildEventContext * DateTime -&gt; Microsoft.Build.Framework.ProjectStartedEventArgs" Usage="new Microsoft.Build.Framework.ProjectStartedEventArgs (projectId, message, helpKeyword, projectFile, targetNames, properties, items, parentBuildEventContext, eventTimestamp)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="message" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="projectFile" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetNames" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="8" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">project id</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <param name="properties">list of properties</param>
+        <param name="items">list of items</param>
+        <param name="parentBuildEventContext">event context info for the parent project</param>
+        <param name="eventTimestamp">The <see cref="T:System.DateTime" /> of the event.</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (projectId As Integer, message As String, helpKeyword As String, projectFile As String, targetNames As String, properties As IEnumerable, items As IEnumerable, parentBuildEventContext As BuildEventContext, globalProperties As IDictionary(Of String, String), toolsVersion As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ProjectStartedEventArgs : int * string * string * string * string * System.Collections.IEnumerable * System.Collections.IEnumerable * Microsoft.Build.Framework.BuildEventContext * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Framework.ProjectStartedEventArgs" Usage="new Microsoft.Build.Framework.ProjectStartedEventArgs (projectId, message, helpKeyword, projectFile, targetNames, properties, items, parentBuildEventContext, globalProperties, toolsVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="message" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="projectFile" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetNames" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="8" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="toolsVersion" Type="System.String" Index="9" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">project id</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <param name="properties">list of properties</param>
+        <param name="items">list of items</param>
+        <param name="parentBuildEventContext">event context info for the parent project</param>
+        <param name="globalProperties">An <see cref="T:System.Collections.Generic.IDictionary`2" /> containing global properties.</param>
+        <param name="toolsVersion">The tools version.</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalProperties As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the set of global properties used to evaluate this project.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidProjectId">
+      <MemberSignature Language="C#" Value="public const int InvalidProjectId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidProjectId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.ProjectStartedEventArgs.InvalidProjectId" />
+      <MemberSignature Language="VB.NET" Value="Public Const InvalidProjectId As Integer  = -1" />
+      <MemberSignature Language="F#" Value="val mutable InvalidProjectId : int" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.InvalidProjectId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates an invalid project identifier.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Items" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Items As IEnumerable" />
+      <MemberSignature Language="F#" Value="member this.Items : System.Collections.IEnumerable" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of items in this project. This is a live, read-only list.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentProjectBuildEventContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventContext ParentProjectBuildEventContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.BuildEventContext ParentProjectBuildEventContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentProjectBuildEventContext As BuildEventContext" />
+      <MemberSignature Language="F#" Value="member this.ParentProjectBuildEventContext : Microsoft.Build.Framework.BuildEventContext" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.BuildEventContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event context information, where the event was fired from in terms of the build location
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectFile As String" />
+      <MemberSignature Language="F#" Value="member this.ProjectFile : string" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Project name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectId">
+      <MemberSignature Language="C#" Value="public int ProjectId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProjectId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectId As Integer" />
+      <MemberSignature Language="F#" Value="member this.ProjectId : int" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the identifier of the project.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As IEnumerable" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.IEnumerable" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of properties in this project. This is a live, read-only list.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNames">
+      <MemberSignature Language="C#" Value="public string TargetNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetNames As String" />
+      <MemberSignature Language="F#" Value="member this.TargetNames : string" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Targets that we will build in the project
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToolsVersion As String" />
+      <MemberSignature Language="F#" Value="member this.ToolsVersion : string" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tools version used to evaluate this project.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1592 @@
+<Type Name="ProjectCollection" FullName="Microsoft.Build.Evaluation.ProjectCollection">
+  <TypeSignature Language="C#" Value="public class ProjectCollection : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProjectCollection extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectCollection" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectCollection&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ProjectCollection = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectCollection extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This class encapsulates a set of related projects, their toolsets, a default set of global properties,
+            and the loggers that should be used to build them.
+            A global version of this class acts as the default ProjectCollection.
+            Multiple ProjectCollections can exist within an appdomain. However, these must not build concurrently.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>
+            Instantiates a project collection with no global properties or loggers that reads toolset
+            information from the configuration file and registry.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetLocations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetLocations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(Microsoft.Build.Evaluation.ToolsetDefinitionLocations)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (toolsetLocations As ToolsetDefinitionLocations)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : Microsoft.Build.Evaluation.ToolsetDefinitionLocations -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection toolsetLocations" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="toolsetLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" />
+      </Parameters>
+      <Docs>
+        <param name="toolsetLocations">The locations from which to load toolsets.</param>
+        <summary>
+            Instantiates a project collection using toolsets from the specified locations,
+            and no global properties or loggers.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection globalProperties" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">The default global properties to use. May be null.</param>
+        <summary>
+            Instantiates a project collection with specified global properties, no loggers,
+            and that reads toolset information from the configuration file and registry.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},Microsoft.Build.Evaluation.ToolsetDefinitionLocations)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String), loggers As IEnumerable(Of ILogger), toolsetDefinitionLocations As ToolsetDefinitionLocations)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;Microsoft.Build.Framework.ILogger&gt; * Microsoft.Build.Evaluation.ToolsetDefinitionLocations -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection (globalProperties, loggers, toolsetDefinitionLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+        <Parameter Name="toolsetDefinitionLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">The default global properties to use. May be null.</param>
+        <param name="loggers">The loggers to register. May be null.</param>
+        <param name="toolsetDefinitionLocations">The locations from which to load toolsets.</param>
+        <summary>
+            Instantiates a project collection with specified global properties and loggers and using the
+            specified toolset locations.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int32 maxNodeCount, bool onlyLogCriticalEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord), toolsetDefinitionLocations As ToolsetDefinitionLocations, maxNodeCount As Integer, onlyLogCriticalEvents As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; * Microsoft.Build.Evaluation.ToolsetDefinitionLocations * int * bool -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection (globalProperties, loggers, remoteLoggers, toolsetDefinitionLocations, maxNodeCount, onlyLogCriticalEvents)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
+        <Parameter Name="toolsetDefinitionLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" />
+        <Parameter Name="onlyLogCriticalEvents" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">The default global properties to use. May be null.</param>
+        <param name="loggers">The loggers to register. May be null and specified to any build instead.</param>
+        <param name="remoteLoggers">Any remote loggers to register. May be null and specified to any build instead.</param>
+        <param name="toolsetDefinitionLocations">The locations from which to load toolsets.</param>
+        <param name="maxNodeCount">The maximum number of nodes to use for building.</param>
+        <param name="onlyLogCriticalEvents">If set to true, only critical events will be logged.</param>
+        <summary>
+            Instantiates a project collection with specified global properties and loggers and using the
+            specified toolset locations, node count, and setting of onlyLogCriticalEvents.
+            Global properties and loggers may be null.
+            Throws InvalidProjectFileException if any of the global properties are reserved.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int32 maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord), toolsetDefinitionLocations As ToolsetDefinitionLocations, maxNodeCount As Integer, onlyLogCriticalEvents As Boolean, loadProjectsReadOnly As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; * Microsoft.Build.Evaluation.ToolsetDefinitionLocations * int * bool * bool -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection (globalProperties, loggers, remoteLoggers, toolsetDefinitionLocations, maxNodeCount, onlyLogCriticalEvents, loadProjectsReadOnly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" Index="2" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="toolsetDefinitionLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" Index="3" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="onlyLogCriticalEvents" Type="System.Boolean" Index="5" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="loadProjectsReadOnly" Type="System.Boolean" Index="6" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">The default global properties to use. May be null.</param>
+        <param name="loggers">The loggers to register. May be null and specified to any build instead.</param>
+        <param name="remoteLoggers">Any remote loggers to register. May be null and specified to any build instead.</param>
+        <param name="toolsetDefinitionLocations">The locations from which to load toolsets.</param>
+        <param name="maxNodeCount">The maximum number of nodes to use for building.</param>
+        <param name="onlyLogCriticalEvents">If set to true, only critical events will be logged.</param>
+        <param name="loadProjectsReadOnly">If set to true, load all projects as read-only.</param>
+        <summary>
+            Instantiates a project collection with specified global properties and loggers and using the
+            specified toolset locations, node count, and setting of onlyLogCriticalEvents.
+            Global properties and loggers may be null.
+            Throws InvalidProjectFileException if any of the global properties are reserved.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToolset">
+      <MemberSignature Language="C#" Value="public void AddToolset (Microsoft.Build.Evaluation.Toolset toolset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddToolset(class Microsoft.Build.Evaluation.Toolset toolset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.AddToolset(Microsoft.Build.Evaluation.Toolset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddToolset (toolset As Toolset)" />
+      <MemberSignature Language="F#" Value="member this.AddToolset : Microsoft.Build.Evaluation.Toolset -&gt; unit" Usage="projectCollection.AddToolset toolset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolset" Type="Microsoft.Build.Evaluation.Toolset" />
+      </Parameters>
+      <Docs>
+        <param name="toolset">To be added.</param>
+        <summary>
+            Add a new toolset.
+            Replaces any existing toolset with the same tools version.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsToolset">
+      <MemberSignature Language="C#" Value="public bool ContainsToolset (string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsToolset(string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.ContainsToolset(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContainsToolset (toolsVersion As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContainsToolset : string -&gt; bool" Usage="projectCollection.ContainsToolset toolsVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">To be added.</param>
+        <summary>
+            Returns true if there is a toolset defined for the specified
+            tools version, otherwise false.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Build.Evaluation.ProjectCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of projects currently loaded into this collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToolsVersion">
+      <MemberSignature Language="C#" Value="public string DefaultToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.DefaultToolsVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultToolsVersion As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultToolsVersion : string with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.DefaultToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default tools version of this project collection. Projects use this tools version if they
+            aren't otherwise told what tools version to use.
+            This value is gotten from the .exe.config file, or else in the registry,
+            or if neither specify a default tools version then it is hard-coded to the tools version "2.0".
+            Setter throws InvalidOperationException if a toolset with the provided tools version has not been defined.
+            Always defined.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableMarkDirty">
+      <MemberSignature Language="C#" Value="public bool DisableMarkDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableMarkDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableMarkDirty As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisableMarkDirty : bool with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether <see cref="M:Microsoft.Build.Evaluation.Project.MarkDirty">MarkDirty()</see> is temporarily disabled on
+            projects in this collection.
+            This allows, for example, global properties to be set without projects getting
+            marked dirty for reevaluation as a consequence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayVersion">
+      <MemberSignature Language="C#" Value="public static string DisplayVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DisplayVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.DisplayVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DisplayVersion As String" />
+      <MemberSignature Language="F#" Value="member this.DisplayVersion : string" Usage="Microsoft.Build.Evaluation.ProjectCollection.DisplayVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a version of the Engine suitable for display to a user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is in the form of a SemVer v2 version, Major.Minor.Patch-prerelease+metadata.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="projectCollection.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Called when a host is completely done with the project collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="projectCollection.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources..</param>
+        <summary>
+            Following standard framework guideline dispose pattern.
+            Shut down logging service if the project collection owns one, in order
+            to shut down the logger thread and loggers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape">
+      <MemberSignature Language="C#" Value="public static string Escape (string unescapedString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Escape(string unescapedString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.Escape(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Escape (unescapedString As String) As String" />
+      <MemberSignature Language="F#" Value="static member Escape : string -&gt; string" Usage="Microsoft.Build.Evaluation.ProjectCollection.Escape unescapedString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unescapedString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unescapedString">To be added.</param>
+        <summary>
+            Escape a string using MSBuild escaping format. For example, "%3b" for ";".
+            Only characters that are especially significant to MSBuild parsing are escaped.
+            Callers can use this method to make a string safe to be parsed to other methods
+            that would otherwise expand it; or to make a string safe to be written to a project file.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEffectiveToolsVersion">
+      <MemberSignature Language="C#" Value="public string GetEffectiveToolsVersion (string explicitToolsVersion, string toolsVersionFromProject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetEffectiveToolsVersion(string explicitToolsVersion, string toolsVersionFromProject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.GetEffectiveToolsVersion(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEffectiveToolsVersion (explicitToolsVersion As String, toolsVersionFromProject As String) As String" />
+      <MemberSignature Language="F#" Value="member this.GetEffectiveToolsVersion : string * string -&gt; string" Usage="projectCollection.GetEffectiveToolsVersion (explicitToolsVersion, toolsVersionFromProject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="explicitToolsVersion" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="toolsVersionFromProject" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="explicitToolsVersion">The user-specified ToolsVersion (through e.g. /tv: on the command line). May be null</param>
+        <param name="toolsVersionFromProject">The ToolsVersion from the project file. May be null</param>
+        <summary>
+            Figure out what ToolsVersion to use to actually build the project with.
+            </summary>
+        <returns>The ToolsVersion we should use to build this project.  Should never be null.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectPropertyInstance GetGlobalProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectPropertyInstance GetGlobalProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.GetGlobalProperty(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGlobalProperty (name As String) As ProjectPropertyInstance" />
+      <MemberSignature Language="F#" Value="member this.GetGlobalProperty : string -&gt; Microsoft.Build.Execution.ProjectPropertyInstance" Usage="projectCollection.GetGlobalProperty name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectPropertyInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Get any global property on the project collection that has the specified name,
+            otherwise returns null.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadedProjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt; GetLoadedProjects (string fullPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.Project&gt; GetLoadedProjects(string fullPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.GetLoadedProjects(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLoadedProjects (fullPath As String) As ICollection(Of Project)" />
+      <MemberSignature Language="F#" Value="member this.GetLoadedProjects : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt;" Usage="projectCollection.GetLoadedProjects fullPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fullPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fullPath">To be added.</param>
+        <summary>
+            Returns any and all loaded projects with the provided path.
+            There may be more than one, if they are distinguished by global properties
+            and/or tools version.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolset">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Evaluation.Toolset GetToolset(string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.GetToolset(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetToolset (toolsVersion As String) As Toolset" />
+      <MemberSignature Language="F#" Value="abstract member GetToolset : string -&gt; Microsoft.Build.Evaluation.Toolset&#xA;override this.GetToolset : string -&gt; Microsoft.Build.Evaluation.Toolset" Usage="projectCollection.GetToolset toolsVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Toolset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">To be added.</param>
+        <summary>
+            Get the toolset with the specified tools version.
+            If it is not present, returns null.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProjectCollection">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Evaluation.ProjectCollection GlobalProjectCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Evaluation.ProjectCollection GlobalProjectCollection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property GlobalProjectCollection As ProjectCollection" />
+      <MemberSignature Language="F#" Value="member this.GlobalProjectCollection : Microsoft.Build.Evaluation.ProjectCollection" Usage="Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Retrieves the global project collection object.
+            This is a singleton project collection with no global properties or loggers that reads toolset
+            information from the configuration file and registry.
+            May throw InvalidToolsetDefinitionException.
+            Thread safe.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.GlobalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalProperties As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Evaluation.ProjectCollection.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Returns default global properties for all projects in this collection.
+             Read-only dead dictionary.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This is the publicly exposed getter, that translates into a read-only dead IDictionary&lt;string, string&gt;.
+            
+             To be consistent with Project, setting and removing global properties is done with
+             <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty(System.String,System.String)">SetGlobalProperty</see> and <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty(System.String)">RemoveGlobalProperty</see>.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.HostServices HostServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.HostServices" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostServices As HostServices" />
+      <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.HostServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.HostServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Object exposing host services to tasks during builds of projects
+            contained by this project collection.
+            By default, <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.HostServices">HostServices</see> is used.
+            May be set to null, but the getter will create a new instance in that case.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuildEnabled">
+      <MemberSignature Language="C#" Value="public bool IsBuildEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuildEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.IsBuildEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsBuildEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsBuildEnabled : bool with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.IsBuildEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[set: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is the default value used by newly created projects for whether or not the building
+            of projects is enabled.  This is for security purposes in case a host wants to closely
+            control which projects it allows to run targets/tasks.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedProjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt; LoadedProjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.Project&gt; LoadedProjects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.LoadedProjects" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LoadedProjects As ICollection(Of Project)" />
+      <MemberSignature Language="F#" Value="member this.LoadedProjects : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt;" Usage="Microsoft.Build.Evaluation.ProjectCollection.LoadedProjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            All the projects currently loaded into this collection.
+            Each has a unique combination of path, global properties, and tools version.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (fileName As String) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : string -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject fileName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The project file to load</param>
+        <summary>
+            Loads a project with the specified filename, using the collection's global properties and tools version.
+            If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (xmlReader As XmlReader) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : System.Xml.XmlReader -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject xmlReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Xml reader to read project from</param>
+        <summary>
+            Loads a project with the specified reader, using the collection's global properties and tools version.
+            The project will be added to this project collection when it is named.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (string fileName, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(string fileName, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (fileName As String, toolsVersion As String) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : string * string -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject (fileName, toolsVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The project file to load</param>
+        <param name="toolsVersion">The tools version to use. May be null.</param>
+        <summary>
+            Loads a project with the specified filename and tools version, using the collection's global properties.
+            If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(class System.Xml.XmlReader xmlReader, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (xmlReader As XmlReader, toolsVersion As String) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : System.Xml.XmlReader * string -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject (xmlReader, toolsVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Xml reader to read project from</param>
+        <param name="toolsVersion">The tools version to use. May be null.</param>
+        <summary>
+            Loads a project with the specified reader and tools version, using the collection's global properties.
+            The project will be added to this project collection when it is named.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (string fileName, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(string fileName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (fileName As String, globalProperties As IDictionary(Of String, String), toolsVersion As String) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject (fileName, globalProperties, toolsVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The project file to load</param>
+        <param name="globalProperties">The global properties to use. May be null, in which case the containing project collection's global properties will be used.</param>
+        <param name="toolsVersion">The tools version. May be null.</param>
+        <summary>
+            Loads a project with the specified filename, tools version and global properties.
+            If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadProject (xmlReader As XmlReader, globalProperties As IDictionary(Of String, String), toolsVersion As String) As Project" />
+      <MemberSignature Language="F#" Value="member this.LoadProject : System.Xml.XmlReader * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Evaluation.Project" Usage="projectCollection.LoadProject (xmlReader, globalProperties, toolsVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Xml reader to read project from</param>
+        <param name="globalProperties">The global properties to use. May be null in which case the containing project collection's global properties will be used.</param>
+        <param name="toolsVersion">The tools version. May be null.</param>
+        <summary>
+            Loads a project with the specified reader, tools version and global properties.
+            The project will be added to this project collection when it is named.
+            </summary>
+        <returns>A loaded project.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loggers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Framework.ILogger&gt; Loggers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Framework.ILogger&gt; Loggers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.Loggers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Loggers As ICollection(Of ILogger)" />
+      <MemberSignature Language="F#" Value="member this.Loggers : System.Collections.Generic.ICollection&lt;Microsoft.Build.Framework.ILogger&gt;" Usage="Microsoft.Build.Evaluation.ProjectCollection.Loggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Framework.ILogger&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Loggers that all contained projects will use for their builds.
+            Loggers are added with the <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger(Microsoft.Build.Framework.ILogger)" />.
+            Returns an empty collection if there are no loggers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyLogCriticalEvents">
+      <MemberSignature Language="C#" Value="public bool OnlyLogCriticalEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyLogCriticalEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnlyLogCriticalEvents As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OnlyLogCriticalEvents : bool with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true, only log critical events such as warnings and errors. Has to be in here for API compat
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectAdded">
+      <MemberSignature Language="C#" Value="public event Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler ProjectAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Build.Evaluation.ProjectCollection/ProjectAddedEventHandler ProjectAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectAdded As ProjectCollection.ProjectAddedEventHandler " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="member this.ProjectAdded : Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler " Usage="member this.ProjectAdded : Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler " />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectAdded As ProjectCollection.ProjectAddedEventHandler " FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectCollection+ProjectAddedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event that is fired when a project is added to the ProjectRootElementCache of this project collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; ProjectChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; ProjectChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectChanged As EventHandler(Of ProjectChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="member this.ProjectChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; " Usage="member this.ProjectChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; " />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectChanged As EventHandler(Of ProjectChangedEventArgs) " FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a <see cref="T:Microsoft.Build.Evaluation.Project" /> contained by this instance is directly changed.
+            </summary>
+        <remarks>
+            This event is NOT raised for direct project XML changes via the construction model.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectCollectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; ProjectCollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; ProjectCollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectCollectionChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectCollectionChanged As EventHandler(Of ProjectCollectionChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="member this.ProjectCollectionChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; " Usage="member this.ProjectCollectionChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; " />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectCollectionChanged As EventHandler(Of ProjectCollectionChangedEventArgs) " FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when state is changed on this instance.
+            </summary>
+        <remarks>
+            This event is NOT raised for changes in individual projects.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectXmlChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; ProjectXmlChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; ProjectXmlChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectXmlChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectXmlChanged As EventHandler(Of ProjectXmlChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="member this.ProjectXmlChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; " Usage="member this.ProjectXmlChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; " />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectXmlChanged As EventHandler(Of ProjectXmlChangedEventArgs) " FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> contained by this instance is changed.
+            </summary>
+        <remarks>
+            This event is NOT raised for changes to global properties, or any other change that doesn't actually dirty the XML.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterForwardingLoggers">
+      <MemberSignature Language="C#" Value="public void RegisterForwardingLoggers (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterForwardingLoggers(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterForwardingLoggers(System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterForwardingLoggers (remoteLoggers As IEnumerable(Of ForwardingLoggerRecord))" />
+      <MemberSignature Language="F#" Value="member this.RegisterForwardingLoggers : seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; -&gt; unit" Usage="projectCollection.RegisterForwardingLoggers remoteLoggers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="remoteLoggers">To be added.</param>
+        <summary>
+            Adds some remote loggers to the collection of remote loggers used for builds of projects in this collection.
+            May be null.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterLogger">
+      <MemberSignature Language="C#" Value="public void RegisterLogger (Microsoft.Build.Framework.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterLogger(class Microsoft.Build.Framework.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger(Microsoft.Build.Framework.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterLogger (logger As ILogger)" />
+      <MemberSignature Language="F#" Value="member this.RegisterLogger : Microsoft.Build.Framework.ILogger -&gt; unit" Usage="projectCollection.RegisterLogger logger" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="logger">To be added.</param>
+        <summary>
+            Adds a logger to the collection of loggers used for builds of projects in this collection.
+            If the logger object is already in the collection, does nothing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterLoggers">
+      <MemberSignature Language="C#" Value="public void RegisterLoggers (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterLoggers(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLoggers(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterLoggers (loggers As IEnumerable(Of ILogger))" />
+      <MemberSignature Language="F#" Value="member this.RegisterLoggers : seq&lt;Microsoft.Build.Framework.ILogger&gt; -&gt; unit" Usage="projectCollection.RegisterLoggers loggers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="loggers">To be added.</param>
+        <summary>
+            Adds some loggers to the collection of loggers used for builds of projects in this collection.
+            If any logger object is already in the collection, does nothing for that logger.
+            May be null.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllToolsets">
+      <MemberSignature Language="C#" Value="public void RemoveAllToolsets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllToolsets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RemoveAllToolsets" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveAllToolsets ()" />
+      <MemberSignature Language="F#" Value="member this.RemoveAllToolsets : unit -&gt; unit" Usage="projectCollection.RemoveAllToolsets " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes all toolsets.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGlobalProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveGlobalProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveGlobalProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveGlobalProperty (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RemoveGlobalProperty : string -&gt; bool" Usage="projectCollection.RemoveGlobalProperty name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Removes a global property from the collection-level set of global properties,
+            and all projects in the project collection.
+            If it was on this project collection, returns true.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveToolset">
+      <MemberSignature Language="C#" Value="public bool RemoveToolset (string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveToolset(string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.RemoveToolset(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveToolset (toolsVersion As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RemoveToolset : string -&gt; bool" Usage="projectCollection.RemoveToolset toolsVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">To be added.</param>
+        <summary>
+            Remove a toolset.
+            Returns true if it was present, otherwise false.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGlobalProperty">
+      <MemberSignature Language="C#" Value="public void SetGlobalProperty (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGlobalProperty(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGlobalProperty (name As String, value As String)" />
+      <MemberSignature Language="F#" Value="member this.SetGlobalProperty : string * string -&gt; unit" Usage="projectCollection.SetGlobalProperty (name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Set a global property at the collection-level,
+            and on all projects in the project collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipEvaluation">
+      <MemberSignature Language="C#" Value="public bool SkipEvaluation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipEvaluation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipEvaluation As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipEvaluation : bool with get, set" Usage="Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether reevaluation is temporarily disabled on projects in this collection.
+            This is useful when the host expects to make a number of reads and writes
+            to projects, and wants to temporarily sacrifice correctness for performance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsetLocations">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetLocations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.ToolsetLocations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToolsetLocations As ToolsetDefinitionLocations" />
+      <MemberSignature Language="F#" Value="member this.ToolsetLocations : Microsoft.Build.Evaluation.ToolsetDefinitionLocations" Usage="Microsoft.Build.Evaluation.ProjectCollection.ToolsetLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ToolsetDefinitionLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the locations used to find the toolsets.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toolsets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt; Toolsets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.Toolset&gt; Toolsets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.Toolsets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Toolsets As ICollection(Of Toolset)" />
+      <MemberSignature Language="F#" Value="member this.Toolsets : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt;" Usage="Microsoft.Build.Evaluation.ProjectCollection.Toolsets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the toolsets this ProjectCollection knows about.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <comments>
+            ValueCollection is already read-only
+            </comments>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUnloadProject">
+      <MemberSignature Language="C#" Value="public bool TryUnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryUnloadProject(class Microsoft.Build.Construction.ProjectRootElement projectRootElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.TryUnloadProject(Microsoft.Build.Construction.ProjectRootElement)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryUnloadProject (projectRootElement As ProjectRootElement) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryUnloadProject : Microsoft.Build.Construction.ProjectRootElement -&gt; bool" Usage="projectCollection.TryUnloadProject projectRootElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectRootElement" Type="Microsoft.Build.Construction.ProjectRootElement" />
+      </Parameters>
+      <Docs>
+        <param name="projectRootElement">The project XML root element to unload.</param>
+        <summary>
+            Unloads a project XML root element from the cache entirely, if it is not
+            in use by project loaded into this collection.
+            Returns true if it was unloaded successfully, or was not already loaded.
+            Returns false if it was not unloaded because it was still in use by a loaded <see cref="T:Microsoft.Build.Evaluation.Project" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unescape">
+      <MemberSignature Language="C#" Value="public static string Unescape (string escapedString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Unescape(string escapedString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.Unescape(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Unescape (escapedString As String) As String" />
+      <MemberSignature Language="F#" Value="static member Unescape : string -&gt; string" Usage="Microsoft.Build.Evaluation.ProjectCollection.Unescape escapedString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="escapedString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="escapedString">To be added.</param>
+        <summary>
+            Unescape a string using MSBuild escaping format. For example, "%3b" for ";".
+            All escaped characters are unescaped.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadAllProjects">
+      <MemberSignature Language="C#" Value="public void UnloadAllProjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadAllProjects() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.UnloadAllProjects" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnloadAllProjects ()" />
+      <MemberSignature Language="F#" Value="member this.UnloadAllProjects : unit -&gt; unit" Usage="projectCollection.UnloadAllProjects " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unloads all the projects contained by this ProjectCollection.
+            Host should call this when they are completely done with all the projects.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadProject">
+      <MemberSignature Language="C#" Value="public void UnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadProject(class Microsoft.Build.Construction.ProjectRootElement projectRootElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.UnloadProject(Microsoft.Build.Construction.ProjectRootElement)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnloadProject (projectRootElement As ProjectRootElement)" />
+      <MemberSignature Language="F#" Value="member this.UnloadProject : Microsoft.Build.Construction.ProjectRootElement -&gt; unit" Usage="projectCollection.UnloadProject projectRootElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectRootElement" Type="Microsoft.Build.Construction.ProjectRootElement" />
+      </Parameters>
+      <Docs>
+        <param name="projectRootElement">The project XML root element to unload.</param>
+        <summary>
+            Unloads a project XML root element from the weak cache.
+            </summary>
+        <remarks>
+            This method is useful for the case where the host knows that all projects using this XML element
+            are unloaded, and desires to discard any unsaved changes.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the project XML root element to unload is still in use by a loaded project or its imports.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadProject">
+      <MemberSignature Language="C#" Value="public void UnloadProject (Microsoft.Build.Evaluation.Project project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadProject(class Microsoft.Build.Evaluation.Project project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.UnloadProject(Microsoft.Build.Evaluation.Project)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnloadProject (project As Project)" />
+      <MemberSignature Language="F#" Value="member this.UnloadProject : Microsoft.Build.Evaluation.Project -&gt; unit" Usage="projectCollection.UnloadProject project" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.Evaluation.Project" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <summary>
+            Unloads the specific project specified.
+            Host should call this when they are completely done with the project.
+            If project was not already loaded, throws InvalidOperationException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterAllLoggers">
+      <MemberSignature Language="C#" Value="public void UnregisterAllLoggers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterAllLoggers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.UnregisterAllLoggers" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnregisterAllLoggers ()" />
+      <MemberSignature Language="F#" Value="member this.UnregisterAllLoggers : unit -&gt; unit" Usage="projectCollection.UnregisterAllLoggers " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes all loggers from the collection of loggers used for builds of projects in this collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectCollection.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="Microsoft.Build.Evaluation.ProjectCollection.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the file version of the file in which the Engine assembly lies.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is the Windows file version (specifically the value of the FileVersion
+            resource), not necessarily the assembly version.
+            If you want the assembly version, use Constants.AssemblyVersion.
+            This is not the <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion">ToolsetCollectionVersion</see>.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

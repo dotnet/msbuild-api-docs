@@ -1,0 +1,349 @@
+<Type Name="BuildEventArgs" FullName="Microsoft.Build.Framework.BuildEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class BuildEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit BuildEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.BuildEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BuildEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type BuildEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class encapsulates the default data associated with build events. 
+            It is intended to be extended/sub-classed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildEventArgs (string message, string helpKeyword, string senderName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventArgs.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (message As String, helpKeyword As String, senderName As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildEventArgs : string * string * string -&gt; Microsoft.Build.Framework.BuildEventArgs" Usage="new Microsoft.Build.Framework.BuildEventArgs (message, helpKeyword, senderName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <summary>
+            This constructor allows all event data to be initialized
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (message As String, helpKeyword As String, senderName As String, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildEventArgs : string * string * string * DateTime -&gt; Microsoft.Build.Framework.BuildEventArgs" Usage="new Microsoft.Build.Framework.BuildEventArgs (message, helpKeyword, senderName, eventTimestamp)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="senderName" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="eventTimestamp">TimeStamp of when the event was created</param>
+        <summary>
+            This constructor allows all event data to be initialized while providing a custom timestamp.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEventContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventContext BuildEventContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.BuildEventContext BuildEventContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.BuildEventContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property BuildEventContext As BuildEventContext" />
+      <MemberSignature Language="F#" Value="member this.BuildEventContext : Microsoft.Build.Framework.BuildEventContext with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.BuildEventContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.BuildEventContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event contextual information for the build event argument
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HelpKeyword As String" />
+      <MemberSignature Language="F#" Value="member this.HelpKeyword : string" Usage="Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Custom help keyword associated with event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public virtual string Message { get; protected set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Message As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.Message" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public string Message { get; }" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.BuildEventArgs.Message" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Text of event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawMessage">
+      <MemberSignature Language="C#" Value="protected internal string RawMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.RawMessage" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Property RawMessage As String" />
+      <MemberSignature Language="F#" Value="member this.RawMessage : string with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.RawMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Exposes the underlying message field without side-effects.
+            Used for serialization.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawTimestamp">
+      <MemberSignature Language="C#" Value="protected internal DateTime RawTimestamp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime RawTimestamp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.RawTimestamp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Property RawTimestamp As DateTime" />
+      <MemberSignature Language="F#" Value="member this.RawTimestamp : DateTime with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.RawTimestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Exposes the private <see cref="F:Microsoft.Build.Framework.BuildEventArgs.timestamp" /> field to derived types.
+            Used for serialization. Avoids the side effects of calling the
+            <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Timestamp" /> getter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderName">
+      <MemberSignature Language="C#" Value="public string SenderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SenderName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SenderName As String" />
+      <MemberSignature Language="F#" Value="member this.SenderName : string" Usage="Microsoft.Build.Framework.BuildEventArgs.SenderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the object sending this event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadId">
+      <MemberSignature Language="C#" Value="public int ThreadId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThreadId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.ThreadId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ThreadId As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThreadId : int" Usage="Microsoft.Build.Framework.BuildEventArgs.ThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-4.0">
+          <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The thread that raised event.  
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public DateTime Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Timestamp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.Timestamp" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Timestamp As DateTime" />
+      <MemberSignature Language="F#" Value="member this.Timestamp : DateTime" Usage="Microsoft.Build.Framework.BuildEventArgs.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The time when event was raised.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
