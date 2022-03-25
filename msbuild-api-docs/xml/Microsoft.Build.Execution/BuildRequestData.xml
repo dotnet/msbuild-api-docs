@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildRequestData" />
   <TypeSignature Language="VB.NET" Value="Public Class BuildRequestData" />
   <TypeSignature Language="F#" Value="type BuildRequestData = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildRequestData" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -26,6 +27,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String())" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -119,6 +123,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, propertiesToTransfer As IEnumerable(Of String))" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * seq&lt;string&gt; -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags, propertiesToTransfer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ propertiesToTransfer);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -150,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -187,6 +193,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,System.Collections.Generic.IEnumerable{System.String},Microsoft.Build.Execution.RequestedProjectState)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, propertiesToTransfer As IEnumerable(Of String), requestedProjectState As RequestedProjectState)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * seq&lt;string&gt; * Microsoft.Build.Execution.RequestedProjectState -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags, propertiesToTransfer, requestedProjectState)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ propertiesToTransfer, Microsoft::Build::Execution::RequestedProjectState ^ requestedProjectState);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -219,6 +226,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -252,6 +260,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,Microsoft.Build.Execution.RequestedProjectState)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, requestedProjectState As RequestedProjectState)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * Microsoft.Build.Execution.RequestedProjectState -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices, flags, requestedProjectState)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, Microsoft::Build::Execution::RequestedProjectState ^ requestedProjectState);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -286,6 +295,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExplicitlySpecifiedToolsVersion As String" />
       <MemberSignature Language="F#" Value="member this.ExplicitlySpecifiedToolsVersion : string" Usage="Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExplicitlySpecifiedToolsVersion { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -315,6 +325,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.Flags" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flags As BuildRequestDataFlags" />
       <MemberSignature Language="F#" Value="member this.Flags : Microsoft.Build.Execution.BuildRequestDataFlags" Usage="Microsoft.Build.Execution.BuildRequestData.Flags" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildRequestDataFlags Flags { Microsoft::Build::Execution::BuildRequestDataFlags get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -344,6 +355,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.GlobalProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalProperties As ICollection(Of ProjectPropertyInstance)" />
       <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectPropertyInstance&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.GlobalProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Execution::ProjectPropertyInstance ^&gt; ^ GlobalProperties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Execution::ProjectPropertyInstance ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -367,6 +379,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.HostServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostServices As HostServices" />
       <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices" Usage="Microsoft.Build.Execution.BuildRequestData.HostServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::HostServices ^ HostServices { Microsoft::Build::Execution::HostServices ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -396,6 +409,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.ProjectFullPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectFullPath As String" />
       <MemberSignature Language="F#" Value="member this.ProjectFullPath : string" Usage="Microsoft.Build.Execution.BuildRequestData.ProjectFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProjectFullPath { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -427,6 +441,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.ProjectInstance" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectInstance As ProjectInstance" />
       <MemberSignature Language="F#" Value="member this.ProjectInstance : Microsoft.Build.Execution.ProjectInstance" Usage="Microsoft.Build.Execution.BuildRequestData.ProjectInstance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::ProjectInstance ^ ProjectInstance { Microsoft::Build::Execution::ProjectInstance ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -457,6 +472,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertiesToTransfer As IEnumerable(Of String)" />
       <MemberSignature Language="F#" Value="member this.PropertiesToTransfer : seq&lt;string&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ PropertiesToTransfer { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -480,6 +496,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.RequestedProjectState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestedProjectState As RequestedProjectState" />
       <MemberSignature Language="F#" Value="member this.RequestedProjectState : Microsoft.Build.Execution.RequestedProjectState" Usage="Microsoft.Build.Execution.BuildRequestData.RequestedProjectState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::RequestedProjectState ^ RequestedProjectState { Microsoft::Build::Execution::RequestedProjectState ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -503,6 +520,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.TargetNames" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetNames As ICollection(Of String)" />
       <MemberSignature Language="F#" Value="member this.TargetNames : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.TargetNames" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ TargetNames { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

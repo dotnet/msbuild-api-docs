@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.Profiler.ProfiledLocation" />
   <TypeSignature Language="VB.NET" Value="Public Structure ProfiledLocation" />
   <TypeSignature Language="F#" Value="type ProfiledLocation = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class ProfiledLocation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.Profiler.ProfiledLocation.#ctor(System.TimeSpan,System.TimeSpan,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (inclusiveTime As TimeSpan, exclusiveTime As TimeSpan, numberOfHits As Integer)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.Profiler.ProfiledLocation : TimeSpan * TimeSpan * int -&gt; Microsoft.Build.Framework.Profiler.ProfiledLocation" Usage="new Microsoft.Build.Framework.Profiler.ProfiledLocation (inclusiveTime, exclusiveTime, numberOfHits)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProfiledLocation(TimeSpan inclusiveTime, TimeSpan exclusiveTime, int numberOfHits);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -56,6 +58,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.Profiler.ProfiledLocation.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="profiledLocation.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.Profiler.ProfiledLocation.ExclusiveTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExclusiveTime As TimeSpan" />
       <MemberSignature Language="F#" Value="member this.ExclusiveTime : TimeSpan" Usage="Microsoft.Build.Framework.Profiler.ProfiledLocation.ExclusiveTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan ExclusiveTime { TimeSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -108,6 +112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.Profiler.ProfiledLocation.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="profiledLocation.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -130,6 +135,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.Profiler.ProfiledLocation.InclusiveTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InclusiveTime As TimeSpan" />
       <MemberSignature Language="F#" Value="member this.InclusiveTime : TimeSpan" Usage="Microsoft.Build.Framework.Profiler.ProfiledLocation.InclusiveTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan InclusiveTime { TimeSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -157,6 +163,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.Profiler.ProfiledLocation.NumberOfHits" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfHits As Integer" />
       <MemberSignature Language="F#" Value="member this.NumberOfHits : int" Usage="Microsoft.Build.Framework.Profiler.ProfiledLocation.NumberOfHits" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NumberOfHits { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -184,6 +191,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.Profiler.ProfiledLocation.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="profiledLocation.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>

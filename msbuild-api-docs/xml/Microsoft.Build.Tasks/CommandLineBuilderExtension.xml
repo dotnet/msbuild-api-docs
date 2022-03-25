@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" />
   <TypeSignature Language="VB.NET" Value="Public Class CommandLineBuilderExtension&#xA;Inherits CommandLineBuilder" />
   <TypeSignature Language="F#" Value="type CommandLineBuilderExtension = class&#xA;    inherit CommandLineBuilder" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CommandLineBuilderExtension : Microsoft::Build::Utilities::CommandLineBuilder" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -35,6 +36,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CommandLineBuilderExtension.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilderExtension();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -71,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CommandLineBuilderExtension.#ctor(System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean, useNewLineSeparator As Boolean)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Tasks.CommandLineBuilderExtension : bool * bool -&gt; Microsoft.Build.Tasks.CommandLineBuilderExtension" Usage="new Microsoft.Build.Tasks.CommandLineBuilderExtension (quoteHyphensOnCommandLine, useNewLineSeparator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilderExtension(bool quoteHyphensOnCommandLine, bool useNewLineSeparator);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CommandLineBuilderExtension.GetQuotedText(System.String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Protected Function GetQuotedText (unquotedText As String) As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.GetQuotedText : string -&gt; string" Usage="commandLineBuilderExtension.GetQuotedText unquotedText" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::String ^ GetQuotedText(System::String ^ unquotedText);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

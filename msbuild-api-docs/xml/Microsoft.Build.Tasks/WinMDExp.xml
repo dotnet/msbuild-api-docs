@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.WinMDExp" />
   <TypeSignature Language="VB.NET" Value="Public Class WinMDExp&#xA;Inherits ToolTaskExtension" />
   <TypeSignature Language="F#" Value="type WinMDExp = class&#xA;    inherit ToolTaskExtension" />
+  <TypeSignature Language="C++ CLI" Value="public ref class WinMDExp : Microsoft::Build::Tasks::ToolTaskExtension" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; WinMDExp();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -48,6 +50,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddCommandLineCommands (commandLine As CommandLineBuilderExtension)" />
       <MemberSignature Language="F#" Value="override this.AddCommandLineCommands : Microsoft.Build.Tasks.CommandLineBuilderExtension -&gt; unit" Usage="winMDExp.AddCommandLineCommands commandLine" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void AddCommandLineCommands(Microsoft::Build::Tasks::CommandLineBuilderExtension ^ commandLine);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -71,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddResponseFileCommands (commandLine As CommandLineBuilderExtension)" />
       <MemberSignature Language="F#" Value="override this.AddResponseFileCommands : Microsoft.Build.Tasks.CommandLineBuilderExtension -&gt; unit" Usage="winMDExp.AddResponseFileCommands commandLine" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void AddResponseFileCommands(Microsoft::Build::Tasks::CommandLineBuilderExtension ^ commandLine);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -94,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.AssemblyUnificationPolicy" />
       <MemberSignature Language="VB.NET" Value="Public Property AssemblyUnificationPolicy As String" />
       <MemberSignature Language="F#" Value="member this.AssemblyUnificationPolicy : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.AssemblyUnificationPolicy" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AssemblyUnificationPolicy { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
       <MemberSignature Language="VB.NET" Value="Public Property DisabledWarnings As String" />
       <MemberSignature Language="F#" Value="member this.DisabledWarnings : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisabledWarnings { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -141,6 +147,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.GenerateFullPathToTool" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GenerateFullPathToTool () As String" />
       <MemberSignature Language="F#" Value="override this.GenerateFullPathToTool : unit -&gt; string" Usage="winMDExp.GenerateFullPathToTool " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::String ^ GenerateFullPathToTool();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -167,6 +174,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
       <MemberSignature Language="VB.NET" Value="Public Property InputDocumentationFile As String" />
       <MemberSignature Language="F#" Value="member this.InputDocumentationFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InputDocumentationFile { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -192,6 +200,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.InputPDBFile" />
       <MemberSignature Language="VB.NET" Value="Public Property InputPDBFile As String" />
       <MemberSignature Language="F#" Value="member this.InputPDBFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.InputPDBFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InputPDBFile { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -217,6 +226,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputDocumentationFile As String" />
       <MemberSignature Language="F#" Value="member this.OutputDocumentationFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputDocumentationFile { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -242,6 +252,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputPDBFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputPDBFile As String" />
       <MemberSignature Language="F#" Value="member this.OutputPDBFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputPDBFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputPDBFile { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -267,6 +278,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputWindowsMetadataFile As String" />
       <MemberSignature Language="F#" Value="member this.OutputWindowsMetadataFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputWindowsMetadataFile { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -298,6 +310,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.References" />
       <MemberSignature Language="VB.NET" Value="Public Property References As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.References : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.References" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ References { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -329,6 +342,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
       <MemberSignature Language="VB.NET" Value="Public Property SdkToolsPath As String" />
       <MemberSignature Language="F#" Value="member this.SdkToolsPath : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SdkToolsPath { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -354,6 +368,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.SkipTaskExecution" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function SkipTaskExecution () As Boolean" />
       <MemberSignature Language="F#" Value="override this.SkipTaskExecution : unit -&gt; bool" Usage="winMDExp.SkipTaskExecution " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool SkipTaskExecution();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -381,6 +396,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property StandardErrorEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.StandardErrorEncoding : System.Text.Encoding" Usage="Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardErrorEncoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -406,6 +422,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property StandardOutputEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.StandardOutputEncoding : System.Text.Encoding" Usage="Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardOutputEncoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -431,6 +448,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.ToolName" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ToolName As String" />
       <MemberSignature Language="F#" Value="member this.ToolName : string" Usage="Microsoft.Build.Tasks.WinMDExp.ToolName" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::String ^ ToolName { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -456,6 +474,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
       <MemberSignature Language="VB.NET" Value="Public Property TreatWarningsAsErrors As Boolean" />
       <MemberSignature Language="F#" Value="member this.TreatWarningsAsErrors : bool with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool TreatWarningsAsErrors { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -482,6 +501,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.UseNewLineSeparatorInResponseFile" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property UseNewLineSeparatorInResponseFile As Boolean" />
       <MemberSignature Language="F#" Value="member this.UseNewLineSeparatorInResponseFile : bool" Usage="Microsoft.Build.Tasks.WinMDExp.UseNewLineSeparatorInResponseFile" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool UseNewLineSeparatorInResponseFile { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -502,6 +522,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
       <MemberSignature Language="VB.NET" Value="Public Property UTF8Output As Boolean" />
       <MemberSignature Language="F#" Value="member this.UTF8Output : bool with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UTF8Output { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -528,6 +549,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.ValidateParameters" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ValidateParameters () As Boolean" />
       <MemberSignature Language="F#" Value="override this.ValidateParameters : unit -&gt; bool" Usage="winMDExp.ValidateParameters " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ValidateParameters();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -555,6 +577,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
       <MemberSignature Language="VB.NET" Value="Public Property WinMDModule As String" />
       <MemberSignature Language="F#" Value="member this.WinMDModule : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ WinMDModule { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

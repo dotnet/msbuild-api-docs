@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface IVbcHostObject&#xA;Implements ITaskHost" />
   <TypeSignature Language="F#" Value="type IVbcHostObject = interface&#xA;    interface ITaskHost" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IVbcHostObject : Microsoft::Build::Framework::ITaskHost" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -53,6 +54,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.BeginInitialization" />
       <MemberSignature Language="VB.NET" Value="Public Sub BeginInitialization ()" />
       <MemberSignature Language="F#" Value="abstract member BeginInitialization : unit -&gt; unit" Usage="iVbcHostObject.BeginInitialization " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void BeginInitialization();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -85,6 +87,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.Compile" />
       <MemberSignature Language="VB.NET" Value="Public Function Compile () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Compile : unit -&gt; bool" Usage="iVbcHostObject.Compile " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Compile();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -119,6 +122,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.EndInitialization" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndInitialization ()" />
       <MemberSignature Language="F#" Value="abstract member EndInitialization : unit -&gt; unit" Usage="iVbcHostObject.EndInitialization " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndInitialization();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -151,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsDesignTime" />
       <MemberSignature Language="VB.NET" Value="Public Function IsDesignTime () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member IsDesignTime : unit -&gt; bool" Usage="iVbcHostObject.IsDesignTime " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsDesignTime();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -185,6 +190,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsUpToDate" />
       <MemberSignature Language="VB.NET" Value="Public Function IsUpToDate () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member IsUpToDate : unit -&gt; bool" Usage="iVbcHostObject.IsUpToDate " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsUpToDate();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -219,6 +225,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAdditionalLibPaths(System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetAdditionalLibPaths (additionalLibPaths As String()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetAdditionalLibPaths : string[] -&gt; bool" Usage="iVbcHostObject.SetAdditionalLibPaths additionalLibPaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetAdditionalLibPaths(cli::array &lt;System::String ^&gt; ^ additionalLibPaths);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -256,6 +263,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAddModules(System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetAddModules (addModules As String()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetAddModules : string[] -&gt; bool" Usage="iVbcHostObject.SetAddModules addModules" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetAddModules(cli::array &lt;System::String ^&gt; ^ addModules);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -293,6 +301,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetBaseAddress(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetBaseAddress (targetType As String, baseAddress As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetBaseAddress : string * string -&gt; bool" Usage="iVbcHostObject.SetBaseAddress (targetType, baseAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetBaseAddress(System::String ^ targetType, System::String ^ baseAddress);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -332,6 +341,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetCodePage(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetCodePage (codePage As Integer) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetCodePage : int -&gt; bool" Usage="iVbcHostObject.SetCodePage codePage" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetCodePage(int codePage);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -369,6 +379,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDebugType(System.Boolean,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetDebugType (emitDebugInformation As Boolean, debugType As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetDebugType : bool * string -&gt; bool" Usage="iVbcHostObject.SetDebugType (emitDebugInformation, debugType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetDebugType(bool emitDebugInformation, System::String ^ debugType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -409,6 +420,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDefineConstants(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetDefineConstants (defineConstants As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetDefineConstants : string -&gt; bool" Usage="iVbcHostObject.SetDefineConstants defineConstants" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetDefineConstants(System::String ^ defineConstants);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -446,6 +458,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDelaySign(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetDelaySign (delaySign As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetDelaySign : bool -&gt; bool" Usage="iVbcHostObject.SetDelaySign delaySign" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetDelaySign(bool delaySign);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -484,6 +497,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDisabledWarnings(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetDisabledWarnings (disabledWarnings As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetDisabledWarnings : string -&gt; bool" Usage="iVbcHostObject.SetDisabledWarnings disabledWarnings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetDisabledWarnings(System::String ^ disabledWarnings);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -521,6 +535,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDocumentationFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetDocumentationFile (documentationFile As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetDocumentationFile : string -&gt; bool" Usage="iVbcHostObject.SetDocumentationFile documentationFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetDocumentationFile(System::String ^ documentationFile);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -558,6 +573,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetErrorReport(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetErrorReport (errorReport As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetErrorReport : string -&gt; bool" Usage="iVbcHostObject.SetErrorReport errorReport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetErrorReport(System::String ^ errorReport);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -595,6 +611,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetFileAlignment(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetFileAlignment (fileAlignment As Integer) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetFileAlignment : int -&gt; bool" Usage="iVbcHostObject.SetFileAlignment fileAlignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetFileAlignment(int fileAlignment);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -632,6 +649,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetGenerateDocumentation(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetGenerateDocumentation (generateDocumentation As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetGenerateDocumentation : bool -&gt; bool" Usage="iVbcHostObject.SetGenerateDocumentation generateDocumentation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetGenerateDocumentation(bool generateDocumentation);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -670,6 +688,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetImports(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetImports (importsList As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetImports : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetImports importsList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetImports(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ importsList);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -707,6 +726,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyContainer(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetKeyContainer (keyContainer As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetKeyContainer : string -&gt; bool" Usage="iVbcHostObject.SetKeyContainer keyContainer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetKeyContainer(System::String ^ keyContainer);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -744,6 +764,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetKeyFile (keyFile As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetKeyFile : string -&gt; bool" Usage="iVbcHostObject.SetKeyFile keyFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetKeyFile(System::String ^ keyFile);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -781,6 +802,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetLinkResources (linkResources As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetLinkResources : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetLinkResources linkResources" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetLinkResources(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ linkResources);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -818,6 +840,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetMainEntryPoint(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetMainEntryPoint (mainEntryPoint As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetMainEntryPoint : string -&gt; bool" Usage="iVbcHostObject.SetMainEntryPoint mainEntryPoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetMainEntryPoint(System::String ^ mainEntryPoint);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -855,6 +878,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoConfig(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetNoConfig (noConfig As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetNoConfig : bool -&gt; bool" Usage="iVbcHostObject.SetNoConfig noConfig" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetNoConfig(bool noConfig);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -893,6 +917,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoStandardLib(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetNoStandardLib (noStandardLib As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetNoStandardLib : bool -&gt; bool" Usage="iVbcHostObject.SetNoStandardLib noStandardLib" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetNoStandardLib(bool noStandardLib);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -931,6 +956,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoWarnings(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetNoWarnings (noWarnings As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetNoWarnings : bool -&gt; bool" Usage="iVbcHostObject.SetNoWarnings noWarnings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetNoWarnings(bool noWarnings);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -969,6 +995,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptimize(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOptimize (optimize As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOptimize : bool -&gt; bool" Usage="iVbcHostObject.SetOptimize optimize" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOptimize(bool optimize);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1007,6 +1034,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionCompare(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOptionCompare (optionCompare As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOptionCompare : string -&gt; bool" Usage="iVbcHostObject.SetOptionCompare optionCompare" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOptionCompare(System::String ^ optionCompare);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1044,6 +1072,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionExplicit(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOptionExplicit (optionExplicit As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOptionExplicit : bool -&gt; bool" Usage="iVbcHostObject.SetOptionExplicit optionExplicit" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOptionExplicit(bool optionExplicit);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1082,6 +1111,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrict(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOptionStrict (optionStrict As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOptionStrict : bool -&gt; bool" Usage="iVbcHostObject.SetOptionStrict optionStrict" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOptionStrict(bool optionStrict);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1120,6 +1150,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrictType(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOptionStrictType (optionStrictType As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOptionStrictType : string -&gt; bool" Usage="iVbcHostObject.SetOptionStrictType optionStrictType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOptionStrictType(System::String ^ optionStrictType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1157,6 +1188,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOutputAssembly(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetOutputAssembly (outputAssembly As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetOutputAssembly : string -&gt; bool" Usage="iVbcHostObject.SetOutputAssembly outputAssembly" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetOutputAssembly(System::String ^ outputAssembly);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1194,6 +1226,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetPlatform(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetPlatform (platform As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetPlatform : string -&gt; bool" Usage="iVbcHostObject.SetPlatform platform" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetPlatform(System::String ^ platform);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1231,6 +1264,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetReferences (references As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetReferences : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetReferences references" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetReferences(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ references);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1268,6 +1302,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRemoveIntegerChecks(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetRemoveIntegerChecks (removeIntegerChecks As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetRemoveIntegerChecks : bool -&gt; bool" Usage="iVbcHostObject.SetRemoveIntegerChecks removeIntegerChecks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetRemoveIntegerChecks(bool removeIntegerChecks);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1306,6 +1341,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetResources (resources As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetResources : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetResources resources" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetResources(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ resources);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1343,6 +1379,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetResponseFiles (responseFiles As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetResponseFiles : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetResponseFiles responseFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetResponseFiles(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ responseFiles);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1380,6 +1417,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRootNamespace(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetRootNamespace (rootNamespace As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetRootNamespace : string -&gt; bool" Usage="iVbcHostObject.SetRootNamespace rootNamespace" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetRootNamespace(System::String ^ rootNamespace);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1417,6 +1455,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSdkPath(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetSdkPath (sdkPath As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetSdkPath : string -&gt; bool" Usage="iVbcHostObject.SetSdkPath sdkPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetSdkPath(System::String ^ sdkPath);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1454,6 +1493,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Function SetSources (sources As ITaskItem()) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetSources : Microsoft.Build.Framework.ITaskItem[] -&gt; bool" Usage="iVbcHostObject.SetSources sources" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetSources(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ sources);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1491,6 +1531,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetCompactFramework(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetTargetCompactFramework (targetCompactFramework As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetTargetCompactFramework : bool -&gt; bool" Usage="iVbcHostObject.SetTargetCompactFramework targetCompactFramework" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetTargetCompactFramework(bool targetCompactFramework);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1529,6 +1570,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetType(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetTargetType (targetType As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetTargetType : string -&gt; bool" Usage="iVbcHostObject.SetTargetType targetType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetTargetType(System::String ^ targetType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1566,6 +1608,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTreatWarningsAsErrors(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetTreatWarningsAsErrors (treatWarningsAsErrors As Boolean) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetTreatWarningsAsErrors : bool -&gt; bool" Usage="iVbcHostObject.SetTreatWarningsAsErrors treatWarningsAsErrors" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetTreatWarningsAsErrors(bool treatWarningsAsErrors);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1604,6 +1647,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsAsErrors(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetWarningsAsErrors (warningsAsErrors As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetWarningsAsErrors : string -&gt; bool" Usage="iVbcHostObject.SetWarningsAsErrors warningsAsErrors" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetWarningsAsErrors(System::String ^ warningsAsErrors);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1641,6 +1685,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsNotAsErrors(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetWarningsNotAsErrors (warningsNotAsErrors As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetWarningsNotAsErrors : string -&gt; bool" Usage="iVbcHostObject.SetWarningsNotAsErrors warningsNotAsErrors" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetWarningsNotAsErrors(System::String ^ warningsNotAsErrors);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1678,6 +1723,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Icon(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetWin32Icon (win32Icon As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetWin32Icon : string -&gt; bool" Usage="iVbcHostObject.SetWin32Icon win32Icon" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetWin32Icon(System::String ^ win32Icon);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1715,6 +1761,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Resource(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetWin32Resource (win32Resource As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetWin32Resource : string -&gt; bool" Usage="iVbcHostObject.SetWin32Resource win32Resource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetWin32Resource(System::String ^ win32Resource);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

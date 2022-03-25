@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.ObjectModelRemoting.ProjectMetadataElementLink" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectMetadataElementLink&#xA;Inherits ProjectElementLink" />
   <TypeSignature Language="F#" Value="type ProjectMetadataElementLink = class&#xA;    inherit ProjectElementLink" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectMetadataElementLink abstract : Microsoft::Build::ObjectModelRemoting::ProjectElementLink" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectMetadataElementLink.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProjectMetadataElementLink();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectMetadataElementLink.ChangeName(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ChangeName (newName As String)" />
       <MemberSignature Language="F#" Value="abstract member ChangeName : string -&gt; unit" Usage="projectMetadataElementLink.ChangeName newName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ChangeName(System::String ^ newName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectMetadataElementLink.Value" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property Value As String" />
       <MemberSignature Language="F#" Value="member this.Value : string with get, set" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataElementLink.Value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Value { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

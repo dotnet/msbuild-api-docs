@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectExtensionsElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectExtensionsElement&#xA;Inherits ProjectElement" />
   <TypeSignature Language="F#" Value="type ProjectExtensionsElement = class&#xA;    inherit ProjectElement" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectExtensionsElement : Microsoft::Build::Construction::ProjectElement" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Condition" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Condition As String" />
       <MemberSignature Language="F#" Value="member this.Condition : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Condition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Condition { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.ConditionLocation" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ConditionLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.ConditionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.ConditionLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Construction::ElementLocation ^ ConditionLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -76,6 +79,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Content" />
       <MemberSignature Language="VB.NET" Value="Public Property Content As String" />
       <MemberSignature Language="F#" Value="member this.Content : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Content" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Content { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -105,6 +109,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectExtensionsElement.CopyFrom(Microsoft.Build.Construction.ProjectElement)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub CopyFrom (element As ProjectElement)" />
       <MemberSignature Language="F#" Value="override this.CopyFrom : Microsoft.Build.Construction.ProjectElement -&gt; unit" Usage="projectExtensionsElement.CopyFrom element" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void CopyFrom(Microsoft::Build::Construction::ProjectElement ^ element);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -129,6 +134,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectExtensionsElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
       <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectExtensionsElement.CreateNewInstance owner" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -154,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(name As String) As String" />
       <MemberSignature Language="F#" Value="member this.Item(string) : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Item" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default[System::String ^] { System::String ^ get(System::String ^ name); void set(System::String ^ name, System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.ProfilerLogger" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProfilerLogger&#xA;Implements ILogger" />
   <TypeSignature Language="F#" Value="type ProfilerLogger = class&#xA;    interface ILogger" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProfilerLogger sealed : Microsoft::Build::Framework::ILogger" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ProfilerLogger.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileToLog As String)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Logging.ProfilerLogger : string -&gt; Microsoft.Build.Logging.ProfilerLogger" Usage="new Microsoft.Build.Logging.ProfilerLogger fileToLog" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProfilerLogger(System::String ^ fileToLog);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -50,6 +52,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ProfilerLogger.FileToLog" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FileToLog As String" />
       <MemberSignature Language="F#" Value="member this.FileToLog : string" Usage="Microsoft.Build.Logging.ProfilerLogger.FileToLog" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FileToLog { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -72,6 +75,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ProfilerLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Initialize (eventSource As IEventSource)" />
       <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.Build.Framework.IEventSource -&gt; unit&#xA;override this.Initialize : Microsoft.Build.Framework.IEventSource -&gt; unit" Usage="profilerLogger.Initialize eventSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Initialize(Microsoft::Build::Framework::IEventSource ^ eventSource);" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)</InterfaceMember>
@@ -100,6 +104,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ProfilerLogger.Parameters" />
       <MemberSignature Language="VB.NET" Value="Public Property Parameters As String" />
       <MemberSignature Language="F#" Value="member this.Parameters : string with get, set" Usage="Microsoft.Build.Logging.ProfilerLogger.Parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Parameters { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ILogger.Parameters</InterfaceMember>
@@ -125,6 +130,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ProfilerLogger.Shutdown" />
       <MemberSignature Language="VB.NET" Value="Public Sub Shutdown ()" />
       <MemberSignature Language="F#" Value="abstract member Shutdown : unit -&gt; unit&#xA;override this.Shutdown : unit -&gt; unit" Usage="profilerLogger.Shutdown " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Shutdown();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ILogger.Shutdown</InterfaceMember>
@@ -150,6 +156,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ProfilerLogger.Verbosity" />
       <MemberSignature Language="VB.NET" Value="Public Property Verbosity As LoggerVerbosity" />
       <MemberSignature Language="F#" Value="member this.Verbosity : Microsoft.Build.Framework.LoggerVerbosity with get, set" Usage="Microsoft.Build.Logging.ProfilerLogger.Verbosity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::LoggerVerbosity Verbosity { Microsoft::Build::Framework::LoggerVerbosity get(); void set(Microsoft::Build::Framework::LoggerVerbosity value); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ILogger.Verbosity</InterfaceMember>

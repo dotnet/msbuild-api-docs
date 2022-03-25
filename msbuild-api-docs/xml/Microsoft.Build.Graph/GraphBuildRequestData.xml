@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Graph.GraphBuildRequestData" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GraphBuildRequestData" />
   <TypeSignature Language="F#" Value="type GraphBuildRequestData = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildRequestData sealed" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.ICollection{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraph As ProjectGraph, targetsToBuild As ICollection(Of String))" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraph * System.Collections.Generic.ICollection&lt;string&gt; -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraph, targetsToBuild)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraph ^ projectGraph, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,System.Collections.Generic.ICollection{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoint As ProjectGraphEntryPoint, targetsToBuild As ICollection(Of String))" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraphEntryPoint * System.Collections.Generic.ICollection&lt;string&gt; -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoint, targetsToBuild)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraphEntryPoint projectGraphEntryPoint, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -73,6 +76,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String))" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -97,6 +101,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraph As ProjectGraph, targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraph * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraph, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraph ^ projectGraph, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -123,6 +128,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoint As ProjectGraphEntryPoint, targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraphEntryPoint * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoint, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraphEntryPoint projectGraphEntryPoint, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -149,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -175,6 +182,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraph As ProjectGraph, targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraph * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraph, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraph ^ projectGraph, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -203,6 +211,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoint As ProjectGraphEntryPoint, targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraphEntryPoint * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoint, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraphEntryPoint projectGraphEntryPoint, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -231,6 +240,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -259,6 +269,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectFullPath, globalProperties, targetsToBuild, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -287,6 +298,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,Microsoft.Build.Graph.GraphBuildOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags, graphBuildOptions As GraphBuildOptions)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * Microsoft.Build.Graph.GraphBuildOptions -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices, flags, graphBuildOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, Microsoft::Build::Graph::GraphBuildOptions ^ graphBuildOptions);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -315,6 +327,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectFullPath, globalProperties, targetsToBuild, hostServices, flags)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -345,6 +358,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.Flags" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flags As BuildRequestDataFlags" />
       <MemberSignature Language="F#" Value="member this.Flags : Microsoft.Build.Execution.BuildRequestDataFlags" Usage="Microsoft.Build.Graph.GraphBuildRequestData.Flags" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildRequestDataFlags Flags { Microsoft::Build::Execution::BuildRequestDataFlags get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -367,6 +381,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.GraphBuildOptions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GraphBuildOptions As GraphBuildOptions" />
       <MemberSignature Language="F#" Value="member this.GraphBuildOptions : Microsoft.Build.Graph.GraphBuildOptions" Usage="Microsoft.Build.Graph.GraphBuildRequestData.GraphBuildOptions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::GraphBuildOptions ^ GraphBuildOptions { Microsoft::Build::Graph::GraphBuildOptions ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -389,6 +404,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.HostServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostServices As HostServices" />
       <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices" Usage="Microsoft.Build.Graph.GraphBuildRequestData.HostServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::HostServices ^ HostServices { Microsoft::Build::Execution::HostServices ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -411,6 +427,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectGraph As ProjectGraph" />
       <MemberSignature Language="F#" Value="member this.ProjectGraph : Microsoft.Build.Graph.ProjectGraph" Usage="Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::ProjectGraph ^ ProjectGraph { Microsoft::Build::Graph::ProjectGraph ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -434,6 +451,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraphEntryPoints" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint)" />
       <MemberSignature Language="F#" Value="member this.ProjectGraphEntryPoints : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Usage="Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraphEntryPoints" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ ProjectGraphEntryPoints { System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -457,6 +475,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.TargetNames" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetNames As ICollection(Of String)" />
       <MemberSignature Language="F#" Value="member this.TargetNames : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.Build.Graph.GraphBuildRequestData.TargetNames" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ TargetNames { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

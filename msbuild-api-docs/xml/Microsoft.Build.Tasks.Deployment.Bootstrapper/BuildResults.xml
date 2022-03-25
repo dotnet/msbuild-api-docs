@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults" />
   <TypeSignature Language="VB.NET" Value="Public Class BuildResults&#xA;Implements IBuildResults" />
   <TypeSignature Language="F#" Value="type BuildResults = class&#xA;    interface IBuildResults" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildResults : Microsoft::Build::Tasks::Deployment::Bootstrapper::IBuildResults" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -54,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.ComponentFiles" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComponentFiles As String()" />
       <MemberSignature Language="F#" Value="member this.ComponentFiles : string[]" Usage="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.ComponentFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ ComponentFiles { cli::array &lt;System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.ComponentFiles</InterfaceMember>
@@ -90,6 +92,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.KeyFile" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeyFile As String" />
       <MemberSignature Language="F#" Value="member this.KeyFile : string" Usage="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.KeyFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ KeyFile { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.KeyFile</InterfaceMember>
@@ -132,6 +135,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Messages" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Messages As BuildMessage()" />
       <MemberSignature Language="F#" Value="member this.Messages : Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage[]" Usage="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Messages" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Tasks::Deployment::Bootstrapper::BuildMessage ^&gt; ^ Messages { cli::array &lt;Microsoft::Build::Tasks::Deployment::Bootstrapper::BuildMessage ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Messages</InterfaceMember>
@@ -168,6 +172,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Succeeded" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Succeeded As Boolean" />
       <MemberSignature Language="F#" Value="member this.Succeeded : bool" Usage="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Succeeded" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Succeeded { bool get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Succeeded</InterfaceMember>

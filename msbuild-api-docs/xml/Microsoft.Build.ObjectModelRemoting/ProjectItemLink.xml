@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.ObjectModelRemoting.ProjectItemLink" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectItemLink" />
   <TypeSignature Language="F#" Value="type ProjectItemLink = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectItemLink abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProjectItemLink();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.ChangeItemType(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ChangeItemType (newItemType As String)" />
       <MemberSignature Language="F#" Value="abstract member ChangeItemType : string -&gt; unit" Usage="projectItemLink.ChangeItemType newItemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ChangeItemType(System::String ^ newItemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.DirectMetadata" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DirectMetadata As ICollection(Of ProjectMetadata)" />
       <MemberSignature Language="F#" Value="member this.DirectMetadata : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectItemLink.DirectMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ DirectMetadata { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -88,6 +92,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.EvaluatedInclude" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EvaluatedInclude As String" />
       <MemberSignature Language="F#" Value="member this.EvaluatedInclude : string" Usage="Microsoft.Build.ObjectModelRemoting.ProjectItemLink.EvaluatedInclude" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ EvaluatedInclude { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -110,6 +115,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.GetMetadata(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetMetadata (name As String) As ProjectMetadata" />
       <MemberSignature Language="F#" Value="abstract member GetMetadata : string -&gt; Microsoft.Build.Evaluation.ProjectMetadata" Usage="projectItemLink.GetMetadata name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Evaluation::ProjectMetadata ^ GetMetadata(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -136,6 +142,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.GetMetadataValue(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetMetadataValue (name As String) As String" />
       <MemberSignature Language="F#" Value="abstract member GetMetadataValue : string -&gt; string" Usage="projectItemLink.GetMetadataValue name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ GetMetadataValue(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -162,6 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.HasMetadata(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function HasMetadata (name As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member HasMetadata : string -&gt; bool" Usage="projectItemLink.HasMetadata name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool HasMetadata(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -188,6 +196,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.MetadataCollection" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MetadataCollection As ICollection(Of ProjectMetadata)" />
       <MemberSignature Language="F#" Value="member this.MetadataCollection : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectItemLink.MetadataCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ MetadataCollection { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -210,6 +219,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.Project" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Project As Project" />
       <MemberSignature Language="F#" Value="member this.Project : Microsoft.Build.Evaluation.Project" Usage="Microsoft.Build.ObjectModelRemoting.ProjectItemLink.Project" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Evaluation::Project ^ Project { Microsoft::Build::Evaluation::Project ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -232,6 +242,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.RemoveMetadata(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function RemoveMetadata (name As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member RemoveMetadata : string -&gt; bool" Usage="projectItemLink.RemoveMetadata name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool RemoveMetadata(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -258,6 +269,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.Rename(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Rename (name As String)" />
       <MemberSignature Language="F#" Value="abstract member Rename : string -&gt; unit" Usage="projectItemLink.Rename name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Rename(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -283,6 +295,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.SetMetadataValue(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function SetMetadataValue (name As String, unevaluatedValue As String, propagateMetadataToSiblingItems As Boolean) As ProjectMetadata" />
       <MemberSignature Language="F#" Value="abstract member SetMetadataValue : string * string * bool -&gt; Microsoft.Build.Evaluation.ProjectMetadata" Usage="projectItemLink.SetMetadataValue (name, unevaluatedValue, propagateMetadataToSiblingItems)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Evaluation::ProjectMetadata ^ SetMetadataValue(System::String ^ name, System::String ^ unevaluatedValue, bool propagateMetadataToSiblingItems);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -313,6 +326,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectItemLink.Xml" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Xml As ProjectItemElement" />
       <MemberSignature Language="F#" Value="member this.Xml : Microsoft.Build.Construction.ProjectItemElement" Usage="Microsoft.Build.ObjectModelRemoting.ProjectItemLink.Xml" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Construction::ProjectItemElement ^ Xml { Microsoft::Build::Construction::ProjectItemElement ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

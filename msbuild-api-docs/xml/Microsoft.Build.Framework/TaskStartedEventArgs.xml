@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskStartedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class TaskStartedEventArgs&#xA;Inherits BuildStatusEventArgs" />
   <TypeSignature Language="F#" Value="type TaskStartedEventArgs = class&#xA;    inherit BuildStatusEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TaskStartedEventArgs : Microsoft::Build::Framework::BuildStatusEventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; TaskStartedEventArgs();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -61,6 +63,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, taskFile As String, taskName As String)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.TaskStartedEventArgs : string * string * string * string * string -&gt; Microsoft.Build.Framework.TaskStartedEventArgs" Usage="new Microsoft.Build.Framework.TaskStartedEventArgs (message, helpKeyword, projectFile, taskFile, taskName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskStartedEventArgs(System::String ^ message, System::String ^ helpKeyword, System::String ^ projectFile, System::String ^ taskFile, System::String ^ taskName);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, taskFile As String, taskName As String, eventTimestamp As DateTime)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.TaskStartedEventArgs : string * string * string * string * string * DateTime -&gt; Microsoft.Build.Framework.TaskStartedEventArgs" Usage="new Microsoft.Build.Framework.TaskStartedEventArgs (message, helpKeyword, projectFile, taskFile, taskName, eventTimestamp)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskStartedEventArgs(System::String ^ message, System::String ^ helpKeyword, System::String ^ projectFile, System::String ^ taskFile, System::String ^ taskName, DateTime eventTimestamp);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -129,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.ColumnNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ColumnNumber As Integer" />
       <MemberSignature Language="F#" Value="member this.ColumnNumber : int" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.ColumnNumber" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ColumnNumber { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -151,6 +156,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.LineNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LineNumber As Integer" />
       <MemberSignature Language="F#" Value="member this.LineNumber : int" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.LineNumber" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int LineNumber { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -173,6 +179,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.Message" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
       <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.Message" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -193,6 +200,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.ProjectFile" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectFile As String" />
       <MemberSignature Language="F#" Value="member this.ProjectFile : string" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.ProjectFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProjectFile { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -224,6 +232,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskFile" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskFile As String" />
       <MemberSignature Language="F#" Value="member this.TaskFile : string" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.TaskFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskFile { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -255,6 +264,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskName As String" />
       <MemberSignature Language="F#" Value="member this.TaskName : string" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.TaskName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskName { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>

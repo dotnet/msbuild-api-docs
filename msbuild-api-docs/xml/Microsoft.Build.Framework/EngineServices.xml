@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.EngineServices" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class EngineServices" />
   <TypeSignature Language="F#" Value="type EngineServices = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class EngineServices abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EngineServices.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; EngineServices();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -50,6 +52,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.EngineServices.IsTaskInputLoggingEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsTaskInputLoggingEnabled As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsTaskInputLoggingEnabled : bool" Usage="Microsoft.Build.Framework.EngineServices.IsTaskInputLoggingEnabled" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsTaskInputLoggingEnabled { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -74,6 +77,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EngineServices.LogsMessagesOfImportance(Microsoft.Build.Framework.MessageImportance)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function LogsMessagesOfImportance (importance As MessageImportance) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member LogsMessagesOfImportance : Microsoft.Build.Framework.MessageImportance -&gt; bool&#xA;override this.LogsMessagesOfImportance : Microsoft.Build.Framework.MessageImportance -&gt; bool" Usage="engineServices.LogsMessagesOfImportance importance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool LogsMessagesOfImportance(Microsoft::Build::Framework::MessageImportance importance);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -104,6 +108,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.EngineServices.Version" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Version As Integer" />
       <MemberSignature Language="F#" Value="member this.Version : int" Usage="Microsoft.Build.Framework.EngineServices.Version" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int Version { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -127,6 +132,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.EngineServices.Version1" />
       <MemberSignature Language="VB.NET" Value="Public Const Version1 As Integer  = 1" />
       <MemberSignature Language="F#" Value="val mutable Version1 : int" Usage="Microsoft.Build.Framework.EngineServices.Version1" />
+      <MemberSignature Language="C++ CLI" Value="public: int Version1 = 1;" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>

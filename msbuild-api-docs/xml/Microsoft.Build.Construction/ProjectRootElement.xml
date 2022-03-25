@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectRootElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectRootElement&#xA;Inherits ProjectElementContainer" />
   <TypeSignature Language="F#" Value="type ProjectRootElement = class&#xA;    inherit ProjectElementContainer" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectRootElement : Microsoft::Build::Construction::ProjectElementContainer" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -42,6 +43,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddImport(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddImport (project As String) As ProjectImportElement" />
       <MemberSignature Language="F#" Value="member this.AddImport : string -&gt; Microsoft.Build.Construction.ProjectImportElement" Usage="projectRootElement.AddImport project" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectImportElement ^ AddImport(System::String ^ project);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -71,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddImportGroup" />
       <MemberSignature Language="VB.NET" Value="Public Function AddImportGroup () As ProjectImportGroupElement" />
       <MemberSignature Language="F#" Value="member this.AddImportGroup : unit -&gt; Microsoft.Build.Construction.ProjectImportGroupElement" Usage="projectRootElement.AddImportGroup " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectImportGroupElement ^ AddImportGroup();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItem(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItem (itemType As String, include As String) As ProjectItemElement" />
       <MemberSignature Language="F#" Value="member this.AddItem : string * string -&gt; Microsoft.Build.Construction.ProjectItemElement" Usage="projectRootElement.AddItem (itemType, include)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemElement ^ AddItem(System::String ^ itemType, System::String ^ include);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -135,6 +139,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItem(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItem (itemType As String, include As String, metadata As IEnumerable(Of KeyValuePair(Of String, String))) As ProjectItemElement" />
       <MemberSignature Language="F#" Value="member this.AddItem : string * string * seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; Microsoft.Build.Construction.ProjectItemElement" Usage="projectRootElement.AddItem (itemType, include, metadata)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemElement ^ AddItem(System::String ^ itemType, System::String ^ include, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ metadata);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -172,6 +177,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemDefinition(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItemDefinition (itemType As String) As ProjectItemDefinitionElement" />
       <MemberSignature Language="F#" Value="member this.AddItemDefinition : string -&gt; Microsoft.Build.Construction.ProjectItemDefinitionElement" Usage="projectRootElement.AddItemDefinition itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemDefinitionElement ^ AddItemDefinition(System::String ^ itemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -200,6 +206,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemDefinitionGroup" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItemDefinitionGroup () As ProjectItemDefinitionGroupElement" />
       <MemberSignature Language="F#" Value="member this.AddItemDefinitionGroup : unit -&gt; Microsoft.Build.Construction.ProjectItemDefinitionGroupElement" Usage="projectRootElement.AddItemDefinitionGroup " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^ AddItemDefinitionGroup();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -227,6 +234,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemGroup" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItemGroup () As ProjectItemGroupElement" />
       <MemberSignature Language="F#" Value="member this.AddItemGroup : unit -&gt; Microsoft.Build.Construction.ProjectItemGroupElement" Usage="projectRootElement.AddItemGroup " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemGroupElement ^ AddItemGroup();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -254,6 +262,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddProperty(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddProperty (name As String, value As String) As ProjectPropertyElement" />
       <MemberSignature Language="F#" Value="member this.AddProperty : string * string -&gt; Microsoft.Build.Construction.ProjectPropertyElement" Usage="projectRootElement.AddProperty (name, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectPropertyElement ^ AddProperty(System::String ^ name, System::String ^ value);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -286,6 +295,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddPropertyGroup" />
       <MemberSignature Language="VB.NET" Value="Public Function AddPropertyGroup () As ProjectPropertyGroupElement" />
       <MemberSignature Language="F#" Value="member this.AddPropertyGroup : unit -&gt; Microsoft.Build.Construction.ProjectPropertyGroupElement" Usage="projectRootElement.AddPropertyGroup " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectPropertyGroupElement ^ AddPropertyGroup();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -312,6 +322,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddTarget(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddTarget (name As String) As ProjectTargetElement" />
       <MemberSignature Language="F#" Value="member this.AddTarget : string -&gt; Microsoft.Build.Construction.ProjectTargetElement" Usage="projectRootElement.AddTarget name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectTargetElement ^ AddTarget(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -340,6 +351,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddUsingTask(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddUsingTask (name As String, assemblyFile As String, assemblyName As String) As ProjectUsingTaskElement" />
       <MemberSignature Language="F#" Value="member this.AddUsingTask : string * string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskElement" Usage="projectRootElement.AddUsingTask (name, assemblyFile, assemblyName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskElement ^ AddUsingTask(System::String ^ name, System::String ^ assemblyFile, System::String ^ assemblyName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -373,6 +385,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ChooseElements" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChooseElements As ICollection(Of ProjectChooseElement)" />
       <MemberSignature Language="F#" Value="member this.ChooseElements : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectChooseElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ChooseElements" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectChooseElement ^&gt; ^ ChooseElements { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectChooseElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -398,6 +411,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Condition" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Condition As String" />
       <MemberSignature Language="F#" Value="member this.Condition : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.Condition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Condition { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -422,6 +436,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ConditionLocation" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ConditionLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.ConditionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.ConditionLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Construction::ElementLocation ^ ConditionLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -445,6 +460,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : unit -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -470,6 +486,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(Microsoft.Build.Evaluation.NewProjectFileOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (projectFileOptions As NewProjectFileOptions) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : Microsoft.Build.Evaluation.NewProjectFileOptions -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create projectFileOptions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(Microsoft::Build::Evaluation::NewProjectFileOptions projectFileOptions);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -497,6 +514,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (projectCollection As ProjectCollection) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create projectCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -525,6 +543,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (path As String) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : string -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::String ^ path);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -553,6 +572,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (xmlReader As XmlReader) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : System.Xml.XmlReader -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create xmlReader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::Xml::XmlReader ^ xmlReader);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -582,6 +602,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.NewProjectFileOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (projectCollection As ProjectCollection, projectFileOptions As NewProjectFileOptions) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.NewProjectFileOptions -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (projectCollection, projectFileOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::NewProjectFileOptions projectFileOptions);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -610,6 +631,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String,Microsoft.Build.Evaluation.NewProjectFileOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (path As String, newProjectFileOptions As NewProjectFileOptions) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Build.Evaluation.NewProjectFileOptions -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (path, newProjectFileOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::String ^ path, Microsoft::Build::Evaluation::NewProjectFileOptions newProjectFileOptions);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -639,6 +661,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (path As String, projectCollection As ProjectCollection) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (path, projectCollection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -669,6 +692,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.Xml.XmlReader,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (xmlReader As XmlReader, projectCollection As ProjectCollection) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : System.Xml.XmlReader * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (xmlReader, projectCollection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::Xml::XmlReader ^ xmlReader, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -700,6 +724,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.NewProjectFileOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (path As String, projectCollection As ProjectCollection, newProjectFileOptions As NewProjectFileOptions) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.NewProjectFileOptions -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (path, projectCollection, newProjectFileOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::NewProjectFileOptions newProjectFileOptions);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -731,6 +756,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.Xml.XmlReader,Microsoft.Build.Evaluation.ProjectCollection,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (xmlReader As XmlReader, projectCollection As ProjectCollection, preserveFormatting As Boolean) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Create : System.Xml.XmlReader * Microsoft.Build.Evaluation.ProjectCollection * bool -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Create (xmlReader, projectCollection, preserveFormatting)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Create(System::Xml::XmlReader ^ xmlReader, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, bool preserveFormatting);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -763,6 +789,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateChooseElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateChooseElement () As ProjectChooseElement" />
       <MemberSignature Language="F#" Value="member this.CreateChooseElement : unit -&gt; Microsoft.Build.Construction.ProjectChooseElement" Usage="projectRootElement.CreateChooseElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectChooseElement ^ CreateChooseElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -788,6 +815,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateImportElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateImportElement (project As String) As ProjectImportElement" />
       <MemberSignature Language="F#" Value="member this.CreateImportElement : string -&gt; Microsoft.Build.Construction.ProjectImportElement" Usage="projectRootElement.CreateImportElement project" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectImportElement ^ CreateImportElement(System::String ^ project);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -816,6 +844,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateImportGroupElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateImportGroupElement () As ProjectImportGroupElement" />
       <MemberSignature Language="F#" Value="member this.CreateImportGroupElement : unit -&gt; Microsoft.Build.Construction.ProjectImportGroupElement" Usage="projectRootElement.CreateImportGroupElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectImportGroupElement ^ CreateImportGroupElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -841,6 +870,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateItemDefinitionElement (itemType As String) As ProjectItemDefinitionElement" />
       <MemberSignature Language="F#" Value="member this.CreateItemDefinitionElement : string -&gt; Microsoft.Build.Construction.ProjectItemDefinitionElement" Usage="projectRootElement.CreateItemDefinitionElement itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemDefinitionElement ^ CreateItemDefinitionElement(System::String ^ itemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -869,6 +899,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionGroupElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateItemDefinitionGroupElement () As ProjectItemDefinitionGroupElement" />
       <MemberSignature Language="F#" Value="member this.CreateItemDefinitionGroupElement : unit -&gt; Microsoft.Build.Construction.ProjectItemDefinitionGroupElement" Usage="projectRootElement.CreateItemDefinitionGroupElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^ CreateItemDefinitionGroupElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -894,6 +925,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateItemElement (itemType As String) As ProjectItemElement" />
       <MemberSignature Language="F#" Value="member this.CreateItemElement : string -&gt; Microsoft.Build.Construction.ProjectItemElement" Usage="projectRootElement.CreateItemElement itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemElement ^ CreateItemElement(System::String ^ itemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -922,6 +954,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemElement(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateItemElement (itemType As String, include As String) As ProjectItemElement" />
       <MemberSignature Language="F#" Value="member this.CreateItemElement : string * string -&gt; Microsoft.Build.Construction.ProjectItemElement" Usage="projectRootElement.CreateItemElement (itemType, include)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemElement ^ CreateItemElement(System::String ^ itemType, System::String ^ include);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -952,6 +985,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemGroupElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateItemGroupElement () As ProjectItemGroupElement" />
       <MemberSignature Language="F#" Value="member this.CreateItemGroupElement : unit -&gt; Microsoft.Build.Construction.ProjectItemGroupElement" Usage="projectRootElement.CreateItemGroupElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectItemGroupElement ^ CreateItemGroupElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -977,6 +1011,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateMetadataElement (name As String) As ProjectMetadataElement" />
       <MemberSignature Language="F#" Value="member this.CreateMetadataElement : string -&gt; Microsoft.Build.Construction.ProjectMetadataElement" Usage="projectRootElement.CreateMetadataElement name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectMetadataElement ^ CreateMetadataElement(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1005,6 +1040,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateMetadataElement (name As String, unevaluatedValue As String) As ProjectMetadataElement" />
       <MemberSignature Language="F#" Value="member this.CreateMetadataElement : string * string -&gt; Microsoft.Build.Construction.ProjectMetadataElement" Usage="projectRootElement.CreateMetadataElement (name, unevaluatedValue)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectMetadataElement ^ CreateMetadataElement(System::String ^ name, System::String ^ unevaluatedValue);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1035,6 +1071,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
       <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectRootElement.CreateNewInstance owner" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1061,6 +1098,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOnErrorElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateOnErrorElement (executeTargets As String) As ProjectOnErrorElement" />
       <MemberSignature Language="F#" Value="member this.CreateOnErrorElement : string -&gt; Microsoft.Build.Construction.ProjectOnErrorElement" Usage="projectRootElement.CreateOnErrorElement executeTargets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectOnErrorElement ^ CreateOnErrorElement(System::String ^ executeTargets);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1089,6 +1127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOtherwiseElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateOtherwiseElement () As ProjectOtherwiseElement" />
       <MemberSignature Language="F#" Value="member this.CreateOtherwiseElement : unit -&gt; Microsoft.Build.Construction.ProjectOtherwiseElement" Usage="projectRootElement.CreateOtherwiseElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectOtherwiseElement ^ CreateOtherwiseElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1114,6 +1153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOutputElement(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateOutputElement (taskParameter As String, itemType As String, propertyName As String) As ProjectOutputElement" />
       <MemberSignature Language="F#" Value="member this.CreateOutputElement : string * string * string -&gt; Microsoft.Build.Construction.ProjectOutputElement" Usage="projectRootElement.CreateOutputElement (taskParameter, itemType, propertyName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectOutputElement ^ CreateOutputElement(System::String ^ taskParameter, System::String ^ itemType, System::String ^ propertyName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1147,6 +1187,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateProjectExtensionsElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateProjectExtensionsElement () As ProjectExtensionsElement" />
       <MemberSignature Language="F#" Value="member this.CreateProjectExtensionsElement : unit -&gt; Microsoft.Build.Construction.ProjectExtensionsElement" Usage="projectRootElement.CreateProjectExtensionsElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectExtensionsElement ^ CreateProjectExtensionsElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1172,6 +1213,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateProjectSdkElement(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateProjectSdkElement (sdkName As String, sdkVersion As String) As ProjectSdkElement" />
       <MemberSignature Language="F#" Value="member this.CreateProjectSdkElement : string * string -&gt; Microsoft.Build.Construction.ProjectSdkElement" Usage="projectRootElement.CreateProjectSdkElement (sdkName, sdkVersion)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectSdkElement ^ CreateProjectSdkElement(System::String ^ sdkName, System::String ^ sdkVersion);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1200,6 +1242,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreatePropertyElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreatePropertyElement (name As String) As ProjectPropertyElement" />
       <MemberSignature Language="F#" Value="member this.CreatePropertyElement : string -&gt; Microsoft.Build.Construction.ProjectPropertyElement" Usage="projectRootElement.CreatePropertyElement name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectPropertyElement ^ CreatePropertyElement(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1228,6 +1271,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreatePropertyGroupElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreatePropertyGroupElement () As ProjectPropertyGroupElement" />
       <MemberSignature Language="F#" Value="member this.CreatePropertyGroupElement : unit -&gt; Microsoft.Build.Construction.ProjectPropertyGroupElement" Usage="projectRootElement.CreatePropertyGroupElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectPropertyGroupElement ^ CreatePropertyGroupElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1253,6 +1297,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateTargetElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateTargetElement (name As String) As ProjectTargetElement" />
       <MemberSignature Language="F#" Value="member this.CreateTargetElement : string -&gt; Microsoft.Build.Construction.ProjectTargetElement" Usage="projectRootElement.CreateTargetElement name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectTargetElement ^ CreateTargetElement(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1281,6 +1326,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateTaskElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateTaskElement (name As String) As ProjectTaskElement" />
       <MemberSignature Language="F#" Value="member this.CreateTaskElement : string -&gt; Microsoft.Build.Construction.ProjectTaskElement" Usage="projectRootElement.CreateTaskElement name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectTaskElement ^ CreateTaskElement(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1309,6 +1355,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskBodyElement(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateUsingTaskBodyElement (evaluate As String, body As String) As ProjectUsingTaskBodyElement" />
       <MemberSignature Language="F#" Value="member this.CreateUsingTaskBodyElement : string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskBodyElement" Usage="projectRootElement.CreateUsingTaskBodyElement (evaluate, body)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskBodyElement ^ CreateUsingTaskBodyElement(System::String ^ evaluate, System::String ^ body);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1339,6 +1386,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateUsingTaskElement (taskName As String, assemblyFile As String, assemblyName As String) As ProjectUsingTaskElement" />
       <MemberSignature Language="F#" Value="member this.CreateUsingTaskElement : string * string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskElement" Usage="projectRootElement.CreateUsingTaskElement (taskName, assemblyFile, assemblyName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskElement ^ CreateUsingTaskElement(System::String ^ taskName, System::String ^ assemblyFile, System::String ^ assemblyName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1372,6 +1420,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement(System.String,System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateUsingTaskElement (taskName As String, assemblyFile As String, assemblyName As String, runtime As String, architecture As String) As ProjectUsingTaskElement" />
       <MemberSignature Language="F#" Value="member this.CreateUsingTaskElement : string * string * string * string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskElement" Usage="projectRootElement.CreateUsingTaskElement (taskName, assemblyFile, assemblyName, runtime, architecture)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskElement ^ CreateUsingTaskElement(System::String ^ taskName, System::String ^ assemblyFile, System::String ^ assemblyName, System::String ^ runtime, System::String ^ architecture);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1410,6 +1459,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterElement(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateUsingTaskParameterElement (name As String, output As String, required As String, parameterType As String) As ProjectUsingTaskParameterElement" />
       <MemberSignature Language="F#" Value="member this.CreateUsingTaskParameterElement : string * string * string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskParameterElement" Usage="projectRootElement.CreateUsingTaskParameterElement (name, output, required, parameterType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskParameterElement ^ CreateUsingTaskParameterElement(System::String ^ name, System::String ^ output, System::String ^ required, System::String ^ parameterType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1444,6 +1494,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterGroupElement" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateUsingTaskParameterGroupElement () As UsingTaskParameterGroupElement" />
       <MemberSignature Language="F#" Value="member this.CreateUsingTaskParameterGroupElement : unit -&gt; Microsoft.Build.Construction.UsingTaskParameterGroupElement" Usage="projectRootElement.CreateUsingTaskParameterGroupElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::UsingTaskParameterGroupElement ^ CreateUsingTaskParameterGroupElement();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1469,6 +1520,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateWhenElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWhenElement (condition As String) As ProjectWhenElement" />
       <MemberSignature Language="F#" Value="member this.CreateWhenElement : string -&gt; Microsoft.Build.Construction.ProjectWhenElement" Usage="projectRootElement.CreateWhenElement condition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectWhenElement ^ CreateWhenElement(System::String ^ condition);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1497,6 +1549,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.DeepClone" />
       <MemberSignature Language="VB.NET" Value="Public Function DeepClone () As ProjectRootElement" />
       <MemberSignature Language="F#" Value="override this.DeepClone : unit -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="projectRootElement.DeepClone " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectRootElement ^ DeepClone();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1520,6 +1573,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DefaultTargets" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultTargets As String" />
       <MemberSignature Language="F#" Value="member this.DefaultTargets : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.DefaultTargets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultTargets { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1554,6 +1608,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DefaultTargetsLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultTargetsLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.DefaultTargetsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.DefaultTargetsLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ DefaultTargetsLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1577,6 +1632,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DirectoryPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DirectoryPath As String" />
       <MemberSignature Language="F#" Value="member this.DirectoryPath : string" Usage="Microsoft.Build.Construction.ProjectRootElement.DirectoryPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DirectoryPath { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1615,6 +1671,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Encoding" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Encoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.Encoding : System.Text.Encoding" Usage="Microsoft.Build.Construction.ProjectRootElement.Encoding" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Text::Encoding ^ Encoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1641,6 +1698,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.EscapedFullPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EscapedFullPath As String" />
       <MemberSignature Language="F#" Value="member this.EscapedFullPath : string" Usage="Microsoft.Build.Construction.ProjectRootElement.EscapedFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EscapedFullPath { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1661,6 +1719,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.FullPath" />
       <MemberSignature Language="VB.NET" Value="Public Property FullPath As String" />
       <MemberSignature Language="F#" Value="member this.FullPath : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.FullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FullPath { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1689,6 +1748,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.HasUnsavedChanges" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasUnsavedChanges As Boolean" />
       <MemberSignature Language="F#" Value="member this.HasUnsavedChanges : bool" Usage="Microsoft.Build.Construction.ProjectRootElement.HasUnsavedChanges" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasUnsavedChanges { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1712,6 +1772,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ImportGroups" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportGroups As ICollection(Of ProjectImportGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ImportGroups : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ImportGroups" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportGroupElement ^&gt; ^ ImportGroups { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1735,6 +1796,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ImportGroupsReversed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportGroupsReversed As ICollection(Of ProjectImportGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ImportGroupsReversed : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ImportGroupsReversed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportGroupElement ^&gt; ^ ImportGroupsReversed { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1758,6 +1820,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Imports" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Imports As ICollection(Of ProjectImportElement)" />
       <MemberSignature Language="F#" Value="member this.Imports : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.Imports" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportElement ^&gt; ^ Imports { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectImportElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1781,6 +1844,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.InitialTargets" />
       <MemberSignature Language="VB.NET" Value="Public Property InitialTargets As String" />
       <MemberSignature Language="F#" Value="member this.InitialTargets : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.InitialTargets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InitialTargets { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1815,6 +1879,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.InitialTargetsLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitialTargetsLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.InitialTargetsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.InitialTargetsLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ InitialTargetsLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1838,6 +1903,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroups" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemDefinitionGroups As ICollection(Of ProjectItemDefinitionGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ItemDefinitionGroups : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroups" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^&gt; ^ ItemDefinitionGroups { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1861,6 +1927,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroupsReversed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemDefinitionGroupsReversed As ICollection(Of ProjectItemDefinitionGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ItemDefinitionGroupsReversed : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroupsReversed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^&gt; ^ ItemDefinitionGroupsReversed { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1884,6 +1951,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemDefinitions As ICollection(Of ProjectItemDefinitionElement)" />
       <MemberSignature Language="F#" Value="member this.ItemDefinitions : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ItemDefinitions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionElement ^&gt; ^ ItemDefinitions { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemDefinitionElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1907,6 +1975,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemGroups" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemGroups As ICollection(Of ProjectItemGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ItemGroups : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ItemGroups" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ ItemGroups { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1931,6 +2000,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemGroupsReversed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemGroupsReversed As ICollection(Of ProjectItemGroupElement)" />
       <MemberSignature Language="F#" Value="member this.ItemGroupsReversed : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.ItemGroupsReversed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ ItemGroupsReversed { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1954,6 +2024,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Items" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Items As ICollection(Of ProjectItemElement)" />
       <MemberSignature Language="F#" Value="member this.Items : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.Items" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ Items { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1978,6 +2049,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.LastWriteTimeWhenRead" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastWriteTimeWhenRead As DateTime" />
       <MemberSignature Language="F#" Value="member this.LastWriteTimeWhenRead : DateTime" Usage="Microsoft.Build.Construction.ProjectRootElement.LastWriteTimeWhenRead" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime LastWriteTimeWhenRead { DateTime get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2013,6 +2085,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Open(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Open (path As String) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Open : string -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Open path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Open(System::String ^ path);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2042,6 +2115,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Open(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Open (path As String, projectCollection As ProjectCollection) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Open : string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Open (path, projectCollection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Open(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2073,6 +2147,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Open(System.String,Microsoft.Build.Evaluation.ProjectCollection,System.Nullable{System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Open (path As String, projectCollection As ProjectCollection, preserveFormatting As Nullable(Of Boolean)) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member Open : string * Microsoft.Build.Evaluation.ProjectCollection * Nullable&lt;bool&gt; -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.Open (path, projectCollection, preserveFormatting)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ Open(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Nullable&lt;bool&gt; preserveFormatting);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2104,6 +2179,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.PreserveFormatting" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreserveFormatting As Boolean" />
       <MemberSignature Language="F#" Value="member this.PreserveFormatting : bool" Usage="Microsoft.Build.Construction.ProjectRootElement.PreserveFormatting" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PreserveFormatting { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2126,6 +2202,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectFileLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.ProjectFileLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ ProjectFileLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2151,6 +2228,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As ICollection(Of ProjectPropertyElement)" />
       <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.Properties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyElement ^&gt; ^ Properties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2175,6 +2253,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.PropertyGroups" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyGroups As ICollection(Of ProjectPropertyGroupElement)" />
       <MemberSignature Language="F#" Value="member this.PropertyGroups : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.PropertyGroups" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyGroupElement ^&gt; ^ PropertyGroups { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2199,6 +2278,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.PropertyGroupsReversed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyGroupsReversed As ICollection(Of ProjectPropertyGroupElement)" />
       <MemberSignature Language="F#" Value="member this.PropertyGroupsReversed : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.PropertyGroupsReversed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyGroupElement ^&gt; ^ PropertyGroupsReversed { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectPropertyGroupElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2222,6 +2302,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.RawXml" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RawXml As String" />
       <MemberSignature Language="F#" Value="member this.RawXml : string" Usage="Microsoft.Build.Construction.ProjectRootElement.RawXml" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RawXml { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2351,6 +2432,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save ()" />
       <MemberSignature Language="F#" Value="member this.Save : unit -&gt; unit" Usage="projectRootElement.Save " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2378,6 +2460,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.IO.TextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (writer As TextWriter)" />
       <MemberSignature Language="F#" Value="member this.Save : System.IO.TextWriter -&gt; unit" Usage="projectRootElement.Save writer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::IO::TextWriter ^ writer);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2406,6 +2489,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (path As String)" />
       <MemberSignature Language="F#" Value="member this.Save : string -&gt; unit" Usage="projectRootElement.Save path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::String ^ path);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2435,6 +2519,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.Text.Encoding)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (saveEncoding As Encoding)" />
       <MemberSignature Language="F#" Value="member this.Save : System.Text.Encoding -&gt; unit" Usage="projectRootElement.Save saveEncoding" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::Text::Encoding ^ saveEncoding);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2464,6 +2549,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.String,System.Text.Encoding)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (path As String, encoding As Encoding)" />
       <MemberSignature Language="F#" Value="member this.Save : string * System.Text.Encoding -&gt; unit" Usage="projectRootElement.Save (path, encoding)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::String ^ path, System::Text::Encoding ^ encoding);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2495,6 +2581,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Sdk" />
       <MemberSignature Language="VB.NET" Value="Public Property Sdk As String" />
       <MemberSignature Language="F#" Value="member this.Sdk : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.Sdk" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Sdk { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2530,6 +2617,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.SdkLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SdkLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.SdkLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.SdkLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ SdkLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2552,6 +2640,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Targets" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Targets As ICollection(Of ProjectTargetElement)" />
       <MemberSignature Language="F#" Value="member this.Targets : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectTargetElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.Targets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectTargetElement ^&gt; ^ Targets { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectTargetElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2575,6 +2664,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TimeLastChanged" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeLastChanged As DateTime" />
       <MemberSignature Language="F#" Value="member this.TimeLastChanged : DateTime" Usage="Microsoft.Build.Construction.ProjectRootElement.TimeLastChanged" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime TimeLastChanged { DateTime get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2607,6 +2697,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public Property ToolsVersion As String" />
       <MemberSignature Language="F#" Value="member this.ToolsVersion : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.ToolsVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToolsVersion { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2641,6 +2732,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ToolsVersionLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToolsVersionLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.ToolsVersionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.ToolsVersionLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ ToolsVersionLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2664,6 +2756,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalProperty" />
       <MemberSignature Language="VB.NET" Value="Public Property TreatAsLocalProperty As String" />
       <MemberSignature Language="F#" Value="member this.TreatAsLocalProperty : string with get, set" Usage="Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalProperty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TreatAsLocalProperty { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2698,6 +2791,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalPropertyLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TreatAsLocalPropertyLocation As ElementLocation" />
       <MemberSignature Language="F#" Value="member this.TreatAsLocalPropertyLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalPropertyLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ TreatAsLocalPropertyLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2721,6 +2815,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.TryOpen(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryOpen (path As String) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member TryOpen : string -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.TryOpen path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ TryOpen(System::String ^ path);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2752,6 +2847,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.TryOpen(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryOpen (path As String, projectCollection As ProjectCollection) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member TryOpen : string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.TryOpen (path, projectCollection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ TryOpen(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2785,6 +2881,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.TryOpen(System.String,Microsoft.Build.Evaluation.ProjectCollection,System.Nullable{System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryOpen (path As String, projectCollection As ProjectCollection, preserveFormatting As Nullable(Of Boolean)) As ProjectRootElement" />
       <MemberSignature Language="F#" Value="static member TryOpen : string * Microsoft.Build.Evaluation.ProjectCollection * Nullable&lt;bool&gt; -&gt; Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Construction.ProjectRootElement.TryOpen (path, projectCollection, preserveFormatting)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ProjectRootElement ^ TryOpen(System::String ^ path, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Nullable&lt;bool&gt; preserveFormatting);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2821,6 +2918,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.UsingTasks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsingTasks As ICollection(Of ProjectUsingTaskElement)" />
       <MemberSignature Language="F#" Value="member this.UsingTasks : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectUsingTaskElement&gt;" Usage="Microsoft.Build.Construction.ProjectRootElement.UsingTasks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectUsingTaskElement ^&gt; ^ UsingTasks { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectUsingTaskElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2844,6 +2942,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Integer" />
       <MemberSignature Language="F#" Value="member this.Version : int" Usage="Microsoft.Build.Construction.ProjectRootElement.Version" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Version { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

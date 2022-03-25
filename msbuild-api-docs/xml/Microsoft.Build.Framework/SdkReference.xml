@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.SdkReference" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SdkReference&#xA;Implements IEquatable(Of SdkReference)" />
   <TypeSignature Language="F#" Value="type SdkReference = class&#xA;    interface IEquatable&lt;SdkReference&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdkReference sealed : IEquatable&lt;Microsoft::Build::Framework::SdkReference ^&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.#ctor(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, version As String, minimumVersion As String)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.SdkReference : string * string * string -&gt; Microsoft.Build.Framework.SdkReference" Usage="new Microsoft.Build.Framework.SdkReference (name, version, minimumVersion)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdkReference(System::String ^ name, System::String ^ version, System::String ^ minimumVersion);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -61,6 +63,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.Equals(Microsoft.Build.Framework.SdkReference)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SdkReference) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Build.Framework.SdkReference -&gt; bool" Usage="sdkReference.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Build::Framework::SdkReference ^ other);" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -88,6 +91,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="sdkReference.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -113,6 +117,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="sdkReference.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -135,6 +140,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.SdkReference.MinimumVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinimumVersion As String" />
       <MemberSignature Language="F#" Value="member this.MinimumVersion : string" Usage="Microsoft.Build.Framework.SdkReference.MinimumVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MinimumVersion { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -159,6 +165,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.SdkReference.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Build.Framework.SdkReference.Name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -181,6 +188,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="sdkReference.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -203,6 +211,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkReference.TryParse(System.String,Microsoft.Build.Framework.SdkReference@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (sdk As String, ByRef sdkReference As SdkReference) As Boolean" />
       <MemberSignature Language="F#" Value="static member TryParse : string * SdkReference -&gt; bool" Usage="Microsoft.Build.Framework.SdkReference.TryParse (sdk, sdkReference)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(System::String ^ sdk, [Runtime::InteropServices::Out] Microsoft::Build::Framework::SdkReference ^ % sdkReference);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -234,6 +243,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.SdkReference.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As String" />
       <MemberSignature Language="F#" Value="member this.Version : string" Usage="Microsoft.Build.Framework.SdkReference.Version" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Version { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>

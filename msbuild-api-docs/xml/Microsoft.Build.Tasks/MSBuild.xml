@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.MSBuild" />
   <TypeSignature Language="VB.NET" Value="Public Class MSBuild&#xA;Inherits TaskExtension" />
   <TypeSignature Language="F#" Value="type MSBuild = class&#xA;    inherit TaskExtension" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuild : Microsoft::Build::Tasks::TaskExtension" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.MSBuild.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuild();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -73,6 +75,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.BuildInParallel" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property BuildInParallel As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.BuildInParallel : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.BuildInParallel" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool BuildInParallel { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -114,6 +117,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.MSBuild.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
       <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="mSBuild.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -149,6 +153,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Projects" />
       <MemberSignature Language="VB.NET" Value="Public Property Projects As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.Projects : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.MSBuild.Projects" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ Projects { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -196,6 +201,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Properties" />
       <MemberSignature Language="VB.NET" Value="Public Property Properties As String()" />
       <MemberSignature Language="F#" Value="member this.Properties : string[] with get, set" Usage="Microsoft.Build.Tasks.MSBuild.Properties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ Properties { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -251,6 +257,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RebaseOutputs" />
       <MemberSignature Language="VB.NET" Value="Public Property RebaseOutputs As Boolean" />
       <MemberSignature Language="F#" Value="member this.RebaseOutputs : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.RebaseOutputs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RebaseOutputs { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -294,6 +301,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RemoveProperties" />
       <MemberSignature Language="VB.NET" Value="Public Property RemoveProperties As String" />
       <MemberSignature Language="F#" Value="member this.RemoveProperties : string with get, set" Usage="Microsoft.Build.Tasks.MSBuild.RemoveProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RemoveProperties { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -329,6 +337,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RunEachTargetSeparately" />
       <MemberSignature Language="VB.NET" Value="Public Property RunEachTargetSeparately As Boolean" />
       <MemberSignature Language="F#" Value="member this.RunEachTargetSeparately : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.RunEachTargetSeparately" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RunEachTargetSeparately { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -375,6 +384,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.SkipNonexistentProjects" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property SkipNonexistentProjects As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.SkipNonexistentProjects : string with get, set" Usage="Microsoft.Build.Tasks.MSBuild.SkipNonexistentProjects" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SkipNonexistentProjects { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -406,6 +416,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.StopOnFirstFailure" />
       <MemberSignature Language="VB.NET" Value="Public Property StopOnFirstFailure As Boolean" />
       <MemberSignature Language="F#" Value="member this.StopOnFirstFailure : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.StopOnFirstFailure" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool StopOnFirstFailure { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -451,6 +462,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.TargetAndPropertyListSeparators" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property TargetAndPropertyListSeparators As String()" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.TargetAndPropertyListSeparators : string[] with get, set" Usage="Microsoft.Build.Tasks.MSBuild.TargetAndPropertyListSeparators" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ TargetAndPropertyListSeparators { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -492,6 +504,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.TargetOutputs" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetOutputs As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.TargetOutputs : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.MSBuild.TargetOutputs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ TargetOutputs { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -531,6 +544,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Targets" />
       <MemberSignature Language="VB.NET" Value="Public Property Targets As String()" />
       <MemberSignature Language="F#" Value="member this.Targets : string[] with get, set" Usage="Microsoft.Build.Tasks.MSBuild.Targets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ Targets { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -574,6 +588,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.ToolsVersion" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property ToolsVersion As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.ToolsVersion : string with get, set" Usage="Microsoft.Build.Tasks.MSBuild.ToolsVersion" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToolsVersion { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -613,6 +628,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property UnloadProjectsOnCompletion As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.UnloadProjectsOnCompletion : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UnloadProjectsOnCompletion { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -653,6 +669,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.UseResultsCache" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property UseResultsCache As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.UseResultsCache : bool with get, set" Usage="Microsoft.Build.Tasks.MSBuild.UseResultsCache" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseResultsCache { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

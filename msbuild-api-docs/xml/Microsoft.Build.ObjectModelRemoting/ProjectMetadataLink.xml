@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectMetadataLink" />
   <TypeSignature Language="F#" Value="type ProjectMetadataLink = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectMetadataLink abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProjectMetadataLink();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.EvaluatedValueEscaped" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EvaluatedValueEscaped As String" />
       <MemberSignature Language="F#" Value="member this.EvaluatedValueEscaped : string" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.EvaluatedValueEscaped" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ EvaluatedValueEscaped { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -63,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.GetEvaluatedValueEscaped(Microsoft.Build.Evaluation.ProjectMetadata)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetEvaluatedValueEscaped (metadata As ProjectMetadata) As String" />
       <MemberSignature Language="F#" Value="static member GetEvaluatedValueEscaped : Microsoft.Build.Evaluation.ProjectMetadata -&gt; string" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.GetEvaluatedValueEscaped metadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetEvaluatedValueEscaped(Microsoft::Build::Evaluation::ProjectMetadata ^ metadata);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.GetParent(Microsoft.Build.Evaluation.ProjectMetadata)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetParent (metadata As ProjectMetadata) As Object" />
       <MemberSignature Language="F#" Value="static member GetParent : Microsoft.Build.Evaluation.ProjectMetadata -&gt; obj" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.GetParent metadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ GetParent(Microsoft::Build::Evaluation::ProjectMetadata ^ metadata);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Parent" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Parent As Object" />
       <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Parent" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Parent { System::Object ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -140,6 +146,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Predecessor" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Predecessor As ProjectMetadata" />
       <MemberSignature Language="F#" Value="member this.Predecessor : Microsoft.Build.Evaluation.ProjectMetadata" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Predecessor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Evaluation::ProjectMetadata ^ Predecessor { Microsoft::Build::Evaluation::ProjectMetadata ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -162,6 +169,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Xml" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Xml As ProjectMetadataElement" />
       <MemberSignature Language="F#" Value="member this.Xml : Microsoft.Build.Construction.ProjectMetadataElement" Usage="Microsoft.Build.ObjectModelRemoting.ProjectMetadataLink.Xml" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Construction::ProjectMetadataElement ^ Xml { Microsoft::Build::Construction::ProjectMetadataElement ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

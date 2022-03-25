@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.CreateManifestResourceName" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CreateManifestResourceName&#xA;Inherits TaskExtension" />
   <TypeSignature Language="F#" Value="type CreateManifestResourceName = class&#xA;    inherit TaskExtension" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CreateManifestResourceName abstract : Microsoft::Build::Tasks::TaskExtension" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -36,6 +37,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CreateManifestResourceName();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.CreateManifestName(System.String,System.String,System.String,System.String,System.IO.Stream)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CreateManifestName (fileName As String, linkFileName As String, rootNamespaceName As String, dependentUponFileName As String, binaryStream As Stream) As String" />
       <MemberSignature Language="F#" Value="abstract member CreateManifestName : string * string * string * string * System.IO.Stream -&gt; string" Usage="createManifestResourceName.CreateManifestName (fileName, linkFileName, rootNamespaceName, dependentUponFileName, binaryStream)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::String ^ CreateManifestName(System::String ^ fileName, System::String ^ linkFileName, System::String ^ rootNamespaceName, System::String ^ dependentUponFileName, System::IO::Stream ^ binaryStream);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -110,6 +113,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
       <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="createManifestResourceName.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -144,6 +148,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function IsSourceFile (fileName As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member IsSourceFile : string -&gt; bool" Usage="createManifestResourceName.IsSourceFile fileName" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract bool IsSourceFile(System::String ^ fileName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -182,6 +187,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.CreateManifestResourceName.itemSpecToTaskitem" />
       <MemberSignature Language="VB.NET" Value="Protected itemSpecToTaskitem As Dictionary(Of String, ITaskItem) " />
       <MemberSignature Language="F#" Value="val mutable itemSpecToTaskitem : System.Collections.Generic.Dictionary&lt;string, Microsoft.Build.Framework.ITaskItem&gt;" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.itemSpecToTaskitem" />
+      <MemberSignature Language="C++ CLI" Value="protected: System::Collections::Generic::Dictionary&lt;System::String ^, Microsoft::Build::Framework::ITaskItem ^&gt; ^ itemSpecToTaskitem;" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -205,6 +211,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function MakeValidEverettIdentifier (name As String) As String" />
       <MemberSignature Language="F#" Value="static member MakeValidEverettIdentifier : string -&gt; string" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ MakeValidEverettIdentifier(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -243,6 +250,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ManifestResourceNames As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.ManifestResourceNames : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ManifestResourceNames { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -286,6 +294,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property PrependCultureAsDirectory As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.PrependCultureAsDirectory : bool with get, set" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PrependCultureAsDirectory { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -327,6 +336,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property ResourceFiles As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.ResourceFiles : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ResourceFiles { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -370,6 +380,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property ResourceFilesWithManifestResourceNames As ITaskItem()" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.ResourceFilesWithManifestResourceNames : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ResourceFilesWithManifestResourceNames { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -413,6 +424,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" />
       <MemberSignature Language="VB.NET" Value="Public Property RootNamespace As String" />
       <MemberSignature Language="F#" Value="member this.RootNamespace : string with get, set" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RootNamespace { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -456,6 +468,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.SourceFileExtension" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property SourceFileExtension As String" />
       <MemberSignature Language="F#" Value="member this.SourceFileExtension : string" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.SourceFileExtension" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::String ^ SourceFileExtension { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -476,6 +489,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.UseDependentUponConvention" />
       <MemberSignature Language="VB.NET" Value="Public Property UseDependentUponConvention As Boolean" />
       <MemberSignature Language="F#" Value="member this.UseDependentUponConvention : bool with get, set" Usage="Microsoft.Build.Tasks.CreateManifestResourceName.UseDependentUponConvention" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseDependentUponConvention { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

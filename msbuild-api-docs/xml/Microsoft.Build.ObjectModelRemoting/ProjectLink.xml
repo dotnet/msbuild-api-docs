@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.ObjectModelRemoting.ProjectLink" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectLink" />
   <TypeSignature Language="F#" Value="type ProjectLink = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectLink abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProjectLink();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.AddItem(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function AddItem (itemType As String, unevaluatedInclude As String, metadata As IEnumerable(Of KeyValuePair(Of String, String))) As IList(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="abstract member AddItem : string * string * seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="projectLink.AddItem (itemType, unevaluatedInclude, metadata)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItem(System::String ^ itemType, System::String ^ unevaluatedInclude, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ metadata);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -71,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.AddItemFast(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function AddItemFast (itemType As String, unevaluatedInclude As String, metadata As IEnumerable(Of KeyValuePair(Of String, String))) As IList(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="abstract member AddItemFast : string * string * seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="projectLink.AddItemFast (itemType, unevaluatedInclude, metadata)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItemFast(System::String ^ itemType, System::String ^ unevaluatedInclude, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ metadata);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -101,6 +105,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedItemDefinitionMetadata" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AllEvaluatedItemDefinitionMetadata As ICollection(Of ProjectMetadata)" />
       <MemberSignature Language="F#" Value="member this.AllEvaluatedItemDefinitionMetadata : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedItemDefinitionMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ AllEvaluatedItemDefinitionMetadata { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -123,6 +128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedItems" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AllEvaluatedItems As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="member this.AllEvaluatedItems : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedItems" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AllEvaluatedItems { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -145,6 +151,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedProperties" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AllEvaluatedProperties As ICollection(Of ProjectProperty)" />
       <MemberSignature Language="F#" Value="member this.AllEvaluatedProperties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.AllEvaluatedProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ AllEvaluatedProperties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -167,6 +174,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.Build(System.String[],System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Build (targets As String(), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord), evaluationContext As EvaluationContext) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Build : string[] * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; bool" Usage="projectLink.Build (targets, loggers, remoteLoggers, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool Build(cli::array &lt;System::String ^&gt; ^ targets, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -199,6 +207,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ConditionedProperties" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ConditionedProperties As IDictionary(Of String, List(Of String))" />
       <MemberSignature Language="F#" Value="member this.ConditionedProperties : System.Collections.Generic.IDictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ConditionedProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, System::Collections::Generic::List&lt;System::String ^&gt; ^&gt; ^ ConditionedProperties { System::Collections::Generic::IDictionary&lt;System::String ^, System::Collections::Generic::List&lt;System::String ^&gt; ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -221,6 +230,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.CreateProjectInstance(Microsoft.Build.Execution.ProjectInstanceSettings,Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateProjectInstance (settings As ProjectInstanceSettings, evaluationContext As EvaluationContext) As ProjectInstance" />
       <MemberSignature Language="F#" Value="abstract member CreateProjectInstance : Microsoft.Build.Execution.ProjectInstanceSettings * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="projectLink.CreateProjectInstance (settings, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Execution::ProjectInstance ^ CreateProjectInstance(Microsoft::Build::Execution::ProjectInstanceSettings settings, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -249,6 +259,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.DisableMarkDirty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property DisableMarkDirty As Boolean" />
       <MemberSignature Language="F#" Value="member this.DisableMarkDirty : bool with get, set" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.DisableMarkDirty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool DisableMarkDirty { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -271,6 +282,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.ExpandString(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function ExpandString (unexpandedValue As String) As String" />
       <MemberSignature Language="F#" Value="abstract member ExpandString : string -&gt; string" Usage="projectLink.ExpandString unexpandedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ ExpandString(System::String ^ unexpandedValue);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -297,6 +309,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetAllGlobs(Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetAllGlobs (evaluationContext As EvaluationContext) As List(Of GlobResult)" />
       <MemberSignature Language="F#" Value="abstract member GetAllGlobs : Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; System.Collections.Generic.List&lt;Microsoft.Build.Evaluation.GlobResult&gt;" Usage="projectLink.GetAllGlobs evaluationContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::List&lt;Microsoft::Build::Evaluation::GlobResult ^&gt; ^ GetAllGlobs(Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -323,6 +336,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetAllGlobs(System.String,Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetAllGlobs (itemType As String, evaluationContext As EvaluationContext) As List(Of GlobResult)" />
       <MemberSignature Language="F#" Value="abstract member GetAllGlobs : string * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; System.Collections.Generic.List&lt;Microsoft.Build.Evaluation.GlobResult&gt;" Usage="projectLink.GetAllGlobs (itemType, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::List&lt;Microsoft::Build::Evaluation::GlobResult ^&gt; ^ GetAllGlobs(System::String ^ itemType, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -351,6 +365,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItemProvenance(Microsoft.Build.Evaluation.ProjectItem,Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItemProvenance (item As ProjectItem, evaluationContext As EvaluationContext) As List(Of ProvenanceResult)" />
       <MemberSignature Language="F#" Value="abstract member GetItemProvenance : Microsoft.Build.Evaluation.ProjectItem * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; System.Collections.Generic.List&lt;Microsoft.Build.Evaluation.ProvenanceResult&gt;" Usage="projectLink.GetItemProvenance (item, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::List&lt;Microsoft::Build::Evaluation::ProvenanceResult ^&gt; ^ GetItemProvenance(Microsoft::Build::Evaluation::ProjectItem ^ item, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -379,6 +394,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItemProvenance(System.String,Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItemProvenance (itemToMatch As String, evaluationContext As EvaluationContext) As List(Of ProvenanceResult)" />
       <MemberSignature Language="F#" Value="abstract member GetItemProvenance : string * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; System.Collections.Generic.List&lt;Microsoft.Build.Evaluation.ProvenanceResult&gt;" Usage="projectLink.GetItemProvenance (itemToMatch, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::List&lt;Microsoft::Build::Evaluation::ProvenanceResult ^&gt; ^ GetItemProvenance(System::String ^ itemToMatch, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -407,6 +423,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItemProvenance(System.String,System.String,Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItemProvenance (itemToMatch As String, itemType As String, evaluationContext As EvaluationContext) As List(Of ProvenanceResult)" />
       <MemberSignature Language="F#" Value="abstract member GetItemProvenance : string * string * Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; System.Collections.Generic.List&lt;Microsoft.Build.Evaluation.ProvenanceResult&gt;" Usage="projectLink.GetItemProvenance (itemToMatch, itemType, evaluationContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::List&lt;Microsoft::Build::Evaluation::ProvenanceResult ^&gt; ^ GetItemProvenance(System::String ^ itemToMatch, System::String ^ itemType, Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -437,6 +454,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItems(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItems (itemType As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="abstract member GetItems : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="projectLink.GetItems itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItems(System::String ^ itemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -463,6 +481,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItemsByEvaluatedInclude(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItemsByEvaluatedInclude (evaluatedInclude As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="abstract member GetItemsByEvaluatedInclude : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="projectLink.GetItemsByEvaluatedInclude evaluatedInclude" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItemsByEvaluatedInclude(System::String ^ evaluatedInclude);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -489,6 +508,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetItemsIgnoringCondition(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetItemsIgnoringCondition (itemType As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="abstract member GetItemsIgnoringCondition : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="projectLink.GetItemsIgnoringCondition itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItemsIgnoringCondition(System::String ^ itemType);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -515,6 +535,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetLogicalProject" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetLogicalProject () As IEnumerable(Of ProjectElement)" />
       <MemberSignature Language="F#" Value="abstract member GetLogicalProject : unit -&gt; seq&lt;Microsoft.Build.Construction.ProjectElement&gt;" Usage="projectLink.GetLogicalProject " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectElement ^&gt; ^ GetLogicalProject();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -538,6 +559,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetProperty(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetProperty (name As String) As ProjectProperty" />
       <MemberSignature Language="F#" Value="abstract member GetProperty : string -&gt; Microsoft.Build.Evaluation.ProjectProperty" Usage="projectLink.GetProperty name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Evaluation::ProjectProperty ^ GetProperty(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -564,6 +586,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetPropertyValue(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPropertyValue (name As String) As String" />
       <MemberSignature Language="F#" Value="abstract member GetPropertyValue : string -&gt; string" Usage="projectLink.GetPropertyValue name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ GetPropertyValue(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -590,6 +613,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalProperties" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property GlobalProperties As IDictionary(Of String, String)" />
       <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalProperties { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -612,6 +636,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.Imports" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Imports As IList(Of ResolvedImport)" />
       <MemberSignature Language="F#" Value="member this.Imports : System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.Imports" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ Imports { System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -634,6 +659,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ImportsIncludingDuplicates" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ImportsIncludingDuplicates As IList(Of ResolvedImport)" />
       <MemberSignature Language="F#" Value="member this.ImportsIncludingDuplicates : System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ImportsIncludingDuplicates" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ ImportsIncludingDuplicates { System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -656,6 +682,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.IsBuildEnabled" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property IsBuildEnabled As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsBuildEnabled : bool with get, set" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.IsBuildEnabled" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsBuildEnabled { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -678,6 +705,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsDirty As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsDirty : bool" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.IsDirty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsDirty { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -700,6 +728,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemDefinitions" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ItemDefinitions As IDictionary(Of String, ProjectItemDefinition)" />
       <MemberSignature Language="F#" Value="member this.ItemDefinitions : System.Collections.Generic.IDictionary&lt;string, Microsoft.Build.Evaluation.ProjectItemDefinition&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemDefinitions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Evaluation::ProjectItemDefinition ^&gt; ^ ItemDefinitions { System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Evaluation::ProjectItemDefinition ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -722,6 +751,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.Items" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Items As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="member this.Items : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.Items" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ Items { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -744,6 +774,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemsIgnoringCondition" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ItemsIgnoringCondition As ICollection(Of ProjectItem)" />
       <MemberSignature Language="F#" Value="member this.ItemsIgnoringCondition : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemsIgnoringCondition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ ItemsIgnoringCondition { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -766,6 +797,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemTypes" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ItemTypes As ICollection(Of String)" />
       <MemberSignature Language="F#" Value="member this.ItemTypes : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ItemTypes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ ItemTypes { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -788,6 +820,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.LastEvaluationId" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LastEvaluationId As Integer" />
       <MemberSignature Language="F#" Value="member this.LastEvaluationId : int" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.LastEvaluationId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int LastEvaluationId { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -810,6 +843,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.MarkDirty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub MarkDirty ()" />
       <MemberSignature Language="F#" Value="abstract member MarkDirty : unit -&gt; unit" Usage="projectLink.MarkDirty " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void MarkDirty();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -832,6 +866,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.Properties" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Properties As ICollection(Of ProjectProperty)" />
       <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.Properties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ Properties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -854,6 +889,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.ReevaluateIfNecessary(Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReevaluateIfNecessary (evaluationContext As EvaluationContext)" />
       <MemberSignature Language="F#" Value="abstract member ReevaluateIfNecessary : Microsoft.Build.Evaluation.Context.EvaluationContext -&gt; unit" Usage="projectLink.ReevaluateIfNecessary evaluationContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReevaluateIfNecessary(Microsoft::Build::Evaluation::Context::EvaluationContext ^ evaluationContext);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -879,6 +915,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveGlobalProperty(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function RemoveGlobalProperty (name As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member RemoveGlobalProperty : string -&gt; bool" Usage="projectLink.RemoveGlobalProperty name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool RemoveGlobalProperty(System::String ^ name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -905,6 +942,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveItem(Microsoft.Build.Evaluation.ProjectItem)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function RemoveItem (item As ProjectItem) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member RemoveItem : Microsoft.Build.Evaluation.ProjectItem -&gt; bool" Usage="projectLink.RemoveItem item" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool RemoveItem(Microsoft::Build::Evaluation::ProjectItem ^ item);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -931,6 +969,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveItems(System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectItem})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RemoveItems (items As IEnumerable(Of ProjectItem))" />
       <MemberSignature Language="F#" Value="abstract member RemoveItems : seq&lt;Microsoft.Build.Evaluation.ProjectItem&gt; -&gt; unit" Usage="projectLink.RemoveItems items" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RemoveItems(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ items);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -956,6 +995,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveProperty(Microsoft.Build.Evaluation.ProjectProperty)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function RemoveProperty (property As ProjectProperty) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member RemoveProperty : Microsoft.Build.Evaluation.ProjectProperty -&gt; bool" Usage="projectLink.RemoveProperty property" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool RemoveProperty(Microsoft::Build::Evaluation::ProjectProperty ^ property);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -982,6 +1022,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.SaveLogicalProject(System.IO.TextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SaveLogicalProject (writer As TextWriter)" />
       <MemberSignature Language="F#" Value="abstract member SaveLogicalProject : System.IO.TextWriter -&gt; unit" Usage="projectLink.SaveLogicalProject writer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SaveLogicalProject(System::IO::TextWriter ^ writer);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1007,6 +1048,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.SetGlobalProperty(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function SetGlobalProperty (name As String, escapedValue As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SetGlobalProperty : string * string -&gt; bool" Usage="projectLink.SetGlobalProperty (name, escapedValue)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool SetGlobalProperty(System::String ^ name, System::String ^ escapedValue);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1035,6 +1077,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.SetProperty(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function SetProperty (name As String, unevaluatedValue As String) As ProjectProperty" />
       <MemberSignature Language="F#" Value="abstract member SetProperty : string * string -&gt; Microsoft.Build.Evaluation.ProjectProperty" Usage="projectLink.SetProperty (name, unevaluatedValue)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Evaluation::ProjectProperty ^ SetProperty(System::String ^ name, System::String ^ unevaluatedValue);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1063,6 +1106,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.SkipEvaluation" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property SkipEvaluation As Boolean" />
       <MemberSignature Language="F#" Value="member this.SkipEvaluation : bool with get, set" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.SkipEvaluation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool SkipEvaluation { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1085,6 +1129,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.SubToolsetVersion" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SubToolsetVersion As String" />
       <MemberSignature Language="F#" Value="member this.SubToolsetVersion : string" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.SubToolsetVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SubToolsetVersion { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1107,6 +1152,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.Targets" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Targets As IDictionary(Of String, ProjectTargetInstance)" />
       <MemberSignature Language="F#" Value="member this.Targets : System.Collections.Generic.IDictionary&lt;string, Microsoft.Build.Execution.ProjectTargetInstance&gt;" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.Targets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Execution::ProjectTargetInstance ^&gt; ^ Targets { System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Execution::ProjectTargetInstance ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1129,6 +1175,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ThrowInsteadOfSplittingItemElement" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property ThrowInsteadOfSplittingItemElement As Boolean" />
       <MemberSignature Language="F#" Value="member this.ThrowInsteadOfSplittingItemElement : bool with get, set" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ThrowInsteadOfSplittingItemElement" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ThrowInsteadOfSplittingItemElement { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1151,6 +1198,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.ToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ToolsVersion As String" />
       <MemberSignature Language="F#" Value="member this.ToolsVersion : string" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.ToolsVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ToolsVersion { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1173,6 +1221,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.Unload" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Unload ()" />
       <MemberSignature Language="F#" Value="abstract member Unload : unit -&gt; unit" Usage="projectLink.Unload " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Unload();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1195,6 +1244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.ObjectModelRemoting.ProjectLink.Xml" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Xml As ProjectRootElement" />
       <MemberSignature Language="F#" Value="member this.Xml : Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.ObjectModelRemoting.ProjectLink.Xml" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Construction::ProjectRootElement ^ Xml { Microsoft::Build::Construction::ProjectRootElement ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

@@ -4,10 +4,12 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.ToolTask" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ToolTask&#xA;Inherits Task&#xA;Implements ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
   <TypeSignature Language="F#" Value="type ToolTask = class&#xA;    inherit Task&#xA;    interface ICancelableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ToolTask abstract : Microsoft::Build::Utilities::Task, Microsoft::Build::Framework::ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
   <TypeSignature Language="C#" Value="public abstract class ToolTask : Microsoft.Build.Utilities.Task" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ToolTask extends Microsoft.Build.Utilities.Task" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ToolTask&#xA;Inherits Task" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
   <TypeSignature Language="F#" Value="type ToolTask = class&#xA;    inherit Task" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ToolTask abstract : Microsoft::Build::Utilities::Task" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -47,6 +49,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ToolTask();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -77,6 +80,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (taskResources As ResourceManager)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.ToolTask : System.Resources.ResourceManager -&gt; Microsoft.Build.Utilities.ToolTask" Usage="new Microsoft.Build.Utilities.ToolTask taskResources" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ToolTask(System::Resources::ResourceManager ^ taskResources);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -110,6 +114,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (taskResources As ResourceManager, helpKeywordPrefix As String)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.ToolTask : System.Resources.ResourceManager * string -&gt; Microsoft.Build.Utilities.ToolTask" Usage="new Microsoft.Build.Utilities.ToolTask (taskResources, helpKeywordPrefix)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ToolTask(System::Resources::ResourceManager ^ taskResources, System::String ^ helpKeywordPrefix);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -145,6 +150,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.AdjustCommandsForOperatingSystem(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function AdjustCommandsForOperatingSystem (input As String) As String" />
       <MemberSignature Language="F#" Value="abstract member AdjustCommandsForOperatingSystem : string -&gt; string&#xA;override this.AdjustCommandsForOperatingSystem : string -&gt; string" Usage="toolTask.AdjustCommandsForOperatingSystem input" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ AdjustCommandsForOperatingSystem(System::String ^ input);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -176,6 +182,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.CallHostObjectToExecute" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CallHostObjectToExecute () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member CallHostObjectToExecute : unit -&gt; bool&#xA;override this.CallHostObjectToExecute : unit -&gt; bool" Usage="toolTask.CallHostObjectToExecute " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool CallHostObjectToExecute();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -212,6 +219,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.Cancel" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Cancel ()" />
       <MemberSignature Language="F#" Value="abstract member Cancel : unit -&gt; unit&#xA;override this.Cancel : unit -&gt; unit" Usage="toolTask.Cancel " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ICancelableTask.Cancel</InterfaceMember>
@@ -240,6 +248,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.DeleteTempFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub DeleteTempFile (fileName As String)" />
       <MemberSignature Language="F#" Value="member this.DeleteTempFile : string -&gt; unit" Usage="toolTask.DeleteTempFile fileName" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void DeleteTempFile(System::String ^ fileName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -277,6 +286,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EchoOff" />
       <MemberSignature Language="VB.NET" Value="Public Property EchoOff As Boolean" />
       <MemberSignature Language="F#" Value="member this.EchoOff : bool with get, set" Usage="Microsoft.Build.Utilities.ToolTask.EchoOff" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EchoOff { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -313,10 +323,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EnvironmentOverride As Dictionary(Of String, String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="F#" Value="member this.EnvironmentOverride : System.Collections.Generic.Dictionary&lt;string, string&gt;" Usage="Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ EnvironmentOverride { System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="C#" Value="protected virtual System.Collections.Specialized.StringDictionary EnvironmentOverride { get; }" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary EnvironmentOverride" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EnvironmentOverride As StringDictionary" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.EnvironmentOverride : System.Collections.Specialized.StringDictionary" Usage="Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Collections::Specialized::StringDictionary ^ EnvironmentOverride { System::Collections::Specialized::StringDictionary ^ get(); };" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -357,6 +369,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" />
       <MemberSignature Language="VB.NET" Value="Public Property EnvironmentVariables As String()" />
       <MemberSignature Language="F#" Value="member this.EnvironmentVariables : string[] with get, set" Usage="Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ EnvironmentVariables { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -397,6 +410,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
       <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="toolTask.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
@@ -434,6 +448,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ExecuteTool(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function ExecuteTool (pathToTool As String, responseFileCommands As String, commandLineCommands As String) As Integer" />
       <MemberSignature Language="F#" Value="abstract member ExecuteTool : string * string * string -&gt; int&#xA;override this.ExecuteTool : string * string * string -&gt; int" Usage="toolTask.ExecuteTool (pathToTool, responseFileCommands, commandLineCommands)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual int ExecuteTool(System::String ^ pathToTool, System::String ^ responseFileCommands, System::String ^ commandLineCommands);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -476,6 +491,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ExitCode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExitCode As Integer" />
       <MemberSignature Language="F#" Value="member this.ExitCode : int" Usage="Microsoft.Build.Utilities.ToolTask.ExitCode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ExitCode { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -520,6 +536,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateCommandLineCommands" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GenerateCommandLineCommands () As String" />
       <MemberSignature Language="F#" Value="abstract member GenerateCommandLineCommands : unit -&gt; string&#xA;override this.GenerateCommandLineCommands : unit -&gt; string" Usage="toolTask.GenerateCommandLineCommands " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GenerateCommandLineCommands();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -556,6 +573,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateFullPathToTool" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GenerateFullPathToTool () As String" />
       <MemberSignature Language="F#" Value="abstract member GenerateFullPathToTool : unit -&gt; string" Usage="toolTask.GenerateFullPathToTool " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::String ^ GenerateFullPathToTool();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -591,6 +609,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateResponseFileCommands" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GenerateResponseFileCommands () As String" />
       <MemberSignature Language="F#" Value="abstract member GenerateResponseFileCommands : unit -&gt; string&#xA;override this.GenerateResponseFileCommands : unit -&gt; string" Usage="toolTask.GenerateResponseFileCommands " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GenerateResponseFileCommands();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -626,10 +645,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetProcessStartInfo(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetProcessStartInfo (pathToTool As String, commandLineCommands As String, responseFileSwitch As String) As ProcessStartInfo" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="F#" Value="abstract member GetProcessStartInfo : string * string * string -&gt; System.Diagnostics.ProcessStartInfo&#xA;override this.GetProcessStartInfo : string * string * string -&gt; System.Diagnostics.ProcessStartInfo" Usage="toolTask.GetProcessStartInfo (pathToTool, commandLineCommands, responseFileSwitch)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Diagnostics::ProcessStartInfo ^ GetProcessStartInfo(System::String ^ pathToTool, System::String ^ commandLineCommands, System::String ^ responseFileSwitch);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="C#" Value="protected System.Diagnostics.ProcessStartInfo GetProcessStartInfo (string pathToTool, string commandLineCommands, string responseFileSwitch);" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Diagnostics.ProcessStartInfo GetProcessStartInfo(string pathToTool, string commandLineCommands, string responseFileSwitch) cil managed" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Protected Function GetProcessStartInfo (pathToTool As String, commandLineCommands As String, responseFileSwitch As String) As ProcessStartInfo" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.GetProcessStartInfo : string * string * string -&gt; System.Diagnostics.ProcessStartInfo" Usage="toolTask.GetProcessStartInfo (pathToTool, commandLineCommands, responseFileSwitch)" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::Diagnostics::ProcessStartInfo ^ GetProcessStartInfo(System::String ^ pathToTool, System::String ^ commandLineCommands, System::String ^ responseFileSwitch);" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -663,6 +684,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetResponseFileSwitch(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetResponseFileSwitch (responseFilePath As String) As String" />
       <MemberSignature Language="F#" Value="abstract member GetResponseFileSwitch : string -&gt; string&#xA;override this.GetResponseFileSwitch : string -&gt; string" Usage="toolTask.GetResponseFileSwitch responseFilePath" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetResponseFileSwitch(System::String ^ responseFilePath);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -702,6 +724,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetWorkingDirectory" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetWorkingDirectory () As String" />
       <MemberSignature Language="F#" Value="abstract member GetWorkingDirectory : unit -&gt; string&#xA;override this.GetWorkingDirectory : unit -&gt; string" Usage="toolTask.GetWorkingDirectory " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetWorkingDirectory();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -738,6 +761,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.HandleTaskExecutionErrors" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function HandleTaskExecutionErrors () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member HandleTaskExecutionErrors : unit -&gt; bool&#xA;override this.HandleTaskExecutionErrors : unit -&gt; bool" Usage="toolTask.HandleTaskExecutionErrors " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleTaskExecutionErrors();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -773,6 +797,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property HasLoggedErrors As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.HasLoggedErrors : bool" Usage="Microsoft.Build.Utilities.ToolTask.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool HasLoggedErrors { bool get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -802,6 +827,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.InitializeHostObject" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function InitializeHostObject () As HostObjectInitializationStatus" />
       <MemberSignature Language="F#" Value="abstract member InitializeHostObject : unit -&gt; Microsoft.Build.Utilities.HostObjectInitializationStatus&#xA;override this.InitializeHostObject : unit -&gt; Microsoft.Build.Utilities.HostObjectInitializationStatus" Usage="toolTask.InitializeHostObject " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Build::Utilities::HostObjectInitializationStatus InitializeHostObject();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -838,6 +864,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub LogEventsFromTextOutput (singleLine As String, messageImportance As MessageImportance)" />
       <MemberSignature Language="F#" Value="abstract member LogEventsFromTextOutput : string * Microsoft.Build.Framework.MessageImportance -&gt; unit&#xA;override this.LogEventsFromTextOutput : string * Microsoft.Build.Framework.MessageImportance -&gt; unit" Usage="toolTask.LogEventsFromTextOutput (singleLine, messageImportance)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void LogEventsFromTextOutput(System::String ^ singleLine, Microsoft::Build::Framework::MessageImportance messageImportance);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -878,6 +905,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogPathToTool(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub LogPathToTool (toolName As String, pathToTool As String)" />
       <MemberSignature Language="F#" Value="abstract member LogPathToTool : string * string -&gt; unit&#xA;override this.LogPathToTool : string * string -&gt; unit" Usage="toolTask.LogPathToTool (toolName, pathToTool)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void LogPathToTool(System::String ^ toolName, System::String ^ pathToTool);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -918,6 +946,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" />
       <MemberSignature Language="VB.NET" Value="Public Property LogStandardErrorAsError As Boolean" />
       <MemberSignature Language="F#" Value="member this.LogStandardErrorAsError : bool with get, set" Usage="Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool LogStandardErrorAsError { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -953,6 +982,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogToolCommand(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub LogToolCommand (message As String)" />
       <MemberSignature Language="F#" Value="abstract member LogToolCommand : string -&gt; unit&#xA;override this.LogToolCommand : string -&gt; unit" Usage="toolTask.LogToolCommand message" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void LogToolCommand(System::String ^ message);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -990,6 +1020,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ProcessStarted" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ProcessStarted ()" />
       <MemberSignature Language="F#" Value="abstract member ProcessStarted : unit -&gt; unit&#xA;override this.ProcessStarted : unit -&gt; unit" Usage="toolTask.ProcessStarted " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void ProcessStarted();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1011,6 +1042,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ResponseFileEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property ResponseFileEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.ResponseFileEncoding : System.Text.Encoding" Usage="Microsoft.Build.Utilities.ToolTask.ResponseFileEncoding" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ ResponseFileEncoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1044,6 +1076,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ResponseFileEscape(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function ResponseFileEscape (responseString As String) As String" />
       <MemberSignature Language="F#" Value="abstract member ResponseFileEscape : string -&gt; string&#xA;override this.ResponseFileEscape : string -&gt; string" Usage="toolTask.ResponseFileEscape responseString" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ ResponseFileEscape(System::String ^ responseString);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1073,6 +1106,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function SkipTaskExecution () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member SkipTaskExecution : unit -&gt; bool&#xA;override this.SkipTaskExecution : unit -&gt; bool" Usage="toolTask.SkipTaskExecution " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool SkipTaskExecution();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1107,6 +1141,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property StandardErrorEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.StandardErrorEncoding : System.Text.Encoding" Usage="Microsoft.Build.Utilities.ToolTask.StandardErrorEncoding" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardErrorEncoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1144,6 +1179,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorImportance" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property StandardErrorImportance As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.StandardErrorImportance : string with get, set" Usage="Microsoft.Build.Utilities.ToolTask.StandardErrorImportance" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ StandardErrorImportance { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1184,6 +1220,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorImportanceToUse" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property StandardErrorImportanceToUse As MessageImportance" />
       <MemberSignature Language="F#" Value="member this.StandardErrorImportanceToUse : Microsoft.Build.Framework.MessageImportance" Usage="Microsoft.Build.Utilities.ToolTask.StandardErrorImportanceToUse" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::Build::Framework::MessageImportance StandardErrorImportanceToUse { Microsoft::Build::Framework::MessageImportance get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1215,6 +1252,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorLoggingImportance" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property StandardErrorLoggingImportance As MessageImportance" />
       <MemberSignature Language="F#" Value="member this.StandardErrorLoggingImportance : Microsoft.Build.Framework.MessageImportance" Usage="Microsoft.Build.Utilities.ToolTask.StandardErrorLoggingImportance" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Microsoft::Build::Framework::MessageImportance StandardErrorLoggingImportance { Microsoft::Build::Framework::MessageImportance get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1249,6 +1287,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property StandardOutputEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.StandardOutputEncoding : System.Text.Encoding" Usage="Microsoft.Build.Utilities.ToolTask.StandardOutputEncoding" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardOutputEncoding { System::Text::Encoding ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1286,6 +1325,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Property StandardOutputImportance As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.StandardOutputImportance : string with get, set" Usage="Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ StandardOutputImportance { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1326,6 +1366,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportanceToUse" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property StandardOutputImportanceToUse As MessageImportance" />
       <MemberSignature Language="F#" Value="member this.StandardOutputImportanceToUse : Microsoft.Build.Framework.MessageImportance" Usage="Microsoft.Build.Utilities.ToolTask.StandardOutputImportanceToUse" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::Build::Framework::MessageImportance StandardOutputImportanceToUse { Microsoft::Build::Framework::MessageImportance get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1357,6 +1398,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputLoggingImportance" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property StandardOutputLoggingImportance As MessageImportance" />
       <MemberSignature Language="F#" Value="member this.StandardOutputLoggingImportance : Microsoft.Build.Framework.MessageImportance" Usage="Microsoft.Build.Utilities.ToolTask.StandardOutputLoggingImportance" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Microsoft::Build::Framework::MessageImportance StandardOutputLoggingImportance { Microsoft::Build::Framework::MessageImportance get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1391,6 +1433,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.TaskProcessTerminationTimeout" />
       <MemberSignature Language="VB.NET" Value="Protected Property TaskProcessTerminationTimeout As Integer" />
       <MemberSignature Language="F#" Value="member this.TaskProcessTerminationTimeout : int with get, set" Usage="Microsoft.Build.Utilities.ToolTask.TaskProcessTerminationTimeout" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property int TaskProcessTerminationTimeout { int get(); void set(int value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1426,6 +1469,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.Timeout" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Timeout As Integer" />
       <MemberSignature Language="F#" Value="member this.Timeout : int with get, set" Usage="Microsoft.Build.Utilities.ToolTask.Timeout" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int Timeout { int get(); void set(int value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1470,6 +1514,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolCanceled" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property ToolCanceled As ManualResetEvent" />
       <MemberSignature Language="F#" Value="member this.ToolCanceled : System.Threading.ManualResetEvent" Usage="Microsoft.Build.Utilities.ToolTask.ToolCanceled" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Threading::ManualResetEvent ^ ToolCanceled { System::Threading::ManualResetEvent ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1501,6 +1546,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolExe" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ToolExe As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.ToolExe : string with get, set" Usage="Microsoft.Build.Utilities.ToolTask.ToolExe" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ToolExe { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1537,6 +1583,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolName" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property ToolName As String" />
       <MemberSignature Language="F#" Value="member this.ToolName : string" Usage="Microsoft.Build.Utilities.ToolTask.ToolName" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::String ^ ToolName { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1571,6 +1618,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolPath" />
       <MemberSignature Language="VB.NET" Value="Public Property ToolPath As String" />
       <MemberSignature Language="F#" Value="member this.ToolPath : string with get, set" Usage="Microsoft.Build.Utilities.ToolTask.ToolPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToolPath { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1614,6 +1662,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor" />
       <MemberSignature Language="VB.NET" Value="Public Property UseCommandProcessor As Boolean" />
       <MemberSignature Language="F#" Value="member this.UseCommandProcessor : bool with get, set" Usage="Microsoft.Build.Utilities.ToolTask.UseCommandProcessor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseCommandProcessor { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1651,6 +1700,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.UseUtf8Encoding" />
       <MemberSignature Language="VB.NET" Value="Public Property UseUtf8Encoding As String" />
       <MemberSignature Language="F#" Value="member this.UseUtf8Encoding : string with get, set" Usage="Microsoft.Build.Utilities.ToolTask.UseUtf8Encoding" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UseUtf8Encoding { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1676,6 +1726,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ValidateParameters" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function ValidateParameters () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member ValidateParameters : unit -&gt; bool&#xA;override this.ValidateParameters : unit -&gt; bool" Usage="toolTask.ValidateParameters " />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool ValidateParameters();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1710,6 +1761,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution" />
       <MemberSignature Language="VB.NET" Value="Public Property YieldDuringToolExecution As Boolean" />
       <MemberSignature Language="F#" Value="member this.YieldDuringToolExecution : bool with get, set" Usage="Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool YieldDuringToolExecution { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>

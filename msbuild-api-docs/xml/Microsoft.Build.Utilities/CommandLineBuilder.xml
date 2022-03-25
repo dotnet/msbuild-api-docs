@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.CommandLineBuilder" />
   <TypeSignature Language="VB.NET" Value="Public Class CommandLineBuilder" />
   <TypeSignature Language="F#" Value="type CommandLineBuilder = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CommandLineBuilder" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -76,6 +77,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -106,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.CommandLineBuilder : bool -&gt; Microsoft.Build.Utilities.CommandLineBuilder" Usage="new Microsoft.Build.Utilities.CommandLineBuilder quoteHyphensOnCommandLine" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder(bool quoteHyphensOnCommandLine);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -135,6 +138,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean, useNewLineSeparator As Boolean)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.CommandLineBuilder : bool * bool -&gt; Microsoft.Build.Utilities.CommandLineBuilder" Usage="new Microsoft.Build.Utilities.CommandLineBuilder (quoteHyphensOnCommandLine, useNewLineSeparator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder(bool quoteHyphensOnCommandLine, bool useNewLineSeparator);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -159,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameIfNotNull(Microsoft.Build.Framework.ITaskItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendFileNameIfNotNull (fileItem As ITaskItem)" />
       <MemberSignature Language="F#" Value="member this.AppendFileNameIfNotNull : Microsoft.Build.Framework.ITaskItem -&gt; unit" Usage="commandLineBuilder.AppendFileNameIfNotNull fileItem" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendFileNameIfNotNull(Microsoft::Build::Framework::ITaskItem ^ fileItem);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -199,6 +204,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameIfNotNull(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendFileNameIfNotNull (fileName As String)" />
       <MemberSignature Language="F#" Value="member this.AppendFileNameIfNotNull : string -&gt; unit" Usage="commandLineBuilder.AppendFileNameIfNotNull fileName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendFileNameIfNotNull(System::String ^ fileName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -239,6 +245,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNamesIfNotNull(Microsoft.Build.Framework.ITaskItem[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendFileNamesIfNotNull (fileItems As ITaskItem(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendFileNamesIfNotNull : Microsoft.Build.Framework.ITaskItem[] * string -&gt; unit" Usage="commandLineBuilder.AppendFileNamesIfNotNull (fileItems, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendFileNamesIfNotNull(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ fileItems, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -281,6 +288,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNamesIfNotNull(System.String[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendFileNamesIfNotNull (fileNames As String(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendFileNamesIfNotNull : string[] * string -&gt; unit" Usage="commandLineBuilder.AppendFileNamesIfNotNull (fileNames, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendFileNamesIfNotNull(cli::array &lt;System::String ^&gt; ^ fileNames, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -323,6 +331,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameWithQuoting(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendFileNameWithQuoting (fileName As String)" />
       <MemberSignature Language="F#" Value="member this.AppendFileNameWithQuoting : string -&gt; unit" Usage="commandLineBuilder.AppendFileNameWithQuoting fileName" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendFileNameWithQuoting(System::String ^ fileName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -367,6 +376,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendQuotedTextToBuffer(System.Text.StringBuilder,System.String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendQuotedTextToBuffer (buffer As StringBuilder, unquotedTextToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.AppendQuotedTextToBuffer : System.Text.StringBuilder * string -&gt; unit" Usage="commandLineBuilder.AppendQuotedTextToBuffer (buffer, unquotedTextToAppend)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendQuotedTextToBuffer(System::Text::StringBuilder ^ buffer, System::String ^ unquotedTextToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -401,6 +411,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSpaceIfNotEmpty" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendSpaceIfNotEmpty ()" />
       <MemberSignature Language="F#" Value="member this.AppendSpaceIfNotEmpty : unit -&gt; unit" Usage="commandLineBuilder.AppendSpaceIfNotEmpty " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendSpaceIfNotEmpty();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -436,6 +447,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitch(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitch (switchName As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitch : string -&gt; unit" Usage="commandLineBuilder.AppendSwitch switchName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitch(System::String ^ switchName);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -476,6 +488,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchIfNotNull (switchName As String, parameter As ITaskItem)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchIfNotNull : string * Microsoft.Build.Framework.ITaskItem -&gt; unit" Usage="commandLineBuilder.AppendSwitchIfNotNull (switchName, parameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchIfNotNull(System::String ^ switchName, Microsoft::Build::Framework::ITaskItem ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -518,6 +531,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchIfNotNull (switchName As String, parameter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchIfNotNull : string * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchIfNotNull (switchName, parameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchIfNotNull(System::String ^ switchName, System::String ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -560,6 +574,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchIfNotNull (switchName As String, parameters As ITaskItem(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchIfNotNull : string * Microsoft.Build.Framework.ITaskItem[] * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchIfNotNull (switchName, parameters, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchIfNotNull(System::String ^ switchName, cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ parameters, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -605,6 +620,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,System.String[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchIfNotNull (switchName As String, parameters As String(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchIfNotNull : string * string[] * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchIfNotNull (switchName, parameters, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchIfNotNull(System::String ^ switchName, cli::array &lt;System::String ^&gt; ^ parameters, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -650,6 +666,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchUnquotedIfNotNull (switchName As String, parameter As ITaskItem)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchUnquotedIfNotNull : string * Microsoft.Build.Framework.ITaskItem -&gt; unit" Usage="commandLineBuilder.AppendSwitchUnquotedIfNotNull (switchName, parameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchUnquotedIfNotNull(System::String ^ switchName, Microsoft::Build::Framework::ITaskItem ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -692,6 +709,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchUnquotedIfNotNull (switchName As String, parameter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchUnquotedIfNotNull : string * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchUnquotedIfNotNull (switchName, parameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchUnquotedIfNotNull(System::String ^ switchName, System::String ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -734,6 +752,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchUnquotedIfNotNull (switchName As String, parameters As ITaskItem(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchUnquotedIfNotNull : string * Microsoft.Build.Framework.ITaskItem[] * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchUnquotedIfNotNull (switchName, parameters, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchUnquotedIfNotNull(System::String ^ switchName, cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ parameters, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -778,6 +797,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,System.String[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendSwitchUnquotedIfNotNull (switchName As String, parameters As String(), delimiter As String)" />
       <MemberSignature Language="F#" Value="member this.AppendSwitchUnquotedIfNotNull : string * string[] * string -&gt; unit" Usage="commandLineBuilder.AppendSwitchUnquotedIfNotNull (switchName, parameters, delimiter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendSwitchUnquotedIfNotNull(System::String ^ switchName, cli::array &lt;System::String ^&gt; ^ parameters, System::String ^ delimiter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -822,9 +842,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextUnquoted(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="F#" Value="member this.AppendTextUnquoted : string -&gt; unit" Usage="commandLineBuilder.AppendTextUnquoted textToAppend" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="C#" Value="protected void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -868,6 +890,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextWithQuoting(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendTextWithQuoting (textToAppend As String)" />
       <MemberSignature Language="F#" Value="member this.AppendTextWithQuoting : string -&gt; unit" Usage="commandLineBuilder.AppendTextWithQuoting textToAppend" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendTextWithQuoting(System::String ^ textToAppend);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -907,6 +930,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CommandLineBuilder.CommandLine" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property CommandLine As StringBuilder" />
       <MemberSignature Language="F#" Value="member this.CommandLine : System.Text.StringBuilder" Usage="Microsoft.Build.Utilities.CommandLineBuilder.CommandLine" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Text::StringBuilder ^ CommandLine { System::Text::StringBuilder ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -946,6 +970,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.IsQuotingRequired(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function IsQuotingRequired (parameter As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member IsQuotingRequired : string -&gt; bool&#xA;override this.IsQuotingRequired : string -&gt; bool" Usage="commandLineBuilder.IsQuotingRequired parameter" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool IsQuotingRequired(System::String ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -983,6 +1008,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CommandLineBuilder.Length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
       <MemberSignature Language="F#" Value="member this.Length : int" Usage="Microsoft.Build.Utilities.CommandLineBuilder.Length" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Length { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1008,6 +1034,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="commandLineBuilder.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1042,6 +1069,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.VerifyThrowNoEmbeddedDoubleQuotes(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub VerifyThrowNoEmbeddedDoubleQuotes (switchName As String, parameter As String)" />
       <MemberSignature Language="F#" Value="abstract member VerifyThrowNoEmbeddedDoubleQuotes : string * string -&gt; unit&#xA;override this.VerifyThrowNoEmbeddedDoubleQuotes : string * string -&gt; unit" Usage="commandLineBuilder.VerifyThrowNoEmbeddedDoubleQuotes (switchName, parameter)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void VerifyThrowNoEmbeddedDoubleQuotes(System::String ^ switchName, System::String ^ parameter);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>

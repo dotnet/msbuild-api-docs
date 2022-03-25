@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.FileLogger" />
   <TypeSignature Language="VB.NET" Value="Public Class FileLogger&#xA;Inherits ConsoleLogger" />
   <TypeSignature Language="F#" Value="type FileLogger = class&#xA;    inherit ConsoleLogger" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FileLogger : Microsoft::Build::BuildEngine::ConsoleLogger" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Engine</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; FileLogger();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Initialize (eventSource As IEventSource)" />
       <MemberSignature Language="F#" Value="override this.Initialize : Microsoft.Build.Framework.IEventSource -&gt; unit" Usage="fileLogger.Initialize eventSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Initialize(Microsoft::Build::Framework::IEventSource ^ eventSource);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
@@ -68,6 +71,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Initialize (eventSource As IEventSource, nodeCount As Integer)" />
       <MemberSignature Language="F#" Value="override this.Initialize : Microsoft.Build.Framework.IEventSource * int -&gt; unit" Usage="fileLogger.Initialize (eventSource, nodeCount)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Initialize(Microsoft::Build::Framework::IEventSource ^ eventSource, int nodeCount);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
@@ -100,6 +104,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Shutdown" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Shutdown ()" />
       <MemberSignature Language="F#" Value="override this.Shutdown : unit -&gt; unit" Usage="fileLogger.Shutdown " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Shutdown();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BinaryLogReplayEventSource" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher" />
   <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
@@ -26,6 +27,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BinaryLogReplayEventSource();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Replay (sourceFilePath As String)" />
       <MemberSignature Language="F#" Value="member this.Replay : string -&gt; unit" Usage="binaryLogReplayEventSource.Replay sourceFilePath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Replay(System::String ^ sourceFilePath);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -68,6 +71,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Replay (sourceFilePath As String, cancellationToken As CancellationToken)" />
       <MemberSignature Language="F#" Value="member this.Replay : string * System.Threading.CancellationToken -&gt; unit" Usage="binaryLogReplayEventSource.Replay (sourceFilePath, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Replay(System::String ^ sourceFilePath, System::Threading::CancellationToken cancellationToken);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Unzip" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Unzip&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask" />
   <TypeSignature Language="F#" Value="type Unzip = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Unzip sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Unzip.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Unzip();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -48,6 +50,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Unzip.Cancel" />
       <MemberSignature Language="VB.NET" Value="Public Sub Cancel ()" />
       <MemberSignature Language="F#" Value="abstract member Cancel : unit -&gt; unit&#xA;override this.Cancel : unit -&gt; unit" Usage="unzip.Cancel " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ICancelableTask.Cancel</InterfaceMember>
@@ -72,6 +75,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.DestinationFolder" />
       <MemberSignature Language="VB.NET" Value="Public Property DestinationFolder As ITaskItem" />
       <MemberSignature Language="F#" Value="member this.DestinationFolder : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.Unzip.DestinationFolder" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ DestinationFolder { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -100,6 +104,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.Exclude" />
       <MemberSignature Language="VB.NET" Value="Public Property Exclude As String" />
       <MemberSignature Language="F#" Value="member this.Exclude : string with get, set" Usage="Microsoft.Build.Tasks.Unzip.Exclude" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Exclude { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -122,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Unzip.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
       <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="unzip.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
@@ -147,6 +153,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.Include" />
       <MemberSignature Language="VB.NET" Value="Public Property Include As String" />
       <MemberSignature Language="F#" Value="member this.Include : string with get, set" Usage="Microsoft.Build.Tasks.Unzip.Include" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Include { System::String ^ get(); void set(System::String ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -169,6 +176,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.OverwriteReadOnlyFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property OverwriteReadOnlyFiles As Boolean" />
       <MemberSignature Language="F#" Value="member this.OverwriteReadOnlyFiles : bool with get, set" Usage="Microsoft.Build.Tasks.Unzip.OverwriteReadOnlyFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OverwriteReadOnlyFiles { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -191,6 +199,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.SkipUnchangedFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property SkipUnchangedFiles As Boolean" />
       <MemberSignature Language="F#" Value="member this.SkipUnchangedFiles : bool with get, set" Usage="Microsoft.Build.Tasks.Unzip.SkipUnchangedFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SkipUnchangedFiles { bool get(); void set(bool value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -213,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Unzip.SourceFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property SourceFiles As ITaskItem()" />
       <MemberSignature Language="F#" Value="member this.SourceFiles : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.Unzip.SourceFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ SourceFiles { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

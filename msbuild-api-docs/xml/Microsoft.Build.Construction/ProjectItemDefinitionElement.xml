@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectItemDefinitionElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectItemDefinitionElement&#xA;Inherits ProjectElementContainer" />
   <TypeSignature Language="F#" Value="type ProjectItemDefinitionElement = class&#xA;    inherit ProjectElementContainer" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectItemDefinitionElement : Microsoft::Build::Construction::ProjectElementContainer" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemDefinitionElement.AddMetadata(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMetadata (name As String, unevaluatedValue As String) As ProjectMetadataElement" />
       <MemberSignature Language="F#" Value="member this.AddMetadata : string * string -&gt; Microsoft.Build.Construction.ProjectMetadataElement" Usage="projectItemDefinitionElement.AddMetadata (name, unevaluatedValue)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectMetadataElement ^ AddMetadata(System::String ^ name, System::String ^ unevaluatedValue);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemDefinitionElement.AddMetadata(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMetadata (name As String, unevaluatedValue As String, expressAsAttribute As Boolean) As ProjectMetadataElement" />
       <MemberSignature Language="F#" Value="member this.AddMetadata : string * string * bool -&gt; Microsoft.Build.Construction.ProjectMetadataElement" Usage="projectItemDefinitionElement.AddMetadata (name, unevaluatedValue, expressAsAttribute)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectMetadataElement ^ AddMetadata(System::String ^ name, System::String ^ unevaluatedValue, bool expressAsAttribute);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemDefinitionElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
       <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectItemDefinitionElement.CreateNewInstance owner" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectItemDefinitionElement.ItemType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemType As String" />
       <MemberSignature Language="F#" Value="member this.ItemType : string" Usage="Microsoft.Build.Construction.ProjectItemDefinitionElement.ItemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ItemType { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -143,6 +148,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectItemDefinitionElement.Metadata" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Metadata As ICollection(Of ProjectMetadataElement)" />
       <MemberSignature Language="F#" Value="member this.Metadata : System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectMetadataElement&gt;" Usage="Microsoft.Build.Construction.ProjectItemDefinitionElement.Metadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectMetadataElement ^&gt; ^ Metadata { System::Collections::Generic::ICollection&lt;Microsoft::Build::Construction::ProjectMetadataElement ^&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -166,6 +172,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemDefinitionElement.ShouldCloneXmlAttribute(System.Xml.XmlAttribute)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ShouldCloneXmlAttribute (attribute As XmlAttribute) As Boolean" />
       <MemberSignature Language="F#" Value="override this.ShouldCloneXmlAttribute : System.Xml.XmlAttribute -&gt; bool" Usage="projectItemDefinitionElement.ShouldCloneXmlAttribute attribute" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ShouldCloneXmlAttribute(System::Xml::XmlAttribute ^ attribute);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
