@@ -46,7 +46,7 @@
       <typeFilter name="ExtensionAttribute" expose="true" />
       <typeFilter name="*" expose="false" />
     </namespaceFilter>
-    <!-- Attributes in System.Runtime.ConstrinedExecution control obscure details of compilation. Don't show them. -->
+    <!-- Attributes in System.Runtime.ConstrainedExecution control obscure details of compilation. Don't show them. -->
     <namespaceFilter name="System.Runtime.ConstrainedExecution">
       <typeFilter name="*" expose="false" />
     </namespaceFilter>
@@ -73,7 +73,7 @@
     <namespaceFilter name="System.Web.Compilation">
       <typeFilter name="*" expose="false" />
     </namespaceFilter>
-    <!-- The ASP.NET team only wants these attributes exposed from their namespace. Their logic ecscapes me, but here it is. -->
+    <!-- The ASP.NET team only wants these attributes exposed from their namespace. -->
     <namespaceFilter name="System.Web.UI">
       <typeFilter name="ControlValuePropertyAttribute" expose="true" />
       <typeFilter name="PersistenceModeAttribute" expose="true" />
