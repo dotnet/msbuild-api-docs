@@ -33,10 +33,20 @@
   </Attributes>
   <Docs>
     <summary>
-            Reads an XML manifest file into an object representation.</summary>
+            Reads an XML manifest file into an object representation.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="ReadManifest">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Reads the specified manifest XML and returns an object representation.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ReadManifest">
       <MemberSignature Language="C#" Value="public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (System.IO.Stream input, bool preserveStream);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest(class System.IO.Stream input, bool preserveStream) cil managed" />
@@ -78,7 +88,8 @@
         <param name="input">Specifies an input stream.</param>
         <param name="preserveStream">Specifies whether to preserve the input stream in the InputStream property of the resulting manifest object. Used by ManifestWriter to reconstitute input which is not represented in the object representation.</param>
         <summary>
-            Reads the specified manifest XML and returns an object representation.</summary>
+            Reads the specified manifest XML and returns an object representation.
+            </summary>
         <returns>A base object representation of the manifest. Can be cast to AssemblyManifest, ApplicationManifest, or DeployManifest to access more specific functionality.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,7 +129,8 @@
         <param name="path">The name of the input file.</param>
         <param name="preserveStream">Specifies whether to preserve the input stream in the InputStream property of the resulting manifest object. Used by ManifestWriter to reconstitute input which is not represented in the object representation. This option is not honored if the specified input file is an embedded manfiest in a PE.</param>
         <summary>
-            Reads the specified manifest XML and returns an object representation.</summary>
+            Reads the specified manifest XML and returns an object representation.
+            </summary>
         <returns>A base object representation of the manifest. Can be cast to AssemblyManifest, ApplicationManifest, or DeployManifest to access more specific functionality.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -160,7 +172,8 @@
         <param name="input">Specifies an input stream.</param>
         <param name="preserveStream">Specifies whether to preserve the input stream in the InputStream property of the resulting manifest object. Used by ManifestWriter to reconstitute input which is not represented in the object representation.</param>
         <summary>
-            Reads the specified manifest XML and returns an object representation.</summary>
+            Reads the specified manifest XML and returns an object representation.
+            </summary>
         <returns>A base object representation of the manifest. Can be cast to AssemblyManifest, ApplicationManifest, or DeployManifest to access more specific functionality.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -202,7 +215,8 @@
         <param name="path">The name of the input file.</param>
         <param name="preserveStream">Specifies whether to preserve the input stream in the InputStream property of the resulting manifest object. Used by ManifestWriter to reconstitute input which is not represented in the object representation. This option is not honored if the specified input file is an embedded manfiest in a PE.</param>
         <summary>
-            Reads the specified manifest XML and returns an object representation.</summary>
+            Reads the specified manifest XML and returns an object representation.
+            </summary>
         <returns>A base object representation of the manifest. Can be cast to AssemblyManifest, ApplicationManifest, or DeployManifest to access more specific functionality.</returns>
         <remarks>To be added.</remarks>
       </Docs>

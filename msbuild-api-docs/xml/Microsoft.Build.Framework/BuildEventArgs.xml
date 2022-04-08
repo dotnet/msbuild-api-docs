@@ -27,9 +27,25 @@
             This class encapsulates the default data associated with build events. 
             It is intended to be extended/sub-classed.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            WARNING: marking a type [Serializable] without implementing
+            ISerializable imposes a serialization contract -- it is a
+            promise to never change the type's fields i.e. the type is
+            immutable; adding new fields in the next version of the type
+            without following certain special FX guidelines, can break both
+            forward and backward compatibility
+            </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.BuildEventArgs" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected BuildEventArgs ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -49,7 +65,14 @@
         <summary>
             Default constructor
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This implementation of the <xref:Microsoft.Build.Framework.BuildEventArgs> constructor takes no parameters, and sets the <xref:Microsoft.Build.Framework.BuildEventArgs.Timestamp*> property to <xref:System.DateTime.Now%2A> and the <xref:Microsoft.Build.Framework.BuildEventArgs.ThreadId%2A> property to the current thread.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -143,7 +166,7 @@
         <summary>
             Event contextual information for the build event argument
             </summary>
-        <value>To be added.</value>
+        <value>A <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> object representing the location contextual information.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -175,7 +198,7 @@
         <summary>
             Custom help keyword associated with event.
             </summary>
-        <value>To be added.</value>
+        <value>The Help keyword for the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,8 +238,17 @@
         <summary>
             Text of event.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The message for the event.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows how to write a basic logger that responds to build events.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Framework/BuildErrorEventArgs/ColumnNumber/msbuild_BasicLogger.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RawMessage">
@@ -260,7 +292,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Exposes the private <see cref="F:Microsoft.Build.Framework.BuildEventArgs.timestamp" /> field to derived types.
+            Exposes the private <see cref="F:Microsoft.Build.Framework.BuildEventArgs.Timestamp" /> field to derived types.
             Used for serialization. Avoids the side effects of calling the
             <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Timestamp" /> getter.
             </summary>
@@ -296,7 +328,7 @@
         <summary>
             Name of the object sending this event.
             </summary>
-        <value>To be added.</value>
+        <value>The name of the <see cref="T:System.Object" /> raising the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -328,7 +360,7 @@
         <summary>
             The thread that raised event.  
             </summary>
-        <value>To be added.</value>
+        <value>An integer identifier for the thread that raised the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -354,7 +386,7 @@
         <summary>
             The time when event was raised.
             </summary>
-        <value>To be added.</value>
+        <value>The time the event was raised as a <see cref="T:System.DateTime" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

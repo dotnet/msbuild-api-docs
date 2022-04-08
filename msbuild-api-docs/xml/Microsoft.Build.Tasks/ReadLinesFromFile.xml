@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Read a list of items from a file.</summary>
+            Read a list of items from a file.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.ReadLinesFromFile" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -90,9 +93,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Execute the task.</summary>
+            Execute the task.
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="File">
@@ -138,9 +143,18 @@
       </ReturnValue>
       <Docs>
         <summary>
-            File to read lines from.</summary>
+            File to read lines from.
+            </summary>
         <value>The file to read.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The file must have one item on each line.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Lines">
@@ -186,9 +200,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Receives lines from file.</summary>
+            Receives lines from file.
+            </summary>
         <value>The lines read from the file.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

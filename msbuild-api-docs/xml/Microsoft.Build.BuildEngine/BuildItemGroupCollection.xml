@@ -81,7 +81,14 @@
       <Docs>
         <summary>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> objects in the collection.</summary>
         <value>An integer value representing the number of <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> objects in the collection.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Each <xref:Microsoft.Build.BuildEngine.BuildItemGroup> object in the collection represents an  element in the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -108,7 +115,14 @@
       <Docs>
         <summary>Gets an enumerator that iterates through the collection.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> for the entire <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildItemGroup> objects in the <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSynchronized">

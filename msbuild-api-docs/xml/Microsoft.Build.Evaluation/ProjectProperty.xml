@@ -67,7 +67,7 @@
             Cannot be set directly: only the unevaluated value can be set.
             Is never null.
             </summary>
-        <value>To be added.</value>
+        <value>The evaluated property value, which is never <see langword="null" />.</value>
         <remarks>
             Unescaped value of the evaluated property
             </remarks>
@@ -102,7 +102,8 @@
         <summary>
             Whether the property originated from the environment (or the toolset)
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the property originated from an environment variable; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,7 +136,8 @@
         <summary>
             Whether the property is a global property
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the property is a global property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,7 +166,8 @@
             If the property originates from the environment, a global property, or is a built-in property, returns false.
             Otherwise returns false.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the property originates from an imported file and not from an environment variable, a global property, or a reserved property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,7 +201,8 @@
             Whether the property is a reserved property,
             like 'MSBuildProjectFile'.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the property is a reserved property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -240,7 +244,7 @@
             Name of the property.
             Cannot be set.
             </summary>
-        <value>To be added.</value>
+        <value>The name of the property.</value>
         <remarks>To be added.</remarks>
         <comment>
             If this could be set, it would be necessary to have a callback
@@ -286,8 +290,17 @@
             If there are none above this is null.
             If the project has not been reevaluated since the last modification this value may be incorrect.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The last property whose value was overridden by this property during evaluation, or <see langword="null" /> if the property has not been overridden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method searches for all properties with the same name that lie above in the logical project file, and whose conditions evaluate to true.  
+  
+ If the project has not been reevaluated since the last modification, this value may be incorrect.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Project">
@@ -325,7 +338,7 @@
             Project that this property lives in.
             ProjectProperty's always live in a project.
             </summary>
-        <value>To be added.</value>
+        <value>The project that contains this property, which is never <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -390,8 +403,17 @@
             Gets or sets the unevaluated property value.
             Updates the evaluated value in the project, although this is not sure to be correct until re-evaluation.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The unevaluated property value.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The setter method updates both the unevaluated value and the evaluated value, but does not affect anything else in the project until reevaluation.  
+  
+ The containing project is marked as modified. Unevaluated values are assumed to contain escaped character sequences as needed.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Xml">
@@ -432,7 +454,7 @@
             Backing XML property.
             Null only if this is a global, environment, or built-in property.
             </summary>
-        <value>To be added.</value>
+        <value>The associated property element, or <see langword="null" /> if this is a global or reserved property, or originates from an environment variable.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

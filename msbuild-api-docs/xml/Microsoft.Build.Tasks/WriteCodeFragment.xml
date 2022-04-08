@@ -20,7 +20,8 @@
   <Docs>
     <summary>
             Generates a temporary code file with the specified generated code fragment.
-            Does not delete the file.</summary>
+            Does not delete the file.
+            </summary>
     <remarks>To be added.</remarks>
     <comment>
             Currently only supports writing .NET attributes.
@@ -91,9 +92,19 @@
             Each piece of metadata is the name-value pair of a parameter, which must be of type System.String.
             Some attributes only allow positional constructor arguments, or the user may just prefer them.
             To set those, use metadata names like "_Parameter1", "_Parameter2" etc.
-            If a parameter index is skipped, it's an error.</summary>
+            If a parameter index is skipped, it's an error.
+            </summary>
         <value>An item whose value is the full type name of the attribute. For example, "System.AssemblyVersionAttribute".</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Each piece of metadata is the name-value pair of a parameter, which must be of type System.String.  
+  
+ Some attributes only allow positional constructor arguments, or the user may just prefer them.  To set those, use metadata names like "_Parameter1", "_Parameter2" etc. If a parameter index is skipped, it's an error.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -118,7 +129,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Main entry point.</summary>
+            Main entry point.
+            </summary>
         <returns>
           <see langword="true" /> if the code fragment was written; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -162,9 +174,17 @@
             Language of code to generate.
             Language name can be any language for which a CodeDom provider is
             available. For example, "C#", "VisualBasic".
-            Emitted file will have the default extension for that language.</summary>
+            Emitted file will have the default extension for that language.
+            </summary>
         <value>The language of code to generate.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Language name can be any language for which a CodeDom provider is available. For example, "C#", "VisualBasic". The file emitted is given the default extension for that language.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OutputDirectory">
@@ -199,7 +219,8 @@
       <Docs>
         <summary>
             Destination folder for the generated code.
-            Typically the intermediate folder.</summary>
+            Typically the intermediate folder.
+            </summary>
         <value>The destination folder for the generated code.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -243,9 +264,21 @@
             If this is set, and a file name, the destination folder will be prepended.
             If this is set, and is rooted, the destination folder will be ignored.
             If this is not set, the destination folder will be used, an arbitrary file name will be used, and 
-            the default extension for the language selected.</summary>
+            the default extension for the language selected.
+            </summary>
         <value>The path to the file that was generated.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If setting this property with a file name, the destination folder will be prepended.  
+  
+ If setting this property with a rooted value, the destination folder will be ignored.  
+  
+ If this property is not set, WriteCodeFragment uses the destination folder, an arbitrary file name, and the default extension for the language selected.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

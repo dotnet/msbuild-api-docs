@@ -27,8 +27,17 @@
   <Interfaces />
   <Docs>
     <summary>
-            Formats a url by canonicalizing it (i.e. " " -&gt; "%20") and transforming "localhost" to "machinename".</summary>
-    <remarks>To be added.</remarks>
+            Formats a url by canonicalizing it (i.e. " " -&gt; "%20") and transforming "localhost" to "machinename".
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Proper URL format consists of applying URL character encoding and replacing "localhost" by the actual machine name.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +73,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.FormatUrl" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -99,6 +109,7 @@
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="InputUrl">
@@ -142,6 +153,7 @@
         <summary>Gets or sets the URL to format.</summary>
         <value>The URL to format.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OutputUrl">
@@ -189,6 +201,7 @@
         <summary>Gets or sets the formatted URL.</summary>
         <value>The formatted URL.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

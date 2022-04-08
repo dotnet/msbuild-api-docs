@@ -77,7 +77,7 @@
         <summary>
             List of arguments for this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The list of arguments.</value>
         <remarks>
             This field is optional.
             </remarks>
@@ -117,7 +117,7 @@
         <summary>
             Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> for use by a prospective UI client. 
             </summary>
-        <value>To be added.</value>
+        <value>The description.</value>
         <remarks> 
             This field is optional and is culture sensitive.
             </remarks>
@@ -153,7 +153,7 @@
         <summary>
             The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The name.</value>
         <remarks>
             This field is optional and is culture sensitive. When this property is not set, it is assigned the same 
             value as the <see cref="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Name" /> property (and hence, would not be localized).
@@ -194,7 +194,7 @@
         <summary>
             Help information for this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The Help information.</value>
         <remarks>
             Maybe used to specify a help URL. This field
             is optional and is culture sensitive.
@@ -232,7 +232,8 @@
             Tells if this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" /> is the default value for the associated
             <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" />. 
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the enum value is the default value; otherwise, <see langword="false" />.</value>
         <remarks>
             This field is optional and the default value for this
             field is "false".
@@ -269,7 +270,7 @@
         <summary>
             Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The additional attributes.</value>
         <remarks>
             This can be used as a grab bag of additional metadata of this value that are not
             captured by the primary fields. You will need a custom UI to interpret the additional
@@ -308,7 +309,7 @@
         <summary>
             The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The name.</value>
         <remarks>
             This field is mandatory and culture invariant.
             </remarks>
@@ -344,7 +345,7 @@
         <summary>
             The switch representation of this property for the case when the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" /> represents a tool parameter.
             </summary>
-        <value>To be added.</value>
+        <value>The switch representation.</value>
         <remarks>
             This field is optional and culture invariant.
             </remarks>
@@ -383,7 +384,7 @@
         <summary>
             The prefix for the switch representation of this value for the case when the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" /> represents a tool parameter.
             </summary>
-        <value>To be added.</value>
+        <value>The switch prefix.</value>
         <remarks>
             This field is optional and culture invariant.
             </remarks>

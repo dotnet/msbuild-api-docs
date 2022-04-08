@@ -26,6 +26,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public InvalidProjectFileException ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -139,7 +148,14 @@
         <param name="errorCode">The error code. This parameter can be a null reference (<see langword="Nothing" />).</param>
         <param name="helpKeyword">The F1-help keyword for the host IDE. Can be null.</param>
         <summary>Initializes a new instance of <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> class using rich error information.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This constructor is preferred over the basic constructors.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -178,7 +194,14 @@
         <param name="errorCode">The error code. This parameter can be a null reference (<see langword="Nothing" />).</param>
         <param name="helpKeyword">The F1-help keyword for the host IDE. This parameter can be a null reference (<see langword="Nothing" />).</param>
         <summary>Initializes a new instance of <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> class using rich error information.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This constructor is preferred over the basic constructors.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseMessage">

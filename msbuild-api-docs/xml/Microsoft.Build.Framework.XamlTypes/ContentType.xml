@@ -111,7 +111,8 @@
         <summary>
             serializes IContentType.DefaultContentTypeForItemType
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if default content type is available; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -149,7 +150,7 @@
         <summary>
             serializes IContentType.DisplayName
             </summary>
-        <value>To be added.</value>
+        <value>The serialized display name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -200,11 +201,11 @@
         <Parameter Name="metadataName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="metadataName">To be added.</param>
+        <param name="metadataName">The name of the metadata whose value is to be retrieved.</param>
         <summary>
             Access metadata in convenient way
             </summary>
-        <returns>To be added.</returns>
+        <returns>The value of the given metadata name, or <see langword="null" /> if the name isn't found in the metadata.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -238,11 +239,11 @@
         <Parameter Name="type" Type="System.Type" />
       </Parameters>
       <Docs>
-        <param name="type">To be added.</param>
+        <param name="type">The type of static data to retrieve.</param>
         <summary>
             see IProjectSchemaNode
             </summary>
-        <returns>To be added.</returns>
+        <returns>An enumerator over all instances of static data that have the given type. Returns <see langword="Null" /> or Empty list if no objects of the given type are provided by this node.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -277,7 +278,7 @@
         <summary>
             see IProjectSchemaNode
             </summary>
-        <returns>To be added.</returns>
+        <returns>An enumerator over all types of static data for the data-driven features that this node contains.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -315,7 +316,7 @@
         <summary>
             This property was never used for anything.  It should have been removed before we shipped MSBuild 4.0.
             </summary>
-        <value>To be added.</value>
+        <value>The serialized default content type for the item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -349,7 +350,7 @@
         <summary>
             serializes IContentType.ItemType
             </summary>
-        <value>To be added.</value>
+        <value>The serialized item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -383,8 +384,15 @@
         <summary>
             serializes content type's metadata. Accessible via IContentType.GetMetadata()
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The serialized metadata.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Accessible via IContentType.GetMetadata().  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -417,7 +425,7 @@
         <summary>
             serializes IContentType.Name
             </summary>
-        <value>To be added.</value>
+        <value>The serialized name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

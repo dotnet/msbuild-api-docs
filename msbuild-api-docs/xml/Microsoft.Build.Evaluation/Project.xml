@@ -34,9 +34,20 @@
             Always backed by XML; can be built directly, or an instance can be cloned off to add virtual items/properties and build.
             Edits to this project always update the backing XML.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            UNDONE: (Multiple configurations.) Protect against problems when attempting to edit, after edits were made to the same ProjectRootElement either directly or through other projects evaluated from that ProjectRootElement.
+            </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Constructs an empty project using the global project collection global properties and default tools version.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Project ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -56,7 +67,14 @@
             global properties and default tools version.
             Project will be added to the global project collection when it is named.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -90,7 +108,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -135,13 +162,20 @@
         <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
       </Parameters>
       <Docs>
-        <param name="projectCollection">To be added.</param>
+        <param name="projectCollection">The project collection that the new project is added to.</param>
         <summary>
             Construct an empty project, evaluating with the specified project collection's
             global properties and default tools version.
             Project will be added to the specified project collection when it is named.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when it is given the full path to the source project file, typically by saving the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -167,7 +201,7 @@
         <Parameter Name="projectFile" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFile">To be added.</param>
+        <param name="projectFile">The source project file to be evaluated.</param>
         <summary>
             Construct over an existing project file, evaluating with the global project collection's
             global properties and default tools version.
@@ -176,7 +210,16 @@
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             May throw IO-related exceptions.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the global project collection.  
+  
+ Throws InvalidOperationException if there is already a project in the project collection that evaluates this source project file. May throw IO-related exceptions.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:Microsoft.Build.Exceptions.InvalidProjectFileException">If the evaluation fails.</exception>
       </Docs>
     </Member>
@@ -211,7 +254,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -270,7 +322,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -300,7 +361,14 @@
             the specified global properties and default tools version, either of which may be null.
             Project will be added to the specified project collection when it is named.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the specified project collection when it is given the full path to the source project file, typically by saving the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -322,9 +390,9 @@
         <Parameter Name="toolsVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFile">To be added.</param>
-        <param name="globalProperties">To be added.</param>
-        <param name="toolsVersion">To be added.</param>
+        <param name="projectFile">The path to the source project file to be evaluated.</param>
+        <param name="globalProperties">Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.</param>
+        <param name="toolsVersion">Tools version to evaluate with. May be null.</param>
         <summary>
             Construct over an existing project file, evaluating with specified
             global properties and toolset, either or both of which may be null.
@@ -333,7 +401,16 @@
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             May throw IO-related exceptions.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the global project collection.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -365,7 +442,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -405,7 +491,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -477,7 +572,16 @@
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             May throw IO-related exceptions.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the given project collection.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -517,7 +621,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -553,7 +666,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -590,7 +712,16 @@
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             May throw IO-related exceptions.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the given project collection.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -626,7 +757,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -664,7 +804,16 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -703,7 +852,16 @@
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             May throw IO-related exceptions.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to the given project collection.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -741,9 +899,27 @@
             Throws InvalidProjectFileException if the evaluation fails.
             Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  
+  
+ Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="AddItem">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds an item.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddItem">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItem (string itemType, string unevaluatedInclude);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItem(string itemType, string unevaluatedInclude) cil managed" />
@@ -771,8 +947,8 @@
         <Parameter Name="unevaluatedInclude" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
-        <param name="unevaluatedInclude">To be added.</param>
+        <param name="itemType">The item type of the added item.</param>
+        <param name="unevaluatedInclude">Include attribute of the item to be added.</param>
         <summary>
             Adds an item with no metadata to the project.
             Any metadata can be added subsequently.
@@ -782,8 +958,17 @@
                 -only this item is evaluated. Other items that might depend on it is not affected.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The added item.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Any metadata can be added later. Does not modify the project source if a wildcard expression already includes the new item.  
+  
+ Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddItem">
@@ -808,9 +993,9 @@
         <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
-        <param name="unevaluatedInclude">To be added.</param>
-        <param name="metadata">To be added.</param>
+        <param name="itemType">The item type of the added item.</param>
+        <param name="unevaluatedInclude">Include attribute of the item to be added.</param>
+        <param name="metadata">The metadata of the added item.</param>
         <summary>
             Adds an item with metadata to the project.
             Metadata may be null, indicating no metadata.
@@ -820,10 +1005,28 @@
                 -only this item is evaluated. Other items that might depend on it is not affected.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The added item.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The metadata may be null, which indicates no metadata.  
+  
+ Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="AddItemFast">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds an item with no metadata to the project.  Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group.  Makes no effort to locate the new item near similar items.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddItemFast">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast (string itemType, string unevaluatedInclude);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast(string itemType, string unevaluatedInclude) cil managed" />
@@ -851,8 +1054,8 @@
         <Parameter Name="unevaluatedInclude" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
-        <param name="unevaluatedInclude">To be added.</param>
+        <param name="itemType">The item type to be added.</param>
+        <param name="unevaluatedInclude">The unevaluated Include attribute to be added to the item.</param>
         <summary>
             Adds an item with no metadata to the project.
             Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group.
@@ -863,8 +1066,21 @@
                 -only this item is evaluated. Other items that might depend on it is not affected.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>A list of the project items added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  
+  
+ Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  
+  
+ Only this item is evaluated. Other items that might depend on it are not affected.  
+  
+ This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddItemFast">
@@ -889,9 +1105,9 @@
         <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
-        <param name="unevaluatedInclude">To be added.</param>
-        <param name="metadata">To be added.</param>
+        <param name="itemType">The item type to be added.</param>
+        <param name="unevaluatedInclude">The unevaluated Include attribute to be added to the item.</param>
+        <param name="metadata">The metadata to be added.</param>
         <summary>
             Adds an item with metadata to the project.
             Metadata may be null, indicating no metadata.
@@ -903,8 +1119,21 @@
                 -only this item is evaluated. Other items that might depend on it is not affected.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>A list of the project items added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  
+  
+ Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  
+  
+ Only this item is evaluated. Other items that might depend on it is not affected.  
+  
+ This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AllEvaluatedItemDefinitionMetadata">
@@ -931,8 +1160,15 @@
             elements whose conditions did not evaluate to true.
             It does not include any item definition metadata added since the last evaluation.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All item definition metadata encountered during evaluation. This does not include any elements whose conditions did not evaluate to true, nor any item definition metadata added since the last evaluation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Item metadata is read during the second evaluation pass. Unlike metadata returned by the ItemDefinitions property, this metadata is ordered, and includes any metadata subsequently overridden with the same name and item type.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AllEvaluatedItems">
@@ -961,8 +1197,19 @@
             It does not include any elements whose conditions did not evaluate to true.
             It does not include any items added since the last evaluation.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An enumerator over all items encountered during evaluation. These are read during the third evaluation pass.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unlike those items returned by the Items property, these are ordered with respect to all other items encountered during evaluation, not just ordered with respect to items of the same item type.  
+  
+ In some applications, this complete mutual ordering is significant, and such hosts can use this property.  
+  
+ The enumeration does not include any elements whose conditions did not evaluate to true, nor does it include any items added since the last evaluation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AllEvaluatedProperties">
@@ -989,10 +1236,26 @@
             properties whose conditions did not evaluate to true.
             It does not include any properties added since the last evaluation.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All properties encountered during evaluation. This does not include any properties whose conditions did not evaluate to true, nor any properties added since the last evaluation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ These properties are read during the first evaluation pass. Unlike properties returned by the Properties property, these are ordered, and includes any properties subsequently overridden with the same name.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Build">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Builds this project, using the default targets.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Build">
       <MemberSignature Language="C#" Value="public bool Build ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build() cil managed" />
@@ -1025,7 +1288,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1057,7 +1327,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1095,7 +1372,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1133,7 +1417,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1171,7 +1462,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1211,7 +1509,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1251,7 +1556,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1292,7 +1604,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1328,7 +1647,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1365,7 +1691,14 @@
             Does not modify the Project object.
             </summary>
         <returns>Returns true on success and false on failure or disabled build.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -1440,10 +1773,34 @@
             
              This is used by Visual Studio to determine the configurations defined in the project.
              </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>A collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens. The collection is in canonical form. The name of the entry is the name of the property to be evaluated, and the value is a list of possible property values.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For example, if the following conditions existed on properties in a project: Condition="'$(Configuration)&#124;$(Platform)' == 'Debug&#124;x86'" Condition="'$(Configuration)' == 'Release'" the table would be populated with { "Configuration", { "Debug", "Release" }} { "Platform", { "x86" }} This collection is used by Visual Studio to determine the configurations defined in the project  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="CreateProjectInstance">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a project instance based on this project, but completely disconnected from it.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="CreateProjectInstance">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectInstance CreateProjectInstance() cil managed" />
@@ -1468,7 +1825,14 @@
             Before creating the instance, this will reevaluate the project if necessary, so it will not be dirty.
             </summary>
         <returns>The created project instance.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateProjectInstance">
@@ -1500,7 +1864,14 @@
             access concurrently from multiple threads.
             </summary>
         <returns>The created project instance.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateProjectInstance">
@@ -1559,7 +1930,7 @@
             The root directory for this project.
             Is never null: in-memory projects use the current directory from the time of load.
             </summary>
-        <value>To be added.</value>
+        <value>The root directory for this project. The root directory is never null; in-memory projects use the current directory at the time of project load.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1603,7 +1974,8 @@
             This allows, for example, a global property to be set without the project getting
             marked dirty for reevaluation as a consequence.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> to indicate <see langword="MarkDirty" /> is temporarily disabled; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1633,8 +2005,15 @@
         <summary>
             Obsolete. Use <see cref="P:Microsoft.Build.Evaluation.Project.LastEvaluationId" /> instead.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The incremented value.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This value should be compared with previous values to see if the project has been re-evaluated. It should not be used to determine how many times the project has been re-evaluated since it may be incremented by more than one for a given re-evaluation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ExpandString">
@@ -1657,7 +2036,7 @@
         <Parameter Name="unexpandedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="unexpandedValue">To be added.</param>
+        <param name="unexpandedValue">The string to be evaluated.</param>
         <summary>
             Evaluates the provided string by expanding items and properties,
             as if it was found at the very end of the project file.
@@ -1665,8 +2044,15 @@
             evaluation is sufficient.
             Does not expand bare metadata expressions.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The evaluated string.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method can be used when best-effort evaluation is sufficient.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FromFile">
@@ -1788,8 +2174,15 @@
             May be null, if the project was not loaded from disk.
             Setter renames the project, if it already had a name.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The full path to the project source file, or an empty string if the project was not loaded from disk.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Setting this property on a project in a project collection renames the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetAllGlobs">
@@ -1933,6 +2326,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetEvaluatedItemIncludeEscaped">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets evaluated, escaped value of the Include attribute of the provided items.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetEvaluatedItemIncludeEscaped">
       <MemberSignature Language="C#" Value="public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItem item);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEvaluatedItemIncludeEscaped(class Microsoft.Build.Evaluation.ProjectItem item) cil managed" />
@@ -1953,11 +2355,11 @@
         <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItem" />
       </Parameters>
       <Docs>
-        <param name="item">To be added.</param>
+        <param name="item">The item to be evaluated and escaped.</param>
         <summary>
             Returns the evaluated, escaped value of the provided item's include.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The evaluated, escaped value of the Include attribute of the provided items.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1981,11 +2383,11 @@
         <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItemDefinition" />
       </Parameters>
       <Docs>
-        <param name="item">To be added.</param>
+        <param name="item">The item definition to be evaluated and escaped.</param>
         <summary>
             Returns the evaluated, escaped value of the provided item definition's include.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The value of the Include attribute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2226,15 +2628,22 @@
         <Parameter Name="itemType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
+        <param name="itemType">The item type to be retrieved.</param>
         <summary>
             All the items in the project of the specified
             type.
             If there are none, returns an empty list.
             Use AddItem or RemoveItem to modify items in this project.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>All the items in the project of the given item type, or an empty list if there are no items with the given item name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use AddItem or RemoveItem to modify items in this project.  
+  
+ ]]></format>
+        </remarks>
         <comments>
             data.GetItems returns a read-only collection, so no need to re-wrap it here.
             </comments>
@@ -2260,7 +2669,7 @@
         <Parameter Name="evaluatedInclude" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="evaluatedInclude">To be added.</param>
+        <param name="evaluatedInclude">The evaluated Include attribute.</param>
         <summary>
             Returns all items that have the specified evaluated include.
             For example, all items that have the evaluated include "bar.cpp".
@@ -2268,8 +2677,15 @@
             same path and different item types, or even the same item types. This will return
             them all.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>All items that have the given evaluated Include attribute.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For example, this method might return all items that have the evaluated Include attribute "component.cpp". Typically zero or one items are returned. However, there may be multiple items with the same path and different item types, or even with the same item types.  
+  
+ ]]></format>
+        </remarks>
         <comments>
             data.GetItemsByEvaluatedInclude already returns a read-only collection, so no need
             to wrap it further.
@@ -2296,14 +2712,21 @@
         <Parameter Name="itemType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemType">To be added.</param>
+        <param name="itemType">The item type to be retrieved.</param>
         <summary>
             All the items in the project of the specified
             type, irrespective of whether the conditions on them evaluated to true.
             This is a read-only list: use AddItem or RemoveItem to modify items in this project.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>All the items in the project of the given type, whether or not their Condition attribute evaluates to true.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is a read-only list. Use AddItem or RemoveItem to modify items in this project.  
+  
+ ]]></format>
+        </remarks>
         <comments>
             ItemDictionary[] returns a read only collection, so no need to wrap it.
             </comments>
@@ -2339,10 +2762,26 @@
             the unevaluated project obtained from the single MSBuild file that is the result
             of inlining the text of all imports of the original MSBuild project manifest file.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>An enumerator over all the elements in the "logical project".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of including inline the text of all imports of the original MSBuild project manifest file.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetMetadataValueEscaped">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the escaped value of the metadatum with the provided name on the provided item.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetMetadataValueEscaped">
       <MemberSignature Language="C#" Value="public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectMetadata metadatum);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetMetadataValueEscaped(class Microsoft.Build.Evaluation.ProjectMetadata metadatum) cil managed" />
@@ -2363,11 +2802,11 @@
         <Parameter Name="metadatum" Type="Microsoft.Build.Evaluation.ProjectMetadata" />
       </Parameters>
       <Docs>
-        <param name="metadatum">To be added.</param>
+        <param name="metadatum">The metadatum to be escaped.</param>
         <summary>
             Gets the escaped value of the provided metadatum.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The escaped value of the provided metadatum.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2392,12 +2831,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="item">To be added.</param>
-        <param name="name">To be added.</param>
+        <param name="item">The item whose metadata is to be escaped.</param>
+        <param name="name">The name of the metadata to be escaped.</param>
         <summary>
             Gets the escaped value of the metadatum with the provided name on the provided item.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The escaped value of the metadatum with the provided name on the provided item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2422,12 +2861,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="item">To be added.</param>
-        <param name="name">To be added.</param>
+        <param name="item">The item definition whose metadata is to be escaped.</param>
+        <param name="name">The name of the metadata to be escaped.</param>
         <summary>
             Gets the escaped value of the metadatum with the provided name on the provided item definition.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The escaped value of the metadatum with the provided name on the provided item definition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2457,12 +2896,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the property to retrieve.</param>
         <summary>
             Get any property in the project that has the specified name,
             otherwise returns null.
             </summary>
-        <returns>To be added.</returns>
+        <returns>Any property in the project that has the specified name, or <see langword="null" /> if no property of that name exists.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2486,12 +2925,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the property whose value is retrieved.</param>
         <summary>
             Get the unescaped value of a property in this project, or
             an empty string if it does not exist.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The value of the given property in this project, or an empty string if no property of that name exists. Escape sequences are converted before returning the string.</returns>
         <remarks>
             A property with a value of empty string and no property
             at all are not distinguished between by this method.
@@ -2520,11 +2959,11 @@
         <Parameter Name="property" Type="Microsoft.Build.Evaluation.ProjectProperty" />
       </Parameters>
       <Docs>
-        <param name="property">To be added.</param>
+        <param name="property">The property to be escaped.</param>
         <summary>
             Get the escaped value of the provided property.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The escaped value of the provided property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2555,7 +2994,7 @@
              Read only dictionary of the global properties used in the evaluation
              of this project.
              </summary>
-        <value>To be added.</value>
+        <value>A dictionary of the global properties used for the evaluation of this project.</value>
         <remarks>
              This is the publicly exposed getter, that translates into a read-only dead IDictionary&lt;string, string&gt;.
             
@@ -2587,7 +3026,9 @@
             This does not include projects that were never imported because a condition on an Import element was false.
             The outer ProjectRootElement that maps to this project itself is not included.
             </summary>
-        <value>To be added.</value>
+        <value>A list of all the files that contributed to the evaluation of this project.  
+  
+ The name of each item is the Import element that caused the file to be imported. The value of each item is the project root of the imported project. Import elements whose Condition attribute evaluated to false are not included.</value>
         <remarks>
             This can be used by the host to figure out what projects might be impacted by a change to a particular file.
             It could also be used, for example, to find the .user file, and use its ProjectRootElement to modify properties in it.
@@ -2614,7 +3055,7 @@
         <summary>
             This list will contain duplicate imports if an import is imported multiple times. However, only the first import was used in evaluation.
             </summary>
-        <value>To be added.</value>
+        <value>A list of duplicate imports.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2654,8 +3095,16 @@
             the host has already created a ProjectInstance, it can still build it. (It is
             free to put a similar check around where it does this.)
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>
+          <see langword="true" /> if the targets and tasks of this project can be built; otherwise, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsDirty">
@@ -2681,8 +3130,16 @@
             either the XML of the main project or an imported file;
             or because its toolset may have changed.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>
+          <see langword="true" /> if this project has been modified so that it must be reevaluated; otherwise, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A project is modified and must be reevaluated when the underlying project source code, including changes to imported files. A project is also modified must be reevaluated if the project tool set changes.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ItemDefinitions">
@@ -2712,7 +3169,7 @@
             Read-only dictionary of item definitions in this project.
             Keyed by item type.
             </summary>
-        <value>To be added.</value>
+        <value>A dictionary of item definitions in this project, keyed by item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2742,7 +3199,7 @@
         <summary>
             Items in this project, ordered within groups of item types.
             </summary>
-        <value>To be added.</value>
+        <value>An enumerator over all items in this project, ordered within groups of item types.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2776,8 +3233,15 @@
             This is useful for hosts that wish to display all items, even if they might not be part
             of the build in the current configuration.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An enumerator over all items in this project, ordered within groups of item types, including items whose conditions evaluate to false, or are contained within item groups whose condition evaluates to <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used to display all items, even if they are not part of the build in the current configuration.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ItemTypes">
@@ -2807,7 +3271,7 @@
             Item types in this project.
             This is an ordered collection.
             </summary>
-        <value>To be added.</value>
+        <value>An enumerator over all item types in this project. This is an ordered collection.</value>
         <remarks>To be added.</remarks>
         <comments>
             data.ItemTypes is a KeyCollection, so it doesn't need any
@@ -2841,7 +3305,7 @@
              their previously stored value to find out, and if so perhaps decide to update their own state.
              Note that the number may not increase monotonically.
             
-             This number corresponds to the <seealso cref="P:Microsoft.Build.Framework.BuildEventContext.EvaluationId" /> and can be used to connect
+             This number corresponds to the <see cref="P:Microsoft.Build.Framework.BuildEventContext.EvaluationId" /> and can be used to connect
              evaluation logging events back to the Project instance.
              </summary>
         <value>To be added.</value>
@@ -2875,7 +3339,18 @@
             will recognize an evaluation is indeed necessary.
             Does not mark the underlying project file as requiring saving.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ It is seldom necessary to call this method explicitly, because all edits affecting a project automatically mark it as modified.  
+  
+ Sometimes, however, this method must be called. For example, a project may have an Import element whose condition depends on a file that exists on a disk. If that file does not exist at evaluation time, and it is created after evaluation, then the project must be explicitly marked as modified.  
+  
+ The <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A> method uses this property to determine if an evaluation is necessary.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectCollection">
@@ -2910,7 +3385,7 @@
             Can never be null.
             Cannot be modified.
             </summary>
-        <value>To be added.</value>
+        <value>The project collection that contains this project, which is never <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2935,7 +3410,7 @@
             Location of the originating file itself, not any specific content within it.
             If the file has not been given a name, returns an empty location.
             </summary>
-        <value>To be added.</value>
+        <value>The originating file location, or an empty location if the file has not been given a name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2966,7 +3441,7 @@
             Properties in this project.
             Since evaluation has occurred, this is an unordered collection.
             </summary>
-        <value>To be added.</value>
+        <value>An enumerator over all properties in this project. Since properties are evaluated as they appear, this is an unordered collection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2993,7 +3468,16 @@
             This incorporates all changes previously made to the backing XML by editing this project.
             Throws InvalidProjectFileException if the evaluation fails.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is reevaluated only if it is marked as modified. Reevaluation incorporates all changes made to the project source code.  
+  
+ Throws InvalidProjectFileException if the evaluation fails.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ReevaluateIfNecessary">
@@ -3042,13 +3526,14 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the global property to be removed.</param>
         <summary>
             Removes a global property.
             If it was set, returns true, and marks the project
             as requiring reevaluation.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the value of the global property was set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3072,7 +3557,7 @@
         <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItem" />
       </Parameters>
       <Docs>
-        <param name="item">To be added.</param>
+        <param name="item">The item to be removed.</param>
         <summary>
             Removes an item from the project.
             Item must be associated with this project.
@@ -3084,7 +3569,8 @@
             if an item of type "i" is removed, "j" which is evaluated from "@(i)" will not be modified until reevaluation.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the item is present in this evaluated project; otherwise, <see langword="false" />. Normally this method returns true, since if the requested item is not present, the method throws an exception. If the item is present only in the ItemsIgnoringCondition collection, however, the method returns <see langword="false" />.</returns>
         <remarks>
             Normally this will return true, since if the item isn't in the project, it will throw.
             The exception is removing an item that was only in ItemsIgnoringCondition.
@@ -3111,7 +3597,7 @@
         <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" />
       </Parameters>
       <Docs>
-        <param name="items">To be added.</param>
+        <param name="items">The items to be removed.</param>
         <summary>
             Removes all the specified items from the project.
             Items that are not associated with this project are skipped.
@@ -3144,7 +3630,7 @@
         <Parameter Name="property" Type="Microsoft.Build.Evaluation.ProjectProperty" />
       </Parameters>
       <Docs>
-        <param name="property">To be added.</param>
+        <param name="property">The property to remove.</param>
         <summary>
             Removes the specified property.
             Property must be associated with this project.
@@ -3155,10 +3641,29 @@
             if "p" is removed, it will be removed from the evaluated project, but "q" which is evaluated from "$(p)" will not be modified until reevaluation.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>
+          <see langword="true" /> if the property is present in this evaluated project; otherwise, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the property group containing the property becomes empty, it is also removed.  
+  
+ The project is updated, but no further evaluation occurs until reevaluation. For example, if "p" is removed, "q" which is evaluated from "$(p)" is not modified until reevaluation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Save">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Saves the project to the file system, if modified, using the default character encoding.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Save">
       <MemberSignature Language="C#" Value="public void Save ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
@@ -3204,7 +3709,7 @@
         <Parameter Name="writer" Type="System.IO.TextWriter" />
       </Parameters>
       <Docs>
-        <param name="writer">To be added.</param>
+        <param name="writer">The text writer to save the project to.</param>
         <summary>
             Save the project to the provided TextWriter, whether or not it is dirty.
             Uses the encoding of the TextWriter.
@@ -3233,7 +3738,7 @@
         <Parameter Name="path" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="path">To be added.</param>
+        <param name="path">The path to the project source code.</param>
         <summary>
             Save the project to the file system, if dirty or the path is different.
             Uses the default encoding.
@@ -3261,7 +3766,7 @@
         <Parameter Name="encoding" Type="System.Text.Encoding" />
       </Parameters>
       <Docs>
-        <param name="encoding">To be added.</param>
+        <param name="encoding">The character encoding used to save the project.</param>
         <summary>
             Save the project to the file system, if dirty.
             </summary>
@@ -3289,8 +3794,8 @@
         <Parameter Name="encoding" Type="System.Text.Encoding" />
       </Parameters>
       <Docs>
-        <param name="path">To be added.</param>
-        <param name="encoding">To be added.</param>
+        <param name="path">The path to the project source code.</param>
+        <param name="encoding">The character encoding used to save the project.</param>
         <summary>
             Save the project to the file system, if dirty or the path is different.
             </summary>
@@ -3317,7 +3822,7 @@
         <Parameter Name="writer" Type="System.IO.TextWriter" />
       </Parameters>
       <Docs>
-        <param name="writer">To be added.</param>
+        <param name="writer">The writer that saves the project file.</param>
         <summary>
             Saves a "logical" or "preprocessed" project file, that includes all the imported
             files as if they formed a single file.
@@ -3346,14 +3851,15 @@
         <Parameter Name="escapedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="escapedValue">To be added.</param>
+        <param name="name">The name of the global property to set.</param>
+        <param name="escapedValue">The new value of the global property.</param>
         <summary>
             Change a global property after the project has been evaluated.
             If the value changes, this makes the project require reevaluation.
             If the value changes, returns true, otherwise false.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the value changes; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3378,8 +3884,8 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">The name of the property to set.</param>
+        <param name="unevaluatedValue">The new unevaluated value of the property.</param>
         <summary>
             Set or add a property with the specified name and value.
             Overwrites the value of any property with the same name already in the collection if it did not originate in an imported file.
@@ -3394,8 +3900,19 @@
                 -only this property is evaluated. Anything else that would depend on its value is not affected.
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The property.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If there is no property with the given name, updates the last existing property with the given name that has no condition on itself or its property group, unless it originated in an imported file.  
+  
+ Otherwise, adds a new property in the first property group without a condition, creating a property group if necessary after the last existing property group, else at the start of the project.  
+  
+ Evaluation takes place on a best-effort basis. Properties that are defined in the project source following the new property may be used for evaluation. Only this property is evaluated. Other properties that might depend on it are not affected.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SkipEvaluation">
@@ -3438,7 +3955,7 @@
             This is useful when the host expects to make a number of reads and writes
             to the project, and wants to temporarily sacrifice correctness for performance.
             </summary>
-        <value>To be added.</value>
+        <value>A flag that determines whether ReevaluateIfNecessary is temporarily disabled.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3463,7 +3980,7 @@
             The sub-toolset version that, combined with the ToolsVersion, was used to determine
             the toolset properties for this project.
             </summary>
-        <value>To be added.</value>
+        <value>The SubToolsetVersion attribute value, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3495,7 +4012,7 @@
             Overridden targets are not included in this collection.
             This collection is read-only.
             </summary>
-        <value>To be added.</value>
+        <value>A read-only dictionary of all targets in this project, keyed by target name. Overridden targets are not included in this collection. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3571,7 +4088,7 @@
             The actual tools version on the Project tag, can be gotten from <see cref="P:Microsoft.Build.Evaluation.Project.Xml">Xml.ToolsVersion</see>.
             Cannot be changed once the project has been created.
             </summary>
-        <value>To be added.</value>
+        <value>The tools version that this project was evaluated with, if any.</value>
         <remarks>
             Set by construction.
             </remarks>
@@ -3608,7 +4125,7 @@
             The backing Xml project.
             Can never be null.
             </summary>
-        <value>To be added.</value>
+        <value>The root project associated with this project, which can never be <see langword="null" />.</value>
         <remarks>
             There is no setter here as that doesn't make sense. If you have a new ProjectRootElement, evaluate it into a new Project.
             </remarks>

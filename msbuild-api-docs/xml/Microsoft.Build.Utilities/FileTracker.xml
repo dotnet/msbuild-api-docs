@@ -20,10 +20,20 @@
   <Interfaces />
   <Docs>
     <summary>
-            This class contains utility functions to encapsulate launching and logging for the Tracker</summary>
+            This class contains utility functions to encapsulate launching and logging for the Tracker
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="CreateRootingMarkerResponseFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a temporary response file containing the rooting marker.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="CreateRootingMarkerResponseFile">
       <MemberSignature Language="C#" Value="public static string CreateRootingMarkerResponseFile (Microsoft.Build.Framework.ITaskItem[] sources);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateRootingMarkerResponseFile(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
@@ -48,10 +58,12 @@
       </Parameters>
       <Docs>
         <param name="sources">
-            ITaskItem array of primary sources.</param>
+            ITaskItem array of primary sources.
+            </param>
         <summary>
             Given a set of source files in the form of ITaskItem, creates a temporary response
-            file containing the rooting marker that corresponds to those sources.</summary>
+            file containing the rooting marker that corresponds to those sources. 
+            </summary>
         <returns>The response file path.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -82,7 +94,8 @@
         <param name="rootMarker">The rooting marker to put in the response file.</param>
         <summary>
             Given a rooting marker, creates a temporary response file with that rooting marker 
-            in it.</summary>
+            in it.
+            </summary>
         <returns>The response file path.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,10 +122,20 @@
       <Parameters />
       <Docs>
         <summary>
-            Stops tracking file accesses.</summary>
+            Stops tracking file accesses.  
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="EnsureFileTrackerOnPath">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Prepends the path to the appropriate FileTracker assembly to the PATH environment variable.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="EnsureFileTrackerOnPath">
       <MemberSignature Language="C#" Value="public static string EnsureFileTrackerOnPath ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EnsureFileTrackerOnPath() cil managed" />
@@ -143,7 +166,8 @@
         <summary>
             Prepends the path to the appropriate FileTracker assembly to the PATH
             environment variable.  Used for inproc tracking, or when the .NET Framework may 
-            not be on the PATH.</summary>
+            not be on the PATH.
+            </summary>
         <returns>The old value of PATH</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,7 +199,8 @@
         <summary>
             Prepends the path to the appropriate FileTracker assembly to the PATH
             environment variable.  Used for inproc tracking, or when the .NET Framework may 
-            not be on the PATH.</summary>
+            not be on the PATH.
+            </summary>
         <returns>The old value of PATH</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -204,9 +229,11 @@
       </Parameters>
       <Docs>
         <param name="fileName">
-            Full path of the file to test</param>
+            Full path of the file to test
+            </param>
         <summary>
-            Test to see if the specified file is excluded from tracked dependencies</summary>
+            Test to see if the specified file is excluded from tracked dependencies
+            </summary>
         <returns>
           <see langword="true" /> if the file is excluded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -237,11 +264,14 @@
       </Parameters>
       <Docs>
         <param name="fileName">
-            Full path of the file to test</param>
+            Full path of the file to test
+            </param>
         <param name="path">
-            Is the file under this full path?</param>
+            Is the file under this full path?
+            </param>
         <summary>
-            Test to see if the specified file is under the specified path</summary>
+            Test to see if the specified file is under the specified path
+            </summary>
         <returns>
           <see langword="true" /> if the file is under the path; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -270,11 +300,21 @@
       <Docs>
         <summary>
             Searches %PATH% for the location of Tracker.exe, and returns the first 
-            path that matches.</summary>
+            path that matches. 
+            </summary>
         <returns>The full path to Tracker.exe, or <see langword="null" /> if a matching path is not found.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="ForceOutOfProcTracking">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Determines whether we must track out of process, or whether in process tracking will work.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ForceOutOfProcTracking">
       <MemberSignature Language="C#" Value="public static bool ForceOutOfProcTracking (Microsoft.Build.Utilities.ExecutableType toolType);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ForceOutOfProcTracking(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
@@ -306,7 +346,8 @@
       <Docs>
         <param name="toolType">The executable type for the tool being tracked</param>
         <summary>
-            Determines whether we must track out-of-proc, or whether inproc tracking will work.</summary>
+            Determines whether we must track out-of-proc, or whether inproc tracking will work. 
+            </summary>
         <returns>True if we need to track out-of-proc, false if inproc tracking is OK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -340,11 +381,21 @@
         <param name="dllName">An optional assembly name.</param>
         <param name="cancelEventName">The name of the cancel event tracker should listen for, or null if there isn't one</param>
         <summary>
-            Determines whether we must track out-of-proc, or whether inproc tracking will work.</summary>
+            Determines whether we must track out-of-proc, or whether inproc tracking will work. 
+            </summary>
         <returns>True if we need to track out-of-proc, false if inproc tracking is OK</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="FormatRootingMarker">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Construct a rooting marker string from the ITaskItem array of primary sources.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="FormatRootingMarker">
       <MemberSignature Language="C#" Value="public static string FormatRootingMarker (Microsoft.Build.Framework.ITaskItem source);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FormatRootingMarker(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
@@ -370,7 +421,8 @@
       <Docs>
         <param name="source">An <see cref="T:Microsoft.Build.Framework.ITaskItem" /> containing information about the primary source.</param>
         <summary>
-            Construct a rooting marker string from the ITaskItem array of primary sources.</summary>
+            Construct a rooting marker string from the ITaskItem array of primary sources.
+            </summary>
         <returns>The marker string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -405,9 +457,11 @@
       </Parameters>
       <Docs>
         <param name="sources">
-            ITaskItem array of primary sources.</param>
+            ITaskItem array of primary sources.
+            </param>
         <summary>
-            Construct a rooting marker string from the ITaskItem array of primary sources.</summary>
+            Construct a rooting marker string from the ITaskItem array of primary sources.
+            </summary>
         <returns>The marker string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -439,7 +493,8 @@
         <param name="source">An <see cref="T:Microsoft.Build.Framework.ITaskItem" /> containing information about the primary source.</param>
         <param name="output">An <see cref="T:Microsoft.Build.Framework.ITaskItem" /> containing information about the output.</param>
         <summary>
-            Construct a rooting marker string from the ITaskItem array of primary sources.</summary>
+            Construct a rooting marker string from the ITaskItem array of primary sources.
+            </summary>
         <returns>The marker string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -469,14 +524,25 @@
       </Parameters>
       <Docs>
         <param name="sources">
-            ITaskItem array of primary sources.</param>
+            ITaskItem array of primary sources.
+            </param>
         <param name="outputs">ITaskItem array of outputs.</param>
         <summary>
-            Construct a rooting marker string from the ITaskItem array of primary sources.</summary>
+            Construct a rooting marker string from the ITaskItem array of primary sources.
+            </summary>
         <returns>The marker string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetFileTrackerPath">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Figures out and returns the path to the correct FileTracker.dll.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetFileTrackerPath">
       <MemberSignature Language="C#" Value="public static string GetFileTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
@@ -510,7 +576,8 @@
         <summary>
             Given the ExecutableType of the tool being wrapped and information that we 
             know about our current bitness, figures out and returns the path to the correct
-            FileTracker.dll.</summary>
+            FileTracker.dll. 
+            </summary>
         <returns>The path of the tool.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -544,11 +611,21 @@
         <summary>
             Given the ExecutableType of the tool being wrapped and information that we 
             know about our current bitness, figures out and returns the path to the correct
-            FileTracker.dll.</summary>
+            FileTracker.dll. 
+            </summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetTrackerPath">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Figures out and returns the path to the correct Tracker.exe.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetTrackerPath">
       <MemberSignature Language="C#" Value="public static string GetTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
@@ -582,7 +659,8 @@
         <summary>
             Given the ExecutableType of the tool being wrapped and information that we 
             know about our current bitness, figures out and returns the path to the correct
-            Tracker.exe.</summary>
+            Tracker.exe. 
+            </summary>
         <returns>The tracker path.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -616,7 +694,8 @@
         <summary>
             Given the ExecutableType of the tool being wrapped and information that we 
             know about our current bitness, figures out and returns the path to the correct
-            Tracker.exe.</summary>
+            Tracker.exe. 
+            </summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -643,7 +722,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Resume tracking file accesses in the current tracking context.</summary>
+            Resume tracking file accesses in the current tracking context. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -672,10 +752,20 @@
       <Docs>
         <param name="threadCount">The thread count.</param>
         <summary>
-            Set the global thread count, and assign that count to the current thread.</summary>
+            Set the global thread count, and assign that count to the current thread. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="StartProcess">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Start the process; tracking the command.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="StartProcess">
       <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
@@ -711,7 +801,8 @@
         <param name="arguments">The command to track's arguments</param>
         <param name="toolType">The type of executable the wrapped tool is</param>
         <summary>
-            Start the process; tracking the command.</summary>
+            Start the process; tracking the command.
+            </summary>
         <returns>Process instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -753,7 +844,8 @@
         <param name="toolType">The type of executable the wrapped tool is</param>
         <param name="rootFiles">Rooting marker</param>
         <summary>
-            Start the process; tracking the command.</summary>
+            Start the process; tracking the command.
+            </summary>
         <returns>Process instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -797,7 +889,8 @@
         <param name="intermediateDirectory">Intermediate directory where tracking logs will be written</param>
         <param name="rootFiles">Rooting marker</param>
         <summary>
-            Start the process; tracking the command.</summary>
+            Start the process; tracking the command.
+            </summary>
         <returns>Process instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -843,7 +936,8 @@
         <param name="intermediateDirectory">Intermediate directory where tracking logs will be written</param>
         <param name="rootFiles">Rooting marker</param>
         <summary>
-            Start the process; tracking the command.</summary>
+            Start the process; tracking the command.
+            </summary>
         <returns>Process instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -885,7 +979,8 @@
         <param name="rootFiles">Rooting marker</param>
         <param name="cancelEventName">If Tracker should be listening on a particular event for cancellation, pass its name here</param>
         <summary>
-            Start the process; tracking the command.</summary>
+            Start the process; tracking the command.  
+            </summary>
         <returns>Process instance</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -918,7 +1013,8 @@
         <param name="taskName">The name of the task calling this function, used to determine the 
             names of the tracking log files</param>
         <summary>
-            Starts tracking file accesses.</summary>
+            Starts tracking file accesses. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -954,7 +1050,8 @@
         <summary>
             Starts tracking file accesses, using the rooting marker in the response file provided.  To 
             automatically generate a response file given a rooting marker, call 
-            FileTracker.CreateRootingMarkerResponseFile.</summary>
+            FileTracker.CreateRootingMarkerResponseFile. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -980,7 +1077,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Stop tracking file accesses and get rid of the current tracking contexts.</summary>
+            Stop tracking file accesses and get rid of the current tracking contexts. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1006,10 +1104,20 @@
       <Parameters />
       <Docs>
         <summary>
-            Temporarily suspend tracking of file accesses in the current tracking context.</summary>
+            Temporarily suspend tracking of file accesses in the current tracking context. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="TrackerArguments">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>This method constructs the correct Tracker.exe arguments from its parameters.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="TrackerArguments">
       <MemberSignature Language="C#" Value="public static string TrackerArguments (string command, string arguments, string dllName, string intermediateDirectory, string rootFiles);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerArguments(string command, string arguments, string dllName, string intermediateDirectory, string rootFiles) cil managed" />
@@ -1049,7 +1157,8 @@
         <param name="intermediateDirectory">Intermediate directory where tracking logs will be written</param>
         <param name="rootFiles">Rooting marker</param>
         <summary>
-            This method constructs the correct Tracker.exe arguments from its parameters</summary>
+            This method constructs the correct Tracker.exe arguments from its parameters
+            </summary>
         <returns>The arguments as a string</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1089,7 +1198,8 @@
         <param name="rootFiles">Rooting marker</param>
         <param name="cancelEventName">If a cancel event has been created that Tracker should be listening for, its name is passed here</param>
         <summary>
-            This method constructs the correct Tracker.exe arguments from its parameters</summary>
+            This method constructs the correct Tracker.exe arguments from its parameters
+            </summary>
         <returns>The arguments as a string</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1121,11 +1231,21 @@
         <param name="command">The command to track</param>
         <param name="arguments">The command to track's arguments</param>
         <summary>
-            This method constructs the correct Tracker.exe command arguments from its parameters</summary>
+            This method constructs the correct Tracker.exe command arguments from its parameters
+            </summary>
         <returns>The arguments as a string</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="TrackerResponseFileArguments">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>This method constructs the correct Tracker.exe response file arguments from its parameters.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="TrackerResponseFileArguments">
       <MemberSignature Language="C#" Value="public static string TrackerResponseFileArguments (string dllName, string intermediateDirectory, string rootFiles);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerResponseFileArguments(string dllName, string intermediateDirectory, string rootFiles) cil managed" />
@@ -1161,7 +1281,8 @@
         <param name="intermediateDirectory">Intermediate directory where tracking logs will be written</param>
         <param name="rootFiles">Rooting marker</param>
         <summary>
-            This method constructs the correct Tracker.exe response file arguments from its parameters</summary>
+            This method constructs the correct Tracker.exe response file arguments from its parameters
+            </summary>
         <returns>The arguments as a string</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1197,7 +1318,8 @@
         <param name="rootFiles">Rooting marker</param>
         <param name="cancelEventName">If a cancel event has been created that Tracker should be listening for, its name is passed here</param>
         <summary>
-            This method constructs the correct Tracker.exe response file arguments from its parameters</summary>
+            This method constructs the correct Tracker.exe response file arguments from its parameters
+            </summary>
         <returns>The arguments as a string</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1230,7 +1352,8 @@
         <param name="taskName">The name of the task calling this function, used to determine the 
             names of the tracking log files</param>
         <summary>
-            Write tracking logs for all contexts and threads.</summary>
+            Write tracking logs for all contexts and threads. 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1262,7 +1385,8 @@
         <param name="taskName">The name of the task calling this function, used to determine the 
             names of the tracking log files</param>
         <summary>
-            Write tracking logs corresponding to the current tracking context.</summary>
+            Write tracking logs corresponding to the current tracking context.  
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

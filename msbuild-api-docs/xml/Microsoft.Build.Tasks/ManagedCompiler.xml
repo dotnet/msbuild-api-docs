@@ -24,6 +24,10 @@
   <Docs>
     <summary>Defines the properties and methods common to managed compiler tasks.</summary>
     <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+    </block>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,6 +59,10 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.ManagedCompiler" /> class.</summary>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddCommandLineCommands">
@@ -87,6 +95,10 @@
         <param name="commandLine">Command line builder to add arguments to.</param>
         <summary>Generates command line arguments that the command line tool must run directly from the command line and not from a response file.</summary>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AdditionalLibPaths">
@@ -116,6 +128,10 @@
         <summary>Gets or sets the additional folders in which to look for assemblies.</summary>
         <value>The additional folders in which to look for assemblies.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddModules">
@@ -145,6 +161,10 @@
         <summary>Gets or sets the modules for the compiler to make available to the project you are currently compiling.</summary>
         <value>The modules for the compiler to make available to the project you are currently compiling.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddResponseFileCommands">
@@ -177,6 +197,10 @@
         <param name="commandLine">Command line builder to add arguments to.</param>
         <summary>Fills the specified <paramref name="commandLine" /> parameter with the switches and other information that can go into a response file.</summary>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CheckAllReferencesExistOnDisk">
@@ -208,6 +232,10 @@
         <returns>
           <see langword="true" /> if all references exist on disk; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CheckHostObjectSupport">
@@ -243,6 +271,10 @@
           <see langword="true" /> if the host compiler supports <paramref name="parameterName" />; otherwise, <see langword="false" /></param>
         <summary>Logs a message if the specified parameter is not supported by the host compiler.</summary>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CodePage">
@@ -272,6 +304,10 @@
         <summary>Gets or sets the code page to use for all source code files in the compilation.</summary>
         <value>The code page to use for all source code files in the compilation.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="DebugType">
@@ -301,6 +337,10 @@
         <summary>Gets or sets the debug type.</summary>
         <value>The debug type.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="DefineConstants">
@@ -330,6 +370,10 @@
         <summary>Gets or sets the conditional compiler constants.</summary>
         <value>The conditional compiler constants.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="DelaySign">
@@ -360,6 +404,10 @@
         <value>
           <see langword="true" /> if the public key is placed in the assembly; <see langword="false" /> if the assembly is fully signed.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="EmitDebugInformation">
@@ -390,6 +438,10 @@
         <value>
           <see langword="true" /> if debugging information is generated; otherwise, <see langword="false" />;</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FileAlignment">
@@ -419,6 +471,10 @@
         <summary>Gets or sets a value indicating where to align the sections of the output file.</summary>
         <value>A value indicating where to align the sections of the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="HandleTaskExecutionErrors">
@@ -449,7 +505,18 @@
         <summary>Handles the return code from the compiler.</summary>
         <returns>
           <see langword="true" /> if the return code was handled successfully; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method always returns `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="HighEntropyVA">
@@ -471,6 +538,7 @@
         <summary>Gets or sets the HighEntropyVA attribute.</summary>
         <value>The HighEntropyVA attribute.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="HostCompilerSupportsAllParameters">
@@ -511,6 +579,10 @@
         <value>
           <see langword="true" /> if the host compiler supports all task parameters; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="KeyContainer">
@@ -540,6 +612,10 @@
         <summary>Gets or sets the name of the cryptographic key container.</summary>
         <value>The name of the cryptographic key container.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="KeyFile">
@@ -569,6 +645,10 @@
         <summary>Gets or sets the file name containing the cryptographic key.</summary>
         <value>The file name containing the cryptographic key.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="LinkResources">
@@ -598,6 +678,10 @@
         <summary>Gets or sets the .NET Framework resource files to link to the output file.</summary>
         <value>The .NET Framework resource files to link to the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ListHasNoDuplicateItems">
@@ -640,6 +724,10 @@
         <returns>
           <see langword="true" /> if the item list contains no duplicates; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="MainEntryPoint">
@@ -669,6 +757,10 @@
         <summary>Gets or sets the class or module that contains the main entry point.</summary>
         <value>The class or module that contains the main entry point.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="NoConfig">
@@ -699,6 +791,10 @@
         <value>
           <see langword="true" /> if the compiler is not using the default response file; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="NoLogo">
@@ -729,6 +825,10 @@
         <value>
           <see langword="true" /> to suppress the compiler banner information; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="NoWin32Manifest">
@@ -755,6 +855,7 @@
         <value>
           <see langword="true" /> if an external UAC manifest is generated for the application; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Optimize">
@@ -785,6 +886,10 @@
         <value>
           <see langword="true" /> to enable compiler optimizations; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OutputAssembly">
@@ -820,6 +925,10 @@
         <summary>Gets or sets the name of the output file.</summary>
         <value>The name of the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Platform">
@@ -841,6 +950,7 @@
         <summary>Gets or sets the Platform attribute.</summary>
         <value>The Platform attribute.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Prefer32Bit">
@@ -862,6 +972,7 @@
         <summary>Gets or sets the Prefer32Bit attribute.</summary>
         <value>The Prefer32Bit attribute.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="References">
@@ -891,6 +1002,10 @@
         <summary>Gets or sets the items from which the compiler will import public type information.</summary>
         <value>The items from which the compiler will import public type information.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Resources">
@@ -920,6 +1035,10 @@
         <summary>Gets or sets the .NET Framework resources to embed in the output file.</summary>
         <value>The .NET Framework resources to embed in the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ResponseFiles">
@@ -949,6 +1068,10 @@
         <summary>Gets or sets the response files that contain commands for the task.</summary>
         <value>The response files that contain commands for the task.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Sources">
@@ -978,6 +1101,10 @@
         <summary>Gets or sets the source files to compile.</summary>
         <value>The source files to compile.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="StandardOutputEncoding">
@@ -1007,6 +1134,10 @@
         <summary>Gets or sets the encoding of the captured task standard output stream.</summary>
         <value>The encoding of the captured task standard output stream.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="SubsystemVersion">
@@ -1028,6 +1159,7 @@
         <summary>Gets or sets the SubsystemVersion attribute value.</summary>
         <value>The subsystem version.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetType">
@@ -1057,6 +1189,10 @@
         <summary>Gets or sets the file format of the output file.</summary>
         <value>The file format of the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TreatWarningsAsErrors">
@@ -1087,6 +1223,10 @@
         <value>
           <see langword="true" /> if warnings are treated as errors; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="UseAlternateCommandLineToolToExecute">
@@ -1114,6 +1254,7 @@
         <returns>
           <see langword="false" /> if the host compiler should be used; otherwise, <see langword="true" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="UsedCommandLineTool">
@@ -1145,6 +1286,7 @@
         <summary>Whether the command line compiler was invoked, instead of the host object compiler.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Utf8Output">
@@ -1175,6 +1317,10 @@
         <value>
           <see langword="true" /> if compiler output is logged using UTF-8 encoding; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ValidateParameters">
@@ -1206,6 +1352,10 @@
         <returns>
           <see langword="true" /> if all parameters are valid; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Win32Icon">
@@ -1235,6 +1385,10 @@
         <summary>Gets or sets the icon file name.</summary>
         <value>The icon file name.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Win32Manifest">
@@ -1260,6 +1414,7 @@
         <summary>Gets or sets the Win32 manifest.</summary>
         <value>The Win32 manifest.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Win32Resource">
@@ -1289,6 +1444,10 @@
         <summary>Gets or sets a Win32 resource (.res) file to insert in the output file.</summary>
         <value>The Win32 resource (.res) file to insert in the output file.</value>
         <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>This class uses the <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> attribute and cannot be inherited.</para>
+        </block>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

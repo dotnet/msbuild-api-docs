@@ -21,6 +21,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates build parameters.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildParameters ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -38,7 +47,14 @@
         <summary>
             Constructor for those who intend to set all properties themselves.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Constructor for use in setting all build properties programmatically.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -108,7 +124,7 @@
         <summary>
             Gets the environment variables which were set when this build was created.
             </summary>
-        <value>To be added.</value>
+        <value>Returns environment variables set when build was created.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,7 +158,7 @@
         <summary>
             Gets or sets the desired thread priority for building.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the thread priority for building</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -168,8 +184,15 @@
             Creates a clone of this BuildParameters object.  This creates a clone of the logger collections, but does not deep clone
             the loggers within.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>Returns a clone of this build parameters object.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method creates a clone of the logger collections, but does not deeply clone the loggers within.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Culture">
@@ -202,7 +225,7 @@
         <summary>
             The name of the culture to use during the build.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the culture.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -236,7 +259,7 @@
         <summary>
             The default tools version for the build.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the tools version.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -270,7 +293,7 @@
         <summary>
             When true, indicates that the build should emit a detailed summary at the end of the log.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the value of a switch that specifies whether the build should emit a detailed summary at the end of the log</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -294,7 +317,7 @@
         <summary>
             When true, indicates the in-proc node should not be used.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -351,7 +374,7 @@
         <summary>
             Flag indicating whether out-of-proc nodes should remain after the build and wait for further builds.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -375,7 +398,7 @@
         <summary>
             Gets an immutable collection of environment properties.
             </summary>
-        <value>To be added.</value>
+        <value>Returns an immutable collection of environment properties.</value>
         <remarks>
             This differs from the BuildProcessEnvironment in that there are certain MSBuild-specific properties which are added, and those environment variables which
             would not be valid as MSBuild properties are removed.
@@ -408,7 +431,7 @@
         <summary>
             The collection of forwarding logger descriptions.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the collection of forwarding logger descriptions.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -432,11 +455,11 @@
         <Parameter Name="toolsVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="toolsVersion">To be added.</param>
+        <param name="toolsVersion">The toolset to retrieve.</param>
         <summary>
             Retrieves a toolset.
             </summary>
-        <returns>To be added.</returns>
+        <returns>Returns the toolset.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -460,7 +483,7 @@
         <summary>
             Sets or retrieves an immutable collection of global properties.
             </summary>
-        <value>To be added.</value>
+        <value>Returns an immutable collection of global properties.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -494,7 +517,7 @@
         <summary>
             Interface allowing the host to provide additional control over the build process.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the host service.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -598,7 +621,7 @@
         <summary>
             Enables or disables legacy threading semantics
             </summary>
-        <value>To be added.</value>
+        <value>Returns a switch that enables or disables legacy threading semantics; true if enabled, false otherwise.</value>
         <remarks>
             Legacy threading semantics indicate that if a submission is to be built
             only on the in-proc node and the submission is executed synchronously, then all of its
@@ -633,7 +656,7 @@
         <summary>
             The collection of loggers to use during the build.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the collection of loggers to use during the build.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -657,7 +680,7 @@
         <summary>
             When true, indicates that the initial properties and items should be logged.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -681,7 +704,7 @@
         <summary>
             When true, indicates that the task parameters should be logged.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -734,7 +757,7 @@
         <summary>
             The maximum number of nodes this build may use.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the maximum number of nodes this build may use.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -768,7 +791,7 @@
         <summary>
             The amount of memory the build should limit itself to using, in megabytes.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the amount of memory the build should limit itself to using, in megabytes.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -802,7 +825,7 @@
         <summary>
             The location of the build node executable.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the location of the build node executable.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -836,7 +859,7 @@
         <summary>
             Flag indicating if non-critical logging events should be discarded.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a flag that determines if non-critical logging events should be discarded.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -942,7 +965,7 @@
         <summary>
             Indicates that the build should reset the configuration and results caches.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a switch that specifies whether the build should reset the configuration and results caches; true if the caches should be reset, false otherwise.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -977,8 +1000,15 @@
             Flag indicating if the operating environment such as the current directory and environment be saved and restored between project builds and task invocations.
             This should be set to false for any other build managers running in the system so that we do not have two build managers trampling on each others environment.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>Returns a switch indicating whether the operating environment should be saved and restored between project builds and task invocations; true if the environment should be saved, false otherwise.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This should be set to false for any other build managers running in the system so that we do not have two build managers trampling on each others environment.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ShutdownInProcNodeOnBuildFinish">
@@ -1002,7 +1032,7 @@
             Shutdown the inprocess node when the build finishes. By default this is false
             since visual studio needs to keep the inprocess node around after the build finishes.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1036,7 +1066,7 @@
         <summary>
             Locations to search for toolsets.
             </summary>
-        <value>To be added.</value>
+        <value>Returns locations to search for toolsets.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1060,7 +1090,7 @@
         <summary>
             Returns all of the toolsets.
             </summary>
-        <value>To be added.</value>
+        <value>Returns all of the toolsets.</value>
         <remarks>To be added.</remarks>
         <comments>
             toolsetProvider.Toolsets is already a readonly collection.
@@ -1097,7 +1127,7 @@
         <summary>
             The name of the UI culture to use during the build.
             </summary>
-        <value>To be added.</value>
+        <value>Returns the name of the UI culture to use during the build.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1132,7 +1162,7 @@
             By default if the number of processes is set to 1 we will use Asynchronous logging. However if we want to use synchronous logging when the number of cpu's is set to 1
             this property needs to be set to true.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a switch that specifies whether synchronous logging is used when there is only a single process; if true, use synchronous logging, otherwise use asynchronous logging.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

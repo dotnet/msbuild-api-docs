@@ -56,8 +56,15 @@
             Does not include built-in metadata.
             Never returns null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An enumerator over all item metadata, which can never be <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not include metadata from item definitions. Does not include built-in metadata, such as "FullPath".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DirectMetadataCount">
@@ -88,8 +95,15 @@
             Does NOT count any metadata inherited from item definitions.
             Does not count built-in metadata, such as "FullPath".
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The count of metadata for this item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not include metadata from item definitions. Does not include built-in metadata, such as "FullPath".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EvaluatedInclude">
@@ -118,8 +132,15 @@
         <summary>
             Gets the evaluated value of the include, unescaped. 
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The evaluated value of the Include attribute.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Escaped characters are not present.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetMetadata">
@@ -142,15 +163,22 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata whose value is retrieved.</param>
         <summary>
             Gets an evaluated metadata on this item.
             Potentially includes a metadata from an item definition.
             Does not return built-in metadata, such as "FullPath".
             Returns null if not found.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The evaluated value of the given metadata for this item, or <see langword="null" /> if no metadata exists with the given name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ May include metadata from an item definition. Does not include built-in metadata, such as "FullPath".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetMetadataValue">
@@ -173,7 +201,7 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata whose value is retrieved.</param>
         <summary>
             Get the evaluated value of a metadata on this item, possibly from an item definition. 
             Returns empty string if it does not exist.
@@ -181,8 +209,17 @@
             May be used to access the value of built-in metadata, such as "FullPath".
             Attempting to get built-in metadata on a value that is not a valid path throws InvalidOperationException.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The evaluated value of the given metadata for this item, including metadata originating from an item definition, or an empty string if no metadata exists with the given name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ To determine whether metadata exist, whether it has a value or not, use <xref:Microsoft.Build.Evaluation.ProjectItem.HasMetadata%2A>.  
+  
+ This method may be used to access the value of built-in metadata, such as "FullPath".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HasMetadata">
@@ -205,14 +242,22 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata to be searched for.</param>
         <summary>
             Returns true if a particular piece of metadata is defined on this item,
             otherwise false.
             Includes built-in metadata and metadata inherited from item definitions.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>
+          <see langword="true" /> if metadata with the given name is defined on this item; otherwise, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Includes built-in metadata and metadata originating from item definitions.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsImported">
@@ -236,7 +281,8 @@
             If the item originated in an imported file, returns true.
             Otherwise returns false.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if this item originates from an imported file; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -270,7 +316,7 @@
         <summary>
             Gets or sets the type of this item.
             </summary>
-        <value>To be added.</value>
+        <value>The item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -308,8 +354,17 @@
             Get the values of built-in metadata using <see cref="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue(System.String)" />.
             This is a read-only collection. To modify the metadata, use <see cref="M:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue(System.String,System.String)" />.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All the metadata for this item, including metadata originating from item definitions.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not include built-in metadata, such as "FullPath".  
+  
+ To add, remove, or change the values of built-in metadata, use <xref:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue%2A> and <xref:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue%2A>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MetadataCount">
@@ -340,7 +395,7 @@
             Includes any metadata inherited from item definitions.
             Includes both custom and built-in metadata.
             </summary>
-        <value>To be added.</value>
+        <value>The count of metadata for this item, including any metadata originating from item definitions, and any built-in metadata.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -379,8 +434,15 @@
             Project that this item lives in.
             ProjectItems always live in a project.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The project that contains this project item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Project items are always contained by a project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveMetadata">
@@ -403,15 +465,25 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata to remove.</param>
         <summary>
             Removes any metadata with the specified name.
             Returns true if the evaluated metadata existed, otherwise false.
             If the metadata name is one of the built-in metadata, like "FullPath", throws InvalidArgumentException.
             If the metadata originates in an item definition, and was not overridden, throws InvalidOperationException.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>
+          <see langword="true" /> if metadata with the given name exists before removal; otherwise, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Throws InvalidArgumentException if the metadata name refers to built-in metadata, like "FullPath".  
+  
+ Throws InvalidOperationException if the metadata name refers to metadata that originates from an item definition.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Rename">
@@ -434,7 +506,7 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The new name of the item.</param>
         <summary>
             Renames the item.
             Equivalent to setting the <see cref="P:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude" /> value.
@@ -477,8 +549,8 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">The name of the metadata to add.</param>
+        <param name="unevaluatedValue">The unevaluated value of the metadata to add.</param>
         <summary>
             Adds metadata with the specified name and value to the item.
             Updates an existing metadata if one already exists with the same name on the item directly, as opposed to inherited from an item definition.
@@ -488,7 +560,7 @@
             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state without a reevaluation.
             Returns the new or existing metadatum.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new metadata. If metadata with the given name already exists, returns this metadata.</returns>
         <remarks>Unevaluated value is assumed to be escaped as necessary</remarks>
       </Docs>
     </Member>
@@ -558,7 +630,7 @@
         <summary>
             Gets or sets the unevaluated value of the Include.
             </summary>
-        <value>To be added.</value>
+        <value>The unevaluated value of the Include attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -597,7 +669,7 @@
             Backing XML item.
             Can never be null.
             </summary>
-        <value>To be added.</value>
+        <value>The item element that is associated with this item, which can never be <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

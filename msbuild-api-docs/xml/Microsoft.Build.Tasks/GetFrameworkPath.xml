@@ -28,8 +28,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Returns the paths to the various frameworks versions.</summary>
+            Returns the paths to the various frameworks versions.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -65,6 +67,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.GetFrameworkPath" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -97,10 +100,19 @@
       <Parameters />
       <Docs>
         <summary>
-            Does nothing: getters do all the work</summary>
+            Does nothing: getters do all the work
+            </summary>
         <returns>
           <see langword="true" /> in all cases.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ There is no execution that takes place for the `GetFrameworkPath` task, instead the task supports only getting and setting of properties.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion11Path">
@@ -134,9 +146,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v1.1 framework, if available</summary>
+            Path to the v1.1 framework, if available
+            </summary>
         <value>The path of the folder that contains the .NET Framework 1.1 assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion20Path">
@@ -170,9 +184,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v2.0 framework, if available</summary>
+            Path to the v2.0 framework, if available
+            </summary>
         <value>The path of the folder that contains the .NET Framework 2.0 assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion30Path">
@@ -206,9 +222,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v3.0 framework, if available</summary>
+            Path to the v3.0 framework, if available
+            </summary>
         <value>The path of the folder that contains the .NET Framework 3.0 assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion35Path">
@@ -242,9 +260,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v3.5 framework, if available</summary>
+            Path to the v3.5 framework, if available
+            </summary>
         <value>The path of the folder that contains the .NET Framework 3.5 assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion40Path">
@@ -274,9 +294,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v4.0 framework, if available</summary>
+            Path to the v4.0 framework, if available
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion451Path">
@@ -364,9 +386,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the v4.5 framework, if available</summary>
+            Path to the v4.5 framework, if available
+            </summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FrameworkVersion461Path">
@@ -611,9 +635,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Path to the latest framework, whatever version it happens to be</summary>
+            Path to the latest framework, whatever version it happens to be
+            </summary>
         <value>The path of the folder that contains the latest version of the .NET Framework assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

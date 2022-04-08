@@ -33,10 +33,20 @@
   </Attributes>
   <Docs>
     <summary>
-            Writes object representation of a manifest to XML.</summary>
+            Writes object representation of a manifest to XML.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="WriteManifest">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Writes the specified manifest object to XML.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="WriteManifest">
       <MemberSignature Language="C#" Value="public static void WriteManifest (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteManifest(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
@@ -71,8 +81,16 @@
         <param name="manifest">The object representation of the manifest.</param>
         <summary>
             Writes the specified object representation of a manifest to XML.
-            The name of the output file is inferred from the SourcePath property of the manifest.</summary>
-        <remarks>To be added.</remarks>
+            The name of the output file is inferred from the SourcePath property of the manifest.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Writes the specified object representation of a manifest to XML. The name of the output file is inferred from the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.SourcePath%2A> property of the manifest.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteManifest">
@@ -110,8 +128,16 @@
         <param name="manifest">The object representation of the manifest.</param>
         <param name="output">Specifies an output stream.</param>
         <summary>
-            Writes the specified object representation of a manifest to XML.</summary>
-        <remarks>To be added.</remarks>
+            Writes the specified object representation of a manifest to XML.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Writes the specified object representation of a manifest to XML.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteManifest">
@@ -149,8 +175,16 @@
         <param name="manifest">The object representation of the manifest.</param>
         <param name="path">The name of the output file.</param>
         <summary>
-            Writes the specified object representation of a manifest to XML.</summary>
-        <remarks>To be added.</remarks>
+            Writes the specified object representation of a manifest to XML.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Writes the specified object representation of a manifest to XML.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteManifest">
@@ -182,7 +216,8 @@
         <param name="path">The name of the output file.</param>
         <param name="targetframeWorkVersion">The target framework version.</param>
         <summary>
-            Writes the specified object representation of a manifest to XML.</summary>
+            Writes the specified object representation of a manifest to XML.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -29,7 +29,14 @@
   </Interfaces>
   <Docs>
     <summary>Represents one or more <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> objects. A Toolset is a combination of a Toolset version (such as "2.0"), a tools path, and an optional set of associated properties.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.ToolsetCollection> allows you to retrieve individual <xref:Microsoft.Build.BuildEngine.Toolset> objects by passing the string value of the tools version corresponding with the desired <xref:Microsoft.Build.BuildEngine.Toolset>.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -57,7 +64,14 @@
       <Docs>
         <param name="item">A <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> object representing the Toolset to add to the collection.</param>
         <summary>Adds the specified <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> to this collection.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.ToolsetCollection.Add%2A> replaces any previous value that has the same tools version. It also notifies the parent <xref:Microsoft.Build.BuildEngine.Engine> of the change.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -85,6 +99,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets whether the collection contains the referenced <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Contains">
       <MemberSignature Language="C#" Value="public bool Contains (Microsoft.Build.BuildEngine.Toolset item);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class Microsoft.Build.BuildEngine.Toolset item) cil managed" />
@@ -194,7 +217,14 @@
       <Docs>
         <summary>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" />.</summary>
         <value>An integer value representing the number of <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> objects in the collection.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Each <xref:Microsoft.Build.BuildEngine.Toolset> element in the collection represents a <xref:Microsoft.Build.BuildEngine.Toolset> in the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -220,7 +250,14 @@
       <Docs>
         <summary>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" />.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> for the entire <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.Toolset> objects in the <xref:Microsoft.Build.BuildEngine.ToolsetCollection>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsReadOnly">
@@ -245,7 +282,14 @@
       <Docs>
         <summary>Gets whether the <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> is read-only. <see cref="P:Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly" /> always returns <see langword="false" /> because Toolsets are always writable.</summary>
         <value>A boolean value indicating whether the <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> is read-only.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly%2A> always returns `false` because Toolsets are always writable.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -332,7 +376,14 @@
       <Docs>
         <summary>Non-generic enumerator for the Toolsets in this collection.</summary>
         <returns>An enumerator for the toolsets.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Returns the enumerator.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ToolsVersions">

@@ -34,7 +34,8 @@
   </Attributes>
   <Docs>
     <summary>
-            A task factory which can take code dom supported languages and create a task out of it</summary>
+            A task factory which can take code dom supported languages and create a task out of it
+            </summary>
     <remarks>CodeDom is not supported for .NET Core so this code task factory simply logs an error that it isn't supported.
             If we don't compile this class, then the user will get an error that the class doesn't exist which is a bad experience.</remarks>
   </Docs>
@@ -88,7 +89,8 @@
       <Docs>
         <param name="task">The task to clean up.</param>
         <summary>
-            Cleans up any context or state that may have been built up for a given task.</summary>
+            Cleans up any context or state that may have been built up for a given task.
+            </summary>
         <remarks>
             For many factories, this method is a no-op.  But some factories may have built up
             an AppDomain as part of an individual task instance, and this is their opportunity
@@ -128,7 +130,7 @@
         <Parameter Name="taskFactoryLoggingHost" Type="Microsoft.Build.Framework.IBuildEngine" Index="0" FrameworkAlternate="msbuild-15-netcore;msbuild-16-netcore;msbuild-17-netcore" />
       </Parameters>
       <Docs>
-        <param name="taskFactoryLoggingHost">To be added.</param>
+        <param name="taskFactoryLoggingHost">The task factory logging host will log messages in the context of the task.</param>
         <param name="loggingHost">The host that logs information from the task factory.</param>
         <summary>Create a taskfactory instance which contains the data that needs to be refreshed between task invocations.</summary>
         <returns>The new task.</returns>
@@ -159,7 +161,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            MSBuild engine uses this for logging where the task comes from</summary>
+            MSBuild engine uses this for logging where the task comes from
+            </summary>
         <value>The name of the task.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -44,8 +44,16 @@
     <summary>
             Defines an interface for the Vbc task to communicate with the IDE.  In particular,
             the Vbc task will delegate the actual compilation to the IDE, rather than shelling
-            out to the command-line compilers.</summary>
-    <remarks>To be added.</remarks>
+            out to the command-line compilers.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This interface allows the `Vbc` task to delegate project compilation to the IDE rather than using command line compilers.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="BeginInitialization">

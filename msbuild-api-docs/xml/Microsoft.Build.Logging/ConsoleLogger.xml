@@ -31,6 +31,15 @@
     <remarks>This class is not thread safe.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a console logger instance.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ConsoleLogger ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -133,14 +142,21 @@
         <Parameter Name="parameterValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="parameterName">To be added.</param>
-        <param name="parameterValue">To be added.</param>
+        <param name="parameterName">The name of the parameter.</param>
+        <param name="parameterValue">The value of the parameter.</param>
         <summary>
             Apply a parameter.
             NOTE: This method was public by accident in Whidbey, so it cannot be made internal now. It has 
             no good reason for being public.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deprecated.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildFinishedHandler">
@@ -222,8 +238,8 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.CustomBuildEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">To be added.</param>
-        <param name="e">To be added.</param>
+        <param name="sender">The sender of the event.</param>
+        <param name="e">The event arguments.</param>
         <summary>
             Prints a custom event
             </summary>
@@ -251,14 +267,23 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.BuildErrorEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">To be added.</param>
-        <param name="e">To be added.</param>
+        <param name="sender">The sender of the event.</param>
+        <param name="e">The event arguments.</param>
         <summary>
             Prints an error event
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes the console logger for the given build event or node count.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -313,8 +338,8 @@
         <Parameter Name="nodeCount" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
-        <param name="nodeCount">To be added.</param>
+        <param name="eventSource">The event source.</param>
+        <param name="nodeCount">The node count.</param>
         <summary>
             Initializes the logger.
             </summary>
@@ -342,8 +367,8 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.BuildMessageEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">To be added.</param>
-        <param name="e">To be added.</param>
+        <param name="sender">The sender of the event.</param>
+        <param name="e">The event arguments.</param>
         <summary>
             Prints a message event
             </summary>
@@ -455,7 +480,7 @@
         <summary>
             Suppresses the display of error and warnings summary.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a switch that determines whether to suppress the display of errors and the warnings summary.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -484,7 +509,14 @@
             The console logger does not need to release any resources.
             This method does nothing.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The console logger does not need to release any resources. This method does nothing.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SkipProjectStartedText">
@@ -508,7 +540,7 @@
             Suppresses the display of project headers. Project headers are
             displayed by default unless this property is set.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a switch that determines whether to suppress the display of project headers.</value>
         <remarks>This is only needed by the IDE logger.</remarks>
       </Docs>
     </Member>
@@ -676,8 +708,8 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.BuildWarningEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">To be added.</param>
-        <param name="e">To be added.</param>
+        <param name="sender">The sender of the event.</param>
+        <param name="e">The event arguments.</param>
         <summary>
             Prints a warning event
             </summary>
@@ -705,7 +737,7 @@
             Provide access to the write hander delegate so that it can be redirected
             if necessary (e.g. to a file)
             </summary>
-        <value>To be added.</value>
+        <value>The write handler delegate.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

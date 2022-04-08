@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Task to call Path.Combine.</summary>
+            Task to call Path.Combine.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +66,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.CombinePath" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="BasePath">
@@ -106,9 +109,11 @@
       <Docs>
         <summary>
             The base path, the first parameter into Path.Combine.  Can be a relative path,
-            absolute path, or (blank).</summary>
+            absolute path, or (blank).
+            </summary>
         <value>The base path to combine with the other paths.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CombinedPaths">
@@ -155,9 +160,11 @@
       <Docs>
         <summary>
             This is the output of the task, a list of paths produced by combining the base
-            path with each of the paths passed in.</summary>
+            path with each of the paths passed in.
+            </summary>
         <value>The combined path that is created by the <c>CombinePath</c> task.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -190,9 +197,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Calls Path.Combine for each of the inputs.  Preserves metadata.</summary>
+            Calls Path.Combine for each of the inputs.  Preserves metadata.
+            </summary>
         <returns>true on success, false on failure</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Paths">
@@ -235,9 +244,11 @@
       <Docs>
         <summary>
             The list of paths to combine with the base path.  These can be relative paths
-            or absolute paths.</summary>
+            or absolute paths.
+            </summary>
         <value>A list of individual paths to combine with the <see cref="P:Microsoft.Build.Tasks.CombinePath.BasePath" /> to form the combined path.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

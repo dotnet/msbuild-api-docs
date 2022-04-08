@@ -36,10 +36,29 @@
             Helper logging class - contains all the logging methods used by tasks.
             A TaskLoggingHelper object is passed to every task by MSBuild. For tasks that derive
             from the Task class, it is provided in the Log property.
-            This class is thread safe: tasks can log from any threads.</summary>
-    <remarks>To be added.</remarks>
+            This class is thread safe: tasks can log from any threads.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public TaskLoggingHelper (Microsoft.Build.Framework.ITask taskInstance);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask taskInstance) cil managed" />
@@ -70,7 +89,8 @@
       <Docs>
         <param name="taskInstance">task containing an instance of this class</param>
         <summary>
-            public constructor</summary>
+            public constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,7 +118,8 @@
         <param name="buildEngine">The build engine.</param>
         <param name="taskName">The task name.</param>
         <summary>
-            Public constructor which can be used by task factories to assist them in logging messages.</summary>
+            Public constructor which can be used by task factories to assist them in logging messages.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -131,7 +152,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Shortcut property for getting our build engine - we retrieve it from the task instance</summary>
+            Shortcut property for getting our build engine - we retrieve it from the task instance
+            </summary>
         <value>An <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> that represents the instance of the build engine that is associated with the task.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -173,9 +195,22 @@
         <summary>
             Extracts the message code (if any) prefixed to the given message string. Message code prefixes must match the
             following .NET regular expression in order to be recognized: <c>^\s*[A-Za-z]+\d+:\s*</c>
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>The message code extracted from the prefix, or null if there was no code.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message code prefixes must match the following .NET regular expressions in order to be recognized: `^\s*[A-Za-z]+\d+:\s*`.  
+  
+   
+  
+## Examples  
+ If this method is given the full message string `MYTASK1001: This is an error message.` and it accepts `This is an error message.` as the value for the `messageWithoutCodePrefix` parameter, then it returns `MYTASK1001`.  
+  
+ ]]></format>
+        </remarks>
         <example>
             If this method is given the string "MYTASK1001: This is an error message.", it will return "MYTASK1001" for the
             message code, and "This is an error message." for the message.
@@ -231,9 +266,19 @@
             Requires the owner task to have registered its resources either via the Task (or TaskMarshalByRef) base
             class constructor, or the Task.TaskResources (or AppDomainIsolatedTask.TaskResources) property.
             
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>The formatted string.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The culture of the current thread is used for formatting.  
+  
+ This method requires the owner task to have registered its resources with either the <xref:Microsoft.Build.Utilities.Task> base class constructor, or the <xref:Microsoft.Build.Utilities.Task.TaskResources%2A> property.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>resourceName</c> is null.</exception>
         <exception cref="T:System.ArgumentException">Thrown when the string resource indicated by <c>resourceName</c> does not exist.</exception>
         <exception cref="T:System.InvalidOperationException">Thrown when the <c>TaskResources</c> property of the owner task is not set.</exception>
@@ -282,9 +327,17 @@
         <param name="args">Arguments for formatting.</param>
         <summary>
             Formats the given string using the variable arguments passed in. The current thread's culture is used for formatting.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>The formatted string.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The culture of the current thread is used for formatting.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>unformatted</c> is null.</exception>
       </Docs>
     </Member>
@@ -314,7 +367,8 @@
         <param name="resourceName">The resource name.</param>
         <summary>
             Get the message from resource in task library.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>The message from resource.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,10 +408,20 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Has the task logged any errors through this logging helper object?</summary>
+            Has the task logged any errors through this logging helper object?
+            </summary>
         <value>
           <see langword="true" /> if the task has logged any errors through this logging helper object; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HelpKeywordPrefix">
@@ -399,9 +463,17 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the prefix used to compose help keywords from string resource names.</summary>
+            Gets or sets the prefix used to compose help keywords from string resource names.
+            </summary>
         <value>The help keyword prefix string.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If a task does not have Help keywords associated with its messages, it can ignore this property or set it to `null`. If this property is set to an empty <xref:System.String>, resource names will be used verbatim as Help keywords.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="InitializeLifetimeService">
@@ -429,7 +501,8 @@
             InitializeLifetimeService is called when the remote object is activated.
             This method will determine how long the lifetime for the object will be.
             Thread safe. However, InitializeLifetimeService and MarkAsInactive should
-            only be called in that order, together or not at all, and no more than once.</summary>
+            only be called in that order, together or not at all, and no more than once.
+            </summary>
         <returns>The lease object to control this object's lifetime.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -457,6 +530,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogCommandLine">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs the command line.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogCommandLine">
       <MemberSignature Language="C#" Value="public void LogCommandLine (string commandLine);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogCommandLine(string commandLine) cil managed" />
@@ -497,8 +579,16 @@
         <param name="commandLine">The command line string.</param>
         <summary>
             Logs the command line for a task's underlying tool/executable/shell command.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LogCommandLine">
@@ -538,8 +628,16 @@
         <summary>
             Logs the command line for a task's underlying tool/executable/shell
             command, using the given importance level.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LogCriticalMessage">
@@ -593,11 +691,31 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a critical message using the specified string and other message details.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogError">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs an error.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogError">
       <MemberSignature Language="C#" Value="public void LogError (string message, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogError(string message, object[] messageArgs) cil managed" />
@@ -647,8 +765,23 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs an error using the specified string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+   
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
@@ -711,8 +844,18 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs an error using the specified string and other error details.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The parameters `subCategory`, `errorCode`, `helpKeyword`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
@@ -771,6 +914,15 @@
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogErrorFromException">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs an error using the message from the specified exception.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogErrorFromException">
       <MemberSignature Language="C#" Value="public void LogErrorFromException (Exception exception);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromException(class System.Exception exception) cil managed" />
@@ -812,8 +964,16 @@
         <summary>
             Logs an error using the message from the given exception context.
             No callstack will be shown.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No call stack will be shown.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>e</c> is null.</exception>
       </Docs>
     </Member>
@@ -859,8 +1019,16 @@
         <param name="showStackTrace">If true, callstack will be appended to message.</param>
         <summary>
             Logs an error using the message (and optionally the stack-trace) from the given exception context.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
@@ -905,11 +1073,21 @@
         <summary>
             Logs an error using the message, and optionally the stack-trace from the given exception, and
             optionally inner exceptions too.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogErrorFromResources">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs an error using the specified resource string.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogErrorFromResources">
       <MemberSignature Language="C#" Value="public void LogErrorFromResources (string messageResourceName, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromResources(string messageResourceName, object[] messageArgs) cil managed" />
@@ -959,8 +1137,16 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs an error using the specified resource string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -1023,11 +1209,30 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs an error using the specified resource string and other error details.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The parameters `subCategoryResourceName`, `errorCode`, `helpKeyword`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogErrorWithCodeFromResources">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs an error with an error code using the specified resource string.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogErrorWithCodeFromResources">
       <MemberSignature Language="C#" Value="public void LogErrorWithCodeFromResources (string messageResourceName, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorWithCodeFromResources(string messageResourceName, object[] messageArgs) cil managed" />
@@ -1084,8 +1289,18 @@
             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the message begins with an error code, the code is extracted and logged with the message.  
+  
+ If a Help keyword prefix has been provided, it is also logged with the message. The Help keyword is composed by appending the string resource name to the Help keyword prefix. A task can provide a Help keyword prefix with either the <xref:Microsoft.Build.Utilities.Task> base class constructor, or the <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> property.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -1151,8 +1366,22 @@
             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the message begins with an error code, the code is extracted and logged with the message.  
+  
+ If a Help keyword prefix has been provided, it is also logged with the message. The Help keyword is composed by appending the string resource name to the Help keyword prefix. A task can provide a Help keyword prefix with either the <xref:Microsoft.Build.Utilities.Task> base class constructor, or the <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> property.  
+  
+ The parameters `subCategoryResourceName`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -1196,7 +1425,8 @@
         <param name="succeeded">true indicates project built successfully</param>
         <summary>
             Small helper for logging the custom ExternalProjectFinished build event.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1240,10 +1470,30 @@
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <summary>
             Small helper for logging the custom ExternalProjectStarted build event
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogMessage">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a message with the specified string.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogMessage">
       <MemberSignature Language="C#" Value="public void LogMessage (string message, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessage(string message, object[] messageArgs) cil managed" />
@@ -1293,8 +1543,23 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message using the specified string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The <xref:Microsoft.Build.Framework.MessageImportance> value of a message is `Normal` by default.  
+  
+   
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
@@ -1343,7 +1608,8 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message of the given importance using the specified string.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
@@ -1403,11 +1669,21 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message using the specified string and other message details.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogMessageFromResources">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a message with the specified resource string.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogMessageFromResources">
       <MemberSignature Language="C#" Value="public void LogMessageFromResources (string messageResourceName, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessageFromResources(string messageResourceName, object[] messageArgs) cil managed" />
@@ -1457,8 +1733,16 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a message using the specified resource string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The <xref:Microsoft.Build.Framework.MessageImportance> value of a message is `Normal` by default.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -1507,7 +1791,8 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a message of the given importance using the specified resource string.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
@@ -1551,12 +1836,29 @@
         <summary>
             Logs an error/warning/message from the given line of text. Errors/warnings are only logged for lines that fit a
             particular (canonical) format -- all other lines are treated as messages.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>true, if an error was logged</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Errors messages and warnings are only logged for lines that fit the canonical format. All other lines are treated as messages.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>lineOfText</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogMessagesFromFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs errors, warnings, and messages for each line of text in the given file.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogMessagesFromFile">
       <MemberSignature Language="C#" Value="public bool LogMessagesFromFile (string fileName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LogMessagesFromFile(string fileName) cil managed" />
@@ -1598,9 +1900,17 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
             fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>true, if any errors were logged</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Errors and warnings are logged for lines that fit a particular canonical format. All other lines are logged as messages.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>filename</c> is null.</exception>
       </Docs>
     </Member>
@@ -1641,9 +1951,17 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
             fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>true, if any errors were logged</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Errors and warnings are logged for lines that fit a particular canonical format. All other lines are logged as messages.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>filename</c> is null.</exception>
       </Docs>
     </Member>
@@ -1684,9 +2002,17 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given stream. Errors/warnings are only logged for lines
             that fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.</summary>
+            Thread safe.
+            </summary>
         <returns>true, if any errors were logged</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>stream</c> is null.</exception>
       </Docs>
     </Member>
@@ -1745,6 +2071,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogWarning">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a warning.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogWarning">
       <MemberSignature Language="C#" Value="public void LogWarning (string message, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarning(string message, object[] messageArgs) cil managed" />
@@ -1794,8 +2129,16 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a warning using the specified string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
@@ -1858,8 +2201,18 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a warning using the specified string and other warning details.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The parameters `subCategory`, `warningCode`, `helpKeyword`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
@@ -1918,6 +2271,15 @@
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogWarningFromException">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a warning using the message from the specified exception.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogWarningFromException">
       <MemberSignature Language="C#" Value="public void LogWarningFromException (Exception exception);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromException(class System.Exception exception) cil managed" />
@@ -1958,8 +2320,16 @@
         <param name="exception">Exception to log.</param>
         <summary>
             Logs a warning using the message from the given exception context.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
@@ -1999,11 +2369,28 @@
         <param name="showStackTrace">If true, the exception callstack is appended to the message.</param>
         <summary>
             Logs a warning using the message (and optionally the stack-trace) from the given exception context.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogWarningFromResources">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a warning using the specified resource string.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogWarningFromResources">
       <MemberSignature Language="C#" Value="public void LogWarningFromResources (string messageResourceName, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromResources(string messageResourceName, object[] messageArgs) cil managed" />
@@ -2053,8 +2440,16 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a warning using the specified resource string.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is not thread-safe.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -2117,11 +2512,30 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a warning using the specified resource string and other warning details.
-            Thread safe.</summary>
-        <remarks>To be added.</remarks>
+            Thread safe.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The parameters `subCategoryResourceName`, `warningCode`, `helpKeyword`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LogWarningWithCodeFromResources">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Logs a warning with a warning code using the specified resource string.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LogWarningWithCodeFromResources">
       <MemberSignature Language="C#" Value="public void LogWarningWithCodeFromResources (string messageResourceName, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningWithCodeFromResources(string messageResourceName, object[] messageArgs) cil managed" />
@@ -2178,8 +2592,18 @@
              A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
              Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-             Thread safe.</summary>
-        <remarks>To be added.</remarks>
+             Thread safe.
+             </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the message begins with a warning code, the code is extracted and logged with the message.  
+  
+ If a Help keyword prefix has been provided, it is also logged with the message. The Help keyword is composed by appending the string resource name to the Help keyword prefix. A task can provide a Help keyword prefix with either the <xref:Microsoft.Build.Utilities.Task> base class constructor, or the <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> property.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -2245,8 +2669,22 @@
              A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
              Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-             Thread safe.</summary>
-        <remarks>To be added.</remarks>
+             Thread safe.
+             </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the message begins with a warning code, the code is extracted and logged with the message.  
+  
+ If a Help keyword prefix has been provided, it is also logged with the message. The Help keyword is composed by appending the string resource name to the Help keyword prefix. A task can provide a Help keyword prefix with either the <xref:Microsoft.Build.Utilities.Task> base class constructor, or the <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> property.  
+  
+ The parameters `subCategoryResourceName`, and `file` can be `null`.  
+  
+ The parameters `lineNumber`, `columnNumber`, `endLineNumber`, and `endColumnNumber` should be set to 0 if they are not available.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
@@ -2274,7 +2712,8 @@
         <summary>
             Notifies this object that its work is done.
             Thread safe. However, InitializeLifetimeService and MarkAsInactive should
-            only be called in that order, together or not at all, and no more than once.</summary>
+            only be called in that order, together or not at all, and no more than once.
+            </summary>
         <remarks>
             Indicates to the TaskLoggingHelper that it is no longer needed.
             </remarks>
@@ -2315,7 +2754,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the name of the parent task.</summary>
+            Gets the name of the parent task.
+            </summary>
         <value>Task name string.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2360,9 +2800,17 @@
       <Docs>
         <summary>
             Used to load culture-specific resources. Derived classes should register their resources either during construction, or
-            via this property, if they have localized strings.</summary>
+            via this property, if they have localized strings.
+            </summary>
         <value>A <see cref="T:System.Resources.ResourceManager" /> that represents the culture-specific resources used by the logging methods. This value can be <see langword="null" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If derived classes have localized strings, then they should register their resources with this property.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

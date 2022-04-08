@@ -44,7 +44,14 @@
         <param name="unescapedExpression">The string to convert.</param>
         <summary>Converts the specified string into a syntax that allows the MSBuild engine to interpret the character literally.</summary>
         <returns>The converted value of the specified string.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Certain characters have special meaning in MSBuild project files. Examples of the characters include semicolons (;) and asterisks (*). In order to use these special characters as literals, they must be specified with the syntax %nn, where nn represents the ASCII hexadecimal value of the character. This method performs that conversion.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

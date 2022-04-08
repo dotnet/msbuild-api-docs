@@ -15,8 +15,15 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Represents a Toolset in MSBuild. For more information about Toolsets, see Standard and Custom Toolset Configurations.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a Toolset in MSBuild. For more information about Toolsets, see <see href="/visualstudio/msbuild/standard-and-custom-toolset-configurations">Standard and Custom Toolset Configurations</see>.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A <xref:Microsoft.Build.BuildEngine.Toolset> object has a corresponding `ToolsVersion` value that represents the value of the `ToolsVersion` attribute on the [Project Element (MSBuild)](/visualstudio/msbuild/project-element-msbuild) as well as a `ToolsPath` value that indicates where the Toolset is located.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -46,7 +53,14 @@
         <param name="toolsVersion">A string representing the version of the <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> currently in use.</param>
         <param name="toolsPath">A string representing the path to the <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> currently in use.</param>
         <summary>Creates a <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> object.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An **ArgumentNullException** error is thrown if either parameter value is `null`. An **ArgumentException** error is thrown for invalid argument values such as empty strings.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -72,7 +86,14 @@
         <param name="toolsPath">A string representing the path to the <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> currently in use.</param>
         <param name="buildProperties">A string representing the <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-specific custom properties.</param>
         <summary>Creates a <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> object.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An **ArgumentNullException** error is thrown if any of the parameter values are `null`. An **ArgumentException** error is thrown for invalid argument values such as empty strings.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildProperties">

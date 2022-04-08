@@ -31,6 +31,17 @@
             )
                 </code></summary>
     <remarks>To be added.</remarks>
+    <example>
+    To express a glob that matches all .cs files except the ones containing "foo" and the ones under bin directories, use:
+    <code>
+    new MSBuildGlobWithGaps(
+        MSBuildGlob.Parse("**/*.cs"),            // matches all .cs files
+        new CompositeGlob(                       // a composite glob to combine all the gaps
+            MSBuildGlob.Parse("**/*foo*.cs"),     // matches .cs files containing "foo"
+            MSBuildGlob.Parse("**/bin/**/*.cs")   // matches .cs files under bin directories
+        )
+    )
+    </code></example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -135,10 +146,24 @@
         <Parameter Name="stringToMatch" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="stringToMatch">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="stringToMatch">The string to match. If the string represents a relative path, it will get normalized against the glob's root. Cannot be <see langword="null" />.</param>
+        <summary>Matches the given <paramref name="stringToMatch" /> against the glob.</summary>
+        <returns>
+          <see langword="false" /> if <paramref name="stringToMatch" /> contains invalid path or file characters; <see langword="true" /> otherwise.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+Matching is path aware:
+
+- Slashes are normalized.
+- Arguments representing relative paths are normalized against the glob's root.
+
+For example, the glob `**/*.cs` does not match `../a.cs`, since `../a.cs` points outside of the glob root.
+
+          ]]></format>
+        </remarks>
         <inheritdoc />
       </Docs>
     </Member>

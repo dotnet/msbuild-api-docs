@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Forward a list of items from input to output. This allows dynamic item lists.</summary>
+            Forward a list of items from input to output. This allows dynamic item lists.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +66,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.CreateItem" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AdditionalMetadata">
@@ -106,7 +109,8 @@
       <Docs>
         <summary>
             A list of metadata name/value pairs to apply to the output items.  
-            A typical input: "metadataname1=metadatavalue1", "metadataname2=metadatavalue2", ...</summary>
+            A typical input: "metadataname1=metadatavalue1", "metadataname2=metadatavalue2", ...
+            </summary>
         <value>Additional metadata to attach to the output items.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
@@ -119,6 +123,7 @@
                     `<CreateItem AdditionalMetadata="@(OutputPathItem-&gt;'TargetPath=%(Identity)')" />`
                 ]]></format>
         </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Exclude">
@@ -161,7 +166,15 @@
       <Docs>
         <summary>Gets or sets the items to exclude from the output item collection.</summary>
         <value>The items to exclude from the output item collection.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property can contain wildcard specifications. For more information, see [MSBuild Items](/visualstudio/msbuild/msbuild-items) and [How to: Exclude Files from the Build](/visualstudio/msbuild/how-to-exclude-files-from-the-build).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -194,10 +207,12 @@
       <Parameters />
       <Docs>
         <summary>
-            Execute.</summary>
+            Execute.
+            </summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Include">
@@ -244,7 +259,15 @@
       <Docs>
         <summary>Gets or sets the items to include in the output item collection.</summary>
         <value>The items to include in the output item collection.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property can contain wildcard specifications.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="PreserveExistingMetadata">
@@ -282,10 +305,12 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Only apply the additional metadata is none already exists</summary>
+            Only apply the additional metadata is none already exists
+            </summary>
         <value>
           <see langword="true" /> if the <c>CreateItem</c> task should apply the additional metadata only if none already exists; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

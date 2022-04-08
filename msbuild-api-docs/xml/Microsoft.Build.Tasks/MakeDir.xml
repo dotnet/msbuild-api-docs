@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            A task that creates a directory</summary>
+            A task that creates a directory
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +66,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.MakeDir" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Directories">
@@ -107,6 +110,7 @@
         <summary>Gets or sets the set of directories to create.</summary>
         <value>The set of directories to create.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="DirectoriesCreated">
@@ -149,7 +153,15 @@
       <Docs>
         <summary>Gets the directories that the <c>MakeDir</c> task created.</summary>
         <value>The directories that the <c>MakeDir</c> task created.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If some directories could not be created, this property may not contain all of the items that were passed into the <xref:Microsoft.Build.Tasks.MakeDir.Directories%2A> property.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -182,10 +194,12 @@
       <Parameters />
       <Docs>
         <summary>
-            Executes the MakeDir task. Create the directory.</summary>
+            Executes the MakeDir task. Create the directory.
+            </summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>
