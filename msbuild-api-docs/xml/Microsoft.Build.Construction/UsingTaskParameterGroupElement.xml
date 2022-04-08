@@ -27,6 +27,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="AddParameter">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds a parameter to this parameter group.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddParameter">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskParameterElement AddParameter (string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskParameterElement AddParameter(string name) cil managed" />
@@ -47,11 +56,11 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the parameter to be added.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new parameter.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -78,14 +87,14 @@
         <Parameter Name="parameterType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="output">To be added.</param>
-        <param name="required">To be added.</param>
-        <param name="parameterType">To be added.</param>
+        <param name="name">The name of the parameter to be added.</param>
+        <param name="output">The value of the Output attribute.</param>
+        <param name="required">The value of the Required attribute.</param>
+        <param name="parameterType">The type of the parameter.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new parameter.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,7 +119,7 @@
             Condition should never be set, but the getter returns null instead of throwing 
             because a nonexistent condition is implicitly true
             </summary>
-        <value>To be added.</value>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,7 +143,7 @@
         <summary>
             This does not allow conditions, so it should not be called.
             </summary>
-        <value>To be added.</value>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -184,7 +193,7 @@
         <summary>
             Get any contained parameters.
             </summary>
-        <value>To be added.</value>
+        <value>All parameters of this parameter group.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

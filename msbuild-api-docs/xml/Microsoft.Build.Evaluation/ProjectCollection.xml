@@ -26,9 +26,25 @@
             A global version of this class acts as the default ProjectCollection.
             Multiple ProjectCollections can exist within an appdomain. However, these must not build concurrently.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Multiple project collections can exist within an app domain. However, these must not build concurrently.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a project collection with no global properties or loggers. The project collection toolset is initialized from the configuration file and registry.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ProjectCollection ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -117,7 +133,14 @@
             and that reads toolset information from the configuration file and registry.
             May throw InvalidToolsetDefinitionException.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ May throw InvalidToolsetDefinitionException.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -153,7 +176,14 @@
             specified toolset locations.
             May throw InvalidToolsetDefinitionException.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ May throw InvalidToolsetDefinitionException.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -191,7 +221,14 @@
             Throws InvalidProjectFileException if any of the global properties are reserved.
             May throw InvalidToolsetDefinitionException.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Throws InvalidProjectFileException if any of the global properties are reserved.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -253,7 +290,7 @@
         <Parameter Name="toolset" Type="Microsoft.Build.Evaluation.Toolset" />
       </Parameters>
       <Docs>
-        <param name="toolset">To be added.</param>
+        <param name="toolset">The toolset to be added.</param>
         <summary>
             Add a new toolset.
             Replaces any existing toolset with the same tools version.
@@ -281,12 +318,13 @@
         <Parameter Name="toolsVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="toolsVersion">To be added.</param>
+        <param name="toolsVersion">The tools version to search for.</param>
         <summary>
             Returns true if there is a toolset defined for the specified
             tools version, otherwise false.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if there is a toolset defined for the given tools version; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -310,7 +348,7 @@
         <summary>
             Number of projects currently loaded into this collection.
             </summary>
-        <value>To be added.</value>
+        <value>The number of projects currently loaded into this collection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -339,8 +377,17 @@
             Setter throws InvalidOperationException if a toolset with the provided tools version has not been defined.
             Always defined.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The default tools version of this project collection, which is always defined.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This default value is obtained from the .exe.config file, from the system registry, or if neither is present, from the hard-coded tools version "2.0".  
+  
+ The set method throws InvalidOperationException if a toolset with the provided tools version has not been defined.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DisableMarkDirty">
@@ -376,7 +423,7 @@
             This allows, for example, global properties to be set without projects getting
             marked dirty for reevaluation as a consequence.
             </summary>
-        <value>To be added.</value>
+        <value>Returns a flag that determines whether <see langword="MarkDirty" /> is temporarily disabled.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -405,6 +452,15 @@
             </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Dispose">
       <MemberSignature Language="C#" Value="public void Dispose ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
@@ -429,7 +485,14 @@
         <summary>
             Called when a host is completely done with the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject() before the ProjectCollection goes out of scope."  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -458,7 +521,14 @@
             Shut down logging service if the project collection owns one, in order
             to shut down the logger thread and loggers.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Follows the garbage disposal guidelines of .NET.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Escape">
@@ -481,15 +551,22 @@
         <Parameter Name="unescapedString" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="unescapedString">To be added.</param>
+        <param name="unescapedString">The string to be converted.</param>
         <summary>
             Escape a string using MSBuild escaping format. For example, "%3b" for ";".
             Only characters that are especially significant to MSBuild parsing are escaped.
             Callers can use this method to make a string safe to be parsed to other methods
             that would otherwise expand it; or to make a string safe to be written to a project file.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The converted string.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For example, "%3b" for ";". Only characters that are especially significant to MSBuild parsing are converted. Callers can use this method to make a string safe to be parsed by other methods that would otherwise expand it. Callers can also use this method to make a string safe to be written to a project file.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEffectiveToolsVersion">
@@ -541,12 +618,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the property to be retrieved.</param>
         <summary>
             Get any global property on the project collection that has the specified name,
             otherwise returns null.
             </summary>
-        <returns>To be added.</returns>
+        <returns>Any global property on the project collection that has the specified name; otherwise returns null.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -570,14 +647,21 @@
         <Parameter Name="fullPath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fullPath">To be added.</param>
+        <param name="fullPath">The path to a project file to be matched.</param>
         <summary>
             Returns any and all loaded projects with the provided path.
             There may be more than one, if they are distinguished by global properties
             and/or tools version.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>All projects whose project path matches the given path.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ There may be more than one project with the given path because projects are also distinguished by global properties and/or tools version.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetToolset">
@@ -600,12 +684,12 @@
         <Parameter Name="toolsVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="toolsVersion">To be added.</param>
+        <param name="toolsVersion">The tools version to match.</param>
         <summary>
             Get the toolset with the specified tools version.
             If it is not present, returns null.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The toolset with the specified tools version, or <see langword="null" /> if no toolset matching this tools version exists.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -633,8 +717,15 @@
             May throw InvalidToolsetDefinitionException.
             Thread safe.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The global project collection object. This is a singleton project collection with no global properties or loggers. Toolset information is obtained from the configuration file and registry.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Thread safe.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GlobalProperties">
@@ -658,7 +749,7 @@
              Returns default global properties for all projects in this collection.
              Read-only dead dictionary.
              </summary>
-        <value>To be added.</value>
+        <value>The read-only default global properties for all projects in this collection.</value>
         <remarks>
              This is the publicly exposed getter, that translates into a read-only dead IDictionary&lt;string, string&gt;.
             
@@ -696,8 +787,15 @@
             By default, <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.HostServices">HostServices</see> is used.
             May be set to null, but the getter will create a new instance in that case.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The host services object.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ By default, returns <xref:Microsoft.Build.Evaluation.ProjectCollection.HostServices%2A>, which may be null.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsBuildEnabled">
@@ -740,8 +838,16 @@
             of projects is enabled.  This is for security purposes in case a host wants to closely
             control which projects it allows to run targets/tasks.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>
+          <see langword="true" /> if the targets and tasks of projects in this project collection can be built; otherwise, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadedProjects">
@@ -765,10 +871,34 @@
             All the projects currently loaded into this collection.
             Each has a unique combination of path, global properties, and tools version.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All the projects currently loaded into this collection.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Each project has a unique combination of path, global properties, and tools version.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LoadProject">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Evaluates a project from the source code in the given project file. The source code is evaluated with the global properties and tools version of this project collection.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LoadProject">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project LoadProject (string fileName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Project LoadProject(string fileName) cil managed" />
@@ -801,7 +931,14 @@
             If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadProject">
@@ -836,7 +973,16 @@
             The project will be added to this project collection when it is named.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to this project collection when either this project or the given project root is given the full path to a project file.  
+  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadProject">
@@ -873,7 +1019,14 @@
             If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadProject">
@@ -910,7 +1063,16 @@
             The project will be added to this project collection when it is named.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to this project collection when either this project or the given project root is given the full path to a project file.  
+  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadProject">
@@ -943,7 +1105,14 @@
             If a matching project is already loaded, it will be returned, otherwise a new project will be loaded.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadProject">
@@ -976,7 +1145,16 @@
             The project will be added to this project collection when it is named.
             </summary>
         <returns>A loaded project.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The project is added to this project collection when either this project or the given project root is given the full path to a project file.  
+  
+ In the MSBuild versions that were delivered with .NET Framework 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Loggers">
@@ -1007,8 +1185,15 @@
             Loggers are added with the <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger(Microsoft.Build.Framework.ILogger)" />.
             Returns an empty collection if there are no loggers.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All loggers that projects in this collection can use for their builds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Loggers are added with the <xref:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger%2A> method.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OnlyLogCriticalEvents">
@@ -1041,7 +1226,8 @@
         <summary>
             When true, only log critical events such as warnings and errors. Has to be in here for API compat
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if only critical events such as warnings and errors are logged; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1167,7 +1353,7 @@
         <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
       </Parameters>
       <Docs>
-        <param name="remoteLoggers">To be added.</param>
+        <param name="remoteLoggers">The remote loggers to add. May be null.</param>
         <summary>
             Adds some remote loggers to the collection of remote loggers used for builds of projects in this collection.
             May be null.
@@ -1195,12 +1381,19 @@
         <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
       </Parameters>
       <Docs>
-        <param name="logger">To be added.</param>
+        <param name="logger">The logger to add.</param>
         <summary>
             Adds a logger to the collection of loggers used for builds of projects in this collection.
             If the logger object is already in the collection, does nothing.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the logger object is already in the collection, does nothing.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RegisterLoggers">
@@ -1223,13 +1416,20 @@
         <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
       </Parameters>
       <Docs>
-        <param name="loggers">To be added.</param>
+        <param name="loggers">The loggers to be added. May be null.</param>
         <summary>
             Adds some loggers to the collection of loggers used for builds of projects in this collection.
             If any logger object is already in the collection, does nothing for that logger.
             May be null.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Skips any logger objects that are already in the collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveAllToolsets">
@@ -1276,13 +1476,14 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the default global property to remove.</param>
         <summary>
             Removes a global property from the collection-level set of global properties,
             and all projects in the project collection.
             If it was on this project collection, returns true.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the global property is present before removal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1306,12 +1507,13 @@
         <Parameter Name="toolsVersion" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="toolsVersion">To be added.</param>
+        <param name="toolsVersion">The toolset to be removed.</param>
         <summary>
             Remove a toolset.
             Returns true if it was present, otherwise false.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the toolset is present before removal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1336,13 +1538,20 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="value">To be added.</param>
+        <param name="name">The name of the default global property to be added or set.</param>
+        <param name="value">The new value of the default global property.</param>
         <summary>
             Set a global property at the collection-level,
             and on all projects in the project collection.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If no matching property is found, the property is created and initialized with the given value.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SkipEvaluation">
@@ -1377,7 +1586,7 @@
             This is useful when the host expects to make a number of reads and writes
             to projects, and wants to temporarily sacrifice correctness for performance.
             </summary>
-        <value>To be added.</value>
+        <value>A flag that determines whether ReevaluateIfNecessary is temporarily disabled.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1411,7 +1620,7 @@
         <summary>
             Returns the locations used to find the toolsets.
             </summary>
-        <value>To be added.</value>
+        <value>The locations used to find the toolsets.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1435,7 +1644,7 @@
         <summary>
             Returns the toolsets this ProjectCollection knows about.
             </summary>
-        <value>To be added.</value>
+        <value>The toolsets available to this project collection.</value>
         <remarks>To be added.</remarks>
         <comments>
             ValueCollection is already read-only
@@ -1469,7 +1678,8 @@
             Returns true if it was unloaded successfully, or was not already loaded.
             Returns false if it was not unloaded because it was still in use by a loaded <see cref="T:Microsoft.Build.Evaluation.Project" />.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the project was unloaded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1493,13 +1703,20 @@
         <Parameter Name="escapedString" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="escapedString">To be added.</param>
+        <param name="escapedString">The string to be converted.</param>
         <summary>
             Unescape a string using MSBuild escaping format. For example, "%3b" for ";".
             All escaped characters are unescaped.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The converted string.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For example, "%3b" is converted to ";".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UnloadAllProjects">
@@ -1524,9 +1741,25 @@
             Unloads all the projects contained by this ProjectCollection.
             Host should call this when they are completely done with all the projects.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The host should call this method when it no longer needs the projects.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="UnloadProject">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Removes a project root element from the project root cache.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="UnloadProject">
       <MemberSignature Language="C#" Value="public void UnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadProject(class Microsoft.Build.Construction.ProjectRootElement projectRootElement) cil managed" />
@@ -1580,13 +1813,22 @@
         <Parameter Name="project" Type="Microsoft.Build.Evaluation.Project" />
       </Parameters>
       <Docs>
-        <param name="project">To be added.</param>
+        <param name="project">The project to remove.</param>
         <summary>
             Unloads the specific project specified.
             Host should call this when they are completely done with the project.
             If project was not already loaded, throws InvalidOperationException.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The host should call this method when it no longer needs the project.  
+  
+ Throws InvalidOperationException if the given project is not present in the project collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UnregisterAllLoggers">
@@ -1633,12 +1875,12 @@
         <summary>
             Gets the file version of the file in which the Engine assembly lies.
             </summary>
-        <value>To be added.</value>
+        <value>The file version of the assembly file that contains the MSBuild engine.</value>
         <remarks>
             This is the Windows file version (specifically the value of the FileVersion
             resource), not necessarily the assembly version.
             If you want the assembly version, use Constants.AssemblyVersion.
-            This is not the <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion">ToolsetCollectionVersion</see>.
+            This is not the <see cref="P:Microsoft.Build.BuildEngine.ToolsetCollection.ToolsVersions*">ToolsetCollection.ToolsVersions</see>.
             </remarks>
       </Docs>
     </Member>

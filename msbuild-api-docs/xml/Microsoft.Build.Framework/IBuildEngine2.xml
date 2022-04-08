@@ -21,7 +21,14 @@
             This interface extends IBuildEngine to provide a method allowing building 
             project files in parallel.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Framework.IBuildEngine2> extends <xref:Microsoft.Build.Framework.IBuildEngine>, allowing you to build multiple project files in parallel on systems containing multiple processors, or processors with multiple cores.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="BuildProjectFile">
@@ -143,8 +150,16 @@
             Single process mode (IsRunningMultipleNodes = false) is where the engine is initialized with the number of cpus = 1 and the engine is not a child engine.
             The engine is in multi process mode (IsRunningMultipleNodes = true) when the engine is initialized with a number of cpus &gt; 1 or the engine is a child engine.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>
+          <see langword="true" /> if the system is running in multi-processor mode, <see langword="false" /> otherwise.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The build engine is in single-processor mode (`IsRunningMultipleNodes` = `false`) when it is initialized with the number of CPUs equal to 1 and the build engine is not a child engine. The build engine is in multi-processor mode (`IsRunningMultipleNodes` = `true`) when it is initialized with a number of CPUs greater than 1, or when the build engine is a child engine.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

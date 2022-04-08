@@ -26,7 +26,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a single Target element in an MSBuild project.</summary>
+    <summary>Represents a single <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element in an MSBuild project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -52,7 +52,7 @@
       </Parameters>
       <Docs>
         <param name="taskName">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to add to the <see langword="Target" /> element.</param>
-        <summary>Adds the specified Task element to the Target element.</summary>
+        <summary>Adds the specified <see href="/visualstudio/msbuild/task-element-msbuild">Task</see> element to the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object represents a child <c>Task</c> element of the <c>Target</c> element.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -75,7 +75,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Condition</c> attribute value of the Target element.</summary>
+        <summary>Gets the <c>Condition</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
         <value>The <c>Condition</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -98,7 +98,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>DependsOnTargets</c> attribute value of the Target element, which is a semicolon-separated list.</summary>
+        <summary>Gets the <c>DependsOnTargets</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element, which is a semicolon-separated list.</summary>
         <value>The <c>DependsOnTargets</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -127,7 +127,16 @@
       <Docs>
         <summary>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.Target" />.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> for the <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.Target" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildTask> objects in the <xref:Microsoft.Build.BuildEngine.Target>.
+
+ A <xref:Microsoft.Build.BuildEngine.BuildTask> object represents a child [Task](/visualstudio/msbuild/task-element-msbuild) element of the `Target` element.
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Inputs">
@@ -149,7 +158,14 @@
       <Docs>
         <summary>Gets or sets the items that are to be input into this target.</summary>
         <value>A string representing the items.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Items inside this target attribute are used as the inputs in the top level dependency analysis.
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsImported">
@@ -176,7 +192,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the Target element was imported into the project.</summary>
+        <summary>Gets a value indicating whether the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element was imported into the project.</summary>
         <value>
           <see langword="true" /> if the <c>Target</c> element was imported into the project; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -206,7 +222,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Name</c> attribute value of the Target element.</summary>
+        <summary>Gets the <c>Name</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
         <value>The <c>Name</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +246,14 @@
       <Docs>
         <summary>Gets or sets the expected outputs of this target.</summary>
         <value>A string representing the outputs.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can apply transforms to this target attribute to transform a set of input items into a set of output items. This attribute is used not only for top level dependency analysis but also for the purposes of defining this targets outputs.
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveTask">
@@ -255,8 +278,15 @@
       </Parameters>
       <Docs>
         <param name="taskElement">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to remove from the <see langword="Target" /> element.</param>
-        <summary>Removes the specified Task element from the Target element.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Removes the specified <see href="/visualstudio/msbuild/task-element-msbuild">Task</see> element from the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A <xref:Microsoft.Build.BuildEngine.BuildTask> object represents a child `Task` element of the `Target` element.
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

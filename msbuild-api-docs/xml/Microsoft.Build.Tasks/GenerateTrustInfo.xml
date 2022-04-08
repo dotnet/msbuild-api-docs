@@ -28,8 +28,10 @@
   <Docs>
     <summary>
             This task generates the application trust from the base manifest
-            and the TargetZone and ExcludedPermissions properties.</summary>
+            and the TargetZone and ExcludedPermissions properties.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -65,6 +67,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.GenerateTrustInfo" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ApplicationDependencies">
@@ -108,6 +111,7 @@
         <summary>Gets or sets the dependent assemblies.</summary>
         <value>The dependent assemblies.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="BaseManifest">
@@ -151,6 +155,7 @@
         <summary>Gets or sets the base manifest to generate the application trust from.</summary>
         <value>The base manifest to generate the application trust from.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ExcludedPermissions">
@@ -194,6 +199,7 @@
         <summary>Gets or sets one or more permission identity values separated by a semicolon to be excluded from the zone default permission set.</summary>
         <value>The permission identity values to be excluded from the zone default permission set.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -229,6 +235,7 @@
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetFrameworkMoniker">
@@ -264,6 +271,7 @@
         <summary>Gets or sets the target framework moniker.</summary>
         <value>The target framework moniker.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetZone">
@@ -306,7 +314,15 @@
       <Docs>
         <summary>Gets or sets a zone default permission set, which is obtained from machine policy.</summary>
         <value>The zone default permission set.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valid target zone values are `Internet`, `LocalIntranet`, or `Custom`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TrustInfoFile">
@@ -358,6 +374,7 @@
         <summary>Gets or sets the file that contains the application security trust information.</summary>
         <value>The file that contains the application security trust information.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

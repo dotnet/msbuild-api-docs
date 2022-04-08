@@ -20,10 +20,20 @@
   <Docs>
     <summary>
             This class is the filetracking log interpreter for .write. tracking logs in canonical form
-            Canonical .write. logs need to be rooted, since the outputs need to be associated with an input.</summary>
+            Canonical .write. logs need to be rooted, since the outputs need to be associated with an input.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Parameterless constructor.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public CanonicalTrackedOutputFiles (Microsoft.Build.Framework.ITaskItem[] tlogFiles);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem[] tlogFiles) cil managed" />
@@ -46,7 +56,8 @@
       <Docs>
         <param name="tlogFiles">The .write. tlog files to interpret</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -74,7 +85,8 @@
         <param name="ownerTask">The task that is using file tracker</param>
         <param name="tlogFiles">The .write. tlog files to interpret</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -104,7 +116,8 @@
         <param name="tlogFiles">The .write. tlog files to interpret</param>
         <param name="constructOutputsFromTLogs">The output graph is built from the .write. tlogs</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,10 +148,20 @@
         <param name="sourceKey">The source to add outputs for</param>
         <param name="computedOutput">The computed outputs for this source key</param>
         <summary>
-            This method adds computed outputs for the given source key to the output graph</summary>
+            This method adds computed outputs for the given source key to the output graph
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="AddComputedOutputsForSourceRoot">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>This method adds computed outputs for the given source key to the output graph.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddComputedOutputsForSourceRoot">
       <MemberSignature Language="C#" Value="public void AddComputedOutputsForSourceRoot (string sourceKey, Microsoft.Build.Framework.ITaskItem[] computedOutputs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddComputedOutputsForSourceRoot(string sourceKey, class Microsoft.Build.Framework.ITaskItem[] computedOutputs) cil managed" />
@@ -166,7 +189,8 @@
         <param name="sourceKey">The source to add outputs for</param>
         <param name="computedOutputs">The computed outputs for this source key</param>
         <summary>
-            This method adds computed outputs for the given source key to the output graph</summary>
+            This method adds computed outputs for the given source key to the output graph
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -197,7 +221,8 @@
         <param name="sourceKey">The source to add outputs for</param>
         <param name="computedOutputs">The computed outputs for this source key</param>
         <summary>
-            This method adds computed outputs for the given source key to the output graph</summary>
+            This method adds computed outputs for the given source key to the output graph
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,7 +253,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the dependency table.</summary>
+            Gets the dependency table.
+            </summary>
         <value>The dependency table.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -265,11 +291,21 @@
       <Docs>
         <param name="sources">The sources to find outputs for</param>
         <summary>
-            This method determines the outputs for a source root (as in the contents of a rooting marker)</summary>
+            This method determines the outputs for a source root (as in the contents of a rooting marker)
+            </summary>
         <returns>Array of outputs for the source</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="OutputsForSource">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>This method determines the outputs for a source root (as in the contents of a rooting marker).</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="OutputsForSource">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] OutputsForSource (params Microsoft.Build.Framework.ITaskItem[] sources);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] OutputsForSource(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
@@ -302,7 +338,8 @@
       <Docs>
         <param name="sources">The sources to find outputs for</param>
         <summary>
-            This method determines the outputs for a source root (as in the contents of a rooting marker)</summary>
+            This method determines the outputs for a source root (as in the contents of a rooting marker)
+            </summary>
         <returns>Array of outputs for the source</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -334,11 +371,21 @@
         <param name="sources">The sources to find outputs for</param>
         <param name="searchForSubRootsInCompositeRootingMarkers">When set true, this will consider using outputs found in rooting markers that are composed of the sub-root.</param>
         <summary>
-            This method determines the outputs for a source root (as in the contents of a rooting marker)</summary>
+            This method determines the outputs for a source root (as in the contents of a rooting marker)
+            </summary>
         <returns>Array of outputs for the source</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="RemoveDependenciesFromEntryIfMissing">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Remove the output graph entries for the given sources and corresponding outputs.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="RemoveDependenciesFromEntryIfMissing">
       <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem source);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
@@ -364,7 +411,8 @@
       <Docs>
         <param name="source">Source that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -399,7 +447,8 @@
       <Docs>
         <param name="source">Sources that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -430,7 +479,8 @@
         <param name="source">Source that should be removed from the graph</param>
         <param name="correspondingOutput">Output that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -461,10 +511,20 @@
         <param name="source">Sources that should be removed from the graph</param>
         <param name="correspondingOutputs">Outputs that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="RemoveDependencyFromEntry">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Remove the output graph entries for the given source and corresponding outputs.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="RemoveDependencyFromEntry">
       <MemberSignature Language="C#" Value="public void RemoveDependencyFromEntry (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem dependencyToRemove);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependencyFromEntry(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem dependencyToRemove) cil managed" />
@@ -492,7 +552,8 @@
         <param name="source">Source that should be removed from the graph</param>
         <param name="dependencyToRemove">The dependency to remove.</param>
         <summary>
-            Remove the output graph entries for the given source and corresponding outputs</summary>
+            Remove the output graph entries for the given source and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -523,10 +584,20 @@
         <param name="sources">Sources that should be removed from the graph</param>
         <param name="dependencyToRemove">The dependency to remove.</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="RemoveEntriesForSource">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Remove the output graph entries for the given source and corresponding outputs.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="RemoveEntriesForSource">
       <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem source);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
@@ -552,7 +623,8 @@
       <Docs>
         <param name="source">Sources that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -587,7 +659,8 @@
       <Docs>
         <param name="source">Sources that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -618,7 +691,8 @@
         <param name="source">Sources that should be removed from the graph</param>
         <param name="correspondingOutput">Outputs that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -649,7 +723,8 @@
         <param name="source">Sources that should be removed from the graph</param>
         <param name="correspondingOutputs">Outputs that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs</summary>
+            Remove the output graph entries for the given sources and corresponding outputs
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -680,7 +755,8 @@
         <param name="sourceRoot">The source file who's output is to be discarded</param>
         <param name="outputPathToRemove">The output path to be removed</param>
         <summary>
-            Remove the specified ouput from the dependency graph for the given source file</summary>
+            Remove the specified ouput from the dependency graph for the given source file
+            </summary>
         <returns>
           <see langword="true" /> if the output path was removed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -713,7 +789,8 @@
             should not be shared by any other rooting marker.</param>
         <summary>
             Given a set of sources, removes from the dependency graph any roots that share
-            the same outputs as the rooting marker constructed from the given set of sources.</summary>
+            the same outputs as the rooting marker constructed from the given set of sources. 
+            </summary>
         <returns>An array of the rooting markers that were removed.</returns>
         <remarks>To be added.</remarks>
         <comment>
@@ -724,6 +801,15 @@
             </comment>
       </Docs>
     </Member>
+    <MemberGroup MemberName="SaveTlog">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Re-writes the tlogs from the current output table. New entries are tracked.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="SaveTlog">
       <MemberSignature Language="C#" Value="public void SaveTlog ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog() cil managed" />
@@ -753,7 +839,8 @@
       <Docs>
         <summary>
             This method will re-write the tlogs from the current output table new entries will
-            be tracked.</summary>
+            be tracked.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -783,7 +870,8 @@
         <param name="includeInTLog">The dependency filter.</param>
         <summary>
             This method will re-write the tlogs from the current output table new entries will
-            be tracked.</summary>
+            be tracked.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

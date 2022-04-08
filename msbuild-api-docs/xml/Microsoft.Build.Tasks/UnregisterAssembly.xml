@@ -28,8 +28,21 @@
   <Docs>
     <summary>
             Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code
-            doesn't actually call the exe).</summary>
-    <remarks>To be added.</remarks>
+            doesn't actually call the exe).
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Framework64/\<version>/UnRegisterAssemblyTask cannot resolve a library of COM objects registered as 32-bit components. Framework/\<version>/UnRegisterAssemblyTask cannot resolve a library of COM objects registered as 64-bit components.  
+  
+ For example, if you register a library of COM objects called ClassLibrary1 as 32-bit components on a 64-bit machine, run Visual Studio, and change the target to x64, the build fails with the following error:  
+  
+ `ClassLibrary1.dll is not a valid assembly`  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -65,6 +78,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.UnregisterAssembly" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Assemblies">
@@ -108,6 +122,7 @@
         <summary>Gets or sets the assemblies to be unregistered.</summary>
         <value>The assemblies to be unregistered.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AssemblyListFile">
@@ -149,9 +164,18 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.</summary>
+            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.
+            </summary>
         <value>Information about the state between the <c>RegisterAssembly</c> task and the <c>UnregisterAssembly</c> task.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If this property is specified, the <xref:Microsoft.Build.Tasks.UnregisterAssembly.Assemblies%2A> and <xref:Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles%2A> properties are ignored.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -184,9 +208,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Task entry point</summary>
+            Task entry point
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TypeLibFiles">
@@ -231,6 +257,7 @@
         <value>
           <see langword="true" /> if the <c>UnregisterAssembly</c> task should unregister the specified type library from the specified assembly; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

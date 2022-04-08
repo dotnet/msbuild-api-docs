@@ -23,7 +23,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            This task determines if this project requires VS2008 SP1 assembly.</summary>
+            This task determines if this project requires VS2008 SP1 assembly.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -157,7 +158,14 @@
       <Docs>
         <summary>Gets or sets the manifest file name for the application.</summary>
         <value>The assembly that should be executed.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The name will be \<ApplicationName>.exe.manifest.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EntryPoint">
@@ -196,7 +204,14 @@
       <Docs>
         <summary>Gets or sets the assembly that should be executed when the application is run.</summary>
         <value>The assembly that should be executed.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The name will be \<ApplicationName>.exe.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ErrorReportUrl">
@@ -465,7 +480,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the name of the folder on the Start menu in which the application will be installed.</summary>
+        <summary>Gets or sets the name of the folder on the **Start** menu in which the application will be installed.</summary>
         <value>The name of the installation folder.</value>
         <remarks>To be added.</remarks>
       </Docs>

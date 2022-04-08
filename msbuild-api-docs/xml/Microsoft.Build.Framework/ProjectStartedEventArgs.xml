@@ -26,9 +26,25 @@
     <summary>
             Arguments for project started events
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            WARNING: marking a type [Serializable] without implementing
+            ISerializable imposes a serialization contract -- it is a
+            promise to never change the type's fields i.e. the type is
+            immutable; adding new fields in the next version of the type
+            without following certain special FX guidelines, can break both
+            forward and backward compatibility
+            </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected ProjectStartedEventArgs ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -281,7 +297,7 @@
         <summary>
             Gets the set of global properties used to evaluate this project.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -338,8 +354,18 @@
         <summary>
             List of items in this project. This is a live, read-only list.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The list of items for the event.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The items and metadata accessed through <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.Items%2A> are kept up-to-date and can be enumerated throughout the build of the project. However, changing an item in this list will not affect the build process.  
+  
+> [!NOTE]
+>  This property does not work with multi-proc builds. To get proper results, you can turn off multi-proc building by specifying `/m:1` (which is the default).  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Message">
@@ -390,7 +416,7 @@
         <summary>
             Event context information, where the event was fired from in terms of the build location
             </summary>
-        <value>To be added.</value>
+        <value>A <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> object representing the list of items for the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -422,7 +448,7 @@
         <summary>
             Project name
             </summary>
-        <value>To be added.</value>
+        <value>The project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -453,7 +479,7 @@
         <summary>
             Gets the identifier of the project.
             </summary>
-        <value>To be added.</value>
+        <value>An integer representing the ID of the project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -485,8 +511,18 @@
         <summary>
             List of properties in this project. This is a live, read-only list.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The list of properties for the event.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The property names and values accessed through <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.Properties%2A> are kept up-to-date and can be enumerated throughout the build of the project. However, changing a property in this list will not affect the build process.  
+  
+> [!NOTE]
+>  This property does not work with multi-proc builds. To get proper results, you can either turn off multi-proc building by specifying `/m:1` (which is the default), or you can work around the limitation by setting an environment variable. For example, setting `MSBuildForwardPropertiesFromChild=configuration;platform` forwards the "configuration" and "platform" properties from the child nodes. Unless this environment variable is defined, nothing will be forwarded. For more information, see [How to: Use Environment Variables in a Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TargetNames">
@@ -517,7 +553,7 @@
         <summary>
             Targets that we will build in the project
             </summary>
-        <value>To be added.</value>
+        <value>The list of targets to be built in the project.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -541,7 +577,7 @@
         <summary>
             Gets the tools version used to evaluate this project.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

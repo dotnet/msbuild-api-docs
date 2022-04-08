@@ -27,7 +27,33 @@
             This class defines the attribute that a task writer can apply to a task's property to declare the property to be a
             required property.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If a property marked with this attribute is not assigned a value when the task is invoked, the build will fail.  
+  
+ For more information about using attributes, see [Extending Metadata Using Attributes](/dotnet/standard/attributes/).  
+  
+   
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ To run this task use a project file like this:  
+  
+```xml  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+    <Target Name="MyTarget">  
+        <MkDir Directories="NewDir" />  
+    </Target>  
+</Project>  
+```  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

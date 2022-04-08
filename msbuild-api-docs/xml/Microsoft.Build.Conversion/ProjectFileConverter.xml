@@ -100,6 +100,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Convert">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Converts the project specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" /> property and saves it in the file specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile" /> property.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Convert">
       <MemberSignature Language="C#" Value="public void Convert ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Convert() cil managed" />
@@ -207,6 +216,23 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="ConvertInMemory">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a new project in memory from the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Returns the converted <xref:Microsoft.Build.BuildEngine.Project>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ConvertInMemory">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectRootElement ConvertInMemory ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectRootElement ConvertInMemory() cil managed" />
@@ -226,7 +252,14 @@
       <Docs>
         <summary>Creates a new project in memory from the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" />.</summary>
         <returns>The converted <see cref="T:Microsoft.Build.BuildEngine.Project" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Returns the converted <xref:Microsoft.Build.BuildEngine.Project>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ConvertInMemory">
@@ -401,7 +434,14 @@
       <Docs>
         <summary>Gets or sets the new project file name.</summary>
         <value>A string representing the new project file name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This value must be set before running the <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A> method.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OldProjectFile">
@@ -436,7 +476,14 @@
       <Docs>
         <summary>Gets or sets the old project file name.</summary>
         <value>The old project file name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This value must be set before running the <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A> method.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SolutionFile">

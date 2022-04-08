@@ -18,8 +18,13 @@
                 An abstract interface class to indicate SDK resolver success or failure.
             </summary>
     <remarks>
-              Note: Use <see cref="T:Microsoft.Build.Framework.SdkResultFactory" /> to create instances of this class. Do not inherit from this class.
-            </remarks>
+      <format type="text/markdown"><![CDATA[
+    
+## Remarks
+> [!NOTE]
+> Use <xref:Microsoft.Build.Framework.SdkResultFactory> to create instances of this class. Do not inherit from this class.
+   ]]></format>
+      </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -107,7 +112,7 @@
             
                 Null if <see cref="P:Microsoft.Build.Framework.SdkResult.Success" /> == false
             </summary>
-        <value>To be added.</value>
+        <value>The resolved path to the SDK. <see langword="null" /> if <see cref="P:Microsoft.Build.Framework.SdkResult.Success" /> is <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -153,7 +158,7 @@
         <summary>
                 The Sdk reference
             </summary>
-        <value>To be added.</value>
+        <value>The SDK reference.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,7 +181,8 @@
         <summary>
                 Indicates the resolution was successful.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the resolution was successful; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -202,7 +208,7 @@
             
                 Null if <see cref="P:Microsoft.Build.Framework.SdkResult.Success" /> == false
             </summary>
-        <value>To be added.</value>
+        <value>The resolved version of the SDK. <see langword="null" /> if <see cref="P:Microsoft.Build.Framework.SdkResult.Success" /> is <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

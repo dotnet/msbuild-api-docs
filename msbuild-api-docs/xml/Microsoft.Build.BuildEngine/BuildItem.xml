@@ -27,9 +27,33 @@
   </Attributes>
   <Docs>
     <summary>Represents a single item in an MSBuild project.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An  element in a project can represent multiple items through the use of wildcards. Therefore, each <xref:Microsoft.Build.BuildEngine.BuildItem> object does not necessarily represent an `Item` element in the project.  
+  
+   
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildItem (string itemName, Microsoft.Build.Framework.ITaskItem taskItem);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemName, class Microsoft.Build.Framework.ITaskItem taskItem) cil managed" />
@@ -184,7 +208,14 @@
       <Docs>
         <summary>Gets the number of custom attributes that are set on this item.</summary>
         <value>An integer indicating how many custom attributes are set on this item.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The value returned by <xref:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount%2A> does include pre-defined or reserved item-spec modifiers, because they are not custom attributes.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomMetadataNames">
@@ -212,7 +243,14 @@
       <Docs>
         <summary>Gets all user-defined or custom attribute names.</summary>
         <value>An <see cref="T:System.Collections.ICollection" /> containing string names for all of the user-defined or custom attributes.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames%2A> does not include the names of non-user-defined or non-custom attributes.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Exclude">
@@ -312,7 +350,17 @@
         <param name="metadataName">The item metadata name.</param>
         <summary>Returns the value of the specified item metadata.</summary>
         <returns>The value of the specified item metadata.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HasMetadata">
@@ -363,7 +411,17 @@
       <Docs>
         <summary>Gets or sets the <c>Include</c> attribute that created the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</summary>
         <value>The <c>Include</c> attribute that created the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsImported">
@@ -415,7 +473,14 @@
       <Docs>
         <summary>Gets the number of metadata set on the item.</summary>
         <value>An integer representing the number of metadata items.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The value returned by <xref:Microsoft.Build.BuildEngine.BuildItem.MetadataCount%2A> includes pre-defined or reserved item-spec modifiers as well as other metadata.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MetadataNames">
@@ -437,7 +502,14 @@
       <Docs>
         <summary>Gets the names of metadata on the item, including pre-defined or reserved item-spec modifiers.</summary>
         <value>An <see cref="T:System.Collections.ICollection" /> containing name strings of all metadata on the item.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The value returned by <xref:Microsoft.Build.BuildEngine.BuildItem.MetadataNames%2A> includes the names of all metadata, including user-defined and custom attributes.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -460,7 +532,17 @@
       <Docs>
         <summary>Gets or sets the name of the item collection to which the item belongs.</summary>
         <value>The name of the item collection to which the item belongs.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveMetadata">
@@ -489,6 +571,26 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="SetMetadata">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Assigns the specified value to the specified item metadata.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="SetMetadata">
       <MemberSignature Language="C#" Value="public void SetMetadata (string metadataName, string metadataValue);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadata(string metadataName, string metadataValue) cil managed" />
@@ -514,7 +616,17 @@
         <param name="metadataName">The item metadata name.</param>
         <param name="metadataValue">The item metadata value.</param>
         <summary>Assigns the specified value to the specified item metadata.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetMetadata">

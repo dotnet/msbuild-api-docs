@@ -18,9 +18,12 @@
             Generates a hash of a given ItemGroup items. Metadata is not considered in the hash.
             </summary>
     <remarks>
-            Currently uses SHA1. Implementation subject to change between MSBuild versions. Not
-            intended as a cryptographic security measure, only uniqueness between build executions.
-            </remarks>
+      <format type="text/markdown"><![CDATA[
+## Remarks
+Currently uses SHA1. The implementation is subject to change between MSBuild versions.
+This class is not intended as a cryptographic security measure, only for uniqueness between build executions.
+   ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -89,7 +92,7 @@
         <summary>
             Hash of the ItemsToHash ItemSpec.
             </summary>
-        <value>To be added.</value>
+        <value>The hash of the <see langword="ItemsToHash ItemSpec" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -112,7 +115,8 @@
         <summary>
             When true, will generate a case-insensitive hash.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> to generate a case-insensitive hash; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -141,7 +145,7 @@
         <summary>
             Items from which to generate a hash.
             </summary>
-        <value>To be added.</value>
+        <value>The items from which to generate a hash.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

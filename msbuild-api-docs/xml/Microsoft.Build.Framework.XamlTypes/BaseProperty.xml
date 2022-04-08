@@ -60,7 +60,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor. Needed for deserializtion from a persisted format.
+            Default constructor. Needed for deserialization from a persisted format.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -95,7 +95,7 @@
         <summary>
             List of arguments for this property.
             </summary>
-        <value>To be added.</value>
+        <value>The list of arguments for this property.</value>
         <remarks>
              This field is optional.
             </remarks>
@@ -158,7 +158,7 @@
         <summary>
             The name of the category to which this property belongs to. 
             </summary>
-        <value>To be added.</value>
+        <value>The name of the category to which this property belongs.</value>
         <remarks>
           <para>
             If the value of this field  does not correspond to the <c>Name</c> 
@@ -207,7 +207,7 @@
         <summary>
             The <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> containing this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
             </summary>
-        <value>To be added.</value>
+        <value>The rule that contains this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -241,7 +241,7 @@
         <summary>
             The data source where the current value of this property is stored. 
             </summary>
-        <value>To be added.</value>
+        <value>The data source where the current value of this property is stored.</value>
         <remarks>
             If defined, it overrides the 
             <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> property on the containing <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. This field is mandatory only if the parent
@@ -284,7 +284,7 @@
         <summary>
             Specifies the default value for this property. 
             </summary>
-        <value>To be added.</value>
+        <value>The default value for this property.</value>
         <remarks>
             This field is optional and whether, for a <see cref="T:Microsoft.Build.Framework.XamlTypes.StringProperty" />,
             it is culture sensitive or not depends on the semantics of it.
@@ -325,7 +325,7 @@
         <summary>
             Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> for use by a prospective UI client. 
             </summary>
-        <value>To be added.</value>
+        <value>The description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks> 
             This field is optional and is culture sensitive.
             </remarks>
@@ -361,7 +361,7 @@
         <summary>
             The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The display name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
             This field is optional and is culture sensitive. When this property is not set, it is assigned the same 
             value as the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" /> property (and hence, would not be localized).
@@ -429,7 +429,7 @@
         <summary>
             The keyword that is used to open the help page for this property.
             </summary>
-        <value>To be added.</value>
+        <value>The keyword that is used to open the help page for this property.</value>
         <remarks>
             This form of specifying help takes precedence over <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />
             and <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> + <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />.
@@ -467,7 +467,7 @@
         <summary>
             The help context to use when the user hits F1. Must specify <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> along with this.
             </summary>
-        <value>To be added.</value>
+        <value>The Help context to use when the user presses F1.</value>
         <remarks>
             This property uses the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> property to display the help context of the specified 
             help file. This field is optional. This
@@ -510,9 +510,9 @@
         <summary>
             The help file to use when the user hits F1. Must specify <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" /> along with this.
             </summary>
-        <value>To be added.</value>
+        <value>The Help file to use when the user presses F1.</value>
         <remarks> 
-            This property goes along with <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />. <seealso cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />. This
+            This property goes along with <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />. This
             form of specifying the help page for a property takes lower precedence than both <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" />
             and <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />.
             This field is optional and is culture insensitive.
@@ -553,7 +553,7 @@
         <summary>
             The URL of the help page for this property that will be opened when the user hits F1.
             </summary>
-        <value>To be added.</value>
+        <value>The URL of the Help page for this property.</value>
         <remarks>
             This property is higher in priority that <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" /> + <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> 
             (i.e., these two properties are ignored if <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />
@@ -595,7 +595,7 @@
         <summary>
             A hint to the command line constructor whether to include this property in the command line or not.
             </summary>
-        <value>To be added.</value>
+        <value>The hint to the command-line constructor.</value>
         <remarks>
             Some properties are used only by the targets and don't want to be included in the command line.
             Others (like task parameters) are included in the command line in the form of the switch/value they emit.
@@ -633,7 +633,8 @@
         <summary>
             Indicates whether this property is required to have a value set.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if this property is required to have a value set; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -667,7 +668,7 @@
         <summary>
             Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
             </summary>
-        <value>To be added.</value>
+        <value>Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
             This can be used as a grab bag of additional metadata of this property that are not
             captured by the primary fields. You will need a custom UI to interpret the additional
@@ -706,7 +707,8 @@
         <summary>
             A value indicating whether this property allows multiple values to be supplied/selected simultaneously.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if this property allows multiple values to be supplied/selected simultaneously; otherwise, <see langword="false" />. If <see langword="true" />, multiple values may be selected.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -740,7 +742,7 @@
         <summary>
             The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
             </summary>
-        <value>To be added.</value>
+        <value>The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
             This field is mandatory and culture invariant. The value of this field cannot be set to the empty string. 
             </remarks>
@@ -776,7 +778,8 @@
         <summary>
             Tells if this property is a read-only property. 
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if this is a read-only property; otherwise, <see langword="false" />.</value>
         <remarks>
             This field is optional and its default value is "false".
             </remarks>
@@ -812,7 +815,7 @@
         <summary>
             The token used to separate a switch from its value.
             </summary>
-        <value>To be added.</value>
+        <value>The token used to separate a switch from its value.</value>
         <remarks>
             The value specified here overrides the value specified for the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />'s <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.Separator" />.
             This field is optional and culture invariant.
@@ -853,7 +856,7 @@
         <summary>
             The sub category to which this property belongs to.
             </summary>
-        <value>To be added.</value>
+        <value>The subcategory this property belongs to.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -887,7 +890,7 @@
         <summary>
             The switch representation of this property for the case when this property represents a tool parameter.
             </summary>
-        <value>To be added.</value>
+        <value>The switch representation of this property.</value>
         <remarks>
             This field is optional and culture invariant.
             </remarks>
@@ -926,7 +929,7 @@
         <summary>
             The prefix for the switch representation of this property for the case when this property represents a tool parameter.
             </summary>
-        <value>To be added.</value>
+        <value>The prefix for the switch representation of this property.</value>
         <remarks>
             The value specified here overrides the value specified for the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />'s <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix" />.
             This field is optional and culture invariant.
@@ -967,7 +970,7 @@
         <summary>
             List of value editors for this property. 
             </summary>
-        <value>To be added.</value>
+        <value>The list of value editors for this property.</value>
         <remarks>
             This field is optional.
             </remarks>
@@ -1003,7 +1006,7 @@
         <summary>
             A hint to the UI client telling it whether to display this property or not.
             </summary>
-        <value>To be added.</value>
+        <value>A hint to the UI client that tells it whether to display this property.</value>
         <remarks>
             This field is optional and has the default value of "true".
             </remarks>

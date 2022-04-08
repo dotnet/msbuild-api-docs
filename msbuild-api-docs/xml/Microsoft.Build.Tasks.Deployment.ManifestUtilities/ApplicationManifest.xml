@@ -37,12 +37,22 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes a ClickOnce or native Win32 application manifest.</summary>
+            Describes a ClickOnce or native Win32 application manifest.
+            </summary>
     <remarks>
             This is a serialization format, don't remove the private fields.
             </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ApplicationManifest ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -69,7 +79,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Initializes a new instance of the ApplicationManifest class.</summary>
+            Initializes a new instance of the ApplicationManifest class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +106,8 @@
       <Docs>
         <param name="targetFrameworkVersion">A token that represents a version of the .NET Framework.</param>
         <summary>
-            Initializes a new instance of the ApplicationManifest class.</summary>
+            Initializes a new instance of the ApplicationManifest class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,7 +154,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the application configuration file.</summary>
+            Gets or sets the application configuration file.
+            </summary>
         <value>A string that represents the name of the application configuration file.</value>
         <remarks>
             For a Win32 native manifest, this input is ignored.
@@ -228,7 +241,8 @@
       <Docs>
         <summary>
             Gets or sets the link to use if there is a failure launching the application.
-            The specified value should be a fully qualified URL or UNC path.</summary>
+            The specified value should be a fully qualified URL or UNC path.
+            </summary>
         <value>A string that contains the URL of the error report.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -307,10 +321,23 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the application will run in IE using WPF's XBAP application model.</summary>
+            Gets or sets a value that indicates whether the application will run in IE using WPF's XBAP application model.
+            </summary>
         <value>
           <see langword="true" /> if the application will run in IE using WPF's XBAP application model; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For project types other than WPF Web Browser Applications, you should set <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> to `False` (the default value).  
+  
+ When you deploy a WPF Web Browser Application, you must set the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> property to `True`. This causes the `<hostInBrowser>` tag to be added to the generated application manifest. This tag enables ClickOnce to deploy projects for browser-hosted applications, which contain .xbap files.  
+  
+ You will also have to make the application available only online by setting <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> to `False`. If you do not do this, you will receive [MSBuild Error MSB3116](https://docs.microsoft.com/previous-versions/bb383983(v=vs.140)).  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install" />
       </Docs>
     </Member>
     <Member MemberName="IconFile">
@@ -356,7 +383,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the application icon file.</summary>
+            Gets or sets the application icon file.
+            </summary>
         <value>A string that represents the name of the icon file.</value>
         <remarks>
             The application icon is expressed in the generated application manifest and is used for the start menu and Add/Remove Programs dialog.
@@ -408,7 +436,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.</summary>
+            Gets or sets a value that indicates whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.
+            </summary>
         <value>A Boolean value that indicates whether the manifest is a ClickOnce application manifest (<see langword="True" />) or a native Win32 manifest (<see langword="False" />).</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -456,7 +485,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the maximum allowable length of a file path in a ClickOnce application deployment.</summary>
+            Gets or sets the maximum allowable length of a file path in a ClickOnce application deployment.
+            </summary>
         <value>An integer that indicates the maximum allowed length of a file path in a ClickOnce application deployment.</value>
         <remarks>
             If this value is specified, then the length of each file path in the application is checked against this limit.
@@ -509,7 +539,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a textual description for the OS dependency.</summary>
+            Gets or sets a textual description for the OS dependency.
+            </summary>
         <value>A string that indicates the operating system dependency.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -557,7 +588,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a support URL for the OS dependency.</summary>
+            Gets or sets a support URL for the OS dependency.
+            </summary>
         <value>A string indicating the support URL for the operating system dependency.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -597,7 +629,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the minimum OS version required by the application.</summary>
+            Gets or sets the minimum OS version required by the application.
+            </summary>
         <value>A string that indicates the minimum required operating system version required by the application.</value>
         <remarks>
             An example value is "5.1.2600.0" for Windows XP.        
@@ -647,7 +680,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the name of the application.</summary>
+            Gets or sets the name of the application.
+            </summary>
         <value>A string value that corresponds to the <see langword="ProductName" /> property in the project file.</value>
         <remarks>
             If this input is not specified then the Product is not written into the Application Manifest
@@ -694,7 +728,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the publisher of the application.</summary>
+            Gets or sets the publisher of the application.
+            </summary>
         <value>A string value that corresponds to the <see langword="PublisherName" /> property in the project file.</value>
         <remarks>
             If this input is not, specified then the Publisher is not written into the Application Manifest
@@ -741,7 +776,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the suite name of the application.</summary>
+            Gets or sets the suite name of the application.
+            </summary>
         <value>A string that contains the suite name.</value>
         <remarks>
             This name is used for the sub-folder name on the Start menu (as a child of the publisher)
@@ -787,7 +823,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the link that appears in the Add/Remove Programs dialog for the application.</summary>
+            Gets or sets the link that appears in the Add/Remove Programs dialog for the application.
+            </summary>
         <value>A string value that corresponds to the <see langword="SupportUrl" /> property in the project file.</value>
         <remarks>
             The specified value should be a fully qualified URL or UNC path.
@@ -829,7 +866,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the target framework version</summary>
+            Gets or sets the target framework version
+            </summary>
         <value>A <see cref="T:System.String" /> that represents a version of the .NET Framework.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -877,7 +915,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a trust object defining the application security.</summary>
+            Gets or sets a trust object defining the application security.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> object that defines the application security.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -921,10 +960,23 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the install will use the settings in the application manifest in the trust prompt.</summary>
+            Gets or sets a value that indicates whether the install will use the settings in the application manifest in the trust prompt.
+            </summary>
         <value>
-          <see langword="true" /> to use the settings in the application manifest in the trust prompt; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+          <see langword="true" /> to use the settings in the application manifest in the trust prompt; otherwise, <see langword="false" />.
+            </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ By default, the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> properties are set to null. They are used only if <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`. If this property is `True`, the values of these properties are written to the corresponding tags in the application manifest.  
+  
+ If <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `False` (the default value), these properties are ignored.  
+  
+ This property corresponds to the `UseApplicationTrust` property in the project file.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Validate">
@@ -957,7 +1009,14 @@
       <Parameters />
       <Docs>
         <summary>Performs various checks to verify the validity of the manifest. Any resulting errors or warnings are reported in the <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection" /> object.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Before calling this method, you must set the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A> property so that the validation can verify application manifest against the correct version of the .NET Framework runtime.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="XmlConfigFile">
@@ -1068,6 +1127,7 @@
         <summary>Gets or sets a property that is used to serialize the entry point identity to an XML file.</summary>
         <value>The entry point identity.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="/visualstudio/deployment/entrypoint-element-clickonce-application">&lt;entryPoint&gt; Element</related>
       </Docs>
     </Member>
     <Member MemberName="XmlEntryPointParameters">
@@ -1123,6 +1183,7 @@
         <summary>Gets or sets a property that is used to serialize the entry point parameters to an XML file.</summary>
         <value>The entry point parameters.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="/visualstudio/deployment/entrypoint-element-clickonce-application">&lt;entryPoint&gt; Element</related>
       </Docs>
     </Member>
     <Member MemberName="XmlEntryPointPath">
@@ -1178,6 +1239,7 @@
         <summary>Gets or sets a property that specifies the entry point for executing the assembly and that is used to serialize the entry point to an XML file.</summary>
         <value>The entry point for executing the assembly.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="/visualstudio/deployment/entrypoint-element-clickonce-application">&lt;entryPoint&gt; Element</related>
       </Docs>
     </Member>
     <Member MemberName="XmlErrorReportUrl">

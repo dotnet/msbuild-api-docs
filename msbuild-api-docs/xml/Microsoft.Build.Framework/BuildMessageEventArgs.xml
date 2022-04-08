@@ -32,9 +32,25 @@
     <summary>
             Arguments for message events
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            WARNING: marking a type [Serializable] without implementing
+            ISerializable imposes a serialization contract -- it is a
+            promise to never change the type's fields i.e. the type is
+            immutable; adding new fields in the next version of the type
+            without following certain special FX guidelines, can break both
+            forward and backward compatibility
+            </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected BuildMessageEventArgs ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -345,7 +361,7 @@
         <summary>
             Code associated with event. 
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -369,7 +385,7 @@
         <summary>
             Column number of interest in associated file. 
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Int32" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -393,7 +409,7 @@
         <summary>
             Ending column number of interest in associated file. 
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Int32" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -417,7 +433,7 @@
         <summary>
             Ending line number of interest in associated file. 
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Int32" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -441,7 +457,7 @@
         <summary>
             File associated with event.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -473,7 +489,7 @@
         <summary>
             Importance of the message
             </summary>
-        <value>To be added.</value>
+        <value>A <see cref="T:Microsoft.Build.Framework.MessageImportance" /> value indicating the importance of the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -497,7 +513,7 @@
         <summary>
             Line number of interest in associated file. 
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Int32" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -521,7 +537,7 @@
         <summary>
             The project which was building when the message was issued.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -545,7 +561,7 @@
         <summary>
             The custom sub-type of the event.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

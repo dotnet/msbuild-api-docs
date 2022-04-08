@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Determine the strong name key source</summary>
+            Determine the strong name key source
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.ResolveKeySource" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AutoClosePasswordPromptShow">
@@ -100,7 +103,15 @@
       <Docs>
         <summary>Gets or sets the amount of time, in seconds, to display the count down message.</summary>
         <value>The amount of time, in seconds, to display the count down message.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is 15 seconds.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AutoClosePasswordPromptTimeout">
@@ -143,7 +154,15 @@
       <Docs>
         <summary>Gets or sets the amount of time, in seconds, to wait before closing the password prompt dialog.</summary>
         <value>The amount of time, in seconds, to wait before closing the password prompt dialog.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is 20 seconds.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CertificateFile">
@@ -187,6 +206,7 @@
         <summary>Gets or sets the path of the certificate file.</summary>
         <value>The path of the certificate file.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CertificateThumbprint">
@@ -230,6 +250,7 @@
         <summary>Gets or sets the certificate thumbprint.</summary>
         <value>The certificate thumbprint.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -265,6 +286,7 @@
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="KeyFile">
@@ -308,6 +330,7 @@
         <summary>Gets or sets the path of the key file.</summary>
         <value>The path of the key file.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ResolvedKeyContainer">
@@ -355,6 +378,7 @@
         <summary>Gets or sets the resolved key container.</summary>
         <value>The resolved key container.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ResolvedKeyFile">
@@ -402,6 +426,7 @@
         <summary>Gets or sets the resolved key file.</summary>
         <value>The resolved key file.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ResolvedThumbprint">
@@ -449,6 +474,7 @@
         <summary>Gets or sets the resolved certificate thumbprint.</summary>
         <value>The resolved certificate thumbprint.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ShowImportDialogDespitePreviousFailures">
@@ -492,7 +518,15 @@
         <summary>Gets or sets a Boolean value that specifies whether to show the import dialog despite previous failures.</summary>
         <value>
           <see langword="true" /> if the task should show the import dialog despite previous failures; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="SuppressAutoClosePasswordPrompt">
@@ -536,7 +570,15 @@
         <summary>Gets or sets a Boolean value that specifies whether the password prompt dialog should not auto-close.</summary>
         <value>
           <see langword="true" /> the password prompt dialog should not auto-close; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

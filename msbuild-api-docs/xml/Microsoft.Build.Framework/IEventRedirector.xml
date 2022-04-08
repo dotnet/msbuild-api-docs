@@ -16,7 +16,14 @@
     <summary>
             This interface is used to forward events to another loggers
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For more information, see [Write multi-processor-aware loggers](/visualstudio/msbuild/writing-multi-processor-aware-loggers).
+
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ForwardEvent">
@@ -40,11 +47,18 @@
         <Parameter Name="buildEvent" Type="Microsoft.Build.Framework.BuildEventArgs" />
       </Parameters>
       <Docs>
-        <param name="buildEvent">To be added.</param>
+        <param name="buildEvent">The <see cref="T:Microsoft.Build.Framework.BuildEventArgs" /> to forward.</param>
         <summary>
             This method is called by the node loggers to forward the events to central logger
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For more information, see [Write multi-processor-aware loggers](/visualstudio/msbuild/writing-multi-processor-aware-loggers).
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

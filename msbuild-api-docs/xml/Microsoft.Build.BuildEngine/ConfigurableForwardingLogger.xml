@@ -25,8 +25,15 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>Represents the ConfigurableForwardingLogger, a pre-fabricated forwarding logger to be used when building projects on a multi-proc or multi-core system. For more information, see Write multi-processor-aware loggers.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the ConfigurableForwardingLogger, a pre-fabricated forwarding logger to be used when building projects on a multi-proc or multi-core system. For more information, see <see href="/visualstudio/msbuild/writing-multi-processor-aware-loggers">Write multi-processor-aware loggers</see>.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ You can use the provided ConfigurableForwardingLogger, or you can create your own custom forwarding loggers.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -107,6 +114,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialize the Forwarding Table with the default values.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -238,7 +254,14 @@
       <Docs>
         <summary>Gets or sets the parameters for the ConfigurableForwardingLogger.</summary>
         <value>A string representing the logger parameters.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The console logger takes a single parameter to suppress the output of the errors and warnings summary at the end of a build.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
@@ -298,7 +321,14 @@
       <Docs>
         <summary>Gets or sets the level of detail to show in the event log.</summary>
         <value>a <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> enumeration value.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The console logger takes a single parameter to suppress the output of the errors and warnings summary at the end of a build.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

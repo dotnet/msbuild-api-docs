@@ -93,7 +93,7 @@
         <summary>
             Location of the afterTargets
             </summary>
-        <value>To be added.</value>
+        <value>The AfterTargets attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -153,7 +153,7 @@
         <summary>
             Location of the beforeTargets
             </summary>
-        <value>To be added.</value>
+        <value>The BeforeTargets attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -190,8 +190,15 @@
             This is a read-only list; the ProjectTargetInstance class is immutable.
             This collection does not contain the OnError target references.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>A list of the children of this target.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable. This collection does not contain the OnError target references.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Condition">
@@ -225,7 +232,7 @@
             Unevaluated condition on the task.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The Condition attribute value, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -255,7 +262,7 @@
         <summary>
             Location of the condition, if any
             </summary>
-        <value>To be added.</value>
+        <value>The Condition attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -290,7 +297,7 @@
             Unevaluated semicolon separated list of targets it depends on.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>An unevaluated semicolon-delimited list of targets that this target depends on, or an empty string if this target depends on no other targets.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -320,7 +327,7 @@
         <summary>
             Location of the dependsOnTargets
             </summary>
-        <value>To be added.</value>
+        <value>The DependsOnTargets attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -346,7 +353,7 @@
             If it originated in a project that was not loaded and has never been
             given a path, returns an empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The full path to the file from which this target originated, or an empty string if this target originated in a project that was not loaded and has never been given a path.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,7 +388,7 @@
             Unevaluated inputs on the target element.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The unevaluated inputs on this target element, or an empty string if this target has no inputs.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -411,7 +418,7 @@
         <summary>
             Location of the inputs
             </summary>
-        <value>To be added.</value>
+        <value>The Inputs attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -446,7 +453,7 @@
             Unevaluated condition on which we will trim duplicate outputs from the target outputs
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>An unevaluated condition which is used to delete duplicate outputs from this target, or an empty string if there is no condition.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -476,7 +483,7 @@
         <summary>
             Location of the KeepDuplicatOutputs attribute
             </summary>
-        <value>To be added.</value>
+        <value>The KeepDuplicateOutputs attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -506,7 +513,7 @@
         <summary>
             Location of the original element
             </summary>
-        <value>To be added.</value>
+        <value>The element location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -540,7 +547,7 @@
         <summary>
             Name of the target
             </summary>
-        <value>To be added.</value>
+        <value>The name of the target.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -576,8 +583,15 @@
             This is an ordered collection.
             This is a read-only list; the ProjectTargetInstance class is immutable.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>Gets a list of the children of this target that refer to OnError targets.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Outputs">
@@ -611,7 +625,7 @@
             Unevaluated outputs on the target element
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The unevaluated outputs on this target element Returns an empty string if there are no outputs.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -641,7 +655,7 @@
         <summary>
             Location of the outputs
             </summary>
-        <value>To be added.</value>
+        <value>The Outputs attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -676,7 +690,7 @@
             Unevaluated return values on the target element
             May be empty string or null, if no return value is specified.
             </summary>
-        <value>To be added.</value>
+        <value>The unevaluated return values on the target element as a string, or an empty string or null, if no return value is specified.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -706,7 +720,7 @@
         <summary>
             Location of the returns
             </summary>
-        <value>To be added.</value>
+        <value>The Returns attribute location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -731,7 +745,7 @@
             Just the tasks below this target, if any.
             Other kinds of children are not included.
             </summary>
-        <value>To be added.</value>
+        <value>All the tasks that are immediate children of this target.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

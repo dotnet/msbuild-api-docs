@@ -21,7 +21,14 @@
             The ProjectExtensions element is deprecated and provided only for backward compatibility.
             Use a property instead. Properties can also contain XML content.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The ProjectExtensions element is deprecated and provided only for backward compatibility. Use a <xref:Microsoft.Build.Construction.ProjectPropertyElement> instead.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Condition">
@@ -45,7 +52,7 @@
             Condition should never be set, but the getter returns null instead of throwing 
             because a nonexistent condition is implicitly true
             </summary>
-        <value>To be added.</value>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -69,7 +76,7 @@
         <summary>
             This does not allow conditions, so it should not be called.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,7 +106,7 @@
         <summary>
             Gets and sets the raw XML content
             </summary>
-        <value>To be added.</value>
+        <value>The arbitrary XML content of this project extension.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,12 +181,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the sub-element.</param>
         <summary>
             Get or set the content of the first sub-element 
             with the provided name.
             </summary>
-        <value>To be added.</value>
+        <value>The contents of the element.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

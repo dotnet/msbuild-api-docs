@@ -100,7 +100,8 @@
         <summary>
             Returns a flag indicating if a circular dependency was detected.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if a circular dependency was detected; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,7 +135,7 @@
         <summary>
             Returns the configuration ID for this result.
             </summary>
-        <value>To be added.</value>
+        <value>The configuration ID for this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,7 +177,7 @@
         <summary>
             Returns the exception generated while this result was run, if any. 
             </summary>
-        <value>To be added.</value>
+        <value>The exception generated for this build result set. Returns false if no exception occurred.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -210,7 +211,7 @@
         <summary>
             Returns the build request id for which this result was generated
             </summary>
-        <value>To be added.</value>
+        <value>The build request id for this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -273,7 +274,14 @@
             Indexer which sets or returns results for the specified target
             </summary>
         <value>The results for the specified target</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Throws a `KeyNotFoundException` if the given target doesn't exist in this build result.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MergeResults">
@@ -333,7 +341,7 @@
         <summary>
             Returns the node build request id for which this result was generated
             </summary>
-        <value>To be added.</value>
+        <value>The build request ID of the originating node.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -357,7 +365,7 @@
         <summary>
             Returns the overall result for this result set.
             </summary>
-        <value>To be added.</value>
+        <value>The overall result for this build.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -391,7 +399,7 @@
         <summary>
             Returns the build request id for the parent of the request for which this result was generated
             </summary>
-        <value>To be added.</value>
+        <value>The global build request ID which issued the request leading to this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -417,8 +425,15 @@
             be used to retrieve <see cref="P:Microsoft.Build.Execution.ProjectInstance.Properties" />, <see cref="P:Microsoft.Build.Execution.ProjectInstance.GlobalProperties" /> and
             <see cref="P:Microsoft.Build.Execution.ProjectInstance.Items" /> from it. Any other operation is not guaranteed to be supported.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The <see langword="ProjectInstance" /> object.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This may be a dummy object and should not be used except to retrieve <xref:Microsoft.Build.Execution.ProjectInstance.Properties%2A>, <xref:Microsoft.Build.Execution.ProjectInstance.GlobalProperties%2A> and <xref:Microsoft.Build.Execution.ProjectInstance.Items%2A>. Other operations are not supported.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ResultsByTarget">
@@ -451,7 +466,7 @@
         <summary>
             Returns an enumerator for all target results in this build result
             </summary>
-        <value>To be added.</value>
+        <value>An enumerator over all target results in this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -485,7 +500,7 @@
         <summary>
             Returns the submission id.
             </summary>
-        <value>To be added.</value>
+        <value>The build submission which this build result set is associated with.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

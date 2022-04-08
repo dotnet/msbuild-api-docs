@@ -25,7 +25,14 @@
             ProjectChooseElement represents the Choose element in the MSBuild project.
             Currently it does not allow a Condition.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not allow a Condition attribute.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Condition">
@@ -49,7 +56,7 @@
             Condition should never be set, but the getter returns null instead of throwing 
             because a nonexistent condition is implicitly true
             </summary>
-        <value>To be added.</value>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -73,7 +80,7 @@
         <summary>
             This does not allow conditions, so it should not be called.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -124,7 +131,7 @@
             Get any Otherwise child.
             May be null.
             </summary>
-        <value>To be added.</value>
+        <value>Any Otherwise child, or <see langword="null" /> if no Otherwise child exists.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -149,7 +156,7 @@
             Get the When children.
             Will contain at least one entry.
             </summary>
-        <value>To be added.</value>
+        <value>All the When children. There is always at least one When child.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

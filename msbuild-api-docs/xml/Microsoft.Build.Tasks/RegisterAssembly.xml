@@ -31,8 +31,21 @@
   </Interfaces>
   <Docs>
     <summary>
-            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).</summary>
-    <remarks>To be added.</remarks>
+            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Framework64/\<version>/RegisterAssemblyTask cannot resolve a library of COM objects registered as 32-bit components. Framework/\<version>/RegisterAssemblyTask cannot resolve a library of COM objects registered as 64-bit components.  
+  
+ For example, if you register a library of COM objects called ClassLibrary1 as 32-bit components on a 64-bit machine, run Visual Studio, and change the target to x64, the build fails with the following error:  
+  
+ `ClassLibrary1.dll is not a valid assembly`  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
     <comment>ITypeLibExporterNotifySink is necessary for the ITypeLibConverter.ConvertAssemblyToTypeLib call.</comment>
   </Docs>
   <Members>
@@ -69,6 +82,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.RegisterAssembly" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Assemblies">
@@ -112,6 +126,7 @@
         <summary>Gets or sets the assemblies to be registered with COM.</summary>
         <value>The assemblies to be registered with COM.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AssemblyListFile">
@@ -153,9 +168,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.</summary>
+            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.
+            </summary>
         <value>The state information necessary for the <c>UnregisterAssembly</c> task to do proper clean-up.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CreateCodeBase">
@@ -199,7 +216,15 @@
         <summary>Gets or sets a Boolean value that specifies whether the task creates a codebase entry in the registry, which specifies the file path for an assembly that is not installed in the global assembly cache.</summary>
         <value>
           <see langword="true" /> if the task creates a codebase entry in the registry; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ You should not specify this option if you will subsequently install the assembly that you are registering into the global assembly cache.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -232,10 +257,12 @@
       <Parameters />
       <Docs>
         <summary>
-            Task entry point</summary>
+            Task entry point
+            </summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ReportEvent">
@@ -278,8 +305,10 @@
         <param name="code">The error code of the export event.</param>
         <param name="msg">The message of the export event.</param>
         <summary>
-            Callback method for reporting type library export events</summary>
+            Callback method for reporting type library export events
+            </summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ResolveRef">
@@ -320,10 +349,19 @@
         <summary>
              Callback method for finding type libraries for given assemblies. If we are here, it means
              the type library we're looking for is not in the current directory and it's not registered.
-             Currently we assume that all dependent type libs are already registered.</summary>
+             Currently we assume that all dependent type libs are already registered.
+            </summary>
         <returns>
           <see langword="null" /> in all cases.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Logs an error indicating that the specified assembly is not registered for COM interop in all cases.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
         <comment>
              In theory, we could automatically register dependent assemblies for COM interop and return
              a newly created typelib here. However, one danger of such approach is the following scenario:
@@ -380,7 +418,23 @@
       <Docs>
         <summary>Gets or sets the type library to generate from the specified assembly.</summary>
         <value>The type library to generate from the specified assembly.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The generated type library contains definitions of the accessible types defined within the assembly. The type library is only generated if one of the following is true:  
+  
+-   A type library of that name does not exist at that location.  
+  
+-   A type library exists but it is older than the assembly being passed in.  
+  
+ If the type library is newer than the assembly being passed, a new one will not be created, but the assembly will still be registered.  
+  
+ If this property is specified, it must have the same number of items as the <xref:Microsoft.Build.Tasks.RegisterAssembly.Assemblies%2A> property or the task will fail. If no inputs are specified, the task will default to the name of the assembly and change the extension of the item to .tlb.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

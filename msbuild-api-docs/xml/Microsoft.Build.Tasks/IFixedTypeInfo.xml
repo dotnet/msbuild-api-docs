@@ -32,8 +32,10 @@
     <summary>
             The original ITypeInfo interface in the CLR has incorrect definitions for GetRefTypeOfImplType and GetRefTypeInfo.
             It uses ints for marshalling handles which will result in a crash on 64 bit systems. This is a temporary interface
-            for use until the one in the CLR is fixed. When it is we can go back to using ITypeInfo.</summary>
+            for use until the one in the CLR is fixed. When it is we can go back to using ITypeInfo.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName="AddressOfMember">
@@ -70,6 +72,7 @@
         <param name="ppv">Location to return the address.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.AddressOfMember(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CreateInstance">
@@ -106,6 +109,7 @@
         <param name="ppvObj">Location to return the pointer to the interface.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.CreateInstance(System.Object,System.Guid@,System.Object@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetContainingTypeLib">
@@ -140,6 +144,7 @@
         <param name="pIndex">Location to return the index.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetContainingTypeLib(System.Runtime.InteropServices.ComTypes.ITypeLib@,System.Int32@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetDllEntry">
@@ -180,6 +185,7 @@
         <param name="pwOrdinal">The ordinal value of the entry point.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetDllEntry(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr,System.IntPtr,System.IntPtr)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetDocumentation">
@@ -220,6 +226,7 @@
         <param name="strHelpFile">The name of the help file.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetDocumentation(System.Int32,System.String@,System.String@,System.Int32@,System.String@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetFuncDesc">
@@ -254,6 +261,7 @@
         <param name="ppFuncDesc">Location to return a pointer to the description.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetIDsOfNames">
@@ -290,6 +298,7 @@
         <param name="pMemId">Location to return the description.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetIDsOfNames(System.String[],System.Int32,System.Int32[])" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetImplTypeFlags">
@@ -324,6 +333,7 @@
         <param name="pImplTypeFlags">Location to return the flags.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetImplTypeFlags(System.Int32,System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetMops">
@@ -358,6 +368,7 @@
         <param name="pBstrMops">Location to return the Mops.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetMops(System.Int32,System.String@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetNames">
@@ -396,6 +407,7 @@
         <param name="pcNames">Location to return the number of names.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetNames(System.Int32,System.String[],System.Int32,System.Int32@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetRefTypeInfo">
@@ -430,6 +442,7 @@
         <param name="ppTI">When this method returns, contains the referenced type description. This parameter is passed uninitialized.</param>
         <summary>Retrieves the referenced type descriptions if a type description references other type descriptions.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetRefTypeOfImplType">
@@ -464,6 +477,7 @@
         <param name="href">When this method returns, contains a reference to a handle for the implemented interface. This parameter is passed uninitialized.</param>
         <summary>Retrieves the type description of the implemented interface types if a type description describes a COM class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetTypeAttr">
@@ -496,6 +510,7 @@
         <param name="ppTypeAttr">Location to return the type attributes.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetTypeComp">
@@ -528,6 +543,7 @@
         <param name="ppTComp">Location to return the type comp.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetVarDesc">
@@ -562,6 +578,7 @@
         <param name="ppVarDesc">Location to return the description.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,System.IntPtr@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Invoke">
@@ -614,6 +631,7 @@
         <param name="puArgErr">If Invoke returns DISP_E_TYPEMISMATCH, puArgErr indicates the index (within rgvarg) of the argument with incorrect type. If more than one argument returns an error, puArgErr indicates only the first argument with an error. Arguments in pDispParams-&gt;rgvarg appear in reverse order, so the first argument is the one having the highest index in the array. Cannot be Null.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.Invoke(System.Object,System.Int32,System.Int16,System.Runtime.InteropServices.ComTypes.DISPPARAMS@,System.IntPtr,System.IntPtr,System.Int32@)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ReleaseFuncDesc">
@@ -646,6 +664,7 @@
         <param name="pFuncDesc">Pointer to the FUNCDESC to be freed.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.ReleaseFuncDesc(System.IntPtr)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ReleaseTypeAttr">
@@ -678,6 +697,7 @@
         <param name="pTypeAttr">Pointer to the TYPEATTR to be freed.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.ReleaseTypeAttr(System.IntPtr)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ReleaseVarDesc">
@@ -710,6 +730,7 @@
         <param name="pVarDesc">Pointer to the VARDESC to be freed.</param>
         <summary>For a description of this member, see <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.ReleaseVarDesc(System.IntPtr)" />.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

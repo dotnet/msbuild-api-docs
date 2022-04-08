@@ -32,6 +32,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ConsoleLogger ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -249,6 +258,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Registers the logger for build events.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -359,7 +377,17 @@
       <Docs>
         <summary>Gets or sets the parameters passed to the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</summary>
         <value>The parameters passed to the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/ConsoleLogger/Parameters/Program.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectFinishedHandler">
@@ -465,7 +493,14 @@
       <Parameters />
       <Docs>
         <summary>Stops the logger and releases all resources.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default console logger does not need to release any resources. This method does nothing.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SkipProjectStartedText">

@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Generates a bootstrapper for ClickOnce deployment projects.</summary>
+            Generates a bootstrapper for ClickOnce deployment projects.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.GenerateBootstrapper" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ApplicationFile">
@@ -101,6 +104,7 @@
         <summary>Gets or sets the file the bootstrapper will use to begin the installation of the application after all prerequisites have been installed.</summary>
         <value>The file the bootstrapper will use to begin the installation of the application after all prerequisites have been installed.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ApplicationName">
@@ -143,7 +147,15 @@
       <Docs>
         <summary>Gets or sets the name of the application that the bootstrapper will install.</summary>
         <value>The name of the application that the bootstrapper will install.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This name will appear in the UI the bootstrapper uses during installation.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ApplicationRequiresElevation">
@@ -183,7 +195,18 @@
         <summary>Gets or sets whether a component runs with elevated permissions when it is installed on a target computer.</summary>
         <value>
           <see langword="true" /> if the installed component runs with elevated permissions; otherwise <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property can be set in the project file, but it is not exposed in the MSBuild schema. In the project file's `MsiBootstrapper` section, set the [RequiresElevation Property](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb384030(v=vs.100)) to `True`.  
+  
+ A component runs with elevated permissions when it writes a registry key or is being installed to the GAC. For example, if you are installing assemblies to the GAC, you need to set this property to `True`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb384030(v=vs.100)">RequiresElevation Property</related>
       </Docs>
     </Member>
     <Member MemberName="ApplicationUrl">
@@ -227,6 +250,7 @@
         <summary>Gets or sets the Web location that is hosting the application's installer.</summary>
         <value>The Web location that is hosting the application's installer.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="BootstrapperComponentFiles">
@@ -273,7 +297,15 @@
       <Docs>
         <summary>Gets or sets the built location of bootstrapper package files.</summary>
         <value>The built location of bootstrapper package files.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If <xref:Microsoft.Build.Tasks.GenerateBootstrapper.CopyComponents%2A> is `true`, the values of <xref:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperComponentFiles%2A> should all be based on <xref:Microsoft.Build.Tasks.GenerateBootstrapper.OutputPath%2A>. Otherwise, the <xref:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperComponentFiles%2A> values are based on the value of the <xref:Microsoft.Build.Tasks.GenerateBootstrapper.Path%2A> property.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="BootstrapperItems">
@@ -317,6 +349,7 @@
         <summary>Gets or sets the products to build into the bootstrapper.</summary>
         <value>The products to build into the bootstrapper.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="BootstrapperKeyFile">
@@ -364,6 +397,7 @@
         <summary>Gets or sets the built location of setup.exe.</summary>
         <value>The built location of setup.exe.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ComponentsLocation">
@@ -406,7 +440,23 @@
       <Docs>
         <summary>Gets or sets a location for the bootstrapper to look for installation prerequisites to install.</summary>
         <value>The location for the bootstrapper to look for installation prerequisites to install.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property can have the following values::  
+  
+-   `HomeSite`: Indicates that the prerequisite is being hosted by the component vendor.  
+  
+-   `Relative`: Indicates that the preqrequisite is at the same location of the application.  
+  
+-   `Absolute`: Indicates that all components are to be found at a centralized URL. This value should be used in conjunction with the `ComponentsUrl` property.  
+  
+ If <xref:Microsoft.Build.Tasks.GenerateBootstrapper.ComponentsLocation%2A> is not specified, `HomeSite` is used by default.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ComponentsUrl">
@@ -450,6 +500,7 @@
         <summary>Gets or sets the URL containing the installation prerequisites.</summary>
         <value>The URL containing the installation prerequisites.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CopyComponents">
@@ -493,7 +544,15 @@
         <summary>Gets or sets a Boolean value that indicates whether the bootstrapper copies all output files to the path specified in the <see cref="P:Microsoft.Build.Tasks.GenerateBootstrapper.OutputPath" /> property.</summary>
         <value>
           <see langword="true" /> if the bootstrapper should copy all output files to the path specified in the <see cref="P:Microsoft.Build.Tasks.GenerateBootstrapper.OutputPath" /> property; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value of this parameter is `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Culture">
@@ -536,7 +595,15 @@
       <Docs>
         <summary>Gets or sets the culture to use for the bootstrapper UI and installation prerequisites.</summary>
         <value>The culture to use for the bootstrapper UI and installation prerequisites.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the specified culture is unavailable, the task uses the value of the <xref:Microsoft.Build.Tasks.GenerateBootstrapper.FallbackCulture%2A> property.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -569,9 +636,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Generate the bootstrapper.</summary>
+            Generate the bootstrapper.
+            </summary>
         <returns> Return true on success, false on failure.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FallbackCulture">
@@ -615,6 +684,7 @@
         <summary>Gets or sets the secondary culture to use for the bootstrapper UI and installation prerequisites.</summary>
         <value>The secondary culture to use for the bootstrapper UI and installation prerequisites.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OutputPath">
@@ -658,6 +728,7 @@
         <summary>Gets or sets the location to copy setup.exe and all package files.</summary>
         <value>The location to copy setup.exe and all package files.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Path">
@@ -701,6 +772,7 @@
         <summary>Gets or sets the location of all available prerequisite packages.</summary>
         <value>The location of all available prerequisite packages.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="SupportUrl">
@@ -744,6 +816,7 @@
         <summary>Gets or sets the URL to provide should the bootstrapper installation fail.</summary>
         <value>The URL to provide should the bootstrapper installation fail.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Validate">
@@ -787,7 +860,15 @@
         <summary>Gets or sets a Boolean value that indicates whether the bootstrapper performs XSD validation on the specified input bootstrapper items.</summary>
         <value>
           <see langword="true" /> if the bootstrapper performs XSD validation on the specified input bootstrapper items; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value of this parameter is `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="VisualStudioVersion">
@@ -813,6 +894,7 @@
         <summary>The Visual Studio version, in the form &lt;major build.minor build&gt;, for example "4.0".</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

@@ -29,8 +29,19 @@
     <summary>
             ToolLocationHelper provides utility methods for locating .NET Framework and .NET Framework SDK directories and files.
             NOTE: All public methods of this class are available to MSBuild projects for use in functions - they must be safe for
-            use during project evaluation.</summary>
-    <remarks>To be added.</remarks>
+            use during project evaluation.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.Utilities.ToolTask> that runs [Ilasm.exe (IL Assembler)](/dotnet/framework/tools/ilasm-exe-il-assembler). The <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, and <xref:Microsoft.Build.Utilities.TaskLoggingHelper> classes are used to generate the information needed to run the task.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Utilities/CommandLineBuilder/.ctor/ILAsm.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ClearSDKStaticCache">
@@ -55,7 +66,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Clear out the appdomain wide cache of Platform and Extension SDKs.</summary>
+            Clear out the appdomain wide cache of Platform and Extension SDKs.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,14 +225,25 @@
                      If you are not targeting a 64 bit
                         Add in the 32 bit hive first
                         Add in the 64 bit hive second
-             On a 32 bit machine we only add in the 32 bit hive.</param>
+             On a 32 bit machine we only add in the 32 bit hive.
+             </param>
         <summary>
              Get a sorted list of AssemblyFoldersExInfo which contain information about what directories the 3rd party assemblies are registered under for use during build and design time.
             
              This method will enumerate the AssemblyFoldersEx registry location and return a list of AssemblyFoldersExInfo in the same order in which
-             they will be searched during both design and build time for reference assemblies.</summary>
+             they will be searched during both design and build time for reference assemblies.
+             </summary>
         <returns>List of AssemblyFoldersExInfo</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method enumerates the `AssemblyFoldersEx` registry location and returns the list of `AssemblyFoldersExInfo` in the same order that they are searched for reference assemblies at design and build time.  
+  
+ On a 64-bit operating system, if targeting 64-bit, add in the 64-bit hive then the 32-bit hive; if targeting 32-bit, add in the 32-bit hive then the 64-bit hive. On 32-bit machine only add in the 32-bit hive.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetAssemblyFoldersFromConfigInfo">
@@ -295,9 +318,19 @@
         <summary>
             Figures out a display name given the target framework details.
             This is the equivalent of the target framework moniker, but for display.
-            If one cannot be found from the redist list file, a synthesized one is returned, so there is always a display name.</summary>
+            If one cannot be found from the redist list file, a synthesized one is returned, so there is always a display name.
+            </summary>
         <returns>A display name given the target framework details.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is the equivalent of the target framework moniker, but for display.  
+  
+ If one cannot be found from the redist list file, a synthesized one is returned, so there is always a display name.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetDotNetFrameworkRootRegistryKey">
@@ -333,11 +366,21 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the full name of the .NET Framework root registry key</summary>
+            Returns the full name of the .NET Framework root registry key
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetDotNetFrameworkSdkInstallKeyValue">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the name of the value under the <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> that contains the .NET Framework SDK installation path.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetDotNetFrameworkSdkInstallKeyValue">
       <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkInstallKeyValue (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkInstallKeyValue(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
@@ -374,7 +417,8 @@
             Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path. When
             targeting .NET 3.5 or above, looks in the locations associated with Visual Studio 2010.  If you wish
             to target the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override
-            that specifies a VisualStudioVersion.</summary>
+            that specifies a VisualStudioVersion.
+            </summary>
         <returns>A string containing the name of the registry key value under the <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> that contains the .NET Framework SDK installation path.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -406,11 +450,21 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path</summary>
+            Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path
+            </summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetDotNetFrameworkSdkRootRegistryKey">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Returns the full name of the .NET Framework SDK root registry key.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetDotNetFrameworkSdkRootRegistryKey">
       <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
@@ -443,7 +497,8 @@
             Returns the full name of the .NET Framework SDK root registry key.  When targeting .NET 3.5 or
             above, looks in the locations associated with Visual Studio 2010.  If you wish to target the
             .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override that
-            specifies a VisualStudioVersion.</summary>
+            specifies a VisualStudioVersion.
+            </summary>
         <returns>A string representation of the registry key root which indicates where to find the .NETFramework sdk.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -475,7 +530,8 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Returns the full name of the .NET Framework SDK root registry key</summary>
+            Returns the full name of the .NET Framework SDK root registry key
+            </summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -513,9 +569,17 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the prefix of the .NET Framework version folder (e.g. "v2.0")</summary>
+            Returns the prefix of the .NET Framework version folder (e.g. "v2.0")
+            </summary>
         <returns />
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An example of the value returned is the string "v2.0".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetFoldersInVSInstalls">
@@ -758,6 +822,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToDotNetFramework">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets a fully qualified path to the .NET Framework root directory.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToDotNetFramework">
       <MemberSignature Language="C#" Value="public static string GetPathToDotNetFramework (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFramework(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
@@ -797,7 +870,8 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Get a fully qualified path to the frameworks root directory.</summary>
+            Get a fully qualified path to the frameworks root directory.
+            </summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -829,11 +903,21 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">Desired architecture, or DotNetFrameworkArchitecture.Current for the architecture this process is currently running under.</param>
         <summary>
-            Get a fully qualified path to the framework's root directory.</summary>
+            Get a fully qualified path to the framework's root directory.
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToDotNetFrameworkFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets a fully qualified path to a file in the .NET Framework directory.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToDotNetFrameworkFile">
       <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
@@ -875,9 +959,20 @@
         <param name="fileName">File name to locate in the .NET Framework directory</param>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Get a fully qualified path to a file in the frameworks root directory.</summary>
+            Get a fully qualified path to a file in the frameworks root directory.
+            </summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example creates a <xref:Microsoft.Build.Utilities.ToolTask> that runs [Ilasm.exe (IL Assembler)](/dotnet/framework/tools/ilasm-exe-il-assembler). The <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, and <xref:Microsoft.Build.Utilities.TaskLoggingHelper> classes are used to generate the information needed to run the task.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Utilities/CommandLineBuilder/.ctor/ILAsm.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPathToDotNetFrameworkFile">
@@ -909,7 +1004,8 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">Desired architecture, or DotNetFrameworkArchitecture.Current for the architecture this process is currently running under.</param>
         <summary>
-            Get a fully qualified path to a file in the frameworks root directory for the specified architecture.</summary>
+            Get a fully qualified path to a file in the frameworks root directory for the specified architecture.
+            </summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -943,11 +1039,21 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the path to the reference assemblies location for the given framework version.</summary>
+            Returns the path to the reference assemblies location for the given framework version.
+            </summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToDotNetFrameworkSdk">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the fully qualified path to the \bin directory of the .NET Framework SDK.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToDotNetFrameworkSdk">
       <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdk ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdk() cil managed" />
@@ -1011,7 +1117,8 @@
             Returns the path to the "bin" directory of the .NET Framework SDK. When targeting .NET 3.5
             or above, looks in the locations associated with Visual Studio 2010.  If you wish to target
             the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override
-            that specifies a VisualStudioVersion.</summary>
+            that specifies a VisualStudioVersion.
+            </summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1043,11 +1150,21 @@
         <param name="version">The <see cref="T:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" /> of the .NET Framework.</param>
         <param name="visualStudioVersion">The <see cref="T:Microsoft.Build.Utilities.VisualStudioVersion" /> of Visual Studio.</param>
         <summary>
-            Returns the path to the .NET Framework SDK.</summary>
+            Returns the path to the .NET Framework SDK.
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToDotNetFrameworkSdkFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the fully qualified path to a file in the .NET Framework SDK.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToDotNetFrameworkSdkFile">
       <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdkFile (string fileName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdkFile(string fileName) cil managed" />
@@ -1122,9 +1239,19 @@
             Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
             When targeting .NET 3.5 or above, looks in the locations associated with Visual Studio 2010.  If you wish to
             target the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override that
-            specifies a VisualStudioVersion.</summary>
+            specifies a VisualStudioVersion.
+            </summary>
         <returns>Path string.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The path for the SDK takes in consideration the processor architecture environment information for the calling process, so it might end up being ".../bin/i64", for example.  
+  
+ Unlike <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile%2A> and <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile%2A> this method checks for the existence of the file, so that an invalid `fileName` returns null.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPathToDotNetFrameworkSdkFile">
@@ -1162,7 +1289,8 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">The required architecture of the requested file.</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
+            </summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1196,7 +1324,8 @@
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
+            </summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1232,11 +1361,21 @@
         <param name="visualStudioVersion">Version of Visual Studio</param>
         <param name="architecture">The required architecture of the requested file.</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
+            </summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToReferenceAssemblies">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the paths to the reference assemblies location for the given target framework.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToReferenceAssemblies">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetPathToReferenceAssemblies (System.Runtime.Versioning.FrameworkName frameworkName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetPathToReferenceAssemblies(class System.Runtime.Versioning.FrameworkName frameworkName) cil managed" />
@@ -1265,9 +1404,17 @@
             Returns the paths to the reference assemblies location for the given target framework.
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method assumes that the requested ReferenceAssemblyRoot path will be the ProgramFiles directory that is specified by Environment.SpecialFolder.ProgramFiles. In addition, when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5, or 4, the correctly chained reference assembly paths for the legacy .NET Framework versions will be returned. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
       </Docs>
     </Member>
@@ -1296,13 +1443,22 @@
       </Parameters>
       <Docs>
         <param name="targetFrameworkRootPath">Root directory which will be used to calculate the reference assembly path. The references assemblies will be
-            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.</param>
+            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
+            </param>
         <param name="frameworkName">A frameworkName class which represents a TargetFrameworkMoniker. This cannot be null.</param>
         <summary>
             Returns the paths to the reference assemblies location for the given framework version relative to a given targetFrameworkRoot.
-            The method will not check to see if the path exists or not.</summary>
+            The method will not check to see if the path exists or not.
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method does not check to see if the path exists or not.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPathToReferenceAssemblies">
@@ -1371,7 +1527,8 @@
             Returns the paths to the reference assemblies location for the given target framework.
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1440,26 +1597,31 @@
         <Parameter Name="targetFrameworkFallbackSearchPaths" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
-        <param name="targetFrameworkFallbackSearchPaths">To be added.</param>
+        <param name="targetFrameworkFallbackSearchPaths">A semicolon-separated list of paths to search as a fallback.</param>
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
         <param name="targetFrameworkVersion">Version being targeted</param>
         <param name="targetFrameworkProfile">Profile being targeted</param>
-        <param name="targetFrameworkRootPath">Root directory which will be used to calculate the reference assembly path. The references assemblies will be
-            <param name="targetFrameworkFallbackSearchPaths">';' separated list of paths that are looked up if the framework cannot be found in <paramref name="targetFrameworkRootPath" /></param>
-            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
-            Uses the default path if this is null.
-            </param>
-        <summary>
-            Returns the paths to the reference assemblies location for the given target framework.
-            This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
-            In addition when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
-            </summary>
+        <param name="targetFrameworkRootPath">The root directory that's used to calculate the reference assembly path. If the framework cannot be found in <paramref name="targetFrameworkRootPath" />,
+          the paths specified by <paramref name="targetFrameworkFallbackSearchPaths" /> are used. Paths are generated in the following way: TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
+          If null, the default path is used.</param>
+        <summary>Returns the paths to the reference assemblies location for the given target framework.</summary>
         <returns>Collection of reference assembly locations.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
+        <remarks>This method assumes the requested ReferenceAssemblyRoot path is the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles.
+            In addition, when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5, or 4.0, it returns the correctly chained reference assembly paths
+            for the legacy .NET frameworks. This chaining uses the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</remarks>
+        <exception cref="T:System.ArgumentNullException">The framework name is null.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToStandardLibraries">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Returns the path to the reference assemblies location for the given target framework's standard libraries (that is, mscorlib).</summary>
+        <remarks>This method assumes the requested ReferenceAssemblyRoot path is the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles. In addition, when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5, or 4.0, it returns the correctly chained reference assembly paths for the legacy .NET Framework versions. This chaining uses the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths</remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToStandardLibraries">
       <MemberSignature Language="C#" Value="public static string GetPathToStandardLibraries (string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToStandardLibraries(string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile) cil managed" />
@@ -1492,7 +1654,8 @@
             Returns the path to the reference assemblies location for the given target framework's standard libraries (i.e. mscorlib).
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1529,7 +1692,8 @@
         <param name="targetFrameworkProfile">Profile being targeted</param>
         <param name="platformTarget">What is the targeted platform, this is used to determine where we should look for the standard libraries. Note, this parameter is only used for .net frameworks less than 4.0</param>
         <summary>
-            Returns the path to mscorlib and system.dll</summary>
+            Returns the path to mscorlib and system.dll
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1642,9 +1806,17 @@
       <Docs>
         <param name="fileName">File name to locate in the system directory</param>
         <summary>
-            Get a fully qualified path to a file in the system directory (i.e. %SystemRoot%\System32)</summary>
+            Get a fully qualified path to a file in the system directory (i.e. %SystemRoot%\System32)
+            </summary>
         <returns>Path string.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This API builds the full path plus filename for a file in the System folder. It doesn't check for the existence of the file prior to returning.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPathToWindowsSdk">
@@ -1681,11 +1853,21 @@
         <param name="visualStudioVersion">Version of Visual Studio associated with the SDK.</param>
         <summary>
             Returns the path to the Windows SDK for the desired .NET Framework and Visual Studio version.  Note that
-            this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
+            this is only supported for a targeted .NET Framework version of 4.5 and above.
+            </summary>
         <returns>Path to the appropriate Windows SDK location</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPathToWindowsSdkFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Returns the path to a file in the Windows SDK for the desired .NET Framework and Visual Studio version. Note that this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPathToWindowsSdkFile">
       <MemberSignature Language="C#" Value="public static string GetPathToWindowsSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToWindowsSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
@@ -1722,7 +1904,8 @@
         <param name="visualStudioVersion">Version of Visual Studio associated with the SDK.</param>
         <summary>
             Returns the path to a file in the Windows SDK for the desired .NET Framework and Visual Studio version.  Note that
-            this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
+            this is only supported for a targeted .NET Framework version of 4.5 and above.
+            </summary>
         <returns>Path to the appropriate Windows SDK file</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1765,11 +1948,21 @@
         <param name="architecture">Desired architecture of the resultant file.</param>
         <summary>
             Returns the path to a file in the Windows SDK for the desired .NET Framework and Visual Studio version and the desired
-            architecture.  Note that this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
+            architecture.  Note that this is only supported for a targeted .NET Framework version of 4.5 and above.
+            </summary>
         <returns>Path to the appropriate Windows SDK file</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPlatformExtensionSDKLocation">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>For specified parameters, get the path to the SDK root if it exists.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPlatformExtensionSDKLocation">
       <MemberSignature Language="C#" Value="public static string GetPlatformExtensionSDKLocation (string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformExtensionSDKLocation(string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion) cil managed" />
@@ -1799,7 +1992,8 @@
         <param name="targetPlatformIdentifier">Identifier for the platform</param>
         <param name="targetPlatformVersion">Version of the platform</param>
         <summary>
-            Given an SDK moniker and the targeted platform get the path to the SDK root if it exists.</summary>
+            Given an SDK moniker and the targeted platform get the path to the SDK root if it exists.
+            </summary>
         <returns>A full path to the sdk root if the sdk exists in the targeted platform or an empty string if it does not exist.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1834,7 +2028,8 @@
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X</summary>
+            The format of the sdk moniker is  SDKName, Version=X.X
+            </summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1873,7 +2068,8 @@
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X</summary>
+            The format of the sdk moniker is  SDKName, Version=X.X
+            </summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1912,7 +2108,8 @@
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X</summary>
+            The format of the sdk moniker is  SDKName, Version=X.X
+            </summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1993,6 +2190,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPlatformExtensionSDKLocations">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets a list of SDK's installed on the machine for a given target platform.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPlatformExtensionSDKLocations">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetPlatformExtensionSDKLocations (string targetPlatformIdentifier, Version targetPlatformVersion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetPlatformExtensionSDKLocations(string targetPlatformIdentifier, class System.Version targetPlatformVersion) cil managed" />
@@ -2020,7 +2226,8 @@
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Get a list of SDK's installed on the machine for a given target platform</summary>
+            Get a list of SDK's installed on the machine for a given target platform
+            </summary>
         <returns>IDictionary of installed SDKS and their location. K:SDKName V:SDK installation location</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2056,7 +2263,8 @@
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Get a list of SDK's installed on the machine for a given target platform</summary>
+            Get a list of SDK's installed on the machine for a given target platform
+            </summary>
         <returns>IDictionary of installed SDKS and their location. K:SDKName V:SDK installation location</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2333,6 +2541,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetPlatformSDKLocation">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Given a target platform identifier and a target platform version, searches the default SDK locations for the platform SDK for that target platform.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetPlatformSDKLocation">
       <MemberSignature Language="C#" Value="public static string GetPlatformSDKLocation (string targetPlatformIdentifier, string targetPlatformVersion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformSDKLocation(string targetPlatformIdentifier, string targetPlatformVersion) cil managed" />
@@ -2360,7 +2577,8 @@
         <param name="targetPlatformIdentifier">Identifier for the platform</param>
         <param name="targetPlatformVersion">Version of the platform</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
+            </summary>
         <returns>A full path to the sdk root if the sdk exists in the targeted platform or an empty string if it does not exist.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2392,7 +2610,8 @@
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
+            </summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2428,7 +2647,8 @@
         <param name="diskRoots">List of disk roots to search for sdks within</param>
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
+            </summary>
         <returns>Location of the platform SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2464,7 +2684,8 @@
         <param name="diskRoots">List of disk roots to search for sdks within</param>
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
+            </summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2627,7 +2848,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Will return the root location for the reference assembly directory under the program files directory.</summary>
+            Will return the root location for the reference assembly directory under the program files directory.
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
@@ -2670,6 +2892,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetSDKDesignTimeFolders">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the list of SDK folders that contain the design-time files for the SDK at the specified SDK root. The list is in the order that must be used in searching for references.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetSDKDesignTimeFolders">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKDesignTimeFolders (string sdkRoot);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKDesignTimeFolders(string sdkRoot) cil managed" />
@@ -2696,7 +2927,8 @@
         <param name="sdkRoot">Root folder for the SDK must contain a Designtime folder</param>
         <summary>
             Get the list of SDK folders which contains the designtime files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.</summary>
+            in the order in which they should be searched for references.
+            </summary>
         <returns>A list of folders in the order which they should be used when looking for DesignTime files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2731,11 +2963,21 @@
         <param name="targetArchitecture">The architecture the SDK is targeting</param>
         <summary>
             Get the list of SDK folders which contains the DesignTime files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.</summary>
+            in the order in which they should be searched for references.
+            </summary>
         <returns>A list of folders in the order which they should be used when looking for DesignTime files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetSDKRedistFolders">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the list of SDK folders that contain the redist files for the SDK at the specified SDK root. The list is in the order that must be used in searching for references.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetSDKRedistFolders">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKRedistFolders (string sdkRoot);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKRedistFolders(string sdkRoot) cil managed" />
@@ -2762,7 +3004,8 @@
         <param name="sdkRoot">Root folder for the SDK must contain a redist folder</param>
         <summary>
             Get the list of SDK folders which contains the redist files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.</summary>
+            in the order in which they should be searched for references.
+            </summary>
         <returns>A list of folders in the order which they should be used when looking for redist files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2802,6 +3045,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetSDKReferenceFolders">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the list of SDK folders that contain the references for the SDK at the specified SDK root. The list is in the order that must be used in searching for references.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetSDKReferenceFolders">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKReferenceFolders (string sdkRoot);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKReferenceFolders(string sdkRoot) cil managed" />
@@ -2828,7 +3080,8 @@
         <param name="sdkRoot">Root folder for the SDK</param>
         <summary>
             Get the list of SDK folders which contains the references for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.</summary>
+            in the order in which they should be searched for references.
+            </summary>
         <returns>A list of folders in the order which they should be used when looking for references in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2863,7 +3116,8 @@
         <param name="targetArchitecture">The architecture the SDK is targeting</param>
         <summary>
             Get the list of SDK folders which contains the references for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.</summary>
+            in the order in which they should be searched for references.
+            </summary>
         <returns>A list of folders in the order which they should be used when looking for references in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2890,7 +3144,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Gets a IList of supported target framework monikers.</summary>
+            Gets a IList of supported target framework monikers.
+            </summary>
         <returns>list of supported target framework monikers</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2969,6 +3224,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetTargetPlatformSdks">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets a list of target platform SDKs on the machine.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetTargetPlatformSdks">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks() cil managed" />
@@ -2991,7 +3255,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Get a list target platform sdks on the machine.</summary>
+            Get a list target platform sdks on the machine.
+            </summary>
         <returns>List of Target Platform SDKs, Item1: TargetPlatformName Item2: Version of SDK Item3: Path to sdk root</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3023,7 +3288,8 @@
         <param name="diskRoots">List of disk locations to search for platform sdks</param>
         <param name="registryRoot">Registry root location to look for platform sdks</param>
         <summary>
-            Get a list target platform sdks on the machine.</summary>
+            Get a list target platform sdks on the machine.
+            </summary>
         <returns>List of Target Platform SDKs</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3056,7 +3322,8 @@
         <param name="frameworkIdentifier">Framework identifier.</param>
         <summary>
             This method will return the highest version of a target framework moniker based on the identifier. This method will only
-            find full frameworks, this means no profiles will be returned.</summary>
+            find full frameworks, this means no profiles will be returned.
+            </summary>
         <returns>The highest version of a target framework moniker based on the identifier. This method will only find full frameworks; no profiles will be returned.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3090,9 +3357,17 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the fully qualified path to the system directory i.e. %SystemRoot%\System32</summary>
+            Gets the fully qualified path to the system directory i.e. %SystemRoot%\System32
+            </summary>
         <value>The system path.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An example of the value returned is the string "C:\WINDOWS\System32".
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

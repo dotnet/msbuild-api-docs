@@ -53,7 +53,7 @@
             Convenience method that picks a location based on a heuristic:
                 Adds a new ParameterGroup to the using task to the end of the using task element
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new parameter group.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -78,13 +78,13 @@
         <Parameter Name="taskBody" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="evaluate">To be added.</param>
-        <param name="taskBody">To be added.</param>
+        <param name="evaluate">A flag which, if true, expands the item and property values in the task body. This flag is true by default.</param>
+        <param name="taskBody">The body of the task as a string.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
                 Adds a new TaskBody to the using task to the end of the using task element
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new task body.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -108,7 +108,7 @@
         <summary>
             Gets and sets the value of the Architecture attribute.
             </summary>
-        <value>To be added.</value>
+        <value>The value of the Architecture attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,7 +132,7 @@
         <summary>
             Location of the Architecture attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>The Architecture attribute location, or <see langword="null" /> if there is no Architecture attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,8 +157,15 @@
             Gets the value of the AssemblyFile attribute.
             Returns empty string if it is not present.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of the AssemblyFile attribute, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The assembly may have a strong name and may be located in the GAC. Either the `AssemblyFile` or `AssemblyName` attribute must be present, but not both.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AssemblyFileLocation">
@@ -181,7 +188,7 @@
         <summary>
             Location of the assembly file attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>The AssemblyFile attribute location, or <see langword="null" /> if there is no AssemblyFile attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,8 +213,15 @@
             Gets and sets the value of the AssemblyName attribute.
             Returns empty string if it is not present.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of the AssemblyName attribute, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The file path to the assembly, which may be either a full path or a relative path. Relative paths are relative to the directory of the project file containing this UsingTask. Either the `AssemblyFile` or `AssemblyName` attribute must be present, but not both.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AssemblyNameLocation">
@@ -230,7 +244,7 @@
         <summary>
             Location of the assembly name attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>The AssemblyName attribute location, or <see langword="null" /> if there is no AssemblyName attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -280,7 +294,7 @@
         <summary>
             Get any contained ParameterGroup.
             </summary>
-        <value>To be added.</value>
+        <value>The parameter group, or <see langword="null" /> if no parameter group exists.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -304,7 +318,7 @@
         <summary>
             Gets and sets the value of the Runtime attribute.
             </summary>
-        <value>To be added.</value>
+        <value>The value of the Runtime attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -328,7 +342,7 @@
         <summary>
             Location of the Runtime attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>The Runtime attribute location, or <see langword="null" /> if there is no Runtime attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -352,8 +366,15 @@
         <summary>
             Get any contained TaskElement.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The inner XML content of the inline task, or <see langword="null" /> if no body exists.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The inner XML content is the source code body of the inline task, and is passed directly to the task factory as a string.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TaskFactory">
@@ -376,8 +397,15 @@
         <summary>
             Gets and sets the value of the TaskFactory attribute.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of the TaskFactory attribute, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Selects the task factory class name used to create instances of this task. TaskFactory is used together with either the AssemblyName or AssemblyFile attribute to locate the task factory.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TaskFactoryLocation">
@@ -400,7 +428,7 @@
         <summary>
             Location of the TaskFactory attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>The value of the TaskFactory attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -424,8 +452,15 @@
         <summary>
             Gets and sets the value of the TaskName attribute.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of the TaskName attribute, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Indicates the name of this precompiled or inline task.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TaskNameLocation">
@@ -448,7 +483,7 @@
         <summary>
             Location of the task name attribute
             </summary>
-        <value>To be added.</value>
+        <value>The value of the TaskName attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -23,10 +23,19 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>Represents a collection of all UsingTask elements in a project.</summary>
+    <summary>Represents a collection of all <see href="/visualstudio/msbuild/usingtask-element-msbuild">UsingTask</see> elements in a project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="CopyTo">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Copies the entire <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> to a compatible one-dimensional <see cref="T:System.Array" />, starting at the specified index of the target array.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="CopyTo">
       <MemberSignature Language="C#" Value="public void CopyTo (Microsoft.Build.BuildEngine.UsingTask[] array, int index);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class Microsoft.Build.BuildEngine.UsingTask[] array, int32 index) cil managed" />
@@ -109,7 +118,14 @@
       <Docs>
         <summary>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" />.</summary>
         <value>An integer value representing the number of <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> objects in the collection.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Each <xref:Microsoft.Build.BuildEngine.UsingTask> object in the collection represents a  element in the project.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -136,7 +152,14 @@
       <Docs>
         <summary>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" />.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> for the entire <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.UsingTask> objects in the <xref:Microsoft.Build.BuildEngine.UsingTaskCollection>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSynchronized">
