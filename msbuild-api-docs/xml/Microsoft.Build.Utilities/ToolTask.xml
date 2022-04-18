@@ -416,16 +416,16 @@ using System.Collections.Specialized;
 /// </summary>  
 abstract class CustomToolTask : ToolTask  
 {  
-      protected override StringDictionary EnvironmentOverride  
-      {  
-            get  
-            {  
-                  string newPath = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Process) + @";C:\MyDirectory";  
-                  StringDictionary result = new StringDictionary();  
-                  result.Add("Path", newPath);  
-                  return result;  
-            }  
-      }  
+      protected override StringDictionary EnvironmentOverride  
+      {  
+            get  
+            {  
+                  string newPath = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Process) + @";C:\MyDirectory";  
+                  StringDictionary result = new StringDictionary();  
+                  result.Add("Path", newPath);  
+                  return result;  
+            }  
+      }  
 }  
   
 ```  
