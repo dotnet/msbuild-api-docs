@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             This class defines an "Exec" MSBuild task, which simply invokes the specified process with the specified arguments, waits
-            for it to complete, and then returns True if the process completed successfully, and False if an error occurred.
-            </summary>
+            for it to complete, and then returns True if the process completed successfully, and False if an error occurred.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
     <comments>
@@ -63,8 +62,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor.
-            </summary>
+            Default constructor.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -102,8 +100,7 @@
       <Docs>
         <param name="commandLine">command line builder class to add arguments to</param>
         <summary>
-            Adds the arguments for cmd.exe
-            </summary>
+            Adds the arguments for cmd.exe</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -137,11 +134,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -170,10 +167,10 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConsoleOutput As ITaskItem()" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="F#" Value="member this.ConsoleOutput : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.Exec.ConsoleOutput" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ConsoleOutput { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }" FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property ConsoleOutput As ITaskItem()" FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.ConsoleOutput : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.Exec.ConsoleOutput" FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ConsoleOutput { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }" FrameworkAlternate="msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConsoleOutput As ITaskItem()" FrameworkAlternate="msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.ConsoleOutput : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.Exec.ConsoleOutput" FrameworkAlternate="msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ ConsoleOutput { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" FrameworkAlternate="msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -184,7 +181,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
@@ -196,8 +193,7 @@
         <summary>
             Returns the output as an Item.  Whitespace are trimmed.
             ConsoleOutput is enabled when ConsoleToMSBuild is true.  This avoids holding lines in memory
-            if they aren't used.  ConsoleOutput is a combination of stdout and stderr.
-            </summary>
+            if they aren't used.  ConsoleOutput is a combination of stdout and stderr.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -224,8 +220,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Enable the pipe of the standard out to an item (StandardOutput).
-            </summary>
+            Enable the pipe of the standard out to an item (StandardOutput).</summary>
         <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -235,12 +230,12 @@
       </Docs>
     </Member>
     <Member MemberName="CustomErrorRegularExpression">
-      <MemberSignature Language="C#" Value="public string CustomErrorRegularExpression { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property CustomErrorRegularExpression As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.CustomErrorRegularExpression : string with get, set" Usage="Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CustomErrorRegularExpression { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public string CustomErrorRegularExpression { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property CustomErrorRegularExpression As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.CustomErrorRegularExpression : string with get, set" Usage="Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CustomErrorRegularExpression { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -255,24 +250,23 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Users can supply a regular expression that we should
             use to spot error lines in the tool output. This is
-            useful for tools that produce unusually formatted output
-            </summary>
+            useful for tools that produce unusually formatted output</summary>
         <value>A regular expression to spot error lines in the tool output.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -286,12 +280,12 @@
       </Docs>
     </Member>
     <Member MemberName="CustomWarningRegularExpression">
-      <MemberSignature Language="C#" Value="public string CustomWarningRegularExpression { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance string CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property CustomWarningRegularExpression As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.CustomWarningRegularExpression : string with get, set" Usage="Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CustomWarningRegularExpression { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public string CustomWarningRegularExpression { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property CustomWarningRegularExpression As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.CustomWarningRegularExpression : string with get, set" Usage="Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CustomWarningRegularExpression { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -306,24 +300,23 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Users can supply a regular expression that we should
             use to spot warning lines in the tool output. This is
-            useful for tools that produce unusually formatted output
-            </summary>
+            useful for tools that produce unusually formatted output</summary>
         <value>A regular expression to spot warning lines in the tool output.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -373,8 +366,7 @@
         <param name="responseFileCommands">Command line arguments that should go into a temporary response file.</param>
         <param name="commandLineCommands">Command line arguments that should be passed to the tool directly.</param>
         <summary>
-            Executes cmd.exe and waits for it to complete
-            </summary>
+            Executes cmd.exe and waits for it to complete</summary>
         <returns>Upon completion of the process, returns True if successful, False if not.</returns>
         <remarks>
             Overridden to clean up the batch file afterwards.
@@ -412,8 +404,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Determining the path to cmd.exe
-            </summary>
+            Determining the path to cmd.exe</summary>
         <returns>path to cmd.exe</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -451,8 +442,7 @@
         <summary>
             Gets the working directory to use for the process. Should return null if ToolTask should use the
             current directory.
-            May throw an IOException if the directory to be used is somehow invalid.
-            </summary>
+            May throw an IOException if the directory to be used is somehow invalid.</summary>
         <returns>working directory</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -496,8 +486,7 @@
       <Docs>
         <summary>
             Allows tool to handle the return code.
-            This method will only be called with non-zero exitCode set to true.
-            </summary>
+            This method will only be called with non-zero exitCode set to true.</summary>
         <returns>
           <see langword="true" /> if exit code was ignored; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -532,11 +521,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -553,12 +542,12 @@
       </Docs>
     </Member>
     <Member MemberName="IgnoreStandardErrorWarningFormat">
-      <MemberSignature Language="C#" Value="public bool IgnoreStandardErrorWarningFormat { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property IgnoreStandardErrorWarningFormat As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.IgnoreStandardErrorWarningFormat : bool with get, set" Usage="Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IgnoreStandardErrorWarningFormat { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public bool IgnoreStandardErrorWarningFormat { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreStandardErrorWarningFormat As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.IgnoreStandardErrorWarningFormat : bool with get, set" Usage="Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IgnoreStandardErrorWarningFormat { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -573,24 +562,23 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             Whether to use pick out lines in the output that match
             the standard error/warning format, and log them as errors/warnings.
-            Defaults to false.
-            </summary>
+            Defaults to false.</summary>
         <value>
           <see langword="true" /> if the <c>Exec</c> task should ignore the standard error and warning format and should log errors and warnings as regular messages; <see langword="false" /> if the <c>Exec</c> task should log the errors and warnings that match the standard error and warning format.</value>
         <remarks>
@@ -605,12 +593,12 @@
       </Docs>
     </Member>
     <Member MemberName="LogEventsFromTextOutput">
-      <MemberSignature Language="C#" Value="protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogEventsFromTextOutput(string singleLine, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LogEventsFromTextOutput (singleLine As String, messageImportance As MessageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="override this.LogEventsFromTextOutput : string * Microsoft.Build.Framework.MessageImportance -&gt; unit" Usage="exec.LogEventsFromTextOutput (singleLine, messageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LogEventsFromTextOutput(System::String ^ singleLine, Microsoft::Build::Framework::MessageImportance messageImportance);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogEventsFromTextOutput(string singleLine, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LogEventsFromTextOutput (singleLine As String, messageImportance As MessageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="override this.LogEventsFromTextOutput : string * Microsoft.Build.Framework.MessageImportance -&gt; unit" Usage="exec.LogEventsFromTextOutput (singleLine, messageImportance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LogEventsFromTextOutput(System::String ^ singleLine, Microsoft::Build::Framework::MessageImportance messageImportance);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -625,19 +613,18 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="singleLine" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="singleLine" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="singleLine">Single line from the output to parse.</param>
         <param name="messageImportance">The importance to log the message with.</param>
         <summary>
             Calls a method on the TaskLoggingHelper to parse a single line of text to
-            see if there are any errors or warnings in canonical format.
-            </summary>
+            see if there are any errors or warnings in canonical format.</summary>
         <remarks>
             Overridden to handle any custom regular expressions supplied.
             </remarks>
@@ -679,8 +666,7 @@
         <param name="toolName">The tool name.</param>
         <param name="pathToTool">The current directory where the tool is run.</param>
         <summary>
-            Logs the tool name and the path from where it is being run.
-            </summary>
+            Logs the tool name and the path from where it is being run.</summary>
         <remarks>
             Overridden to avoid logging the path to "cmd.exe", which is not interesting.
             </remarks>
@@ -720,8 +706,7 @@
       <Docs>
         <param name="message" />
         <summary>
-            Logs the command to be executed.
-            </summary>
+            Logs the command to be executed.</summary>
         <remarks>
             Overridden to log the batch file command instead of the cmd.exe command.
             </remarks>
@@ -757,7 +742,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -804,7 +789,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -814,8 +799,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Property specifying the encoding of the captured task standard error stream
-            </summary>
+            Property specifying the encoding of the captured task standard error stream</summary>
         <value>The encoding of the captured task standard error stream.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -851,8 +835,7 @@
       <Docs>
         <summary>
             Importance with which to log ordinary messages in the
-            standard error stream.
-            </summary>
+            standard error stream.</summary>
         <value>The importance to log ordinary messages with in the standard error stream.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -883,7 +866,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -893,8 +876,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Property specifying the encoding of the captured task standard output stream
-            </summary>
+            Property specifying the encoding of the captured task standard output stream</summary>
         <value>The encoding of the captured task standard output stream.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -930,8 +912,7 @@
       <Docs>
         <summary>
             Importance with which to log ordinary messages in the
-            standard out stream.
-            </summary>
+            standard out stream.</summary>
         <value>The importance to log ordinary messages with in the standard out stream.</value>
         <remarks>
             Overridden to increase from the default "Low" up to "High".
@@ -974,8 +955,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project visible property specifying the encoding of the captured task standard error stream
-            </summary>
+            Project visible property specifying the encoding of the captured task standard error stream</summary>
         <value>The encoding of the captured task standard error stream that is visible to the project.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1016,8 +996,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project visible property specifying the encoding of the captured task standard output stream
-            </summary>
+            Project visible property specifying the encoding of the captured task standard output stream</summary>
         <value>The encoding of the captured task standard output stream that is visible to the project.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1052,8 +1031,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the tool to execute
-            </summary>
+            The name of the tool to execute</summary>
         <value>The name of the tool (cmd.exe).</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1115,8 +1093,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Validate the task arguments, log any warnings/errors
-            </summary>
+            Validate the task arguments, log any warnings/errors</summary>
         <returns>true if arguments are corrent enough to continue processing, false otherwise</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1147,11 +1124,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>

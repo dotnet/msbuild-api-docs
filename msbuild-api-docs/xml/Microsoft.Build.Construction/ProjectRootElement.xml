@@ -15,11 +15,11 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets} ExplicitlyLoaded={IsExplicitlyLoaded}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets} ExplicitlyLoaded={IsExplicitlyLoaded}")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-4.0">
+    <Attribute FrameworkAlternate="netframework-4.0">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets}")&gt;]</AttributeName>
     </Attribute>
@@ -137,7 +137,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -1700,11 +1700,11 @@ The caller must add the UsingTask element to the location of choice in the proje
         <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskElement</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="taskName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="assemblyFile" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="assemblyName" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="runtime" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="taskName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="assemblyFile" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="assemblyName" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="runtime" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="taskName">The task name.</param>
@@ -1951,11 +1951,11 @@ The caller must add the UsingTask element to the location of choice in the proje
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -2397,11 +2397,11 @@ The caller must add the UsingTask element to the location of choice in the proje
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -3100,7 +3100,7 @@ The caller must add the UsingTask element to the location of choice in the proje
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -3199,11 +3199,11 @@ The caller must add the UsingTask element to the location of choice in the proje
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[set: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -3403,7 +3403,7 @@ The caller must add the UsingTask element to the location of choice in the proje
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>

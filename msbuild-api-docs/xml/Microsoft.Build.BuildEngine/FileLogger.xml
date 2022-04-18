@@ -105,7 +105,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -114,8 +114,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" Index="0" FrameworkAlternate="msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="nodeCount" Type="System.Int32" Index="1" FrameworkAlternate="msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" Index="0" FrameworkAlternate="msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="nodeCount" Type="System.Int32" Index="1" FrameworkAlternate="msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="eventSource">The <see cref="T:Microsoft.Build.Framework.IEventSource" /> to register with the logger.</param>

@@ -27,8 +27,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Just a straight pass-through of the inputs through to the outputs.
-            </summary>
+            Just a straight pass-through of the inputs through to the outputs.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -57,7 +56,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -100,8 +99,7 @@
       <Docs>
         <summary>
             Create the property. Since the input property is the same as the
-            output property, this is rather easy.
-            </summary>
+            output property, this is rather easy.</summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -136,11 +134,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -150,8 +148,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The in/out property value.
-            </summary>
+            The in/out property value.</summary>
         <value>The value to copy to the new property</value>
         <remarks>
             So ... why is this a string[] instead of a string?
@@ -204,7 +201,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -220,8 +217,7 @@
             to figure out the value of the output property without running the task.
             But if the input parameter is differently named than the output parameter,
             MSBuild can't be smart enough to do that.  This is an important scenario
-            for people who want to know whether a particular target was up-to-date or not.
-            </summary>
+            for people who want to know whether a particular target was up-to-date or not.</summary>
         <value>The same value as the <see cref="P:Microsoft.Build.Tasks.CreateProperty.Value" /> property.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

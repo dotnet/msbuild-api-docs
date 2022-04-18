@@ -25,8 +25,7 @@
     <summary>
             Finds the app.config file, if any, in the provided lists.
             For compat reasons, it has to follow a particular arbitrary algorithm.
-            It also adds the TargetPath metadata.
-            </summary>
+            It also adds the TargetPath metadata.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -57,7 +56,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -93,11 +92,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -107,8 +106,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The first matching item found in the list, if any
-            </summary>
+            The first matching item found in the list, if any</summary>
         <value>The first matching item found in the list, or <see langword="null" /> if no matching item is found.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,8 +137,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Find the app config
-            </summary>
+            Find the app config</summary>
         <returns>
           <see langword="true" /> in all cases.</returns>
         <remarks>
@@ -178,7 +175,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -188,8 +185,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The primary list to search through
-            </summary>
+            The primary list to search through</summary>
         <value>The primary list to search through.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -219,7 +215,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -229,8 +225,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The secondary list to search through
-            </summary>
+            The secondary list to search through</summary>
         <value>The secondary list to search through.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -260,11 +255,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -274,8 +269,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The value to add as TargetPath metadata
-            </summary>
+            The value to add as TargetPath metadata</summary>
         <value>The <see cref="P:Microsoft.Build.Tasks.FindAppConfigFile.TargetPath" /> metadata.</value>
         <remarks>To be added.</remarks>
       </Docs>

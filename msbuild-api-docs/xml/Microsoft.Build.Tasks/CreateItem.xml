@@ -27,8 +27,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Forward a list of items from input to output. This allows dynamic item lists.
-            </summary>
+            Forward a list of items from input to output. This allows dynamic item lists.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -57,7 +56,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -94,11 +93,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -109,8 +108,7 @@
       <Docs>
         <summary>
             A list of metadata name/value pairs to apply to the output items.  
-            A typical input: "metadataname1=metadatavalue1", "metadataname2=metadatavalue2", ...
-            </summary>
+            A typical input: "metadataname1=metadatavalue1", "metadataname2=metadatavalue2", ...</summary>
         <value>Additional metadata to attach to the output items.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
@@ -151,11 +149,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -207,8 +205,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Execute.
-            </summary>
+            Execute.</summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -244,11 +241,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -271,12 +268,12 @@
       </Docs>
     </Member>
     <Member MemberName="PreserveExistingMetadata">
-      <MemberSignature Language="C#" Value="public bool PreserveExistingMetadata { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateItem.PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property PreserveExistingMetadata As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.PreserveExistingMetadata : bool with get, set" Usage="Microsoft.Build.Tasks.CreateItem.PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PreserveExistingMetadata { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public bool PreserveExistingMetadata { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateItem.PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreserveExistingMetadata As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.PreserveExistingMetadata : bool with get, set" Usage="Microsoft.Build.Tasks.CreateItem.PreserveExistingMetadata" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PreserveExistingMetadata { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -291,22 +288,21 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Only apply the additional metadata is none already exists
-            </summary>
+            Only apply the additional metadata is none already exists</summary>
         <value>
           <see langword="true" /> if the <c>CreateItem</c> task should apply the additional metadata only if none already exists; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>

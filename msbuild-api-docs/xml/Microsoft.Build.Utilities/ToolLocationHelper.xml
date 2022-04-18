@@ -29,8 +29,7 @@
     <summary>
             ToolLocationHelper provides utility methods for locating .NET Framework and .NET Framework SDK directories and files.
             NOTE: All public methods of this class are available to MSBuild projects for use in functions - they must be safe for
-            use during project evaluation.
-            </summary>
+            use during project evaluation.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -66,8 +65,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Clear out the appdomain wide cache of Platform and Extension SDKs.
-            </summary>
+            Clear out the appdomain wide cache of Platform and Extension SDKs.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -204,12 +202,12 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.AssemblyFoldersExInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="registryRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryKeySuffix" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="osVersion" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="platform" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetProcessorArchitecture" Type="System.Reflection.ProcessorArchitecture" Index="5" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryKeySuffix" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="osVersion" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="platform" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetProcessorArchitecture" Type="System.Reflection.ProcessorArchitecture" Index="5" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="registryRoot">The root registry location for the targeted framework. For .NET this is SOFTWARE\MICROSOFT\.NETFramework</param>
@@ -225,14 +223,12 @@
                      If you are not targeting a 64 bit
                         Add in the 32 bit hive first
                         Add in the 64 bit hive second
-             On a 32 bit machine we only add in the 32 bit hive.
-             </param>
+             On a 32 bit machine we only add in the 32 bit hive.</param>
         <summary>
              Get a sorted list of AssemblyFoldersExInfo which contain information about what directories the 3rd party assemblies are registered under for use during build and design time.
             
              This method will enumerate the AssemblyFoldersEx registry location and return a list of AssemblyFoldersExInfo in the same order in which
-             they will be searched during both design and build time for reference assemblies.
-             </summary>
+             they will be searched during both design and build time for reference assemblies.</summary>
         <returns>List of AssemblyFoldersExInfo</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -309,8 +305,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkDirectory" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkDirectory" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkDirectory">The target framework directory.</param>
@@ -318,8 +314,7 @@
         <summary>
             Figures out a display name given the target framework details.
             This is the equivalent of the target framework moniker, but for display.
-            If one cannot be found from the redist list file, a synthesized one is returned, so there is always a display name.
-            </summary>
+            If one cannot be found from the redist list file, a synthesized one is returned, so there is always a display name.</summary>
         <returns>A display name given the target framework details.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -366,8 +361,7 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the full name of the .NET Framework root registry key
-            </summary>
+            Returns the full name of the .NET Framework root registry key</summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
@@ -417,8 +411,7 @@
             Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path. When
             targeting .NET 3.5 or above, looks in the locations associated with Visual Studio 2010.  If you wish
             to target the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override
-            that specifies a VisualStudioVersion.
-            </summary>
+            that specifies a VisualStudioVersion.</summary>
         <returns>A string containing the name of the registry key value under the <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> that contains the .NET Framework SDK installation path.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -443,15 +436,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path
-            </summary>
+            Name of the value of GetDotNetFrameworkRootRegistryKey that contains the SDK install root path</summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -466,12 +458,12 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="GetDotNetFrameworkSdkRootRegistryKey">
-      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function GetDotNetFrameworkSdkRootRegistryKey (version As TargetDotNetFrameworkVersion) As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="static member GetDotNetFrameworkSdkRootRegistryKey : Microsoft.Build.Utilities.TargetDotNetFrameworkVersion -&gt; string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey version" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetDotNetFrameworkSdkRootRegistryKey(Microsoft::Build::Utilities::TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetDotNetFrameworkSdkRootRegistryKey (version As TargetDotNetFrameworkVersion) As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="static member GetDotNetFrameworkSdkRootRegistryKey : Microsoft.Build.Utilities.TargetDotNetFrameworkVersion -&gt; string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey version" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetDotNetFrameworkSdkRootRegistryKey(Microsoft::Build::Utilities::TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -486,10 +478,10 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
@@ -497,8 +489,7 @@
             Returns the full name of the .NET Framework SDK root registry key.  When targeting .NET 3.5 or
             above, looks in the locations associated with Visual Studio 2010.  If you wish to target the
             .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override that
-            specifies a VisualStudioVersion.
-            </summary>
+            specifies a VisualStudioVersion.</summary>
         <returns>A string representation of the registry key root which indicates where to find the .NETFramework sdk.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -523,15 +514,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Returns the full name of the .NET Framework SDK root registry key
-            </summary>
+            Returns the full name of the .NET Framework SDK root registry key</summary>
         <returns>Returns <see cref="T:System.String" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -569,8 +559,7 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the prefix of the .NET Framework version folder (e.g. "v2.0")
-            </summary>
+            Returns the prefix of the .NET Framework version folder (e.g. "v2.0")</summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -856,7 +845,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -870,8 +859,7 @@
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Get a fully qualified path to the frameworks root directory.
-            </summary>
+            Get a fully qualified path to the frameworks root directory.</summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -896,15 +884,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">Desired architecture, or DotNetFrameworkArchitecture.Current for the architecture this process is currently running under.</param>
         <summary>
-            Get a fully qualified path to the framework's root directory.
-            </summary>
+            Get a fully qualified path to the framework's root directory.</summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
@@ -943,7 +930,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -959,8 +946,7 @@
         <param name="fileName">File name to locate in the .NET Framework directory</param>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Get a fully qualified path to a file in the frameworks root directory.
-            </summary>
+            Get a fully qualified path to a file in the frameworks root directory.</summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -995,28 +981,27 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">File name to locate in the .NET Framework directory</param>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">Desired architecture, or DotNetFrameworkArchitecture.Current for the architecture this process is currently running under.</param>
         <summary>
-            Get a fully qualified path to a file in the frameworks root directory for the specified architecture.
-            </summary>
+            Get a fully qualified path to a file in the frameworks root directory for the specified architecture.</summary>
         <returns>Will return 'null' if there is no target frameworks on this machine.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPathToDotNetFrameworkReferenceAssemblies">
-      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkReferenceAssemblies (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkReferenceAssemblies(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function GetPathToDotNetFrameworkReferenceAssemblies (version As TargetDotNetFrameworkVersion) As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="static member GetPathToDotNetFrameworkReferenceAssemblies : Microsoft.Build.Utilities.TargetDotNetFrameworkVersion -&gt; string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies version" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetPathToDotNetFrameworkReferenceAssemblies(Microsoft::Build::Utilities::TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkReferenceAssemblies (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkReferenceAssemblies(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetPathToDotNetFrameworkReferenceAssemblies (version As TargetDotNetFrameworkVersion) As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="static member GetPathToDotNetFrameworkReferenceAssemblies : Microsoft.Build.Utilities.TargetDotNetFrameworkVersion -&gt; string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies version" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetPathToDotNetFrameworkReferenceAssemblies(Microsoft::Build::Utilities::TargetDotNetFrameworkVersion version);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -1031,16 +1016,15 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Version of the targeted .NET Framework</param>
         <summary>
-            Returns the path to the reference assemblies location for the given framework version.
-            </summary>
+            Returns the path to the reference assemblies location for the given framework version.</summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1117,8 +1101,7 @@
             Returns the path to the "bin" directory of the .NET Framework SDK. When targeting .NET 3.5
             or above, looks in the locations associated with Visual Studio 2010.  If you wish to target
             the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override
-            that specifies a VisualStudioVersion.
-            </summary>
+            that specifies a VisualStudioVersion.</summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1143,15 +1126,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">The <see cref="T:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" /> of the .NET Framework.</param>
         <param name="visualStudioVersion">The <see cref="T:Microsoft.Build.Utilities.VisualStudioVersion" /> of Visual Studio.</param>
         <summary>
-            Returns the path to the .NET Framework SDK.
-            </summary>
+            Returns the path to the .NET Framework SDK.</summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
@@ -1220,7 +1202,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -1239,8 +1221,7 @@
             Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
             When targeting .NET 3.5 or above, looks in the locations associated with Visual Studio 2010.  If you wish to
             target the .NET Framework SDK that ships with Visual Studio Dev11 or later, please use the override that
-            specifies a VisualStudioVersion.
-            </summary>
+            specifies a VisualStudioVersion.</summary>
         <returns>Path string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1271,7 +1252,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -1280,17 +1261,16 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">File name to locate in the .NET Framework SDK directory</param>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="architecture">The required architecture of the requested file.</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
-            </summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1315,17 +1295,16 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">File name to locate in the .NET Framework SDK directory</param>
         <param name="version">Version of the targeted .NET Framework</param>
         <param name="visualStudioVersion">Version of Visual Studio the requested SDK is associated with</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
-            </summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1350,10 +1329,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">File name to locate in the .NET Framework SDK directory</param>
@@ -1361,8 +1340,7 @@
         <param name="visualStudioVersion">Version of Visual Studio</param>
         <param name="architecture">The required architecture of the requested file.</param>
         <summary>
-            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.
-            </summary>
+            Get a fully qualified path to a file in the .NET Framework SDK. Error if the .NET Framework SDK can't be found.</summary>
         <returns>Path string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1396,7 +1374,7 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="frameworkName">Framework required</param>
@@ -1404,8 +1382,7 @@
             Returns the paths to the reference assemblies location for the given target framework.
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
-            </summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1438,18 +1415,16 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkRootPath" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkRootPath" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkRootPath">Root directory which will be used to calculate the reference assembly path. The references assemblies will be
-            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
-            </param>
+            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.</param>
         <param name="frameworkName">A frameworkName class which represents a TargetFrameworkMoniker. This cannot be null.</param>
         <summary>
             Returns the paths to the reference assemblies location for the given framework version relative to a given targetFrameworkRoot.
-            The method will not check to see if the path exists or not.
-            </summary>
+            The method will not check to see if the path exists or not.</summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1515,9 +1490,9 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
@@ -1527,8 +1502,7 @@
             Returns the paths to the reference assemblies location for the given target framework.
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
-            </summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1601,15 +1575,22 @@
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
         <param name="targetFrameworkVersion">Version being targeted</param>
         <param name="targetFrameworkProfile">Profile being targeted</param>
-        <param name="targetFrameworkRootPath">The root directory that's used to calculate the reference assembly path. If the framework cannot be found in <paramref name="targetFrameworkRootPath" />,
-          the paths specified by <paramref name="targetFrameworkFallbackSearchPaths" /> are used. Paths are generated in the following way: TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
-          If null, the default path is used.</param>
-        <summary>Returns the paths to the reference assemblies location for the given target framework.</summary>
+        <param name="targetFrameworkRootPath">Root directory which will be used to calculate the reference assembly path. The references assemblies will be
+            <param name="targetFrameworkFallbackSearchPaths">';' separated list of paths that are looked up if the framework cannot be found in <paramref name="targetFrameworkRootPath" /></param>
+            generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
+            Uses the default path if this is null.
+            </param>
+        <summary>
+            Returns the paths to the reference assemblies location for the given target framework.
+            This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
+            In addition when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
+            </summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>This method assumes the requested ReferenceAssemblyRoot path is the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles.
             In addition, when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5, or 4.0, it returns the correctly chained reference assembly paths
             for the legacy .NET frameworks. This chaining uses the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</remarks>
-        <exception cref="T:System.ArgumentNullException">The framework name is null.</exception>
+        <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="GetPathToStandardLibraries">
@@ -1642,9 +1623,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
@@ -1654,8 +1635,7 @@
             Returns the path to the reference assemblies location for the given target framework's standard libraries (i.e. mscorlib).
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
             In additon when the .NETFramework or .NET Framework targetFrameworkIdentifiers are seen and targetFrameworkVersion is 2.0, 3.0, 3.5 or 4.0 we will return the correctly chained reference assembly paths
-            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.
-            </summary>
+            for the legacy .net frameworks. This chaining will use the existing GetPathToDotNetFrameworkReferenceAssemblies to build up the list of reference assembly paths.</summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1681,10 +1661,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="platformTarget" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="platformTarget" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
@@ -1692,8 +1672,7 @@
         <param name="targetFrameworkProfile">Profile being targeted</param>
         <param name="platformTarget">What is the targeted platform, this is used to determine where we should look for the standard libraries. Note, this parameter is only used for .net frameworks less than 4.0</param>
         <summary>
-            Returns the path to mscorlib and system.dll
-            </summary>
+            Returns the path to mscorlib and system.dll</summary>
         <returns>Collection of reference assembly locations.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
@@ -1806,8 +1785,7 @@
       <Docs>
         <param name="fileName">File name to locate in the system directory</param>
         <summary>
-            Get a fully qualified path to a file in the system directory (i.e. %SystemRoot%\System32)
-            </summary>
+            Get a fully qualified path to a file in the system directory (i.e. %SystemRoot%\System32)</summary>
         <returns>Path string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1845,16 +1823,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="version">Target .NET Framework version</param>
         <param name="visualStudioVersion">Version of Visual Studio associated with the SDK.</param>
         <summary>
             Returns the path to the Windows SDK for the desired .NET Framework and Visual Studio version.  Note that
-            this is only supported for a targeted .NET Framework version of 4.5 and above.
-            </summary>
+            this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
         <returns>Path to the appropriate Windows SDK location</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1894,9 +1871,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">The name of the file being requested.</param>
@@ -1904,8 +1881,7 @@
         <param name="visualStudioVersion">Version of Visual Studio associated with the SDK.</param>
         <summary>
             Returns the path to a file in the Windows SDK for the desired .NET Framework and Visual Studio version.  Note that
-            this is only supported for a targeted .NET Framework version of 4.5 and above.
-            </summary>
+            this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
         <returns>Path to the appropriate Windows SDK file</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1936,10 +1912,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="fileName">The name of the file being requested.</param>
@@ -1948,8 +1924,7 @@
         <param name="architecture">Desired architecture of the resultant file.</param>
         <summary>
             Returns the path to a file in the Windows SDK for the desired .NET Framework and Visual Studio version and the desired
-            architecture.  Note that this is only supported for a targeted .NET Framework version of 4.5 and above.
-            </summary>
+            architecture.  Note that this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
         <returns>Path to the appropriate Windows SDK file</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1983,17 +1958,16 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkMoniker">Moniker for the sdk</param>
         <param name="targetPlatformIdentifier">Identifier for the platform</param>
         <param name="targetPlatformVersion">Version of the platform</param>
         <summary>
-            Given an SDK moniker and the targeted platform get the path to the SDK root if it exists.
-            </summary>
+            Given an SDK moniker and the targeted platform get the path to the SDK root if it exists.</summary>
         <returns>A full path to the sdk root if the sdk exists in the targeted platform or an empty string if it does not exist.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2018,9 +1992,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkMoniker">Name of the SDK to determine the installation location for.</param>
@@ -2028,8 +2002,7 @@
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X
-            </summary>
+            The format of the sdk moniker is  SDKName, Version=X.X</summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2054,11 +2027,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="diskRoots" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="diskRoots" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkMoniker">Name of the SDK to determine the installation location for.</param>
@@ -2068,8 +2041,7 @@
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X
-            </summary>
+            The format of the sdk moniker is  SDKName, Version=X.X</summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2094,11 +2066,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="diskRoots" Type="System.String[]" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkMoniker" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="diskRoots" Type="System.String[]" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkMoniker">Name of the SDK to determine the installation location for.</param>
@@ -2108,8 +2080,7 @@
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
             Given an SDKName, targetPlatformIdentifier and TargetPlatformVersion search the default sdk locations for the passed in sdk name.
-            The format of the sdk moniker is  SDKName, Version=X.X
-            </summary>
+            The format of the sdk moniker is  SDKName, Version=X.X</summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2219,15 +2190,14 @@
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Get a list of SDK's installed on the machine for a given target platform
-            </summary>
+            Get a list of SDK's installed on the machine for a given target platform</summary>
         <returns>IDictionary of installed SDKS and their location. K:SDKName V:SDK installation location</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2252,10 +2222,10 @@
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="diskRoots" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="diskRoots" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="diskRoots">Array of disk locations to search for sdks</param>
@@ -2263,8 +2233,7 @@
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Get a list of SDK's installed on the machine for a given target platform
-            </summary>
+            Get a list of SDK's installed on the machine for a given target platform</summary>
         <returns>IDictionary of installed SDKS and their location. K:SDKName V:SDK installation location</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2570,15 +2539,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetPlatformIdentifier">Identifier for the platform</param>
         <param name="targetPlatformVersion">Version of the platform</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
-            </summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
         <returns>A full path to the sdk root if the sdk exists in the targeted platform or an empty string if it does not exist.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2603,15 +2571,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
         <param name="targetPlatformVersion">Targeted platform version to find SDKs for</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
-            </summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2636,10 +2603,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="diskRoots" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="diskRoots" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
@@ -2647,8 +2614,7 @@
         <param name="diskRoots">List of disk roots to search for sdks within</param>
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
-            </summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
         <returns>Location of the platform SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2673,10 +2639,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="diskRoots" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="diskRoots" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetPlatformIdentifier">Targeted platform to find SDKs for</param>
@@ -2684,8 +2650,7 @@
         <param name="diskRoots">List of disk roots to search for sdks within</param>
         <param name="registryRoot">Registry root to look for sdks within</param>
         <summary>
-            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.
-            </summary>
+            Given a target platform identifier and a target platform version search the default sdk locations for the platform sdk for the target platform.</summary>
         <returns>Location of the SDK if it is found, empty string if it could not be found</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2848,8 +2813,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Will return the root location for the reference assembly directory under the program files directory.
-            </summary>
+            Will return the root location for the reference assembly directory under the program files directory.</summary>
         <returns />
         <remarks>To be added.</remarks>
       </Docs>
@@ -2921,14 +2885,13 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK must contain a Designtime folder</param>
         <summary>
             Get the list of SDK folders which contains the designtime files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.
-            </summary>
+            in the order in which they should be searched for references.</summary>
         <returns>A list of folders in the order which they should be used when looking for DesignTime files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2953,9 +2916,9 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK must contain a DesignTime folder</param>
@@ -2963,8 +2926,7 @@
         <param name="targetArchitecture">The architecture the SDK is targeting</param>
         <summary>
             Get the list of SDK folders which contains the DesignTime files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.
-            </summary>
+            in the order in which they should be searched for references.</summary>
         <returns>A list of folders in the order which they should be used when looking for DesignTime files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2998,14 +2960,13 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK must contain a redist folder</param>
         <summary>
             Get the list of SDK folders which contains the redist files for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.
-            </summary>
+            in the order in which they should be searched for references.</summary>
         <returns>A list of folders in the order which they should be used when looking for redist files in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3030,9 +2991,9 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK must contain a redist folder</param>
@@ -3074,14 +3035,13 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK</param>
         <summary>
             Get the list of SDK folders which contains the references for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.
-            </summary>
+            in the order in which they should be searched for references.</summary>
         <returns>A list of folders in the order which they should be used when looking for references in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3106,9 +3066,9 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="sdkRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetConfiguration" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetArchitecture" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="sdkRoot">Root folder for the SDK</param>
@@ -3116,8 +3076,7 @@
         <param name="targetArchitecture">The architecture the SDK is targeting</param>
         <summary>
             Get the list of SDK folders which contains the references for the sdk at the sdkRoot provided
-            in the order in which they should be searched for references.
-            </summary>
+            in the order in which they should be searched for references.</summary>
         <returns>A list of folders in the order which they should be used when looking for references in the SDK</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3144,8 +3103,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Gets a IList of supported target framework monikers.
-            </summary>
+            Gets a IList of supported target framework monikers.</summary>
         <returns>list of supported target framework monikers</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3255,8 +3213,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Get a list target platform sdks on the machine.
-            </summary>
+            Get a list target platform sdks on the machine.</summary>
         <returns>List of Target Platform SDKs, Item1: TargetPlatformName Item2: Version of SDK Item3: Path to sdk root</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3281,15 +3238,14 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="diskRoots" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="registryRoot" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="diskRoots" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="registryRoot" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="diskRoots">List of disk locations to search for platform sdks</param>
         <param name="registryRoot">Registry root location to look for platform sdks</param>
         <summary>
-            Get a list target platform sdks on the machine.
-            </summary>
+            Get a list target platform sdks on the machine.</summary>
         <returns>List of Target Platform SDKs</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3314,16 +3270,15 @@
         <ReturnType>System.Runtime.Versioning.FrameworkName</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFrameworkRootDirectory" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="frameworkIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetFrameworkRootDirectory" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="frameworkIdentifier" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetFrameworkRootDirectory">Target framework root directory.</param>
         <param name="frameworkIdentifier">Framework identifier.</param>
         <summary>
             This method will return the highest version of a target framework moniker based on the identifier. This method will only
-            find full frameworks, this means no profiles will be returned.
-            </summary>
+            find full frameworks, this means no profiles will be returned.</summary>
         <returns>The highest version of a target framework moniker based on the identifier. This method will only find full frameworks; no profiles will be returned.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3357,8 +3312,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the fully qualified path to the system directory i.e. %SystemRoot%\System32
-            </summary>
+            Gets the fully qualified path to the system directory i.e. %SystemRoot%\System32</summary>
         <value>The system path.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

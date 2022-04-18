@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             This task resolves items in the build process (built, dependencies, satellites,
-            content, debug symbols, documentation, etc.) to files for manifest generation.
-            </summary>
+            content, debug symbols, documentation, etc.) to files for manifest generation.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
     <comment>
@@ -73,7 +72,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -107,12 +106,12 @@
       </Docs>
     </Member>
     <Member MemberName="DeploymentManifestEntryPoint">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem DeploymentManifestEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property DeploymentManifestEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.DeploymentManifestEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ DeploymentManifestEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem DeploymentManifestEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeploymentManifestEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.DeploymentManifestEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.DeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ DeploymentManifestEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -127,17 +126,17 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the name of the deployment manifest.</summary>
@@ -178,11 +177,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -258,7 +257,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -298,7 +297,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -401,7 +400,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -441,7 +440,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -485,11 +484,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -505,12 +504,12 @@
       </Docs>
     </Member>
     <Member MemberName="OutputDeploymentManifestEntryPoint">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputDeploymentManifestEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property OutputDeploymentManifestEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.OutputDeploymentManifestEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ OutputDeploymentManifestEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputDeploymentManifestEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputDeploymentManifestEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.OutputDeploymentManifestEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.OutputDeploymentManifestEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ OutputDeploymentManifestEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -525,21 +524,21 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the output deployment manifest entry point.</summary>
@@ -556,12 +555,12 @@
       </Docs>
     </Member>
     <Member MemberName="OutputEntryPoint">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property OutputEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.OutputEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ OutputEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputEntryPoint { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputEntryPoint As ITaskItem" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.OutputEntryPoint : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.OutputEntryPoint" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ OutputEntryPoint { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -576,21 +575,21 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the output entry point.</summary>
@@ -628,11 +627,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -672,7 +671,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -733,7 +732,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -749,12 +748,12 @@
       </Docs>
     </Member>
     <Member MemberName="SigningManifests">
-      <MemberSignature Language="C#" Value="public bool SigningManifests { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property SigningManifests As Boolean" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.SigningManifests : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SigningManifests { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public bool SigningManifests { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property SigningManifests As Boolean" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.SigningManifests : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.SigningManifests" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SigningManifests { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -769,17 +768,17 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a value that indicates whether the manifests are signed.</summary>
@@ -813,11 +812,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -854,12 +853,12 @@
       </Docs>
     </Member>
     <Member MemberName="TargetFrameworkVersion">
-      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkVersion As String" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.TargetFrameworkVersion : string with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkVersion { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkVersion As String" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.TargetFrameworkVersion : string with get, set" Usage="Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkVersion { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -874,13 +873,13 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the target .NET Framework version.</summary>

@@ -33,8 +33,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Provides a set of utility functions for manipulating security permision sets and signing.
-            </summary>
+            Provides a set of utility functions for manipulating security permision sets and signing.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -66,17 +65,16 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetZone" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="includedPermissionSet" Type="System.Security.PermissionSet" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="excludedPermissions" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="targetZone" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="includedPermissionSet" Type="System.Security.PermissionSet" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="excludedPermissions" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="targetZone">Specifies a zone default permission set, which is obtained from machine policy. Valid values are "Internet", "LocalIntranet", or "Custom". If "Custom" is specified, the generated permission set is based only on the includedPermissionSet parameter.</param>
         <param name="includedPermissionSet">A PermissionSet object containing the set of permissions to be explicitly included in the generated permission set. Permissions specified in this parameter will be included verbatim in the generated permission set, regardless of targetZone parameter.</param>
         <param name="excludedPermissions">This property is no longer used.</param>
         <summary>
-            Generates a permission set by computed the zone default permission set and adding any included permissions.
-            </summary>
+            Generates a permission set by computed the zone default permission set and adding any included permissions.</summary>
         <returns>The generated permission set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,13 +107,12 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="ids" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="ids" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="ids">An array of permission identity strings.</param>
         <summary>
-            Converts an array of permission identity strings to a permission set object.
-            </summary>
+            Converts an array of permission identity strings to a permission set object.</summary>
         <returns>The converted permission set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,13 +145,12 @@
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="permissionSet">The input permission set to be converted.</param>
         <summary>
-            Converts a permission set object to an array of permission identity strings.
-            </summary>
+            Converts a permission set object to an array of permission identity strings.</summary>
         <returns>An array of permission identity strings.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,8 +201,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest or PE file.
-            </summary>
+            Signs a ClickOnce manifest or PE file.</summary>
         <remarks>This function can only sign a PE file if the X509Certificate2 parameter represents a certificate in the
             current user's personal certificate store.</remarks>
       </Docs>
@@ -248,8 +243,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest or PE file.
-            </summary>
+            Signs a ClickOnce manifest or PE file.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -299,8 +293,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest.
-            </summary>
+            Signs a ClickOnce manifest.</summary>
         <remarks>This function is only for signing a manifest, not a PE file.</remarks>
       </Docs>
     </Member>
@@ -398,13 +391,12 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Xml.XmlElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-2.0;msbuild-3.0;msbuild-3.5;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="element" Type="System.Xml.XmlElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="element">An XML representation of the permission set.</param>
         <summary>
-            Converts an XmlElement into a PermissionSet object.
-            </summary>
+            Converts an XmlElement into a PermissionSet object.</summary>
         <returns>The converted permission set.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  

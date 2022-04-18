@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             Base class for ResolveNonMSBuildProjectOutput and AssignProjectConfiguration, since they have
-            similar architecture
-            </summary>
+            similar architecture</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -84,14 +83,13 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="currentProjectAbsolutePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="currentProjectAbsolutePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="currentProjectAbsolutePath">The absolute path of the current project.</param>
         <summary>
             Helper method for retrieving the extra "project references" passed in the solution blob.
-            These came from dependencies expressed in the solution file itself.
-            </summary>
+            These came from dependencies expressed in the solution file itself.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -116,13 +114,12 @@
         <ReturnType>System.Xml.XmlElement</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectRef" Type="Microsoft.Build.Framework.ITaskItem" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="projectRef" Type="Microsoft.Build.Framework.ITaskItem" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="projectRef">The project reference item.</param>
         <summary>
-            Helper method for retrieving the XML element for the given project
-            </summary>
+            Helper method for retrieving the XML element for the given project</summary>
         <returns>The project element.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -161,8 +158,7 @@
       <Docs>
         <param name="projectRef">A project reference that contains a project GUID attribute.</param>
         <summary>
-            Helper method for retrieving whatever was stored in the XML string for the given project
-            </summary>
+            Helper method for retrieving whatever was stored in the XML string for the given project</summary>
         <returns>The XML contents of the project element of the specified project.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -197,7 +193,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -207,8 +203,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The list of project references
-            </summary>
+            The list of project references</summary>
         <value>The project references.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

@@ -27,8 +27,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The License Compiler task
-            </summary>
+            The License Compiler task</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -57,7 +56,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -103,8 +102,7 @@
         <param name="commandLine">command line builder class to add arguments to the command line</param>
         <summary>
             Generates command line arguments for lc.exe
-            Used when targeting framework version is less than 4.6
-            </summary>
+            Used when targeting framework version is less than 4.6</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -166,8 +164,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Determing the path to lc.exe
-            </summary>
+            Determing the path to lc.exe</summary>
         <returns>path to lc.exe, null if not found</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -208,8 +205,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the executable for which the .licenses files are being generated
-            </summary>
+            Specifies the executable for which the .licenses files are being generated</summary>
         <value>The executable for which the .licenses files are generated.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -244,8 +240,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Suppresses the display of the startup banner
-            </summary>
+            Suppresses the display of the startup banner</summary>
         <value>
           <see langword="true" /> if the Microsoft startup banner display is suppressed; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -281,8 +276,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Output directory for the generated .licenses file
-            </summary>
+            Output directory for the generated .licenses file</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -323,8 +317,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the .licenses file, output only. It's inferred from LicenseTarget and OutputDirectory.
-            </summary>
+            The name of the .licenses file, output only. It's inferred from LicenseTarget and OutputDirectory.</summary>
         <value>The name of the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -367,8 +360,7 @@
       <Docs>
         <summary>
             Specifies the referenced components (licensed controls and possibly their dependent assemblies)
-            to load when generating the .license file.
-            </summary>
+            to load when generating the .license file.</summary>
         <value>The referenced components to load when generating the .licenses file.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -435,8 +427,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the items that contain licensed components that need to be included in the .licenses file
-            </summary>
+            Specifies the items that contain licensed components that need to be included in the .licenses file</summary>
         <value>The items that contain licensed components to include in the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -507,8 +498,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the tool to execute
-            </summary>
+            The name of the tool to execute</summary>
         <value>The name of the license compiler tool.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -544,8 +534,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Validate the task arguments, log any warnings/errors
-            </summary>
+            Validate the task arguments, log any warnings/errors</summary>
         <returns>true if arguments are corrent enough to continue processing, false otherwise</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

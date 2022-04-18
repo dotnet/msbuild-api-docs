@@ -22,7 +22,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>Vbc</c> task. Use the <c>Vbc</c> element in your project file to create and execute this task. For usage and parameter information, see <see href="/visualstudio/msbuild/vbc-task">Vbc Task</see>.</summary>
+    <summary>Implements the <c>Vbc</c> task. Use the <c>Vbc</c> element in your project file to create and execute this task. For usage and parameter information, see Vbc Task.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -476,8 +476,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="singleLine" Type="System.String" Index="0" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" Index="1" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+        <Parameter Name="singleLine" Type="System.String" Index="0" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" Index="1" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       </Parameters>
       <Docs>
         <param name="singleLine">A single line captured from the STDOUT of the vbc compiler</param>
@@ -495,12 +495,12 @@
       </Docs>
     </Member>
     <Member MemberName="ModuleAssemblyName">
-      <MemberSignature Language="C#" Value="public string ModuleAssemblyName { get; set; }" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance string ModuleAssemblyName" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.ModuleAssemblyName" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property ModuleAssemblyName As String" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.ModuleAssemblyName : string with get, set" Usage="Microsoft.Build.Tasks.Vbc.ModuleAssemblyName" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ModuleAssemblyName { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public string ModuleAssemblyName { get; set; }" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleAssemblyName" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.ModuleAssemblyName" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property ModuleAssemblyName As String" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.ModuleAssemblyName : string with get, set" Usage="Microsoft.Build.Tasks.Vbc.ModuleAssemblyName" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ModuleAssemblyName { System::String ^ get(); void set(System::String ^ value); };" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v3.5</AssemblyName>
@@ -511,7 +511,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the name of the assembly that this module will be a part of.</summary>
@@ -552,12 +552,12 @@
       </Docs>
     </Member>
     <Member MemberName="NoVBRuntimeReference">
-      <MemberSignature Language="C#" Value="public bool NoVBRuntimeReference { get; set; }" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool NoVBRuntimeReference" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property NoVBRuntimeReference As Boolean" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.NoVBRuntimeReference : bool with get, set" Usage="Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NoVBRuntimeReference { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public bool NoVBRuntimeReference { get; set; }" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoVBRuntimeReference" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoVBRuntimeReference As Boolean" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.NoVBRuntimeReference : bool with get, set" Usage="Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NoVBRuntimeReference { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v3.5</AssemblyName>
@@ -568,7 +568,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a Boolean value that specifies whether the compiler should compile without a reference to the Visual Basic Runtime Library.</summary>
@@ -684,12 +684,12 @@
       </Docs>
     </Member>
     <Member MemberName="OptionInfer">
-      <MemberSignature Language="C#" Value="public bool OptionInfer { get; set; }" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool OptionInfer" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionInfer" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Public Property OptionInfer As Boolean" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.OptionInfer : bool with get, set" Usage="Microsoft.Build.Tasks.Vbc.OptionInfer" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OptionInfer { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="public bool OptionInfer { get; set; }" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OptionInfer" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionInfer" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Public Property OptionInfer As Boolean" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.OptionInfer : bool with get, set" Usage="Microsoft.Build.Tasks.Vbc.OptionInfer" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OptionInfer { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v3.5</AssemblyName>
@@ -700,7 +700,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a Boolean value that specifies whether to use local type inference in variable declarations.</summary>
@@ -1009,11 +1009,11 @@ This property can have a value of **x86**, **x64**, **Itanium**, or **anycpu**. 
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>

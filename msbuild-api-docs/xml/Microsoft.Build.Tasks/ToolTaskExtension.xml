@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             A small intermediate class between ToolTask and classes using it in XMakeTasks, implementing functionality
-            that we didn't want to expose in Utilities
-            </summary>
+            that we didn't want to expose in Utilities</summary>
     <remarks>
             This class has to be public because the tasks that derive from it are public.
             Ideally we would like this class to be internal, but C# does not allow a base class
@@ -72,8 +71,7 @@
         <param name="commandLine">The <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> to fill.</param>
         <summary>
             Fills the provided CommandLineBuilderExtension with those switches and other information that can't go into a response file and
-            must go directly onto the command line.
-            </summary>
+            must go directly onto the command line.</summary>
         <returns>true, if successful</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -112,8 +110,7 @@
       <Docs>
         <param name="commandLine">The <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> to fill.</param>
         <summary>
-            Fills the provided CommandLineBuilderExtension with those switches and other information that can go into a response file.
-            </summary>
+            Fills the provided CommandLineBuilderExtension with those switches and other information that can go into a response file.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -143,7 +140,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -153,8 +150,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the collection of parameters used by the derived task class.
-            </summary>
+            Gets the collection of parameters used by the derived task class.</summary>
         <value>Parameter bag.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -192,8 +188,7 @@
         <summary>
             Returns a string with those switches and other information that can't go into a response file and
             must go directly onto the command line.
-            Called after ValidateParameters and SkipTaskExecution
-            </summary>
+            Called after ValidateParameters and SkipTaskExecution</summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -231,8 +226,7 @@
         <summary>
             Returns the command line switch used by the tool executable to specify the response file
             Will only be called if the task returned a non empty string from GetResponseFileCommands
-            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands
-            </summary>
+            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands</summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -274,8 +268,7 @@
         <param name="defaultValue">The value to return if <paramref name="parameterName" /> does not exist in the <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
         <summary>
             Get a bool parameter and return a default if its not present
-            in the hash table.
-            </summary>
+            in the hash table.</summary>
         <returns>The parameter value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -324,8 +317,7 @@
         <param name="defaultValue">The value to return if <paramref name="parameterName" /> does not exist in the <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
         <summary>
             Get an int parameter and return a default if its not present
-            in the hash table.
-            </summary>
+            in the hash table.</summary>
         <returns>The parameter value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -339,12 +331,12 @@
       </Docs>
     </Member>
     <Member MemberName="HasLoggedErrors">
-      <MemberSignature Language="C#" Value="protected override bool HasLoggedErrors { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property HasLoggedErrors As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="F#" Value="member this.HasLoggedErrors : bool" Usage="Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool HasLoggedErrors { bool get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2" />
+      <MemberSignature Language="C#" Value="protected override bool HasLoggedErrors { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property HasLoggedErrors As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="F#" Value="member this.HasLoggedErrors : bool" Usage="Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool HasLoggedErrors { bool get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -359,12 +351,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.0;msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-4.8;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Whether this ToolTaskExtension has logged any errors
-            </summary>
+            Whether this ToolTaskExtension has logged any errors</summary>
         <value>
           <see langword="true" /> if the ToolTask logged errors, <see langword="false" /> if otherwise.</value>
         <remarks>To be added.</remarks>
@@ -396,7 +387,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -406,8 +397,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets an instance of a TaskLoggingHelperExtension class containing task logging methods.
-            </summary>
+            Gets an instance of a TaskLoggingHelperExtension class containing task logging methods.</summary>
         <value>The logging helper object.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

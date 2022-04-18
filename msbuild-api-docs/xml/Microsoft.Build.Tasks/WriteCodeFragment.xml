@@ -20,8 +20,7 @@
   <Docs>
     <summary>
             Generates a temporary code file with the specified generated code fragment.
-            Does not delete the file.
-            </summary>
+            Does not delete the file.</summary>
     <remarks>To be added.</remarks>
     <comment>
             Currently only supports writing .NET attributes.
@@ -44,7 +43,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -72,11 +71,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -92,8 +91,7 @@
             Each piece of metadata is the name-value pair of a parameter, which must be of type System.String.
             Some attributes only allow positional constructor arguments, or the user may just prefer them.
             To set those, use metadata names like "_Parameter1", "_Parameter2" etc.
-            If a parameter index is skipped, it's an error.
-            </summary>
+            If a parameter index is skipped, it's an error.</summary>
         <value>An item whose value is the full type name of the attribute. For example, "System.AssemblyVersionAttribute".</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -129,8 +127,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Main entry point.
-            </summary>
+            Main entry point.</summary>
         <returns>
           <see langword="true" /> if the code fragment was written; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -157,11 +154,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -174,8 +171,7 @@
             Language of code to generate.
             Language name can be any language for which a CodeDom provider is
             available. For example, "C#", "VisualBasic".
-            Emitted file will have the default extension for that language.
-            </summary>
+            Emitted file will have the default extension for that language.</summary>
         <value>The language of code to generate.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -204,11 +200,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -219,8 +215,7 @@
       <Docs>
         <summary>
             Destination folder for the generated code.
-            Typically the intermediate folder.
-            </summary>
+            Typically the intermediate folder.</summary>
         <value>The destination folder for the generated code.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -246,11 +241,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -264,8 +259,7 @@
             If this is set, and a file name, the destination folder will be prepended.
             If this is set, and is rooted, the destination folder will be ignored.
             If this is not set, the destination folder will be used, an arbitrary file name will be used, and 
-            the default extension for the language selected.
-            </summary>
+            the default extension for the language selected.</summary>
         <value>The path to the file that was generated.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

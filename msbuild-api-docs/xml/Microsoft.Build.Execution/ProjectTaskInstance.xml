@@ -19,13 +19,13 @@
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={_name} Condition={_condition} ContinueOnError={_continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={_parameters.Count} #Outputs={_outputs.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={_name} Condition={_condition} ContinueOnError={_continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={_parameters.Count} #Outputs={_outputs.Count}")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-4.0">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="msbuild-4.5;msbuild-4.5.1;msbuild-4.5.2">
+    <Attribute FrameworkAlternate="msbuild-4.8;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={parameters.Count} #Outputs={outputs.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={parameters.Count} #Outputs={outputs.Count}")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0">
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -51,7 +51,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -106,7 +106,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -290,7 +290,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -320,7 +320,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>

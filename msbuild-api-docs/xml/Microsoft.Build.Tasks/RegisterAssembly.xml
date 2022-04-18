@@ -31,8 +31,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).
-            </summary>
+            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -73,7 +72,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -114,7 +113,7 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -154,11 +153,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -168,8 +167,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.
-            </summary>
+            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.</summary>
         <value>The state information necessary for the <c>UnregisterAssembly</c> task to do proper clean-up.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -200,11 +198,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
@@ -257,8 +255,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Task entry point
-            </summary>
+            Task entry point</summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -274,7 +271,7 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ReportEvent(System::Runtime::InteropServices::ExporterEventKind kind, int code, System::String ^ msg);" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5">M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -305,8 +302,7 @@
         <param name="code">The error code of the export event.</param>
         <param name="msg">The message of the export event.</param>
         <summary>
-            Callback method for reporting type library export events
-            </summary>
+            Callback method for reporting type library export events</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -320,7 +316,7 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ ResolveRef(System::Reflection::Assembly ^ assemblyToResolve);" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="msbuild-2.0;msbuild-3.0;msbuild-3.5">M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ResolveRef(System.Reflection.Assembly)</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ResolveRef(System.Reflection.Assembly)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -349,8 +345,7 @@
         <summary>
              Callback method for finding type libraries for given assemblies. If we are here, it means
              the type library we're looking for is not in the current directory and it's not registered.
-             Currently we assume that all dependent type libs are already registered.
-            </summary>
+             Currently we assume that all dependent type libs are already registered.</summary>
         <returns>
           <see langword="null" /> in all cases.</returns>
         <remarks>
@@ -403,11 +398,11 @@
           <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-4.0">
+        <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
