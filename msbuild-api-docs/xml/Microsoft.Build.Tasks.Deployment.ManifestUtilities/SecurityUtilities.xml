@@ -65,9 +65,9 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetZone" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
-        <Parameter Name="includedPermissionSet" Type="System.Security.PermissionSet" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
-        <Parameter Name="excludedPermissions" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="targetZone" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="includedPermissionSet" Type="System.Security.PermissionSet" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="excludedPermissions" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       </Parameters>
       <Docs>
         <param name="targetZone">Specifies a zone default permission set, which is obtained from machine policy. Valid values are "Internet", "LocalIntranet", or "Custom". If "Custom" is specified, the generated permission set is based only on the includedPermissionSet parameter.</param>
@@ -107,7 +107,7 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="ids" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="ids" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       </Parameters>
       <Docs>
         <param name="ids">An array of permission identity strings.</param>
@@ -145,7 +145,7 @@
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       </Parameters>
       <Docs>
         <param name="permissionSet">The input permission set to be converted.</param>
@@ -391,7 +391,7 @@
         <ReturnType>System.Security.PermissionSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Xml.XmlElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-4.8;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2" />
+        <Parameter Name="element" Type="System.Xml.XmlElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       </Parameters>
       <Docs>
         <param name="element">An XML representation of the permission set.</param>
