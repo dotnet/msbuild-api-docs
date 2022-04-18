@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Base class for all manifest generation tasks.</summary>
+            Base class for all manifest generation tasks.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.GenerateManifestBase" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddAssemblyFromItem">
@@ -95,6 +98,7 @@
         <summary>Adds an assembly reference to the manifest, based on the specified item.</summary>
         <returns>The assembly reference that was added to the manifest.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddAssemblyNameFromItem">
@@ -134,6 +138,7 @@
         <summary>Adds an assembly reference to the manifest, based on the specified item and the assembly reference type.</summary>
         <returns>The assembly reference that was added to the manifest.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddEntryPointFromItem">
@@ -173,6 +178,7 @@
         <summary>Adds an entry point reference to the manifest, based on the specified item and the assembly reference type.</summary>
         <returns>The entry point reference that was added to the manifest.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AddFileFromItem">
@@ -210,6 +216,7 @@
         <summary>Adds a file reference to the manifest, based on the specified item.</summary>
         <returns>The file reference that was added to the manifest.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AssemblyName">
@@ -253,6 +260,7 @@
         <summary>Gets or sets the name of the assembly.</summary>
         <value>The name of the assembly.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AssemblyVersion">
@@ -296,6 +304,7 @@
         <summary>Gets or sets the assembly version.</summary>
         <value>The assembly version.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="CompareFrameworkVersions">
@@ -310,7 +319,9 @@
         <AssemblyName>Microsoft.Build.Tasks.v3.5</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <ReturnValue />
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
       <Parameters>
         <Parameter Name="versionA" Type="System.String" Index="0" FrameworkAlternate="msbuild-3.5" />
         <Parameter Name="versionB" Type="System.String" Index="1" FrameworkAlternate="msbuild-3.5" />
@@ -321,6 +332,7 @@
         <summary>Compares two .NET Framework versions and determines which version comes before the other one.</summary>
         <returns>An integer value that specifies the sort order position of a .NET Framework version instance relative to another version instance. A value of 0 means the two values are equal, a value of -1 indicates that <paramref name="versionA" /> precedes <paramref name="versionB" />, and a value of 1 indicates that <paramref name="versionA" /> comes after <paramref name="versionB" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ConvertFrameworkVersionToString">
@@ -335,7 +347,9 @@
         <AssemblyName>Microsoft.Build.Tasks.v3.5</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <ReturnValue />
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
       <Parameters>
         <Parameter Name="version" Type="System.String" Index="0" FrameworkAlternate="msbuild-3.5" />
       </Parameters>
@@ -344,6 +358,7 @@
         <summary>Converts the given .NET Framework version to a string.</summary>
         <returns>A string that represents the .NET Framework version.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Description">
@@ -387,6 +402,7 @@
         <summary>Gets or sets the manifest description text.</summary>
         <value>The manifest description text.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="EntryPoint">
@@ -430,6 +446,7 @@
         <summary>Gets or sets the managed assembly or ClickOnce manifest reference that is the entry point to the manifest.</summary>
         <value>The managed assembly or ClickOnce manifest reference that is the entry point to the application.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -465,6 +482,7 @@
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FindFileFromItem">
@@ -501,7 +519,15 @@
         <param name="item">The item to get a file reference for.</param>
         <summary>Returns the manifest file reference that matches the specified item.</summary>
         <returns>The manifest file reference that matches the specified item.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the file reference does not exist in the manifest for the specified item, then this method adds a file reference for this item.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetObjectType">
@@ -536,6 +562,7 @@
         <summary>When implemented in a derived class, returns the type of the manifest.</summary>
         <returns>The manifest type.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="InputManifest">
@@ -579,6 +606,7 @@
         <summary>Gets or sets the input manifest.</summary>
         <value>The input manifest.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="LauncherBasedDeployment">
@@ -643,6 +671,7 @@
         <summary>Gets or sets the maximum manifest file name length.</summary>
         <value>The maximum manifest file name length.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OnManifestLoaded">
@@ -681,6 +710,7 @@
         <returns>
           <see langword="true" /> if no errors occurred when the manifest properties are set; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OnManifestResolved">
@@ -718,7 +748,15 @@
         <summary>When implemented in a derived class, sets resolved manifest properties.</summary>
         <returns>
           <see langword="true" /> if no errors occurred when the manifest properties are set; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For example, resolved manifest properties are the publisher and product.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="OutputManifest">
@@ -766,6 +804,7 @@
         <summary>Gets or sets the generated manifest.</summary>
         <value>The generated manifest.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Platform">
@@ -808,7 +847,15 @@
       <Docs>
         <summary>Gets or sets the manifest platform.</summary>
         <value>The manifest platform.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The manifest platform can have one of the following values: `x86`, `x64`, `Itanium`, or `AnyCPU`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetCulture">
@@ -851,7 +898,15 @@
       <Docs>
         <summary>Gets or sets the manifest target culture code.</summary>
         <value>The manifest target culture code.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valid values for the target culture are any valid values for <xref:System.Globalization.CultureInfo>, and also "neutral" or "*" for neutral cultures.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetFrameworkMoniker">
@@ -887,6 +942,7 @@
         <summary>Gets or sets the target framework moniker.</summary>
         <value>The target framework moniker.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TargetFrameworkVersion">
@@ -921,7 +977,15 @@
       <Docs>
         <summary>The target .NET Framework version for the project.</summary>
         <value>A string that represents the .NET Framework version.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is empty, which means there is no filtering for the references based on the target framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ValidateInputs">
@@ -957,6 +1021,7 @@
         <returns>
           <see langword="true" /> if input validation succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ValidateOutput">
@@ -992,6 +1057,7 @@
         <returns>
           <see langword="true" /> if manifest validation succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

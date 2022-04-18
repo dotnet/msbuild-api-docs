@@ -64,7 +64,7 @@
             Unevaluated condition on the task
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The Condition attribute value, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -88,7 +88,7 @@
         <summary>
             Location of the condition, if any
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,8 +119,15 @@
             Unevaluated ContinueOnError on the task.
             May be empty string.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The unevaluated ContinueOnError attribute of the task, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ For more information, see [Task Element (MSBuild)](/visualstudio/msbuild/task-element-msbuild) and [How to: Ignore Errors in Tasks](/visualstudio/msbuild/how-to-ignore-errors-in-tasks).  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ContinueOnErrorLocation">
@@ -143,7 +150,7 @@
         <summary>
             Location of the ContinueOnError attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -167,7 +174,7 @@
         <summary>
             Location of the original element
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -192,7 +199,7 @@
             Unevaluated MSBuildArchitecture on the task.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -216,7 +223,7 @@
         <summary>
             Location of the MSBuildArchitecture attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -241,7 +248,7 @@
             Unevaluated MSBuildRuntime on the task.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -265,7 +272,7 @@
         <summary>
             Location of the MSBuildRuntime attribute, if any
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,7 +302,7 @@
         <summary>
             Name of the task, possibly qualified, as it appears in the project
             </summary>
-        <value>To be added.</value>
+        <value>The name of the task, possibly qualified, as it appears in the project.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -326,8 +333,15 @@
             Ordered set of output property and item objects.
             This is a read-only dead collection.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An ordered set of the output property and item objects of the task.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is a read-only collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Parameters">
@@ -351,8 +365,17 @@
             Read-only dead unordered set of task parameter names and unevaluated values.
             Condition and ContinueOnError, which have their own properties, are not included in this collection.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An unordered set of the task parameter names and unevaluated values of this task.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This is a read-only collection.  
+  
+ Condition and ContinueOnError attributes, which have their own properties, are not included in this collection.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -48,13 +48,13 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">Name of metadata.</param>
+        <param name="unevaluatedValue">Metadata to be added.</param>
         <summary>
             Convenience method to add a piece of metadata to this item.
             Adds after any existing metadata. Does not modify any existing metadata.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The modified metadata.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -171,8 +171,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The Exclude attribute value, or an empty string if the Exclude attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the Exclude attribute if the value to set is set to null or an empty string.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ExcludeLocation">
@@ -195,7 +202,7 @@
         <summary>
             Location of the exclude attribute
             </summary>
-        <value>To be added.</value>
+        <value>The location of the exclude attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -219,7 +226,8 @@
         <summary>
             Whether there are any child metadata elements
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if this item has child metadata elements; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -251,8 +259,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The Include attribute value, or an empty string if the Include attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the Include attribute if the value to set is set to null or an empty string.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeLocation">
@@ -275,7 +290,7 @@
         <summary>
             Location of the include attribute
             </summary>
-        <value>To be added.</value>
+        <value>The include location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -309,7 +324,7 @@
         <summary>
             Gets the item's type.
             </summary>
-        <value>To be added.</value>
+        <value>The item element's type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,8 +356,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of KeepDuplicates, or an empty string if it is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the attribute if the value to set is empty or null.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="KeepDuplicatesLocation">
@@ -365,7 +387,7 @@
         <summary>
             Location of the keepDuplicates attribute
             </summary>
-        <value>To be added.</value>
+        <value>The location of the KeepDuplicates attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -397,8 +419,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The value of the KeepMetadata attribute, or an empty string if it is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the attribute if the value to set is empty or null.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="KeepMetadataLocation">
@@ -421,7 +450,7 @@
         <summary>
             Location of the keepMetadata attribute
             </summary>
-        <value>To be added.</value>
+        <value>The location of KeepMetadata.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -553,7 +582,7 @@
         <summary>
             Get any child metadata.
             </summary>
-        <value>To be added.</value>
+        <value>All child metadata.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -585,8 +614,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The Remove attribute value, or an empty string if the Remove attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the Remove attribute if the value to set is set to null or an empty string.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveLocation">
@@ -609,7 +645,7 @@
         <summary>
             Location of the remove attribute
             </summary>
-        <value>To be added.</value>
+        <value>The remove attribute's location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -641,8 +677,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty or null.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The RemoveMetadata value, or an empty string if it is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the attribute if the value to set is empty or null.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveMetadataLocation">
@@ -665,7 +708,7 @@
         <summary>
             Location of the removeMetadata attribute
             </summary>
-        <value>To be added.</value>
+        <value>The RemoveMetadata attribute's location.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

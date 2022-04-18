@@ -48,14 +48,21 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">The property name.</param>
+        <param name="unevaluatedValue">The property value.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
             Adds a new property after the last property in this property group.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The new property.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This convenience method picks a location in the MSBuild DOM based on a heuristic.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateNewInstance">
@@ -104,7 +111,7 @@
         <summary>
             Get any contained properties.
             </summary>
-        <value>To be added.</value>
+        <value>All child properties.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,7 +135,7 @@
         <summary>
             Get any contained properties.
             </summary>
-        <value>To be added.</value>
+        <value>All child properties, starting with the last child.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -153,14 +160,14 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">The name of the property to be updated.</param>
+        <param name="unevaluatedValue">The new property value.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
             If there is an existing property with the same name and no condition,
             updates its value. Otherwise it adds a new property after the last property.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The updated property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

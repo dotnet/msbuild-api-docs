@@ -26,9 +26,25 @@
     <summary>
             Arguments for external project finished events
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            WARNING: marking a type [Serializable] without implementing
+            ISerializable imposes a serialization contract -- it is a
+            promise to never change the type's fields i.e. the type is
+            immutable; adding new fields in the next version of the type
+            without following certain special FX guidelines, can break both
+            forward and backward compatibility
+            </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected ExternalProjectFinishedEventArgs ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -159,7 +175,7 @@
         <summary>
             Project name
             </summary>
-        <value>To be added.</value>
+        <value>The project file name that raised the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -191,7 +207,8 @@
         <summary>
             True if project built successfully, false otherwise
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if the build succeeded; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

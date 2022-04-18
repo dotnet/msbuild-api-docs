@@ -19,10 +19,20 @@
   <Interfaces />
   <Docs>
     <summary>
-            Class used to store and interrogate inputs and outputs recorded by tracking operations.</summary>
+            Class used to store and interrogate inputs and outputs recorded by tracking operations.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a new instance of the class used to track file dependencies during a build.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public FlatTrackingData (Microsoft.Build.Framework.ITaskItem[] tlogFiles, bool skipMissingFiles);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem[] tlogFiles, bool skipMissingFiles) cil managed" />
@@ -47,7 +57,8 @@
         <param name="tlogFiles">The .write. tlog files to interpret</param>
         <param name="skipMissingFiles">Ignore files that do not exist on disk</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -75,7 +86,8 @@
         <param name="tlogFiles">The .write. tlog files to interpret</param>
         <param name="missingFileTimeUtc">The DateTime that should be recorded for missing file.</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -105,7 +117,8 @@
         <param name="tlogFiles">The tlog files to interpret</param>
         <param name="skipMissingFiles">Ignore files that do not exist on disk</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,7 +148,8 @@
         <param name="tlogFiles">The tlog files to interpret</param>
         <param name="missingFileTimeUtc">The DateTime that should be recorded for missing file.</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -165,7 +179,8 @@
         <param name="tlogFilesToIgnore">The .tlog files to ignore</param>
         <param name="missingFileTimeUtc">The DateTime that should be recorded for missing file.</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -199,7 +214,8 @@
         <param name="excludedInputPaths">The set of paths that contain files that are to be ignored during up to date check, including any subdirectories.</param>
         <param name="sharedLastWriteTimeUtcCache">Cache to be used for all timestamp/exists comparisons, which can be shared between multiple FlatTrackingData instances.</param>
         <summary>
-            Constructor</summary>
+            Constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -287,9 +303,11 @@
       </Parameters>
       <Docs>
         <param name="fileName">
-            Full path of the file to test</param>
+            Full path of the file to test
+            </param>
         <summary>
-            Test to see if the specified file is excluded from tracked dependency checking</summary>
+            Test to see if the specified file is excluded from tracked dependency checking
+            </summary>
         <returns>
           <see langword="true" /> if the file is excluded.</returns>
         <remarks>
@@ -331,8 +349,16 @@
         <summary>
             Once tracked operations have been completed then we need to compact / finalize the Tlogs based
             on the success of the tracked execution. If it fails, then we clean out the TLogs. If it succeeds
-            then we clean temporary files from the TLogs and re-write them.</summary>
-        <remarks>To be added.</remarks>
+            then we clean temporary files from the TLogs and re-write them.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Once tracked operations have been completed then we need to compact / finalize the Tlogs based on the success of the tracked execution. If it fails, then we clean out the TLogs. If it succeeds then we clean temporary files from the TLogs and re-write them.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetLastWriteTimeUtc">
@@ -361,11 +387,21 @@
         <param name="file">Name of the file</param>
         <summary>
             Returns cached value for last write time of file. Update the cache if it is the first 
-            time someone asking for that file</summary>
+            time someone asking for that file
+            </summary>
         <returns>the last write time of the file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="IsUpToDate">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Checks if the tracking data indicates that everything is up to date according to UpToDateCheckType.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="IsUpToDate">
       <MemberSignature Language="C#" Value="public static bool IsUpToDate (Microsoft.Build.Utilities.Task hostTask, Microsoft.Build.Utilities.UpToDateCheckType upToDateCheckType, Microsoft.Build.Framework.ITaskItem[] readTLogNames, Microsoft.Build.Framework.ITaskItem[] writeTLogNames);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsUpToDate(class Microsoft.Build.Utilities.Task hostTask, valuetype Microsoft.Build.Utilities.UpToDateCheckType upToDateCheckType, class Microsoft.Build.Framework.ITaskItem[] readTLogNames, class Microsoft.Build.Framework.ITaskItem[] writeTLogNames) cil managed" />
@@ -399,9 +435,17 @@
         <summary>
             Checks to see if the tracking data indicates that everything is up to date according to UpToDateCheckType.
             Note: If things are not up to date, then the TLogs are compacted to remove all entries in preparation to
-            re-track execution of work.</summary>
+            re-track execution of work.
+            </summary>
         <returns />
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If things are not up to date, then the TLogs are compacted to remove all entries in preparation to re-track execution of work.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsUpToDate">
@@ -436,9 +480,17 @@
         <param name="outputs">FlatTrackingData structure containing the outputs</param>
         <summary>
             Simple check of up to date state according to the tracking data and the UpToDateCheckType.
-            Note: No tracking log compaction will take place when using this overload</summary>
+            Note: No tracking log compaction will take place when using this overload
+            </summary>
         <returns />
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No tracking log compaction will take place when using this overload  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MissingFiles">
@@ -472,7 +524,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Missing files have been detected in the TLog</summary>
+            Missing files have been detected in the TLog
+            </summary>
         <value>The missing files that have been detected in the TLog.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -508,7 +561,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The path for the newest file we have seen</summary>
+            The path for the newest file we have seen
+            </summary>
         <value>The path for the newest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -534,7 +588,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time for the newest file we have seen</summary>
+            The time for the newest file we have seen
+            </summary>
         <value>The time for the newest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -566,7 +621,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time for the newest file we have seen</summary>
+            The time for the newest file we have seen
+            </summary>
         <value>The UTC time for the newest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -602,7 +658,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The path of the newest TLog file</summary>
+            The path of the newest TLog file
+            </summary>
         <value>The path of the newest TLog file.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -628,7 +685,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time of the newest Tlog</summary>
+            The time of the newest Tlog
+            </summary>
         <value>The time of the newest Tlog.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -660,7 +718,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time of the newest Tlog</summary>
+            The time of the newest Tlog
+            </summary>
         <value>The time of the newest Tlog.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -696,7 +755,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The path for the oldest file we have seen</summary>
+            The path for the oldest file we have seen
+            </summary>
         <value>The path for the oldest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -722,7 +782,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time for the oldest file we have seen</summary>
+            The time for the oldest file we have seen
+            </summary>
         <value>The time for the oldest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -754,11 +815,21 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time for the oldest file we have seen</summary>
+            The time for the oldest file we have seen
+            </summary>
         <value>The UTC time for the oldest file seen.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="SaveTlog">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>This method re-writes the tlogs from the output table.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="SaveTlog">
       <MemberSignature Language="C#" Value="public void SaveTlog ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog() cil managed" />
@@ -787,7 +858,8 @@
       <Parameters />
       <Docs>
         <summary>
-            This method will re-write the tlogs from the output table</summary>
+            This method will re-write the tlogs from the output table
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -816,7 +888,8 @@
       <Docs>
         <param name="includeInTLog">The dependency filter.</param>
         <summary>
-            This method will re-write the tlogs from the current table</summary>
+            This method will re-write the tlogs from the current table
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -851,7 +924,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Should files in the TLog but no longer exist be skipped or recorded?</summary>
+            Should files in the TLog but no longer exist be skipped or recorded?
+            </summary>
         <value>
           <see langword="true" /> to skip missing files; <see langword="false" /> to record them.</value>
         <remarks>To be added.</remarks>
@@ -888,7 +962,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The TLog files that back this structure</summary>
+            The TLog files that back this structure
+            </summary>
         <value>The TLog files that back this structure.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -924,7 +999,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Are all the TLogs that were passed to us actually available on disk?</summary>
+            Are all the TLogs that were passed to us actually available on disk?
+            </summary>
         <value>
           <see langword="true" /> if all the TLogs that were passed are available on disk; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -961,7 +1037,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Should root markers in the TLog be treated as file accesses, or only as markers?</summary>
+            Should root markers in the TLog be treated as file accesses, or only as markers?
+            </summary>
         <value>Returns a switch that specifies whether root markers in the TLog be treated as file accesses, or only as markers.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -988,7 +1065,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Update the current state of entry details for the dependency table</summary>
+            Update the current state of entry details for the dependency table
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

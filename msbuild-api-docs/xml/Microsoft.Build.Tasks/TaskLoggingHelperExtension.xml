@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Helper logging class for tasks, used for dealing with two resource streams.</summary>
+            Helper logging class for tasks, used for dealing with two resource streams.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -67,8 +69,10 @@
         <param name="sharedResources">Shared UI and string resources.</param>
         <param name="helpKeywordPrefix">The prefix for composing Help keywords.</param>
         <summary>
-            public constructor</summary>
+            public constructor
+            </summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="FormatResourceString">
@@ -114,13 +118,15 @@
         <param name="args">Optional arguments for formatting the loaded string.</param>
         <summary>
             Loads the specified resource string and optionally formats it using the given arguments. The current thread's culture
-            is used for formatting.</summary>
+            is used for formatting.
+            </summary>
         <returns>The formatted string.</returns>
         <remarks>
             1) This method requires the owner task to have registered its resources either via the Task (or TaskMarshalByRef) base
                class constructor, or the "Task.TaskResources" (or "AppDomainIsolatedTask.TaskResources") property.
             2) This method is thread-safe.
             </remarks>
+        <forInternalUseOnly />
         <exception cref="T:System.ArgumentNullException">Thrown when <c>resourceName</c> is null.</exception>
         <exception cref="T:System.ArgumentException">Thrown when the string resource indicated by <c>resourceName</c> does not exist.</exception>
         <exception cref="T:System.InvalidOperationException">Thrown when the <c>TaskResources</c> property of the owner task is not set.</exception>
@@ -166,9 +172,18 @@
       <Docs>
         <summary>
             Used to load culture-specific resources. Derived classes should register their resources either during construction, or
-            via this property, if they have localized strings.</summary>
+            via this property, if they have localized strings.
+            </summary>
         <value>The shared UI and string resources.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property is used to load culture-specific resources. Derived classes should register their resources either during construction, or via this property, if they have localized strings.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

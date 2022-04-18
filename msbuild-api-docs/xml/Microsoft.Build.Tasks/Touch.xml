@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            This class defines the touch task.</summary>
+            This class defines the touch task.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.Touch" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AlwaysCreate">
@@ -99,10 +102,12 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Creates the file if it doesn't exist.</summary>
+            Creates the file if it doesn't exist.
+            </summary>
         <value>
           <see langword="true" /> if the <c>Touch</c> task creates any files that do not already exist; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -135,9 +140,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Run the task</summary>
+            Run the task
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Files">
@@ -183,9 +190,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            File(s) to touch.</summary>
+            File(s) to touch.
+            </summary>
         <value>The files to touch.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="ForceTouch">
@@ -227,10 +236,12 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Forces a touch even if the file to be touched is read-only.</summary>
+            Forces a touch even if the file to be touched is read-only.
+            </summary>
         <value>
           <see langword="true" /> if the <c>Touch</c> task forces a file touch even if the files are read-only; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Time">
@@ -272,9 +283,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies a specific time other than current.</summary>
+            Specifies a specific time other than current.
+            </summary>
         <value>A time other than the current time.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="TouchedFiles">
@@ -320,9 +333,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Output of this task - which files were touched.</summary>
+            Output of this task - which files were touched.
+            </summary>
         <value>The items that were successfully touched.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

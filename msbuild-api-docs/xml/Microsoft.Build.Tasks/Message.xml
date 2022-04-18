@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Task that simply emits a message. Importance defaults to high if not specified.</summary>
+            Task that simply emits a message. Importance defaults to high if not specified.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +66,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.Message" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Code">
@@ -87,9 +90,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Message code</summary>
+            Message code
+            </summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -125,6 +130,7 @@
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="File">
@@ -150,9 +156,11 @@
         <summary>
             Relevant file if any.
             If none is provided and this is a critical message, the file containing the Message
-            task will be used.</summary>
+            task will be used.
+            </summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="HelpKeyword">
@@ -176,9 +184,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Message help keyword</summary>
+            Message help keyword
+            </summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Importance">
@@ -220,9 +230,18 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Importance: high, normal, low (default normal)</summary>
+            Importance: high, normal, low (default normal)
+            </summary>
         <value>The importance of the message.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message importance can have a value of `high`, `normal` or `low`. The default value is `normal`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="IsCritical">
@@ -246,9 +265,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates if this is a critical message</summary>
+            Indicates if this is a critical message
+            </summary>
         <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -290,9 +311,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Text to log.</summary>
+            Text to log.
+            </summary>
         <value>The error text to log.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

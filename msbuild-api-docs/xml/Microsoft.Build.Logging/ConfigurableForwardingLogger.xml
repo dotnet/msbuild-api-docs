@@ -86,7 +86,7 @@
             This property is set by the build engine to allow a node loggers to forward messages to the
             central logger
             </summary>
-        <value>To be added.</value>
+        <value>A property that determines how a node logger to forwards messages to the central logger.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,6 +117,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes the logger.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -140,7 +149,7 @@
         <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
+        <param name="eventSource">The event source for build events.</param>
         <summary>
             Signs up the console logger for all build events.
             </summary>
@@ -177,8 +186,8 @@
         <Parameter Name="nodeCount" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
-        <param name="nodeCount">To be added.</param>
+        <param name="eventSource">The event source for build events.</param>
+        <param name="nodeCount">The node count.  Not used.</param>
         <summary>
             Signs up the console logger for all build events.
             </summary>
@@ -218,7 +227,7 @@
         <summary>
             The identifier of the node.
             </summary>
-        <value>To be added.</value>
+        <value>The ID of the node.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

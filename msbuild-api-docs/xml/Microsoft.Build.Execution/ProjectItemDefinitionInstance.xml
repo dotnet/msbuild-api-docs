@@ -58,12 +58,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata to retrieve.</param>
         <summary>
             Get any metadata in the item that has the specified name,
             otherwise returns null
             </summary>
-        <returns>To be added.</returns>
+        <returns>Any metadata in this item definition with the given name, or <see langword="null" /> if no metadata exists with this name.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -101,7 +101,7 @@
         <summary>
             Type of this item definition.
             </summary>
-        <value>To be added.</value>
+        <value>The item type of this item definition.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -127,7 +127,7 @@
             If there is no metadata, returns empty collection.
             This is a read-only collection.
             </summary>
-        <value>To be added.</value>
+        <value>All the metadata for this item definition. If there is no metadata, returns empty collection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,7 +151,7 @@
         <summary>
             Number of pieces of metadata on this item definition.
             </summary>
-        <value>To be added.</value>
+        <value>The number of pieces of metadata on this item definition.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -181,7 +181,7 @@
         <summary>
             Names of all metadata on this item definition
             </summary>
-        <value>To be added.</value>
+        <value>An enumerator over the metadata names for this item definition.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

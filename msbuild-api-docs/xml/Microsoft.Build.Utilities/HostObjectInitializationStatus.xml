@@ -27,8 +27,16 @@
   <Docs>
     <summary>
             The return value from InitializeHostObject.  This enumeration defines what action the ToolTask
-            should take next, after we've tried to initialize the host object.</summary>
-    <remarks>To be added.</remarks>
+            should take next, after we've tried to initialize the host object.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Utilities.HostObjectInitializationStatus> is the return type of the <xref:Microsoft.Build.Utilities.ToolTask.InitializeHostObject%2A> method of the <xref:Microsoft.Build.Utilities.ToolTask> class.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="NoActionReturnFailure">
@@ -62,7 +70,8 @@
       <Docs>
         <summary>
             This means that some of the parameters being passed into the task are invalid, and the
-            task should fail immediately.</summary>
+            task should fail immediately.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="NoActionReturnSuccess">
@@ -95,7 +104,8 @@
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            This means that the host object is already up-to-date, and no further action is necessary.</summary>
+            This means that the host object is already up-to-date, and no further action is necessary.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="UseAlternateToolToExecute">
@@ -131,7 +141,8 @@
             This means that either there is no host object available, or that the host object is 
             not capable of supporting all of the features required for this build.  Therefore,
             ToolTask should fallback to an alternate means of doing the build, such as invoking
-            the command-line tool.</summary>
+            the command-line tool.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="UseHostObjectToExecute">
@@ -165,7 +176,8 @@
       <Docs>
         <summary>
             This means that there exists an appropriate host object for this task, it can support
-            all of the parameters passed in, and it should be invoked to do the real work of the task.</summary>
+            all of the parameters passed in, and it should be invoked to do the real work of the task.
+            </summary>
       </Docs>
     </Member>
   </Members>

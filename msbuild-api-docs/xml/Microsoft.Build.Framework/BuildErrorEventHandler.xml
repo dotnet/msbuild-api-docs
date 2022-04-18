@@ -23,11 +23,20 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="sender">To be added.</param>
-    <param name="e">To be added.</param>
+    <param name="sender">The source of the event.</param>
+    <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" /> that contains the event data.</param>
     <summary>
             Type of handler for ErrorRaised events
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following example shows how to write a basic logger that responds to build events.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Framework/BuildErrorEventArgs/ColumnNumber/msbuild_BasicLogger.cs" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
 </Type>

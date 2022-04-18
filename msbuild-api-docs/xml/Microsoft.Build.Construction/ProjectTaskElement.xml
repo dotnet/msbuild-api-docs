@@ -31,6 +31,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName="AddOutputItem">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds an Output item after the last child.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddOutputItem">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputItem(string taskParameter, string itemType) cil managed" />
@@ -52,13 +61,13 @@
         <Parameter Name="itemType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskParameter">To be added.</param>
-        <param name="itemType">To be added.</param>
+        <param name="taskParameter">The name of the task which outputs to the item.</param>
+        <param name="itemType">The item type of the new item whose value is set to the output of the task.</param>
         <summary>
             Convenience method to add an Output Item to this task.
             Adds after the last child.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The added Output item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,17 +93,26 @@
         <Parameter Name="condition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskParameter">To be added.</param>
-        <param name="itemType">To be added.</param>
-        <param name="condition">To be added.</param>
+        <param name="taskParameter">The name of the parameter.</param>
+        <param name="itemType">The item type of the item.</param>
+        <param name="condition">The condition of the parameter.</param>
         <summary>
             Convenience method to add a conditioned Output Item to this task.
             Adds after the last child.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The added conditioned Output item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="AddOutputProperty">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds an Output property to this task after the last child.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="AddOutputProperty">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty(string taskParameter, string propertyName) cil managed" />
@@ -116,13 +134,13 @@
         <Parameter Name="propertyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskParameter">To be added.</param>
-        <param name="propertyName">To be added.</param>
+        <param name="taskParameter">The name of the parameter.</param>
+        <param name="propertyName">The name of the property.</param>
         <summary>
             Convenience method to add an Output Property to this task.
             Adds after the last child.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The added Output property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,14 +166,14 @@
         <Parameter Name="condition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskParameter">To be added.</param>
-        <param name="propertyName">To be added.</param>
-        <param name="condition">To be added.</param>
+        <param name="taskParameter">The name of the parameter.</param>
+        <param name="propertyName">The name of the property.</param>
+        <param name="condition">The condition of the property.</param>
         <summary>
             Convenience method to add a conditioned Output Property to this task.
             Adds after the last child.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The added conditioned Output property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -191,8 +209,15 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The <c>ContinueOnError</c> attribute value, or an empty string if the attribute is not present.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Removes the `ContinueOnError` attribute if the value is set to null or an empty string.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ContinueOnErrorLocation">
@@ -216,7 +241,7 @@
             Location of the "ContinueOnError" attribute on this element, if any.
             If there is no such attribute, returns null;
             </summary>
-        <value>To be added.</value>
+        <value>The location of the "ContinueOnError" attribute on this element, or <see langword="null" /> if there is no "ContinueOnError" attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -291,12 +316,12 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the parameter.</param>
         <summary>
             Gets the value of the parameter with the specified name,
             or empty string if it is not present.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The value of the parameter with the specified name, or an empty string if no parameter by that name exists in the task.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -332,7 +357,7 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty.
             </summary>
-        <value>To be added.</value>
+        <value>The architecture value for the task, or empty string if architecture value is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -357,7 +382,7 @@
             Location of the "MSBuildArchitecture" attribute on this element, if any.
             If there is no such attribute, returns null;
             </summary>
-        <value>To be added.</value>
+        <value>The location of the "MSBuildArchitecture" attribute on this element, or <see langword="null" /> if there is no "MSBuildArchitecture" attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -393,7 +418,7 @@
             Returns empty string if it is not present.
             Removes the attribute if the value to set is empty.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -418,7 +443,7 @@
             Location of the "MSBuildRuntime" attribute on this element, if any.
             If there is no such attribute, returns null;
             </summary>
-        <value>To be added.</value>
+        <value>The location of the "MSBuildRuntime" attribute on this element, or <see langword="null" /> if there is no "MSBuildRuntime" attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -442,7 +467,7 @@
         <summary>
             Gets the task name
             </summary>
-        <value>To be added.</value>
+        <value>The name of this task.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -466,7 +491,7 @@
         <summary>
             Gets any output children.
             </summary>
-        <value>To be added.</value>
+        <value>All Output element children.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -493,7 +518,7 @@
             If parameters differ only by case only the last one will be returned. MSBuild uses only this one.
             Hosts can still remove the other parameters by using RemoveAllParameters().
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -520,8 +545,15 @@
             If parameters differ only by case only the last one will be returned. MSBuild uses only this one.
             Hosts can still remove the other parameters by using RemoveAllParameters().
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All unevaluated parameters of this task.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Condition` and `ContinueOnError` attributes are not included in this collection. If parameters differ only by case then only the last one will be returned. See also RemoveAllParameters().  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveAllParameters">
@@ -569,7 +601,7 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the parameter to remove.</param>
         <summary>
             Removes any parameter on this task with the specified name.
             If there is no such parameter, does nothing.
@@ -598,12 +630,19 @@
         <Parameter Name="unevaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="unevaluatedValue">To be added.</param>
+        <param name="name">The name of the parameter to update or add.</param>
+        <param name="unevaluatedValue">The value of the parameter.</param>
         <summary>
             Adds (or modifies the value of) a parameter on this task
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Updates the parameter to the specified value if a parameter by that name exists in the task. Otherwise, creates a parameter with the specified name and value, and adds it to the task.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

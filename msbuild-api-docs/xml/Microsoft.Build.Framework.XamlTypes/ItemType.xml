@@ -105,7 +105,7 @@
         <summary>
             serializes IItemType.ItemType
             </summary>
-        <value>To be added.</value>
+        <value>The serialized default content type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,7 +143,7 @@
         <summary>
             serializes IItemType.DisplayName
             </summary>
-        <value>To be added.</value>
+        <value>The serialized display name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -204,11 +204,11 @@
         <Parameter Name="type" Type="System.Type" />
       </Parameters>
       <Docs>
-        <param name="type">To be added.</param>
+        <param name="type">The type of static data to retrieve.</param>
         <summary>
             see IProjectSchemaNode
             </summary>
-        <returns>To be added.</returns>
+        <returns>An enumerator over all instances of static data that have the given type. Returns <see langword="Null" /> or Empty list if no objects of the given type are provided by this node.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -243,7 +243,7 @@
         <summary>
             see IProjectSchemaNode
             </summary>
-        <returns>To be added.</returns>
+        <returns>An enumerator over all types of static data for the data-driven features that this node contains.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -277,7 +277,7 @@
         <summary>
             serializes IItemType.Name
             </summary>
-        <value>To be added.</value>
+        <value>The serialized item type name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -311,7 +311,8 @@
         <summary>
             serializes IItemType.UpToDateCheckInput
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if item type serialization is included in an up-to-date check; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -24,7 +24,23 @@
             This interface defines a "logger" in the build system. A logger subscribes to build system events. All logger classes must
             implement this interface to be recognized by the build engine.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ All logger classes must implement this interface to be recognized by the MSBuild engine.  
+  
+ Instead of implementing this interface directly, you can also derive your class from the helper class, <xref:Microsoft.Build.Utilities.Logger>, which provides default implementations of some <xref:Microsoft.Build.Framework.ILogger> members.  
+  
+   
+  
+## Examples  
+ The following example shows how to write a basic logger.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Framework/BuildErrorEventArgs/ColumnNumber/msbuild_BasicLogger.cs" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Initialize">
@@ -80,7 +96,16 @@
             to defaults. If a logger does not take parameters, it can ignore this property.
             </summary>
         <value>The parameter string (can be null).</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameters may be represented in this property in any format. For example, to represent two parameters and values, you could use the string "parameter1=value1;parameter2=value2".  
+  
+ This property can be a null reference (`Nothing` in Visual Basic).  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
@@ -135,7 +160,14 @@
             important that the guidelines for each level be followed, for a good user experience.
             </summary>
         <value>The verbosity level.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ While a logger is free to choose the events it logs, following the verbosity guidelines creates a consistent user experience.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

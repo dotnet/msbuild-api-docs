@@ -84,10 +84,19 @@
         <summary>
             Gets or sets the <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> object used to redirect build events.
             </summary>
-        <value>To be added.</value>
+        <value>A property that determines how a node logger to forwards messages to the central logger.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets or sets the level of detail to show in the event log.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -111,7 +120,7 @@
         <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
+        <param name="eventSource">The event source.</param>
         <summary>
             Initializes the logger.
             </summary>
@@ -148,8 +157,8 @@
         <Parameter Name="nodeCount" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
-        <param name="nodeCount">To be added.</param>
+        <param name="eventSource">The event source.</param>
+        <param name="nodeCount">The node count.</param>
         <summary>
             Initializes the logger.
             </summary>
@@ -189,7 +198,7 @@
         <summary>
             Gets or sets the identifier of the node which the forwarding logger is attached to.
             </summary>
-        <value>To be added.</value>
+        <value>The ID of the node.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -226,7 +235,7 @@
         <summary>
             Gets or sets the parameters.
             </summary>
-        <value>To be added.</value>
+        <value>A switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -280,7 +289,7 @@
         <summary>
             Gets or sets <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />.  This is currently hard-coded as <see cref="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed" />.
             </summary>
-        <value>To be added.</value>
+        <value>The level of detail to show in the event log.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

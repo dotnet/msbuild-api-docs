@@ -47,13 +47,20 @@
         <Parameter Name="project" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="project">To be added.</param>
+        <param name="project">The project to import.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
             Adds a new import after the last import in this import group.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The new import.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Convenience method that picks a location based on a heuristic.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateNewInstance">
@@ -102,7 +109,7 @@
         <summary>
             Get any contained properties.
             </summary>
-        <value>To be added.</value>
+        <value>All properties in this project import.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -48,6 +48,15 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Initialize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a file logger for a given build event or in a multiprocessor environment.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
@@ -103,8 +112,8 @@
         <Parameter Name="nodeCount" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="eventSource">To be added.</param>
-        <param name="nodeCount">To be added.</param>
+        <param name="eventSource">The event source.</param>
+        <param name="nodeCount">The node count.</param>
         <summary>
             Multiproc aware initialization
             </summary>
@@ -132,7 +141,14 @@
         <summary>
             Shutdown method implementation of ILogger - we need to flush and close our logfile.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The method must flush and close the file log.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

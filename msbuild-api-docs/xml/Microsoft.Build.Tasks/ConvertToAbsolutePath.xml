@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Task to call Path.GetFullPath</summary>
+            Task to call Path.GetFullPath
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,6 +66,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.ConvertToAbsolutePath" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AbsolutePaths">
@@ -109,9 +112,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This is the output of the task, a list of absolute paths for the items passed in</summary>
+            This is the output of the task, a list of absolute paths for the items passed in
+            </summary>
         <value>The list of absolute paths.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -144,9 +149,11 @@
       <Parameters />
       <Docs>
         <summary>
-            Calls Path.GetFullPath for each of the inputs.  Preserves metadata.</summary>
+            Calls Path.GetFullPath for each of the inputs.  Preserves metadata.
+            </summary>
         <returns>true on success, false on failure</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Paths">
@@ -188,9 +195,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The list of paths to convert to absolute paths.</summary>
+            The list of paths to convert to absolute paths.
+            </summary>
         <value>The list of relative paths to convert to absolute paths.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

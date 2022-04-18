@@ -39,6 +39,15 @@
             </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected TaskCommandLineEventArgs ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -153,7 +162,7 @@
         <summary>
             Gets the task command line associated with this event.
             </summary>
-        <value>To be added.</value>
+        <value>The command line used by the task to run the underlying program.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,7 +188,7 @@
         <summary>
             Gets the name of the task that raised this event.
             </summary>
-        <value>To be added.</value>
+        <value>The name of the task that raised the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -58,7 +58,7 @@
         <summary>
             Number of pieces of metadata on this item
             </summary>
-        <value>To be added.</value>
+        <value>The number of pieces of metadata on this item.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -93,7 +93,7 @@
             Evaluated include value.
             May be empty string.
             </summary>
-        <value>To be added.</value>
+        <value>The evaluated Include attribute value, which may be empty string.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,15 +117,22 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata.</param>
         <summary>
             Get any metadata in the item that has the specified name,
             otherwise returns null.
             Includes any metadata inherited from item definitions.
             Includes any built-in metadata.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The metadata with the given name, or <see langword="null" /> if no metadata exists with that name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not include any built-in metadata.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetMetadataValue">
@@ -148,7 +155,7 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata.</param>
         <summary>
             Get the value of a metadata on this item, or
             String.Empty if it does not exist or has no value.
@@ -156,8 +163,17 @@
             To determine whether a piece of metadata is actually present
             but with an empty value, use <see cref="M:Microsoft.Build.Execution.ProjectItemInstance.HasMetadata(System.String)">HasMetadata</see>.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The value of the metadata with the given name, including metadata inherited from item definitions, or an empty string if no metadata exists with that name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Includes built-in metadata.  
+  
+ To determine whether a piece of metadata is actually present but with an empty value, use <xref:Microsoft.Build.Execution.ProjectItemInstance.HasMetadata%2A>.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HasMetadata">
@@ -180,13 +196,14 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The name of the metadata.</param>
         <summary>
             Returns true if a particular piece of metadata is defined on this item (even if
             its value is empty string) otherwise false.
             This includes built-in metadata and metadata from item definitions.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+          <see langword="true" /> if the metadata with the given name is defined on this item (even if its value is empty string); otherwise, <see langword="false" />.</returns>
         <remarks>
             It has to include all of these because it's used for batching, which doesn't
             care where the metadata originated.
@@ -227,7 +244,7 @@
         <summary>
             Item type, for example "Compile"
             </summary>
-        <value>To be added.</value>
+        <value>The item type. For example, "Compile".</value>
         <remarks>
             This cannot be set, as it is used as the key into
             the project's items table.
@@ -258,8 +275,17 @@
             Includes any from item definitions.
             This is a read-only collection. To modify the metadata, use <see cref="M:Microsoft.Build.Execution.ProjectItemInstance.SetMetadata(System.String,System.String)" />.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>An enumerator over the evaluated metadata of the item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Does not include built-in metadata or metadata from item definitions.  
+  
+ To modify the metadata, use <xref:Microsoft.Build.Execution.ProjectItemInstance.SetMetadata%2A>.  
+  
+ ]]></format>
+        </remarks>
         <comment>
             Computed, not necessarily fast.
             </comment>
@@ -290,8 +316,15 @@
             Includes any from applicable item definitions.
             Includes both custom and built-in metadata.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The number of metadata entries, including metadata inherited from item definitions</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Includes both custom and built-in metadata.  
+  
+ ]]></format>
+        </remarks>
         <comment>
             Computed, not necessarily fast.
             </comment>
@@ -319,8 +352,15 @@
             Includes names from any applicable item definitions.
             Includes names of built-in metadata.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>All metadata names of this item, including metadata inherited from item definitions.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Includes names of built-in metadata.  
+  
+ ]]></format>
+        </remarks>
         <comment>
             Computed, not necessarily fast.
             </comment>
@@ -350,8 +390,20 @@
         <summary>
             ITaskItem implementation
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The collection of custom metadata.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Does not include built-in metadata.  
+  
+-   This method should return a clone of the metadata.  
+  
+-   Writing to this dictionary should not be reflected in the underlying item.  
+  
+ ]]></format>
+        </remarks>
         <comments>
             Returns a dictionary of the UNESCAPED values of the metadata
             </comments>
@@ -380,11 +432,24 @@
         <Parameter Name="destinationItem" Type="Microsoft.Build.Framework.ITaskItem" />
       </Parameters>
       <Docs>
-        <param name="destinationItem">To be added.</param>
+        <param name="destinationItem">The item to copy the metadata entries to.</param>
         <summary>
             ITaskItem implementation
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Follow the guidelines below when implementing this method.  
+  
+-   Do not overwrite the <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> property.  
+  
+-   Do not overwrite existing metadata entries.  
+  
+-   Do not copy metadata entries that do not make sense on the destination item.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Build.Framework.ITaskItem.GetMetadata">
@@ -416,11 +481,11 @@
         <Parameter Name="metadataName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="metadataName">To be added.</param>
+        <param name="metadataName">The name of the metadata entry.</param>
         <summary>
             ITaskItem implementation.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The value of the <paramref name="attributeName" /> metadata.</returns>
         <remarks>
             ITaskItem should not return null if metadata is not present.
             </remarks>
@@ -459,8 +524,30 @@
         <summary>
             ITaskItem implementation
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The item specification.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The item specification is an arbitrary string. If the item represents a file on disk, the item specification will be the path of that file.  
+  
+ The <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> for the following item declaration in a project file is `File.cs`.  
+  
+```xml  
+<ItemGroup>  
+    <Compile Include="File.cs"/>  
+</ItemGroup>  
+```  
+  
+   
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Build.Framework.ITaskItem.MetadataNames">
@@ -486,7 +573,7 @@
         <summary>
             ITaskItem implementation
             </summary>
-        <value>To be added.</value>
+        <value>The names of the metadata entries associated with the item.</value>
         <remarks>To be added.</remarks>
         <comment>
             Computed, not necessarily fast.
@@ -517,8 +604,8 @@
         <Parameter Name="metadataValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="metadataName">To be added.</param>
-        <param name="metadataValue">To be added.</param>
+        <param name="metadataName">Metadata name to be added or changed.</param>
+        <param name="metadataValue">Metadata value to be added or changed.</param>
         <summary>
             ITaskItem implementation
             </summary>
@@ -552,7 +639,7 @@
         <summary>
             ITaskItem2 implementation
             </summary>
-        <returns>To be added.</returns>
+        <returns>The cloned metadata, with values' escaping preserved.</returns>
         <remarks>To be added.</remarks>
         <comments>
             Returns a dictionary of the ESCAPED values of the metadata
@@ -589,8 +676,15 @@
             Evaluated include value, escaped as necessary.
             May be empty string.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The item include value.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Taking the opportunity to fix the property name, although this doesn't make it obvious it's an improvement on ItemSpec.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped">
@@ -616,11 +710,11 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
+        <param name="name">The metadata to be queried.</param>
         <summary>
             ITaskItem2 implementation.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The escaped metadata value.</returns>
         <remarks>
             ITaskItem2 should not return null if metadata is not present.
             </remarks>
@@ -650,12 +744,19 @@
         <Parameter Name="metadataValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="metadataName">To be added.</param>
-        <param name="metadataValue">To be added.</param>
+        <param name="metadataName">The metadata name.</param>
+        <param name="metadataValue">The metadata value.</param>
         <summary>
             ITaskItem2 implementation
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Taking the opportunity to fix the property name, although this doesn't make it obvious it's an improvement on SetMetadata.  
+  
+ ]]></format>
+        </remarks>
         <comments>
             Assumes metadataValue is unescaped.
             </comments>
@@ -691,7 +792,7 @@
         <summary>
             Owning project
             </summary>
-        <value>To be added.</value>
+        <value>The owning project.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -718,14 +819,30 @@
         <Parameter Name="metadataName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="metadataName">To be added.</param>
+        <param name="metadataName">The metadata name.</param>
         <summary>
             Removes a metadatum with the specified name.
             Used by TaskItem
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This method is used by TaskItem.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="SetMetadata">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adds metadata with the given names and values. Overwrites any metadata with the same name already in the collection.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="SetMetadata">
       <MemberSignature Language="C#" Value="public void SetMetadata (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; metadataDictionary);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadata(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; metadataDictionary) cil managed" />
@@ -746,7 +863,7 @@
         <Parameter Name="metadataDictionary" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="metadataDictionary">To be added.</param>
+        <param name="metadataDictionary">The metadata to add.</param>
         <summary>
             Add a metadata with the specified names and values.
             Overwrites any metadata with the same name already in the collection.
@@ -775,13 +892,13 @@
         <Parameter Name="evaluatedValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="evaluatedValue">To be added.</param>
+        <param name="name">The name of the metadata to add.</param>
+        <param name="evaluatedValue">The evaluated value of the metadata to add.</param>
         <summary>
             Add a metadata with the specified name and value.
             Overwrites any metadata with the same name already in the collection.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The new metadata.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -806,7 +923,7 @@
         <summary>
             Produce a string representation.
             </summary>
-        <returns>To be added.</returns>
+        <returns>A string that represents the current item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

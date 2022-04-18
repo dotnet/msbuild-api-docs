@@ -29,7 +29,23 @@
             authors can only use parameters marked with this attribute in a task's &lt;Output&gt; tag. All task parameters, including those
             marked with this attribute, may be treated as inputs to a task by the build engine.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The MSBuild engine will only allow task properties marked with this attribute to output data from a task. Project authors can only use properties marked with this attribute in the `Output` element of a project file. All other task properties are treated as inputs to a task.  
+  
+ For more information about using attributes, see [Extending Metadata Using Attributes](/dotnet/standard/attributes/).  
+  
+   
+  
+## Examples  
+ The following example shows the code for a task that creates one or more directories.  
+  
+ :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.Execution/ProjectItemInstance/Microsoft.Build.Framework.ITaskItem.ItemSpec/msbuild_MakeDirTask.cs" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

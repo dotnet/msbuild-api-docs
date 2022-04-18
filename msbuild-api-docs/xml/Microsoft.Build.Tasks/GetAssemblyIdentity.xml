@@ -27,8 +27,10 @@
   <Interfaces />
   <Docs>
     <summary>
-            Sniffs input files for their assembly identities, and outputs a set of items with the identity information.</summary>
+            Sniffs input files for their assembly identities, and outputs a set of items with the identity information.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
     <comment>
              Input:  Assembly Include="foo.exe"
              Output: Identity Include="Foo, Version=1.0.0.0", Name="Foo, Version="1.0.0.0"
@@ -68,6 +70,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.GetAssemblyIdentity" /> class.</summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Assemblies">
@@ -115,6 +118,7 @@
         <summary>Gets or sets the retrieved assembly identities.</summary>
         <value>The retrieved assembly identities.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="AssemblyFiles">
@@ -158,6 +162,7 @@
         <summary>Gets or sets the files to retrieve identities from.</summary>
         <value>The files to retrieve identities from.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -193,6 +198,7 @@
         <returns>
           <see langword="true" /> if the <c>GetAssemblyIdentity</c> task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
   </Members>

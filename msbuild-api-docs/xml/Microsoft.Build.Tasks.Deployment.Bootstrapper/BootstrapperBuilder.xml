@@ -45,10 +45,21 @@
   </Attributes>
   <Docs>
     <summary>
-            This class is the top-level object for the bootstrapper system.</summary>
+            This class is the top-level object for the bootstrapper system.
+            </summary>
     <remarks>To be added.</remarks>
+    <forInternalUseOnly />
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see langword="BootstrapperBuilder" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BootstrapperBuilder ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -75,8 +86,10 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates a new BootstrapperBuilder.</summary>
+            Creates a new BootstrapperBuilder.
+            </summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -101,8 +114,10 @@
       <Docs>
         <param name="visualStudioVersion">The version of Visual Studio that is used to build this bootstrapper.</param>
         <summary>
-            Creates a new BootstrapperBuilder.</summary>
+            Creates a new BootstrapperBuilder.
+            </summary>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -141,9 +156,11 @@
       <Docs>
         <param name="settings">The properties used to build this bootstrapper.</param>
         <summary>
-            Generates a bootstrapper based on the specified settings.</summary>
+            Generates a bootstrapper based on the specified settings.
+            </summary>
         <returns>The results of the bootstrapper generation</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="GetOutputFolders">
@@ -185,9 +202,11 @@
         <param name="fallbackCulture">The fallback culture used to build the bootstrapper</param>
         <param name="componentsLocation">How the bootstrapper would package the selected components</param>
         <summary>
-            Returns the directories bootstrapper component files would be copied to when built given the specified settings</summary>
+            Returns the directories bootstrapper component files would be copied to when built given the specified settings
+            </summary>
         <returns>The directories to which bootstrapper component files are copied when they are created, given the specified settings.</returns>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Path">
@@ -228,9 +247,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the location of the required bootstrapper files.</summary>
+            Specifies the location of the required bootstrapper files.
+            </summary>
         <value>Path to bootstrapper files.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="Products">
@@ -265,9 +286,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns all products available at the current bootstrapper Path</summary>
+            Returns all products available at the current bootstrapper Path
+            </summary>
         <value>All products available at the current bootstrapper <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" />.</value>
         <remarks>To be added.</remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <Member MemberName="XmlToConfigurationFile">

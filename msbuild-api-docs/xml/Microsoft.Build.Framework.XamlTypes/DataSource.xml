@@ -134,7 +134,8 @@
             Indicates if a property is configuration-dependent as indicated by the presence of a configuration
             condition attached to the property definition at its persistence location.
             </summary>
-        <value>To be added.</value>
+        <value>
+          <see langword="true" /> if a property is configuration-dependent; otherwise, <see langword="false" />.</value>
         <remarks>
             This field is optional and has the default value of <c>true</c>.
             </remarks>
@@ -172,8 +173,15 @@
             specified the item type of the item definition or the item, respectively. For common properties
             this field must not be set.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The item type of the data source.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If a <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> is an item definition metadata or item metadata, this field specifies the item type of the item definition or the item, respectively. For common properties, this field must not be set.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Label">
@@ -208,8 +216,15 @@
             a property/item definition metadata belongs to. Default value is the
             empty string.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The label of the property or item group.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The default value is the empty string.  
+  
+ ]]></format>
+        </remarks>
         <example> A VC++ property that exists in the project manifest
             in the MSBuild property group with label <c>Globals</c> would have this
             same value for this field. </example>
@@ -236,7 +251,7 @@
             Gets or sets the semicolon-delimited list of MSBuild targets that must be executed before reading
             the read-only properties or items described by this <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" />.
             </summary>
-        <value>To be added.</value>
+        <value>A semicolon-delimited list.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -314,7 +329,7 @@
         <summary>
             The storage location for this data source.
             </summary>
-        <value>To be added.</value>
+        <value>The storage location for this data source.</value>
         <remarks>
             This field is mandatory unless <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistenceStyle" /> is set. In that case, the parent
             <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" /> will be used with the specified style. Example values are <c>ProjectFile</c> and
@@ -371,7 +386,7 @@
         <summary>
             Gets or sets a value indicating where the default value for this property can be found.
             </summary>
-        <value>To be added.</value>
+        <value>Returns <see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -407,8 +422,15 @@
             or <c>TargetResults</c> (when <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" /> is non-empty).
             Among other things this governs how the data is treated during build.
             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value>The data type.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typically has the value `Item`, `ItemDefinition`, or `Property`.  
+  
+ ]]></format>
+        </remarks>
         <example>
             A value of <c>Item</c> for this property indicates that this property is actually
             an item array - the list of all items with the item type specified by <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.ItemType" />.

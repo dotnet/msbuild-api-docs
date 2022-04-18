@@ -30,6 +30,15 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets a new build manager without specifying a name.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildManager ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -74,12 +83,19 @@
         <Parameter Name="hostName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="hostName">To be added.</param>
+        <param name="hostName">The host for the build manager.</param>
         <summary>
             Creates a new build manager with an arbitrary distinct name.
             Normally there is only one build manager in a process, and it is the default build manager.
             Access it with <see cref="P:Microsoft.Build.Execution.BuildManager.DefaultBuildManager" /></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Create a new BuildManager. Creating multiple multi-processor aware build managers is not supported due to conflicts in the NodeManager.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BeginBuild">
@@ -160,13 +176,20 @@
         <Parameter Name="requestData" Type="Microsoft.Build.Execution.BuildRequestData" />
       </Parameters>
       <Docs>
-        <param name="parameters">To be added.</param>
-        <param name="requestData">To be added.</param>
+        <param name="parameters">Build parameters.</param>
+        <param name="requestData">Build request data.</param>
         <summary>
             Convenience method.  Submits a lone build request and blocks until results are available.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The build result.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Convenience method.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.InvalidOperationException">Thrown if a build is already in progress.</exception>
       </Docs>
     </Member>
@@ -220,12 +243,19 @@
         <Parameter Name="requestData" Type="Microsoft.Build.Execution.BuildRequestData" />
       </Parameters>
       <Docs>
-        <param name="requestData">To be added.</param>
+        <param name="requestData">Build request.</param>
         <summary>
             Convenience method. Submits a build request and blocks until the results are available.
             </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The build result.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Convenience method.  
+  
+ ]]></format>
+        </remarks>
         <exception cref="T:System.InvalidOperationException">Thrown if StartBuild has not been called or if EndBuild has been called.</exception>
       </Docs>
     </Member>
@@ -301,7 +331,7 @@
         <summary>
             Gets the singleton instance of the Build Manager.
             </summary>
-        <value>To be added.</value>
+        <value>The singleton instance of the Build Manager.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -432,12 +462,12 @@
         <Parameter Name="requestData" Type="Microsoft.Build.Execution.BuildRequestData" />
       </Parameters>
       <Docs>
-        <param name="requestData">To be added.</param>
+        <param name="requestData">Build request data.</param>
         <summary>
             Submits a build request to the current build but does not start it immediately.  Allows the user to
             perform asynchronous execution or access the submission ID prior to executing the request.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The submission that will be built.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">Thrown if StartBuild has not been called or if EndBuild has been called.</exception>
       </Docs>
