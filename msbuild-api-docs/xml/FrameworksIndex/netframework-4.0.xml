@@ -7,6 +7,7 @@
     <Assembly Name="Microsoft.Build.Framework" Version="4.0.0.0" />
     <Assembly Name="Microsoft.Build.Tasks.v4.0" Version="4.0.0.0" />
     <Assembly Name="Microsoft.Build.Utilities.v4.0" Version="4.0.0.0" />
+    <Assembly Name="XamlBuildTask" Version="4.0.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Build.BuildEngine">
     <Type Name="Microsoft.Build.BuildEngine.BuildItem" Id="T:Microsoft.Build.BuildEngine.BuildItem">
@@ -3385,6 +3386,45 @@
       <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.ITaskItemArray" />
       <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.String" />
       <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.StringArray" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.Xaml.CompilationPass2Task" Id="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task">
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.ApplicationMarkup" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.AssemblyName" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.BuildTaskPath" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.LocalAssemblyReference" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.References" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.RootNamespace" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask" Id="T:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask">
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.ApplicationMarkupTypeName" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.AssemblyName" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.CompileTargetName" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.CurrentProject" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.OutputPath" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.ReferencePaths" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.SourceCodeFiles" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask" Id="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask">
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.ApplicationMarkup" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.AssemblyName" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.BuildTaskPath" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedCodeFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedResources" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedSourceExtension" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.IsInProcessXamlMarkupCompile" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.KnownReferencePaths" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Language" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.OutputPath" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.References" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RequiresCompilationPass2" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RootNamespace" />
+      <Member Id="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.SourceCodeFiles" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Xaml.PropertyRelation" Id="T:Microsoft.Build.Tasks.Xaml.PropertyRelation">
       <Member Id="M:Microsoft.Build.Tasks.Xaml.PropertyRelation.#ctor" />
