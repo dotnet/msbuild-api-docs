@@ -31,7 +31,8 @@
   </Interfaces>
   <Docs>
     <summary>
-            This helper base class provides default functionality for tasks. This class can only be instantiated in a derived form.</summary>
+            This helper base class provides default functionality for tasks. This class can only be instantiated in a derived form.
+            </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -86,7 +87,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Default (family) constructor.</summary>
+            Default (family) constructor.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -120,7 +122,8 @@
       <Docs>
         <param name="taskResources">The task resources.</param>
         <summary>
-            This (family) constructor allows derived task classes to register their resources.</summary>
+            This (family) constructor allows derived task classes to register their resources.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -166,7 +169,8 @@
             This (family) constructor allows derived task classes to register their resources, as well as provide a prefix for
             composing help keywords from string resource names. If the prefix is an empty string, then string resource names will
             be used verbatim as help keywords. For an example of how the prefix is used, see the
-            TaskLoggingHelper.LogErrorWithCodeFromResources(string, object[]) method.</summary>
+            TaskLoggingHelper.LogErrorWithCodeFromResources(string, object[]) method.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -219,7 +223,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The build engine automatically sets this property to allow tasks to call back into it.</summary>
+            The build engine automatically sets this property to allow tasks to call back into it.
+            </summary>
         <value>The build engine interface available to tasks.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -258,7 +263,8 @@
         <summary>
             The build engine automatically sets this property to allow tasks to call back into it.
             This is a convenience property so that task authors inheriting from this class do not
-            have to cast the value from IBuildEngine to IBuildEngine2.</summary>
+            have to cast the value from IBuildEngine to IBuildEngine2.
+            </summary>
         <value>The build engine interface available to tasks.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,7 +290,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Retrieves the <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> version of the build engine interface provided by the host.</summary>
+            Retrieves the <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> version of the build engine interface provided by the host.
+            </summary>
         <value>The <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> available to tasks.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -310,7 +317,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Retrieves the <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> version of the build engine interface provided by the host.</summary>
+            Retrieves the <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> version of the build engine interface provided by the host.
+            </summary>
         <value>The <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> available to tasks.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -463,7 +471,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Must be implemented by derived class.</summary>
+            Must be implemented by derived class.
+            </summary>
         <returns>true, if successful</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -514,7 +523,8 @@
             Gets or sets the prefix used to compose help keywords from string resource names. If a task does not have help
             keywords associated with its messages, it can ignore this property or set it to null. If the prefix is set to an empty
             string, then string resource names will be used verbatim as help keywords. For an example of how this prefix is used,
-            see the TaskLoggingHelper.LogErrorWithCodeFromResources(string, object[]) method.</summary>
+            see the TaskLoggingHelper.LogErrorWithCodeFromResources(string, object[]) method.
+            </summary>
         <value>The help keyword prefix string (can be null).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -568,7 +578,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The build engine sets this property if the host IDE has associated a host object with this particular task.</summary>
+            The build engine sets this property if the host IDE has associated a host object with this particular task.
+            </summary>
         <value>The host object instance (can be null).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -620,7 +631,8 @@
             Gets an instance of a TaskLoggingHelper class containing task logging methods.
             The taskLoggingHelper is a MarshallByRef object which needs to have MarkAsInactive called
             if the parent task is making the appdomain and marshaling this object into it. If the appdomain is not unloaded at the end of 
-            the task execution and the MarkAsInactive method is not called this will result in a leak of the task instances in the appdomain the task was created within.</summary>
+            the task execution and the MarkAsInactive method is not called this will result in a leak of the task instances in the appdomain the task was created within.
+            </summary>
         <value>The logging helper object.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -664,7 +676,8 @@
       <Docs>
         <summary>
             Gets or sets the task's culture-specific resources. Derived classes should register their resources either during
-            construction, or via this property, if they have localized strings.</summary>
+            construction, or via this property, if they have localized strings.
+            </summary>
         <value>The task's resources (can be null).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

@@ -33,7 +33,8 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes base functionality common to all supported manifest types.</summary>
+            Describes base functionality common to all supported manifest types.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -105,7 +106,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the identity of the manifest.</summary>
+            Specifies the identity of the manifest.
+            </summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> object representing the identity of the manifest.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -174,7 +176,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the set of assemblies referenced by the manifest.</summary>
+            Specifies the set of assemblies referenced by the manifest.
+            </summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection" /> object representing the set of assemblies that the manifest references.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -222,7 +225,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies a textual description for the manifest.</summary>
+            Specifies a textual description for the manifest.
+            </summary>
         <value>A string describing the manifest.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -262,7 +266,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Identifies an assembly reference which is the entry point of the application.</summary>
+            Identifies an assembly reference which is the entry point of the application.
+            </summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference" /> object representing an assembly reference that is the entry point of the application.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,7 +307,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the set of files referenced by the manifest.</summary>
+            Specifies the set of files referenced by the manifest.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection" /> object representing the set of files that the manifest references.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -351,7 +357,8 @@
       <Docs>
         <summary>
             The input stream from which the manifest was read.
-            Used by ManifestWriter to reconstitute input which is not represented in the object representation.</summary>
+            Used by ManifestWriter to reconstitute input which is not represented in the object representation.
+            </summary>
         <value>A <see cref="T:System.IO.Stream" /> object representing the input stream from which the manifest was read.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -432,7 +439,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Contains a collection of current error and warning messages.</summary>
+            Contains a collection of current error and warning messages.
+            </summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection" /> object, which contains a collection of current error and warning messages.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -484,7 +492,8 @@
             If only using to read a manifest then set this flag to true.
             If using to write a new manifest then set this flag to false.
             The default is false.
-            This flag provides additional context for the manifest generator, and affects how some error messages are reported.</summary>
+            This flag provides additional context for the manifest generator, and affects how some error messages are reported.
+            </summary>
         <value>A <see langword="Boolean" /> value indicating whether the manifest is operating in read-only or read-write mode.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -537,7 +546,8 @@
         <summary>
             Locates all specified assembly and file references by searching in the same directory as the loaded manifest, or in the current directory.
             The location of each referenced assembly and file is required for hash computation and assembly identity resolution.
-            Any resulting errors or warnings are reported in the OutputMessages collection.</summary>
+            Any resulting errors or warnings are reported in the OutputMessages collection.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -583,7 +593,8 @@
         <summary>
             Locates all specified assembly and file references by searching in the specified directories.
             The location of each referenced assembly and file is required for hash computation and assembly identity resolution.
-            Any resulting errors or warnings are reported in the OutputMessages collection.</summary>
+            Any resulting errors or warnings are reported in the OutputMessages collection.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -637,7 +648,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the location where the manifest was loaded or saved.</summary>
+            Specifies the location where the manifest was loaded or saved.
+            </summary>
         <value>A string indicating the location where the manifest was loaded or saved.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -726,7 +738,8 @@
             Updates file information for each referenced assembly and file.
             The file information includes a hash computation and a file size for each referenced file and assembly.
             Also, the assembly identity is obtained for any referenced assemblies with an unspecified assembly identity.
-            Any resulting errors or warnings are reported in the OutputMessages collection.</summary>
+            Any resulting errors or warnings are reported in the OutputMessages collection.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -809,7 +822,8 @@
       <Docs>
         <summary>
             Performs various checks to verify the validity of the manifest.
-            Any resulting errors or warnings are reported in the OutputMessages collection.</summary>
+            Any resulting errors or warnings are reported in the OutputMessages collection.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

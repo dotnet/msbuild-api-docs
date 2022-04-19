@@ -37,7 +37,8 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes the identity of an assembly.</summary>
+            Describes the identity of an assembly.
+            </summary>
     <remarks>This is a serialization format, do not remove or change the private fields.</remarks>
   </Docs>
   <Members>
@@ -82,7 +83,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,7 +118,8 @@
       <Docs>
         <param name="identity">Specifies another instance to duplicate.</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -156,7 +159,8 @@
       <Docs>
         <param name="name">Specifies the simple name of the assembly.</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,7 +202,8 @@
         <param name="name">Specifies the simple name of the assembly.</param>
         <param name="version">Specifies the version of the assembly.</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -244,7 +249,8 @@
         <param name="publicKeyToken">Specifies the public key token of the assembly, which is the last 8 bytes of the SHA-1 hash of the public key under which the assembly is signed.</param>
         <param name="culture">Specifies the culture of the assembly. A blank string indicates the invariant culture.</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -292,7 +298,8 @@
         <param name="culture">Specifies the culture of the assembly. A blank string indicates the invariant culture.</param>
         <param name="processorArchitecture">Specifies the processor architecture of the assembly. Valid values are "msil", "x86", "ia64", "amd64".</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -342,7 +349,8 @@
         <param name="processorArchitecture">Specifies the processor architecture of the assembly. Valid values are "msil", "x86", "ia64", "amd64".</param>
         <param name="type">Specifies the type attribute of the assembly. Valid values are "win32" or a blank string.</param>
         <summary>
-            Initializes a new instance of the AssemblyIdentity class.</summary>
+            Initializes a new instance of the AssemblyIdentity class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -389,7 +397,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the culture of the assembly. A blank string indicates the invariant culture.</summary>
+            Specifies the culture of the assembly. A blank string indicates the invariant culture.
+            </summary>
         <value>A string indicating the culture of the assembly. A blank string indicates the invariant culture.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -428,7 +437,8 @@
         <param name="assemblyName">The full name of the assembly, also known as the display name.</param>
         <summary>
             Parses string to obtain an assembly identity.
-            Returns null if identity could not be obtained.</summary>
+            Returns null if identity could not be obtained.
+            </summary>
         <returns>The resulting assembly identity.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -468,7 +478,8 @@
         <summary>
             Obtains identity of the specified assembly.
             File can be a PE with an embedded xml manifest, a stand-alone xml manifest file, or a .NET assembly.
-            Returns null if identity could not be obtained.</summary>
+            Returns null if identity could not be obtained.
+            </summary>
         <returns>The assembly identity of the specified file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -508,7 +519,8 @@
         <summary>
             Obtains identity of the specified .NET assembly.
             File must be a .NET assembly.
-            Returns null if identity could not be obtained.</summary>
+            Returns null if identity could not be obtained.
+            </summary>
         <returns>The assembly identity of the specified file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -548,7 +560,8 @@
         <summary>
             Obtains identity of the specified manifest file.
             File must be a stand-alone xml manifest file.
-            Returns null if identity could not be obtained.</summary>
+            Returns null if identity could not be obtained.
+            </summary>
         <returns>The assembly identity of the specified file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -588,7 +601,8 @@
         <summary>
             Obtains identity of the specified native assembly.
             File must be either a PE with an embedded xml manifest, or a stand-alone xml manifest file.
-            Returns null if identity could not be obtained.</summary>
+            Returns null if identity could not be obtained.
+            </summary>
         <returns>The assembly identity of the specified file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -626,7 +640,8 @@
       <Docs>
         <param name="flags">Specifies which attributes to be included in the full name.</param>
         <summary>
-            Returns the full name of the assembly.</summary>
+            Returns the full name of the assembly.
+            </summary>
         <returns>A string representation of the full name.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -666,7 +681,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns true if this assembly is part of the .NET Framework.</summary>
+            Returns true if this assembly is part of the .NET Framework.
+            </summary>
         <value>A <see langword="Boolean" /> value indicating whether this assembly is part of the .NET Framework. <see langword="True" /> if this assembly is part of the .NET Framework; otherwise <see langword="False" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -738,7 +754,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies whether the assembly identity represents a neutral platform assembly.</summary>
+            Specifies whether the assembly identity represents a neutral platform assembly.
+            </summary>
         <value>A <see langword="Boolean" /> value indicating whether the assembly identity represents a neutral platform assembly. <see langword="True" /> if the assembly identity is a neutral platform assembly; otherwise <see langword="False" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -778,7 +795,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies whether the assembly identity is a strong name.</summary>
+            Specifies whether the assembly identity is a strong name.
+            </summary>
         <value>A <see langword="Boolean" /> value indicating whether the assembly identity is a strong name. <see langword="True" /> if the assembly identity is a strong name; otherwise <see langword="False" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -826,7 +844,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the simple name of the assembly.</summary>
+            Specifies the simple name of the assembly.
+            </summary>
         <value>A string indicating the simple name of the assembly.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -874,7 +893,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the processor architecture of the assembly. Valid values are "msil", "x86", "ia64", "amd64".</summary>
+            Specifies the processor architecture of the assembly. Valid values are "msil", "x86", "ia64", "amd64".
+            </summary>
         <value>A string representing the processor architecture of the assembly.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -929,7 +949,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the public key token of the assembly, which is the last 8 bytes of the SHA-1 hash of the public key under which the assembly is signed.</summary>
+            Specifies the public key token of the assembly, which is the last 8 bytes of the SHA-1 hash of the public key under which the assembly is signed.
+            </summary>
         <value>A string indicating the public key token of the assembly.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1017,7 +1038,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the type attribute of the assembly. Valid values are "win32" or a blank string.</summary>
+            Specifies the type attribute of the assembly. Valid values are "win32" or a blank string.
+            </summary>
         <value>A string indicating the type attribute of the assembly.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1072,7 +1094,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the version of the assembly.</summary>
+            Specifies the version of the assembly.
+            </summary>
         <value>A string indicating the assembly version.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -40,7 +40,8 @@
   <Docs>
     <summary>
             Base class used for tasks that spawn an executable. This class implements the ToolPath property which can be used to
-            override the default path.</summary>
+            override the default path.
+            </summary>
     <remarks>
             INTERNAL WARNING: DO NOT USE the Log property in this class! Log points to resources in the task assembly itself, and 
             we want to use resources from Utilities. Use LogPrivate (for private Utilities resources) and LogShared (for shared MSBuild resources)
@@ -82,7 +83,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Protected constructor</summary>
+            Protected constructor 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,7 +118,8 @@
       <Docs>
         <param name="taskResources">The resource manager for task resources</param>
         <summary>
-            Protected constructor</summary>
+            Protected constructor 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,7 +155,8 @@
         <param name="taskResources">The resource manager for task resources</param>
         <param name="helpKeywordPrefix">The help keyword prefix for task's messages</param>
         <summary>
-            Protected constructor</summary>
+            Protected constructor 
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -220,7 +224,8 @@
         <summary>
             We expect the tasks to override this method, if they support host objects. The implementation should call into the
             host object to perform the real work of the task. For example, for compiler tasks like Csc and Vbc, this method would
-            call Compile() on the host object.</summary>
+            call Compile() on the host object.
+            </summary>
         <returns>The return value indicates success (true) or failure (false) if the host object was actually called to do the work.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -250,7 +255,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Cancels the process executing the task by asking it to close nicely, then after a short period, forcing termination.</summary>
+            Cancels the process executing the task by asking it to close nicely, then after a short period, forcing termination.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -288,7 +294,8 @@
         <param name="fileName">File to delete</param>
         <summary>
             Delete temporary file. If the delete fails for some reason (e.g. file locked by anti-virus) then
-            the call will not throw an exception. Instead a warning will be logged, but the build will not fail.</summary>
+            the call will not throw an exception. Instead a warning will be logged, but the build will not fail.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -330,7 +337,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            When set to true, it passes /Q to the cmd.exe command line such that the command line does not get echo-ed on stdout</summary>
+            When set to true, it passes /Q to the cmd.exe command line such that the command line does not get echo-ed on stdout
+            </summary>
         <value>
           <see langword="true" /> if command line echo is off; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -384,7 +392,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the Path override value.</summary>
+            Gets the Path override value.
+            </summary>
         <value>The new value for the Environment for the task.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -458,7 +467,8 @@ abstract class CustomToolTask : ToolTask
         <summary>
             Array of equals-separated pairs of environment
             variables that should be passed to the spawned executable,
-            in addition to (or selectively overriding) the regular environment block.</summary>
+            in addition to (or selectively overriding) the regular environment block.
+            </summary>
         <value>To be added.</value>
         <remarks>
             Using this instead of EnvironmentOverride as that takes a Dictionary,
@@ -499,7 +509,8 @@ abstract class CustomToolTask : ToolTask
       <Parameters />
       <Docs>
         <summary>
-            This method invokes the tool with the given parameters.</summary>
+            This method invokes the tool with the given parameters.
+            </summary>
         <returns>true, if task executes successfully</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -542,7 +553,8 @@ abstract class CustomToolTask : ToolTask
         <param name="commandLineCommands">Command line arguments that should be passed to the tool executable directly</param>
         <summary>
             Writes out a temporary response file and shell-executes the tool requested.  Enables concurrent
-            logging of the output of the tool.</summary>
+            logging of the output of the tool.
+            </summary>
         <returns>exit code from the tool - if errors were logged and the tool has an exit code of zero, then we sit it to -1</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -587,7 +599,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             The return code of the spawned process. If the task logged any errors, but the process 
-            had an exit code of 0 (success), this will be set to -1.</summary>
+            had an exit code of 0 (success), this will be set to -1.
+            </summary>
         <value>The returned exit code of the executable file. If the task logged errors, but the executable returned an exit code of 0, this method returns -1.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -624,7 +637,8 @@ abstract class CustomToolTask : ToolTask
         <summary>
             Returns a string with those switches and other information that can't go into a response file and
             must go directly onto the command line.
-            Called after ValidateParameters and SkipTaskExecution</summary>
+            Called after ValidateParameters and SkipTaskExecution
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -675,7 +689,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Gets the fully qualified tool name. Should return ToolExe if ToolTask should search for the tool 
-            in the system path. If ToolPath is set, this is ignored.</summary>
+            in the system path. If ToolPath is set, this is ignored.
+            </summary>
         <returns>Path string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -726,7 +741,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Returns a string with those switches and other information that can go into a response file.
-            Called after ValidateParameters and SkipTaskExecution</summary>
+            Called after ValidateParameters and SkipTaskExecution
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -772,7 +788,8 @@ abstract class CustomToolTask : ToolTask
         <param name="commandLineCommands" />
         <param name="responseFileSwitch" />
         <summary>
-            Initializes the information required to spawn the process executing the tool.</summary>
+            Initializes the information required to spawn the process executing the tool.
+            </summary>
         <returns>The information required to start the process.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -812,7 +829,8 @@ abstract class CustomToolTask : ToolTask
         <summary>
             Returns the command line switch used by the tool executable to specify the response file.
             Will only be called if the task returned a non empty string from GetResponseFileCommands
-            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands</summary>
+            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -857,7 +875,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Gets the working directory to use for the process. Should return null if ToolTask should use the
-            current directory.</summary>
+            current directory. 
+            </summary>
         <returns />
         <remarks>This is a method rather than a property so that derived classes (like Exec) can choose to
             expose a public WorkingDirectory property, and it would be confusing to have two properties.</remarks>
@@ -894,7 +913,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Allows tool to handle the return code.
-            This method will only be called with non-zero exitCode.</summary>
+            This method will only be called with non-zero exitCode.
+            </summary>
         <returns>The return value of this method will be used as the task return value</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -933,7 +953,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Whether this ToolTask has logged any errors</summary>
+            Whether this ToolTask has logged any errors
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -969,7 +990,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             We expect tasks to override this method if they support host objects.  The implementation should
-            make sure that the host object is ready to perform the real work of the task.</summary>
+            make sure that the host object is ready to perform the real work of the task.  
+            </summary>
         <returns>The return value indicates what steps to take next.  The default is to assume that there
             is no host object provided, and therefore we should fallback to calling the command-line tool.</returns>
         <remarks>To be added.</remarks>
@@ -1012,7 +1034,8 @@ abstract class CustomToolTask : ToolTask
         <summary>
             Calls a method on the TaskLoggingHelper to parse a single line of text to
             see if there are any errors or warnings in canonical format.  This can
-            be overridden by the derived class if necessary.</summary>
+            be overridden by the derived class if necessary.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1049,11 +1072,14 @@ abstract class CustomToolTask : ToolTask
       </Parameters>
       <Docs>
         <param name="toolName">
-            The tool to Log. This is the actual tool being used, ie. if ToolExe has been specified it will be used, otherwise it will be ToolName</param>
+            The tool to Log. This is the actual tool being used, ie. if ToolExe has been specified it will be used, otherwise it will be ToolName
+            </param>
         <param name="pathToTool">
-            The path from where the tool is being run.</param>
+            The path from where the tool is being run.
+            </param>
         <summary>
-            Logs the tool name and the path from where it is being run.</summary>
+            Logs the tool name and the path from where it is being run.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1088,7 +1114,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Should ALL messages received on the standard error stream be logged as errors.</summary>
+            Should ALL messages received on the standard error stream be logged as errors.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1125,9 +1152,11 @@ abstract class CustomToolTask : ToolTask
       </Parameters>
       <Docs>
         <param name="message">
-            Descriptive message about what is happening - usually the command line to be executed.</param>
+            Descriptive message about what is happening - usually the command line to be executed.
+            </param>
         <summary>
-            Logs the actual command line about to be executed (or what the task wants the log to show)</summary>
+            Logs the actual command line about to be executed (or what the task wants the log to show)
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1182,7 +1211,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Overridable property specifying the encoding of the response file, UTF8 by default</summary>
+            Overridable property specifying the encoding of the response file, UTF8 by default
+            </summary>
         <value>The <see cref="T:System.Text.Encoding" /> of the response file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1219,7 +1249,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <param name="responseString">The response string.</param>
         <summary>
-            Overridable method to escape content of the response file</summary>
+            Overridable method to escape content of the response file
+            </summary>
         <returns>The response string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1254,7 +1285,8 @@ abstract class CustomToolTask : ToolTask
       <Parameters />
       <Docs>
         <summary>
-            Returns true if task execution is not necessary. Executed after ValidateParameters</summary>
+            Returns true if task execution is not necessary. Executed after ValidateParameters
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1295,7 +1327,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Overridable property specifying the encoding of the captured task standard error stream</summary>
+            Overridable property specifying the encoding of the captured task standard error stream
+            </summary>
         <value>The <see cref="T:System.Text.Encoding" /> of the response file.</value>
         <remarks>
             Console-based output uses the current system OEM code page by default. Note that we should not use Console.OutputEncoding
@@ -1340,7 +1373,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Task Parameter: Importance with which to log text from the
-            standard error stream.</summary>
+            standard error stream.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1372,7 +1406,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            The actual importance at which standard error messages will be logged.</summary>
+            The actual importance at which standard error messages will be logged.
+            </summary>
         <value>The actual importance at which standard error messages will be logged.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1407,7 +1442,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Importance with which to log text from the
-            standard error stream.</summary>
+            standard error stream.
+            </summary>
         <value>The <see cref="T:Microsoft.Build.Framework.MessageImportance" /> with which to log errors.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1441,7 +1477,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Overridable property specifying the encoding of the captured task standard output stream</summary>
+            Overridable property specifying the encoding of the captured task standard output stream
+            </summary>
         <value>The <see cref="T:System.Text.Encoding" /> of the response file.</value>
         <remarks>
             Console-based output uses the current system OEM code page by default. Note that we should not use Console.OutputEncoding
@@ -1486,7 +1523,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Task Parameter: Importance with which to log text from the
-            standard out stream.</summary>
+            standard out stream.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1518,7 +1556,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            The actual importance at which standard out messages will be logged.</summary>
+            The actual importance at which standard out messages will be logged.
+            </summary>
         <value>The actual importance at which standard out messages will be logged.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1553,7 +1592,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Importance with which to log text from in the
-            standard out stream.</summary>
+            standard out stream.
+            </summary>
         <value>The <see cref="T:Microsoft.Build.Framework.MessageImportance" /> with which to log errors.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1589,7 +1629,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            A timeout to wait for a task to terminate before killing it.  In milliseconds.</summary>
+            A timeout to wait for a task to terminate before killing it.  In milliseconds.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1634,7 +1675,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Project visible property that allows the user to specify an amount of time after which the task executable
-            is terminated.</summary>
+            is terminated. 
+            </summary>
         <value>Time-out in milliseconds. Default is <see cref="F:System.Threading.Timeout.Infinite" /> (no time-out).</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1666,7 +1708,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Used to signal when a tool has been cancelled.</summary>
+            Used to signal when a tool has been cancelled.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1703,7 +1746,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Projects may set this to override a task's ToolName.
-            Tasks may override this to prevent that.</summary>
+            Tasks may override this to prevent that.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1738,7 +1782,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             Implemented by the derived class. Returns a string which is the name of the underlying .EXE to run e.g. "resgen.exe"
-            Only used by the ToolExe getter.</summary>
+            Only used by the ToolExe getter.
+            </summary>
         <value>Name of tool.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1792,7 +1837,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            Project-visible property allows the user to override the path to the executable.</summary>
+            Project-visible property allows the user to override the path to the executable.
+            </summary>
         <value>Path to tool.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1829,7 +1875,8 @@ abstract class CustomToolTask : ToolTask
       <Docs>
         <summary>
             When set to true, the tool task will create a batch file for the command-line and execute that using the command-processor,
-            rather than executing the command directly.</summary>
+            rather than executing the command directly.
+            </summary>
         <value>
           <see langword="true" /> if the tool task will create a batch file for the command-line and execute that using the command-processor; <see langword="false" /> if the tool task will execute the command directly.</value>
         <remarks>To be added.</remarks>
@@ -1891,7 +1938,8 @@ abstract class CustomToolTask : ToolTask
       <Parameters />
       <Docs>
         <summary>
-            Implemented in the derived class</summary>
+            Implemented in the derived class
+            </summary>
         <returns>true, if successful</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1927,7 +1975,8 @@ abstract class CustomToolTask : ToolTask
       </ReturnValue>
       <Docs>
         <summary>
-            When set to true, this task will yield the node when its task is executing.</summary>
+            When set to true, this task will yield the node when its task is executing.
+            </summary>
         <value>
           <see langword="true" /> if the task will yield the node during tool execution; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>

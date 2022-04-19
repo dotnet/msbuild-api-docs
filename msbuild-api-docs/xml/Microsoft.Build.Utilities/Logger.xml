@@ -32,7 +32,8 @@
   <Docs>
     <summary>
             This helper base class provides default functionality for loggers that handle events raised by the build engine. This
-            class can only be instantiated in a derived form.</summary>
+            class can only be instantiated in a derived form.
+            </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -120,7 +121,8 @@
       <Docs>
         <param name="args">Error event arguments</param>
         <summary>
-            Generates a message in the default format from a BuildErrorEventArgs object.</summary>
+            Generates a message in the default format from a BuildErrorEventArgs object.
+            </summary>
         <returns>Error message in canonical format</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -158,7 +160,8 @@
       <Docs>
         <param name="args">Warning event arguments</param>
         <summary>
-            Generates a message in the default format from a BuildWarningEventArgs object.</summary>
+            Generates a message in the default format from a BuildWarningEventArgs object.
+            </summary>
         <returns>Warning message in canonical format</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,7 +202,8 @@
       <Docs>
         <param name="eventSource">The available events that a logger can subscribe to.</param>
         <summary>
-            Must be implemented by derived class to subscribe to build events.</summary>
+            Must be implemented by derived class to subscribe to build events.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -251,7 +255,8 @@
         <param name="checkVerbosity" />
         <summary>
             Determines whether the current verbosity setting is at least the value
-            passed in.</summary>
+            passed in.
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -307,7 +312,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the user-specified parameters to the logger. Derived class can ignore if it doesn't take parameters.</summary>
+            Gets or sets the user-specified parameters to the logger. Derived class can ignore if it doesn't take parameters.
+            </summary>
         <value>The parameter string (can be null).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -359,7 +365,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Derived class should override if it needs to release any resources.</summary>
+            Derived class should override if it needs to release any resources.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -419,7 +426,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the level of detail to show in the event log.</summary>
+            Gets or sets the level of detail to show in the event log.
+            </summary>
         <value>The verbosity level.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

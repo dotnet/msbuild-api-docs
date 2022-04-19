@@ -33,7 +33,8 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes the application security trust information.</summary>
+            Describes the application security trust information.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -96,7 +97,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Resets the object to its default state.</summary>
+            Resets the object to its default state.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -129,7 +131,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Determines whether the application has permission to call unmanaged code.</summary>
+            Determines whether the application has permission to call unmanaged code.
+            </summary>
         <value>A Boolean value indicating whether the application has permission to call unmanaged code.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -182,7 +185,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Determines whether the application is full trust or partial trust.</summary>
+            Determines whether the application is full trust or partial trust.
+            </summary>
         <value>A Boolean value indicating whether the application is full trust or partial trust.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -231,7 +235,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the permission set object for the application trust.</summary>
+            Gets or sets the permission set object for the application trust.
+            </summary>
         <value>A <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" /> object for the application trust.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -276,7 +281,8 @@
       <Docs>
         <summary>
             Determines whether to preserve partial trust permission when the full trust flag is set.
-            If this option is false with full trust specified, then any permissions defined in the permission set object will be dropped on save.</summary>
+            If this option is false with full trust specified, then any permissions defined in the permission set object will be dropped on save.
+            </summary>
         <value>A Boolean value indicating whether to preserve partial trust permission when the full trust flag is set.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -340,7 +346,8 @@
       <Docs>
         <param name="input">Specifies an input stream.</param>
         <summary>
-            Reads the application trust from an XML file.</summary>
+            Reads the application trust from an XML file.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -384,7 +391,8 @@
       <Docs>
         <param name="path">The name of the input file.</param>
         <summary>
-            Reads the application trust from an XML file.</summary>
+            Reads the application trust from an XML file.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -443,7 +451,8 @@
       <Docs>
         <param name="input">Specifies an input stream.</param>
         <summary>
-            Reads the application trust from a ClickOnce application manifest.</summary>
+            Reads the application trust from a ClickOnce application manifest.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -480,7 +489,8 @@
       <Docs>
         <param name="path">The name of the input file.</param>
         <summary>
-            Reads the application trust from a ClickOnce application manifest.</summary>
+            Reads the application trust from a ClickOnce application manifest.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -519,7 +529,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Describes the level of "same site" access permitted, specifying whether the application has permission to communicate with the server from which it was deployed.</summary>
+            Describes the level of "same site" access permitted, specifying whether the application has permission to communicate with the server from which it was deployed.
+            </summary>
         <value>A string indicating the level of same site access permitted. The values can be <see langword="site" /> or <see langword="none" />.  
   
  <see langword="site" /> specifies that the application can call Web services at the same URL from which it was deployed; if deployed from a share, the application has permission to read files from that share.  
@@ -615,7 +626,8 @@
       <Docs>
         <param name="output" />
         <summary>
-            Writes the application trust to an XML file.</summary>
+            Writes the application trust to an XML file.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -661,7 +673,8 @@
       <Docs>
         <param name="path">The name of the output file.</param>
         <summary>
-            Writes the application trust to an XML file.</summary>
+            Writes the application trust to an XML file.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -716,7 +729,8 @@
       <Docs>
         <param name="output">Specifies an output stream.</param>
         <summary>
-            Writes the application trust to a new template ClickOnce application manifest.</summary>
+            Writes the application trust to a new template ClickOnce application manifest.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -762,7 +776,8 @@
         <summary>
             Writes the application trust to a ClickOnce application manifest.
             If the file exists, the trust section will be updated.
-            If the file does not exist, a new template manifest with the specified trust will be created.</summary>
+            If the file does not exist, a new template manifest with the specified trust will be created.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -810,7 +825,8 @@
         <param name="input">Specifies an input stream.</param>
         <param name="output">Specifies an output stream.</param>
         <summary>
-            Updates an existing ClickOnce application manifest with the specified trust.</summary>
+            Updates an existing ClickOnce application manifest with the specified trust.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

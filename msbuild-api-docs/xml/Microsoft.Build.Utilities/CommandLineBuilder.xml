@@ -29,11 +29,12 @@
     <summary>
              (1) Make sure values containing hyphens are quoted (RC at least requires this)
              (2) Escape any embedded quotes. 
-                 -- Literal double quotes should be written in the form " not ""
+                 -- Literal double quotes should be written in the form \" not ""
                  -- Backslashes falling just before doublequotes must be doubled.
                  -- Literal double quotes can only occur in pairs (you cannot pass a single literal double quote)
              	-- Functional double quotes (for example to handle spaces) are best put around both name and value
-             	    in switches like /Dname=value.</summary>
+             	    in switches like /Dname=value.
+             </summary>
     <remarks>
              
              Below are some quoting experiments, using the /D switch with the CL and RC preprocessor.
@@ -107,7 +108,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor</summary>
+            Default constructor
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -147,7 +149,8 @@
       <Docs>
         <param name="quoteHyphensOnCommandLine">If true, hyphens should be quoted.</param>
         <summary>
-            Default constructor</summary>
+            Default constructor
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -230,7 +233,8 @@
         <param name="fileItem">File name to append, if it's null this method has no effect</param>
         <summary>
             Appends a file name quoting it if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the file name.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the file name.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -288,7 +292,8 @@
         <param name="fileName">File name to append, if it's null this method has no effect</param>
         <summary>
             Appends a file name quoting it if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the file name.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the file name.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -356,7 +361,8 @@
         <param name="delimiter">Delimiter to put between items in the command line</param>
         <summary>
             Appends array of ITaskItem specs as file names, quoting them if necessary, delimited by a delimiter.
-            This method appends a space to the command line (if it's not currently empty) before the file names.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the file names.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -413,7 +419,8 @@
         <param name="delimiter">The delimiter between file names</param>
         <summary>
             Appends array of file name strings, quoting them if necessary, delimited by a delimiter.
-            This method appends a space to the command line (if it's not currently empty) before the file names.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the file names.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -468,8 +475,9 @@
         <param name="fileName">The file name to append</param>
         <summary>
             Appends a file name. Quotes are added if they are needed. 
-            If the first character of the file name is a dash, "." is prepended to avoid confusing the file name with a switch
-            This method does not append a space to the command line before executing.</summary>
+            If the first character of the file name is a dash, ".\" is prepended to avoid confusing the file name with a switch
+            This method does not append a space to the command line before executing.
+            </summary>
         <remarks>
             In the future, this function may fixup 'text' to handle
             literal embedded quotes.
@@ -510,7 +518,8 @@
         <param name="buffer" />
         <param name="unquotedTextToAppend" />
         <summary>
-            Appends given text to the buffer after first quoting the text if necessary.</summary>
+            Appends given text to the buffer after first quoting the text if necessary.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -544,7 +553,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Add a space or newline to the specified string if and only if it's not empty.</summary>
+            Add a space or newline to the specified string if and only if it's not empty.
+            </summary>
         <remarks>
             This is a pretty obscure method and so it's only available to inherited classes.
             </remarks>
@@ -584,7 +594,8 @@
         <param name="switchName">The switch to append to the command line, may not be null</param>
         <summary>
             Appends a command-line switch that has no separate value, without any quoting.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -651,7 +662,8 @@
         <param name="parameter">Switch parameter to append, quoted if necessary. If null, this method has no effect.</param>
         <summary>
             Append a switch [overload]
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -708,7 +720,8 @@
         <param name="parameter">Switch parameter to append, quoted if necessary. If null, this method has no effect.</param>
         <summary>
             Appends a command-line switch that takes a single string parameter, quoting the parameter if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -768,7 +781,8 @@
         <summary>
             Appends a command-line switch that takes a ITaskItem[] parameter,
             and add double-quotes around the individual filenames if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -828,7 +842,8 @@
         <summary>
             Appends a command-line switch that takes a string[] parameter,
             and add double-quotes around the individual filenames if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -894,7 +909,8 @@
         <param name="parameter">Switch parameter to append, not quoted. If null, this method has no effect.</param>
         <summary>
             Appends the literal parameter without trying to quote.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -949,7 +965,8 @@
         <param name="parameter">Switch parameter to append, not quoted. If null, this method has no effect.</param>
         <summary>
             Appends the literal parameter without trying to quote.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1006,7 +1023,8 @@
         <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
         <summary>
             Appends a command-line switch that takes a ITaskItem[] parameter, not quoting the individual parameters
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1063,7 +1081,8 @@
         <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
         <summary>
             Appends a command-line switch that takes a string[] parameter, not quoting the individual parameters
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+            This method appends a space to the command line (if it's not currently empty) before the switch.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1120,7 +1139,8 @@
         <param name="textToAppend">The string to append</param>
         <summary>
             Appends a string. No quotes are added.
-            This method does not append a space to the command line before executing.</summary>
+            This method does not append a space to the command line before executing.
+            </summary>
         <remarks>
             In the future, this function may fixup 'textToAppend' to handle
             literal embedded quotes.
@@ -1164,7 +1184,8 @@
         <param name="textToAppend">The string to append</param>
         <summary>
             Appends a string. Quotes are added if they are needed.
-            This method does not append a space to the command line before executing.</summary>
+            This method does not append a space to the command line before executing.
+            </summary>
         <remarks>
             Escapes any double quotes in the string.
             </remarks>
@@ -1205,7 +1226,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Retrieves the private StringBuilder instance for inheriting classes</summary>
+            Retrieves the private StringBuilder instance for inheriting classes
+            </summary>
         <value>A <see cref="T:System.Text.StringBuilder" /> for inheriting classes.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1243,7 +1265,8 @@
       <Docs>
         <param name="parameter">the string to examine for characters that require quoting</param>
         <summary>
-            Checks the given switch parameter to see if it must/can be quoted.</summary>
+            Checks the given switch parameter to see if it must/can be quoted.
+            </summary>
         <returns>true, if parameter should be quoted</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1269,7 +1292,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the length of the current command</summary>
+            Returns the length of the current command
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1304,7 +1328,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Return the command-line as a string.</summary>
+            Return the command-line as a string.
+            </summary>
         <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1354,7 +1379,8 @@
         <param name="parameter">Switch parameter to scan</param>
         <summary>
             Throws if the parameter has a double-quote in it. This is used to prevent parameter
-            injection. It's virtual so that tools can override this method if they want to have quotes escaped in filenames</summary>
+            injection. It's virtual so that tools can override this method if they want to have quotes escaped in filenames
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

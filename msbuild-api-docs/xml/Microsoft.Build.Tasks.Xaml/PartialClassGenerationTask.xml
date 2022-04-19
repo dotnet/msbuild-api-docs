@@ -15,7 +15,16 @@
   <Interfaces />
   <Docs>
     <summary>Accesses XAML files that define types (with <see langword="x:Class" />) and generates the corresponding source code that can be compiled into an assembly.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The XAML files processed by this task define new types as well as instantiate those types. The <xref:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask> class reads in the new type definitions and generates source code files. In addition, it generates a XAML file that contains the markup that instantiates the newly generated types.  
+  
+ This task should not be used to consume untrusted XAML inputs.  
+  
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -80,7 +89,14 @@
       <Docs>
         <summary>Gets or sets the name of the assembly being compiled.</summary>
         <value>The name of the assembly being compiled.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This property is only set when processing root-only XAML files.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildTaskPath">
@@ -366,7 +382,14 @@
         <summary>Gets or sets a value that indicates whether this project requires executing the <see cref="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task" /> task.</summary>
         <value>
           <see langword="true" /> if there are unresolved types; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ While processing the XAML files, the <xref:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask> looks for unresolved types. If it finds any, it launches the <xref:Microsoft.Build.Tasks.Xaml.CompilationPass2Task> that compiles all of the XAML files in the project and checks to make sure all types are resolved.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RootNamespace">

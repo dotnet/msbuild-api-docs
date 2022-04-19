@@ -15,7 +15,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Represents a Toolset in MSBuild. For more information about Toolsets, see Standard and Custom Toolset Configurations.</summary>
+    <summary>Represents a Toolset in MSBuild. For more information about Toolsets, see <see href="/visualstudio/msbuild/standard-and-custom-toolset-configurations">Standard and Custom Toolset Configurations</see>.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -26,6 +26,15 @@
     </remarks>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> object.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath) cil managed" />

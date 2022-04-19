@@ -27,7 +27,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            The AspNetCompiler task, which is a wrapper around aspnet_compiler.exe</summary>
+            The AspNetCompiler task, which is a wrapper around aspnet_compiler.exe
+            </summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -101,7 +102,8 @@
       <Docs>
         <param name="commandLine">command line builder class to add arguments to</param>
         <summary>
-            Generates command line arguments for aspnet_compiler.exe</summary>
+            Generates command line arguments for aspnet_compiler.exe
+            </summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -146,7 +148,8 @@
       <Docs>
         <summary>
             If specified, the strong-name assembly will allow partially
-            trusted callers.</summary>
+            trusted callers.
+            </summary>
         <value>
           <see langword="true" /> if the <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> should be applied to the strongly named assembly that Aspnet_compiler.exe generates; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -200,7 +203,8 @@
       <Docs>
         <summary>
             If Clean is true, then the application will be built clean. Previously
-            compiled components will be re-compiled.</summary>
+            compiled components will be re-compiled.
+            </summary>
         <value>
           <see langword="true" /> if the precompiled application will be built clean; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -254,7 +258,8 @@
       <Docs>
         <summary>
             If Debug is true, then the debug information will be emitted during
-            compilation.</summary>
+            compilation.
+            </summary>
         <value>
           <see langword="true" /> if the debug information (.PDB file) is emitted during compilation; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -307,7 +312,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            If specified, the assemblly is not fully signed when created.</summary>
+            If specified, the assemblly is not fully signed when created. 
+            </summary>
         <value>
           <see langword="true" /> if the <see cref="T:System.Reflection.AssemblyDelaySignAttribute" /> should be applied to the generated assembly; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -344,7 +350,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Override the Execute method to be able to send ExternalProjectStarted/Finished events.</summary>
+            Override the Execute method to be able to send ExternalProjectStarted/Finished events.
+            </summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -389,7 +396,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            If specified, the compiled assemblies will be given fixed names.</summary>
+            If specified, the compiled assemblies will be given fixed names.
+            </summary>
         <value>
           <see langword="true" /> if one assembly should be generated for each page in the application; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -445,7 +453,8 @@
       <Docs>
         <summary>
             If Force is true, then the web is compile with -f flag overwriting
-            files in the target location</summary>
+            files in the target location
+            </summary>
         <value>
           <see langword="true" /> if existing files in the <paramref name="targetDir" /> directory and its subdirectories should be overwritten; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -482,7 +491,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Determine the path to aspnet_compiler.exe</summary>
+            Determine the path to aspnet_compiler.exe
+            </summary>
         <returns>path to aspnet_compiler.exe, null if not found</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -517,7 +527,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies a strong name key container.</summary>
+            Specifies a strong name key container.
+            </summary>
         <value>
           <see langword="true" /> if the <see cref="T:System.Reflection.AssemblyKeyNameAttribute" /> should be applied to the compiled assembly; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -560,7 +571,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The physical path to the strong name key file.</summary>
+            The physical path to the strong name key file.
+            </summary>
         <value>
           <see langword="true" /> if the <see cref="T:System.Reflection.AssemblyKeyFileAttribute" /> should be applied to the compiled assembly; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -604,7 +616,8 @@
       <Docs>
         <summary>
             The full IIS metabase path of the application. This switch 
-            cannot be combined with the virtualPath or PhysicalDir option.</summary>
+            cannot be combined with the virtualPath or PhysicalDir option.
+            </summary>
         <value>The full IIS metabase path of the application.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -640,7 +653,8 @@
       <Docs>
         <summary>
             The physical path of the application to be compiled. If physicalDir
-            is missing, the IIS metabase is used to locate the application.</summary>
+            is missing, the IIS metabase is used to locate the application.
+            </summary>
         <value>The physical path of the application to be compiled.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -675,7 +689,8 @@
       <Docs>
         <summary>
             The TargetFrameworkMoniker indicating which .NET Framework version of 
-            aspnet_compiler.exe should be used.  Only accepts .NET Framework monikers.</summary>
+            aspnet_compiler.exe should be used.  Only accepts .NET Framework monikers. 
+            </summary>
         <value>The TargetFrameworkMoniker.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -718,7 +733,8 @@
       <Docs>
         <summary>
             The physical path to which the application is compiled. If not
-            specified, the application is precompiled in-place.</summary>
+            specified, the application is precompiled in-place. 
+            </summary>
         <value>The physical path to which the application is compiled.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -760,7 +776,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the tool to execute</summary>
+            The name of the tool to execute
+            </summary>
         <value>The name of the AspNetCompiler tool.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -806,7 +823,8 @@
       <Docs>
         <summary>
             If Updateable is true, then the web is compile with -u flag so that it
-            can be updated after compilation</summary>
+            can be updated after compilation
+            </summary>
         <value>
           <see langword="true" /> if the precompiled application will be updateable; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -850,7 +868,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Validate the task arguments, log any warnings/errors</summary>
+            Validate the task arguments, log any warnings/errors
+            </summary>
         <returns>true if arguments are corrent enough to continue processing, false otherwise</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -888,7 +907,8 @@
             The virtual path of the application to be compiled. If PhysicalDir is
             used to locate the application is specified. Otherwise, the IIS metabase
             is used, and the application is assumed to be in the default site (under
-            "/LM/W3SVC/1/Root").</summary>
+            "/LM/W3SVC/1/Root").
+            </summary>
         <value>The virtual path of the application to be compiled.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

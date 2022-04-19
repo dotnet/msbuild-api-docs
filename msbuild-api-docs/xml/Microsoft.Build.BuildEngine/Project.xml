@@ -177,7 +177,7 @@
       <Docs>
         <param name="projectFile">The name of the project file to import. Corresponds to the <see langword="Project" /> attribute of the <see langword="Import" /> element.</param>
         <param name="condition">The condition to evaluate before importing the project. Corresponds to the <see langword="Condition" /> attribute of the <see langword="Import" /> element.</param>
-        <summary>Adds an Import element to the end of the project.</summary>
+        <summary>Adds an <see href="/visualstudio/msbuild/import-element-msbuild">Import</see> element to the end of the project.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -214,7 +214,7 @@
       <Docs>
         <param name="itemName">The name of the item collection to add the item to. Corresponds to the user-defined name of the <see langword="Item" /> element.</param>
         <param name="itemInclude">The value of the <see langword="Include" /> attribute of the item.</param>
-        <summary>Adds the specified Item element to the project.</summary>
+        <summary>Adds the specified <see href="/visualstudio/msbuild/item-element-msbuild">Item</see> element to the project.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> containing the created item.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -253,7 +253,7 @@
         <param name="itemInclude">The value of the <see langword="Include" /> attribute of the item.</param>
         <param name="treatItemIncludeAsLiteral">
           <see langword="true" /> to treat the <paramref name="itemInclude" /> parameter as a literal value; otherwise, <see langword="false" />.</param>
-        <summary>Adds the specified Item element to the project.</summary>
+        <summary>Adds the specified <see href="/visualstudio/msbuild/item-element-msbuild">Item</see> element to the project.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> containing the created item.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -284,7 +284,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Adds a new ItemGroup element to the project.</summary>
+        <summary>Adds a new <see href="/visualstudio/msbuild/itemgroup-element-msbuild">ItemGroup</see> element to the project.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing the created item group.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -312,7 +312,7 @@
       <Docs>
         <param name="insertAtEndOfProject">
           <see langword="true" /> to insert the <see langword="PropertyGroup" /> at the end of the project; otherwise, <see langword="false" />.</param>
-        <summary>Adds a new PropertyGroup element to the project.</summary>
+        <summary>Adds a new <see href="/visualstudio/msbuild/propertygroup-element-msbuild">PropertyGroup</see> element to the project.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> containing the created property group.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -347,7 +347,7 @@
       <Docs>
         <param name="taskName">The name of the task to reference from the assembly. Corresponds to the <see langword="TaskName" /> attribute of the <see langword="UsingTask" /> element.</param>
         <param name="assemblyFile">The file path to the assembly. Corresponds to the <see langword="AssemblyFile" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <summary>Adds a new UsingTask element with the specified assembly file.</summary>
+        <summary>Adds a new <see href="/visualstudio/msbuild/usingtask-element-msbuild">UsingTask</see> element with the specified assembly file.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,7 +381,7 @@
       <Docs>
         <param name="taskName">The name of the task to reference from the assembly. Corresponds to the <see langword="TaskName" /> attribute of the <see langword="UsingTask" /> element.</param>
         <param name="assemblyName">The name of the assembly to load. Corresponds to the <see langword="AssemblyName" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <summary>Adds a new UsingTask element with the specified assembly name.</summary>
+        <summary>Adds a new <see href="/visualstudio/msbuild/usingtask-element-msbuild">UsingTask</see> element with the specified assembly name.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -586,7 +586,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>DefaultTargets</c> attribute of the Project element in the MSBuild project.</summary>
+        <summary>Gets or sets the <c>DefaultTargets</c> attribute of the <see href="/visualstudio/msbuild/project-element-msbuild">Project</see> element in the MSBuild project.</summary>
         <value>A semi-colon (;) delimited list of the targets specified in the <c>DefaultTargets</c> attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -608,7 +608,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the ToolsVersion XML attribute found on the Project element in the project file.</summary>
+        <summary>Gets or sets the ToolsVersion XML attribute found on the <see href="https://docs.microsoft.com/visualstudio/msbuild/project-element-msbuild">Project element</see> in the project file.</summary>
         <value>A string representing the Tools version.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -695,7 +695,7 @@
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of all items in a project, even those not used in the build process because a Condition attribute evaluated to <see langword="false" />.</summary>
+        <summary>Gets a collection of all items in a project, even those not used in the build process because a <see href="/visualstudio/msbuild/msbuild-conditions">Condition</see> attribute evaluated to <see langword="false" />.</summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all items in a project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -860,7 +860,7 @@
       <Docs>
         <param name="itemName">The name of the specified item collection.</param>
         <summary>Returns all items belonging to the specified item collection.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all items belonging to the specified item collection, even those not used in the build process because a Condition attribute evaluated to <see langword="false" />.</returns>
+        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all items belonging to the specified item collection, even those not used in the build process because a <see href="https://docs.microsoft.com/visualstudio/msbuild/msbuild-conditions">Condition</see> attribute evaluated to <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -920,7 +920,7 @@
       </Parameters>
       <Docs>
         <param name="id">The name of the element in the <see langword="ProjectExtensions" /> element to return.</param>
-        <summary>Returns a string value of the XML from the specified element in the ProjectExtensions element.</summary>
+        <summary>Returns a string value of the XML from the specified element in the <see href="/visualstudio/msbuild/projectextensions-element-msbuild">ProjectExtensions</see> element.</summary>
         <returns>The string value of the specified element in the <c>ProjectExtensions</c> element of the project.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1033,7 +1033,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>InitialTargets</c> attribute of the Project element in the MSBuild project.</summary>
+        <summary>Gets or sets the <c>InitialTargets</c> attribute of the <see href="/visualstudio/msbuild/project-element-msbuild">Project</see> element in the MSBuild project.</summary>
         <value>A semi-colon (;) delimited list of the targets specified in the <c>InitialTargets</c> attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1120,7 +1120,7 @@
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroupCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the item groups specified with the ItemGroup element in the project.</summary>
+        <summary>Gets a collection of the item groups specified with the <see href="/visualstudio/msbuild/itemgroup-element-msbuild">ItemGroup</see> element in the project.</summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> containing the item groups specified in the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1433,7 +1433,7 @@
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroupCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the property groups specified with the PropertyGroup element in the project.</summary>
+        <summary>Gets a collection of the property groups specified with the <see href="/visualstudio/msbuild/propertygroup-element-msbuild">PropertyGroup</see> element in the project.</summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> containing the property groups specified in the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1598,7 +1598,7 @@
       </Parameters>
       <Docs>
         <param name="matchCondition">The condition to match when removing item groups.</param>
-        <summary>Removes all item groups with the specified condition from the project, but does not modify imported projects.</summary>
+        <summary>Removes all item groups with the specified <see href="/visualstudio/msbuild/msbuild-conditions">condition</see> from the project, but does not modify imported projects.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1699,7 +1699,7 @@
       </Parameters>
       <Docs>
         <param name="matchCondition">The condition to match when removing property groups.</param>
-        <summary>Removes all property groups with the specified condition from the project, but does not modify imported projects.</summary>
+        <summary>Removes all property groups with the specified <see href="/visualstudio/msbuild/msbuild-conditions">condition</see> from the project, but does not modify imported projects.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2031,7 +2031,7 @@
       <Docs>
         <param name="id">The name of the XML element to create as a child of the <see langword="ProjectExtensions" /> element.</param>
         <param name="content">The text value of the created XML element.</param>
-        <summary>Sets the ProjectExtensions element of the project with the specified element name and content.</summary>
+        <summary>Sets the <see href="/visualstudio/msbuild/projectextensions-element-msbuild">ProjectExtensions</see> element of the project with the specified element name and content.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2305,7 +2305,7 @@
         <ReturnType>Microsoft.Build.BuildEngine.UsingTaskCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the UsingTask elements in the project.</summary>
+        <summary>Gets a collection of the <see href="/visualstudio/msbuild/usingtask-element-msbuild">UsingTask</see> elements in the project.</summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> of the <c>UsingTask</c> elements in the project.</value>
         <remarks>To be added.</remarks>
       </Docs>
