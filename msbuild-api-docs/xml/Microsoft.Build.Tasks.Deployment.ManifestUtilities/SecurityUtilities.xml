@@ -33,8 +33,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Provides a set of utility functions for manipulating security permision sets and signing.
-            </summary>
+            Provides a set of utility functions for manipulating security permision sets and signing.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -75,8 +74,7 @@
         <param name="includedPermissionSet">A PermissionSet object containing the set of permissions to be explicitly included in the generated permission set. Permissions specified in this parameter will be included verbatim in the generated permission set, regardless of targetZone parameter.</param>
         <param name="excludedPermissions">This property is no longer used.</param>
         <summary>
-            Generates a permission set by computed the zone default permission set and adding any included permissions.
-            </summary>
+            Generates a permission set by computed the zone default permission set and adding any included permissions.</summary>
         <returns>The generated permission set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,8 +112,7 @@
       <Docs>
         <param name="ids">An array of permission identity strings.</param>
         <summary>
-            Converts an array of permission identity strings to a permission set object.
-            </summary>
+            Converts an array of permission identity strings to a permission set object.</summary>
         <returns>The converted permission set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -153,8 +150,7 @@
       <Docs>
         <param name="permissionSet">The input permission set to be converted.</param>
         <summary>
-            Converts a permission set object to an array of permission identity strings.
-            </summary>
+            Converts a permission set object to an array of permission identity strings.</summary>
         <returns>An array of permission identity strings.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -192,6 +188,12 @@
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -205,8 +207,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest or PE file.
-            </summary>
+            Signs a ClickOnce manifest or PE file.</summary>
         <remarks>This function can only sign a PE file if the X509Certificate2 parameter represents a certificate in the
             current user's personal certificate store.</remarks>
       </Docs>
@@ -235,6 +236,12 @@
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -248,8 +255,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest or PE file.
-            </summary>
+            Signs a ClickOnce manifest or PE file.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -284,6 +290,12 @@
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -299,8 +311,7 @@
         <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
         <param name="path">Path of the file to sign with the certificate.</param>
         <summary>
-            Signs a ClickOnce manifest.
-            </summary>
+            Signs a ClickOnce manifest.</summary>
         <remarks>This function is only for signing a manifest, not a PE file.</remarks>
       </Docs>
     </Member>
@@ -316,6 +327,12 @@
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -348,6 +365,12 @@
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -364,6 +387,48 @@
         <param name="path">Path of the file to sign with the certificate.</param>
         <param name="targetFrameworkVersion">Version of the .NET Framework for the target.</param>
         <param name="targetFrameworkIdentifier">.NET Framework identifier for the target.</param>
+        <summary>
+            Signs a ClickOnce manifest or PE file.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignFile">
+      <MemberSignature Language="C#" Value="public static void SignFile (string certThumbprint, Uri timestampUrl, string path, string targetFrameworkVersion, string targetFrameworkIdentifier, bool disallowMansignTimestampFallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignFile(string certThumbprint, class System.Uri timestampUrl, string path, string targetFrameworkVersion, string targetFrameworkIdentifier, bool disallowMansignTimestampFallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub SignFile (certThumbprint As String, timestampUrl As Uri, path As String, targetFrameworkVersion As String, targetFrameworkIdentifier As String, disallowMansignTimestampFallback As Boolean)" />
+      <MemberSignature Language="F#" Value="static member SignFile : string * Uri * string * string * string * bool -&gt; unit" Usage="Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile (certThumbprint, timestampUrl, path, targetFrameworkVersion, targetFrameworkIdentifier, disallowMansignTimestampFallback)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SignFile(System::String ^ certThumbprint, Uri ^ timestampUrl, System::String ^ path, System::String ^ targetFrameworkVersion, System::String ^ targetFrameworkIdentifier, bool disallowMansignTimestampFallback);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certThumbprint" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="timestampUrl" Type="System.Uri" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="path" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="disallowMansignTimestampFallback" Type="System.Boolean" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="certThumbprint">Hexadecimal string that contains the SHA-1 hash of the certificate.</param>
+        <param name="timestampUrl">URL that specifies an address of a time stamping server.</param>
+        <param name="path">Path of the file to sign with the certificate.</param>
+        <param name="targetFrameworkVersion">Version of the .NET Framework for the target.</param>
+        <param name="targetFrameworkIdentifier">.NET Framework identifier for the target.</param>
+        <param name="disallowMansignTimestampFallback">Disallow fallback to legacy timestamping when RFC3161 timestamping fails during manifest signing</param>
         <summary>
             Signs a ClickOnce manifest or PE file.
             </summary>
@@ -403,8 +468,7 @@
       <Docs>
         <param name="element">An XML representation of the permission set.</param>
         <summary>
-            Converts an XmlElement into a PermissionSet object.
-            </summary>
+            Converts an XmlElement into a PermissionSet object.</summary>
         <returns>The converted permission set.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  

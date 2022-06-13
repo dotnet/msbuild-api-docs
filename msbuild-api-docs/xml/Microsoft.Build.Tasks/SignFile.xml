@@ -25,12 +25,17 @@
     <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             This task signs the passed in file using the Authenticode cert
             provided and optionally uses a timestamp if a URL is provided.
-            It can sign ClickOnce manifests as well as exe's.
-            </summary>
+            It can sign ClickOnce manifests as well as exe's.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -111,6 +116,27 @@
         <value>The certificate to use for signing.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DisallowMansignTimestampFallback">
+      <MemberSignature Language="C#" Value="public bool DisallowMansignTimestampFallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisallowMansignTimestampFallback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.SignFile.DisallowMansignTimestampFallback" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisallowMansignTimestampFallback As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisallowMansignTimestampFallback : bool with get, set" Usage="Microsoft.Build.Tasks.SignFile.DisallowMansignTimestampFallback" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisallowMansignTimestampFallback { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">

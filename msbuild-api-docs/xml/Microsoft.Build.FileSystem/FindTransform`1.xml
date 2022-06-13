@@ -1,0 +1,33 @@
+<Type Name="FindTransform&lt;TResult&gt;" FullName="Microsoft.Build.FileSystem.FindTransform&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult FindTransform&lt;TResult&gt;(ref ReadOnlySpan&lt;char&gt; fileName);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FindTransform`1&lt;TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.FileSystem.FindTransform`1" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function FindTransform(Of TResult)(ByRef fileName As ReadOnlySpan(Of Char)) As TResult " />
+  <TypeSignature Language="F#" Value="type FindTransform&lt;'Result&gt; = delegate of ReadOnlySpan -&gt; 'Result" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TResult&gt;&#xA;public delegate TResult FindTransform(ReadOnlySpan&lt;char&gt; % fileName);" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="fileName" Type="System.ReadOnlySpan&lt;System.Char&gt;" RefType="ref" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TResult">The type of the result to return</typeparam>
+    <param name="fileName">The file name to transform.</param>
+    <summary>
+            A function taking file name and returning an arbitrary result.
+            </summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

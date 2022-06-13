@@ -377,6 +377,8 @@
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFileLocation" />
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyName" />
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyNameLocation" />
+      <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Override" />
+      <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.OverrideLocation" />
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.ParameterGroup" />
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Runtime" />
       <Member Id="P:Microsoft.Build.Construction.ProjectUsingTaskElement.RuntimeLocation" />
@@ -438,6 +440,7 @@
   <Namespace Name="Microsoft.Build.Definition">
     <Type Name="Microsoft.Build.Definition.ProjectOptions" Id="T:Microsoft.Build.Definition.ProjectOptions">
       <Member Id="M:Microsoft.Build.Definition.ProjectOptions.#ctor" />
+      <Member Id="P:Microsoft.Build.Definition.ProjectOptions.DirectoryCacheFactory" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.EvaluationContext" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.LoadSettings" />
@@ -870,6 +873,7 @@
       <Member Id="M:Microsoft.Build.Execution.BuildParameters.GetToolset(System.String)" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.AllowFailureWithoutError" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.BuildProcessEnvironment" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.BuildThreadPriority" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.Culture" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.DefaultToolsVersion" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.DetailedSummary" />
@@ -904,6 +908,7 @@
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.UseSynchronousLogging" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.WarningsAsErrors" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.WarningsAsMessages" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.WarningsNotAsErrors" />
     </Type>
     <Type Name="Microsoft.Build.Execution.BuildRequestData" Id="T:Microsoft.Build.Execution.BuildRequestData">
       <Member Id="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[])" />
@@ -1278,7 +1283,7 @@
       <Member Id="F:Microsoft.Build.Experimental.ProjectCache.CacheResultType.None" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase" Id="T:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase">
-      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.#ctor(Microsoft.Build.Framework.LoggerVerbosity)" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.#ctor" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.LogError(System.String)" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.LogMessage(System.String,System.Nullable{Microsoft.Build.Framework.MessageImportance})" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.LogWarning(System.String)" />
@@ -1316,6 +1321,17 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.FileSystem">
+    <Type Name="Microsoft.Build.FileSystem.FindPredicate" Id="T:Microsoft.Build.FileSystem.FindPredicate" />
+    <Type Name="Microsoft.Build.FileSystem.FindTransform`1" Id="T:Microsoft.Build.FileSystem.FindTransform`1" />
+    <Type Name="Microsoft.Build.FileSystem.IDirectoryCache" Id="T:Microsoft.Build.FileSystem.IDirectoryCache">
+      <Member Id="M:Microsoft.Build.FileSystem.IDirectoryCache.DirectoryExists(System.String)" />
+      <Member Id="M:Microsoft.Build.FileSystem.IDirectoryCache.EnumerateDirectories``1(System.String,System.String,Microsoft.Build.FileSystem.FindPredicate,Microsoft.Build.FileSystem.FindTransform{``0})" />
+      <Member Id="M:Microsoft.Build.FileSystem.IDirectoryCache.EnumerateFiles``1(System.String,System.String,Microsoft.Build.FileSystem.FindPredicate,Microsoft.Build.FileSystem.FindTransform{``0})" />
+      <Member Id="M:Microsoft.Build.FileSystem.IDirectoryCache.FileExists(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Build.FileSystem.IDirectoryCacheFactory" Id="T:Microsoft.Build.FileSystem.IDirectoryCacheFactory">
+      <Member Id="M:Microsoft.Build.FileSystem.IDirectoryCacheFactory.GetDirectoryCacheForEvaluation(System.Int32)" />
+    </Type>
     <Type Name="Microsoft.Build.FileSystem.MSBuildFileSystemBase" Id="T:Microsoft.Build.FileSystem.MSBuildFileSystemBase">
       <Member Id="M:Microsoft.Build.FileSystem.MSBuildFileSystemBase.#ctor" />
       <Member Id="M:Microsoft.Build.FileSystem.MSBuildFileSystemBase.DirectoryExists(System.String)" />
@@ -1629,7 +1645,6 @@
       <Member Id="P:Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
     </Type>
     <Type Name="Microsoft.Build.Framework.LazyFormattedBuildEventArgs" Id="T:Microsoft.Build.Framework.LazyFormattedBuildEventArgs">
-      <Member Id="F:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.locker" />
       <Member Id="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor(System.String,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime,System.Object[])" />
@@ -1991,6 +2006,7 @@
     <Type Name="Microsoft.Build.Globbing.CompositeGlob" Id="T:Microsoft.Build.Globbing.CompositeGlob">
       <Member Id="M:Microsoft.Build.Globbing.CompositeGlob.#ctor(Microsoft.Build.Globbing.IMSBuildGlob[])" />
       <Member Id="M:Microsoft.Build.Globbing.CompositeGlob.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Globbing.IMSBuildGlob})" />
+      <Member Id="M:Microsoft.Build.Globbing.CompositeGlob.Create(System.Collections.Generic.IEnumerable{Microsoft.Build.Globbing.IMSBuildGlob})" />
       <Member Id="M:Microsoft.Build.Globbing.CompositeGlob.IsMatch(System.String)" />
       <Member Id="P:Microsoft.Build.Globbing.CompositeGlob.Globs" />
     </Type>
@@ -2827,6 +2843,7 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateApplicationManifest" Id="T:Microsoft.Build.Tasks.GenerateApplicationManifest">
       <Member Id="M:Microsoft.Build.Tasks.GenerateApplicationManifest.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.GenerateApplicationManifest.Execute" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateApplicationManifest.GetObjectType" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateApplicationManifest.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateApplicationManifest.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
@@ -2862,6 +2879,7 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateDeploymentManifest" Id="T:Microsoft.Build.Tasks.GenerateDeploymentManifest">
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.Execute" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.GetObjectType" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
@@ -3014,6 +3032,23 @@
       <Member Id="P:Microsoft.Build.Tasks.Hash.HashResult" />
       <Member Id="P:Microsoft.Build.Tasks.Hash.IgnoreCase" />
       <Member Id="P:Microsoft.Build.Tasks.Hash.ItemsToHash" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.LC" Id="T:Microsoft.Build.Tasks.LC">
+      <Member Id="M:Microsoft.Build.Tasks.LC.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.Execute" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.GenerateFullPathToTool" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.ValidateParameters" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.LicenseTarget" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.NoLogo" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.OutputDirectory" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.OutputLicense" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.ReferencedAssemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.SdkToolsPath" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.Sources" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.TargetFrameworkVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.LC.ToolName" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.MakeDir" Id="T:Microsoft.Build.Tasks.MakeDir">
       <Member Id="M:Microsoft.Build.Tasks.MakeDir.#ctor" />
@@ -3252,6 +3287,7 @@
       <Member Id="M:Microsoft.Build.Tasks.SignFile.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.SignFile.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.SignFile.CertificateThumbprint" />
+      <Member Id="P:Microsoft.Build.Tasks.SignFile.DisallowMansignTimestampFallback" />
       <Member Id="P:Microsoft.Build.Tasks.SignFile.SigningTarget" />
       <Member Id="P:Microsoft.Build.Tasks.SignFile.TargetFrameworkIdentifier" />
       <Member Id="P:Microsoft.Build.Tasks.SignFile.TargetFrameworkVersion" />
@@ -3834,6 +3870,7 @@
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String,System.String,System.Boolean)" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" Id="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo">
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.#ctor" />

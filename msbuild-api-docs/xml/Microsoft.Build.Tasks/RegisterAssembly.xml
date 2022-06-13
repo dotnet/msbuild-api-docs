@@ -31,8 +31,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).
-            </summary>
+            Registers a managed assembly for COM interop (equivalent of regasm.exe functionality, but this code doesn't actually call the exe).</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -168,8 +167,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.
-            </summary>
+            The cache file for Register/UnregisterAssembly. Necessary for UnregisterAssembly to do the proper clean up.</summary>
         <value>The state information necessary for the <c>UnregisterAssembly</c> task to do proper clean-up.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -257,8 +255,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Task entry point
-            </summary>
+            Task entry point</summary>
         <returns>
           <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -305,8 +302,7 @@
         <param name="code">The error code of the export event.</param>
         <param name="msg">The message of the export event.</param>
         <summary>
-            Callback method for reporting type library export events
-            </summary>
+            Callback method for reporting type library export events</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -349,8 +345,7 @@
         <summary>
              Callback method for finding type libraries for given assemblies. If we are here, it means
              the type library we're looking for is not in the current directory and it's not registered.
-             Currently we assume that all dependent type libs are already registered.
-            </summary>
+             Currently we assume that all dependent type libs are already registered.</summary>
         <returns>
           <see langword="null" /> in all cases.</returns>
         <remarks>
