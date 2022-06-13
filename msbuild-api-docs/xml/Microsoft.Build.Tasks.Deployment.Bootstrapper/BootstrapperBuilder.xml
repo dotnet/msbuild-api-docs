@@ -42,11 +42,14 @@
       <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("1D9FE38A-0226-4b95-9C6B-6DFFA2236270")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("1D9FE38A-0226-4b95-9C6B-6DFFA2236270")&gt;]</AttributeName>
     </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            This class is the top-level object for the bootstrapper system.
-            </summary>
+            This class is the top-level object for the bootstrapper system.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -86,8 +89,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates a new BootstrapperBuilder.
-            </summary>
+            Creates a new BootstrapperBuilder.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -114,8 +116,7 @@
       <Docs>
         <param name="visualStudioVersion">The version of Visual Studio that is used to build this bootstrapper.</param>
         <summary>
-            Creates a new BootstrapperBuilder.
-            </summary>
+            Creates a new BootstrapperBuilder.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -156,8 +157,7 @@
       <Docs>
         <param name="settings">The properties used to build this bootstrapper.</param>
         <summary>
-            Generates a bootstrapper based on the specified settings.
-            </summary>
+            Generates a bootstrapper based on the specified settings.</summary>
         <returns>The results of the bootstrapper generation</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -202,8 +202,7 @@
         <param name="fallbackCulture">The fallback culture used to build the bootstrapper</param>
         <param name="componentsLocation">How the bootstrapper would package the selected components</param>
         <summary>
-            Returns the directories bootstrapper component files would be copied to when built given the specified settings
-            </summary>
+            Returns the directories bootstrapper component files would be copied to when built given the specified settings</summary>
         <returns>The directories to which bootstrapper component files are copied when they are created, given the specified settings.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -247,8 +246,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the location of the required bootstrapper files.
-            </summary>
+            Specifies the location of the required bootstrapper files.</summary>
         <value>Path to bootstrapper files.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -286,8 +284,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns all products available at the current bootstrapper Path
-            </summary>
+            Returns all products available at the current bootstrapper Path</summary>
         <value>All products available at the current bootstrapper <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

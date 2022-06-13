@@ -32,7 +32,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Implements the <c>MSBuild</c> task. Use the <c>MSBuild</c> element in your project file to create and execute this task. For usage and parameter information, see [MSBuild Task](/previous-versions/visualstudio/visual-studio-2015/msbuild/msbuild-task).</summary>
+    <summary>Implements the <c>MSBuild</c> task. Use the <c>MSBuild</c> element in your project file to create and execute this task. For usage and parameter information, see MSBuild Task.</summary>
     <remarks>
             This class implements the "MSBuild" task, which hands off child project files to the MSBuild engine to be built.
             Marked RunInMTA because there is no reason MSBuild tasks should run on a thread other than that of the 
@@ -107,8 +107,7 @@
       <Docs>
         <summary>
             When this is true we call the engine with all the projects at once instead of 
-            calling the engine once per project
-            </summary>
+            calling the engine once per project</summary>
         <value>
           <see langword="true" /> if the projects specified in the <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> property are built in parallel if possible; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -153,8 +152,7 @@
       <Docs>
         <summary>
             Instructs the MSBuild engine to build one or more project files whose locations are specified by the
-            <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> property.
-            </summary>
+            <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> property.</summary>
         <returns>true if all projects build successfully; false if any project fails</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -203,8 +201,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The projects to build.
-            </summary>
+            The projects to build.</summary>
         <value>Array of project items.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -251,8 +248,7 @@
         <summary>
             A list of property name/value pairs to apply as global properties to 
             the child project.  
-            A typical input: "propname1=propvalue1", "propname2=propvalue2", "propname3=propvalue3".
-            </summary>
+            A typical input: "propname1=propvalue1", "propname2=propvalue2", "propname3=propvalue3".</summary>
         <value>A semicolon-delimited list of property name/value pairs to apply as global properties to the child project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
@@ -307,8 +303,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates if the paths of target output items should be rebased relative to the calling project.
-            </summary>
+            Indicates if the paths of target output items should be rebased relative to the calling project.</summary>
         <value>true, if target output item paths should be rebased</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -352,8 +347,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the set of global properties to remove.
-            </summary>
+            Gets or sets the set of global properties to remove.</summary>
         <value>The set of global properties to remove.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -400,8 +394,7 @@
         <summary>
             When this is true, instead of calling the engine once to build all the targets (for each project),
             we would call the engine once per target (for each project).  The benefit of this is that
-            if one target fails, you can still continue with the remaining targets.
-            </summary>
+            if one target fails, you can still continue with the remaining targets.</summary>
         <value>
           <see langword="true" /> if the MSBuild task invokes each target in the list passed to MSBuild one at a time; <see langword="false" /> if the MSBuild task invokes all targets in the list at the same time.</value>
         <remarks>
@@ -441,8 +434,7 @@
       <Docs>
         <summary>
             When this is true, project files that do not exist on the disk will be skipped. By default,
-            such projects will cause an error.
-            </summary>
+            such projects will cause an error.</summary>
         <value>
           <see langword="true" /> if project files that do not exist on the disk will be skipped; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -496,8 +488,7 @@
       <Docs>
         <summary>
             Forces the task to stop building the remaining projects as soon as any of
-            them fail.
-            </summary>
+            them fail.</summary>
         <value>
           <see langword="true" /> if the task should stop building the remaining projects as soon as any one of them may not work; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -541,8 +532,7 @@
         <summary>
             Unescape Targets, Properties (including Properties and AdditionalProperties as Project item metadata)
             will be un-escaped before processing. e.g. %3B (an escaped ';') in the string for any of them will 
-            be treated as if it were an un-escaped ';'
-            </summary>
+            be treated as if it were an un-escaped ';'</summary>
         <value>The escape characters to be unescaped from the specified <see cref="P:Microsoft.Build.Tasks.MSBuild.Properties" /> and <see cref="P:Microsoft.Build.Tasks.MSBuild.Targets" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -590,8 +580,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Outputs of the targets built in each project.
-            </summary>
+            Outputs of the targets built in each project.</summary>
         <value>Array of output items.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -636,8 +625,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The targets to build in each project specified by the <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> property.
-            </summary>
+            The targets to build in each project specified by the <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> property.</summary>
         <value>Array of target names.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -685,8 +673,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Value of ToolsVersion to use when building projects passed to this task.
-            </summary>
+            Value of ToolsVersion to use when building projects passed to this task.</summary>
         <value>The target .NET Framework version to build the project with.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -734,8 +721,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            If true the project will be unloaded once the operation is completed
-            </summary>
+            If true the project will be unloaded once the operation is completed</summary>
         <value>
           <see langword="true" /> if the project will be unloaded once the operation is completed; otherwise, <see langword="false" />. This property is no longer used in version 4.0</value>
         <remarks>To be added.</remarks>
@@ -777,8 +763,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Deprecated. Does nothing.
-            </summary>
+            Deprecated. Does nothing.</summary>
         <value>
           <see langword="true" /> if the MSBuild engine will return the built targets from the cache; otherwise, <see langword="false" />.</value>
         <remarks>

@@ -52,8 +52,7 @@
             via the project file. It's not a security issue, but more just an issue with project file clarity and transparency.
             
             Note: This class has to be sealed.  It has to be sealed because the engine instantiates it's own copy of this type and
-            thus if someone were to extend it, they would not get the desired behavior from the engine.  
-            </summary>
+            thus if someone were to extend it, they would not get the desired behavior from the engine.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -104,8 +103,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor -- we need it so this type is COM-createable.
-            </summary>
+            Default constructor -- we need it so this type is COM-createable.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -146,8 +144,7 @@
       <Docs>
         <param name="sourceItem">The item to copy.</param>
         <summary>
-            This constructor creates a new TaskItem, using the given ITaskItem.
-            </summary>
+            This constructor creates a new TaskItem, using the given ITaskItem.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -181,8 +178,7 @@
       <Docs>
         <param name="itemSpec">The item-spec string.</param>
         <summary>
-            This constructor creates a new task item, given the item spec.
-            </summary>
+            This constructor creates a new task item, given the item spec.</summary>
         <remarks>To be added.</remarks>
         <comments>Assumes the itemspec passed in is escaped.</comments>
       </Docs>
@@ -219,8 +215,7 @@
         <param name="itemSpec">The item-spec string.</param>
         <param name="itemMetadata">Custom metadata on the item.</param>
         <summary>
-            This constructor creates a new TaskItem, using the given item spec and metadata.
-            </summary>
+            This constructor creates a new TaskItem, using the given item spec and metadata.</summary>
         <remarks>To be added.</remarks>
         <comments>
             Assumes the itemspec passed in is escaped, and also that any escapable metadata values
@@ -261,8 +256,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Get the collection of custom metadata. This does not include built-in metadata.
-            </summary>
+            Get the collection of custom metadata. This does not include built-in metadata.</summary>
         <returns>An <see cref="T:System.Collections.IDictionary" /> that represents a clone of the custom metadata.</returns>
         <remarks>
             RECOMMENDED GUIDELINES FOR METHOD IMPLEMENTATIONS:
@@ -312,8 +306,7 @@
         <param name="destinationItem">The item to copy metadata to.</param>
         <summary>
             Copy the metadata (but not the ItemSpec) to destinationItem. If a particular metadata already exists on the
-            destination item, then it is not overwritten -- the original value wins.
-            </summary>
+            destination item, then it is not overwritten -- the original value wins.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -363,8 +356,7 @@
         <param name="metadataName">The name of the metadata to retrieve.</param>
         <summary>
             Retrieves one of the arbitrary metadata on the item.
-            If not found, returns empty string.
-            </summary>
+            If not found, returns empty string.</summary>
         <returns>The metadata value.</returns>
         <remarks>To be added.</remarks>
         <comments>
@@ -409,8 +401,7 @@
       <Docs>
         <summary>
             Overridden to give this class infinite lease time. Otherwise we end up with a limited
-            lease (5 minutes I think) and instances can expire if they take long time processing.
-            </summary>
+            lease (5 minutes I think) and instances can expire if they take long time processing.</summary>
         <returns>
           <see langword="null" /> to specify an infinite lifetime.</returns>
         <remarks>
@@ -455,8 +446,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the item-spec.
-            </summary>
+            Gets or sets the item-spec.</summary>
         <value>The item-spec string.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -511,8 +501,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the number of metadata set on the item.
-            </summary>
+            Gets the number of metadata set on the item.</summary>
         <value>Count of metadata.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -549,8 +538,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the names of all the item's metadata.
-            </summary>
+            Gets the names of all the item's metadata.</summary>
         <value>List of metadata names.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -581,8 +569,7 @@
       <Docs>
         <summary>
             ITaskItem2 implementation which returns a clone of the metadata on this object.
-            Values returned are in their original escaped form. 
-            </summary>
+            Values returned are in their original escaped form.</summary>
         <returns>The cloned metadata.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -611,8 +598,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the escaped include, or "name", for the item.
-            </summary>
+            Gets or sets the escaped include, or "name", for the item.</summary>
         <value>The item include value.</value>
         <remarks>
             Taking the opportunity to fix the property name, although this doesn't
@@ -648,8 +634,7 @@
       <Docs>
         <param name="metadataName">The metadata to be queried</param>
         <summary>
-            Returns the escaped value of the metadata with the specified key.
-            </summary>
+            Returns the escaped value of the metadata with the specified key.</summary>
         <returns>The escaped metadata value.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -684,8 +669,7 @@
         <param name="metadataName">The metadata name.</param>
         <param name="metadataValue">The metadata value.</param>
         <summary>
-            Sets the escaped value of the metadata with the specified name.
-            </summary>
+            Sets the escaped value of the metadata with the specified name.</summary>
         <remarks>To be added.</remarks>
         <comments>
             Assumes the value is passed in unescaped. 
@@ -725,8 +709,7 @@
       <Docs>
         <param name="taskItemToCast">The item to operate on.</param>
         <summary>
-            This allows an explicit typecast from a "TaskItem" to a "string", returning the escaped ItemSpec for this item.
-            </summary>
+            This allows an explicit typecast from a "TaskItem" to a "string", returning the escaped ItemSpec for this item.</summary>
         <returns>The item-spec of the item.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[The equivalent method for this operator is <xref:Microsoft.Build.Utilities.TaskItem.ToString?displayProperty=nameWithType>]]></format>
@@ -769,8 +752,7 @@
       <Docs>
         <param name="metadataName">Name of metadata to remove.</param>
         <summary>
-            Removes one of the arbitrary metadata on the item.
-            </summary>
+            Removes one of the arbitrary metadata on the item.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -812,8 +794,7 @@
         <param name="metadataName">Name of metadata to set or change.</param>
         <param name="metadataValue">Value of metadata.</param>
         <summary>
-            Sets one of the arbitrary metadata on the item.
-            </summary>
+            Sets one of the arbitrary metadata on the item.</summary>
         <remarks>To be added.</remarks>
         <comments>
             Assumes that the value being passed in is in its escaped form. 
@@ -850,8 +831,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Gets the item-spec.
-            </summary>
+            Gets the item-spec.</summary>
         <returns>The item-spec string.</returns>
         <remarks>To be added.</remarks>
       </Docs>

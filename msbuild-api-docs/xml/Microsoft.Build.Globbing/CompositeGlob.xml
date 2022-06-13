@@ -19,7 +19,8 @@
   </Interfaces>
   <Docs>
     <summary>
-                A Composite glob
+                A composite glob that returns a match for an input if any of its
+                inner globs match the input (disjunction).
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -75,6 +76,43 @@
                 Constructor
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Globbing.IMSBuildGlob Create (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Globbing.IMSBuildGlob&gt; globs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Globbing.IMSBuildGlob Create(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Globbing.IMSBuildGlob&gt; globs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Globbing.CompositeGlob.Create(System.Collections.Generic.IEnumerable{Microsoft.Build.Globbing.IMSBuildGlob})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (globs As IEnumerable(Of IMSBuildGlob)) As IMSBuildGlob" />
+      <MemberSignature Language="F#" Value="static member Create : seq&lt;Microsoft.Build.Globbing.IMSBuildGlob&gt; -&gt; Microsoft.Build.Globbing.IMSBuildGlob" Usage="Microsoft.Build.Globbing.CompositeGlob.Create globs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Globbing::IMSBuildGlob ^ Create(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Globbing::IMSBuildGlob ^&gt; ^ globs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Globbing.IMSBuildGlob</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globs" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Globbing.IMSBuildGlob&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="globs">An enumeration of globs to compose.</param>
+        <summary>
+                Creates an <see cref="T:Microsoft.Build.Globbing.IMSBuildGlob" /> that aggregates multiple other globs
+                such that the resulting glob matches when any inner glob matches (disjunction).
+            </summary>
+        <returns>The logical disjunction of the input globs.</returns>
+        <remarks>
+          <para>
+                    When <paramref name="globs" /> contains no elements, a singleton glob is
+                    returned that never matches, regardless of input.
+                </para>
+          <para>
+                    When <paramref name="globs" /> contains one element, that single element is
+                    returned directly. This avoids allocating a redundant wrapper instance.
+                </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Globs">

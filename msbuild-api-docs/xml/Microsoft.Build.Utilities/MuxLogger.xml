@@ -59,8 +59,7 @@
                 When a build submission is completed the UnregisterLoggers method will be called with the submission ID.
                 At this point we will look up the success state of the project finished event for the submission ID and log a build finished event to the logger.
                 The event source will be cleaned up.  This may be interesting because the unregister will come from a thread other than what is doing the logging.
-                This may create a Synchronization issue, if unregister is called while events are being logged.
-            </summary>
+                This may create a Synchronization issue, if unregister is called while events are being logged.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -121,8 +120,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Constructor.
-            </summary>
+            Constructor.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -256,8 +254,7 @@
       <Docs>
         <param name="eventSource">The event source.</param>
         <summary>
-            Initialize the logger.
-            </summary>
+            Initialize the logger.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -291,8 +288,7 @@
         <param name="eventSource">The event source.</param>
         <param name="maxNodeCount">The maximum number of nodes.</param>
         <summary>
-            Initialize the logger.
-            </summary>
+            Initialize the logger.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -320,8 +316,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Required for the ILoggerInterface
-            </summary>
+            Required for the ILoggerInterface</summary>
         <value>The Parameters attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -353,8 +348,7 @@
         <param name="submissionId">The submission ID of the logger being registered.</param>
         <param name="logger">The logger to register.</param>
         <summary>
-            This method will register a logger on the MUX logger and then raise a build started event if the build started event has already been logged
-            </summary>
+            This method will register a logger on the MUX logger and then raise a build started event if the build started event has already been logged</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -383,8 +377,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Shutdown the mux logger and clear out any state
-            </summary>
+            Shutdown the mux logger and clear out any state</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -413,8 +406,7 @@
       <Docs>
         <param name="submissionId">The submission ID of the logger to be removed.</param>
         <summary>
-            Unregisters all the loggers for a given submission id.
-            </summary>
+            Unregisters all the loggers for a given submission id.</summary>
         <returns>
           <see langword="true" /> if the method is successful in removing the logger; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -444,8 +436,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Required for ILogger interface
-            </summary>
+            Required for ILogger interface</summary>
         <value>The Verbosity attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>

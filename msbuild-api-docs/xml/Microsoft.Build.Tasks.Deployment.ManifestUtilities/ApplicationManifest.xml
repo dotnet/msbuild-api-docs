@@ -37,8 +37,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes a ClickOnce or native Win32 application manifest.
-            </summary>
+            Describes a ClickOnce or native Win32 application manifest.</summary>
     <remarks>
             This is a serialization format, don't remove the private fields.
             </remarks>
@@ -79,8 +78,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Initializes a new instance of the ApplicationManifest class.
-            </summary>
+            Initializes a new instance of the ApplicationManifest class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -153,8 +151,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the application configuration file.
-            </summary>
+            Gets or sets the application configuration file.</summary>
         <value>A string that represents the name of the application configuration file.</value>
         <remarks>
             For a Win32 native manifest, this input is ignored.
@@ -240,8 +237,7 @@
       <Docs>
         <summary>
             Gets or sets the link to use if there is a failure launching the application.
-            The specified value should be a fully qualified URL or UNC path.
-            </summary>
+            The specified value should be a fully qualified URL or UNC path.</summary>
         <value>A string that contains the URL of the error report.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -320,8 +316,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the application will run in IE using WPF's XBAP application model.
-            </summary>
+            Gets or sets a value that indicates whether the application will run in IE using WPF's XBAP application model.</summary>
         <value>
           <see langword="true" /> if the application will run in IE using WPF's XBAP application model; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -382,8 +377,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the application icon file.
-            </summary>
+            Gets or sets the application icon file.</summary>
         <value>A string that represents the name of the icon file.</value>
         <remarks>
             The application icon is expressed in the generated application manifest and is used for the start menu and Add/Remove Programs dialog.
@@ -435,8 +429,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.
-            </summary>
+            Gets or sets a value that indicates whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.</summary>
         <value>A Boolean value that indicates whether the manifest is a ClickOnce application manifest (<see langword="True" />) or a native Win32 manifest (<see langword="False" />).</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -484,8 +477,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the maximum allowable length of a file path in a ClickOnce application deployment.
-            </summary>
+            Gets or sets the maximum allowable length of a file path in a ClickOnce application deployment.</summary>
         <value>An integer that indicates the maximum allowed length of a file path in a ClickOnce application deployment.</value>
         <remarks>
             If this value is specified, then the length of each file path in the application is checked against this limit.
@@ -538,8 +530,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a textual description for the OS dependency.
-            </summary>
+            Gets or sets a textual description for the OS dependency.</summary>
         <value>A string that indicates the operating system dependency.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -587,8 +578,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a support URL for the OS dependency.
-            </summary>
+            Gets or sets a support URL for the OS dependency.</summary>
         <value>A string indicating the support URL for the operating system dependency.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -628,8 +618,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the minimum OS version required by the application.
-            </summary>
+            Gets or sets the minimum OS version required by the application.</summary>
         <value>A string that indicates the minimum required operating system version required by the application.</value>
         <remarks>
             An example value is "5.1.2600.0" for Windows XP.        
@@ -679,8 +668,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the name of the application.
-            </summary>
+            Gets or sets the name of the application.</summary>
         <value>A string value that corresponds to the <see langword="ProductName" /> property in the project file.</value>
         <remarks>
             If this input is not specified then the Product is not written into the Application Manifest
@@ -727,8 +715,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the publisher of the application.
-            </summary>
+            Gets or sets the publisher of the application.</summary>
         <value>A string value that corresponds to the <see langword="PublisherName" /> property in the project file.</value>
         <remarks>
             If this input is not, specified then the Publisher is not written into the Application Manifest
@@ -775,8 +762,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the suite name of the application.
-            </summary>
+            Gets or sets the suite name of the application.</summary>
         <value>A string that contains the suite name.</value>
         <remarks>
             This name is used for the sub-folder name on the Start menu (as a child of the publisher)
@@ -822,8 +808,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the link that appears in the Add/Remove Programs dialog for the application.
-            </summary>
+            Gets or sets the link that appears in the Add/Remove Programs dialog for the application.</summary>
         <value>A string value that corresponds to the <see langword="SupportUrl" /> property in the project file.</value>
         <remarks>
             The specified value should be a fully qualified URL or UNC path.
@@ -865,8 +850,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the target framework version
-            </summary>
+            Gets or sets the target framework version</summary>
         <value>A <see cref="T:System.String" /> that represents a version of the .NET Framework.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -914,8 +898,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a trust object defining the application security.
-            </summary>
+            Gets or sets a trust object defining the application security.</summary>
         <value>A <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> object that defines the application security.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -959,11 +942,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value that indicates whether the install will use the settings in the application manifest in the trust prompt.
-            </summary>
+            Gets or sets a value that indicates whether the install will use the settings in the application manifest in the trust prompt.</summary>
         <value>
-          <see langword="true" /> to use the settings in the application manifest in the trust prompt; otherwise, <see langword="false" />.
-            </value>
+          <see langword="true" /> to use the settings in the application manifest in the trust prompt; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

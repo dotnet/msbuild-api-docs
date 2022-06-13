@@ -20,8 +20,7 @@
   <Docs>
     <summary>
             This class is the filetracking log interpreter for .read. tracking logs in canonical form
-            or those that have been rooted (^) to make them canonical
-            </summary>
+            or those that have been rooted (^) to make them canonical</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -64,8 +63,7 @@
         <param name="useMinimalRebuildOptimization">WARNING: Minimal rebuild optimization requires 100% accurate computed outputs to be specified!</param>
         <param name="maintainCompositeRootingMarkers">True to keep composite rooting markers around (many-to-one case) or false to shred them (one-to-one or one-to-many case)</param>
         <summary>
-            Constructor for multiple input source files
-            </summary>
+            Constructor for multiple input source files</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -101,8 +99,7 @@
         <param name="useMinimalRebuildOptimization">WARNING: Minimal rebuild optimization requires 100% accurate computed outputs to be specified!</param>
         <param name="maintainCompositeRootingMarkers">True to keep composite rooting markers around (many-to-one case) or false to shred them (one-to-one or one-to-many case)</param>
         <summary>
-            Constructor for multiple input source files
-            </summary>
+            Constructor for multiple input source files</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -140,8 +137,7 @@
         <param name="useMinimalRebuildOptimization">WARNING: Minimal rebuild optimization requires 100% accurate computed outputs to be specified!</param>
         <param name="maintainCompositeRootingMarkers">True to keep composite rooting markers around (many-to-one case) or false to shred them (one-to-one or one-to-many case)</param>
         <summary>
-            Constructor for a single input source file
-            </summary>
+            Constructor for a single input source file</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,8 +175,7 @@
         <param name="useMinimalRebuildOptimization">WARNING: Minimal rebuild optimization requires 100% accurate computed outputs to be specified!</param>
         <param name="maintainCompositeRootingMarkers">True to keep composite rooting markers around (many-to-one case) or false to shred them (one-to-one or one-to-many case)</param>
         <summary>
-            Constructor for multiple input source files
-            </summary>
+            Constructor for multiple input source files</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -218,8 +213,7 @@
         <param name="useMinimalRebuildOptimization">WARNING: Minimal rebuild optimization requires 100% accurate computed outputs to be specified!</param>
         <param name="maintainCompositeRootingMarkers">True to keep composite rooting markers around (many-to-one case) or false to shred them (one-to-one or one-to-many case)</param>
         <summary>
-            Constructor for multiple input source files
-            </summary>
+            Constructor for multiple input source files</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -261,8 +255,7 @@
       <Docs>
         <summary>
             This method computes the sources that need to be compiled based on the output files and the
-            full dependency graph of inputs
-            </summary>
+            full dependency graph of inputs</summary>
         <returns>Array of files that need to be compiled</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -294,8 +287,7 @@
         <summary>
             This method computes the sources that need to be compiled based on the output files and the
             full dependency graph of inputs, optionally searching composite rooting markers
-            for subroots that may contain input files
-            </summary>
+            for subroots that may contain input files</summary>
         <returns>Array of files that need to be compiled</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -327,8 +319,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the current dependency table.
-            </summary>
+            Gets the current dependency table.</summary>
         <value>The dependency table.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,11 +348,9 @@
       </Parameters>
       <Docs>
         <param name="fileName">
-            Full path of the file to test
-            </param>
+            Full path of the file to test</param>
         <summary>
-            Test to see if the specified file is excluded from tracked dependency checking
-            </summary>
+            Test to see if the specified file is excluded from tracked dependency checking</summary>
         <returns>
           <see langword="true" /> if the file is excluded; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -401,8 +390,7 @@
       <Docs>
         <param name="source">Source that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -437,8 +425,7 @@
       <Docs>
         <param name="source">Sources that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -469,8 +456,7 @@
         <param name="source">Source that should be removed from the graph</param>
         <param name="correspondingOutput">Output that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -501,8 +487,7 @@
         <param name="source">Sources that should be removed from the graph</param>
         <param name="correspondingOutputs">Outputs that correspond ot the sources (used for same file processing)</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -542,8 +527,7 @@
         <param name="source">Source that should be removed from the graph</param>
         <param name="dependencyToRemove">A <see cref="T:Microsoft.Build.Framework.ITaskItem" /> to remove as a dependency.</param>
         <summary>
-            Remove the output graph entries for the given source and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given source and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -574,8 +558,7 @@
         <param name="sources">Sources that should be removed from the graph</param>
         <param name="dependencyToRemove">A <see cref="T:Microsoft.Build.Framework.ITaskItem" /> to remove as a dependency.</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -613,8 +596,7 @@
       <Docs>
         <param name="source">Source that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -643,8 +625,7 @@
       <Docs>
         <param name="source">Sources that should be removed from the graph</param>
         <summary>
-            Remove the output graph entries for the given sources and corresponding outputs
-            </summary>
+            Remove the output graph entries for the given sources and corresponding outputs</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -674,8 +655,7 @@
         <param name="rootingMarker">The root to remove</param>
         <summary>
             Remove the entry in the input dependency graph corresponding to the rooting marker 
-            passed in. 
-            </summary>
+            passed in.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -717,8 +697,7 @@
       <Docs>
         <summary>
             This method will re-write the tlogs from the current output table new entries will
-            be tracked.
-            </summary>
+            be tracked.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -747,12 +726,10 @@
       <Docs>
         <param name="includeInTLog">
             Delegate used to determine whether a particular file should
-            be included in the compacted tlog.
-            </param>
+            be included in the compacted tlog.</param>
         <summary>
             This method will re-write the tlogs from the current dependency. As the sources are compiled,
-            new entries willbe tracked.
-            </summary>
+            new entries willbe tracked.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
