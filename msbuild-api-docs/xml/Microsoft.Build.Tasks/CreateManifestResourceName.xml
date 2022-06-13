@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             Base class for task that determines the appropriate manifest resource name to 
-            assign to a given resx or other resource.
-            </summary>
+            assign to a given resx or other resource.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -105,8 +104,7 @@
         <param name="dependentUponFileName">The file name of the parent of this dependency. May be null</param>
         <param name="binaryStream">File contents binary stream, may be null</param>
         <summary>
-            Method in the derived class that composes the manifest name.
-            </summary>
+            Method in the derived class that composes the manifest name.</summary>
         <returns>Returns the manifest name</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -142,8 +140,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Do the task's work.
-            </summary>
+            Do the task's work.</summary>
         <returns>True if succeeded.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -183,8 +180,7 @@
         <param name="fileName">Name of the candidate source file.</param>
         <summary>
             The derived class chooses whether this is a valid source file to work against.
-            Usually, this is just a matter of looking at the file's extension.
-            </summary>
+            Usually, this is just a matter of looking at the file's extension.</summary>
         <returns>True, if this is a validate source file.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -249,8 +245,7 @@
         <param name="name">The file name.</param>
         <summary>
             This method is provided for compatibility with Everett which used to convert parts of resource names into
-            valid identifiers
-            </summary>
+            valid identifiers</summary>
         <returns>The identifier to use with Visual Studio 2003.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -295,8 +290,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The resulting manifest names.
-            </summary>
+            The resulting manifest names.</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -338,8 +332,7 @@
       <Docs>
         <summary>
             Should the culture name be prepended to the manifest resource name as a directory?
-            This is true by default.
-            </summary>
+            This is true by default.</summary>
         <value>
           <see langword="true" /> if the culture name should be prepended, <see langword="false" /> if otherwise.</value>
         <remarks>
@@ -392,8 +385,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The possibly dependent resource files.
-            </summary>
+            The possibly dependent resource files.</summary>
         <value>The dependent resource files.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -438,8 +430,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The initial list of resource names, with additional metadata for manifest resource names
-            </summary>
+            The initial list of resource names, with additional metadata for manifest resource names</summary>
         <value>An <see cref="T:Microsoft.Build.Framework.ITaskItem" /> object, representing the resource names and metadata.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -484,8 +475,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Rootnamespace to use for naming.
-            </summary>
+            Rootnamespace to use for naming.</summary>
         <value>The root namespace to use for naming.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

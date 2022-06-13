@@ -26,7 +26,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a single <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element in an MSBuild project.</summary>
+    <summary>Represents a single Target element in an MSBuild project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -52,7 +52,7 @@
       </Parameters>
       <Docs>
         <param name="taskName">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to add to the <see langword="Target" /> element.</param>
-        <summary>Adds the specified <see href="/visualstudio/msbuild/task-element-msbuild">Task</see> element to the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
+        <summary>Adds the specified Task element to the Target element.</summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object represents a child <c>Task</c> element of the <c>Target</c> element.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -75,7 +75,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Condition</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
+        <summary>Gets the <c>Condition</c> attribute value of the Target element.</summary>
         <value>The <c>Condition</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -98,7 +98,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>DependsOnTargets</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element, which is a semicolon-separated list.</summary>
+        <summary>Gets the <c>DependsOnTargets</c> attribute value of the Target element, which is a semicolon-separated list.</summary>
         <value>The <c>DependsOnTargets</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -192,7 +192,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element was imported into the project.</summary>
+        <summary>Gets a value indicating whether the Target element was imported into the project.</summary>
         <value>
           <see langword="true" /> if the <c>Target</c> element was imported into the project; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -222,7 +222,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Name</c> attribute value of the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
+        <summary>Gets the <c>Name</c> attribute value of the Target element.</summary>
         <value>The <c>Name</c> attribute value of the <c>Target</c> element.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -278,7 +278,7 @@
       </Parameters>
       <Docs>
         <param name="taskElement">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to remove from the <see langword="Target" /> element.</param>
-        <summary>Removes the specified <see href="/visualstudio/msbuild/task-element-msbuild">Task</see> element from the <see href="/visualstudio/msbuild/target-element-msbuild">Target</see> element.</summary>
+        <summary>Removes the specified Task element from the Target element.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[
 

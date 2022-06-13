@@ -25,10 +25,15 @@
     <BaseTypeName>Microsoft.Build.Tasks.GenerateManifestBase</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Generates a deploy manifest for ClickOnce projects.
-            </summary>
+            Generates a deploy manifest for ClickOnce projects.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -175,7 +180,7 @@
       <Docs>
         <summary>Gets or sets a Boolean value that indicates whether the application should be run automatically when it is opened through a URL.</summary>
         <value>
-          <see langword="true" /> if the application can only be started from the **Start** menu; otherwise, <see langword="false" />.</value>
+          <see langword="true" /> if the application can only be started from the Start menu; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -228,6 +233,28 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.Execute" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="generateDeploymentManifest.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetObjectType">
@@ -294,7 +321,7 @@
       <Docs>
         <summary>Gets or sets a Boolean that indicates whether the application is an installed application or an online-only application.</summary>
         <value>
-          <see langword="true" /> if the application is to be installed on the local computer and can be removed by using the **Add or Remove Programs** dialog box; <see langword="false" /> if the application is for online use from a Web page.</value>
+          <see langword="true" /> if the application is to be installed on the local computer and can be removed by using the Add or Remove Programs dialog box; <see langword="false" /> if the application is for online use from a Web page.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -606,8 +633,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the name of the folder on the **Start** menu where the application is located after ClickOnce deployment.</summary>
-        <value>A string that represents the name of a **Start** menu folder.</value>
+        <summary>Gets or sets the name of the folder on the Start menu where the application is located after ClickOnce deployment.</summary>
+        <value>A string that represents the name of a Start menu folder.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -650,8 +677,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the link that appears in the **Uninstall or change a program** dialog box for the application. The specified value should be a fully qualified URL or UNC path.</summary>
-        <value>The link that appears in the **Uninstall or change a program** dialog box for the application.</value>
+        <summary>Gets or sets the link that appears in the Uninstall or change a program dialog box for the application. The specified value should be a fully qualified URL or UNC path.</summary>
+        <value>The link that appears in the Uninstall or change a program dialog box for the application.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>

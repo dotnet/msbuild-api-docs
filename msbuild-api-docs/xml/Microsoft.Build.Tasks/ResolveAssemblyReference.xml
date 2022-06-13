@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             Given a list of assemblyFiles, determine the closure of all assemblyFiles that
-            depend on those assemblyFiles including second and nth-order dependencies too.
-            </summary>
+            depend on those assemblyFiles including second and nth-order dependencies too.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -60,8 +59,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Construct
-            </summary>
+            Construct</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -106,8 +104,7 @@
       <Docs>
         <summary>
             [default=.exe;.dll]
-            These are the assembly extensions that will be considered during references resolution.
-            </summary>
+            These are the assembly extensions that will be considered during references resolution.</summary>
         <value>The assembly extensions that will be considered during references resolution.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -160,8 +157,7 @@
       <Docs>
         <summary>
             [default=.pdb;.xml]
-            These are the extensions that will be considered when looking for related files.
-            </summary>
+            These are the extensions that will be considered when looking for related files.</summary>
         <value>The extensions that will be considered when searching for related files.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -216,8 +212,7 @@
              If this file name is passed in, then we parse it as an app.config file and extract bindingRedirect mappings. These mappings are used in the dependency
              calculation process to remap versions of assemblies.
             
-             If this parameter is passed in, then AutoUnify must be false, otherwise error.
-             </summary>
+             If this parameter is passed in, then AutoUnify must be false, otherwise error.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -301,8 +296,7 @@
                         side-by-side libraries installed and the user wants to pick an exact version.
                  bool EmbedInteropTyeps [default=absent] --
                      when true, we should treat this assembly as if it has no dependencies and should
-                     be completely embedded into the target assembly.
-             </summary>
+                     be completely embedded into the target assembly.</summary>
         <value>The assembly names to resolve into full paths and to find dependencies for.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -364,8 +358,7 @@
                  bool ExternallyResolved [default=false] -- indicates that the reference and its
                     dependencies are resolved by an external system (commonly from nuget assets) and
                     so several steps can be skipped as an optimization: finding dependencies,
-                    satellite assemblies, etc.
-             </summary>
+                    satellite assemblies, etc.</summary>
         <value>The list of fully qualified assembly paths to find dependencies for.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -480,8 +473,7 @@
              When false, each distinct conflict between different versions of the same assembly will
              result in a high priority comment. After all of these comments are displayed, there will be
              a single warning with a unique error code and text that reads "Found conflicts between
-             different versions of reference and dependent assemblies".
-             </summary>
+             different versions of reference and dependent assemblies".</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -539,8 +531,7 @@
              These must be absolute filenames, or project-relative filenames.
             
              Assembly files in this list will be considered when SearchPaths contains
-             {CandidateAssemblyFiles} as one of the paths to consider.
-             </summary>
+             {CandidateAssemblyFiles} as one of the paths to consider.</summary>
         <value>The list of assemblies to use for the search and resolution process.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -599,8 +590,7 @@
              However for dependencies we will not only check to see if they are in the GAC but we will also check to see if the parent reference from the project file is in the GAC.
              If the parent reference from the project file is in the GAC then we will not copy the dependency locally.
             
-             NOTE: If there are multiple parent reference and ANY of them does not come from the GAC then we will set copy local to true.
-             </summary>
+             NOTE: If there are multiple parent reference and ANY of them does not come from the GAC then we will set copy local to true.</summary>
         <value>
           <see langword="true" /> if, when determining if a dependency should be copied locally, one of the checks done is to see if the parent reference in the project file has the Private metadata set. If that metadata is set, we will use that for the dependency as well.  
   
@@ -614,8 +604,7 @@
   
  If the parent reference from the project file is in the GAC then we will not copy the dependency locally.  
     
- If there are multiple parent reference and ANY of them does not come from the GAC then we will set copy local to true.
-</value>
+ If there are multiple parent reference and ANY of them does not come from the GAC then we will set copy local to true.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -660,8 +649,7 @@
       <Docs>
         <summary>
             Returns every file in ResolvedFiles+ResolvedDependencyFiles+RelatedFiles+SatelliteFiles+ScatterFiles+SatelliteAssemblyFiles
-            that have CopyLocal flags set to 'true'.
-            </summary>
+            that have CopyLocal flags set to 'true'.</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -780,8 +768,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Execute the task.
-            </summary>
+            Execute the task.</summary>
         <returns>True if there was success.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -822,8 +809,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The names of all files written to disk.
-            </summary>
+            The names of all files written to disk.</summary>
         <value>The items written to disk.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -871,8 +857,7 @@
              If set, then dependencies will be found. Otherwise, only Primary references will be
              resolved.
             
-             Default is true.
-             </summary>
+             Default is true.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -953,8 +938,7 @@
         <summary>
              If set, then related files (.pdbs and .xmls) will be found.
             
-             Default is true.
-             </summary>
+             Default is true.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1008,8 +992,7 @@
         <summary>
              If set, then satellites will be found.
             
-             Default is true.
-             </summary>
+             Default is true.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1063,8 +1046,7 @@
         <summary>
              If set, then serialization assemblies will be found.
             
-             Default is true.
-             </summary>
+             Default is true.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1112,13 +1094,11 @@
              Format of the file is like:
             
                  <FileList Redist="MatchingRedistListName"><File AssemblyName="System" Version="2.0.0.0" PublicKeyToken="b77a5c561934e089" Culture="neutral" ProcessorArchitecture="MSIL" FileVersion="2.0.40824.0" InGAC="true" />
-                     etc.
-                 </FileList>
+                     etc.</FileList>
             
              Items in this list must specify the "FrameworkDirectory" metadata to associate an redist list
              with a particular framework directory. If the association is not made an error will be logged. The reason is,
-             The logic in rar assumes if a FrameworkDirectory is not set it will use the target framework directory.
-             </summary>
+             The logic in rar assumes if a FrameworkDirectory is not set it will use the target framework directory.</summary>
         <value>A list of items representing XML files that contain the full framework for the profile.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1174,8 +1154,7 @@
         <summary>
             Set of folders which containd a RedistList directory which represent the full framework for a given client profile.
             An example would be
-            %programfiles%\reference assemblies\microsoft\framework\v4.0
-            </summary>
+            %programfiles%\reference assemblies\microsoft\framework\v4.0</summary>
         <value>A list of folders which contain a RedistList directory which represent the full framework for a given client profile</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1215,8 +1194,7 @@
              Provide a set of names which if seen in the TargetFrameworkSubset list will cause the ignoring
              of TargetFrameworkSubsets.
             
-             Full, Complete
-             </summary>
+             Full, Complete</summary>
         <value>A string value that contains subset names.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1267,8 +1245,7 @@
             [default=false]
             Boolean property to control whether or not the task should look for and use additional installed
             assembly subset tables (a.k.a Subset Lists) found in the SubsetList directory underneath the provided
-            TargetFrameworkDirectories.
-            </summary>
+            TargetFrameworkDirectories.</summary>
         <value>
           <see langword="true" /> if additional assembly subset tables are used; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -1313,8 +1290,7 @@
             [default=false]
             Boolean property to control whether or not the task should look for and use additional installed
             assembly tables (a.k.a Redist Lists) found in the RedistList directory underneath the provided
-            TargetFrameworkDirectories.
-            </summary>
+            TargetFrameworkDirectories.</summary>
         <value>
           <see langword="true" /> if the task should ignore the additional installed assembly tables; <see langword="false" /> if the task should search for and use the additional installed assembly tables.</value>
         <remarks>
@@ -1349,8 +1325,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Should the framework attribute be ignored when checking to see if an assembly is compatible with the targeted framework.
-            </summary>
+            Should the framework attribute be ignored when checking to see if an assembly is compatible with the targeted framework.</summary>
         <value>
           <see langword="true" /> to ignore the framework attribute; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -1378,8 +1353,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            If the primary reference is a framework assembly ignore its version information and actually resolve the framework assembly from the currently targeted framework.
-            </summary>
+            If the primary reference is a framework assembly ignore its version information and actually resolve the framework assembly from the currently targeted framework.</summary>
         <value>
           <see langword="true" /> to ignore the version information; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -1422,15 +1396,13 @@
              Format of the file is like:
             
                  <FileList Redist="ClientSubset"><File AssemblyName="System" Version="2.0.0.0" PublicKeyToken="b77a5c561934e089" Culture="neutral" ProcessorArchitecture="MSIL" FileVersion="2.0.40824.0" InGAC="true" />
-                     etc.
-                 </FileList>
+                     etc.</FileList>
             
              Items in this list may optionally specify the "FrameworkDirectory" metadata to associate an InstalledAssemblySubsetTable
              with a particular framework directory.
              If there is only a single TargetFrameworkDirectories element, then any items in this list missing the
              "FrameworkDirectory" metadata will be treated as though this metadata is set to the lone (unique) value passed
-             to TargetFrameworkDirectories.
-             </summary>
+             to TargetFrameworkDirectories.</summary>
         <value>A list of XML files.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1505,8 +1477,7 @@
              Format of the file is like:
             
                  <FileList Redist="Microsoft-Windows-CLRCoreComp"><File AssemblyName="System" Version="2.0.0.0" PublicKeyToken="b77a5c561934e089" Culture="neutral" ProcessorArchitecture="MSIL" FileVersion="2.0.40824.0" InGAC="true" />
-                     etc.
-                 </FileList>
+                     etc.</FileList>
             
              When present, assemblies from this list will be candidates to automatically "unify" from prior versions up to
              the version listed in the XML. Also, assemblies with InGAC='true' will be considered prerequisites and will be CopyLocal='false'
@@ -1516,8 +1487,7 @@
              "Microsoft-Windows-CLRCoreComp".
              If there is only a single TargetFrameworkDirectories element, then any items in this list missing the
              "FrameworkDirectory" metadata will be treated as though this metadata is set to the lone (unique) value passed
-             to TargetFrameworkDirectories.
-             </summary>
+             to TargetFrameworkDirectories.</summary>
         <value>A list of XML files that contain assemblies that are expected to be installed on the target machine.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1557,8 +1527,7 @@
             The list of directories which contain the redist lists for the most current
             framework which can be targeted on the machine. If this is not set
             Then we will looks for the highest framework installed on the machine
-            for a given target framework identifier and use that.
-            </summary>
+            for a given target framework identifier and use that.</summary>
         <value>The list of directories which contain the redist lists for the most current framework which can be targeted on the machine. If this is not set, then the highest framework installed on the machine for a given target framework identifier is searched and used.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1615,8 +1584,7 @@
       <Docs>
         <summary>
             Name of the target framework profile we are targeting.
-            Eg. Client, Web, or Network
-            </summary>
+            Eg. Client, Web, or Network</summary>
         <value>The name of the target framework profile. For example, Client, Web, or Network.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1664,8 +1632,7 @@
             Related files are files like intellidoc (.XML) and symbols (.PDB) that have the same base
             name as a reference.
                 bool Primary [always false] - true if this assembly was passed in with Assemblies.
-                bool CopyLocal - whether the given reference should be copied to the output directory.
-            </summary>
+                bool CopyLocal - whether the given reference should be copied to the output directory.</summary>
         <value>The related files.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1720,9 +1687,8 @@
                     'false' means the assembly is internal to a redist and should not be part of the
                     application manifest.
                 string Redist - The name (if any) of the redist that contains this assembly.
-            Does not include first order primary references--this list is in ResolvedFiles.
-            </summary>
-        <value>The *n*th order paths to dependencies.</value>
+            Does not include first order primary references--this list is in ResolvedFiles.</summary>
+        <value>The nth order paths to dependencies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -1775,8 +1741,7 @@
                     an application dependency in an application manifest.
                     'false' means the assembly is internal to a redist and should not be part of the
                     application manifest.
-                string Redist - The name (if any) of the redist that contains this assembly.
-            </summary>
+                string Redist - The name (if any) of the redist that contains this assembly.</summary>
         <value>The list of all primary references resolved to full paths.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1804,8 +1769,7 @@
       <Docs>
         <summary>
             A list of resolved SDK references which contain the sdk name, sdk location and the targeted configuration.
-            These locations will only be searched if the reference has the SDKName metadata attached to it.
-            </summary>
+            These locations will only be searched if the reference has the SDKName metadata attached to it.</summary>
         <value>A list of resolved SDK references.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1854,8 +1818,7 @@
             that caused this item to exist is CopyLocal=true.
                 bool CopyLocal - whether the given reference should be copied to the output directory.
                 string DestinationSubDirectory - the relative destination directory that this file
-                  should be copied to. This is mainly for satellites.
-            </summary>
+                  should be copied to. This is mainly for satellites.</summary>
         <value>Any satellite files found.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1908,8 +1871,7 @@
       <Docs>
         <summary>
             Scatter files associated with one of the given assemblies.
-                bool CopyLocal - whether the given reference should be copied to the output directory.
-            </summary>
+                bool CopyLocal - whether the given reference should be copied to the output directory.</summary>
         <value>The scatter files associated with one of the given assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1962,13 +1924,13 @@
              The following types of things can be passed in here:
              (1) A plain old directory path.
              (2) {HintPathFromItem} -- Look at the HintPath attribute from the base item.
-                 This attribute must be a file name *not* a directory name.
+                 This attribute must be a file name not a directory name.
              (3) {CandidateAssemblyFiles} -- Look at the files passed in through the CandidateAssemblyFiles
                  parameter.
              (4) {Registry:_AssemblyFoldersBase_,_RuntimeVersion_,_AssemblyFoldersSuffix_}
                   Where:
             
-                     _AssemblyFoldersBase_ = Software\Microsoft\[.NetFramework | .NetCompactFramework]
+                     _AssemblyFoldersBase_ = Software\Microsoft[.NetFramework | .NetCompactFramework]
                      _RuntimeVersion_ = the runtime version property from the project file
                      _AssemblyFoldersSuffix_ = [ PocketPC | SmartPhone | WindowsCE]\AssemblyFoldersEx
             
@@ -1986,14 +1948,11 @@
             
                   The based registry key is composed as:
             
-                      [HKLM | HKCU]\_AssemblyFoldersBase_\_RuntimeVersion_\_AssemblyFoldersSuffix_
+                      [HKLM | HKCU]_AssemblyFoldersBase__RuntimeVersion__AssemblyFoldersSuffix_
             
              (5) {AssemblyFolders} -- Use the VisualStudion 2003 .NET finding-assemblies-from-registry scheme.
              (6) {GAC} -- Look in the GAC.
-             (7) {RawFileName} -- Consider the Include value to be an exact path and file name.
-            
-            
-             </summary>
+             (7) {RawFileName} -- Consider the Include value to be an exact path and file name.</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2040,8 +1999,7 @@
         <summary>
             Any XML serialization assemblies found. These will be CopyLocal=true iff the reference or dependency
             that caused this item to exist is CopyLocal=true.
-                bool CopyLocal - whether the given reference should be copied to the output directory.
-            </summary>
+                bool CopyLocal - whether the given reference should be copied to the output directory.</summary>
         <value>The serialization assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2088,8 +2046,7 @@
         <summary>
              If set, then don't log any messages to the screen.
             
-             Default is false.
-             </summary>
+             Default is false.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2142,8 +2099,7 @@
       <Docs>
         <summary>
             An optional file name that indicates where to save intermediate build state
-            for this task. If not specified, then no inter-build caching will occur.
-            </summary>
+            for this task. If not specified, then no inter-build caching will occur.</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2194,8 +2150,7 @@
             
              Each returned ITaskItem will have the following values:
               ItemSpec - the full fusion name of the assembly family with empty version=0.0.0.0
-              MaxVersion - the maximum version number.
-             </summary>
+              MaxVersion - the maximum version number.</summary>
         <value>The items that correspond to distinct conflicting assembly identities.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2262,8 +2217,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            What is the runtime we are targeting, is it 2.0.57027 or anotherone, It can have a v or not prefixed onto it.
-            </summary>
+            What is the runtime we are targeting, is it 2.0.57027 or anotherone, It can have a v or not prefixed onto it.</summary>
         <value>The name of the runtime being targeted. A "v" may be prefixed to the name.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2311,8 +2265,7 @@
             Path to the target frameworks directory. Required to figure out CopyLocal status
             for resulting items.
             If not present, then no resulting items will be deemed CopyLocal='true' unless they explicity
-            have a Private='true' attribute on their source item.
-            </summary>
+            have a Private='true' attribute on their source item.</summary>
         <value>The path to the target framework directory.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2360,8 +2313,7 @@
         <summary>
              The target framework moniker we are targeting if any. This is used for logging purposes.
             
-             Default is empty.
-             </summary>
+             Default is empty.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2405,8 +2357,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The display name of the target framework moniker, if any. This is only for logging.
-            </summary>
+            The display name of the target framework moniker, if any. This is only for logging.</summary>
         <value>The display name of the target framework moniker, if any.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2450,8 +2401,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            List of target framework subset names which will be searched for in the target framework directories
-            </summary>
+            List of target framework subset names which will be searched for in the target framework directories</summary>
         <value>A list of target framework subset names.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2494,8 +2444,7 @@
         <summary>
              The project target framework version.
             
-             Default is empty. which means there will be no filtering for the reference based on their target framework.
-             </summary>
+             Default is empty. which means there will be no filtering for the reference based on their target framework.</summary>
         <value />
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2556,8 +2505,7 @@
              (3) Assemblies in the GAC that have no ProcessorArchitecture.
             
              If absent, then only consider assemblies in the GAC that have ProcessorArchitecture==MSIL or
-             no ProcessorArchitecture (these are pre-Whidbey assemblies).
-             </summary>
+             no ProcessorArchitecture (these are pre-Whidbey assemblies).</summary>
         <value>The preferred target processor architecture used for resolving Global Assembly Cache (GAC) references.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -2643,8 +2591,7 @@
             
              When this is warn, if there is a mismatch between the targetprocessor architecture and the architecture of a primary reference a warning will be logged.
             
-             When this is none, no error or warning will be logged.
-             </summary>
+             When this is none, no error or warning will be logged.</summary>
         <value>A string value of "Error", "Warning" or "None".</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

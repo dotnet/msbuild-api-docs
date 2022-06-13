@@ -36,8 +36,7 @@
             Helper logging class - contains all the logging methods used by tasks.
             A TaskLoggingHelper object is passed to every task by MSBuild. For tasks that derive
             from the Task class, it is provided in the Log property.
-            This class is thread safe: tasks can log from any threads.
-            </summary>
+            This class is thread safe: tasks can log from any threads.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -89,8 +88,7 @@
       <Docs>
         <param name="taskInstance">task containing an instance of this class</param>
         <summary>
-            public constructor
-            </summary>
+            public constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -118,8 +116,7 @@
         <param name="buildEngine">The build engine.</param>
         <param name="taskName">The task name.</param>
         <summary>
-            Public constructor which can be used by task factories to assist them in logging messages.
-            </summary>
+            Public constructor which can be used by task factories to assist them in logging messages.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,8 +149,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Shortcut property for getting our build engine - we retrieve it from the task instance
-            </summary>
+            Shortcut property for getting our build engine - we retrieve it from the task instance</summary>
         <value>An <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> that represents the instance of the build engine that is associated with the task.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -195,8 +191,7 @@
         <summary>
             Extracts the message code (if any) prefixed to the given message string. Message code prefixes must match the
             following .NET regular expression in order to be recognized: <c>^\s*[A-Za-z]+\d+:\s*</c>
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>The message code extracted from the prefix, or null if there was no code.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -266,8 +261,7 @@
             Requires the owner task to have registered its resources either via the Task (or TaskMarshalByRef) base
             class constructor, or the Task.TaskResources (or AppDomainIsolatedTask.TaskResources) property.
             
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>The formatted string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -327,8 +321,7 @@
         <param name="args">Arguments for formatting.</param>
         <summary>
             Formats the given string using the variable arguments passed in. The current thread's culture is used for formatting.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>The formatted string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -367,8 +360,7 @@
         <param name="resourceName">The resource name.</param>
         <summary>
             Get the message from resource in task library.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>The message from resource.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -408,8 +400,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Has the task logged any errors through this logging helper object?
-            </summary>
+            Has the task logged any errors through this logging helper object?</summary>
         <value>
           <see langword="true" /> if the task has logged any errors through this logging helper object; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -463,8 +454,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the prefix used to compose help keywords from string resource names.
-            </summary>
+            Gets or sets the prefix used to compose help keywords from string resource names.</summary>
         <value>The help keyword prefix string.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -501,8 +491,7 @@
             InitializeLifetimeService is called when the remote object is activated.
             This method will determine how long the lifetime for the object will be.
             Thread safe. However, InitializeLifetimeService and MarkAsInactive should
-            only be called in that order, together or not at all, and no more than once.
-            </summary>
+            only be called in that order, together or not at all, and no more than once.</summary>
         <returns>The lease object to control this object's lifetime.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -579,8 +568,7 @@
         <param name="commandLine">The command line string.</param>
         <summary>
             Logs the command line for a task's underlying tool/executable/shell command.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -628,8 +616,7 @@
         <summary>
             Logs the command line for a task's underlying tool/executable/shell
             command, using the given importance level.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -691,8 +678,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a critical message using the specified string and other message details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
@@ -765,8 +751,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs an error using the specified string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -844,8 +829,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs an error using the specified string and other error details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -964,8 +948,7 @@
         <summary>
             Logs an error using the message from the given exception context.
             No callstack will be shown.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1019,8 +1002,7 @@
         <param name="showStackTrace">If true, callstack will be appended to message.</param>
         <summary>
             Logs an error using the message (and optionally the stack-trace) from the given exception context.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1073,8 +1055,7 @@
         <summary>
             Logs an error using the message, and optionally the stack-trace from the given exception, and
             optionally inner exceptions too.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
@@ -1137,8 +1118,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs an error using the specified resource string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1209,8 +1189,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs an error using the specified resource string and other error details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1289,8 +1268,7 @@
             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1366,8 +1344,7 @@
             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1425,8 +1402,7 @@
         <param name="succeeded">true indicates project built successfully</param>
         <summary>
             Small helper for logging the custom ExternalProjectFinished build event.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1470,8 +1446,7 @@
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <summary>
             Small helper for logging the custom ExternalProjectStarted build event
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1543,8 +1518,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message using the specified string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1608,8 +1582,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message of the given importance using the specified string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
@@ -1669,8 +1642,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a message using the specified string and other message details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
@@ -1733,8 +1705,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a message using the specified resource string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1791,8 +1762,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a message of the given importance using the specified resource string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
@@ -1836,8 +1806,7 @@
         <summary>
             Logs an error/warning/message from the given line of text. Errors/warnings are only logged for lines that fit a
             particular (canonical) format -- all other lines are treated as messages.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>true, if an error was logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1900,8 +1869,7 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
             fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1951,8 +1919,7 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
             fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2002,8 +1969,7 @@
         <summary>
             Logs errors/warnings/messages for each line of text in the given stream. Errors/warnings are only logged for lines
             that fit a particular (canonical) format -- the remaining lines are treated as messages.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2129,8 +2095,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a warning using the specified string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2201,8 +2166,7 @@
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
         <summary>
             Logs a warning using the specified string and other warning details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2320,8 +2284,7 @@
         <param name="exception">Exception to log.</param>
         <summary>
             Logs a warning using the message from the given exception context.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2369,8 +2332,7 @@
         <param name="showStackTrace">If true, the exception callstack is appended to the message.</param>
         <summary>
             Logs a warning using the message (and optionally the stack-trace) from the given exception context.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2440,8 +2402,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a warning using the specified resource string.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2512,8 +2473,7 @@
         <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
         <summary>
             Logs a warning using the specified resource string and other warning details.
-            Thread safe.
-            </summary>
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2592,8 +2552,7 @@
              A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
              Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-             Thread safe.
-             </summary>
+             Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2669,8 +2628,7 @@
              A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
              Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
             
-             Thread safe.
-             </summary>
+             Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2712,8 +2670,7 @@
         <summary>
             Notifies this object that its work is done.
             Thread safe. However, InitializeLifetimeService and MarkAsInactive should
-            only be called in that order, together or not at all, and no more than once.
-            </summary>
+            only be called in that order, together or not at all, and no more than once.</summary>
         <remarks>
             Indicates to the TaskLoggingHelper that it is no longer needed.
             </remarks>
@@ -2754,8 +2711,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the name of the parent task.
-            </summary>
+            Gets the name of the parent task.</summary>
         <value>Task name string.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2800,8 +2756,7 @@
       <Docs>
         <summary>
             Used to load culture-specific resources. Derived classes should register their resources either during construction, or
-            via this property, if they have localized strings.
-            </summary>
+            via this property, if they have localized strings.</summary>
         <value>A <see cref="T:System.Resources.ResourceManager" /> that represents the culture-specific resources used by the logging methods. This value can be <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

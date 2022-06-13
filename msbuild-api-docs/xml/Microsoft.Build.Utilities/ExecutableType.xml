@@ -18,8 +18,7 @@
   </Base>
   <Docs>
     <summary>
-            Enumeration to express the type of executable being wrapped by Tracker.exe
-            </summary>
+            Enumeration to express the type of executable being wrapped by Tracker.exe</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -45,8 +44,7 @@
       <MemberValue>3</MemberValue>
       <Docs>
         <summary>
-            A managed executable specifically marked as 32-bit
-            </summary>
+            A managed executable specifically marked as 32-bit</summary>
       </Docs>
     </Member>
     <Member MemberName="Managed64Bit">
@@ -71,7 +69,28 @@
       <MemberValue>4</MemberValue>
       <Docs>
         <summary>
-            A managed executable specifically marked as 64-bit
+            A managed executable specifically marked as 64-bit</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagedARM64">
+      <MemberSignature Language="C#" Value="ManagedARM64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.ExecutableType ManagedARM64 = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ExecutableType.ManagedARM64" />
+      <MemberSignature Language="VB.NET" Value="ManagedARM64" />
+      <MemberSignature Language="F#" Value="ManagedARM64 = 7" Usage="Microsoft.Build.Utilities.ExecutableType.ManagedARM64" />
+      <MemberSignature Language="C++ CLI" Value="ManagedARM64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.ExecutableType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            64-bit managed ARM64 executable.
             </summary>
       </Docs>
     </Member>
@@ -97,8 +116,7 @@
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            A managed executable without a specified bitness
-            </summary>
+            A managed executable without a specified bitness</summary>
       </Docs>
     </Member>
     <Member MemberName="Native32Bit">
@@ -123,8 +141,7 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            32-bit native executable
-            </summary>
+            32-bit native executable</summary>
       </Docs>
     </Member>
     <Member MemberName="Native64Bit">
@@ -149,7 +166,28 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            64-bit native executable 
+            64-bit native executable</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeARM64">
+      <MemberSignature Language="C#" Value="NativeARM64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.ExecutableType NativeARM64 = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ExecutableType.NativeARM64" />
+      <MemberSignature Language="VB.NET" Value="NativeARM64" />
+      <MemberSignature Language="F#" Value="NativeARM64 = 6" Usage="Microsoft.Build.Utilities.ExecutableType.NativeARM64" />
+      <MemberSignature Language="C++ CLI" Value="NativeARM64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.ExecutableType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            64-bit native ARM64 executable.
             </summary>
       </Docs>
     </Member>
@@ -175,8 +213,7 @@
       <MemberValue>5</MemberValue>
       <Docs>
         <summary>
-            Use the same bitness as the currently running executable. 
-            </summary>
+            Use the same bitness as the currently running executable.</summary>
       </Docs>
     </Member>
   </Members>
