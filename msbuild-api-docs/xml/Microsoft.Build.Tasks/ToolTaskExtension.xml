@@ -28,8 +28,7 @@
   <Docs>
     <summary>
             A small intermediate class between ToolTask and classes using it in XMakeTasks, implementing functionality
-            that we didn't want to expose in Utilities
-            </summary>
+            that we didn't want to expose in Utilities</summary>
     <remarks>
             This class has to be public because the tasks that derive from it are public.
             Ideally we would like this class to be internal, but C# does not allow a base class
@@ -72,8 +71,7 @@
         <param name="commandLine">The <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> to fill.</param>
         <summary>
             Fills the provided CommandLineBuilderExtension with those switches and other information that can't go into a response file and
-            must go directly onto the command line.
-            </summary>
+            must go directly onto the command line.</summary>
         <returns>true, if successful</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -112,8 +110,7 @@
       <Docs>
         <param name="commandLine">The <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> to fill.</param>
         <summary>
-            Fills the provided CommandLineBuilderExtension with those switches and other information that can go into a response file.
-            </summary>
+            Fills the provided CommandLineBuilderExtension with those switches and other information that can go into a response file.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -153,8 +150,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the collection of parameters used by the derived task class.
-            </summary>
+            Gets the collection of parameters used by the derived task class.</summary>
         <value>Parameter bag.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -192,8 +188,7 @@
         <summary>
             Returns a string with those switches and other information that can't go into a response file and
             must go directly onto the command line.
-            Called after ValidateParameters and SkipTaskExecution
-            </summary>
+            Called after ValidateParameters and SkipTaskExecution</summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -231,8 +226,7 @@
         <summary>
             Returns the command line switch used by the tool executable to specify the response file
             Will only be called if the task returned a non empty string from GetResponseFileCommands
-            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands
-            </summary>
+            Called after ValidateParameters, SkipTaskExecution and GetResponseFileCommands</summary>
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -274,8 +268,7 @@
         <param name="defaultValue">The value to return if <paramref name="parameterName" /> does not exist in the <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
         <summary>
             Get a bool parameter and return a default if its not present
-            in the hash table.
-            </summary>
+            in the hash table.</summary>
         <returns>The parameter value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -324,8 +317,7 @@
         <param name="defaultValue">The value to return if <paramref name="parameterName" /> does not exist in the <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
         <summary>
             Get an int parameter and return a default if its not present
-            in the hash table.
-            </summary>
+            in the hash table.</summary>
         <returns>The parameter value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -363,8 +355,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Whether this ToolTaskExtension has logged any errors
-            </summary>
+            Whether this ToolTaskExtension has logged any errors</summary>
         <value>
           <see langword="true" /> if the ToolTask logged errors, <see langword="false" /> if otherwise.</value>
         <remarks>To be added.</remarks>
@@ -406,8 +397,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets an instance of a TaskLoggingHelperExtension class containing task logging methods.
-            </summary>
+            Gets an instance of a TaskLoggingHelperExtension class containing task logging methods.</summary>
         <value>The logging helper object.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

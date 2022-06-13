@@ -27,8 +27,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            The License Compiler task
-            </summary>
+            The License Compiler task</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -103,8 +102,7 @@
         <param name="commandLine">command line builder class to add arguments to the command line</param>
         <summary>
             Generates command line arguments for lc.exe
-            Used when targeting framework version is less than 4.6
-            </summary>
+            Used when targeting framework version is less than 4.6</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -125,7 +123,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17" />
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
         <param name="commandLine">command line builder class to add arguments to the response file</param>
@@ -134,6 +132,33 @@
             Used when targeting framework version is 4.6 or later
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.LC.Execute" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="lC.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Override of Execute that errors, since <see cref="T:Microsoft.Build.Tasks.LC" /> is not expected to get
+            .NET Core support.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            See https://github.com/dotnet/winforms/issues/1462.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="GenerateFullPathToTool">
@@ -166,8 +191,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Determing the path to lc.exe
-            </summary>
+            Determing the path to lc.exe</summary>
         <returns>path to lc.exe, null if not found</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -208,8 +232,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the executable for which the .licenses files are being generated
-            </summary>
+            Specifies the executable for which the .licenses files are being generated</summary>
         <value>The executable for which the .licenses files are generated.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -244,8 +267,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Suppresses the display of the startup banner
-            </summary>
+            Suppresses the display of the startup banner</summary>
         <value>
           <see langword="true" /> if the Microsoft startup banner display is suppressed; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -281,8 +303,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Output directory for the generated .licenses file
-            </summary>
+            Output directory for the generated .licenses file</summary>
         <value />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -323,8 +344,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the .licenses file, output only. It's inferred from LicenseTarget and OutputDirectory.
-            </summary>
+            The name of the .licenses file, output only. It's inferred from LicenseTarget and OutputDirectory.</summary>
         <value>The name of the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -367,8 +387,7 @@
       <Docs>
         <summary>
             Specifies the referenced components (licensed controls and possibly their dependent assemblies)
-            to load when generating the .license file.
-            </summary>
+            to load when generating the .license file.</summary>
         <value>The referenced components to load when generating the .licenses file.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -435,8 +454,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the items that contain licensed components that need to be included in the .licenses file
-            </summary>
+            Specifies the items that contain licensed components that need to be included in the .licenses file</summary>
         <value>The items that contain licensed components to include in the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -462,7 +480,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore">
           <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
           <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
         </Attribute>
@@ -507,8 +525,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the tool to execute
-            </summary>
+            The name of the tool to execute</summary>
         <value>The name of the license compiler tool.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -544,8 +561,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Validate the task arguments, log any warnings/errors
-            </summary>
+            Validate the task arguments, log any warnings/errors</summary>
         <returns>true if arguments are corrent enough to continue processing, false otherwise</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

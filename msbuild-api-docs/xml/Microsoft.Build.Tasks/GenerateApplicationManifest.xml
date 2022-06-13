@@ -25,10 +25,15 @@
     <BaseTypeName>Microsoft.Build.Tasks.GenerateManifestBase</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Generates an application manifest for ClickOnce projects.
-            </summary>
+            Generates an application manifest for ClickOnce projects.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[
 
@@ -283,6 +288,28 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.Execute" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="generateApplicationManifest.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="FileAssociations">
@@ -913,8 +940,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the name of the folder on the **Start** menu where the application is located after ClickOnce deployment.</summary>
-        <value>A string that represents the name of a **Start** menu folder.</value>
+        <summary>Gets or sets the name of the folder on the Start menu where the application is located after ClickOnce deployment.</summary>
+        <value>A string that represents the name of a Start menu folder.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>

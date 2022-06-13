@@ -15,7 +15,7 @@
   <Interfaces />
   <Docs>
     <summary>
-                An abstract interface for classes that can resolve a Software Development Kit (SDK).
+            An abstract interface for classes that can resolve a Software Development Kit (SDK).
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -54,7 +54,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-                Name of the SDK resolver to be displayed in build output log.
+            Gets the name of the <see cref="T:Microsoft.Build.Framework.SdkResolver" /> to be displayed in build output log.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -77,8 +77,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-                Gets the self-described resolution priority order. MSBuild will sort resolvers
-                by this value.
+            Gets the self-described resolution priority order. MSBuild will sort resolvers
+            by this value.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -109,20 +109,16 @@
         <param name="resolverContext">Context for resolving the SDK.</param>
         <param name="factory">Factory class to create an <see cref="T:Microsoft.Build.Framework.SdkResult" /></param>
         <summary>
-                Resolves the specified SDK reference.
+            Resolves the specified SDK reference.
             </summary>
         <returns>
-                An <see cref="T:Microsoft.Build.Framework.SdkResult" /> containing the resolved SDKs or associated error / reason
-                the SDK could not be resolved.  Return <code>null</code> if the resolver is not
-                applicable for a particular <see cref="T:Microsoft.Build.Framework.SdkReference" />.
-             </returns>
+            An <see cref="T:Microsoft.Build.Framework.SdkResult" /> containing the resolved SDKs or associated error / reason
+            the SDK could not be resolved.  Return <see langword="null" /> if the resolver is not
+            applicable for a particular <see cref="T:Microsoft.Build.Framework.SdkReference" />.
+            </returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[
-## Remarks
-> [!NOTE]
-> You must use the <xref:Microsoft.Build.Framework.SdkResultFactory> to return a result.
-       ]]></format>
-        </remarks>
+             Note: You must use <see cref="T:Microsoft.Build.Framework.SdkResultFactory" /> to return a result.
+             </remarks>
       </Docs>
     </Member>
   </Members>

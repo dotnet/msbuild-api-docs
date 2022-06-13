@@ -37,8 +37,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes a ClickOnce deployment manifest.
-            </summary>
+            Describes a ClickOnce deployment manifest.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -77,8 +76,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Initializes a new instance of the DeployManifest class.
-            </summary>
+            Initializes a new instance of the DeployManifest class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -104,8 +102,7 @@
       <Docs>
         <param name="targetFrameworkMoniker">A token that represents a version of the .NET Framework runtime.</param>
         <summary>
-            Initializes a new instance of the DeployManifest class.
-            </summary>
+            Initializes a new instance of the DeployManifest class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -136,8 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            A collection of CompatibleFrameworks
-            </summary>
+            A collection of CompatibleFrameworks</summary>
         <value>A <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection" /> class that represents the versions of the .NET Framework that an application can run on.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,8 +172,7 @@
             Specifies whether the application install will create a shortcut on the desktop
             If True, the installation will create a shortcut to the application on the desktop.
             The default is False
-            If Install is False, this value will be ignored
-            </summary>
+            If Install is False, this value will be ignored</summary>
         <value>"true" or "false". A string that contains a value that indicates whether to create a desktop shortcut.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -228,8 +223,7 @@
             Specifies the update location for the application.
             If this input is not specified then no update location will be defined for the application.
             However, if application updates are specified then the update location must be specified.
-            The specified value should be a fully qualified URL or UNC path.
-            </summary>
+            The specified value should be a fully qualified URL or UNC path.</summary>
         <value>A string that indicates the update location for the application.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -279,8 +273,7 @@
             Specifies whether the application should be blocked from being activated via a URL.
             If this option is True then application can only be activated from the user's Start menu.
             The default is False.
-            This option is ignored if the Install property is False.
-            </summary>
+            This option is ignored if the Install property is False.</summary>
         <value>
           <see langword="true" /> if the application is blocked from being started by means of a URL otherwise, <see langword="false" />.</value>
         <remarks>
@@ -380,8 +373,7 @@
       <Docs>
         <summary>
             Specifies the link to use if there is a failure launching the application.
-            The specified value should be a fully qualified URL or UNC path.
-            </summary>
+            The specified value should be a fully qualified URL or UNC path.</summary>
         <value>A string that contains the URL of the error report.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -424,8 +416,7 @@
             Specifies whether the application is an installed application or an online only application.
             If this flag is True the application will be installed on the user's Start menu, and can be removed from the Add/Remove Programs dialog.
             If this flag is False then the application is intended for online use from a web page.
-            The default is True.
-            </summary>
+            The default is True.</summary>
         <value>
           <see langword="true" /> if the application is an installed application; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -480,8 +471,7 @@
             Specifies whether or not the ".deploy" file extension mapping is used.
             If this flag is true then every application file is published with a ".deploy" file extension.
             This option is useful for web server security to limit the number of file extensions that need to be unblocked to enable ClickOnce application deployment.
-            The default is false.
-            </summary>
+            The default is false.</summary>
         <value>
           <see langword="true" /> if .deploy file extension mapping is used; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -540,8 +530,7 @@
             Specifies whether or not the user can skip the update.
             If the user has a version less than the minimum required, he or she will not have the option to skip the update.
             The default is to have no minimum required version.
-            This input only applies when Install is True.
-            </summary>
+            This input only applies when Install is True.</summary>
         <value>A string indicating the minimum required version number for an application.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -598,8 +587,7 @@
         <summary>
             Specifies the name of the application.
             If this input is not specified then the name is inferred from the identity of the generated manifest.
-            This name is used for the shortcut name on the Start menu and is part of the name that appears in the Add/Remove Programs dialog.
-            </summary>
+            This name is used for the shortcut name on the Start menu and is part of the name that appears in the Add/Remove Programs dialog.</summary>
         <value>A string that indicates the name of the application.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -656,8 +644,7 @@
         <summary>
             Specifies the publisher of the application.
             If this input is not specified then the name is inferred from the registered user, or the identity of the generated manifest.
-            This name is used for the folder name on the Start menu and is part of the name that appears in the Add/Remove Programs dialog.
-            </summary>
+            This name is used for the folder name on the Start menu and is part of the name that appears in the Add/Remove Programs dialog.</summary>
         <value>A string that indicates the publisher of the application.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -709,8 +696,7 @@
       <Docs>
         <summary>
             Specifies the suite name of the application.
-            This name is used for the sub-folder name on the Start menu (as a child of the publisher)
-            </summary>
+            This name is used for the sub-folder name on the Start menu (as a child of the publisher)</summary>
         <value>A string that contains the suite name.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -759,8 +745,7 @@
       <Docs>
         <summary>
             Specifies the link that appears in the Add/Remove Programs dialog for the application.
-            The specified value should be a fully qualified URL or UNC path.
-            </summary>
+            The specified value should be a fully qualified URL or UNC path.</summary>
         <value>A string that indicates the support URL.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -803,8 +788,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the target framework moniker of this project.
-            </summary>
+            Specifies the target framework moniker of this project.</summary>
         <value>A <see cref="T:System.String" /> that represents a version of the .NET Framework runtime.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -845,8 +829,7 @@
       <Docs>
         <summary>
             Specifies whether or not URL query-string parameters should be made available to the application.
-            The default is False indicating that parameters will not be available to the application.
-            </summary>
+            The default is False indicating that parameters will not be available to the application.</summary>
         <value>
           <see langword="true" /> if URL query-string parameters are available to the application; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -896,8 +879,7 @@
         <summary>
             Indicates whether or not the application is updatable.
             The default is False.
-            This input only applies when Install is True.
-            </summary>
+            This input only applies when Install is True.</summary>
         <value>
           <see langword="true" /> if the application is updatable; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -947,8 +929,7 @@
         <summary>
             Specifies the update interval for the application.
             The default is zero.
-            This input only applies when Install and UpdateEnabled are both True.
-            </summary>
+            This input only applies when Install and UpdateEnabled are both True.</summary>
         <value>An integer that indicates the update interval for the application.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -997,8 +978,7 @@
         <summary>
             Specifies whether updates should be checked in the foreground before starting the application, or in the background as the application is running.
             The default is "Background".
-            This input only applies when Install and UpdateEnabled are both True.
-            </summary>
+            This input only applies when Install and UpdateEnabled are both True.</summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode" /> object that indicates whether updates should be checked before the application is started, or while the application is running.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1048,8 +1028,7 @@
       <Docs>
         <summary>
             Specifies the units for UpdateInterval input.
-            This input only applies when Install and UpdateEnabled are both True.
-            </summary>
+            This input only applies when Install and UpdateEnabled are both True.</summary>
         <value>An <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit" /> object that indicates the units used for the <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval" /> property.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
