@@ -16,7 +16,19 @@
   <Interfaces />
   <Docs>
     <summary>Describes a file download that has recently completed.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ The following code example downloads a file group named `HelpFiles`, and displays download progress in a status bar. This example requires that you deploy a Windows Forms application, and that your main form has a <xref:System.Windows.Forms.StatusStrip> control, and a <xref:System.Windows.Forms.ToolStripStatusLabel> control named `downloadStatus`.  
+  
+ :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp" id="Snippet8":::
+ :::code language="csharp" source="~/snippets/csharp/System.Deployment.Application/ApplicationDeployment/Overview/Form1.cs" id="Snippet8":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb" id="Snippet8":::  
+  
+ ]]></format>
+    </remarks>
+    <altmember cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" />
   </Docs>
   <Members>
     <Member MemberName="Group">
@@ -38,7 +50,23 @@
       <Docs>
         <summary>Gets the name of the file group being downloaded.</summary>
         <value>A <see cref="T:System.String" /> representing the name of the file group.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ You can initiate multiple calls to <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> and download multiple file groups simultaneously. Use <xref:System.Deployment.Application.DownloadFileGroupCompletedEventArgs.Group%2A> to determine which event callbacks correspond to which group.  
+  
+   
+  
+## Examples  
+ The following code example downloads a file group named `HelpFiles`, and displays download progress in a status bar. This example requires that you deploy a Windows Forms application, and that your main form has a <xref:System.Windows.Forms.StatusStrip> control, and a <xref:System.Windows.Forms.ToolStripStatusLabel> control named `downloadStatus`.  
+  
+ :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp" id="Snippet8":::
+ :::code language="csharp" source="~/snippets/csharp/System.Deployment.Application/ApplicationDeployment/Overview/Form1.cs" id="Snippet8":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb" id="Snippet8":::  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

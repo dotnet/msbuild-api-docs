@@ -15,7 +15,25 @@
   </Base>
   <Docs>
     <summary>Specifies the current stage of a ClickOnce download operation.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Deployment.Application.DeploymentProgressState> is passed by way of the <xref:System.Deployment.Application.DownloadProgressChangedEventArgs.State%2A> member of <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs>, which is used by the <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged>, <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged>, and <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged> events. Use the members of this enumeration to determine what portion of the ClickOnce deployment has already been downloaded to the local machine.  
+  
+   
+  
+## Examples  
+ The following code example installs the latest ClickOnce application update asynchronously.  
+  
+ :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Deployment.Application/ApplicationDeployment/Overview/Form1.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb" id="Snippet1":::  
+  
+ ]]></format>
+    </remarks>
+    <altmember cref="T:System.Deployment.Application.ApplicationDeployment" />
+    <related type="Article" href="/visualstudio/deployment/clickonce-security-and-deployment">ClickOnce Deployment</related>
   </Docs>
   <Members>
     <Member MemberName="DownloadingApplicationFiles">
