@@ -7,6 +7,7 @@
     <Assembly Name="Microsoft.Build.Framework" Version="4.0.0.0" />
     <Assembly Name="Microsoft.Build.Tasks.v4.0" Version="4.0.0.0" />
     <Assembly Name="Microsoft.Build.Utilities.v4.0" Version="4.0.0.0" />
+    <Assembly Name="System.Deployment" Version="4.0.0.0" />
     <Assembly Name="XamlBuildTask" Version="4.0.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Build.BuildEngine">
@@ -4328,6 +4329,177 @@
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version100" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version110" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest" />
+    </Type>
+  </Namespace>
+  <Namespace Name="System.Deployment.Application">
+    <Type Name="System.Deployment.Application.ApplicationDeployment" Id="T:System.Deployment.Application.ApplicationDeployment">
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" />
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged" />
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupCompleted" />
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged" />
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.UpdateCompleted" />
+      <Member Id="E:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate(System.Boolean)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate(System.Boolean)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsyncCancel" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup(System.String)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync(System.String)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync(System.String,System.Object)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsyncCancel(System.String)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.IsFileGroupDownloaded(System.String)" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.Update" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync" />
+      <Member Id="M:System.Deployment.Application.ApplicationDeployment.UpdateAsyncCancel" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.ActivationUri" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.CurrentDeployment" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.CurrentVersion" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.DataDirectory" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.IsFirstRun" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.TimeOfLastUpdateCheck" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.UpdatedApplicationFullName" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.UpdatedVersion" />
+      <Member Id="P:System.Deployment.Application.ApplicationDeployment.UpdateLocation" />
+    </Type>
+    <Type Name="System.Deployment.Application.CheckForUpdateCompletedEventArgs" Id="T:System.Deployment.Application.CheckForUpdateCompletedEventArgs">
+      <Member Id="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.AvailableVersion" />
+      <Member Id="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired" />
+      <Member Id="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion" />
+      <Member Id="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable" />
+      <Member Id="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateSizeBytes" />
+    </Type>
+    <Type Name="System.Deployment.Application.CheckForUpdateCompletedEventHandler" Id="T:System.Deployment.Application.CheckForUpdateCompletedEventHandler" />
+    <Type Name="System.Deployment.Application.CompatibleFramework" Id="T:System.Deployment.Application.CompatibleFramework">
+      <Member Id="P:System.Deployment.Application.CompatibleFramework.Profile" />
+      <Member Id="P:System.Deployment.Application.CompatibleFramework.SupportedRuntime" />
+      <Member Id="P:System.Deployment.Application.CompatibleFramework.TargetVersion" />
+    </Type>
+    <Type Name="System.Deployment.Application.CompatibleFrameworkMissingException" Id="T:System.Deployment.Application.CompatibleFrameworkMissingException">
+      <Member Id="M:System.Deployment.Application.CompatibleFrameworkMissingException.#ctor" />
+      <Member Id="M:System.Deployment.Application.CompatibleFrameworkMissingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.CompatibleFrameworkMissingException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.CompatibleFrameworkMissingException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:System.Deployment.Application.CompatibleFrameworkMissingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:System.Deployment.Application.CompatibleFrameworkMissingException.CompatibleFrameworks" />
+    </Type>
+    <Type Name="System.Deployment.Application.CompatibleFrameworks" Id="T:System.Deployment.Application.CompatibleFrameworks">
+      <Member Id="P:System.Deployment.Application.CompatibleFrameworks.Frameworks" />
+      <Member Id="P:System.Deployment.Application.CompatibleFrameworks.SupportUrl" />
+    </Type>
+    <Type Name="System.Deployment.Application.DependentPlatformMissingException" Id="T:System.Deployment.Application.DependentPlatformMissingException">
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.#ctor" />
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String,System.Uri)" />
+      <Member Id="M:System.Deployment.Application.DependentPlatformMissingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:System.Deployment.Application.DependentPlatformMissingException.SupportUrl" />
+    </Type>
+    <Type Name="System.Deployment.Application.DeploymentDownloadException" Id="T:System.Deployment.Application.DeploymentDownloadException">
+      <Member Id="M:System.Deployment.Application.DeploymentDownloadException.#ctor" />
+      <Member Id="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="System.Deployment.Application.DeploymentException" Id="T:System.Deployment.Application.DeploymentException">
+      <Member Id="M:System.Deployment.Application.DeploymentException.#ctor" />
+      <Member Id="M:System.Deployment.Application.DeploymentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.DeploymentException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.DeploymentException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:System.Deployment.Application.DeploymentException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+    </Type>
+    <Type Name="System.Deployment.Application.DeploymentProgressChangedEventArgs" Id="T:System.Deployment.Application.DeploymentProgressChangedEventArgs">
+      <Member Id="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted" />
+      <Member Id="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal" />
+      <Member Id="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.Group" />
+      <Member Id="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.State" />
+    </Type>
+    <Type Name="System.Deployment.Application.DeploymentProgressChangedEventHandler" Id="T:System.Deployment.Application.DeploymentProgressChangedEventHandler" />
+    <Type Name="System.Deployment.Application.DeploymentProgressState" Id="T:System.Deployment.Application.DeploymentProgressState">
+      <Member Id="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationFiles" />
+      <Member Id="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationInformation" />
+      <Member Id="F:System.Deployment.Application.DeploymentProgressState.DownloadingDeploymentInformation" />
+    </Type>
+    <Type Name="System.Deployment.Application.DeploymentServiceCom" Id="T:System.Deployment.Application.DeploymentServiceCom">
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.#ctor" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.ActivateApplicationExtension(System.String,System.String,System.String)" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.ActivateDeployment(System.String,System.Boolean)" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.ActivateDeploymentEx(System.String,System.Int32,System.Int32)" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.CheckForDeploymentUpdate(System.String)" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.EndServiceRightNow" />
+      <Member Id="M:System.Deployment.Application.DeploymentServiceCom.MaintainSubscription(System.String)" />
+    </Type>
+    <Type Name="System.Deployment.Application.DownloadApplicationCompletedEventArgs" Id="T:System.Deployment.Application.DownloadApplicationCompletedEventArgs">
+      <Member Id="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.LogFilePath" />
+      <Member Id="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId" />
+    </Type>
+    <Type Name="System.Deployment.Application.DownloadFileGroupCompletedEventArgs" Id="T:System.Deployment.Application.DownloadFileGroupCompletedEventArgs">
+      <Member Id="P:System.Deployment.Application.DownloadFileGroupCompletedEventArgs.Group" />
+    </Type>
+    <Type Name="System.Deployment.Application.DownloadFileGroupCompletedEventHandler" Id="T:System.Deployment.Application.DownloadFileGroupCompletedEventHandler" />
+    <Type Name="System.Deployment.Application.DownloadProgressChangedEventArgs" Id="T:System.Deployment.Application.DownloadProgressChangedEventArgs">
+      <Member Id="P:System.Deployment.Application.DownloadProgressChangedEventArgs.BytesDownloaded" />
+      <Member Id="P:System.Deployment.Application.DownloadProgressChangedEventArgs.State" />
+      <Member Id="P:System.Deployment.Application.DownloadProgressChangedEventArgs.TotalBytesToDownload" />
+    </Type>
+    <Type Name="System.Deployment.Application.GetManifestCompletedEventArgs" Id="T:System.Deployment.Application.GetManifestCompletedEventArgs">
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.ActivationContext" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.ApplicationIdentity" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.ApplicationManifest" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.DeploymentManifest" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.IsCached" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.LogFilePath" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.ProductName" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.SupportUri" />
+      <Member Id="P:System.Deployment.Application.GetManifestCompletedEventArgs.Version" />
+    </Type>
+    <Type Name="System.Deployment.Application.InPlaceHostingManager" Id="T:System.Deployment.Application.InPlaceHostingManager">
+      <Member Id="E:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationCompleted" />
+      <Member Id="E:System.Deployment.Application.InPlaceHostingManager.DownloadProgressChanged" />
+      <Member Id="E:System.Deployment.Application.InPlaceHostingManager.GetManifestCompleted" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.#ctor(System.Uri)" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.#ctor(System.Uri,System.Boolean)" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements(System.Boolean)" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.CancelAsync" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.Dispose" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationAsync" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.Execute" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.GetManifestAsync" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.UninstallCustomAddIn(System.String)" />
+      <Member Id="M:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication(System.String)" />
+    </Type>
+    <Type Name="System.Deployment.Application.InvalidDeploymentException" Id="T:System.Deployment.Application.InvalidDeploymentException">
+      <Member Id="M:System.Deployment.Application.InvalidDeploymentException.#ctor" />
+      <Member Id="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="System.Deployment.Application.SupportedRuntimeMissingException" Id="T:System.Deployment.Application.SupportedRuntimeMissingException">
+      <Member Id="M:System.Deployment.Application.SupportedRuntimeMissingException.#ctor" />
+      <Member Id="M:System.Deployment.Application.SupportedRuntimeMissingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.SupportedRuntimeMissingException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.SupportedRuntimeMissingException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:System.Deployment.Application.SupportedRuntimeMissingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:System.Deployment.Application.SupportedRuntimeMissingException.SupportedRuntimeVersion" />
+    </Type>
+    <Type Name="System.Deployment.Application.TrustNotGrantedException" Id="T:System.Deployment.Application.TrustNotGrantedException">
+      <Member Id="M:System.Deployment.Application.TrustNotGrantedException.#ctor" />
+      <Member Id="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.String)" />
+      <Member Id="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="System.Deployment.Application.UpdateCheckInfo" Id="T:System.Deployment.Application.UpdateCheckInfo">
+      <Member Id="P:System.Deployment.Application.UpdateCheckInfo.AvailableVersion" />
+      <Member Id="P:System.Deployment.Application.UpdateCheckInfo.IsUpdateRequired" />
+      <Member Id="P:System.Deployment.Application.UpdateCheckInfo.MinimumRequiredVersion" />
+      <Member Id="P:System.Deployment.Application.UpdateCheckInfo.UpdateAvailable" />
+      <Member Id="P:System.Deployment.Application.UpdateCheckInfo.UpdateSizeBytes" />
     </Type>
   </Namespace>
   <Namespace Name="System.Deployment.Internal.CodeSigning">
