@@ -74,7 +74,7 @@
       <MemberSignature Language="ILAsm" Value=".property string CurrentToolsVersion" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolLocationHelper.CurrentToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CurrentToolsVersion As String" />
-      <MemberSignature Language="F#" Value="member this.CurrentToolsVersion : string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.CurrentToolsVersion" />
+      <MemberSignature Language="F#" Value="static member CurrentToolsVersion : string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.CurrentToolsVersion" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ CurrentToolsVersion { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
@@ -198,16 +198,22 @@
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.AssemblyFoldersExInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="registryRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="registryKeySuffix" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="osVersion" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="platform" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="targetProcessorArchitecture" Type="System.Reflection.ProcessorArchitecture" Index="5" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="registryRoot" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="registryKeySuffix" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="osVersion" Type="System.String" Index="3" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="platform" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="targetProcessorArchitecture" Type="System.Reflection.ProcessorArchitecture" Index="5" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       </Parameters>
       <Docs>
         <param name="registryRoot">The root registry location for the targeted framework. For .NET this is SOFTWARE\MICROSOFT\.NETFramework</param>
@@ -3288,7 +3294,7 @@
       <MemberSignature Language="ILAsm" Value=".property string PathToSystem" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property PathToSystem As String" />
-      <MemberSignature Language="F#" Value="member this.PathToSystem : string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem" />
+      <MemberSignature Language="F#" Value="static member PathToSystem : string" Usage="Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ PathToSystem { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
