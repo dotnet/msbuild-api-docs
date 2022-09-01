@@ -215,14 +215,20 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-17" />
-        <Parameter Name="targetName" Type="System.String" Index="1" FrameworkAlternate="msbuild-16;msbuild-17" />
-        <Parameter Name="taskName" Type="System.String" Index="2" FrameworkAlternate="msbuild-16;msbuild-17" />
-        <Parameter Name="monikerName" Type="System.String" Index="3" FrameworkAlternate="msbuild-16;msbuild-17" />
+        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="targetName" Type="System.String" Index="1" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskName" Type="System.String" Index="2" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="monikerName" Type="System.String" Index="3" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
         <param name="projectFile">project file name</param>
