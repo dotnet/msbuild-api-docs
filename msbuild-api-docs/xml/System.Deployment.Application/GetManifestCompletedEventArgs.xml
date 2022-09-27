@@ -16,7 +16,22 @@
   <Interfaces />
   <Docs>
     <summary>Provides data for the <see cref="E:System.Deployment.Application.InPlaceHostingManager.GetManifestCompleted" /> event of <see cref="T:System.Deployment.Application.InPlaceHostingManager" />.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use <xref:System.Deployment.Application.GetManifestCompletedEventArgs> to obtain information about a ClickOnce application after the deployment and application manifests have been downloaded.
+
+
+
+## Examples
+ The following code example shows how to use <xref:System.Deployment.Application.InPlaceHostingManager> to install a ClickOnce application programmatically on a client machine.
+
+ :::code language="csharp" source="~/snippets/csharp/System.Deployment.Application/DownloadProgressChangedEventArgs/Overview/Form1.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/VB/Form1.vb" id="Snippet1":::
+
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ActivationContext">
@@ -82,7 +97,22 @@
       <Docs>
         <summary>Gets the ClickOnce application manifest for this deployment.</summary>
         <value>An <see cref="T:System.Xml.XmlReader" /> representing the application manifest.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can use this variable to grab any information you need from the application manifest, such as a list of dependencies, trust information, and so on. For more information on the structure of this document, see [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest).
+
+
+
+## Examples
+ The following code example shows how to examine an application manifest from within a <xref:System.Deployment.Application.InPlaceHostingManager.GetManifestCompleted> event handler to determine whether the application requires full trust by default.
+
+ :::code language="csharp" source="~/snippets/csharp/System.Deployment.Application/DownloadProgressChangedEventArgs/Overview/Form1.cs" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/VB/Form1.vb" id="Snippet5":::
+
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeploymentManifest">
@@ -214,7 +244,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the location of a Web page users can visit to obtain product support for the ClickOnce application.</summary>
-        <value>A <see cref="T:System.Uri" /> containing the value found in the <c>supportUrl</c> attribute of the deployment manifest's <c>&lt;description&gt;</c> tag. For more information, see ClickOnce Deployment Manifest.</value>
+        <value>A <see cref="T:System.Uri" /> containing the value found in the <c>supportUrl</c> attribute of the deployment manifest's <c>&lt;description&gt;</c> tag. For more information, see [ClickOnce Deployment Manifest](/visualstudio/deployment/clickonce-deployment-manifest).</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

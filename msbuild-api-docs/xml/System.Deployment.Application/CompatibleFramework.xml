@@ -22,6 +22,7 @@
   <Docs>
     <summary>Represents a version of the .NET Framework where an application can install and run.</summary>
     <remarks>To be added.</remarks>
+    <related type="Article" href="/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment">&lt;compatibleFrameworks&gt; Element</related>
   </Docs>
   <Members>
     <Member MemberName="Profile">
@@ -42,7 +43,14 @@
       <Docs>
         <summary>Specifies the profile of the .NET Framework version where an application can install and run.</summary>
         <value>A string that represents the profile.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If the .NET Framework version is .NET Framework 4 Client Profile, the <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> property returns "Client". If the .NET Framework version is .NET Framework 4, the <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> property returns "Full".  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SupportedRuntime">
@@ -63,7 +71,14 @@
       <Docs>
         <summary>Specifies the runtime version number of the .NET Framework where an application can install and run.</summary>
         <value>A string that represents the runtime version.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ New versions of the .NET Framework may operate on previously-released versions of the runtime.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TargetVersion">

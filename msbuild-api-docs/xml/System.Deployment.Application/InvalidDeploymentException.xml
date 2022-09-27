@@ -22,9 +22,30 @@
   </Attributes>
   <Docs>
     <summary>Indicates that ClickOnce could not read either the deployment or application manifests.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Deployment.Application.InvalidDeploymentException> indicates the existence of a corrupt deployment or application manifest in a ClickOnce application. The error might occur because the manifests are poorly formed, have unrecognized elements for their schemas, or have mismatched digital signatures.
+
+ You are more likely to have corruption  if you manually edit the deployment or application manifest files with a text editor. You can usually correct this problem by regenerating your ClickOnce deployment, which will create new deployment and application manifests. For more detailed debugging steps, see the following links.
+
+ ]]></format>
+    </remarks>
+    <related type="Article" href="/visualstudio/deployment/troubleshooting-clickonce-deployments">Troubleshooting ClickOnce Deployments</related>
+    <related type="Article" href="/visualstudio/deployment/clickonce-application-manifest">ClickOnce Application Manifest</related>
+    <related type="Article" href="/visualstudio/deployment/clickonce-deployment-manifest">ClickOnce Deployment Manifest</related>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:System.Deployment.Application.InvalidDeploymentException" /> class.</summary>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public InvalidDeploymentException ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
