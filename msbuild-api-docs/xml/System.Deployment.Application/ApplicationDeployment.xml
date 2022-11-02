@@ -216,11 +216,11 @@
 
  ]]></format>
         </remarks>
+        <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" />
+        <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" />
         <exception cref="T:System.InvalidOperationException">ClickOnce throws this exception immediately if you call the <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" /> method while an update is already in progress.</exception>
         <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The deployment manifest cannot be downloaded.</exception>
         <exception cref="T:System.Deployment.Application.InvalidDeploymentException">The deployment manifest is corrupted. You will likely need to redeploy the application to fix this problem.</exception>
-        <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" />
-        <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" />
       </Docs>
     </Member>
     <Member MemberName="CheckForUpdate">
@@ -291,12 +291,12 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException">ClickOnce throws this exception immediately if you call the <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> method while an update is already in progress.</exception>
-        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The deployment manifest cannot be downloaded. This exception appears in the <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> property of the <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> event.</exception>
-        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">The deployment manifest is corrupted. You will likely need to redeploy the application to fix this problem. This exception appears in the <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> property of the <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> event.</exception>
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" />
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" />
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsyncCancel" />
+        <exception cref="T:System.InvalidOperationException">ClickOnce throws this exception immediately if you call the <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> method while an update is already in progress.</exception>
+        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The deployment manifest cannot be downloaded. This exception appears in the <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> property of the <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> event.</exception>
+        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">The deployment manifest is corrupted. You will likely need to redeploy the application to fix this problem. This exception appears in the <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> property of the <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="CheckForUpdateAsyncCancel">
@@ -442,8 +442,8 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">You attempted to call this static property from a non-ClickOnce application.</exception>
         <altmember cref="P:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed" />
+        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">You attempted to call this static property from a non-ClickOnce application.</exception>
       </Docs>
     </Member>
     <Member MemberName="CurrentVersion">
@@ -556,13 +556,13 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
         <altmember cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" />
         <related type="Article" href="/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api">Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-application-manifest">ClickOnce Application Manifest</related>
         <related type="Article" href="/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications">Accessing Local and Remote Data in ClickOnce Applications</related>
         <related type="Article" href="/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application">How to: Include a Data File in a ClickOnce Application</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-cache-overview">Architecture of the ClickOnce Cache</related>
+        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="DownloadFileGroupAsync">
@@ -620,14 +620,14 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
-        <exception cref="T:System.InvalidOperationException">You cannot initiate more than one download of <paramref name="groupName" /> at a time.</exception>
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup(System.String)" />
         <related type="Article" href="/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api">Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-application-manifest">ClickOnce Application Manifest</related>
         <related type="Article" href="/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications">Accessing Local and Remote Data in ClickOnce Applications</related>
         <related type="Article" href="/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application">How to: Include a Data File in a ClickOnce Application</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-cache-overview">Architecture of the ClickOnce Cache</related>
+        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
+        <exception cref="T:System.InvalidOperationException">You cannot initiate more than one download of <paramref name="groupName" /> at a time.</exception>
       </Docs>
     </Member>
     <Member MemberName="DownloadFileGroupAsync">
@@ -674,14 +674,14 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
-        <exception cref="T:System.InvalidOperationException">You cannot initiate more than one download of <paramref name="groupName" /> at a time.</exception>
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup(System.String)" />
         <related type="Article" href="/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api">Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-application-manifest">ClickOnce Application Manifest</related>
         <related type="Article" href="/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications">Accessing Local and Remote Data in ClickOnce Applications</related>
         <related type="Article" href="/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application">How to: Include a Data File in a ClickOnce Application</related>
         <related type="Article" href="/visualstudio/deployment/clickonce-cache-overview">Architecture of the ClickOnce Cache</related>
+        <exception cref="T:System.ArgumentNullException">The <paramref name="groupName" /> parameter is null or zero-length.</exception>
+        <exception cref="T:System.InvalidOperationException">You cannot initiate more than one download of <paramref name="groupName" /> at a time.</exception>
       </Docs>
     </Member>
     <Member MemberName="DownloadFileGroupAsyncCancel">
@@ -832,10 +832,10 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
-          <paramref name="groupName" /> is not a file group defined in the application manifest.</exception>
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup(System.String)" />
         <altmember cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" />
+        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+          <paramref name="groupName" /> is not a file group defined in the application manifest.</exception>
       </Docs>
     </Member>
     <Member MemberName="IsFirstRun">
@@ -1007,16 +1007,16 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.Deployment.Application.TrustNotGrantedException">The local computer did not grant the application the permission level it requested to execute.</exception>
-        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">Your ClickOnce deployment is corrupted. For tips on how to diagnose and correct the problem, see [Troubleshooting ClickOnce Deployments](/visualstudio/deployment/troubleshooting-clickonce-deployments).</exception>
-        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The new deployment could not be downloaded from its location on the network.</exception>
-        <exception cref="T:System.InvalidOperationException">The application is currently being updated.</exception>
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync" />
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" />
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" />
         <altmember cref="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" />
         <related type="Article" href="/visualstudio/deployment/choosing-a-clickonce-update-strategy">Choosing a ClickOnce Update Strategy</related>
         <related type="Article" href="/visualstudio/deployment/securing-clickonce-applications">ClickOnce Deployment and Security</related>
+        <exception cref="T:System.Deployment.Application.TrustNotGrantedException">The local computer did not grant the application the permission level it requested to execute.</exception>
+        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">Your ClickOnce deployment is corrupted. For tips on how to diagnose and correct the problem, see Troubleshooting ClickOnce Deployments.</exception>
+        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The new deployment could not be downloaded from its location on the network.</exception>
+        <exception cref="T:System.InvalidOperationException">The application is currently being updated.</exception>
       </Docs>
     </Member>
     <Member MemberName="UpdateAsync">
@@ -1067,12 +1067,12 @@
 
  ]]></format>
         </remarks>
-        <exception cref="T:System.Deployment.Application.TrustNotGrantedException">The local computer did not grant this application the permission level it requested to execute.</exception>
-        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">Your ClickOnce deployment is corrupted. For tips on how to diagnose and correct the problem, see [Troubleshooting ClickOnce Deployments](/visualstudio/deployment/troubleshooting-clickonce-deployments).</exception>
-        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The new deployment could not be downloaded from its location on the network.</exception>
         <altmember cref="E:System.Deployment.Application.ApplicationDeployment.UpdateCompleted" />
         <related type="Article" href="/visualstudio/deployment/choosing-a-clickonce-update-strategy">Choosing a ClickOnce Update Strategy</related>
         <related type="Article" href="/visualstudio/deployment/securing-clickonce-applications">ClickOnce Deployment and Security</related>
+        <exception cref="T:System.Deployment.Application.TrustNotGrantedException">The local computer did not grant this application the permission level it requested to execute.</exception>
+        <exception cref="T:System.Deployment.Application.InvalidDeploymentException">Your ClickOnce deployment is corrupted. For tips on how to diagnose and correct the problem, see Troubleshooting ClickOnce Deployments.</exception>
+        <exception cref="T:System.Deployment.Application.DeploymentDownloadException">The new deployment could not be downloaded from its location on the network.</exception>
       </Docs>
     </Member>
     <Member MemberName="UpdateAsyncCancel">
