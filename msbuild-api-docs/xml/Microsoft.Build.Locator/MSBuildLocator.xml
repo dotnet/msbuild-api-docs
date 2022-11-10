@@ -14,7 +14,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            MSBuildLocator allows the use of publicly visible MSBuild APIs in custom applications. See our documentation at aka.ms/msbuild/locator.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,9 +36,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+                Gets a value indicating whether an instance of MSBuild can be registered.
+            </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+                If any Microsoft.Build assemblies are already loaded into the current AppDomain, the value will be false.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsRegistered">
@@ -55,7 +61,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+                Gets a value indicating whether an instance of MSBuild is currently registered.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -77,9 +85,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>
+                Query for all Visual Studio instances.
+            </summary>
+        <returns>Enumeration of all Visual Studio instances detected on the machine.</returns>
+        <remarks>
+                Only includes Visual Studio 2017 (v15.0) and higher.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryVisualStudioInstances">
@@ -101,10 +113,14 @@
         <Parameter Name="options" Type="Microsoft.Build.Locator.VisualStudioInstanceQueryOptions" />
       </Parameters>
       <Docs>
-        <param name="options">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="options">Query options for Visual Studio instances.</param>
+        <summary>
+                Query for Visual Studio instances matching the given options.
+            </summary>
+        <returns>Enumeration of Visual Studio instances detected on the machine.</returns>
+        <remarks>
+                Only includes Visual Studio 2017 (v15.0) and higher.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="RegisterDefaults">
@@ -124,8 +140,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+                Discover instances of Visual Studio and register the first one. See <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />.
+            </summary>
+        <returns>Instance of Visual Studio found and registered.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,8 +166,12 @@
         <Parameter Name="instance" Type="Microsoft.Build.Locator.VisualStudioInstance" />
       </Parameters>
       <Docs>
-        <param name="instance">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="instance" />
+        <summary>
+                Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                instance of Visual Studio. See <see cref="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances" /> to discover Visual Studio
+                instances or use <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -172,8 +194,17 @@
         <Parameter Name="msbuildPath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="msbuildPath">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="msbuildPath">
+                 Path to the directory containing a deployment of MSBuild binaries.
+                 A minimal MSBuild deployment would be the publish result of the Microsoft.Build.Runtime package.
+            
+                 In order to restore and build real projects, one needs a deployment that contains the rest of the toolchain (nuget, compilers, etc.).
+                 Such deployments can be found in installations such as Visual Studio or dotnet CLI.
+             </param>
+        <summary>
+                 Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                 path.
+             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -193,11 +224,20 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="msbuildSearchPaths" Type="System.String[]" Index="0" FrameworkAlternate="msbuildlocator-1.4;msbuildlocator-1.5" />
+        <Parameter Name="msbuildSearchPaths" Type="System.String[]" Index="0" FrameworkAlternate="msbuildlocator-1.4;msbuildlocator-1.5;msbuildlocator-1.4-netcore;msbuildlocator-1.5-netcore" />
       </Parameters>
       <Docs>
-        <param name="msbuildSearchPaths">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="msbuildSearchPaths">
+                 Paths to directories containing a deployment of MSBuild binaries.
+                 A minimal MSBuild deployment would be the publish result of the Microsoft.Build.Runtime package.
+            
+                 In order to restore and build real projects, one needs a deployment that contains the rest of the toolchain (nuget, compilers, etc.).
+                 Such deployments can be found in installations such as Visual Studio or dotnet CLI.
+             </param>
+        <summary>
+                 Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                 path.
+             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -218,8 +258,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+                Remove assembly resolution previously registered via <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />, <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String)" />, or <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />.
+            </summary>
+        <remarks>
+                This will automatically be called once all supported assemblies are loaded into the current AppDomain and so generally is not necessary to call directly.
+            </remarks>
       </Docs>
     </Member>
   </Members>
