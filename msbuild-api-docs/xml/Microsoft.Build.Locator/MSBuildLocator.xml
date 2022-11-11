@@ -1,0 +1,270 @@
+<Type Name="MSBuildLocator" FullName="Microsoft.Build.Locator.MSBuildLocator">
+  <TypeSignature Language="C#" Value="public static class MSBuildLocator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MSBuildLocator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Locator.MSBuildLocator" />
+  <TypeSignature Language="VB.NET" Value="Public Class MSBuildLocator" />
+  <TypeSignature Language="F#" Value="type MSBuildLocator = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildLocator abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Allows enumerating installed MSBuild instances and preparing MSBuild APIs for use. See <see href="/visualstudio/msbuild/find-and-use-msbuild-versions">Find and use a version of MSBuild</see>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanRegister">
+      <MemberSignature Language="C#" Value="public static bool CanRegister { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool CanRegister" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Locator.MSBuildLocator.CanRegister" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CanRegister As Boolean" />
+      <MemberSignature Language="F#" Value="static member CanRegister : bool" Usage="Microsoft.Build.Locator.MSBuildLocator.CanRegister" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CanRegister { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+                Gets a value indicating whether an instance of MSBuild can be registered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+                If any Microsoft.Build assemblies are already loaded into the current AppDomain, the value will be false.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRegistered">
+      <MemberSignature Language="C#" Value="public static bool IsRegistered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsRegistered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Locator.MSBuildLocator.IsRegistered" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property IsRegistered As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsRegistered : bool" Usage="Microsoft.Build.Locator.MSBuildLocator.IsRegistered" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool IsRegistered { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+                Gets a value indicating whether an instance of MSBuild is currently registered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryVisualStudioInstances">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Locator.VisualStudioInstance&gt; QueryVisualStudioInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Locator.VisualStudioInstance&gt; QueryVisualStudioInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueryVisualStudioInstances () As IEnumerable(Of VisualStudioInstance)" />
+      <MemberSignature Language="F#" Value="static member QueryVisualStudioInstances : unit -&gt; seq&lt;Microsoft.Build.Locator.VisualStudioInstance&gt;" Usage="Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Locator::VisualStudioInstance ^&gt; ^ QueryVisualStudioInstances();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Locator.VisualStudioInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+                Query for all Visual Studio instances.
+            </summary>
+        <returns>Enumeration of all Visual Studio instances detected on the machine.</returns>
+        <remarks>
+                Only includes Visual Studio 2017 (v15.0) and higher.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryVisualStudioInstances">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Locator.VisualStudioInstance&gt; QueryVisualStudioInstances (Microsoft.Build.Locator.VisualStudioInstanceQueryOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Locator.VisualStudioInstance&gt; QueryVisualStudioInstances(class Microsoft.Build.Locator.VisualStudioInstanceQueryOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances(Microsoft.Build.Locator.VisualStudioInstanceQueryOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueryVisualStudioInstances (options As VisualStudioInstanceQueryOptions) As IEnumerable(Of VisualStudioInstance)" />
+      <MemberSignature Language="F#" Value="static member QueryVisualStudioInstances : Microsoft.Build.Locator.VisualStudioInstanceQueryOptions -&gt; seq&lt;Microsoft.Build.Locator.VisualStudioInstance&gt;" Usage="Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances options" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Locator::VisualStudioInstance ^&gt; ^ QueryVisualStudioInstances(Microsoft::Build::Locator::VisualStudioInstanceQueryOptions ^ options);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Locator.VisualStudioInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Build.Locator.VisualStudioInstanceQueryOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Query options for Visual Studio instances.</param>
+        <summary>
+                Query for Visual Studio instances matching the given options.
+            </summary>
+        <returns>Enumeration of Visual Studio instances detected on the machine.</returns>
+        <remarks>
+                Only includes Visual Studio 2017 (v15.0) and higher.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaults">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Locator.VisualStudioInstance RegisterDefaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Locator.VisualStudioInstance RegisterDefaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RegisterDefaults () As VisualStudioInstance" />
+      <MemberSignature Language="F#" Value="static member RegisterDefaults : unit -&gt; Microsoft.Build.Locator.VisualStudioInstance" Usage="Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Locator::VisualStudioInstance ^ RegisterDefaults();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Locator.VisualStudioInstance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+                Discover instances of Visual Studio and register the first one. See <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />.
+            </summary>
+        <returns>Instance of Visual Studio found and registered.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterInstance">
+      <MemberSignature Language="C#" Value="public static void RegisterInstance (Microsoft.Build.Locator.VisualStudioInstance instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterInstance(class Microsoft.Build.Locator.VisualStudioInstance instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterInstance (instance As VisualStudioInstance)" />
+      <MemberSignature Language="F#" Value="static member RegisterInstance : Microsoft.Build.Locator.VisualStudioInstance -&gt; unit" Usage="Microsoft.Build.Locator.MSBuildLocator.RegisterInstance instance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RegisterInstance(Microsoft::Build::Locator::VisualStudioInstance ^ instance);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="Microsoft.Build.Locator.VisualStudioInstance" />
+      </Parameters>
+      <Docs>
+        <param name="instance" />
+        <summary>
+                Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                instance of Visual Studio. See <see cref="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances" /> to discover Visual Studio
+                instances or use <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMSBuildPath">
+      <MemberSignature Language="C#" Value="public static void RegisterMSBuildPath (string msbuildPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterMSBuildPath(string msbuildPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterMSBuildPath (msbuildPath As String)" />
+      <MemberSignature Language="F#" Value="static member RegisterMSBuildPath : string -&gt; unit" Usage="Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath msbuildPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RegisterMSBuildPath(System::String ^ msbuildPath);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msbuildPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="msbuildPath">
+                 Path to the directory containing a deployment of MSBuild binaries.
+                 A minimal MSBuild deployment would be the publish result of the Microsoft.Build.Runtime package.
+            
+                 In order to restore and build real projects, one needs a deployment that contains the rest of the toolchain (nuget, compilers, etc.).
+                 Such deployments can be found in installations such as Visual Studio or dotnet CLI.
+             </param>
+        <summary>
+                 Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                 path.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMSBuildPath">
+      <MemberSignature Language="C#" Value="public static void RegisterMSBuildPath (string[] msbuildSearchPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterMSBuildPath(string[] msbuildSearchPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterMSBuildPath (msbuildSearchPaths As String())" />
+      <MemberSignature Language="F#" Value="static member RegisterMSBuildPath : string[] -&gt; unit" Usage="Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath msbuildSearchPaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RegisterMSBuildPath(cli::array &lt;System::String ^&gt; ^ msbuildSearchPaths);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msbuildSearchPaths" Type="System.String[]" Index="0" FrameworkAlternate="msbuildlocator-1.4;msbuildlocator-1.5;msbuildlocator-1.4-netcore;msbuildlocator-1.5-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="msbuildSearchPaths">
+                 Paths to directories containing a deployment of MSBuild binaries.
+                 A minimal MSBuild deployment would be the publish result of the Microsoft.Build.Runtime package.
+            
+                 In order to restore and build real projects, one needs a deployment that contains the rest of the toolchain (nuget, compilers, etc.).
+                 Such deployments can be found in installations such as Visual Studio or dotnet CLI.
+             </param>
+        <summary>
+                 Add assembly resolution for Microsoft.Build core dlls in the current AppDomain from the specified
+                 path.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public static void Unregister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unregister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Locator.MSBuildLocator.Unregister" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub Unregister ()" />
+      <MemberSignature Language="F#" Value="static member Unregister : unit -&gt; unit" Usage="Microsoft.Build.Locator.MSBuildLocator.Unregister " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void Unregister();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+                Remove assembly resolution previously registered via <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />, <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String)" />, or <see cref="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />.
+            </summary>
+        <remarks>
+                This will automatically be called once all supported assemblies are loaded into the current AppDomain and so generally is not necessary to call directly.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
