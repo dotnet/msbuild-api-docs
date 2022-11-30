@@ -1,0 +1,132 @@
+<Type Name="MSBuildClientExitType" FullName="Microsoft.Build.Experimental.MSBuildClientExitType">
+  <TypeSignature Language="C#" Value="public enum MSBuildClientExitType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MSBuildClientExitType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.MSBuildClientExitType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MSBuildClientExitType" />
+  <TypeSignature Language="F#" Value="type MSBuildClientExitType = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class MSBuildClientExitType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LaunchError">
+      <MemberSignature Language="C#" Value="LaunchError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType LaunchError = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
+      <MemberSignature Language="VB.NET" Value="LaunchError" />
+      <MemberSignature Language="F#" Value="LaunchError = 3" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
+      <MemberSignature Language="C++ CLI" Value="LaunchError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Client was unable to launch the server. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerBusy">
+      <MemberSignature Language="C#" Value="ServerBusy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType ServerBusy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.ServerBusy" />
+      <MemberSignature Language="VB.NET" Value="ServerBusy" />
+      <MemberSignature Language="F#" Value="ServerBusy = 1" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.ServerBusy" />
+      <MemberSignature Language="C++ CLI" Value="ServerBusy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Server is busy. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
+      <MemberSignature Language="VB.NET" Value="Success" />
+      <MemberSignature Language="F#" Value="Success = 0" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
+      <MemberSignature Language="C++ CLI" Value="Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The MSBuild client successfully processed the build request.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnableToConnect">
+      <MemberSignature Language="C#" Value="UnableToConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType UnableToConnect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
+      <MemberSignature Language="VB.NET" Value="UnableToConnect" />
+      <MemberSignature Language="F#" Value="UnableToConnect = 2" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
+      <MemberSignature Language="C++ CLI" Value="UnableToConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Client was unable to connect to the server. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unexpected">
+      <MemberSignature Language="C#" Value="Unexpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType Unexpected = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
+      <MemberSignature Language="VB.NET" Value="Unexpected" />
+      <MemberSignature Language="F#" Value="Unexpected = 4" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
+      <MemberSignature Language="C++ CLI" Value="Unexpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The build stopped unexpectedly, for example,
+            because a named pipe between the server and the client was unexpectedly closed.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
