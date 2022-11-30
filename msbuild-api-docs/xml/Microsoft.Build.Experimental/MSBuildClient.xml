@@ -1,0 +1,110 @@
+<Type Name="MSBuildClient" FullName="Microsoft.Build.Experimental.MSBuildClient">
+  <TypeSignature Language="C#" Value="public sealed class MSBuildClient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MSBuildClient extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.MSBuildClient" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MSBuildClient" />
+  <TypeSignature Language="F#" Value="type MSBuildClient = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildClient sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class is the public entry point for executing builds in msbuild server.
+            It processes command-line arguments and invokes the build engine.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildClient (string commandLine, string msbuildLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandLine, string msbuildLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (commandLine As String, msbuildLocation As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.MSBuildClient : string * string -&gt; Microsoft.Build.Experimental.MSBuildClient" Usage="new Microsoft.Build.Experimental.MSBuildClient (commandLine, msbuildLocation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuildClient(System::String ^ commandLine, System::String ^ msbuildLocation);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandLine" Type="System.String" />
+        <Parameter Name="msbuildLocation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">The command line to process. The first argument
+            on the command line is assumed to be the name/path of the executable, and is ignored</param>
+        <param name="msbuildLocation"> Full path to current MSBuild.exe if executable is MSBuild.exe,
+            or to version of MSBuild.dll found to be associated with the current process.</param>
+        <summary>
+            Public constructor with parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.MSBuildClientExitResult Execute (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Experimental.MSBuildClientExitResult Execute(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Execute (cancellationToken As CancellationToken) As MSBuildClientExitResult" />
+      <MemberSignature Language="F#" Value="member this.Execute : System.Threading.CancellationToken -&gt; Microsoft.Build.Experimental.MSBuildClientExitResult" Usage="mSBuildClient.Execute cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Experimental::MSBuildClientExitResult ^ Execute(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Orchestrates the execution of the build on the server,
+            responsible for client-server communication.
+            </summary>
+        <returns>A value of type <see cref="T:Microsoft.Build.Experimental.MSBuildClientExitResult" /> that indicates whether the build succeeded,
+            or the manner in which it failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownServer">
+      <MemberSignature Language="C#" Value="public static bool ShutdownServer (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShutdownServer(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ShutdownServer (cancellationToken As CancellationToken) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ShutdownServer : System.Threading.CancellationToken -&gt; bool" Usage="Microsoft.Build.Experimental.MSBuildClient.ShutdownServer cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool ShutdownServer(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken" />
+        <summary>
+            Attempt to shutdown MSBuild Server node.
+            </summary>
+        <returns>True if server is not running anymore.</returns>
+        <remarks>
+            It shutdown only server created by current user with current admin elevation.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

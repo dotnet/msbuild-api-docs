@@ -1,0 +1,35 @@
+<Type Name="OutOfProcServerNode+BuildCallback" FullName="Microsoft.Build.Experimental.OutOfProcServerNode+BuildCallback">
+  <TypeSignature Language="C#" Value="public delegate (int exitCode, string exitType) OutOfProcServerNode.BuildCallback(string commandLine);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed OutOfProcServerNode/BuildCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function OutOfProcServerNode.BuildCallback(commandLine As String) As ValueTuple(Of Integer, String) " />
+  <TypeSignature Language="F#" Value="type OutOfProcServerNode.BuildCallback = delegate of string -&gt; ValueTuple&lt;int, string&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public: delegate ValueTuple&lt;int, System::String ^&gt; OutOfProcServerNode::BuildCallback(System::String ^ commandLine);" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="commandLine" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.ValueTuple&lt;System.Int32,System.String&gt;</ReturnType>
+    <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })&gt;]</AttributeName>
+      </Attribute>
+    </Attributes>
+  </ReturnValue>
+  <Docs>
+    <param name="commandLine">To be added.</param>
+    <summary>
+            A callback used to execute command line build.
+            </summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
