@@ -1,0 +1,72 @@
+<Type Name="OutOfProcServerNode" FullName="Microsoft.Build.Experimental.OutOfProcServerNode">
+  <TypeSignature Language="C#" Value="public sealed class OutOfProcServerNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutOfProcServerNode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.OutOfProcServerNode" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OutOfProcServerNode" />
+  <TypeSignature Language="F#" Value="type OutOfProcServerNode = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class OutOfProcServerNode sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents an implementation of INode for out-of-proc server nodes aka MSBuild server 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfProcServerNode (Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback buildFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Experimental.OutOfProcServerNode/BuildCallback buildFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buildFunction As OutOfProcServerNode.BuildCallback)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.OutOfProcServerNode : Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback -&gt; Microsoft.Build.Experimental.OutOfProcServerNode" Usage="new Microsoft.Build.Experimental.OutOfProcServerNode buildFunction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OutOfProcServerNode(Microsoft::Build::Experimental::OutOfProcServerNode::BuildCallback ^ buildFunction);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildFunction" Type="Microsoft.Build.Experimental.OutOfProcServerNode+BuildCallback" />
+      </Parameters>
+      <Docs>
+        <param name="buildFunction">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.NodeEngineShutdownReason Run (out Exception? shutdownException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.Build.Execution.NodeEngineShutdownReason Run([out] class System.Exception&amp; shutdownException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.OutOfProcServerNode.Run(System.Exception@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Run (ByRef shutdownException As Exception) As NodeEngineShutdownReason" />
+      <MemberSignature Language="F#" Value="abstract member Run : Exception -&gt; Microsoft.Build.Execution.NodeEngineShutdownReason&#xA;override this.Run : Exception -&gt; Microsoft.Build.Execution.NodeEngineShutdownReason" Usage="outOfProcServerNode.Run shutdownException" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Build::Execution::NodeEngineShutdownReason Run([Runtime::InteropServices::Out] Exception ^ % shutdownException);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.NodeEngineShutdownReason</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdownException" Type="System.Exception" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="shutdownException">The exception which caused shutdown, if any.</param>
+        <summary>
+            Starts up the server node and processes all build requests until the server is requested to shut down.
+            </summary>
+        <returns>The reason for shutting down.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
