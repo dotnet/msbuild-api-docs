@@ -42,6 +42,32 @@
       </Docs>
     </Member>
     <Member MemberName="FromAssemblyPath">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromAssemblyPath (string pluginAssemblyPath, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromAssemblyPath(string pluginAssemblyPath, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromAssemblyPath (pluginAssemblyPath As String, Optional pluginSettings As IReadOnlyDictionary(Of String, String) = Nothing) As ProjectCacheDescriptor" />
+      <MemberSignature Language="F#" Value="static member FromAssemblyPath : string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor" Usage="Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath (pluginAssemblyPath, pluginSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginAssemblyPath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="pluginAssemblyPath">To be added.</param>
+        <param name="pluginSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAssemblyPath">
       <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromAssemblyPath (string pluginAssemblyPath, System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;? entryPoints, Microsoft.Build.Graph.ProjectGraph? projectGraph, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromAssemblyPath(string pluginAssemblyPath, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; entryPoints, class Microsoft.Build.Graph.ProjectGraph projectGraph, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath(System.String,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
@@ -56,15 +82,41 @@
         <ReturnType>Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pluginAssemblyPath" Type="System.String" />
-        <Parameter Name="entryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" />
-        <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" />
-        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="pluginAssemblyPath" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="entryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" Index="2" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="3" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       </Parameters>
       <Docs>
         <param name="pluginAssemblyPath">To be added.</param>
         <param name="entryPoints">To be added.</param>
         <param name="projectGraph">To be added.</param>
+        <param name="pluginSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromInstance">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromInstance (Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase pluginInstance, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor FromInstance(class Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase pluginInstance, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromInstance(Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromInstance (pluginInstance As ProjectCachePluginBase, Optional pluginSettings As IReadOnlyDictionary(Of String, String) = Nothing) As ProjectCacheDescriptor" />
+      <MemberSignature Language="F#" Value="static member FromInstance : Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor" Usage="Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromInstance (pluginInstance, pluginSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginInstance" Type="Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="pluginInstance">To be added.</param>
         <param name="pluginSettings">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
@@ -86,10 +138,10 @@
         <ReturnType>Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pluginInstance" Type="Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase" />
-        <Parameter Name="entryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" />
-        <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" />
-        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="pluginInstance" Type="Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="entryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" Index="2" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="3" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       </Parameters>
       <Docs>
         <param name="pluginInstance">To be added.</param>
@@ -140,7 +192,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-                The path to the assembly containing the project cache plugin.
+            Gets the path to the assembly containing the project cache plugin.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

@@ -1577,15 +1577,14 @@
         <Parameter Name="targetFrameworkFallbackSearchPaths" Type="System.String" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
-        <param name="targetFrameworkFallbackSearchPaths">A semicolon-separated list of paths to search as a fallback.</param>
         <param name="targetFrameworkIdentifier">Identifier being targeted</param>
         <param name="targetFrameworkVersion">Version being targeted</param>
         <param name="targetFrameworkProfile">Profile being targeted</param>
         <param name="targetFrameworkRootPath">Root directory which will be used to calculate the reference assembly path. The references assemblies will be
-            <param name="targetFrameworkFallbackSearchPaths">';' separated list of paths that are looked up if the framework cannot be found in <paramref name="targetFrameworkRootPath" /></param>
             generated in the following way TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType.
             Uses the default path if this is null.
             </param>
+        <param name="targetFrameworkFallbackSearchPaths">';' separated list of paths that are looked up if the framework cannot be found in <paramref name="targetFrameworkRootPath" /></param>
         <summary>
             Returns the paths to the reference assemblies location for the given target framework.
             This method will assume the requested ReferenceAssemblyRoot path will be the ProgramFiles directory specified by Environment.SpecialFolder.ProgramFiles
