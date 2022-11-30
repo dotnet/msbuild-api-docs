@@ -44,30 +44,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="DisallowedSDKDependencies">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] DisallowedSDKDependencies { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] DisallowedSDKDependencies" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.DisallowedSDKDependencies" />
-      <MemberSignature Language="VB.NET" Value="Public Property DisallowedSDKDependencies As ITaskItem()" />
-      <MemberSignature Language="F#" Value="member this.DisallowedSDKDependencies : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.DisallowedSDKDependencies" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ DisallowedSDKDependencies { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            List of disallowed dependencies passed from the targets file (deprecated)
-            For instance "VCLibs 11" should be disallowed in projects targeting Win 8.1 or higher.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public override bool Execute ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
@@ -181,35 +157,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ProjectName">
-      <MemberSignature Language="C#" Value="public string ProjectName { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string ProjectName" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.ProjectName" />
-      <MemberSignature Language="VB.NET" Value="Public Property ProjectName As String" />
-      <MemberSignature Language="F#" Value="member this.ProjectName : string with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.ProjectName" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProjectName { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            ProjectName used in warning/error messages
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="References">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] References { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] References" />
@@ -266,30 +213,6 @@
         <summary>
             Resolved SDK References</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RuntimeReferenceOnlySDKDependencies">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] RuntimeReferenceOnlySDKDependencies { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] RuntimeReferenceOnlySDKDependencies" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.RuntimeReferenceOnlySDKDependencies" />
-      <MemberSignature Language="VB.NET" Value="Public Property RuntimeReferenceOnlySDKDependencies As ITaskItem()" />
-      <MemberSignature Language="F#" Value="member this.RuntimeReferenceOnlySDKDependencies : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.RuntimeReferenceOnlySDKDependencies" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ RuntimeReferenceOnlySDKDependencies { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            List of dependencies passed from the targets file that will have the metadata RuntimeReferenceOnly set as true. 
-            For instance "VCLibs 11" should have such a metadata set to true in projects targeting Win 8.1 or higher.
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -374,88 +297,6 @@
         <summary>
             Configuration for SDK's which are resolved</summary>
         <value>Returns <see cref="T:System.String" />.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TargetPlatformIdentifier">
-      <MemberSignature Language="C#" Value="public string TargetPlatformIdentifier { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetPlatformIdentifier" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.TargetPlatformIdentifier" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetPlatformIdentifier As String" />
-      <MemberSignature Language="F#" Value="member this.TargetPlatformIdentifier : string with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.TargetPlatformIdentifier" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetPlatformIdentifier { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            TargetPlatform used in warning/error messages
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TargetPlatformVersion">
-      <MemberSignature Language="C#" Value="public string TargetPlatformVersion { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetPlatformVersion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.TargetPlatformVersion" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetPlatformVersion As String" />
-      <MemberSignature Language="F#" Value="member this.TargetPlatformVersion : string with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.TargetPlatformVersion" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetPlatformVersion { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            TargetPlatformVersion property used to filter SDKs
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WarnOnMissingPlatformVersion">
-      <MemberSignature Language="C#" Value="public bool WarnOnMissingPlatformVersion { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool WarnOnMissingPlatformVersion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveSDKReference.WarnOnMissingPlatformVersion" />
-      <MemberSignature Language="VB.NET" Value="Public Property WarnOnMissingPlatformVersion As Boolean" />
-      <MemberSignature Language="F#" Value="member this.WarnOnMissingPlatformVersion : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveSDKReference.WarnOnMissingPlatformVersion" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool WarnOnMissingPlatformVersion { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Enables warning when MaxPlatformVersion is not present in the manifest and the ESDK platform version (from its path) 
-            is different than the target platform version (from the project)
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

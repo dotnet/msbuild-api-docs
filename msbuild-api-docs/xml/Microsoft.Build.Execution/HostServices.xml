@@ -15,11 +15,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("#Entries={_hostObjectMap.Count}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("#Entries={_hostObjectMap.Count}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("#Entries={hostObjectMap.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("#Entries={hostObjectMap.Count}")&gt;]</AttributeName>
     </Attribute>
@@ -27,8 +23,7 @@
   <Docs>
     <summary>
             Implementation of HostServices that
-            mediates access from the build to the host.
-            </summary>
+            mediates access from the build to the host.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -91,8 +86,7 @@
         <summary>
             Gets any host object applicable to this task name
             where the task appears within a target and project with the specified names.
-            If no host object exists, returns null.
-            </summary>
+            If no host object exists, returns null.</summary>
         <returns>The host service for the given task where the task appears within a target and project with the given names. If no host service exists, returns null.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,8 +113,7 @@
       <Docs>
         <param name="projectFile">The project file associated with the node.</param>
         <summary>
-            Retrieves the node affinity for a particular project file.
-            </summary>
+            Retrieves the node affinity for a particular project file.</summary>
         <returns>The node affinity for the given project file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,8 +143,7 @@
         <param name="newFullPath">The new path to the project file.</param>
         <summary>
             Updates the host object table when a project is renamed.
-            Old full path may be null.
-            </summary>
+            Old full path may be null.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -191,8 +183,7 @@
         <param name="hostObject">The host service.</param>
         <summary>
             Register a host object for a particular task/target pair.
-            Overwrites any existing host object.
-            </summary>
+            Overwrites any existing host object.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -201,51 +192,6 @@
   
  ]]></format>
         </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RegisterHostObject">
-      <MemberSignature Language="C#" Value="public void RegisterHostObject (string projectFile, string targetName, string taskName, string monikerName);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterHostObject(string projectFile, string targetName, string taskName, string monikerName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.HostServices.RegisterHostObject(System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub RegisterHostObject (projectFile As String, targetName As String, taskName As String, monikerName As String)" />
-      <MemberSignature Language="F#" Value="member this.RegisterHostObject : string * string * string * string -&gt; unit" Usage="hostServices.RegisterHostObject (projectFile, targetName, taskName, monikerName)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterHostObject(System::String ^ projectFile, System::String ^ targetName, System::String ^ taskName, System::String ^ monikerName);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="targetName" Type="System.String" Index="1" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="taskName" Type="System.String" Index="2" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="monikerName" Type="System.String" Index="3" FrameworkAlternate="msbuild-16;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="projectFile">project file name</param>
-        <param name="targetName">target name</param>
-        <param name="taskName">task name</param>
-        <param name="monikerName">the Moniker used to register host object in ROT</param>
-        <summary>
-             Register a remote host object for a particular task/target pair.
-             The remote host object require registered in Running Object Table(ROT) already.
-             Overwrites any existing host object.
-            
-             It's caller's responsibly:
-             To maintain the live cycle of the host object.
-             Register and unregister from ROT.
-             Ensure the host object has appropriate COM interface that can be used in task.
-             </summary>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetNodeAffinity">
@@ -270,12 +216,10 @@
       </Parameters>
       <Docs>
         <param name="projectFile">
-            The project file.  If set to String.Empty, all projects will use the specified affinity.  If set to null, all affinities will be cleared.
-            </param>
+            The project file.  If set to String.Empty, all projects will use the specified affinity.  If set to null, all affinities will be cleared.</param>
         <param name="nodeAffinity">The <see cref="T:Microsoft.Build.Execution.NodeAffinity" /> to set.</param>
         <summary>
-            Sets the node affinity for a particular project file.
-            </summary>
+            Sets the node affinity for a particular project file.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -301,8 +245,7 @@
       <Docs>
         <param name="projectFullPath">The path to the project to unregister.</param>
         <summary>
-            Unregister the project's host objects, if any and remove any node affinities associated with it.
-            </summary>
+            Unregister the project's host objects, if any and remove any node affinities associated with it.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

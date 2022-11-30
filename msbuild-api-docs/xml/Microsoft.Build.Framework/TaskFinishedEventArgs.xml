@@ -24,8 +24,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Arguments for task finished events
-            </summary>
+            Arguments for task finished events</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -68,8 +67,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor
-            </summary>
+            Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,15 +96,14 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project file</param>
         <param name="taskFile">file in which the task is defined</param>
         <param name="taskName">task name</param>
         <param name="succeeded">true indicates task succeed</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,7 +131,7 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project file</param>
         <param name="taskFile">file in which the task is defined</param>
         <param name="taskName">task name</param>
@@ -142,29 +139,7 @@
         <param name="eventTimestamp">Timestamp when event was created</param>
         <summary>
             This constructor allows event data to be initialized and the timestamp to be set
-            Sender is assumed to be "MSBuild".
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="public override string Message { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskFinishedEventArgs.Message" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
-      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.TaskFinishedEventArgs.Message" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -194,8 +169,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project file associated with event.   
-            </summary>
+            Project file associated with event.</summary>
         <value>The name of the project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,8 +200,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            True if target built successfully, false otherwise
-            </summary>
+            True if target built successfully, false otherwise</summary>
         <value>The value indicating whether the execution of the task succeeded.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,8 +231,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            MSBuild file where this task was defined.   
-            </summary>
+            MSBuild file where this task was defined.</summary>
         <value>The MSBuild file where the task is defined.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -290,8 +262,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Task Name
-            </summary>
+            Task Name</summary>
         <value>The name of the task associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>

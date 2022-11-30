@@ -26,8 +26,7 @@
     <summary>
             Exception that should be thrown by a logger when it cannot continue.
             Allows a logger to force the build to stop in an explicit way, when, for example, it 
-            receives invalid parameters, or cannot write to disk.
-            </summary>
+            receives invalid parameters, or cannot write to disk.</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a
             promise to never change the type's fields i.e. the type is immutable; adding new fields in the next version of the type
@@ -77,8 +76,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor.
-            </summary>
+            Default constructor.</summary>
         <remarks>
             This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
             </remarks>
@@ -105,8 +103,7 @@
       <Docs>
         <param name="message">Message string</param>
         <summary>
-            Creates an instance of this exception using the specified error message.
-            </summary>
+            Creates an instance of this exception using the specified error message.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -143,8 +140,7 @@
         <param name="context">Streaming context</param>
         <summary>
             Protected constructor used for (de)serialization. 
-            If we ever add new members to this class, we'll need to update this.
-            </summary>
+            If we ever add new members to this class, we'll need to update this.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -177,8 +173,7 @@
         <param name="message">Message string</param>
         <param name="innerException">Inner exception. Can be null</param>
         <summary>
-            Creates an instance of this exception using the specified error message and inner exception.
-            </summary>
+            Creates an instance of this exception using the specified error message and inner exception.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,8 +210,7 @@
         <param name="errorCode">Error code</param>
         <param name="helpKeyword">Help keyword for host IDE. Can be null</param>
         <summary>
-            Creates an instance of this exception using rich error information.
-            </summary>
+            Creates an instance of this exception using rich error information.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -246,8 +240,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the error code associated with this exception's message (not the inner exception).
-            </summary>
+            Gets the error code associated with this exception's message (not the inner exception).</summary>
         <value>The error code string.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -279,8 +272,7 @@
         <param name="context">Streaming context</param>
         <summary>
             ISerializable method which we must override since Exception implements this interface
-            If we ever add new members to this class, we'll need to update this.
-            </summary>
+            If we ever add new members to this class, we'll need to update this.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -310,8 +302,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the F1-help keyword associated with this error, for the host IDE.
-            </summary>
+            Gets the F1-help keyword associated with this error, for the host IDE.</summary>
         <value>The keyword string.</value>
         <remarks>To be added.</remarks>
       </Docs>

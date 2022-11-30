@@ -24,8 +24,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Arguments for project started events
-            </summary>
+            Arguments for project started events</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -68,8 +67,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor 
-            </summary>
+            Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,15 +96,14 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="properties">list of properties</param>
         <param name="items">list of items</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,7 +131,7 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="properties">list of properties</param>
@@ -142,8 +139,7 @@
         <param name="eventTimestamp">The <see cref="T:System.DateTime" /> of the event.</param>
         <summary>
             This constructor allows event data to be initialized. Also the timestamp can be set
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,7 +170,7 @@
       <Docs>
         <param name="projectId">project id</param>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="properties">list of properties</param>
@@ -182,8 +178,7 @@
         <param name="parentBuildEventContext">event context info for the parent project</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -220,7 +215,7 @@
       <Docs>
         <param name="projectId">project id</param>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="properties">list of properties</param>
@@ -229,8 +224,7 @@
         <param name="eventTimestamp">The <see cref="T:System.DateTime" /> of the event.</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,7 +256,7 @@
       <Docs>
         <param name="projectId">project id</param>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="properties">list of properties</param>
@@ -272,8 +266,7 @@
         <param name="toolsVersion">The tools version.</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,8 +288,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the set of global properties used to evaluate this project.
-            </summary>
+            Gets the set of global properties used to evaluate this project.</summary>
         <value>Returns <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -321,8 +313,7 @@
       <MemberValue>-1</MemberValue>
       <Docs>
         <summary>
-            Indicates an invalid project identifier.
-            </summary>
+            Indicates an invalid project identifier.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -352,8 +343,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            List of items in this project. This is a live, read-only list.
-            </summary>
+            List of items in this project. This is a live, read-only list.</summary>
         <value>The list of items for the event.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -366,27 +356,6 @@
   
  ]]></format>
         </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="public override string Message { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Message" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
-      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.ProjectStartedEventArgs.Message" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ParentProjectBuildEventContext">
@@ -414,8 +383,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Event context information, where the event was fired from in terms of the build location
-            </summary>
+            Event context information, where the event was fired from in terms of the build location</summary>
         <value>A <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> object representing the list of items for the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -446,8 +414,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project name
-            </summary>
+            Project name</summary>
         <value>The project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -477,8 +444,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the identifier of the project.
-            </summary>
+            Gets the identifier of the project.</summary>
         <value>An integer representing the ID of the project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -509,8 +475,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            List of properties in this project. This is a live, read-only list.
-            </summary>
+            List of properties in this project. This is a live, read-only list.</summary>
         <value>The list of properties for the event.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -551,8 +516,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Targets that we will build in the project
-            </summary>
+            Targets that we will build in the project</summary>
         <value>The list of targets to be built in the project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -575,8 +539,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the tools version used to evaluate this project.
-            </summary>
+            Gets the tools version used to evaluate this project.</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>

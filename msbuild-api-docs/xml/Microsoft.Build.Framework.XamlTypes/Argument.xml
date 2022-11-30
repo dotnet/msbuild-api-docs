@@ -20,8 +20,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Represents an argument to a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
-            </summary>
+            Represents an argument to a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</summary>
     <remarks> 
             Functionally, it is simply a reference to another <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. Those who manually 
             instantiate this class should remember to call <see cref="M:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit" /> before setting the first
@@ -44,8 +43,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor needed for XAML deserialization.
-            </summary>
+            Default constructor needed for XAML deserialization.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -71,8 +69,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,8 +95,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,8 +128,7 @@
       <Docs>
         <summary>
             Tells if the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> pointed to by <see cref="P:Microsoft.Build.Framework.XamlTypes.Argument.Property" /> must be defined for the definition
-            of the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> owning this argument to make sense.
-            </summary>
+            of the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> owning this argument to make sense.</summary>
         <value>
           <see langword="true" /> if the BaseProperty must be defined; otherwise, <see langword="false" />.</value>
         <remarks> 
@@ -169,8 +164,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Name of the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> this argument refers to. 
-            </summary>
+            Name of the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> this argument refers to.</summary>
         <value>The name of the <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> that this argument refers to.</value>
         <remarks>
             Its value must point to a valid <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. This field is mandatory and culture invariant.
@@ -205,8 +199,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The string used to separate this argument value from the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> switch in the command line.
-            </summary>
+            The string used to separate this argument value from the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> switch in the command line.</summary>
         <value>The string used to separate the argument value from the parent <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> switch.</value>
         <remarks>
             This field is optional and culture invariant.

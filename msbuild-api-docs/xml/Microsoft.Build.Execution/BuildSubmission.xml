@@ -17,8 +17,7 @@
   <Docs>
     <summary>
             A BuildSubmission represents an build request which has been submitted to the BuildManager for processing.  It may be used to
-            execute synchronous or asynchronous build requests and provides access to the results upon completion.
-            </summary>
+            execute synchronous or asynchronous build requests and provides access to the results upon completion.</summary>
     <remarks>
             This class is thread-safe.
             </remarks>
@@ -48,8 +47,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The asynchronous context provided to <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, if any.
-            </summary>
+            The asynchronous context provided to <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, if any.</summary>
         <value>The asynchronous context provided to <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, or <see langword="null" /> if no context is provided.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -78,8 +76,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The BuildManager with which this submission is associated.
-            </summary>
+            The BuildManager with which this submission is associated.</summary>
         <value>The build manager this build submission is associated with.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -112,8 +109,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The result of the build.  Valid only after WaitHandle has become signalled.
-            </summary>
+            The result of the build.  Valid only after WaitHandle has become signalled.</summary>
         <value>The result of the build.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -144,8 +140,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Starts the request and blocks until results are available.
-            </summary>
+            Starts the request and blocks until results are available.</summary>
         <returns>The build request.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">The request has already been started or is already complete.</exception>
@@ -181,8 +176,7 @@
         <param name="callback">The callback method to call when the build submission is complete.</param>
         <param name="context">The context in which the build submission occurs.</param>
         <summary>
-            Starts the request asynchronously and immediately returns control to the caller.
-            </summary>
+            Starts the request asynchronously and immediately returns control to the caller.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">The request has already been started or is already complete.</exception>
       </Docs>
@@ -205,8 +199,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns true if this submission is complete.
-            </summary>
+            Returns true if this submission is complete.</summary>
         <value>
           <see langword="true" /> if this build submission is complete; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -236,8 +229,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            An ID uniquely identifying this request from among other submissions within the same build.
-            </summary>
+            An ID uniquely identifying this request from among other submissions within the same build.</summary>
         <value>An ID uniquely identifying this build submission.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -273,8 +265,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            A <see cref="T:System.Threading.WaitHandle" /> which will be signalled when the build is complete.  Valid after <see cref="M:Microsoft.Build.Execution.BuildSubmission.Execute" /> or <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> returns, otherwise null.
-            </summary>
+            A <see cref="T:System.Threading.WaitHandle" /> which will be signalled when the build is complete.  Valid after <see cref="M:Microsoft.Build.Execution.BuildSubmission.Execute" /> or <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> returns, otherwise null.</summary>
         <value>Returns null until <see cref="M:Microsoft.Build.Execution.BuildSubmission.Execute" /> or <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> returns, then returns the WaitHandle object.</value>
         <remarks>To be added.</remarks>
       </Docs>

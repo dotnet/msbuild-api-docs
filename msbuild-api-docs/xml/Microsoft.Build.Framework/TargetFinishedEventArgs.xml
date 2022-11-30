@@ -24,8 +24,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Arguments for target finished events
-            </summary>
+            Arguments for target finished events</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -68,8 +67,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor 
-            </summary>
+            Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,15 +96,14 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="targetName">target name</param>
         <param name="projectFile">project file</param>
         <param name="targetFile">file in which the target is defined</param>
         <param name="succeeded">true if target built successfully</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,7 +131,7 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="targetName">target name</param>
         <param name="projectFile">project file</param>
         <param name="targetFile">file in which the target is defined</param>
@@ -142,8 +139,7 @@
         <param name="targetOutputs">Target output items for the target. If batching will be null for everything except for the last target in the batch</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -172,7 +168,7 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="targetName">target name</param>
         <param name="projectFile">project file</param>
         <param name="targetFile">file in which the target is defined</param>
@@ -181,29 +177,7 @@
         <param name="targetOutputs">An <see cref="T:System.Collections.IEnumerable" /> containing the outputs of the target.</param>
         <summary>
             This constructor allows event data to be initialized including the timestamp when the event was created.
-            Sender is assumed to be "MSBuild".
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="public override string Message { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TargetFinishedEventArgs.Message" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
-      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.TargetFinishedEventArgs.Message" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -233,8 +207,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project file associated with event.
-            </summary>
+            Project file associated with event.</summary>
         <value>the name of the project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -265,8 +238,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            True if target built successfully, false otherwise
-            </summary>
+            True if target built successfully, false otherwise</summary>
         <value>The value indicating whether the build of the target succeeded.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -297,8 +269,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            File where this target was declared.
-            </summary>
+            File where this target was declared.</summary>
         <value>The name of the file that contains the implementation of this target.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -329,8 +300,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Target name
-            </summary>
+            Target name</summary>
         <value>The name of the target associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,8 +333,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Target outputs
-            </summary>
+            Target outputs</summary>
         <value>An enumerator over all target outputs.</value>
         <remarks>To be added.</remarks>
       </Docs>

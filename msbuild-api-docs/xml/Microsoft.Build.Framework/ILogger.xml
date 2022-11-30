@@ -22,8 +22,7 @@
   <Docs>
     <summary>
             This interface defines a "logger" in the build system. A logger subscribes to build system events. All logger classes must
-            implement this interface to be recognized by the build engine.
-            </summary>
+            implement this interface to be recognized by the build engine.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -67,8 +66,7 @@
       <Docs>
         <param name="eventSource">The events available to loggers.</param>
         <summary>
-            Called by the build engine to allow loggers to subscribe to the events they desire.
-            </summary>
+            Called by the build engine to allow loggers to subscribe to the events they desire.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -93,8 +91,7 @@
       <Docs>
         <summary>
             This property holds the user-specified parameters to the logger. If parameters are not provided, a logger should revert
-            to defaults. If a logger does not take parameters, it can ignore this property.
-            </summary>
+            to defaults. If a logger does not take parameters, it can ignore this property.</summary>
         <value>The parameter string (can be null).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -130,8 +127,7 @@
       <Docs>
         <summary>
             Called by the build engine to allow loggers to release any resources they may have allocated at initialization time,
-            or during the build.
-            </summary>
+            or during the build.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,8 +153,7 @@
         <summary>
             The verbosity level directs the amount of detail that appears in a logger's event log. Though this is only a
             recommendation based on user preferences, and a logger is free to choose the exact events it logs, it is still
-            important that the guidelines for each level be followed, for a good user experience.
-            </summary>
+            important that the guidelines for each level be followed, for a good user experience.</summary>
         <value>The verbosity level.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

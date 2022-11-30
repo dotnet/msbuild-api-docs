@@ -33,8 +33,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Used to represent the schema information for a Tool, a Custom Build Rule, a PropertyPage, etc. 
-            </summary>
+            Used to represent the schema information for a Tool, a Custom Build Rule, a PropertyPage, etc.</summary>
     <remarks>
       <para>
             Normally represented on disk as XAML, only one instance of this class is maintained per XAML
@@ -69,8 +68,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor. Needed for deserialization from a persisted format.
-            </summary>
+            Default constructor. Needed for deserialization from a persisted format.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -103,8 +101,7 @@
       <Docs>
         <summary>
             When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field defines the semicolon separated list of additional inputs that are going to be evaluated
-            for the Build Customization target.
-            </summary>
+            for the Build Customization target.</summary>
         <value>Returns a semicolon-separated list of additional inputs.</value>
         <remarks>
             This field is optional.
@@ -133,8 +130,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -166,8 +162,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The list of <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s that properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> belong to. 
-            </summary>
+            The list of <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s that properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> belong to.</summary>
         <value>Returns the list of properties.</value>
         <remarks>
             This field is optional. Note that this field returns only the categories that were explicitly defined and do
@@ -206,8 +201,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the command line template that is going to be used by a Build Customization task to invoke the tool.
-            </summary>
+            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the command line template that is going to be used by a Build Customization task to invoke the tool.</summary>
         <value>Returns the command-line template.</value>
         <remarks>
             This field is optional.
@@ -243,8 +237,7 @@
       <Docs>
         <summary>
             The <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> for all the properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. This is overriden by any
-            data source defined locally for a property. 
-            </summary>
+            data source defined locally for a property.</summary>
         <value>Returns the data source.</value>
         <remarks>
             This field need not be specified only if all individual properties have data source defined locally.
@@ -283,8 +276,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for use by a prospective UI client. 
-            </summary>
+            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for use by a prospective UI client.</summary>
         <value>Returns the description.</value>
         <remarks> 
             This field is optional and is culture sensitive.
@@ -319,8 +311,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
-            </summary>
+            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</summary>
         <value>Returns the name.</value>
         <remarks>
             This field is optional and is culture sensitive. When this property is not set, it is assigned the same 
@@ -356,8 +347,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,8 +371,7 @@
         <summary>
             This property returns the union of XAML specified <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s and auto-generated 
             <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s. The latter are created from the missing categories that are being referred to by the 
-            properties in this Rule. The auto-generated <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s only have their name set.
-            </summary>
+            properties in this Rule. The auto-generated <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s only have their name set.</summary>
         <value>Returns the union of categories.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -415,8 +404,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the message to be displayed before executing a Build Customization during the build.
-            </summary>
+            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the message to be displayed before executing a Build Customization during the build.</summary>
         <value>Returns the message.</value>
         <remarks>
             This field is optional.
@@ -451,8 +439,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the file extension to associate.
-            </summary>
+            When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field represents the file extension to associate.</summary>
         <value>Returns the file name extension.</value>
         <remarks>
             This field is optional.
@@ -485,10 +472,9 @@
             Category is generated for the same. If not category is specified for the property, then
             the property is placed in the "General" category.
             The list of categories is exactly as specified in the Xaml file. The auto-generated
-            categories come (in no strict order) after the specified categories.
-            </summary>
+            categories come (in no strict order) after the specified categories.</summary>
         <returns> A dictionary whose keys are the <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> names and 
-            the value is the list of properties in that category. </returns>
+            the value is the list of properties in that category.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -524,8 +510,7 @@
         <param name="categoryName">The name of the category whose properties are to be returned.</param>
         <summary>
             Returns the list of properties in a <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />. Returns null if this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />
-            doesn't contain this category.
-            </summary>
+            doesn't contain this category.</summary>
         <returns>Returns the list of properties in a <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />. Returns <see langword="null" /> if this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> does not contain this category.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -552,8 +537,7 @@
       <Docs>
         <param name="propertyName">The name of the property.</param>
         <summary>
-            Returns a property with a given name.
-            </summary>
+            Returns a property with a given name.</summary>
         <returns>The property, or <c>null</c> if one with a matching name could not be found.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -562,10 +546,10 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetSchemaObjects (Type type);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetSchemaObjects(class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects(System.Type)" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
       <MemberSignature Language="F#" Value="abstract member GetSchemaObjects : Type -&gt; seq&lt;obj&gt;&#xA;override this.GetSchemaObjects : Type -&gt; seq&lt;obj&gt;" Usage="rule.GetSchemaObjects type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerable&lt;System::Object ^&gt; ^ GetSchemaObjects(Type ^ type);" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects(System.Type)</InterfaceMember>
@@ -576,13 +560,13 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__101))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__101))&gt;]</AttributeName>
-        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.6">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__1))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__1))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__101))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjects&gt;d__101))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -594,8 +578,7 @@
       <Docs>
         <param name="type">The type of static data to retrieve.</param>
         <summary>
-            see IProjectSchemaNode
-            </summary>
+            see IProjectSchemaNode</summary>
         <returns>Returns an enumerator over all instances of static data that have the given type. Returns <see langword="Null" /> or Empty list if no objects of the given type are provided by this node.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -604,10 +587,10 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; GetSchemaObjectTypes ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; GetSchemaObjectTypes() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
       <MemberSignature Language="F#" Value="abstract member GetSchemaObjectTypes : unit -&gt; seq&lt;Type&gt;&#xA;override this.GetSchemaObjectTypes : unit -&gt; seq&lt;Type&gt;" Usage="rule.GetSchemaObjectTypes " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerable&lt;Type ^&gt; ^ GetSchemaObjectTypes();" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes</InterfaceMember>
@@ -618,13 +601,13 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__100))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__100))&gt;]</AttributeName>
-        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.6">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__1))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__1))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__100))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule+&lt;GetSchemaObjectTypes&gt;d__100))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -633,8 +616,7 @@
       <Parameters />
       <Docs>
         <summary>
-            see IProjectSchemaNode
-            </summary>
+            see IProjectSchemaNode</summary>
         <returns>Returns an enumerator over all types of static data for the data-driven features that this node contains.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -671,8 +653,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Help information for this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. 
-            </summary>
+            Help information for this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
         <value>Returns the Help information.</value>
         <remarks>
             Maybe used to specify a help URL. This field
@@ -698,8 +679,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets arbitrary metadata that may be set on a rule.
-            </summary>
+            Gets or sets arbitrary metadata that may be set on a rule.</summary>
         <value>Returns <see cref="T:System.Collections.Generic.Dictionary`2" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -732,8 +712,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. 
-            </summary>
+            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
         <value>Returns the name.</value>
         <remarks>
             This field is mandatory and culture invariant. The value of this field cannot be set to the empty string. 
@@ -768,8 +747,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This is a suggestion to a prospective UI client on the relative location of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> compared to all other Rules in the system.
-            </summary>
+            This is a suggestion to a prospective UI client on the relative location of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> compared to all other Rules in the system.</summary>
         <value>Returns the suggestion.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -803,8 +781,7 @@
       <Docs>
         <summary>
             When this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represents a Build Customization, this field defines the semicolon separated list of outputs that are going to be evaluated
-            for the Build Customization target.
-            </summary>
+            for the Build Customization target.</summary>
         <value>Returns the outputs.</value>
         <remarks>
             This field is optional.
@@ -830,8 +807,7 @@
       <Docs>
         <summary>
             Gets or sets the method to use when multiple rules with the same name appear in the project
-            to reconcile the rules into one instance.
-            </summary>
+            to reconcile the rules into one instance.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -864,8 +840,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The UI renderer template used to display this Rule. 
-            </summary>
+            The UI renderer template used to display this Rule.</summary>
         <value>Returns the UI template.</value>
         <remarks>
             The value used to set
@@ -902,8 +877,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This list of properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. Atleast one property should be specified.
-            </summary>
+            This list of properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. Atleast one property should be specified.</summary>
         <value>Returns the list of properties.</value>
         <remarks> The list returned by this property should not be modified. </remarks>
       </Docs>
@@ -926,8 +900,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value indicating if property pages for this rule should be hidden or not.
-            </summary>
+            Gets or sets a value indicating if property pages for this rule should be hidden or not.</summary>
         <value>Returns flag value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -960,8 +933,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The token used to separate a property switch from its value.
-            </summary>
+            The token used to separate a property switch from its value.</summary>
         <value>Returns the token separator.</value>
         <remarks>
             The value specified here is overridden by the value specified by the child <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />'s <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator" />.
@@ -1001,8 +973,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Indicates whether to hide the command line category or not. Default value is true.
-            </summary>
+            Indicates whether to hide the command line category or not. Default value is true.</summary>
         <value>Returns <see langword="true" /> if command-line categories are hidden; otherwise, <see langword="false" />.</value>
         <remarks>
             This field is optional.
@@ -1037,8 +1008,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This is used to specify whether multiple files need to be batched on one command line invocation. 
-            </summary>
+            This is used to specify whether multiple files need to be batched on one command line invocation.</summary>
         <value>Returns <see langword="true" /> if multiple files can be batched; otherwise, <see langword="false" />.</value>
         <remarks>
             This field is optional.
@@ -1073,8 +1043,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The prefix to use for all property switches in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for the case when this property <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represent a tool.
-            </summary>
+            The prefix to use for all property switches in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for the case when this property <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> represent a tool.</summary>
         <value>Returns the prefix.</value>
         <remarks>
             The value specified can be overridden by the value specified by a child <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />'s <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix" />.
@@ -1114,8 +1083,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the tool executable when this rule represents a tool.
-            </summary>
+            The name of the tool executable when this rule represents a tool.</summary>
         <value>Returns the name of the tool.</value>
         <remarks>To be added.</remarks>
       </Docs>

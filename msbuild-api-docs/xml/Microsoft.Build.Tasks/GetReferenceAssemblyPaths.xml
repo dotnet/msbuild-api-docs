@@ -220,56 +220,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SuppressNotFoundError">
-      <MemberSignature Language="C#" Value="public bool SuppressNotFoundError { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressNotFoundError" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.SuppressNotFoundError" />
-      <MemberSignature Language="VB.NET" Value="Public Property SuppressNotFoundError As Boolean" />
-      <MemberSignature Language="F#" Value="member this.SuppressNotFoundError : bool with get, set" Usage="Microsoft.Build.Tasks.GetReferenceAssemblyPaths.SuppressNotFoundError" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SuppressNotFoundError { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If set to true, the task will not generate an error (or a warning) if the reference assemblies cannot be found.
-            This allows the task to be used to check whether reference assemblies for a framework are available.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TargetFrameworkFallbackSearchPaths">
-      <MemberSignature Language="C#" Value="public string TargetFrameworkFallbackSearchPaths { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkFallbackSearchPaths" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkFallbackSearchPaths" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkFallbackSearchPaths As String" />
-      <MemberSignature Language="F#" Value="member this.TargetFrameworkFallbackSearchPaths : string with get, set" Usage="Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkFallbackSearchPaths" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkFallbackSearchPaths { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Target frameworks are looked up in @RootPath. If it cannot be found
-            there, then paths in @TargetFrameworkFallbackSearchPaths
-            are used for the lookup, in order. This can have multiple paths, separated
-            by ';'
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="TargetFrameworkMoniker">
       <MemberSignature Language="C#" Value="public string TargetFrameworkMoniker { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMoniker" />

@@ -20,8 +20,7 @@
   </Interfaces>
   <Docs>
     <summary>
-            Represents the location and grouping for a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
-            </summary>
+            Represents the location and grouping for a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</summary>
     <remarks>
             Those who manually
             instantiate this class should remember to call <see cref="M:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit" /> before setting the first
@@ -44,8 +43,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor. Needed for proper XAML deserialization.
-            </summary>
+            Default constructor. Needed for proper XAML deserialization.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -71,8 +69,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,8 +95,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize.
-            </summary>
+            See ISupportInitialize.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,8 +128,7 @@
       <Docs>
         <summary>
             Indicates if a property is configuration-dependent as indicated by the presence of a configuration
-            condition attached to the property definition at its persistence location.
-            </summary>
+            condition attached to the property definition at its persistence location.</summary>
         <value>
           <see langword="true" /> if a property is configuration-dependent; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -171,8 +166,7 @@
         <summary>
             If a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> is an item definition metadata or item metadata, this field
             specified the item type of the item definition or the item, respectively. For common properties
-            this field must not be set.
-            </summary>
+            this field must not be set.</summary>
         <value>The item type of the data source.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -214,8 +208,7 @@
         <summary>
             The label of the MSBuild property group/item definition group to which
             a property/item definition metadata belongs to. Default value is the
-            empty string.
-            </summary>
+            empty string.</summary>
         <value>The label of the property or item group.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -249,8 +242,7 @@
       <Docs>
         <summary>
             Gets or sets the semicolon-delimited list of MSBuild targets that must be executed before reading
-            the read-only properties or items described by this <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" />.
-            </summary>
+            the read-only properties or items described by this <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" />.</summary>
         <value>A semicolon-delimited list.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,8 +276,7 @@
       <Docs>
         <summary>
             Gets or sets the actual MSBuild property name used to read/write the value of this property.
-            Applicable only to <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" /> objects attached to properties.
-            </summary>
+            Applicable only to <see cref="T:Microsoft.Build.Framework.XamlTypes.DataSource" /> objects attached to properties.</summary>
         <value>The MSBuild property name to use; or <c>null</c> to use the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" /> as the MSBuild property name.</value>
         <remarks>
           <para>The persisted name will usually be the same as the property name as it appears in the <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />
@@ -327,8 +318,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The storage location for this data source.
-            </summary>
+            The storage location for this data source.</summary>
         <value>The storage location for this data source.</value>
         <remarks>
             This field is mandatory unless <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistenceStyle" /> is set. In that case, the parent
@@ -337,32 +327,6 @@
             manifest file or the property sheet (depending on which node in the solution explorer/property manager window
             is used to spawn the property pages UI). <c>UserFile</c> causes the property value to be written to and read
             from the .user file.
-            </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="PersistenceStyle">
-      <MemberSignature Language="C#" Value="public string PersistenceStyle { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string PersistenceStyle" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistenceStyle" />
-      <MemberSignature Language="VB.NET" Value="Public Property PersistenceStyle As String" />
-      <MemberSignature Language="F#" Value="member this.PersistenceStyle : string with get, set" Usage="Microsoft.Build.Framework.XamlTypes.DataSource.PersistenceStyle" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PersistenceStyle { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The storage style for this data source.
-            </summary>
-        <value>To be added.</value>
-        <remarks>
-            For example, with <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.Persistence" /> of <c>ProjectFile</c>, this field can be <c>Element</c> (default) to
-            save as a child XML Element, or <c>Attribute</c> to save properties as an XML attribute.
             </remarks>
       </Docs>
     </Member>
@@ -384,8 +348,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value indicating where the default value for this property can be found.
-            </summary>
+            Gets or sets a value indicating where the default value for this property can be found.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -420,8 +383,7 @@
         <summary>
             The data type of the source.  Generally one of <c>Item</c>, <c>ItemDefinition</c>, <c>Property</c>,
             or <c>TargetResults</c> (when <see cref="P:Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" /> is non-empty).
-            Among other things this governs how the data is treated during build.
-            </summary>
+            Among other things this governs how the data is treated during build.</summary>
         <value>The data type.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

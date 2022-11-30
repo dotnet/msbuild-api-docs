@@ -24,8 +24,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Arguments for project finished events
-            </summary>
+            Arguments for project finished events</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -68,8 +67,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor 
-            </summary>
+            Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -96,13 +94,12 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">name of the project</param>
         <param name="succeeded">true indicates project built successfully</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild".
-            </summary>
+            Sender is assumed to be "MSBuild".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,35 +125,13 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="projectFile">name of the project</param>
         <param name="succeeded">true indicates project built successfully</param>
         <param name="eventTimestamp">Timestamp when the event was created</param>
         <summary>
             This constructor allows event data to be initialized.
-            Sender is assumed to be "MSBuild". This constructor allows the timestamp to be set as well
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="public override string Message { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectFinishedEventArgs.Message" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
-      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.ProjectFinishedEventArgs.Message" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+            Sender is assumed to be "MSBuild". This constructor allows the timestamp to be set as well</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -186,8 +161,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project name
-            </summary>
+            Project name</summary>
         <value>The project file associated with the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -218,8 +192,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            True if project built successfully, false otherwise
-            </summary>
+            True if project built successfully, false otherwise</summary>
         <value>The value indicating whether the build succeeded.</value>
         <remarks>To be added.</remarks>
       </Docs>

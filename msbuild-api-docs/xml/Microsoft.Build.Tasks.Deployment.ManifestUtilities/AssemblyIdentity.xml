@@ -671,38 +671,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="IsInFramework">
-      <MemberSignature Language="C#" Value="public bool IsInFramework (string frameworkIdentifier, string frameworkVersion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInFramework(string frameworkIdentifier, string frameworkVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsInFramework(System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function IsInFramework (frameworkIdentifier As String, frameworkVersion As String) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.IsInFramework : string * string -&gt; bool" Usage="assemblyIdentity.IsInFramework (frameworkIdentifier, frameworkVersion)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsInFramework(System::String ^ frameworkIdentifier, System::String ^ frameworkVersion);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="frameworkIdentifier" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="frameworkVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="frameworkIdentifier">To be added.</param>
-        <param name="frameworkVersion">To be added.</param>
-        <summary>
-            Returns true if this assembly is part of the given framework.
-            identifier is “.NETFramework” or “Silverlight”, etc. and the version string looks like this: “4.5” or “v4.5”, or “v4.0.30319"
-            If frameworkVersion is null or empty, return true if this assembly is present in any of the given framework versions
-            If both arguments are null or empty strings, return true if this assembly is present in any of the frameworks
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="IsNeutralPlatform">
       <MemberSignature Language="C#" Value="public bool IsNeutralPlatform { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsNeutralPlatform" />

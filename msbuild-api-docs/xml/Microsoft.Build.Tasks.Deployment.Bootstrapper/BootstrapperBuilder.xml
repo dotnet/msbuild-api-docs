@@ -42,10 +42,6 @@
       <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("1D9FE38A-0226-4b95-9C6B-6DFFA2236270")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("1D9FE38A-0226-4b95-9C6B-6DFFA2236270")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -288,31 +284,6 @@
         <value>All products available at the current bootstrapper <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="XmlToConfigurationFile">
-      <MemberSignature Language="C#" Value="public static string XmlToConfigurationFile (System.Xml.XmlNode input);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string XmlToConfigurationFile(class System.Xml.XmlNode input) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.XmlToConfigurationFile(System.Xml.XmlNode)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function XmlToConfigurationFile (input As XmlNode) As String" />
-      <MemberSignature Language="F#" Value="static member XmlToConfigurationFile : System.Xml.XmlNode -&gt; string" Usage="Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.XmlToConfigurationFile input" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ XmlToConfigurationFile(System::Xml::XmlNode ^ input);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="input" Type="System.Xml.XmlNode" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="input">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

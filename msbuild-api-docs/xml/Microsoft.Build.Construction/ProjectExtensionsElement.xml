@@ -19,8 +19,7 @@
             ProjectExtensionsElement represents the ProjectExtensions element in the MSBuild project.
             ProjectExtensions can contain arbitrary XML content.
             The ProjectExtensions element is deprecated and provided only for backward compatibility.
-            Use a property instead. Properties can also contain XML content.
-            </summary>
+            Use a property instead. Properties can also contain XML content.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -50,8 +49,7 @@
       <Docs>
         <summary>
             Condition should never be set, but the getter returns null instead of throwing 
-            because a nonexistent condition is implicitly true
-            </summary>
+            because a nonexistent condition is implicitly true</summary>
         <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,8 +72,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This does not allow conditions, so it should not be called.
-            </summary>
+            This does not allow conditions, so it should not be called.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -104,61 +101,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets and sets the raw XML content
-            </summary>
+            Gets and sets the raw XML content</summary>
         <value>The arbitrary XML content of this project extension.</value>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CopyFrom">
-      <MemberSignature Language="C#" Value="public override void CopyFrom (Microsoft.Build.Construction.ProjectElement element);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class Microsoft.Build.Construction.ProjectElement element) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectExtensionsElement.CopyFrom(Microsoft.Build.Construction.ProjectElement)" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Sub CopyFrom (element As ProjectElement)" />
-      <MemberSignature Language="F#" Value="override this.CopyFrom : Microsoft.Build.Construction.ProjectElement -&gt; unit" Usage="projectExtensionsElement.CopyFrom element" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void CopyFrom(Microsoft::Build::Construction::ProjectElement ^ element);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="element" Type="Microsoft.Build.Construction.ProjectElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="element">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
-      </Docs>
-    </Member>
-    <Member MemberName="CreateNewInstance">
-      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Construction.ProjectElement CreateNewInstance (Microsoft.Build.Construction.ProjectRootElement owner);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.Build.Construction.ProjectElement CreateNewInstance(class Microsoft.Build.Construction.ProjectRootElement owner) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectExtensionsElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
-      <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectExtensionsElement.CreateNewInstance owner" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Construction.ProjectElement</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="owner" Type="Microsoft.Build.Construction.ProjectRootElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="owner">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -184,8 +129,7 @@
         <param name="name">The name of the sub-element.</param>
         <summary>
             Get or set the content of the first sub-element 
-            with the provided name.
-            </summary>
+            with the provided name.</summary>
         <value>The contents of the element.</value>
         <remarks>To be added.</remarks>
       </Docs>

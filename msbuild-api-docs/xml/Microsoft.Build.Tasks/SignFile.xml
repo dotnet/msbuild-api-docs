@@ -25,12 +25,6 @@
     <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
   </Base>
   <Interfaces />
-  <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
-    </Attribute>
-  </Attributes>
   <Docs>
     <summary>
             This task signs the passed in file using the Authenticode cert
@@ -118,27 +112,6 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="DisallowMansignTimestampFallback">
-      <MemberSignature Language="C#" Value="public bool DisallowMansignTimestampFallback { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool DisallowMansignTimestampFallback" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.SignFile.DisallowMansignTimestampFallback" />
-      <MemberSignature Language="VB.NET" Value="Public Property DisallowMansignTimestampFallback As Boolean" />
-      <MemberSignature Language="F#" Value="member this.DisallowMansignTimestampFallback : bool with get, set" Usage="Microsoft.Build.Tasks.SignFile.DisallowMansignTimestampFallback" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisallowMansignTimestampFallback { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public override bool Execute ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
@@ -221,48 +194,6 @@
         <value>The files to sign with the certificate.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="TargetFrameworkIdentifier">
-      <MemberSignature Language="C#" Value="public string TargetFrameworkIdentifier { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkIdentifier" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.SignFile.TargetFrameworkIdentifier" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkIdentifier As String" />
-      <MemberSignature Language="F#" Value="member this.TargetFrameworkIdentifier : string with get, set" Usage="Microsoft.Build.Tasks.SignFile.TargetFrameworkIdentifier" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkIdentifier { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TargetFrameworkVersion">
-      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.SignFile.TargetFrameworkVersion" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkVersion As String" />
-      <MemberSignature Language="F#" Value="member this.TargetFrameworkVersion : string with get, set" Usage="Microsoft.Build.Tasks.SignFile.TargetFrameworkVersion" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkVersion { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="TimestampUrl">

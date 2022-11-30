@@ -15,48 +15,17 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("TaskParameter={TaskParameter} ItemType={ItemType} PropertyName={PropertyName} Condition={Condition}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("TaskParameter={TaskParameter} ItemType={ItemType} PropertyName={PropertyName} Condition={Condition}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={Name} TaskParameter={TaskParameter} ItemName={ItemName} PropertyName={PropertyName} Condition={Condition}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={Name} TaskParameter={TaskParameter} ItemName={ItemName} PropertyName={PropertyName} Condition={Condition}")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            ProjectOutputElement represents the Output element in the MSBuild project.
-            </summary>
+            ProjectOutputElement represents the Output element in the MSBuild project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="CreateNewInstance">
-      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Construction.ProjectElement CreateNewInstance (Microsoft.Build.Construction.ProjectRootElement owner);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.Build.Construction.ProjectElement CreateNewInstance(class Microsoft.Build.Construction.ProjectRootElement owner) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectOutputElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
-      <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectOutputElement.CreateNewInstance owner" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Construction.ProjectElement</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="owner" Type="Microsoft.Build.Construction.ProjectRootElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="owner">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
-      </Docs>
-    </Member>
     <Member MemberName="IsOutputItem">
       <MemberSignature Language="C#" Value="public bool IsOutputItem { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsOutputItem" />
@@ -75,8 +44,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Whether this represents an output item (as opposed to an output property)
-            </summary>
+            Whether this represents an output item (as opposed to an output property)</summary>
         <value>
           <see langword="true" /> if this output element represents an output item; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -100,8 +68,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Whether this represents an output property (as opposed to an output item)
-            </summary>
+            Whether this represents an output property (as opposed to an output item)</summary>
         <value>
           <see langword="true" /> if this output element represents an output property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -133,8 +100,7 @@
         <summary>
             Gets or sets the ItemType value. 
             Returns empty string if it is not present.
-            Removes the attribute if the value to set is empty.
-            </summary>
+            Removes the attribute if the value to set is empty.</summary>
         <value>The ItemType attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
             Unfortunately the attribute name chosen in Whidbey was "ItemName" not ItemType.
@@ -159,8 +125,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the item type attribute, if any
-            </summary>
+            Location of the item type attribute, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -191,8 +156,7 @@
         <summary>
             Gets or sets the PropertyName value. 
             Returns empty string if it is not present.
-            Removes the attribute if the value to set is empty.
-            </summary>
+            Removes the attribute if the value to set is empty.</summary>
         <value>The PropertyName attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -222,8 +186,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the property name attribute, if any
-            </summary>
+            Location of the property name attribute, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,8 +220,7 @@
       <Docs>
         <summary>
             Gets or sets the TaskParameter value. 
-            Returns empty string if it is not present.
-            </summary>
+            Returns empty string if it is not present.</summary>
         <value>The TaskParameter attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -288,8 +250,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the task parameter attribute
-            </summary>
+            Location of the task parameter attribute</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>

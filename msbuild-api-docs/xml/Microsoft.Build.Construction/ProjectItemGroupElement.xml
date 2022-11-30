@@ -22,8 +22,7 @@
   </Attributes>
   <Docs>
     <summary>
-            ProjectItemGroupElement represents the ItemGroup element in the MSBuild project.
-            </summary>
+            ProjectItemGroupElement represents the ItemGroup element in the MSBuild project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -58,8 +57,7 @@
         <param name="include">Include attribute of the item to be added.</param>
         <summary>
             Convenience method that picks a location based on a heuristic:
-            Adds a new item ordered by include.
-            </summary>
+            Adds a new item ordered by include.</summary>
         <returns>The new item element.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -99,8 +97,7 @@
         <summary>
             Convenience method that picks a location based on a heuristic:
             Adds a new item ordered by include.
-            Metadata may be null, indicating no metadata.
-            </summary>
+            Metadata may be null, indicating no metadata.</summary>
         <returns>The new item element.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -110,57 +107,6 @@
   
  ]]></format>
         </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CopyFrom">
-      <MemberSignature Language="C#" Value="public override void CopyFrom (Microsoft.Build.Construction.ProjectElement element);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class Microsoft.Build.Construction.ProjectElement element) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemGroupElement.CopyFrom(Microsoft.Build.Construction.ProjectElement)" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Sub CopyFrom (element As ProjectElement)" />
-      <MemberSignature Language="F#" Value="override this.CopyFrom : Microsoft.Build.Construction.ProjectElement -&gt; unit" Usage="projectItemGroupElement.CopyFrom element" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void CopyFrom(Microsoft::Build::Construction::ProjectElement ^ element);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="element" Type="Microsoft.Build.Construction.ProjectElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="element">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
-      </Docs>
-    </Member>
-    <Member MemberName="CreateNewInstance">
-      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Construction.ProjectElement CreateNewInstance (Microsoft.Build.Construction.ProjectRootElement owner);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.Build.Construction.ProjectElement CreateNewInstance(class Microsoft.Build.Construction.ProjectRootElement owner) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectItemGroupElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewInstance (owner As ProjectRootElement) As ProjectElement" />
-      <MemberSignature Language="F#" Value="override this.CreateNewInstance : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Construction.ProjectElement" Usage="projectItemGroupElement.CreateNewInstance owner" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Build::Construction::ProjectElement ^ CreateNewInstance(Microsoft::Build::Construction::ProjectRootElement ^ owner);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Construction.ProjectElement</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="owner" Type="Microsoft.Build.Construction.ProjectRootElement" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="owner">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Items">
@@ -182,8 +128,7 @@
       <Docs>
         <summary>
             Get any child items.
-            This is a live collection.
-            </summary>
+            This is a live collection.</summary>
         <value>All child items.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

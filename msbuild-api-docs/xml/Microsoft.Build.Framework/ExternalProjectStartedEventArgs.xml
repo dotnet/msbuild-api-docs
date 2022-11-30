@@ -24,8 +24,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Arguments for external project started events
-            </summary>
+            Arguments for external project started events</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -68,8 +67,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor
-            </summary>
+            Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -102,8 +100,7 @@
         <param name="projectFile">project name</param>
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <summary>
-            Useful constructor
-            </summary>
+            Useful constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,8 +139,7 @@
         <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
         <param name="eventTimestamp">Timestamp when the event was created</param>
         <summary>
-            Useful constructor, including the ability to set the timestamp of the event
-            </summary>
+            Useful constructor, including the ability to set the timestamp of the event</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,8 +169,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Project name
-            </summary>
+            Project name</summary>
         <value>The project file that raised the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -207,8 +202,7 @@
         <summary>
             Targets that we will build in the project. This may mean different things for different project types,
             our tasks will put something like Rebuild, Clean, etc. here. This may be null if the project is being
-            built with the default target.
-            </summary>
+            built with the default target.</summary>
         <value>The names of the targets being built in the external project. This can be a null reference (<see langword="Nothing" /> in Visual Basic) if the external project is being built with the default target.</value>
         <remarks>To be added.</remarks>
       </Docs>

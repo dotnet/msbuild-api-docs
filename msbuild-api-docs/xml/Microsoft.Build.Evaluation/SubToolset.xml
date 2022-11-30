@@ -15,19 +15,14 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("SubToolsetVersion={SubToolsetVersion} #Properties={_properties.Count}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("SubToolsetVersion={SubToolsetVersion} #Properties={_properties.Count}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("SubToolsetVersion={SubToolsetVersion} #Properties={properties.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("SubToolsetVersion={SubToolsetVersion} #Properties={properties.Count}")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            Aggregation of a set of properties that correspond to a particular sub-toolset.  
-            </summary>
+            Aggregation of a set of properties that correspond to a particular sub-toolset.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -49,8 +44,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The properties that correspond to this particular sub-toolset. 
-            </summary>
+            The properties that correspond to this particular sub-toolset.</summary>
         <value>The properties that correspond to this particular sub toolset.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -73,8 +67,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            VisualStudioVersion that corresponds to this subtoolset
-            </summary>
+            VisualStudioVersion that corresponds to this subtoolset</summary>
         <value>The string containing the Visual Studio version for this sub toolset.</value>
         <remarks>To be added.</remarks>
       </Docs>

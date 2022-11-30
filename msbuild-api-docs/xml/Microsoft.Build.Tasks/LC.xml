@@ -107,60 +107,6 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="AddResponseFileCommands">
-      <MemberSignature Language="C#" Value="protected internal override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
-      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.LC.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddResponseFileCommands (commandLine As CommandLineBuilderExtension)" />
-      <MemberSignature Language="F#" Value="override this.AddResponseFileCommands : Microsoft.Build.Tasks.CommandLineBuilderExtension -&gt; unit" Usage="lC.AddResponseFileCommands commandLine" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void AddResponseFileCommands(Microsoft::Build::Tasks::CommandLineBuilderExtension ^ commandLine);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" Index="0" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="commandLine">command line builder class to add arguments to the response file</param>
-        <summary>
-            Generates response file with arguments for lc.exe
-            Used when targeting framework version is 4.6 or later
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Execute">
-      <MemberSignature Language="C#" Value="public override bool Execute ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.LC.Execute" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
-      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="lC.Execute " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Override of Execute that errors, since <see cref="T:Microsoft.Build.Tasks.LC" /> is not expected to get
-            .NET Core support.
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>
-            See https://github.com/dotnet/winforms/issues/1462.
-            </remarks>
-      </Docs>
-    </Member>
     <Member MemberName="GenerateFullPathToTool">
       <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
@@ -465,35 +411,6 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="TargetFrameworkVersion">
-      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.LC.TargetFrameworkVersion" />
-      <MemberSignature Language="VB.NET" Value="Public Property TargetFrameworkVersion As String" />
-      <MemberSignature Language="F#" Value="member this.TargetFrameworkVersion : string with get, set" Usage="Microsoft.Build.Tasks.LC.TargetFrameworkVersion" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetFrameworkVersion { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Targeted version of the framework (i.e. 4.5 or 2.0, etc.)
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ToolName">

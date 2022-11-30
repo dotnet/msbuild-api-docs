@@ -15,10 +15,6 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={_name} Condition={_condition} ContinueOnError={_continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={_parameters.Count} #Outputs={_outputs.Count}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={_name} Condition={_condition} ContinueOnError={_continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={_parameters.Count} #Outputs={_outputs.Count}")&gt;]</AttributeName>
-    </Attribute>
     <Attribute FrameworkAlternate="netframework-4.0">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} #Parameters={parameters.Count} #Outputs={outputs.Count}")&gt;]</AttributeName>
@@ -30,8 +26,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Wraps a task element
-            </summary>
+            Wraps a task element</summary>
     <remarks>
             This is an immutable class
             </remarks>
@@ -62,8 +57,7 @@
       <Docs>
         <summary>
             Unevaluated condition on the task
-            May be empty string.
-            </summary>
+            May be empty string.</summary>
         <value>The Condition attribute value, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,8 +80,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the condition, if any
-            </summary>
+            Location of the condition, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,8 +110,7 @@
       <Docs>
         <summary>
             Unevaluated ContinueOnError on the task.
-            May be empty string.
-            </summary>
+            May be empty string.</summary>
         <value>The unevaluated ContinueOnError attribute of the task, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -148,8 +140,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the ContinueOnError attribute, if any
-            </summary>
+            Location of the ContinueOnError attribute, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -172,8 +163,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the original element
-            </summary>
+            Location of the original element</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -197,8 +187,7 @@
       <Docs>
         <summary>
             Unevaluated MSBuildArchitecture on the task.
-            May be empty string.
-            </summary>
+            May be empty string.</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -221,8 +210,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the MSBuildArchitecture attribute, if any
-            </summary>
+            Location of the MSBuildArchitecture attribute, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -246,8 +234,7 @@
       <Docs>
         <summary>
             Unevaluated MSBuildRuntime on the task.
-            May be empty string.
-            </summary>
+            May be empty string.</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -270,8 +257,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the MSBuildRuntime attribute, if any
-            </summary>
+            Location of the MSBuildRuntime attribute, if any</summary>
         <value>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,8 +286,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Name of the task, possibly qualified, as it appears in the project
-            </summary>
+            Name of the task, possibly qualified, as it appears in the project</summary>
         <value>The name of the task, possibly qualified, as it appears in the project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,8 +316,7 @@
       <Docs>
         <summary>
             Ordered set of output property and item objects.
-            This is a read-only dead collection.
-            </summary>
+            This is a read-only dead collection.</summary>
         <value>An ordered set of the output property and item objects of the task.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -363,8 +347,7 @@
       <Docs>
         <summary>
             Read-only dead unordered set of task parameter names and unevaluated values.
-            Condition and ContinueOnError, which have their own properties, are not included in this collection.
-            </summary>
+            Condition and ContinueOnError, which have their own properties, are not included in this collection.</summary>
         <value>An unordered set of the task parameter names and unevaluated values of this task.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

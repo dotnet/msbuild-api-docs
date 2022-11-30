@@ -15,11 +15,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{_itemType} Include={_include} Exclude={_exclude} Remove={_remove} Condition={_condition}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{_itemType} Include={_include} Exclude={_exclude} Remove={_remove} Condition={_condition}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{itemType} Include={include} Exclude={exclude} Remove={remove} Condition={condition}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{itemType} Include={include} Exclude={exclude} Remove={remove} Condition={condition}")&gt;]</AttributeName>
     </Attribute>
@@ -27,8 +23,7 @@
   <Docs>
     <summary>
             Wraps an unevaluated item under an itemgroup in a target.
-            Immutable.
-            </summary>
+            Immutable.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -60,8 +55,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated condition value.
-            </summary>
+            Unevaluated condition value.</summary>
         <value>The unevaluated Condition attribute value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,7 +74,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -90,8 +84,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the condition attribute if any.
-            </summary>
+            Location of the condition attribute if any.</summary>
         <value>The location of the condition attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -124,8 +117,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated exclude value
-            </summary>
+            Unevaluated exclude value</summary>
         <value>The unevaluated Exclude attribute value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -144,7 +136,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -154,8 +146,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the exclude attribute, if any.
-            </summary>
+            Location of the exclude attribute, if any.</summary>
         <value>The location of the exclude attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -188,8 +179,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated include value
-            </summary>
+            Unevaluated include value</summary>
         <value>The unevaluated Include attribute value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,7 +198,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -218,8 +208,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the include attribute, if any.
-            </summary>
+            Location of the include attribute, if any.</summary>
         <value>The location of the include attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -252,8 +241,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Item type, for example "Compile"
-            </summary>
+            Item type, for example "Compile"</summary>
         <value>The item type, for example "Compile".</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,7 +260,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -282,8 +270,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated keepDuplicates value.
-            </summary>
+            Unevaluated keepDuplicates value.</summary>
         <value>The KeepDuplicates value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,7 +289,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -312,8 +299,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the keepDuplicates attribute, if any.
-            </summary>
+            Location of the keepDuplicates attribute, if any.</summary>
         <value>The location of the KeepDuplicates attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -332,7 +318,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -342,8 +328,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated keepMetadata value.
-            </summary>
+            Unevaluated keepMetadata value.</summary>
         <value>The KeepMetadata value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -362,7 +347,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -372,8 +357,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the keepMetadata attribute, if any.
-            </summary>
+            Location of the keepMetadata attribute, if any.</summary>
         <value>The location of KeepMetadata.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -392,7 +376,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -402,125 +386,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the element.
-            </summary>
+            Location of the element.</summary>
         <value>The element's location.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="MatchOnMetadata">
-      <MemberSignature Language="C#" Value="public string MatchOnMetadata { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string MatchOnMetadata" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadata" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchOnMetadata As String" />
-      <MemberSignature Language="F#" Value="member this.MatchOnMetadata : string" Usage="Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadata" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MatchOnMetadata { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
-          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Unevaluated MatchOnMetadata value.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="MatchOnMetadataLocation">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MatchOnMetadataLocation { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MatchOnMetadataLocation" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataLocation" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchOnMetadataLocation As ElementLocation" />
-      <MemberSignature Language="F#" Value="member this.MatchOnMetadataLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataLocation" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ MatchOnMetadataLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
-          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Location of the matchOnMetadata attribute, if any.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="MatchOnMetadataOptions">
-      <MemberSignature Language="C#" Value="public string MatchOnMetadataOptions { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string MatchOnMetadataOptions" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataOptions" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchOnMetadataOptions As String" />
-      <MemberSignature Language="F#" Value="member this.MatchOnMetadataOptions : string" Usage="Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataOptions" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MatchOnMetadataOptions { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
-          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Unevaluated MatchOnMetadataOptions value.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="MatchOnMetadataOptionsLocation">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MatchOnMetadataOptionsLocation { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MatchOnMetadataOptionsLocation" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataOptionsLocation" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchOnMetadataOptionsLocation As ElementLocation" />
-      <MemberSignature Language="F#" Value="member this.MatchOnMetadataOptionsLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.MatchOnMetadataOptionsLocation" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ MatchOnMetadataOptionsLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
-          <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Location of the matchOnMetadataOptions attribute, if any.
-            </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -549,8 +416,7 @@
       <Docs>
         <summary>
             Ordered collection of unevaluated metadata on the item.
-            If there is no metadata, returns an empty collection.
-            </summary>
+            If there is no metadata, returns an empty collection.</summary>
         <value>An ordered collection of unevaluated metadata on the item.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -583,8 +449,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated remove value
-            </summary>
+            Unevaluated remove value</summary>
         <value>The unevaluated Remove attribute value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -603,7 +468,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -613,8 +478,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the remove attribute, if any.
-            </summary>
+            Location of the remove attribute, if any.</summary>
         <value>The location of the remove attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -633,7 +497,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -643,8 +507,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Unevaluated removeMetadata value.
-            </summary>
+            Unevaluated removeMetadata value.</summary>
         <value>The RemoveMetadata value.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -663,7 +526,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
@@ -673,8 +536,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Location of the removeMetadata attribute, if any.
-            </summary>
+            Location of the removeMetadata attribute, if any.</summary>
         <value>The RemoveMetadata location.</value>
         <remarks>To be added.</remarks>
       </Docs>

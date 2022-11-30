@@ -21,8 +21,7 @@
   <Docs>
     <summary>
             This interface extends IBuildEngine to provide a method allowing building 
-            project files in parallel.
-            </summary>
+            project files in parallel.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -62,8 +61,7 @@
         <summary>
             This method allows tasks to initiate a build on a
             particular project file. If the build is successful, the outputs
-            (if any) of the specified targets are returned.
-            </summary>
+            (if any) of the specified targets are returned.</summary>
         <returns>Returns a structure containing the success or failure of the build and the target outputs by project.</returns>
         <remarks>
             1) it is acceptable to pass null for both <c>targetNames</c> and <c>targetOutputs</c>
@@ -91,8 +89,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Waits to reacquire control after yielding.
-            </summary>
+            Waits to reacquire control after yielding.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,8 +113,7 @@
       <Docs>
         <summary>
             Informs the system that this task has a long-running out-of-process component and other work can be done in the
-            build while that work completes.
-            </summary>
+            build while that work completes.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

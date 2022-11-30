@@ -29,8 +29,7 @@
   </Attributes>
   <Docs>
     <summary>
-            This is a simple container for <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> instances. 
-            </summary>
+            This is a simple container for <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> instances.</summary>
     <remarks>
             Note that we only deal in terms of <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />s
             as far as property pages are concerned. The <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleBag" /> is only used as a 
@@ -54,8 +53,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor needed for XAML deserialization.
-            </summary>
+            Default constructor needed for XAML deserialization.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,8 +79,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize Members.
-            </summary>
+            See ISupportInitialize Members.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -108,8 +105,7 @@
       <Parameters />
       <Docs>
         <summary>
-            See ISupportInitialize Members.
-            </summary>
+            See ISupportInitialize Members.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,10 +113,10 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetSchemaObjects (Type type);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetSchemaObjects(class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjects(System.Type)" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
       <MemberSignature Language="F#" Value="abstract member GetSchemaObjects : Type -&gt; seq&lt;obj&gt;&#xA;override this.GetSchemaObjects : Type -&gt; seq&lt;obj&gt;" Usage="ruleBag.GetSchemaObjects type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerable&lt;System::Object ^&gt; ^ GetSchemaObjects(Type ^ type);" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjects (type As Type) As IEnumerable(Of Object)" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects(System.Type)</InterfaceMember>
@@ -131,13 +127,13 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__8))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__8))&gt;]</AttributeName>
-        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.6">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__1))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__1))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__8))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjects&gt;d__8))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -149,8 +145,7 @@
       <Docs>
         <param name="type">The type of static data to retrieve.</param>
         <summary>
-            see IProjectSchemaNode
-            </summary>
+            see IProjectSchemaNode</summary>
         <returns>An enumerator over all instances of static data that have the given type. Returns <see langword="Null" /> or Empty list if no objects of the given type are provided by this node.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -159,10 +154,10 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; GetSchemaObjectTypes ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; GetSchemaObjectTypes() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjectTypes" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
       <MemberSignature Language="F#" Value="abstract member GetSchemaObjectTypes : unit -&gt; seq&lt;Type&gt;&#xA;override this.GetSchemaObjectTypes : unit -&gt; seq&lt;Type&gt;" Usage="ruleBag.GetSchemaObjectTypes " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerable&lt;Type ^&gt; ^ GetSchemaObjectTypes();" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetSchemaObjectTypes () As IEnumerable(Of Type)" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes</InterfaceMember>
@@ -173,13 +168,13 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__7))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__7))&gt;]</AttributeName>
-        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.6">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__1))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__1))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__7))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.RuleBag+&lt;GetSchemaObjectTypes&gt;d__7))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -188,8 +183,7 @@
       <Parameters />
       <Docs>
         <summary>
-            see IProjectSchemaNode
-            </summary>
+            see IProjectSchemaNode</summary>
         <returns>An enumerator over all types of static data for the data-driven features that this node contains.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -223,8 +217,7 @@
       <Docs>
         <summary>
             The collection of <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> instances this <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleBag" /> instance contains.
-            Must have at least one <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.
-            </summary>
+            Must have at least one <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
         <value>The list of rules. Always returns at least one rule.</value>
         <remarks>To be added.</remarks>
       </Docs>

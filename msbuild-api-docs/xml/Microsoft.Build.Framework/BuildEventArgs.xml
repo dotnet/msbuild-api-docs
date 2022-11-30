@@ -25,8 +25,7 @@
   <Docs>
     <summary>
             This class encapsulates the default data associated with build events. 
-            It is intended to be extended/sub-classed.
-            </summary>
+            It is intended to be extended/sub-classed.</summary>
     <remarks>
             WARNING: marking a type [Serializable] without implementing
             ISerializable imposes a serialization contract -- it is a
@@ -63,8 +62,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor
-            </summary>
+            Default constructor</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -97,11 +95,10 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="senderName">name of event sender</param>
         <summary>
-            This constructor allows all event data to be initialized
-            </summary>
+            This constructor allows all event data to be initialized</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -126,12 +123,11 @@
       </Parameters>
       <Docs>
         <param name="message">text message</param>
-        <param name="helpKeyword">help keyword </param>
+        <param name="helpKeyword">help keyword</param>
         <param name="senderName">name of event sender</param>
         <param name="eventTimestamp">TimeStamp of when the event was created</param>
         <summary>
-            This constructor allows all event data to be initialized while providing a custom timestamp.
-            </summary>
+            This constructor allows all event data to be initialized while providing a custom timestamp.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,8 +160,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Event contextual information for the build event argument
-            </summary>
+            Event contextual information for the build event argument</summary>
         <value>A <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> object representing the location contextual information.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,23 +191,22 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Custom help keyword associated with event.
-            </summary>
+            Custom help keyword associated with event.</summary>
         <value>The Help keyword for the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="public virtual string Message { get; protected set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C#" Value="public string Message { get; }" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="ILAsm" Value=".property instance string Message" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.Message" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Property Message As String" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.Message" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C++ CLI" Value="public:  virtual property System::String ^ Message {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C#" Value="public string Message { get; }" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.BuildEventArgs.Message" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Message { System::String ^ get(); };" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="C#" Value="public virtual string Message { get; protected set; }" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Message As String" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.Message" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C++ CLI" Value="public:  virtual property System::String ^ Message {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -236,8 +230,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Text of event.
-            </summary>
+            Text of event.</summary>
         <value>The message for the event.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -249,55 +242,6 @@
   
  ]]></format>
         </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RawMessage">
-      <MemberSignature Language="C#" Value="protected internal string RawMessage { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string RawMessage" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.RawMessage" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Property RawMessage As String" />
-      <MemberSignature Language="F#" Value="member this.RawMessage : string with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.RawMessage" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property System::String ^ RawMessage { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Exposes the underlying message field without side-effects.
-            Used for serialization.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RawTimestamp">
-      <MemberSignature Language="C#" Value="protected internal DateTime RawTimestamp { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime RawTimestamp" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventArgs.RawTimestamp" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Property RawTimestamp As DateTime" />
-      <MemberSignature Language="F#" Value="member this.RawTimestamp : DateTime with get, set" Usage="Microsoft.Build.Framework.BuildEventArgs.RawTimestamp" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property DateTime RawTimestamp { DateTime get(); void set(DateTime value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.DateTime</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Exposes the private <see cref="F:Microsoft.Build.Framework.BuildEventArgs.timestamp" /> field to derived types.
-            Used for serialization. Avoids the side effects of calling the
-            <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Timestamp" /> getter.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SenderName">
@@ -326,8 +270,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Name of the object sending this event.
-            </summary>
+            Name of the object sending this event.</summary>
         <value>The name of the <see cref="T:System.Object" /> raising the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -358,8 +301,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The thread that raised event.  
-            </summary>
+            The thread that raised event.</summary>
         <value>An integer identifier for the thread that raised the event.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -384,8 +326,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The time when event was raised.
-            </summary>
+            The time when event was raised.</summary>
         <value>The time the event was raised as a <see cref="T:System.DateTime" />.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -26,8 +26,7 @@
             This class implements the default logger that outputs event data
             to the console (stdout). 
             It is a facade: it creates, wraps and delegates to a kind of BaseConsoleLogger, 
-            either SerialConsoleLogger or ParallelConsoleLogger.
-            </summary>
+            either SerialConsoleLogger or ParallelConsoleLogger.</summary>
     <remarks>This class is not thread safe.</remarks>
   </Docs>
   <Members>
@@ -61,8 +60,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Default constructor.
-            </summary>
+            Default constructor.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,8 +84,7 @@
         <param name="verbosity">Verbosity level.</param>
         <summary>
             Create a logger instance with a specific verbosity.  This logs to
-            the default console.
-            </summary>
+            the default console.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,8 +113,7 @@
         <param name="colorSet" />
         <param name="colorReset" />
         <summary>
-            Initializes the logger, with alternate output handlers.
-            </summary>
+            Initializes the logger, with alternate output handlers.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -147,8 +143,7 @@
         <summary>
             Apply a parameter.
             NOTE: This method was public by accident in Whidbey, so it cannot be made internal now. It has 
-            no good reason for being public.
-            </summary>
+            no good reason for being public.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -183,8 +178,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for build finished events
-            </summary>
+            Handler for build finished events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -212,8 +206,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for build started events
-            </summary>
+            Handler for build started events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -241,8 +234,7 @@
         <param name="sender">The sender of the event.</param>
         <param name="e">The event arguments.</param>
         <summary>
-            Prints a custom event
-            </summary>
+            Prints a custom event</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -270,8 +262,7 @@
         <param name="sender">The sender of the event.</param>
         <param name="e">The event arguments.</param>
         <summary>
-            Prints an error event
-            </summary>
+            Prints an error event</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -309,8 +300,7 @@
       <Docs>
         <param name="eventSource">Available events.</param>
         <summary>
-            Signs up the console logger for all build events.
-            </summary>
+            Signs up the console logger for all build events.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,8 +331,7 @@
         <param name="eventSource">The event source.</param>
         <param name="nodeCount">The node count.</param>
         <summary>
-            Initializes the logger.
-            </summary>
+            Initializes the logger.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -370,8 +359,7 @@
         <param name="sender">The sender of the event.</param>
         <param name="e">The event arguments.</param>
         <summary>
-            Prints a message event
-            </summary>
+            Prints a message event</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -396,8 +384,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            A semi-colon delimited list of "key[=value]" parameter pairs.
-            </summary>
+            A semi-colon delimited list of "key[=value]" parameter pairs.</summary>
         <value>null</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -426,8 +413,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for project finished events
-            </summary>
+            Handler for project finished events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -455,8 +441,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for project started events
-            </summary>
+            Handler for project started events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -478,8 +463,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Suppresses the display of error and warnings summary.
-            </summary>
+            Suppresses the display of error and warnings summary.</summary>
         <value>Returns a switch that determines whether to suppress the display of errors and the warnings summary.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -507,8 +491,7 @@
       <Docs>
         <summary>
             The console logger does not need to release any resources.
-            This method does nothing.
-            </summary>
+            This method does nothing.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -538,8 +521,7 @@
       <Docs>
         <summary>
             Suppresses the display of project headers. Project headers are
-            displayed by default unless this property is set.
-            </summary>
+            displayed by default unless this property is set.</summary>
         <value>Returns a switch that determines whether to suppress the display of project headers.</value>
         <remarks>This is only needed by the IDE logger.</remarks>
       </Docs>
@@ -568,8 +550,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for target finished events
-            </summary>
+            Handler for target finished events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -597,8 +578,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for target started events
-            </summary>
+            Handler for target started events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -626,8 +606,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for task finished events
-            </summary>
+            Handler for task finished events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -655,8 +634,7 @@
         <param name="sender">sender (should be null)</param>
         <param name="e">event arguments</param>
         <summary>
-            Handler for task started events
-            </summary>
+            Handler for task started events</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -681,8 +659,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the level of detail to show in the event log.
-            </summary>
+            Gets or sets the level of detail to show in the event log.</summary>
         <value>Verbosity level.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -711,8 +688,7 @@
         <param name="sender">The sender of the event.</param>
         <param name="e">The event arguments.</param>
         <summary>
-            Prints a warning event
-            </summary>
+            Prints a warning event</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -735,8 +711,7 @@
       <Docs>
         <summary>
             Provide access to the write hander delegate so that it can be redirected
-            if necessary (e.g. to a file)
-            </summary>
+            if necessary (e.g. to a file)</summary>
         <value>The write handler delegate.</value>
         <remarks>To be added.</remarks>
       </Docs>

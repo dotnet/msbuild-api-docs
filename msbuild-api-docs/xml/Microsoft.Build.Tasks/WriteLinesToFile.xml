@@ -281,30 +281,5 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="WriteOnlyWhenDifferent">
-      <MemberSignature Language="C#" Value="public bool WriteOnlyWhenDifferent { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool WriteOnlyWhenDifferent" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WriteLinesToFile.WriteOnlyWhenDifferent" />
-      <MemberSignature Language="VB.NET" Value="Public Property WriteOnlyWhenDifferent As Boolean" />
-      <MemberSignature Language="F#" Value="member this.WriteOnlyWhenDifferent : bool with get, set" Usage="Microsoft.Build.Tasks.WriteLinesToFile.WriteOnlyWhenDifferent" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool WriteOnlyWhenDifferent { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If true, the target file specified, if it exists, will be read first to compare against
-            what the task would have written. If identical, the file is not written to disk and the
-            timestamp will be preserved.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
   </Members>
 </Type>

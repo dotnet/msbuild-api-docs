@@ -15,11 +15,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={GlobalProperties.Count} #Properties={Properties.Count} #ItemTypes={ItemTypes.Count} #Items={Items.Count}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={GlobalProperties.Count} #Properties={Properties.Count} #ItemTypes={ItemTypes.Count} #Items={Items.Count}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={globalProperties.Count} #Properties={properties.Count} #ItemTypes={items.ItemTypes.Count} #Items={items.Count}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={globalProperties.Count} #Properties={properties.Count} #ItemTypes={items.ItemTypes.Count} #Items={items.Count}")&gt;]</AttributeName>
     </Attribute>
@@ -28,8 +24,7 @@
     <summary>
             What the user gets when they clone off a ProjectInstance.
             They can hold onto this, change/query items and properties,
-            and call it several times to build it.
-            </summary>
+            and call it several times to build it.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -84,8 +79,7 @@
             Creates a ProjectInstance directly.
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
-            Uses the default project collection.
-            </summary>
+            Uses the default project collection.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -125,8 +119,7 @@
             Creates a ProjectInstance directly.
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
-            Uses the default project collection.
-            </summary>
+            Uses the default project collection.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -136,32 +129,6 @@
   
  ]]></format>
         </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ProjectInstance (Microsoft.Build.Evaluation.Project project, Microsoft.Build.Execution.ProjectInstanceSettings settings);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Evaluation.Project project, valuetype Microsoft.Build.Execution.ProjectInstanceSettings settings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.#ctor(Microsoft.Build.Evaluation.Project,Microsoft.Build.Execution.ProjectInstanceSettings)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (project As Project, settings As ProjectInstanceSettings)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.ProjectInstance : Microsoft.Build.Evaluation.Project * Microsoft.Build.Execution.ProjectInstanceSettings -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="new Microsoft.Build.Execution.ProjectInstance (project, settings)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProjectInstance(Microsoft::Build::Evaluation::Project ^ project, Microsoft::Build::Execution::ProjectInstanceSettings settings);" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="project" Type="Microsoft.Build.Evaluation.Project" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="settings" Type="Microsoft.Build.Execution.ProjectInstanceSettings" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="project">To be added.</param>
-        <param name="settings">To be added.</param>
-        <summary>
-            Creates a ProjectInstance from an external created <see cref="T:Microsoft.Build.Evaluation.Project" />.
-            Properties and items are cloned immediately and only the instance data is stored.
-            </summary>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -190,8 +157,7 @@
             Creates a ProjectInstance directly.
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
-            Uses the default project collection.
-            </summary>
+            Uses the default project collection.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -232,8 +198,7 @@
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
             Global properties may be null.
-            Tools version may be null.
-            </summary>
+            Tools version may be null.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -274,8 +239,7 @@
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
             Global properties may be null.
-            Tools version may be null.
-            </summary>
+            Tools version may be null.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -319,8 +283,7 @@
             This is ideal if the project is simply going to be built, and not displayed or edited.
             Global properties may be null.
             Tools version may be null.
-            Sub-toolset version may be null, but if specified will override all other methods of determining the sub-toolset.
-            </summary>
+            Sub-toolset version may be null, but if specified will override all other methods of determining the sub-toolset.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -363,8 +326,7 @@
             No intermediate Project object is created.
             This is ideal if the project is simply going to be built, and not displayed or edited.
             Global properties may be null.
-            Tools version may be null.
-            </summary>
+            Tools version may be null.</summary>
         <returns>A new project instance</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -409,8 +371,7 @@
         <param name="itemType">The item type of the item to be added.</param>
         <param name="evaluatedInclude">The evaluated Include attribute of the item.</param>
         <summary>
-            Adds an item with no metadata to the project
-            </summary>
+            Adds an item with no metadata to the project</summary>
         <returns>The new item.</returns>
         <remarks>
             We don't take a ProjectItemInstance to make sure we don't have one that's already
@@ -450,8 +411,7 @@
         <param name="metadata">The metadata of the item.</param>
         <summary>
             Adds an item with metadata to the project.
-            Metadata may be null.
-            </summary>
+            Metadata may be null.</summary>
         <returns>Return the new item.</returns>
         <remarks>
             We don't take a ProjectItemInstance to make sure we don't have one that's already
@@ -500,8 +460,7 @@
         <summary>
             Build default target/s with loggers of the project collection.
             Returns true on success, false on failure.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -538,8 +497,7 @@
             Build default target/s with specified loggers.
             Returns true on success, false on failure.
             Loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -581,8 +539,7 @@
             Build default target/s with specified loggers.
             Returns true on success, false on failure.
             Loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -625,8 +582,7 @@
             Returns true on success, false on failure.
             Target may be null.
             Loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -669,8 +625,7 @@
             Returns true on success, false on failure.
             Targets may be null.
             Loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -710,8 +665,7 @@
             Target may be null.
             Loggers may be null.
             Remote loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -756,8 +710,7 @@
             Returns true on success, false on failure.
             Targets may be null.
             Loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> on success, false on failure.</returns>
         <remarks>
@@ -797,8 +750,7 @@
             Targets may be null.
             Loggers may be null.
             Remote loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -846,8 +798,7 @@
             Targets may be null.
             Loggers may be null.
             Remote loggers may be null.
-            Only valid if mutable.
-            </summary>
+            Only valid if mutable.</summary>
         <returns>
           <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -886,8 +837,7 @@
         <summary>
             Create an independent, deep clone of this object and everything in it.
             Useful for compiling a single file; or for keeping build results between builds.
-            Clone has the same mutability as the original.
-            </summary>
+            Clone has the same mutability as the original.</summary>
         <returns>Creates an independent, deep clone of this project.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -916,8 +866,7 @@
         <summary>
             Create an independent, deep clone of this object and everything in it, with
             specified mutability.
-            Useful for compiling a single file; or for keeping build results between builds.
-            </summary>
+            Useful for compiling a single file; or for keeping build results between builds.</summary>
         <returns>An independent, deep clone of this project, with specified mutability.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -950,8 +899,7 @@
             the logically first target if no DefaultTargets is
             specified in the project.
             The build builds these if no targets are explicitly specified
-            to build.
-            </summary>
+            to build.</summary>
         <value>The list of default targets for this project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -994,8 +942,7 @@
             The project's root directory, for evaluation of relative paths and
             setting the current directory during build.
             Is never null: projects not loaded from disk use the current directory from
-            the time the build started.
-            </summary>
+            the time the build started.</summary>
         <value>The project root directory, which is never null. Projects not loaded from disk return the current directory at the time the build was started.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1025,8 +972,7 @@
             Evaluates the provided string as a condition by expanding items and properties,
             using the current items and properties available, then doing a logical evaluation.
             This is useful for the immediate window.
-            Does not expand bare metadata expressions.
-            </summary>
+            Does not expand bare metadata expressions.</summary>
         <returns>
           <see langword="true" /> if the string evaluates to true; otherwise, <see langword="false" />.</returns>
         <remarks>
@@ -1042,54 +988,6 @@
         <comment>
             Not for internal use.
             </comment>
-      </Docs>
-    </Member>
-    <Member MemberName="EvaluatedItemElements">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Build.Construction.ProjectItemElement&gt; EvaluatedItemElements { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Build.Construction.ProjectItemElement&gt; EvaluatedItemElements" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectInstance.EvaluatedItemElements" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EvaluatedItemElements As List(Of ProjectItemElement)" />
-      <MemberSignature Language="F#" Value="member this.EvaluatedItemElements : System.Collections.Generic.List&lt;Microsoft.Build.Construction.ProjectItemElement&gt;" Usage="Microsoft.Build.Execution.ProjectInstance.EvaluatedItemElements" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::List&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ EvaluatedItemElements { System::Collections::Generic::List&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Build.Construction.ProjectItemElement&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Gets a <see cref="T:System.Collections.Generic.List`1" /> object containing evaluated items.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="EvaluationId">
-      <MemberSignature Language="C#" Value="public int EvaluationId { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 EvaluationId" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectInstance.EvaluationId" />
-      <MemberSignature Language="VB.NET" Value="Public Property EvaluationId As Integer" />
-      <MemberSignature Language="F#" Value="member this.EvaluationId : int with get, set" Usage="Microsoft.Build.Execution.ProjectInstance.EvaluationId" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int EvaluationId { int get(); void set(int value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-             The ID of the evaluation that produced this ProjectInstance.
-            
-             See <see cref="P:Microsoft.Build.Evaluation.Project.LastEvaluationId" />.
-             </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ExpandString">
@@ -1117,8 +1015,7 @@
             Evaluates the provided string by expanding items and properties,
             using the current items and properties available.
             This is useful for some hosts, or for the debugger immediate window.
-            Does not expand bare metadata expressions.
-            </summary>
+            Does not expand bare metadata expressions.</summary>
         <returns>The expanded string value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1133,95 +1030,6 @@
         <comment>
             Not for internal use.
             </comment>
-      </Docs>
-    </Member>
-    <Member MemberName="FilteredCopy">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance FilteredCopy (Microsoft.Build.Execution.RequestedProjectState filter);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectInstance FilteredCopy(class Microsoft.Build.Execution.RequestedProjectState filter) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.FilteredCopy(Microsoft.Build.Execution.RequestedProjectState)" />
-      <MemberSignature Language="VB.NET" Value="Public Function FilteredCopy (filter As RequestedProjectState) As ProjectInstance" />
-      <MemberSignature Language="F#" Value="member this.FilteredCopy : Microsoft.Build.Execution.RequestedProjectState -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="projectInstance.FilteredCopy filter" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::ProjectInstance ^ FilteredCopy(Microsoft::Build::Execution::RequestedProjectState ^ filter);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="filter" Type="Microsoft.Build.Execution.RequestedProjectState" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="filter">Project state that should be returned.</param>
-        <summary>
-            Create an independent clone of this object, keeping ONLY the explicitly
-            requested project state.
-            </summary>
-        <returns />
-        <remarks>
-            Useful for reducing the wire cost of IPC for out-of-proc nodes used during
-            design-time builds that only need to populate a known set of data.
-            </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="FromFile">
-      <MemberSignature Language="C#" Value="public static Microsoft.Build.Execution.ProjectInstance FromFile (string file, Microsoft.Build.Definition.ProjectOptions options);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Execution.ProjectInstance FromFile(string file, class Microsoft.Build.Definition.ProjectOptions options) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.FromFile(System.String,Microsoft.Build.Definition.ProjectOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FromFile (file As String, options As ProjectOptions) As ProjectInstance" />
-      <MemberSignature Language="F#" Value="static member FromFile : string * Microsoft.Build.Definition.ProjectOptions -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="Microsoft.Build.Execution.ProjectInstance.FromFile (file, options)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Execution::ProjectInstance ^ FromFile(System::String ^ file, Microsoft::Build::Definition::ProjectOptions ^ options);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="file" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="options" Type="Microsoft.Build.Definition.ProjectOptions" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="file">The file to evaluate the ProjectInstance from.</param>
-        <param name="options">The <see cref="T:Microsoft.Build.Definition.ProjectOptions" /> to use.</param>
-        <summary>
-            Create a file based ProjectInstance.
-            </summary>
-        <returns />
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="FromProjectRootElement">
-      <MemberSignature Language="C#" Value="public static Microsoft.Build.Execution.ProjectInstance FromProjectRootElement (Microsoft.Build.Construction.ProjectRootElement rootElement, Microsoft.Build.Definition.ProjectOptions options);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Execution.ProjectInstance FromProjectRootElement(class Microsoft.Build.Construction.ProjectRootElement rootElement, class Microsoft.Build.Definition.ProjectOptions options) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.FromProjectRootElement(Microsoft.Build.Construction.ProjectRootElement,Microsoft.Build.Definition.ProjectOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FromProjectRootElement (rootElement As ProjectRootElement, options As ProjectOptions) As ProjectInstance" />
-      <MemberSignature Language="F#" Value="static member FromProjectRootElement : Microsoft.Build.Construction.ProjectRootElement * Microsoft.Build.Definition.ProjectOptions -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="Microsoft.Build.Execution.ProjectInstance.FromProjectRootElement (rootElement, options)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Execution::ProjectInstance ^ FromProjectRootElement(Microsoft::Build::Construction::ProjectRootElement ^ rootElement, Microsoft::Build::Definition::ProjectOptions ^ options);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="rootElement" Type="Microsoft.Build.Construction.ProjectRootElement" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="options" Type="Microsoft.Build.Definition.ProjectOptions" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="rootElement">The <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> to evaluate the ProjectInstance from.</param>
-        <param name="options">The <see cref="T:Microsoft.Build.Definition.ProjectOptions" /> to use.</param>
-        <summary>
-            Create a <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> based ProjectInstance.
-            </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="FullPath">
@@ -1249,8 +1057,7 @@
       <Docs>
         <summary>
             The full path to the project, for logging.
-            If the project was never given a path, returns empty string.
-            </summary>
+            If the project was never given a path, returns empty string.</summary>
         <value>The full path to the project file, or <see langword="null" /> if the project was never named.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1286,8 +1093,7 @@
       <Docs>
         <param name="item">The item definition to be evaluated and escaped.</param>
         <summary>
-            Returns the evaluated, escaped value of the provided item definition's include.
-            </summary>
+            Returns the evaluated, escaped value of the provided item definition's include.</summary>
         <returns>The evaluated, escaped value of the Include attribute of the provided item definition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1314,8 +1120,7 @@
       <Docs>
         <param name="item">The item to be evaluated and escaped.</param>
         <summary>
-            Returns the evaluated, escaped value of the provided item's include.
-            </summary>
+            Returns the evaluated, escaped value of the provided item's include.</summary>
         <returns>The evaluated, escaped value of the Include attribute of the provided item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1344,8 +1149,7 @@
         <summary>
             Get a list of all the items in the project of the specified
             type, or an empty list if there are none.
-            This is a read-only list.
-            </summary>
+            This is a read-only list.</summary>
         <returns>All the items in this project of the specified type. Returns an empty list if there are none.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1354,26 +1158,15 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Execution.ProjectItemInstance&gt; GetItemsByItemTypeAndEvaluatedInclude (string itemType, string evaluatedInclude);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Execution.ProjectItemInstance&gt; GetItemsByItemTypeAndEvaluatedInclude(string itemType, string evaluatedInclude) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.GetItemsByItemTypeAndEvaluatedInclude(System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetItemsByItemTypeAndEvaluatedInclude (itemType As String, evaluatedInclude As String) As IEnumerable(Of ProjectItemInstance)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetItemsByItemTypeAndEvaluatedInclude (itemType As String, evaluatedInclude As String) As IEnumerable(Of ProjectItemInstance)" />
       <MemberSignature Language="F#" Value="member this.GetItemsByItemTypeAndEvaluatedInclude : string * string -&gt; seq&lt;Microsoft.Build.Execution.ProjectItemInstance&gt;" Usage="projectInstance.GetItemsByItemTypeAndEvaluatedInclude (itemType, evaluatedInclude)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Execution::ProjectItemInstance ^&gt; ^ GetItemsByItemTypeAndEvaluatedInclude(System::String ^ itemType, System::String ^ evaluatedInclude);" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetItemsByItemTypeAndEvaluatedInclude (itemType As String, evaluatedInclude As String) As IEnumerable(Of ProjectItemInstance)" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__175))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__175))&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__191))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__191))&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Execution.ProjectItemInstance&gt;</ReturnType>
       </ReturnValue>
@@ -1385,8 +1178,7 @@
         <param name="itemType">The item type of the items to be retrieved.</param>
         <param name="evaluatedInclude">The evaluated include value of the items to be retrieved</param>
         <summary>
-            get items by item type and evaluated include value
-            </summary>
+            get items by item type and evaluated include value</summary>
         <returns>All the items in this project of the specified type and evaluated include value. Returns an empty collection if there are none.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1422,8 +1214,7 @@
       <Docs>
         <param name="metadatum">The metadatum to be escaped.</param>
         <summary>
-            Gets the escaped value of the provided metadatum.
-            </summary>
+            Gets the escaped value of the provided metadatum.</summary>
         <returns>The escaped value of the provided metadatum.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1452,8 +1243,7 @@
         <param name="item">The item definition to provide the metadatum value.</param>
         <param name="name">The name of the metadatum.</param>
         <summary>
-            Gets the escaped value of the metadatum with the provided name on the provided item definition.
-            </summary>
+            Gets the escaped value of the metadatum with the provided name on the provided item definition.</summary>
         <returns>The escaped value of the metadatum with the provided name of the provided item definition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1482,8 +1272,7 @@
         <param name="item">The item to provide the metadatum value.</param>
         <param name="name">The name of the metadatum.</param>
         <summary>
-            Gets the escaped value of the metadatum with the provided name on the provided item.
-            </summary>
+            Gets the escaped value of the metadatum with the provided name on the provided item.</summary>
         <returns>The escaped value of the metadatum with the provided name on the provided item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1517,8 +1306,7 @@
         <param name="name">The name of the property to retrieve.</param>
         <summary>
             Get any property in the item that has the specified name,
-            otherwise returns null
-            </summary>
+            otherwise returns null</summary>
         <returns>The property with the given name, or <see langword="null" /> if no property exists with that name.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1546,8 +1334,7 @@
         <param name="name">The name of the property whose value is to be retrieved.</param>
         <summary>
             Get the value of a property in this project, or
-            an empty string if it does not exist.
-            </summary>
+            an empty string if it does not exist.</summary>
         <returns>The value of the property with the given name, or an empty string if no property exists with that name. The value returned has no escaped character sequences.</returns>
         <remarks>
             A property with a value of empty string and no property
@@ -1583,8 +1370,7 @@
       <Docs>
         <param name="property">The property to be escaped.</param>
         <summary>
-            Get the escaped value of the provided property
-            </summary>
+            Get the escaped value of the provided property</summary>
         <returns>The escaped value of the provided property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1615,60 +1401,11 @@
         <summary>
             Global properties this project was evaluated with, if any.
             Read only collection.
-            Traverses project references.
-            </summary>
+            Traverses project references.</summary>
         <value>The dictionary of global properties this project was evaluated with.</value>
         <remarks>
             This is the publicly exposed getter, that translates into a read-only dead IDictionary&lt;string, string&gt;.
             </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ImportPaths">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; ImportPaths { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; ImportPaths" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectInstance.ImportPaths" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportPaths As IReadOnlyList(Of String)" />
-      <MemberSignature Language="F#" Value="member this.ImportPaths : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Execution.ProjectInstance.ImportPaths" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ ImportPaths { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The full file paths of all the files that during evaluation contributed to this project instance.
-            This does not include projects that were never imported because a condition on an Import element was false.
-            The outer ProjectRootElement that maps to this project instance itself is not included.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ImportPathsIncludingDuplicates">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; ImportPathsIncludingDuplicates { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; ImportPathsIncludingDuplicates" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectInstance.ImportPathsIncludingDuplicates" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportPathsIncludingDuplicates As IReadOnlyList(Of String)" />
-      <MemberSignature Language="F#" Value="member this.ImportPathsIncludingDuplicates : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Execution.ProjectInstance.ImportPathsIncludingDuplicates" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ ImportPathsIncludingDuplicates { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            This list will contain duplicate imports if an import is imported multiple times. However, only the first import was used in evaluation.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="InitialTargets">
@@ -1697,8 +1434,7 @@
         <summary>
             InitialTargets specified in the project, plus those
             in all imports, gathered depth-first.
-            The build runs these before anything else.
-            </summary>
+            The build runs these before anything else.</summary>
         <value>The list of initial targets for the project and all its imports, depth-first.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1722,8 +1458,7 @@
       <Docs>
         <summary>
             Whether the instance is immutable.
-            This is set permanently when the instance is created.
-            </summary>
+            This is set permanently when the instance is created.</summary>
         <value>
           <see langword="true" /> if the project instance is immutable; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -1758,8 +1493,7 @@
       <Docs>
         <summary>
             Read-only dictionary of item definitions in this project.
-            Keyed by item type
-            </summary>
+            Keyed by item type</summary>
         <value>A read-only dictionary of the item definitions in the project, keyed by item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1788,8 +1522,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Enumerator over items in this project.
-            </summary>
+            Enumerator over items in this project.</summary>
         <value>All items in this project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1818,8 +1551,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Enumerator over item types of the items in this project
-            </summary>
+            Enumerator over item types of the items in this project</summary>
         <value>All item types in this project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1843,8 +1575,7 @@
       <Docs>
         <summary>
             Location of the originating file itself, not any specific content within it.
-            Never returns null, even if the file has not got a path yet.
-            </summary>
+            Never returns null, even if the file has not got a path yet.</summary>
         <value>The location of the originating file. Never returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1873,8 +1604,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Enumerator over properties in this project
-            </summary>
+            Enumerator over properties in this project</summary>
         <value>All properties in this project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1902,8 +1632,7 @@
         <param name="item">The item to be removed.</param>
         <summary>
             Removes an item from the project, if present.
-            Returns true if it was present, false otherwise.
-            </summary>
+            Returns true if it was present, false otherwise.</summary>
         <returns>
           <see langword="true" /> if the item was present before removal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -1932,8 +1661,7 @@
         <param name="name">The name of the property to be removed.</param>
         <summary>
             Removes any property with the specified name.
-            Returns true if the property had a value (possibly empty string), otherwise false.
-            </summary>
+            Returns true if the property had a value (possibly empty string), otherwise false.</summary>
         <returns>
           <see langword="true" /> if the property had a value (possibly an empty string) before removal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -1964,8 +1692,7 @@
         <param name="evaluatedValue">The evaluated value of the property to add.</param>
         <summary>
             Add a property with the specified name and value.
-            Overwrites any property with the same name already in the collection.
-            </summary>
+            Overwrites any property with the same name already in the collection.</summary>
         <returns>The new property.</returns>
         <remarks>
             We don't take a ProjectPropertyInstance to make sure we don't have one that's already
@@ -2003,8 +1730,7 @@
         <summary>
             Targets in the project. The build process can find one by looking for its name
             in the dictionary.
-            This collection is read-only.
-            </summary>
+            This collection is read-only.</summary>
         <value>An enumerator over all targets in this project.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2029,8 +1755,7 @@
         <summary>
             The tools version this project was evaluated with, if any.
             Not necessarily the same as the tools version on the Project tag, if any;
-            it may have been externally specified, for example with a /tv switch.
-            </summary>
+            it may have been externally specified, for example with a /tv switch.</summary>
         <value>The tools version this project was evaluated with, if any.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2061,36 +1786,8 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates a ProjectRootElement from the contents of this ProjectInstance.
-            </summary>
+            Creates a ProjectRootElement from the contents of this ProjectInstance.</summary>
         <returns>A ProjectRootElement which represents this instance.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TranslateEntireState">
-      <MemberSignature Language="C#" Value="public bool TranslateEntireState { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool TranslateEntireState" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectInstance.TranslateEntireState" />
-      <MemberSignature Language="VB.NET" Value="Public Property TranslateEntireState As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TranslateEntireState : bool with get, set" Usage="Microsoft.Build.Execution.ProjectInstance.TranslateEntireState" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool TranslateEntireState { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-             Serialize the entire project instance state.
-            
-             When false, only a part of the project instance state is serialized (properties and items).
-             In this case out of proc nodes re-evaluate the project instance from disk to obtain the un-serialized state.
-             This partial state recombination may lead to build issues when the project instance state differs from what is on disk.
-             </summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2118,8 +1815,7 @@
           <see cref="T:Microsoft.Build.Execution.ProjectInstance" /> with the state to use.</param>
         <summary>
             Replaces the project state (<see cref="P:Microsoft.Build.Execution.ProjectInstance.GlobalProperties" />, <see cref="P:Microsoft.Build.Execution.ProjectInstance.Properties" /> and <see cref="P:Microsoft.Build.Execution.ProjectInstance.Items" />) with that
-            from the <see cref="T:Microsoft.Build.Execution.ProjectInstance" /> provided.
-            </summary>
+            from the <see cref="T:Microsoft.Build.Execution.ProjectInstance" /> provided.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

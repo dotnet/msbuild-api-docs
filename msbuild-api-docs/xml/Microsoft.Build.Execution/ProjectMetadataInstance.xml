@@ -19,11 +19,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{_name}={EvaluatedValue}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{_name}={EvaluatedValue}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+    <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{name}={EvaluatedValue}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{name}={EvaluatedValue}")&gt;]</AttributeName>
     </Attribute>
@@ -32,8 +28,7 @@
     <summary>
             Wraps an evaluated piece of metadata for build purposes
             Added and removed via methods on the ProjectItemInstance object.
-            IMMUTABLE OBJECT.
-            </summary>
+            IMMUTABLE OBJECT.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -46,14 +41,11 @@
   <Members>
     <Member MemberName="DeepClone">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectMetadataInstance DeepClone ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Execution.ProjectMetadataInstance DeepClone() cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Execution.ProjectMetadataInstance DeepClone() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectMetadataInstance.DeepClone" />
       <MemberSignature Language="VB.NET" Value="Public Function DeepClone () As ProjectMetadataInstance" />
-      <MemberSignature Language="F#" Value="abstract member DeepClone : unit -&gt; Microsoft.Build.Execution.ProjectMetadataInstance&#xA;override this.DeepClone : unit -&gt; Microsoft.Build.Execution.ProjectMetadataInstance" Usage="projectMetadataInstance.DeepClone " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Build::Execution::ProjectMetadataInstance ^ DeepClone();" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectMetadataInstance DeepClone() cil managed" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="F#" Value="member this.DeepClone : unit -&gt; Microsoft.Build.Execution.ProjectMetadataInstance" Usage="projectMetadataInstance.DeepClone " FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::ProjectMetadataInstance ^ DeepClone();" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="abstract member DeepClone : unit -&gt; Microsoft.Build.Execution.ProjectMetadataInstance&#xA;override this.DeepClone : unit -&gt; Microsoft.Build.Execution.ProjectMetadataInstance" Usage="projectMetadataInstance.DeepClone " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Build::Execution::ProjectMetadataInstance ^ DeepClone();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -68,8 +60,7 @@
         <summary>
             Deep clone the metadata
             Strings are immutable (copy on write) so there is no work to do.
-            Allows built-in metadata names, as they are still valid on the new metadatum.
-            </summary>
+            Allows built-in metadata names, as they are still valid on the new metadatum.</summary>
         <returns>A new metadata instance.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -99,8 +90,7 @@
       <Docs>
         <summary>
             Evaluated value of the metadatum. 
-            Never null.
-            </summary>
+            Never null.</summary>
         <value>The evaluated value of the metadata, which is never <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -137,8 +127,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Name of the metadata
-            </summary>
+            Name of the metadata</summary>
         <value>The name of the metadata.</value>
         <remarks>
             This cannot be set, as it is used as the key into 
@@ -171,8 +160,7 @@
       <Docs>
         <param name="other">The other metadata</param>
         <summary>
-            Compares this metadata to another for equivalence.
-            </summary>
+            Compares this metadata to another for equivalence.</summary>
         <returns>True if they are equivalent, false otherwise.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,8 +184,7 @@
       <Parameters />
       <Docs>
         <summary>
-            String representation handy for tracing
-            </summary>
+            String representation handy for tracing</summary>
         <returns>A string representation of this metadata.</returns>
         <remarks>To be added.</remarks>
       </Docs>

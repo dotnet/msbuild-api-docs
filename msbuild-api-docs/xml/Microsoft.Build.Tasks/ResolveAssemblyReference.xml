@@ -364,54 +364,6 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="AssemblyInformationCacheOutputPath">
-      <MemberSignature Language="C#" Value="public string AssemblyInformationCacheOutputPath { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyInformationCacheOutputPath" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyInformationCacheOutputPath" />
-      <MemberSignature Language="VB.NET" Value="Public Property AssemblyInformationCacheOutputPath As String" />
-      <MemberSignature Language="F#" Value="member this.AssemblyInformationCacheOutputPath : string with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyInformationCacheOutputPath" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AssemblyInformationCacheOutputPath { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If not null, serializes information about <see cref="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyFiles" /> inputs to the named file.
-            This overrides the usual outputs, so do not use this unless you are building an SDK with many references.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AssemblyInformationCachePaths">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssemblyInformationCachePaths { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssemblyInformationCachePaths" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyInformationCachePaths" />
-      <MemberSignature Language="VB.NET" Value="Public Property AssemblyInformationCachePaths As ITaskItem()" />
-      <MemberSignature Language="F#" Value="member this.AssemblyInformationCachePaths : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyInformationCachePaths" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ AssemblyInformationCachePaths { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If not null, uses this set of caches as inputs if RAR cannot find the usual cache in the obj folder. Typically
-            used for demos and first-run scenarios.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="AutoUnify">
       <MemberSignature Language="C#" Value="public bool AutoUnify { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool AutoUnify" />
@@ -655,89 +607,6 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="DependsOnNETStandard">
-      <MemberSignature Language="C#" Value="public string DependsOnNETStandard { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string DependsOnNETStandard" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnNETStandard" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DependsOnNETStandard As String" />
-      <MemberSignature Language="F#" Value="member this.DependsOnNETStandard : string" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnNETStandard" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DependsOnNETStandard { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Whether the assembly or any of its primary references depends on netstandard
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="DependsOnSystemRuntime">
-      <MemberSignature Language="C#" Value="public string DependsOnSystemRuntime { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string DependsOnSystemRuntime" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnSystemRuntime" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DependsOnSystemRuntime As String" />
-      <MemberSignature Language="F#" Value="member this.DependsOnSystemRuntime : string" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnSystemRuntime" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DependsOnSystemRuntime { System::String ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Whether the assembly or any of its primary references depends on system.runtime. (Aka needs Facade references to resolve duplicate types)
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="DoNotCopyLocalIfInGac">
-      <MemberSignature Language="C#" Value="public bool DoNotCopyLocalIfInGac { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool DoNotCopyLocalIfInGac" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DoNotCopyLocalIfInGac" />
-      <MemberSignature Language="VB.NET" Value="Public Property DoNotCopyLocalIfInGac As Boolean" />
-      <MemberSignature Language="F#" Value="member this.DoNotCopyLocalIfInGac : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.DoNotCopyLocalIfInGac" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DoNotCopyLocalIfInGac { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            [default=false]
-            Enables legacy mode for CopyLocal determination. If true, referenced assemblies will not be copied locally if they
-            are found in the GAC. If false, assemblies will be copied locally unless they were found only in the GAC.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public override bool Execute ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
@@ -868,33 +737,6 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="FindDependenciesOfExternallyResolvedReferences">
-      <MemberSignature Language="C#" Value="public bool FindDependenciesOfExternallyResolvedReferences { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool FindDependenciesOfExternallyResolvedReferences" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependenciesOfExternallyResolvedReferences" />
-      <MemberSignature Language="VB.NET" Value="Public Property FindDependenciesOfExternallyResolvedReferences As Boolean" />
-      <MemberSignature Language="F#" Value="member this.FindDependenciesOfExternallyResolvedReferences : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependenciesOfExternallyResolvedReferences" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FindDependenciesOfExternallyResolvedReferences { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Force dependencies to be walked even when a reference is marked with ExternallyResolved=true
-            metadata.
-            </summary>
-        <value>To be added.</value>
-        <remarks>
-            This is used to ensure that we suggest appropriate binding redirects for assembly version
-            conflicts within an externally resolved graph.
-            </remarks>
       </Docs>
     </Member>
     <Member MemberName="FindRelatedFiles">
@@ -1428,17 +1270,17 @@
       </Docs>
     </Member>
     <Member MemberName="InstalledAssemblyTables">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] InstalledAssemblyTables { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] InstalledAssemblyTables" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" />
-      <MemberSignature Language="VB.NET" Value="Public Property InstalledAssemblyTables As ITaskItem()" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="F#" Value="member this.InstalledAssemblyTables : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ InstalledAssemblyTables { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberSignature Language="C#" Value="public string[] InstalledAssemblyTables { get; set; }" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] InstalledAssemblyTables" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" />
       <MemberSignature Language="VB.NET" Value="Public Property InstalledAssemblyTables As String()" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="F#" Value="member this.InstalledAssemblyTables : string[] with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ InstalledAssemblyTables { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] InstalledAssemblyTables { get; set; }" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] InstalledAssemblyTables" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstalledAssemblyTables As ITaskItem()" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="F#" Value="member this.InstalledAssemblyTables : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ InstalledAssemblyTables { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -1467,8 +1309,8 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">Microsoft.Build.Framework.ITaskItem[]</ReturnType>
         <ReturnType FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">System.String[]</ReturnType>
+        <ReturnType FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -1531,29 +1373,6 @@
         <value>The list of directories which contain the redist lists for the most current framework which can be targeted on the machine. If this is not set, then the highest framework installed on the machine for a given target framework identifier is searched and used.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="OutputUnresolvedAssemblyConflicts">
-      <MemberSignature Language="C#" Value="public bool OutputUnresolvedAssemblyConflicts { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool OutputUnresolvedAssemblyConflicts" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.OutputUnresolvedAssemblyConflicts" />
-      <MemberSignature Language="VB.NET" Value="Public Property OutputUnresolvedAssemblyConflicts As Boolean" />
-      <MemberSignature Language="F#" Value="member this.OutputUnresolvedAssemblyConflicts : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.OutputUnresolvedAssemblyConflicts" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OutputUnresolvedAssemblyConflicts { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If true, outputs any unresolved assembly conflicts (MSB3277) in UnresolvedAssemblyConflicts.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ProfileName">
@@ -2163,29 +1982,6 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
-    <Member MemberName="SupportsBindingRedirectGeneration">
-      <MemberSignature Language="C#" Value="public bool SupportsBindingRedirectGeneration { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsBindingRedirectGeneration" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.SupportsBindingRedirectGeneration" />
-      <MemberSignature Language="VB.NET" Value="Public Property SupportsBindingRedirectGeneration As Boolean" />
-      <MemberSignature Language="F#" Value="member this.SupportsBindingRedirectGeneration : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.SupportsBindingRedirectGeneration" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsBindingRedirectGeneration { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            This is true if the project type supports "AutoGenerateBindingRedirects" (currently only for EXE projects).
-            </summary>
-        <value />
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="TargetedRuntimeVersion">
       <MemberSignature Language="C#" Value="public string TargetedRuntimeVersion { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TargetedRuntimeVersion" />
@@ -2509,59 +2305,6 @@
         <value>The preferred target processor architecture used for resolving Global Assembly Cache (GAC) references.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
-      </Docs>
-    </Member>
-    <Member MemberName="UnresolvedAssemblyConflicts">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] UnresolvedAssemblyConflicts { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] UnresolvedAssemblyConflicts" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolvedAssemblyConflicts" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UnresolvedAssemblyConflicts As ITaskItem()" />
-      <MemberSignature Language="F#" Value="member this.UnresolvedAssemblyConflicts : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolvedAssemblyConflicts" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ UnresolvedAssemblyConflicts { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
-          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If OutputUnresolvedAssemblyConflicts then a list of information about unresolved conflicts that normally would have
-            been outputted in MSB3277. Otherwise empty.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="UnresolveFrameworkAssembliesFromHigherFrameworks">
-      <MemberSignature Language="C#" Value="public bool UnresolveFrameworkAssembliesFromHigherFrameworks { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool UnresolveFrameworkAssembliesFromHigherFrameworks" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolveFrameworkAssembliesFromHigherFrameworks" />
-      <MemberSignature Language="VB.NET" Value="Public Property UnresolveFrameworkAssembliesFromHigherFrameworks As Boolean" />
-      <MemberSignature Language="F#" Value="member this.UnresolveFrameworkAssembliesFromHigherFrameworks : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolveFrameworkAssembliesFromHigherFrameworks" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UnresolveFrameworkAssembliesFromHigherFrameworks { bool get(); void set(bool value); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If set to true, it forces to unresolve framework assemblies with versions higher or equal the version of the target framework, regardless of the target framework
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="WarnOrErrorOnTargetArchitectureMismatch">

@@ -16,8 +16,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Contains the current results for all of the targets which have produced results for a particular configuration.
-            </summary>
+            Contains the current results for all of the targets which have produced results for a particular configuration.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -36,8 +35,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Constructor for serialization.
-            </summary>
+            Constructor for serialization.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -65,8 +63,7 @@
         <param name="target">The target to which these results apply.</param>
         <param name="result">The results for the target.</param>
         <summary>
-            Adds the results for the specified target to this result collection.
-            </summary>
+            Adds the results for the specified target to this result collection.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,8 +95,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns a flag indicating if a circular dependency was detected.
-            </summary>
+            Returns a flag indicating if a circular dependency was detected.</summary>
         <value>
           <see langword="true" /> if a circular dependency was detected; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -133,8 +129,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the configuration ID for this result.
-            </summary>
+            Returns the configuration ID for this result.</summary>
         <value>The configuration ID for this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -157,13 +152,13 @@
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName Language="C#">[set: System.Diagnostics.DebuggerStepThrough]</AttributeName>
-          <AttributeName Language="F#">[&lt;set: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
-        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[set: System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
@@ -175,8 +170,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the exception generated while this result was run, if any. 
-            </summary>
+            Returns the exception generated while this result was run, if any.</summary>
         <value>The exception generated for this build result set. Returns false if no exception occurred.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,8 +203,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the build request id for which this result was generated
-            </summary>
+            Returns the build request id for which this result was generated</summary>
         <value>The build request id for this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -237,8 +230,7 @@
       <Docs>
         <param name="target">The target for which results are desired.</param>
         <summary>
-            Determines if there are any results for the specified target.
-            </summary>
+            Determines if there are any results for the specified target.</summary>
         <returns>True if results exist, false otherwise.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,8 +263,7 @@
       <Docs>
         <param name="target">The target</param>
         <summary>
-            Indexer which sets or returns results for the specified target
-            </summary>
+            Indexer which sets or returns results for the specified target</summary>
         <value>The results for the specified target</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -306,8 +297,7 @@
       <Docs>
         <param name="results">The results to merge in.</param>
         <summary>
-            Merges the specified results with the results contained herein.
-            </summary>
+            Merges the specified results with the results contained herein.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -339,8 +329,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the node build request id for which this result was generated
-            </summary>
+            Returns the node build request id for which this result was generated</summary>
         <value>The build request ID of the originating node.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,8 +352,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the overall result for this result set.
-            </summary>
+            Returns the overall result for this result set.</summary>
         <value>The overall result for this build.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -397,8 +385,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the build request id for the parent of the request for which this result was generated
-            </summary>
+            Returns the build request id for the parent of the request for which this result was generated</summary>
         <value>The global build request ID which issued the request leading to this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -423,8 +410,7 @@
         <summary>
           <see cref="T:Microsoft.Build.Execution.ProjectInstance" /> state after the build. In general, it may be a non buildable-dummy object, and should only
             be used to retrieve <see cref="P:Microsoft.Build.Execution.ProjectInstance.Properties" />, <see cref="P:Microsoft.Build.Execution.ProjectInstance.GlobalProperties" /> and
-            <see cref="P:Microsoft.Build.Execution.ProjectInstance.Items" /> from it. Any other operation is not guaranteed to be supported.
-            </summary>
+            <see cref="P:Microsoft.Build.Execution.ProjectInstance.Items" /> from it. Any other operation is not guaranteed to be supported.</summary>
         <value>The <see langword="ProjectInstance" /> object.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -464,8 +450,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns an enumerator for all target results in this build result
-            </summary>
+            Returns an enumerator for all target results in this build result</summary>
         <value>An enumerator over all target results in this build result set.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -498,8 +483,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Returns the submission id.
-            </summary>
+            Returns the submission id.</summary>
         <value>The build submission which this build result set is associated with.</value>
         <remarks>To be added.</remarks>
       </Docs>

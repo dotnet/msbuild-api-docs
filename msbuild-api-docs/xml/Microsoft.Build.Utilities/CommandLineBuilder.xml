@@ -151,31 +151,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public CommandLineBuilder (bool quoteHyphensOnCommandLine, bool useNewLineSeparator);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool quoteHyphensOnCommandLine, bool useNewLineSeparator) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean, useNewLineSeparator As Boolean)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.CommandLineBuilder : bool * bool -&gt; Microsoft.Build.Utilities.CommandLineBuilder" Usage="new Microsoft.Build.Utilities.CommandLineBuilder (quoteHyphensOnCommandLine, useNewLineSeparator)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder(bool quoteHyphensOnCommandLine, bool useNewLineSeparator);" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="quoteHyphensOnCommandLine" Type="System.Boolean" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="useNewLineSeparator" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-      </Parameters>
-      <Docs>
-        <param name="quoteHyphensOnCommandLine">To be added.</param>
-        <param name="useNewLineSeparator">To be added.</param>
-        <summary>
-            Default constructor
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <MemberGroup MemberName="AppendFileNameIfNotNull">
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -1083,16 +1058,16 @@
       </Docs>
     </Member>
     <Member MemberName="AppendTextUnquoted">
-      <MemberSignature Language="C#" Value="public void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextUnquoted(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="F#" Value="member this.AppendTextUnquoted : string -&gt; unit" Usage="commandLineBuilder.AppendTextUnquoted textToAppend" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberSignature Language="C#" Value="protected void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextUnquoted(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="F#" Value="member this.AppendTextUnquoted : string -&gt; unit" Usage="commandLineBuilder.AppendTextUnquoted textToAppend" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="C#" Value="public void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
