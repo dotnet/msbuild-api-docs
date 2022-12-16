@@ -18,8 +18,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            Resolves an SDKReference to a full path on disk</summary>
+    <summary>Resolves an SDKReference to a full path on disk</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -89,8 +88,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Execute the task.</summary>
+        <summary>Execute the task.</summary>
         <returns>Returns <see cref="T:System.Boolean" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,8 +119,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The list of installed SDKs the location of the SDK, the SDKName metadata is the SDKName.</summary>
+        <summary>The list of installed SDKs the location of the SDK, the SDKName metadata is the SDKName.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,10 +144,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Should problems resolving SDKs be logged as a warning or an error.
-            If the resolution problem is logged as an error the build will fail.
-            If the resolution problem is logged as a warning we will warn and continue.</summary>
+        <summary>Specifies whether problems resolving SDKs are logged as warnings or errors.  
+ If the resolution problem is logged as an error the build will fail.  
+ If the resolution problem is logged as a warning we will warn and continue.</summary>
         <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,8 +171,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The prefer32bit flag used during the build</summary>
+        <summary>The value of the Prefer32Bit flag used in the build</summary>
         <value>Returns the flag.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,9 +225,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Reference may be passed in so their SDKNames can be resolved and then sdkroot paths can be tacked onto the reference
-            so RAR can find the assembly correctly in the sdk location.</summary>
+        <summary>References may be passed in so that the SDKNames can be resolved. Once resolved, the sdkroot paths can be appended to the references so RAR can find the assembly correctly in the sdk location.</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -263,8 +256,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Resolved SDK References</summary>
+        <summary>Resolved SDK References</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -319,8 +311,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Set of SDK References to resolve to paths on disk</summary>
+        <summary>Set of SDK References to resolve to paths on disk</summary>
         <value>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -345,8 +336,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Architecture of the SDK's we are targeting</summary>
+        <summary>Architecture of the SDKs we are targeting</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -371,8 +361,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Configuration for SDK's which are resolved</summary>
+        <summary>Configuration for SDK's which are resolved</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -26,8 +26,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            Genererates a serialization assembly containing XML serializers for the input assembly.</summary>
+    <summary>Implements the <c>SGen</c> task. Use the <c>SGen</c> element in your project file to create and execute this task. For usage and parameter information, see SGen Task.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -234,10 +233,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Returns a string with those switches and other information that can't go into a response file and
-            must go directly onto the command line.
-            Called after ValidateParameters and SkipTaskExecution</summary>
+        <summary>Gets the switches and other information that the command line tool must run directly from the command line and not from a response file.</summary>
         <returns>A string containing the switches and other information that the command line tool must run directly from the command line and not from a response file.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -272,8 +268,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            The full path of the tool to execute.</summary>
+        <summary>Gets the full file path of the SGen tool.</summary>
         <returns>The full file path of the SGen tool.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -381,8 +376,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or Sets the Compiler Platform used by SGen to generate the output assembly.</summary>
+        <summary>Gets or sets the compiler platform to use to generate the output assembly.</summary>
         <value>The compiler platform to use.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -599,9 +593,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Returns true if task execution is not necessary. Executed after ValidateParameters</summary>
-        <returns />
+        <summary>Indicates whether task execution should be skipped.</summary>
+        <returns>
+          <see langword="true" /> if task execution should be skipped; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -634,8 +628,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The name of the tool to execute.</summary>
+        <summary>Gets the name of the tool executable file (sgen.exe).</summary>
         <value>The name of the tool executable file.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -661,8 +654,7 @@
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or Sets a list of specific Types to generate serialization code for, SGen will generate serialization code only for those types.</summary>
+        <summary>Gets or sets a list of specific types to generate serialization code for. <see langword="SGen" /> generates code only for these types.</summary>
         <value>A list of specific types.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -759,8 +751,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Validate parameters, log errors and warnings and return true if Execute should proceed.</summary>
+        <summary>Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.</summary>
         <returns>
           <see langword="true" /> if task execution should proceed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>

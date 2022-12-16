@@ -22,8 +22,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>
-            Structure to represent a target platform sdk</summary>
+    <summary>Represents a target platform SDK.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -52,8 +51,7 @@
         <param name="targetPlatformIdentifier">The identifier of the target platform.</param>
         <param name="targetPlatformVersion">The version of the target platform.</param>
         <param name="path">The path to the target platform SDK.</param>
-        <summary>
-            Constructor</summary>
+        <summary>Creates a new instance of a target platform SDK class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -145,8 +143,7 @@
       </Parameters>
       <Docs>
         <param name="other">Target platform SDK to compare to this element.</param>
-        <summary>
-            Implement IEquatable</summary>
+        <summary>Ensures equality between target platform SDKs.</summary>
         <returns>
           <see langword="true" /> if items are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -176,8 +173,7 @@
       </Parameters>
       <Docs>
         <param name="obj">Object to compare to this element.</param>
-        <summary>
-            Override equals</summary>
+        <summary>Ensures equality between target platform SDK and object.</summary>
         <returns>
           <see langword="true" /> if items are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -204,8 +200,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Override GetHashCode</summary>
+        <summary>Gets the hash code for the target platform SDK.</summary>
         <returns>A hash code.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -276,8 +271,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Path to target platform sdk if it exists, it may not if there is no target platform is installed</summary>
+        <summary>Gets or sets the Path to the target platform SDK.</summary>
         <value>The path to the target platform SDK.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,8 +296,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Target platform identifier</summary>
+        <summary>Gets or sets the target platform SDK identifier.</summary>
         <value>The target platform SDK identifier.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -328,8 +321,7 @@
         <ReturnType>System.Version</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Target platform version</summary>
+        <summary>Gets or sets the version of the target platform.</summary>
         <value>The target platform version.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -26,9 +26,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            This class defines the "AL" XMake task, which enables using al.exe to link
-            modules and resource files into assemblies.</summary>
+    <summary>Implements the <c>AL</c> task. Use the <c>AL</c> element in your project file to create and execute this task. For usage and parameter information, see AL (Assembly Linker) Task.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -101,8 +99,7 @@
       </Parameters>
       <Docs>
         <param name="commandLine">Command line builder to add arguments to.</param>
-        <summary>
-            Fills the provided CommandLineBuilderExtension with those switches and other information that can go into a response file.</summary>
+        <summary>Fills the specified <paramref name="commandLine" /> parameter with switches and other information that can go into a response file.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -707,8 +704,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Return the path of the tool to execute</summary>
+        <summary>Returns the full file path to the AL tool.</summary>
         <returns>The full file path to the AL tool.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -1331,8 +1327,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Return the name of the tool to execute.</summary>
+        <summary>Gets the name of the tool (Al.exe).</summary>
         <value>The name of the tool.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

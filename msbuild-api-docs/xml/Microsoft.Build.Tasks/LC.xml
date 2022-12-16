@@ -26,8 +26,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            The License Compiler task</summary>
+    <summary>Implements the <c>LC</c> task. Use the <c>LC</c> element in your project file to create and execute this task. For usage and parameter information, see LC Task.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -99,10 +98,8 @@
         <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
       </Parameters>
       <Docs>
-        <param name="commandLine">command line builder class to add arguments to the command line</param>
-        <summary>
-            Generates command line arguments for lc.exe
-            Used when targeting framework version is less than 4.6</summary>
+        <param name="commandLine">Command line builder to add arguments to.</param>
+        <summary>Generates command line arguments that the license compiler tool (lc.exe) must run directly from the command line and not from a response file.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -190,9 +187,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Determing the path to lc.exe</summary>
-        <returns>path to lc.exe, null if not found</returns>
+        <summary>Returns the full file path of the license compiler tool (lc.exe).</summary>
+        <returns>The full file path of the license compiler tool, or <see langword="null" /> if the license compiler tool file is not found.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -231,8 +227,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Specifies the executable for which the .licenses files are being generated</summary>
+        <summary>Gets or sets the executable for which the .licenses files are generated.</summary>
         <value>The executable for which the .licenses files are generated.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -266,8 +261,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Suppresses the display of the startup banner</summary>
+        <summary>Gets or sets a Boolean value that specifies whether to suppress the Microsoft startup banner display.</summary>
         <value>
           <see langword="true" /> if the Microsoft startup banner display is suppressed; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -302,9 +296,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Output directory for the generated .licenses file</summary>
-        <value />
+        <summary>Gets or sets the directory in which to place the output .licenses files.</summary>
+        <value>The directory in which to place the output .licenses files.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -343,8 +336,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The name of the .licenses file, output only. It's inferred from LicenseTarget and OutputDirectory.</summary>
+        <summary>Gets or sets the name of the .licenses file.</summary>
         <value>The name of the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -385,9 +377,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Specifies the referenced components (licensed controls and possibly their dependent assemblies)
-            to load when generating the .license file.</summary>
+        <summary>Gets or sets the referenced components to load when generating the .licenses file.</summary>
         <value>The referenced components to load when generating the .licenses file.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -453,8 +443,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Specifies the items that contain licensed components that need to be included in the .licenses file</summary>
+        <summary>Gets or sets the items that contain licensed components to include in the .licenses file.</summary>
         <value>The items that contain licensed components to include in the .licenses file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -524,8 +513,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The name of the tool to execute</summary>
+        <summary>Gets the name of the license compiler tool.</summary>
         <value>The name of the license compiler tool.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -560,9 +548,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Validate the task arguments, log any warnings/errors</summary>
-        <returns>true if arguments are corrent enough to continue processing, false otherwise</returns>
+        <summary>Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.</summary>
+        <returns>
+          <see langword="true" /> if task execution should proceed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>

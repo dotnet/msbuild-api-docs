@@ -26,14 +26,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-             (1) Make sure values containing hyphens are quoted (RC at least requires this)
-             (2) Escape any embedded quotes. 
-                 -- Literal double quotes should be written in the form " not ""
-                 -- Backslashes falling just before doublequotes must be doubled.
-                 -- Literal double quotes can only occur in pairs (you cannot pass a single literal double quote)
-             	-- Functional double quotes (for example to handle spaces) are best put around both name and value
-             	    in switches like /Dname=value.</summary>
+    <summary>Comprises utility methods for constructing a command line.</summary>
     <remarks>
              
              Below are some quoting experiments, using the /D switch with the CL and RC preprocessor.
@@ -106,8 +99,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>
-            Default constructor</summary>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.CommandLineBuilder" /> class.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -122,12 +114,12 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public CommandLineBuilder (bool quoteHyphensOnCommandLine);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool quoteHyphensOnCommandLine) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.CommandLineBuilder : bool -&gt; Microsoft.Build.Utilities.CommandLineBuilder" Usage="new Microsoft.Build.Utilities.CommandLineBuilder quoteHyphensOnCommandLine" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder(bool quoteHyphensOnCommandLine);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C#" Value="public CommandLineBuilder (bool quoteHyphensOnCommandLine);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool quoteHyphensOnCommandLine) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (quoteHyphensOnCommandLine As Boolean)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.CommandLineBuilder : bool -&gt; Microsoft.Build.Utilities.CommandLineBuilder" Usage="new Microsoft.Build.Utilities.CommandLineBuilder quoteHyphensOnCommandLine" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CommandLineBuilder(bool quoteHyphensOnCommandLine);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -142,12 +134,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="quoteHyphensOnCommandLine" Type="System.Boolean" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="quoteHyphensOnCommandLine" Type="System.Boolean" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="quoteHyphensOnCommandLine">If true, hyphens should be quoted.</param>
-        <summary>
-            Default constructor</summary>
+        <summary>Default constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -227,10 +218,8 @@
         <Parameter Name="fileItem" Type="Microsoft.Build.Framework.ITaskItem" />
       </Parameters>
       <Docs>
-        <param name="fileItem">File name to append, if it's null this method has no effect</param>
-        <summary>
-            Appends a file name quoting it if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the file name.</summary>
+        <param name="fileItem">The task item specification to append to the command line. If it is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with the file name of the specified <see cref="T:Microsoft.Build.Framework.ITaskItem" /> object.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -285,10 +274,8 @@
         <Parameter Name="fileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileName">File name to append, if it's null this method has no effect</param>
-        <summary>
-            Appends a file name quoting it if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the file name.</summary>
+        <param name="fileName">The file name to append. If it is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with file name represented by the parameter, inserting quotation marks if necessary.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -352,11 +339,9 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileItems">Task items to append, if null this method has no effect</param>
-        <param name="delimiter">Delimiter to put between items in the command line</param>
-        <summary>
-            Appends array of ITaskItem specs as file names, quoting them if necessary, delimited by a delimiter.
-            This method appends a space to the command line (if it's not currently empty) before the file names.</summary>
+        <param name="fileItems">The task item specifications to append. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter to put between task item specifications in the command line.</param>
+        <summary>Appends the command line with the list of file names in the specified <see cref="T:Microsoft.Build.Framework.ITaskItem" /> array, separated by the specified delimiter.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -409,11 +394,9 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileNames">File names to append, if it's null this method has no effect</param>
-        <param name="delimiter">The delimiter between file names</param>
-        <summary>
-            Appends array of file name strings, quoting them if necessary, delimited by a delimiter.
-            This method appends a space to the command line (if it's not currently empty) before the file names.</summary>
+        <param name="fileNames">The file names to append. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter to put between file names in the command line.</param>
+        <summary>Appends the command line with the list of file names in the specified <see langword="string" /> array, separated by the specified delimiter.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -465,11 +448,8 @@
         <Parameter Name="fileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileName">The file name to append</param>
-        <summary>
-            Appends a file name. Quotes are added if they are needed. 
-            If the first character of the file name is a dash, "." is prepended to avoid confusing the file name with a switch
-            This method does not append a space to the command line before executing.</summary>
+        <param name="fileName">The file name to append.</param>
+        <summary>Appends the command line with a file name, and surrounds the file name with quotation marks as necessary.</summary>
         <remarks>
             In the future, this function may fixup 'text' to handle
             literal embedded quotes.
@@ -480,12 +460,12 @@
       </Docs>
     </Member>
     <Member MemberName="AppendQuotedTextToBuffer">
-      <MemberSignature Language="C#" Value="protected void AppendQuotedTextToBuffer (System.Text.StringBuilder buffer, string unquotedTextToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendQuotedTextToBuffer(class System.Text.StringBuilder buffer, string unquotedTextToAppend) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendQuotedTextToBuffer(System.Text.StringBuilder,System.String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="VB.NET" Value="Protected Sub AppendQuotedTextToBuffer (buffer As StringBuilder, unquotedTextToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="F#" Value="member this.AppendQuotedTextToBuffer : System.Text.StringBuilder * string -&gt; unit" Usage="commandLineBuilder.AppendQuotedTextToBuffer (buffer, unquotedTextToAppend)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendQuotedTextToBuffer(System::Text::StringBuilder ^ buffer, System::String ^ unquotedTextToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C#" Value="protected void AppendQuotedTextToBuffer (System.Text.StringBuilder buffer, string unquotedTextToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendQuotedTextToBuffer(class System.Text.StringBuilder buffer, string unquotedTextToAppend) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendQuotedTextToBuffer(System.Text.StringBuilder,System.String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub AppendQuotedTextToBuffer (buffer As StringBuilder, unquotedTextToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="F#" Value="member this.AppendQuotedTextToBuffer : System.Text.StringBuilder * string -&gt; unit" Usage="commandLineBuilder.AppendQuotedTextToBuffer (buffer, unquotedTextToAppend)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void AppendQuotedTextToBuffer(System::Text::StringBuilder ^ buffer, System::String ^ unquotedTextToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
@@ -500,17 +480,16 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buffer" Type="System.Text.StringBuilder" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-        <Parameter Name="unquotedTextToAppend" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="buffer" Type="System.Text.StringBuilder" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="unquotedTextToAppend" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="buffer" />
-        <param name="unquotedTextToAppend" />
-        <summary>
-            Appends given text to the buffer after first quoting the text if necessary.</summary>
+        <param name="buffer">The buffer to append to.</param>
+        <param name="unquotedTextToAppend">The text to be quoted.</param>
+        <summary>Appends given text to the buffer after first quoting the text if necessary.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -543,8 +522,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Add a space or newline to the specified string if and only if it's not empty.</summary>
+        <summary>Adds a space to the specified string, given the string is not empty.</summary>
         <remarks>
             This is a pretty obscure method and so it's only available to inherited classes.
             </remarks>
@@ -581,10 +559,8 @@
         <Parameter Name="switchName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <summary>
-            Appends a command-line switch that has no separate value, without any quoting.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <summary>Appends the command line with the specified switch.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -647,11 +623,9 @@
         <Parameter Name="parameter" Type="Microsoft.Build.Framework.ITaskItem" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameter">Switch parameter to append, quoted if necessary. If null, this method has no effect.</param>
-        <summary>
-            Append a switch [overload]
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameter">The switch parameter to append to the command line. Quotation marks will be added as necessary. If this value is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with a switch that takes a task item specification that acts a single string parameter.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -704,11 +678,9 @@
         <Parameter Name="parameter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameter">Switch parameter to append, quoted if necessary. If null, this method has no effect.</param>
-        <summary>
-            Appends a command-line switch that takes a single string parameter, quoting the parameter if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameter">The switch parameter to append to the command line. Quotation marks will be added as necessary. If this value is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with a switch that takes a single string parameter.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -762,13 +734,10 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameters">Switch parameters to append, quoted if necessary. If null, this method has no effect.</param>
-        <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
-        <summary>
-            Appends a command-line switch that takes a ITaskItem[] parameter,
-            and add double-quotes around the individual filenames if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameters">An array of switch parameters to append to the command line. Quotation marks will be added as necessary. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter that separates individual parameters. This value can be empty, but it cannot be <see langword="null" />.</param>
+        <summary>Appends the command line with a switch that takes an array of task item specifications that act as string parameters.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -822,13 +791,10 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameters">Switch parameters to append, quoted if necessary. If null, this method has no effect.</param>
-        <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
-        <summary>
-            Appends a command-line switch that takes a string[] parameter,
-            and add double-quotes around the individual filenames if necessary.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameters">An array of switch parameters to append to the command line. Quotation marks will be added as necessary. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter that separates individual parameters. This value can be empty, but it cannot be <see langword="null" />.</param>
+        <summary>Appends the command line with a switch that takes an array of string parameters.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -890,11 +856,9 @@
         <Parameter Name="parameter" Type="Microsoft.Build.Framework.ITaskItem" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameter">Switch parameter to append, not quoted. If null, this method has no effect.</param>
-        <summary>
-            Appends the literal parameter without trying to quote.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameter">The switch parameter to append to the command line. Quotation marks will not be added. If this value is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with a switch that takes a task item specification as a single string parameter, without attempting to encapsulate the switch parameter with quotation marks.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -945,11 +909,9 @@
         <Parameter Name="parameter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameter">Switch parameter to append, not quoted. If null, this method has no effect.</param>
-        <summary>
-            Appends the literal parameter without trying to quote.
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameter">The switch parameter to append to the command line. Quotation marks will not be added. If this value is <see langword="null" />, then this method has no effect.</param>
+        <summary>Appends the command line with a switch that takes a single string parameter, without attempting to encapsulate the switch parameter with quotation marks.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1001,12 +963,10 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameters">Switch parameters to append, not quoted. If null, this method has no effect.</param>
-        <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
-        <summary>
-            Appends a command-line switch that takes a ITaskItem[] parameter, not quoting the individual parameters
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameters">An array of switch parameters to append to the command line. Quotation marks will not be added. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter that separates individual parameters. This value can be empty, but it cannot be <see langword="null" />.</param>
+        <summary>Appends the command line with a switch that takes an array of task item specifications that act as string parameters, without attempting to encapsulate them with quotation marks.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1058,12 +1018,10 @@
         <Parameter Name="delimiter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">The switch to append to the command line, may not be null</param>
-        <param name="parameters">Switch parameters to append, not quoted. If null, this method has no effect.</param>
-        <param name="delimiter">Delimiter to put between individual parameters, may not be null (may be empty)</param>
-        <summary>
-            Appends a command-line switch that takes a string[] parameter, not quoting the individual parameters
-            This method appends a space to the command line (if it's not currently empty) before the switch.</summary>
+        <param name="switchName">The name of the switch to append to the command line. This value cannot be <see langword="null" />.</param>
+        <param name="parameters">An array of switch parameters to append to the command line. Quotation marks will not be added. If the array is <see langword="null" />, then this method has no effect.</param>
+        <param name="delimiter">The delimiter that separates individual parameters. This value can be empty, but it cannot be <see langword="null" />.</param>
+        <summary>Appends the command line with a switch that takes an array of string parameters, without attempting to encapsulate switch parameters with quotation marks.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1083,12 +1041,12 @@
       </Docs>
     </Member>
     <Member MemberName="AppendTextUnquoted">
-      <MemberSignature Language="C#" Value="public void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C#" Value="public void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextUnquoted(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.AppendTextUnquoted : string -&gt; unit" Usage="commandLineBuilder.AppendTextUnquoted textToAppend" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AppendTextUnquoted(System::String ^ textToAppend);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C#" Value="protected void AppendTextUnquoted (string textToAppend);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
       <MemberSignature Language="VB.NET" Value="Protected Sub AppendTextUnquoted (textToAppend As String)" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
@@ -1117,10 +1075,8 @@
         <Parameter Name="textToAppend" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="textToAppend">The string to append</param>
-        <summary>
-            Appends a string. No quotes are added.
-            This method does not append a space to the command line before executing.</summary>
+        <param name="textToAppend">The string to append to the command line.</param>
+        <summary>Appends the command line with string, without attempting to encapsulate the string with quotation marks.</summary>
         <remarks>
             In the future, this function may fixup 'textToAppend' to handle
             literal embedded quotes.
@@ -1161,10 +1117,8 @@
         <Parameter Name="textToAppend" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="textToAppend">The string to append</param>
-        <summary>
-            Appends a string. Quotes are added if they are needed.
-            This method does not append a space to the command line before executing.</summary>
+        <param name="textToAppend">The string to append to the command line.</param>
+        <summary>Appends the command line with string, and surrounds the string with quotations marks as necessary.</summary>
         <remarks>
             Escapes any double quotes in the string.
             </remarks>
@@ -1204,8 +1158,7 @@
         <ReturnType>System.Text.StringBuilder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Retrieves the private StringBuilder instance for inheriting classes</summary>
+        <summary>Gets the <see cref="T:System.Text.StringBuilder" /> instance representing the command line for inheriting classes.</summary>
         <value>A <see cref="T:System.Text.StringBuilder" /> for inheriting classes.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1241,10 +1194,10 @@
         <Parameter Name="parameter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="parameter">the string to examine for characters that require quoting</param>
-        <summary>
-            Checks the given switch parameter to see if it must/can be quoted.</summary>
-        <returns>true, if parameter should be quoted</returns>
+        <param name="parameter">The string to examine for characters that require quotation marks.</param>
+        <summary>Determines whether the specified string parameter should be surrounded with quotation marks because it contains white space.</summary>
+        <returns>
+          <see langword="true" />, if the switch parameter should be surrounded with quotation marks; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1268,8 +1221,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Returns the length of the current command</summary>
+        <summary>Represents the length of the command line.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1303,9 +1255,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Return the command-line as a string.</summary>
-        <returns />
+        <summary>Returns the command line as a string.</summary>
+        <returns>A <see cref="T:System.String" /> that represents the command line.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1350,11 +1301,9 @@
         <Parameter Name="parameter" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="switchName">Switch name for error message</param>
-        <param name="parameter">Switch parameter to scan</param>
-        <summary>
-            Throws if the parameter has a double-quote in it. This is used to prevent parameter
-            injection. It's virtual so that tools can override this method if they want to have quotes escaped in filenames</summary>
+        <param name="switchName">A string representing the switch name for the error message.</param>
+        <param name="parameter">A string representing the switch parameter to scan for double-quotes.</param>
+        <summary>Returns an error if the command line parameter contains a double-quote (") character. Because double quotes are illegal in command line parameters, this method helps prevent parameter injection attacks.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

@@ -18,9 +18,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-             Gathers the list of installed SDKS in the registry and on disk and outputs them into the project
-             so they can be used during SDK reference resolution and RAR for single files.</summary>
+    <summary>Gathers the list of installed SDKS in the registry and on disk and outputs them into the project so they can be used during SDK reference resolution and RAR for single files.  
+ GetInstalledSDKLocations doesn't recognize a version folder if "v" appears in its name.  For example, an SDK that's located at C:\Windows\Program Files\Microsoft SDKs\Windows\8.0\SDKFolders\3rdPartySDK\2.5\will be located correctly. However, the same SDK located atC:\Windows\Program Files\Microsoft SDKs\Windows\8.0\SDKFolders\3rdPartySDK\v2.5\won't be located and will be ignored. If an SDK is ignored, the failure won't be recorded in the log, and no error will be thrown.  
+ Version folder names need to be formed as major.minor[.build[.revision]]. For more information, see <see cref="M:System.Version.TryParse(System.String,System.Version@)" />.  
+ To find an SDK with a particular version, the version sought must match the version requested. For example, if the SDK has a folder version name 8.0.0 and the customer requested the SDK with version 8.0, there is no match, and the SDK won't be found.  
+ For more information on version matching, see <see cref="M:System.Version.CompareTo(System.Version)" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -66,8 +68,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Get the SDK.</summary>
+        <summary>Gets the SDKs.</summary>
         <returns>
           <see langword="true" /> if the method succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
@@ -99,9 +100,8 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Set of items that represent all of the installed SDKs found in the SDKDirectory and SDKRegistry roots.
-            The itemspec is the SDK install location. There is a piece of metadata called SDKName which contains the name of the SDK.</summary>
+        <summary>Gets or sets the set of items that represent all of the installed SDKs found in the SDKDirectory and SDKRegistry roots.  
+ The itemspec is the SDK install location. There is a piece of metadata called SDKName which contains the name of the SDK.</summary>
         <value>The set of all installed SDKs found.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -126,8 +126,7 @@
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Root directory on disk to look for SDKs</summary>
+        <summary>Gets or sets the root directory on disk in which to look for SDKs.</summary>
         <value>The root directory.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,8 +174,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Root registry root to look for SDKs</summary>
+        <summary>Gets or sets the root registry root in which to look for SDKs.</summary>
         <value>The registry root.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -207,8 +205,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Platform identifier we are targeting</summary>
+        <summary>Gets the platform identifier we are targeting.</summary>
         <value>The target platform identifier.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -239,8 +236,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Platform version we are targeting</summary>
+        <summary>Gets the platform version we are targeting.</summary>
         <value>The target platform version.</value>
         <remarks>To be added.</remarks>
       </Docs>

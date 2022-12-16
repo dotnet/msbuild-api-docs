@@ -22,10 +22,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            Finds the app.config file, if any, in the provided lists.
-            For compat reasons, it has to follow a particular arbitrary algorithm.
-            It also adds the TargetPath metadata.</summary>
+    <summary>Finds the app.config file, if any, in the provided lists.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -105,8 +102,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The first matching item found in the list, if any</summary>
+        <summary>Gets or sets the first matching item found in the list, if any.</summary>
         <value>The first matching item found in the list, or <see langword="null" /> if no matching item is found.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -136,8 +132,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Find the app config</summary>
+        <summary>Finds the app config file.</summary>
         <returns>
           <see langword="true" /> in all cases.</returns>
         <remarks>
@@ -184,8 +179,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The primary list to search through</summary>
+        <summary>Gets or sets the primary list to search through.</summary>
         <value>The primary list to search through.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -224,8 +218,7 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The secondary list to search through</summary>
+        <summary>Gets or sets the secondary list to search through.</summary>
         <value>The secondary list to search through.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -268,8 +261,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The value to add as TargetPath metadata</summary>
+        <summary>Gets or sets the value to add as <see cref="P:Microsoft.Build.Tasks.FindAppConfigFile.TargetPath" /> metadata.</summary>
         <value>The <see cref="P:Microsoft.Build.Tasks.FindAppConfigFile.TargetPath" /> metadata.</value>
         <remarks>To be added.</remarks>
       </Docs>

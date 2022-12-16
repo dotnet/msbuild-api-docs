@@ -18,8 +18,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>
-            The list of active switches in the order they should be emitted.</summary>
+    <summary>Class for generating command lines.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -46,8 +45,7 @@
       <Docs>
         <param name="rule">The rule</param>
         <param name="parameterValues">The parameter values.</param>
-        <summary>
-            Creates a generator that generates a command-line based on the specified Xaml file and parameters.</summary>
+        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.Xaml.CommandLineGenerator" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,8 +79,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Any additional options (as a literal string) that may have been specified in the project file</summary>
+        <summary>Contains a string of additional options to include on the command line.</summary>
         <value>A string of additional options to include on the command line.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,8 +114,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The string to append to the end of a non-templated commandline.</summary>
+        <summary>Contains the string to append to a command line when there is no template.</summary>
         <value>The string to append to a command line when there is no template.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -153,8 +149,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The template which, if set, will be used to govern formatting of the command line(s)</summary>
+        <summary>Contains the template to use when creating the command line.</summary>
         <value>The template to use when creating the command line.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,8 +175,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Generate the command-line</summary>
+        <summary>Generates a command line.</summary>
         <returns>The command line.</returns>
         <remarks>To be added.</remarks>
       </Docs>

@@ -157,7 +157,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless overload instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless overload instead")&gt;]</AttributeName>
         </Attribute>
@@ -212,7 +212,7 @@
       </Parameters>
       <Docs>
         <param name="msbuildBinPath">The fully qualified path to MSBuild.exe.</param>
-        <summary>This is the entry point method, which performs the project file format conversion. This method will overwrite "newProjectFile" if it already exists, so the caller of this method should confirm with the user if that's what they really want to do.</summary>
+        <summary>This is the entry point method, which performs the project file format conversion. This method will overwrite "newProjectFile" if it already exists, so the caller of this method should confirm with the user if that's what he really wants to do.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -279,7 +279,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless ConvertInMemory() method instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless ConvertInMemory() method instead")&gt;]</AttributeName>
         </Attribute>
@@ -318,7 +318,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless ConvertInMemory() method instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless ConvertInMemory() method instead")&gt;]</AttributeName>
         </Attribute>
@@ -354,12 +354,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="actuallyMakeChanges" Type="System.Boolean" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+        <Parameter Name="actuallyMakeChanges" Type="System.Boolean" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="actuallyMakeChanges">if true, make the changes, otherwise, don't actually make any changes, but return whether you would make the changes</param>
         <summary>Performs conversions specific to F# projects (VS2008 CTP -&gt; VS2012) and (VS2010 -&gt; VS2012).  
-  
  This involves: changing the location of FSharp targets, and for 2008CTP, adding explicit mscorlib and FSharp.Core references.</summary>
         <returns>
           <see langword="true" /> if anything was (would be) changed; otherwise, <see langword="false" />.</returns>

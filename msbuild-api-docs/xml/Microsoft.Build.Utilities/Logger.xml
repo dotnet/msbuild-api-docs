@@ -30,9 +30,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>
-            This helper base class provides default functionality for loggers that handle events raised by the build engine. This
-            class can only be instantiated in a derived form.</summary>
+    <summary>When overridden in a derived form, provides functionality for loggers that handle events raised by the MSBuild engine.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -118,10 +116,9 @@
         <Parameter Name="args" Type="Microsoft.Build.Framework.BuildErrorEventArgs" />
       </Parameters>
       <Docs>
-        <param name="args">Error event arguments</param>
-        <summary>
-            Generates a message in the default format from a BuildErrorEventArgs object.</summary>
-        <returns>Error message in canonical format</returns>
+        <param name="args">The arguments of the error event.</param>
+        <summary>Generates an error message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" /> object.</summary>
+        <returns>A <see cref="T:System.String" /> that represents an error message in canonical format.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -156,10 +153,9 @@
         <Parameter Name="args" Type="Microsoft.Build.Framework.BuildWarningEventArgs" />
       </Parameters>
       <Docs>
-        <param name="args">Warning event arguments</param>
-        <summary>
-            Generates a message in the default format from a BuildWarningEventArgs object.</summary>
-        <returns>Warning message in canonical format</returns>
+        <param name="args">The arguments of the warning event.</param>
+        <summary>Generates a warning message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" /> object.</summary>
+        <returns>A <see cref="T:System.String" /> that represents a warning message in canonical format.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,8 +194,7 @@
       </Parameters>
       <Docs>
         <param name="eventSource">The available events that a logger can subscribe to.</param>
-        <summary>
-            Must be implemented by derived class to subscribe to build events.</summary>
+        <summary>When overridden in a derived class, subscribes the logger to specific events.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -248,11 +243,10 @@
         <Parameter Name="checkVerbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
       </Parameters>
       <Docs>
-        <param name="checkVerbosity" />
-        <summary>
-            Determines whether the current verbosity setting is at least the value
-            passed in.</summary>
-        <returns />
+        <param name="checkVerbosity">The logger verbosity setting passed in.</param>
+        <summary>Determines whether the current <see cref="P:Microsoft.Build.Utilities.Logger.Verbosity" /> setting is at least the value that is passed in.</summary>
+        <returns>
+          <see langword="true" /> if the current logger verbosity setting is at least the value that is passed in; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -306,9 +300,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets the user-specified parameters to the logger. Derived class can ignore if it doesn't take parameters.</summary>
-        <value>The parameter string (can be null).</value>
+        <summary>Gets or sets the user-defined parameters of the logger.</summary>
+        <value>The logger parameters. This value can be <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -358,8 +351,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-            Derived class should override if it needs to release any resources.</summary>
+        <summary>When overridden in a derived class, releases the resources allocated to the logger at the time of initialization or during the build.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -418,9 +410,8 @@
         <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets the level of detail to show in the event log.</summary>
-        <value>The verbosity level.</value>
+        <summary>Gets or sets the level of detail to show in the event log.</summary>
+        <value>One of the enumeration values. The default is <see cref="F:Microsoft.Build.Framework.LoggerVerbosity.Normal" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
