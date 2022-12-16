@@ -26,7 +26,8 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>WriteLinesToFile</c> task. Use the <c>WriteLinesToFile</c> element in your project file to create and execute this task. For usage and parameter information, see <c>WriteLinesToFile</c>WriteLinesToFile Task.</summary>
+    <summary>
+            Appends a list of items to a file. One item per line with carriage returns in-between.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -97,7 +98,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the system text encoding. For example, UTF-8.</summary>
+        <summary>
+            Encoding to be used.</summary>
         <value>The system text encoding.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -132,9 +134,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Executes the <c>WriteLinesToFile</c> task.</summary>
-        <returns>
-          <see langword="true" /> if task execution succeeded; otherwise, <see langword="false" />.</returns>
+        <summary>
+            Execute the task.</summary>
+        <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -181,7 +183,8 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the file to write the items to.</summary>
+        <summary>
+            File to write lines to.</summary>
         <value>The file to write the items to.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -225,7 +228,8 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the items to write to the file.</summary>
+        <summary>
+            Write each item as a line in the file.</summary>
         <value>The items to write to the file.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -269,7 +273,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a Boolean value that specifies whether the task overwrites any existing content in the file.</summary>
+        <summary>
+            If true, overwrite any existing file contents.</summary>
         <value>
           <see langword="true" /> if the task overwrites any existing content in the file; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>

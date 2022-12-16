@@ -37,7 +37,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Exposes functionality that you must have to create a bootstrapper.</summary>
+    <summary>
+            This interface exposes functionality necessary to build a bootstrapper.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -79,9 +80,10 @@
         <Parameter Name="settings" Type="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings" />
       </Parameters>
       <Docs>
-        <param name="settings">The properties used to create the bootstrapper.</param>
-        <summary>Generates a bootstrapper based on the specified settings.</summary>
-        <returns>A <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults" /> object that represents the results of the bootstrapper generation.</returns>
+        <param name="settings">The properties used to build this bootstrapper.</param>
+        <summary>
+            Generates a bootstrapper based on the specified settings.</summary>
+        <returns>The results of the bootstrapper generation</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -120,8 +122,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the location of the required bootstrapper files.</summary>
-        <value>A string value that represents the location of the required bootstrapper files.</value>
+        <summary>
+            Specifies the location of the required bootstrapper files.</summary>
+        <value>Path to bootstrapper files.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -160,7 +163,8 @@
         <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets all products available at the current bootstrapper path.</summary>
+        <summary>
+            Returns all products available at the current bootstrapper Path</summary>
         <value>A <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection" /> object that represents all products available at the current bootstrapper <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

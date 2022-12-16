@@ -27,7 +27,8 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>GetFrameworkPath</c> task. Use the <c>GetFrameworkPath</c> element in your project file to create and execute this task. For usage and parameter information, see GetFrameworkPath Task.</summary>
+    <summary>
+            Returns the paths to the various frameworks versions.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -97,7 +98,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Returns <see langword="true" /> in all cases.</summary>
+        <summary>
+            Does nothing: getters do all the work</summary>
         <returns>
           <see langword="true" /> in all cases.</returns>
         <remarks>
@@ -141,7 +143,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path of the folder that contains the .NET Framework 1.1 assemblies.</summary>
+        <summary>
+            Path to the v1.1 framework, if available</summary>
         <value>The path of the folder that contains the .NET Framework 1.1 assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -177,7 +180,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path of the folder that contains the .NET Framework 2.0 assemblies.</summary>
+        <summary>
+            Path to the v2.0 framework, if available</summary>
         <value>The path of the folder that contains the .NET Framework 2.0 assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -213,7 +217,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path of the folder that contains the .NET Framework 3.0 assemblies.</summary>
+        <summary>
+            Path to the v3.0 framework, if available</summary>
         <value>The path of the folder that contains the .NET Framework 3.0 assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -249,7 +254,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path of the folder that contains the .NET Framework 3.5 assemblies.</summary>
+        <summary>
+            Path to the v3.5 framework, if available</summary>
         <value>The path of the folder that contains the .NET Framework 3.5 assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -281,7 +287,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Path to the v4.0 framework, if available</summary>
+        <summary>
+            Path to the v4.0 framework, if available</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -371,7 +378,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Path to the v4.5 framework, if available</summary>
+        <summary>
+            Path to the v4.5 framework, if available</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -618,7 +626,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path of the folder that contains the latest version of the .NET Framework assemblies.</summary>
+        <summary>
+            Path to the latest framework, whatever version it happens to be</summary>
         <value>The path of the folder that contains the latest version of the .NET Framework assemblies.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

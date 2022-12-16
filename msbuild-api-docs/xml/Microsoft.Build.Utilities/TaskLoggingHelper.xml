@@ -32,7 +32,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Provides helper logging methods used by tasks.</summary>
+    <summary>
+            Helper logging class - contains all the logging methods used by tasks.
+            A TaskLoggingHelper object is passed to every task by MSBuild. For tasks that derive
+            from the Task class, it is provided in the Log property.
+            This class is thread safe: tasks can log from any threads.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -82,8 +86,9 @@
         <Parameter Name="taskInstance" Type="Microsoft.Build.Framework.ITask" />
       </Parameters>
       <Docs>
-        <param name="taskInstance">The task containing an instance of this task.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> class and associates it with the specified task instance.</summary>
+        <param name="taskInstance">task containing an instance of this class</param>
+        <summary>
+            public constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,7 +115,8 @@
       <Docs>
         <param name="buildEngine">The build engine.</param>
         <param name="taskName">The task name.</param>
-        <summary>Public constructor which can be used by task factories to assist them in logging messages.</summary>
+        <summary>
+            Public constructor which can be used by task factories to assist them in logging messages.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,7 +148,8 @@
         <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the build engine that is associated with the task.</summary>
+        <summary>
+            Shortcut property for getting our build engine - we retrieve it from the task instance</summary>
         <value>An <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> that represents the instance of the build engine that is associated with the task.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,10 +186,13 @@
         <Parameter Name="messageWithoutCodePrefix" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="message">The full message to parse that includes code prefix.</param>
-        <param name="messageWithoutCodePrefix">The message with the code prefix removed.</param>
-        <summary>Extracts the message code prefix from the given full message string.</summary>
-        <returns>The message code prefix that is extracted from the full message string, or <see langword="null" /> if there is no message code.</returns>
+        <param name="message">The message to parse.</param>
+        <param name="messageWithoutCodePrefix">The message with the code prefix removed (if any).</param>
+        <summary>
+            Extracts the message code (if any) prefixed to the given message string. Message code prefixes must match the
+            following .NET regular expression in order to be recognized: <c>^\s*[A-Za-z]+\d+:\s*</c>
+            Thread safe.</summary>
+        <returns>The message code extracted from the prefix, or null if there was no code.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -200,8 +210,7 @@
             If this method is given the string "MYTASK1001: This is an error message.", it will return "MYTASK1001" for the
             message code, and "This is an error message." for the message.
             </example>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="FormatResourceString">
@@ -245,7 +254,14 @@
       <Docs>
         <param name="resourceName">The name of the string resource to load.</param>
         <param name="args">Optional arguments for formatting the loaded string.</param>
-        <summary>Loads the specified resource string and optionally formats it using the given arguments.</summary>
+        <summary>
+            Loads the specified resource string and optionally formats it using the given arguments. The current thread's culture
+            is used for formatting.
+            
+            Requires the owner task to have registered its resources either via the Task (or TaskMarshalByRef) base
+            class constructor, or the Task.TaskResources (or AppDomainIsolatedTask.TaskResources) property.
+            
+            Thread safe.</summary>
         <returns>The formatted string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -257,10 +273,9 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">The string resource indicated by <paramref name="resourceName" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">The <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> property of the owner task is not set.</exception>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>resourceName</c> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the string resource indicated by <c>resourceName</c> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the <c>TaskResources</c> property of the owner task is not set.</exception>
       </Docs>
     </Member>
     <Member MemberName="FormatString">
@@ -304,7 +319,9 @@
       <Docs>
         <param name="unformatted">The string to format.</param>
         <param name="args">Arguments for formatting.</param>
-        <summary>Formats the given string using the given arguments.</summary>
+        <summary>
+            Formats the given string using the variable arguments passed in. The current thread's culture is used for formatting.
+            Thread safe.</summary>
         <returns>The formatted string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -314,8 +331,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="unformatted" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>unformatted</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetResourceMessage">
@@ -342,8 +358,10 @@
       </Parameters>
       <Docs>
         <param name="resourceName">The resource name.</param>
-        <summary>Gets the message from resource in task library.</summary>
-        <returns>The message from resource in task library.</returns>
+        <summary>
+            Get the message from resource in task library.
+            Thread safe.</summary>
+        <returns>The message from resource.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,7 +399,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value that indicates whether the task has logged any errors through this logging helper object.</summary>
+        <summary>
+            Has the task logged any errors through this logging helper object?</summary>
         <value>
           <see langword="true" /> if the task has logged any errors through this logging helper object; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -434,8 +453,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the prefix used to compose Help keywords from resource names.</summary>
-        <value>The prefix used to compose Help keywords from resource names.</value>
+        <summary>
+            Gets or sets the prefix used to compose help keywords from string resource names.</summary>
+        <value>The help keyword prefix string.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -467,9 +487,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>InitializeLifetimeService is called when the remote object is activated.  
- This method will determine how long the lifetime for the object will be.  
- Thread safe. However, InitializeLifetimeService and MarkAsInactive should only be called in that order, together or not at all, and no more than once.</summary>
+        <summary>
+            InitializeLifetimeService is called when the remote object is activated.
+            This method will determine how long the lifetime for the object will be.
+            Thread safe. However, InitializeLifetimeService and MarkAsInactive should
+            only be called in that order, together or not at all, and no more than once.</summary>
         <returns>The lease object to control this object's lifetime.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -544,7 +566,9 @@
       </Parameters>
       <Docs>
         <param name="commandLine">The command line string.</param>
-        <summary>Logs the command line for an underlying tool, executable file, or shell command of a task.</summary>
+        <summary>
+            Logs the command line for a task's underlying tool/executable/shell command.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -587,9 +611,12 @@
         <Parameter Name="commandLine" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="importance">One of the values of <see cref="T:Microsoft.Build.Framework.MessageImportance" /> that indicates the importance level of the command line.</param>
+        <param name="importance">The importance level of the command line.</param>
         <param name="commandLine">The command line string.</param>
-        <summary>Logs the command line for an underlying tool, executable file, or shell command of a task using the specified importance level.</summary>
+        <summary>
+            Logs the command line for a task's underlying tool/executable/shell
+            command, using the given importance level.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -649,10 +676,11 @@
         <param name="endColumnNumber">The last column of a range of columns in the file causing the message (set to zero if not available).</param>
         <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs a critical message using the specified string and other message details.  
- Thread safe.</summary>
+        <summary>
+            Logs a critical message using the specified string and other message details.
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogError">
@@ -719,9 +747,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="message">The message.</param>
+        <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs an error with the specified message.</summary>
+        <summary>
+            Logs an error using the specified string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -737,8 +767,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogError">
@@ -788,17 +817,19 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategory">The description of the error type.</param>
-        <param name="errorCode">The error code.</param>
-        <param name="helpKeyword">The Help keyword to associate with the error.</param>
-        <param name="file">The path to the file containing the error.</param>
-        <param name="lineNumber">The line in the file where the error occurs.</param>
-        <param name="columnNumber">The column in the file where the error occurs.</param>
-        <param name="endLineNumber">The end line in the file where the error occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the error occurs.</param>
-        <param name="message">The message.</param>
+        <param name="subcategory">Description of the error type (can be null).</param>
+        <param name="errorCode">The error code (can be null).</param>
+        <param name="helpKeyword">The help keyword for the host IDE (can be null).</param>
+        <param name="file">The path to the file containing the error (can be null).</param>
+        <param name="lineNumber">The line in the file where the error occurs (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file where the error occurs (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file where the error occurs (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file where the error occurs (set to zero if not available).</param>
+        <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs an error using the specified message and other error details.</summary>
+        <summary>
+            Logs an error using the specified string and other error details.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -809,8 +840,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogError">
@@ -914,8 +944,11 @@
         <Parameter Name="exception" Type="System.Exception" />
       </Parameters>
       <Docs>
-        <param name="exception">The exception to log.</param>
-        <summary>Logs an error using the message from the given exception.</summary>
+        <param name="exception">Exception to log.</param>
+        <summary>
+            Logs an error using the message from the given exception context.
+            No callstack will be shown.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -924,8 +957,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="e" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>e</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogErrorFromException">
@@ -966,10 +998,11 @@
         <Parameter Name="showStackTrace" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="exception">The exception to log</param>
-        <param name="showStackTrace">
-          <see langword="true" /> to include the stack trace in the log; otherwise, <see langword="false" />.</param>
-        <summary>Logs an error using the message, and optionally the stack trace, from the given exception.</summary>
+        <param name="exception">Exception to log.</param>
+        <param name="showStackTrace">If true, callstack will be appended to message.</param>
+        <summary>
+            Logs an error using the message (and optionally the stack-trace) from the given exception context.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -978,8 +1011,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="e" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogErrorFromException">
@@ -1016,16 +1048,16 @@
         <Parameter Name="file" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="exception">The exception to log.</param>
-        <param name="showStackTrace">
-          <see langword="true" /> to include the stack trace in the log; otherwise, <see langword="false" />.</param>
-        <param name="showDetail">
-          <see langword="true" /> to log exception types and any inner exceptions; otherwise, <see langword="false" />.</param>
-        <param name="file">The name of the file related to the exception, or <see langword="null" /> if the project file should be logged.</param>
-        <summary>Logs an error using the message, and optionally the stack-trace from the given exception and any inner exceptions.</summary>
+        <param name="exception">Exception to log.</param>
+        <param name="showStackTrace">If true, callstack will be appended to message.</param>
+        <param name="showDetail">Whether to log exception types and any inner exceptions.</param>
+        <param name="file">File related to the exception, or null if the project file should be logged</param>
+        <summary>
+            Logs an error using the message, and optionally the stack-trace from the given exception, and
+            optionally inner exceptions too.
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="e" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogErrorFromResources">
@@ -1083,8 +1115,10 @@
       </Parameters>
       <Docs>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs an error using the specified resource string.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs an error using the specified resource string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1093,8 +1127,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogErrorFromResources">
@@ -1144,17 +1177,19 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategoryResourceName">The name of the string resource that describes the error type.</param>
-        <param name="errorCode">The error code.</param>
-        <param name="helpKeyword">The Help keyword to associate with the error.</param>
-        <param name="file">The path to the file containing the error.</param>
-        <param name="lineNumber">The line in the file where the error occurs.</param>
-        <param name="columnNumber">The column in the file where the error occurs.</param>
-        <param name="endLineNumber">The end line in the file where the error occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the error occurs.</param>
-        <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs an error using the specified resource string and other error details.</summary>
+        <param name="subcategoryResourceName">The name of the string resource that describes the error type (can be null).</param>
+        <param name="errorCode">The error code (can be null).</param>
+        <param name="helpKeyword">The help keyword for the host IDE (can be null).</param>
+        <param name="file">The path to the file containing the error (can be null).</param>
+        <param name="lineNumber">The line in the file where the error occurs (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file where the error occurs (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file where the error occurs (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file where the error occurs (set to zero if not available).</param>
+        <param name="messageResourceName">The name of the string resource containing the error message.</param>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs an error using the specified resource string and other error details.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1165,8 +1200,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogErrorWithCodeFromResources">
@@ -1224,8 +1258,17 @@
       </Parameters>
       <Docs>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs an error with an error code using the specified resource string.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs an error using the specified resource string. 
+            If the message has an error code prefixed to it, the code is extracted and logged with the message. If a help keyword
+            prefix has been provided, a help keyword for the host IDE is also logged with the message. The help keyword is
+            composed by appending the string resource name to the prefix.
+            
+            A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
+            Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
+            
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1236,8 +1279,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogErrorWithCodeFromResources">
@@ -1285,15 +1327,24 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategoryResourceName">The name of the string resource that describes the error type.</param>
-        <param name="file">The path to the file containing the error.</param>
-        <param name="lineNumber">The line in the file where the error occurs.</param>
-        <param name="columnNumber">The column in the file where the error occurs.</param>
-        <param name="endLineNumber">The end line in the file where the error occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the error occurs.</param>
-        <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs an error using the specified resource string and other error details.</summary>
+        <param name="subcategoryResourceName">The name of the string resource that describes the error type (can be null).</param>
+        <param name="file">The path to the file containing the error (can be null).</param>
+        <param name="lineNumber">The line in the file where the error occurs (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file where the error occurs (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file where the error occurs (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file where the error occurs (set to zero if not available).</param>
+        <param name="messageResourceName">The name of the string resource containing the error message.</param>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs an error using the specified resource string and other error details. 
+            If the message has an error code prefixed, the code is extracted and logged with the message. If a
+            help keyword prefix has been provided, a help keyword for the host IDE is also logged with the message. The help
+            keyword is composed by appending the error message resource string name to the prefix.
+            
+            A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
+            Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
+            
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1308,8 +1359,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogExternalProjectFinished">
@@ -1346,12 +1396,13 @@
         <Parameter Name="succeeded" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="message">The text message.</param>
-        <param name="helpKeyword">The help keyword.</param>
-        <param name="projectFile">The name of the project.</param>
-        <param name="succeeded">
-          <see langword="true" /> to indicate that project was built successfully; otherwise, <see langword="false" />.</param>
-        <summary>Helps log the custom <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> build event.</summary>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword</param>
+        <param name="projectFile">project name</param>
+        <param name="succeeded">true indicates project built successfully</param>
+        <summary>
+            Small helper for logging the custom ExternalProjectFinished build event.
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1389,11 +1440,13 @@
         <Parameter Name="targetNames" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message">The text message.</param>
-        <param name="helpKeyword">The help keyword.</param>
-        <param name="projectFile">The name of the project.</param>
-        <param name="targetNames">The targets to build. An empty string indicates default targets.</param>
-        <summary>Helps log the custom <see cref="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" /> build event.</summary>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword</param>
+        <param name="projectFile">project name</param>
+        <param name="targetNames">targets we are going to build (empty indicates default targets)</param>
+        <summary>
+            Small helper for logging the custom ExternalProjectStarted build event
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1461,9 +1514,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="message">The message.</param>
-        <param name="messageArgs">The arguments for formatting the message.</param>
-        <summary>Logs a message with the specified string.</summary>
+        <param name="message">The message string.</param>
+        <param name="messageArgs">Optional arguments for formatting the message string.</param>
+        <summary>
+            Logs a message using the specified string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1479,8 +1534,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogMessage">
@@ -1523,15 +1577,16 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="importance">One of the enumeration values that specifies the importance of the message.</param>
-        <param name="message">The message.</param>
-        <param name="messageArgs">The arguments for formatting the message.</param>
-        <summary>Logs a message with the specified string and importance.</summary>
+        <param name="importance">The importance level of the message.</param>
+        <param name="message">The message string.</param>
+        <param name="messageArgs">Optional arguments for formatting the message string.</param>
+        <summary>
+            Logs a message of the given importance using the specified string.
+            Thread safe.</summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogMessage">
@@ -1585,10 +1640,11 @@
         <param name="importance">Importance of the message.</param>
         <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs a message using the specified string and other message details.  
- Thread safe.</summary>
+        <summary>
+            Logs a message using the specified string and other message details.
+            Thread safe.</summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogMessageFromResources">
@@ -1646,8 +1702,10 @@
       </Parameters>
       <Docs>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a message with the specified resource string.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs a message using the specified resource string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1656,8 +1714,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogMessageFromResources">
@@ -1700,15 +1757,16 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="importance">One of the enumeration values that specifies the importance of the message.</param>
+        <param name="importance">The importance level of the message.</param>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a message with the specified resource string and importance.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs a message of the given importance using the specified resource string.
+            Thread safe.</summary>
         <remarks>
             Take care to order the parameters correctly or the other overload will be called inadvertently.
             </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogMessageFromText">
@@ -1744,10 +1802,12 @@
       </Parameters>
       <Docs>
         <param name="lineOfText">The line of text to log from.</param>
-        <param name="messageImportance">One of the values of <see cref="T:Microsoft.Build.Framework.MessageImportance" /> that indicates the importance level of the command line.</param>
-        <summary>Logs an error message or warning from the given line of text.</summary>
-        <returns>
-          <see langword="true" /> if an error was logged; otherwise, <see langword="false" />.</returns>
+        <param name="messageImportance">The importance level for messages that are neither errors nor warnings.</param>
+        <summary>
+            Logs an error/warning/message from the given line of text. Errors/warnings are only logged for lines that fit a
+            particular (canonical) format -- all other lines are treated as messages.
+            Thread safe.</summary>
+        <returns>true, if an error was logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1756,8 +1816,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="lineOfText" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>lineOfText</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogMessagesFromFile">
@@ -1806,10 +1865,12 @@
         <Parameter Name="fileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileName">The name of the file to log messages from.</param>
-        <summary>Logs errors, warnings, and messages for each line of text in the given file.</summary>
-        <returns>
-          <see langword="true" /> to indicate at least one error was logged; otherwise, <see langword="false" />.</returns>
+        <param name="fileName">The file to log from.</param>
+        <summary>
+            Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
+            fit a particular (canonical) format -- the remaining lines are treated as messages.
+            Thread safe.</summary>
+        <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1818,8 +1879,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>filename</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogMessagesFromFile">
@@ -1854,11 +1914,13 @@
         <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
       </Parameters>
       <Docs>
-        <param name="fileName">The name of the file to log messages from.</param>
-        <param name="messageImportance">One of the enumeration values that specifies the importance of logged messages.</param>
-        <summary>Logs errors, warnings, and messages for each line of text in the given file. Also logs the importance of messages.</summary>
-        <returns>
-          <see langword="true" /> to indicate at least one error was logged; otherwise, <see langword="false" />.</returns>
+        <param name="fileName">The file to log from.</param>
+        <param name="messageImportance">The importance level for messages that are neither errors nor warnings.</param>
+        <summary>
+            Logs errors/warnings/messages for each line of text in the given file. Errors/warnings are only logged for lines that
+            fit a particular (canonical) format -- the remaining lines are treated as messages.
+            Thread safe.</summary>
+        <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1902,11 +1964,13 @@
         <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
       </Parameters>
       <Docs>
-        <param name="stream">A <see cref="T:System.IO.TextReader" /> that reads the stream to log from.</param>
-        <param name="messageImportance">One of the values of <see cref="T:Microsoft.Build.Framework.MessageImportance" /> that indicates the importance level of the command line.</param>
-        <summary>Logs an error message or warning from the given stream.</summary>
-        <returns>
-          <see langword="true" /> if an error was logged; otherwise, <see langword="false" />.</returns>
+        <param name="stream">The stream to log from.</param>
+        <param name="messageImportance">The importance level for messages that are neither errors nor warnings.</param>
+        <summary>
+            Logs errors/warnings/messages for each line of text in the given stream. Errors/warnings are only logged for lines
+            that fit a particular (canonical) format -- the remaining lines are treated as messages.
+            Thread safe.</summary>
+        <returns>true, if any errors were logged</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1915,8 +1979,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="stream" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>stream</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogsMessagesOfImportance">
@@ -2028,9 +2091,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="message">The message.</param>
+        <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs a warning with the specified message.</summary>
+        <summary>
+            Logs a warning using the specified string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2039,8 +2104,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogWarning">
@@ -2090,17 +2154,19 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategory">The description of the warning type.</param>
-        <param name="warningCode">The warning code.</param>
-        <param name="helpKeyword">The Help keyword to associate with the warning.</param>
-        <param name="file">The path to the file containing the warning.</param>
-        <param name="lineNumber">The line in the file where the warning occurs.</param>
-        <param name="columnNumber">The column in the file where the warning occurs.</param>
-        <param name="endLineNumber">The end line in the file where the warning occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the warning occurs.</param>
-        <param name="message">The message.</param>
+        <param name="subcategory">Description of the warning type (can be null).</param>
+        <param name="warningCode">The warning code (can be null).</param>
+        <param name="helpKeyword">The help keyword for the host IDE (can be null).</param>
+        <param name="file">The path to the file causing the warning (can be null).</param>
+        <param name="lineNumber">The line in the file causing the warning (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file causing the warning (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file causing the warning (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file causing the warning (set to zero if not available).</param>
+        <param name="message">The message string.</param>
         <param name="messageArgs">Optional arguments for formatting the message string.</param>
-        <summary>Logs a warning using the specified message and other warning details.</summary>
+        <summary>
+            Logs a warning using the specified string and other warning details.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2111,8 +2177,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="message" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>message</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogWarning">
@@ -2216,8 +2281,10 @@
         <Parameter Name="exception" Type="System.Exception" />
       </Parameters>
       <Docs>
-        <param name="exception">The exception to log.</param>
-        <summary>Logs a warning using the message from the specified exception.</summary>
+        <param name="exception">Exception to log.</param>
+        <summary>
+            Logs a warning using the message from the given exception context.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2226,8 +2293,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="e" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogWarningFromException">
@@ -2262,10 +2328,11 @@
         <Parameter Name="showStackTrace" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="exception">The exception to log</param>
-        <param name="showStackTrace">
-          <see langword="true" /> to include the stack trace in the log; otherwise, <see langword="false" />.</param>
-        <summary>Logs a warning using the message, and optionally the stack trace, from the given exception.</summary>
+        <param name="exception">Exception to log.</param>
+        <param name="showStackTrace">If true, the exception callstack is appended to the message.</param>
+        <summary>
+            Logs a warning using the message (and optionally the stack-trace) from the given exception context.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2274,8 +2341,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="e" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>exception</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogWarningFromResources">
@@ -2333,8 +2399,10 @@
       </Parameters>
       <Docs>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a warning using the specified resource string.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs a warning using the specified resource string.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2343,8 +2411,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogWarningFromResources">
@@ -2394,17 +2461,19 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategoryResourceName">The name of the string resource that describes the warning type.</param>
-        <param name="warningCode">The warning code.</param>
-        <param name="helpKeyword">The Help keyword to associate with the warning.</param>
-        <param name="file">The path to the file containing the warning.</param>
-        <param name="lineNumber">The line in the file where the warning occurs.</param>
-        <param name="columnNumber">The column in the file where the warning occurs.</param>
-        <param name="endLineNumber">The end line in the file where the warning occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the warning occurs.</param>
-        <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a warning using the specified resource string and other warning details.</summary>
+        <param name="subcategoryResourceName">The name of the string resource that describes the warning type (can be null).</param>
+        <param name="warningCode">The warning code (can be null).</param>
+        <param name="helpKeyword">The help keyword for the host IDE (can be null).</param>
+        <param name="file">The path to the file causing the warning (can be null).</param>
+        <param name="lineNumber">The line in the file causing the warning (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file causing the warning (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file causing the warning (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file causing the warning (set to zero if not available).</param>
+        <param name="messageResourceName">The name of the string resource containing the warning message.</param>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+            Logs a warning using the specified resource string and other warning details.
+            Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2415,8 +2484,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="LogWarningWithCodeFromResources">
@@ -2474,8 +2542,17 @@
       </Parameters>
       <Docs>
         <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a warning with a warning code using the specified resource string.</summary>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+             Logs a warning using the specified resource string.
+             If the message has a warning code prefixed to it, the code is extracted and logged with the message. If a help keyword
+             prefix has been provided, a help keyword for the host IDE is also logged with the message. The help keyword is
+             composed by appending the string resource name to the prefix.
+            
+             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
+             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
+            
+             Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2486,8 +2563,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="LogWarningWithCodeFromResources">
@@ -2535,15 +2611,24 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="subcategoryResourceName">The name of the string resource that describes the warning type.</param>
-        <param name="file">The path to the file containing the warning.</param>
-        <param name="lineNumber">The line in the file where the warning occurs.</param>
-        <param name="columnNumber">The column in the file where the warning occurs.</param>
-        <param name="endLineNumber">The end line in the file where the warning occurs.</param>
-        <param name="endColumnNumber">The end column in the file where the warning occurs.</param>
-        <param name="messageResourceName">The name of the string resource to load.</param>
-        <param name="messageArgs">The arguments for formatting the loaded string.</param>
-        <summary>Logs a warning with a warning code using the specified resource string and other warning details.</summary>
+        <param name="subcategoryResourceName">The name of the string resource that describes the warning type (can be null).</param>
+        <param name="file">The path to the file causing the warning (can be null).</param>
+        <param name="lineNumber">The line in the file causing the warning (set to zero if not available).</param>
+        <param name="columnNumber">The column in the file causing the warning (set to zero if not available).</param>
+        <param name="endLineNumber">The last line of a range of lines in the file causing the warning (set to zero if not available).</param>
+        <param name="endColumnNumber">The last column of a range of columns in the file causing the warning (set to zero if not available).</param>
+        <param name="messageResourceName">The name of the string resource containing the warning message.</param>
+        <param name="messageArgs">Optional arguments for formatting the loaded string.</param>
+        <summary>
+             Logs a warning using the specified resource string and other warning details.
+             If the message has a warning code, the code is extracted and logged with the message.
+             If a help keyword prefix has been provided, a help keyword for the host IDE is also logged with the message. The help
+             keyword is composed by appending the warning message resource string name to the prefix.
+            
+             A task can provide a help keyword prefix either via the Task (or TaskMarshalByRef) base class constructor, or the
+             Task.HelpKeywordPrefix (or AppDomainIsolatedTask.HelpKeywordPrefix) property.
+            
+             Thread safe.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2558,8 +2643,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="messageResourceName" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <c>messageResourceName</c> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="MarkAsInactive">
@@ -2583,7 +2667,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Notifies this <see langword="TaskLoggingHelper" /> that it is no longer needed.</summary>
+        <summary>
+            Notifies this object that its work is done.
+            Thread safe. However, InitializeLifetimeService and MarkAsInactive should
+            only be called in that order, together or not at all, and no more than once.</summary>
         <remarks>
             Indicates to the TaskLoggingHelper that it is no longer needed.
             </remarks>
@@ -2623,8 +2710,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the name of the parent task.</summary>
-        <value>The name of the parent task.</value>
+        <summary>
+            Gets the name of the parent task.</summary>
+        <value>Task name string.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2666,7 +2754,9 @@
         <ReturnType>System.Resources.ResourceManager</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the culture-specific resources used by the logging methods.</summary>
+        <summary>
+            Used to load culture-specific resources. Derived classes should register their resources either during construction, or
+            via this property, if they have localized strings.</summary>
         <value>A <see cref="T:System.Resources.ResourceManager" /> that represents the culture-specific resources used by the logging methods. This value can be <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

@@ -26,7 +26,8 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>Message</c> task. Use the <c>Message</c> element in your project file to create and execute this task. For usage and parameter information, see Message Task.</summary>
+    <summary>
+            Task that simply emits a message. Importance defaults to high if not specified.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -87,7 +88,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Message code</summary>
+        <summary>
+            Message code</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -149,8 +151,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Relevant file if any.  
- If none is provided and this is a critical message, the file containing the Message task will be used.</summary>
+        <summary>
+            Relevant file if any.
+            If none is provided and this is a critical message, the file containing the Message
+            task will be used.</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -176,7 +180,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Message help keyword</summary>
+        <summary>
+            Message help keyword</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -220,7 +225,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the importance of the message.</summary>
+        <summary>
+            Importance: high, normal, low (default normal)</summary>
         <value>The importance of the message.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -253,7 +259,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Indicates if this is a critical message</summary>
+        <summary>
+            Indicates if this is a critical message</summary>
         <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -297,7 +304,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the error text to log.</summary>
+        <summary>
+            Text to log.</summary>
         <value>The error text to log.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

@@ -26,7 +26,8 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>GenerateBootstrapper</c> task. Use the <c>GenerateBootstrapper</c> element in your project file to create and execute this task. For usage and parameter information, see GenerateBootstrapper Task.</summary>
+    <summary>
+            Generates a bootstrapper for ClickOnce deployment projects.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -633,9 +634,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Executes the <c>GenerateBootstrapper</c> task.</summary>
-        <returns>
-          <see langword="true" /> if the task execution succeeded; otherwise, <see langword="false" />.</returns>
+        <summary>
+            Generate the bootstrapper.</summary>
+        <returns> Return true on success, false on failure.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>
@@ -678,8 +679,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the secondary culture to use for the bootstraper UI and installation prerequisites.</summary>
-        <value>The secondary culture to use for the bootstraper UI and installation prerequisites.</value>
+        <summary>Gets or sets the secondary culture to use for the bootstrapper UI and installation prerequisites.</summary>
+        <value>The secondary culture to use for the bootstrapper UI and installation prerequisites.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
       </Docs>

@@ -302,7 +302,7 @@
         <param name="onlyLogCriticalEvents">If set to true, only critical events will be logged.</param>
         <param name="loadProjectsReadOnly">If set to true, load all projects as read-only.</param>
         <param name="useAsynchronousLogging">If set to true, asynchronous logging will be used. <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose" /> has to called to clear resources used by async logging.</param>
-        <param name="reuseProjectRootElementCache">If set to true, it will try to reuse ProjectRootElementCacheBase singleton.</param>
+        <param name="reuseProjectRootElementCache">If set to true, it will try to reuse <see cref="T:Microsoft.Build.Evaluation.ProjectRootElementCacheBase" /> singleton.</param>
         <summary>
             Instantiates a project collection with specified global properties and loggers and using the
             specified toolset locations, node count, and setting of onlyLogCriticalEvents.

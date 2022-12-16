@@ -39,7 +39,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents the Csc host compiler.</summary>
+    <summary>
+            Defines an interface for the Csc task to communicate with the IDE.  In particular,
+            the Csc task will delegate the actual compilation to the IDE, rather than shelling
+            out to the command-line compilers.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -67,7 +70,7 @@
       </Parameters>
       <Docs>
         <param name="applicationConfiguration">The application configuration.</param>
-        <summary>Set the application configuration.</summary>
+        <summary>Sets the application configuration.</summary>
         <returns>
           <see langword="true" /> if the method was successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>

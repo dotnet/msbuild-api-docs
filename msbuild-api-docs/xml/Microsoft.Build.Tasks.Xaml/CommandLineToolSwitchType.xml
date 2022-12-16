@@ -17,7 +17,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>Enumerates the types for command line switches.</summary>
+    <summary>
+            This enumeration specifies the different types for each switch in a tool
+            The types are used in the documentation</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -42,7 +44,11 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>Indicates a Boolean type.</summary>
+        <summary>
+            The boolean type has a boolean value, and there are types: one that can have a flag appended on the end
+            and one that can't
+            e.g. GlobalOptimizations = "true" would be /Og, and GlobalOptimizations="false" would be /Og-, but
+            WarnAsError = "true" would be /WX, while WarnAsError = "false" would be nothing.</summary>
       </Docs>
     </Member>
     <Member MemberName="Integer">
@@ -66,7 +72,11 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>Indicates an integer type.</summary>
+        <summary>
+            The integer switch is used for properties that have several different integer values,
+            and depending on the value the property is set to, appends an integer to the end 
+            of a certain switch
+            e.g. WarningLevel = "0" is /W0, WarningLevel = "2" is /W2</summary>
       </Docs>
     </Member>
     <Member MemberName="ITaskItemArray">
@@ -90,7 +100,9 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>Indicates a task item array type.</summary>
+        <summary>
+            The ITaskItemArray type is used for properties that pass multiple files, but
+            want to keep the metadata. Otherwise, it is used in the same way as a StringArray type.</summary>
       </Docs>
     </Member>
     <Member MemberName="String">
@@ -114,7 +126,12 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>Indicates a string type.</summary>
+        <summary>
+            The string switch is used for two kinds of properties.
+            The first is the kind that has multiple values, and has a different switch for each value
+            e.g. Optimization="disabled" is /Od, "Full" is /Ox
+            The second is the kind that has a literal string appended to the end of a switch.
+            This type is similar to the File type, but in this case, will never get quoted.</summary>
       </Docs>
     </Member>
     <Member MemberName="StringArray">
@@ -138,7 +155,10 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>Indicates an array of strings type.</summary>
+        <summary>
+            The stringarray switch is used for properties that may have more 
+            than one string appended to the end of the switch
+            e.g. InjectPrecompiledHeaderReference = myfile is /Ylmyfile</summary>
       </Docs>
     </Member>
   </Members>

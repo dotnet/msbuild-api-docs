@@ -26,7 +26,8 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements the <c>GetFrameworkSdkPath</c> task. Use the <c>GetFrameworkSdkPath</c> element in your project file to create and execute this task. For usage and parameter information, see GetFrameworkSdkPath Task.</summary>
+    <summary>
+            Returns paths to the frameworks SDK.</summary>
     <remarks>To be added.</remarks>
     <forInternalUseOnly />
   </Docs>
@@ -96,9 +97,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Returns <see langword="true" /> in all cases.</summary>
-        <returns>
-          <see langword="true" /> in all cases.</returns>
+        <summary>
+            Get the SDK.</summary>
+        <returns>true</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -140,7 +141,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path to the .NET Framework 2.0 SDK.</summary>
+        <summary>
+            The path to the v2.0 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
         <value>The path to the .NET Framework 2.0 SDK.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -176,7 +178,8 @@
         <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path to the .NET Framework 3.5 SDK.</summary>
+        <summary>
+            The path to the v3.5 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
         <value>The path to the .NET Framework 3.5 SDK.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -208,7 +211,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The path to the v4.0 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
+        <summary>
+            The path to the v4.0 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -269,7 +273,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The path to the v4.5 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
+        <summary>
+            The path to the v4.5 .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
         <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
@@ -367,7 +372,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path to the latest version of the .NET Framework SDK.</summary>
+        <summary>
+            The path to the latest .NET SDK if it could be found. It will be String.Empty if the SDK was not found.</summary>
         <value>The path to the latest version of the .NET Framework SDK.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />

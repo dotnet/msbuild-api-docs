@@ -32,7 +32,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Describes base functionality common to both file references and assembly references.</summary>
+    <summary>
+            Describes base functionality common to both file and assembly references.</summary>
     <remarks>Note derived classes are serialization formats. Do not rename or remove private members.</remarks>
   </Docs>
   <Members>
@@ -149,7 +150,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the group for on-demand download functionality.</summary>
+        <summary>
+            Specifies the group for on-demand download functionality. A blank string indicates a primary file.</summary>
         <value>A string indicating the group for on-demand download functionality. A blank string indicates a primary file.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -192,7 +194,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the SHA1 hash of the file.</summary>
+        <summary>
+            Specifies the SHA1 hash of the file.</summary>
         <value>A string indicating the SHA1 hash of the file.</value>
         <remarks>Due to collision problems with SHA1, Microsoft recommends a security model based on SHA256 or better.</remarks>
       </Docs>
@@ -231,7 +234,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets whether the file is optional for on-demand download functionality.</summary>
+        <summary>
+            Specifies whether the file is optional for on-deman download functionality.</summary>
         <value>A Boolean value indicating whether the file is optional for on-demand download functionality.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -278,7 +282,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the resolved path to the file. This path is determined by the Resolve method, and is used to compute the file information by the <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo" /> method.</summary>
+        <summary>
+            Specifies the resolved path to the file. This path is determined by the Resolve method, and is used to compute the file information by the UpdateFileInfo method.</summary>
         <value>A string indicating the resolved path to the file.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -317,7 +322,8 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the file size in bytes.</summary>
+        <summary>
+            Specifies the file size in bytes.</summary>
         <value>The file size in bytes.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -404,7 +410,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the source path of the file.</summary>
+        <summary>
+            Specifies the source path of the file.</summary>
         <value>A string indicating the source path of the file.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -451,7 +458,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the target path of the file. This is the path that is used for specification in the generated manifest.</summary>
+        <summary>
+            Specifies the target path of the file. This is the path that is used for specification in the generated manifest.</summary>
         <value>A string indicating the target path of the file.</value>
         <remarks>To be added.</remarks>
       </Docs>
