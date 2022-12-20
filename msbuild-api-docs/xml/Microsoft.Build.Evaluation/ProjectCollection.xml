@@ -1,6 +1,6 @@
 <Type Name="ProjectCollection" FullName="Microsoft.Build.Evaluation.ProjectCollection">
   <TypeSignature Language="C#" Value="public class ProjectCollection : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProjectCollection extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-15;msbuild-15-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProjectCollection extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-15;msbuild-15-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectCollection&#xA;Implements IDisposable" />
   <TypeSignature Language="F#" Value="type ProjectCollection = class&#xA;    interface IDisposable" />
@@ -260,6 +260,49 @@
         <param name="maxNodeCount">The maximum number of nodes to use for building.</param>
         <param name="onlyLogCriticalEvents">If set to true, only critical events will be logged.</param>
         <param name="loadProjectsReadOnly">If set to true, load all projects as read-only.</param>
+        <summary>
+            Instantiates a project collection with specified global properties and loggers and using the
+            specified toolset locations, node count, and setting of onlyLogCriticalEvents.
+            Global properties and loggers may be null.
+            Throws InvalidProjectFileException if any of the global properties are reserved.
+            May throw InvalidToolsetDefinitionException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int32 maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord), toolsetDefinitionLocations As ToolsetDefinitionLocations, maxNodeCount As Integer, onlyLogCriticalEvents As Boolean, loadProjectsReadOnly As Boolean, useAsynchronousLogging As Boolean, reuseProjectRootElementCache As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; * Microsoft.Build.Evaluation.ToolsetDefinitionLocations * int * bool * bool * bool * bool -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection (globalProperties, loggers, remoteLoggers, toolsetDefinitionLocations, maxNodeCount, onlyLogCriticalEvents, loadProjectsReadOnly, useAsynchronousLogging, reuseProjectRootElementCache)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProjectCollection(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers, Microsoft::Build::Evaluation::ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="toolsetDefinitionLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="onlyLogCriticalEvents" Type="System.Boolean" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="loadProjectsReadOnly" Type="System.Boolean" Index="6" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="useAsynchronousLogging" Type="System.Boolean" Index="7" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="reuseProjectRootElementCache" Type="System.Boolean" Index="8" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">The default global properties to use. May be null.</param>
+        <param name="loggers">The loggers to register. May be null and specified to any build instead.</param>
+        <param name="remoteLoggers">Any remote loggers to register. May be null and specified to any build instead.</param>
+        <param name="toolsetDefinitionLocations">The locations from which to load toolsets.</param>
+        <param name="maxNodeCount">The maximum number of nodes to use for building.</param>
+        <param name="onlyLogCriticalEvents">If set to true, only critical events will be logged.</param>
+        <param name="loadProjectsReadOnly">If set to true, load all projects as read-only.</param>
+        <param name="useAsynchronousLogging">If set to true, asynchronous logging will be used. <see cref="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose" /> has to called to clear resources used by async logging.</param>
+        <param name="reuseProjectRootElementCache">If set to true, it will try to reuse ProjectRootElementCacheBase singleton.</param>
         <summary>
             Instantiates a project collection with specified global properties and loggers and using the
             specified toolset locations, node count, and setting of onlyLogCriticalEvents.
@@ -1235,7 +1278,7 @@
       <MemberSignature Language="C#" Value="public event Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler ProjectAdded;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Build.Evaluation.ProjectCollection/ProjectAddedEventHandler ProjectAdded" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectAdded" />
-      <MemberSignature Language="VB.NET" Value="Public Event ProjectAdded As ProjectCollection.ProjectAddedEventHandler " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectAdded As ProjectCollection.ProjectAddedEventHandler " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.ProjectAdded : Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler " Usage="member this.ProjectAdded : Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Build::Evaluation::ProjectCollection::ProjectAddedEventHandler ^ ProjectAdded;" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectAdded As ProjectCollection.ProjectAddedEventHandler " FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
@@ -1259,7 +1302,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; ProjectChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; ProjectChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Event ProjectChanged As EventHandler(Of ProjectChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectChanged As EventHandler(Of ProjectChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.ProjectChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; " Usage="member this.ProjectChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Build::Evaluation::ProjectChangedEventArgs ^&gt; ^ ProjectChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectChanged As EventHandler(Of ProjectChangedEventArgs) " FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
@@ -1285,7 +1328,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; ProjectCollectionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; ProjectCollectionChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectCollectionChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Event ProjectCollectionChanged As EventHandler(Of ProjectCollectionChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectCollectionChanged As EventHandler(Of ProjectCollectionChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.ProjectCollectionChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; " Usage="member this.ProjectCollectionChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Build::Evaluation::ProjectCollectionChangedEventArgs ^&gt; ^ ProjectCollectionChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectCollectionChanged As EventHandler(Of ProjectCollectionChangedEventArgs) " FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
@@ -1311,7 +1354,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; ProjectXmlChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; ProjectXmlChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Build.Evaluation.ProjectCollection.ProjectXmlChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Event ProjectXmlChanged As EventHandler(Of ProjectXmlChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8" />
+      <MemberSignature Language="VB.NET" Value="Public Event ProjectXmlChanged As EventHandler(Of ProjectXmlChangedEventArgs) " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.ProjectXmlChanged : EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; " Usage="member this.ProjectXmlChanged : System.EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Build::Evaluation::ProjectXmlChangedEventArgs ^&gt; ^ ProjectXmlChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProjectXmlChanged As EventHandler(Of ProjectXmlChangedEventArgs) " FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2" />
@@ -1604,7 +1647,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+        <Attribute FrameworkAlternate="msbuild-15;msbuild-15-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[get: System.Diagnostics.DebuggerStepThrough]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
         </Attribute>
