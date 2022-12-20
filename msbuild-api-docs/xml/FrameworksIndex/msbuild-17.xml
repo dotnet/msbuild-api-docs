@@ -612,6 +612,7 @@
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},Microsoft.Build.Evaluation.ToolsetDefinitionLocations)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.AddToolset(Microsoft.Build.Evaluation.Toolset)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.ContainsToolset(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose" />
@@ -1259,6 +1260,30 @@
       <Member Id="F:Microsoft.Build.Execution.TargetResultCode.Success" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.Experimental">
+    <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.MSBuildClientExitResult" Id="T:Microsoft.Build.Experimental.MSBuildClientExitResult">
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClientExitResult.#ctor" />
+      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.MSBuildClientExitType" Id="T:Microsoft.Build.Experimental.MSBuildClientExitType">
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.ServerBusy" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode">
+      <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
+      <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.Run(System.Exception@)" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode/BuildCallback" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback" />
+  </Namespace>
   <Namespace Name="Microsoft.Build.Experimental.ProjectCache">
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheContext" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheContext">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheContext.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Microsoft.Build.FileSystem.MSBuildFileSystemBase,Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
@@ -1297,14 +1322,11 @@
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.PluginTargetResult.TaskItems" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor" Id="T:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor">
-      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath(System.String,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
-      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromInstance(Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
-      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.GetDetailedDescription" />
-      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.EntryPoints" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.FromInstance(Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.PluginAssemblyPath" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.PluginInstance" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.PluginSettings" />
-      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor.ProjectGraph" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.ProjectCacheException" Id="T:Microsoft.Build.Experimental.ProjectCache.ProjectCacheException">
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.ProjectCacheException.ErrorCode" />
@@ -3693,6 +3715,12 @@
       <Member Id="P:Microsoft.Build.Tasks.RoslynCodeTaskFactory.FactoryName" />
       <Member Id="P:Microsoft.Build.Tasks.RoslynCodeTaskFactory.TaskType" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.SetRidAgnosticValueForProjects" Id="T:Microsoft.Build.Tasks.SetRidAgnosticValueForProjects">
+      <Member Id="M:Microsoft.Build.Tasks.SetRidAgnosticValueForProjects.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.SetRidAgnosticValueForProjects.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.SetRidAgnosticValueForProjects.Projects" />
+      <Member Id="P:Microsoft.Build.Tasks.SetRidAgnosticValueForProjects.UpdatedProjects" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.SGen" Id="T:Microsoft.Build.Tasks.SGen">
       <Member Id="M:Microsoft.Build.Tasks.SGen.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.SGen.GenerateCommandLineCommands" />
@@ -3879,6 +3907,7 @@
       <Member Id="M:Microsoft.Build.Tasks.XslTransformation.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.OutputPaths" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.Parameters" />
+      <Member Id="P:Microsoft.Build.Tasks.XslTransformation.PreserveWhitespace" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.UseTrustedSettings" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.XmlContent" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.XmlInputPaths" />

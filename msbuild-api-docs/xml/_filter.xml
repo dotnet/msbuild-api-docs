@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <filter>
   <apiFilter apply="true">
-    <namespaceFilter name="System.Deployment.Internal.CodeSigning">
+    <namespaceFilter name="Microsoft.Build.Experimental">
+     <typeFilter name="*" expose="false" />
+    </namespaceFilter>
+    <namespaceFilter name="Microsoft.Build.Experimental.ProjectCache">
      <typeFilter name="*" expose="false" />
     </namespaceFilter>
     <namespaceFilter name="Microsoft.VisualStudio.Setup.Configuration">
+     <typeFilter name="*" expose="false" />
+    </namespaceFilter>
+    <namespaceFilter name="System.Deployment.Internal.CodeSigning">
      <typeFilter name="*" expose="false" />
     </namespaceFilter>
   </apiFilter>

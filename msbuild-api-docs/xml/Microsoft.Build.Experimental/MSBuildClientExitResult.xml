@@ -1,0 +1,90 @@
+<Type Name="MSBuildClientExitResult" FullName="Microsoft.Build.Experimental.MSBuildClientExitResult">
+  <TypeSignature Language="C#" Value="public sealed class MSBuildClientExitResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MSBuildClientExitResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.MSBuildClientExitResult" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MSBuildClientExitResult" />
+  <TypeSignature Language="F#" Value="type MSBuildClientExitResult = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildClientExitResult sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Enumeration of the various ways in which the MSBuildClient execution can exit.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildClientExitResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.MSBuildClientExitResult.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuildClientExitResult();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildAppExitTypeString">
+      <MemberSignature Language="C#" Value="public string? MSBuildAppExitTypeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildAppExitTypeString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <MemberSignature Language="VB.NET" Value="Public Property MSBuildAppExitTypeString As String" />
+      <MemberSignature Language="F#" Value="member this.MSBuildAppExitTypeString : string with get, set" Usage="Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MSBuildAppExitTypeString { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The build exit type. Possible values: MSBuildApp.ExitType serialized into a string.
+            This field is null if MSBuild client execution was not successful.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildClientExitType">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.MSBuildClientExitType MSBuildClientExitType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Experimental.MSBuildClientExitType MSBuildClientExitType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
+      <MemberSignature Language="VB.NET" Value="Public Property MSBuildClientExitType As MSBuildClientExitType" />
+      <MemberSignature Language="F#" Value="member this.MSBuildClientExitType : Microsoft.Build.Experimental.MSBuildClientExitType with get, set" Usage="Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::MSBuildClientExitType MSBuildClientExitType { Microsoft::Build::Experimental::MSBuildClientExitType get(); void set(Microsoft::Build::Experimental::MSBuildClientExitType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The MSBuild client exit type.
+            Covers different ways MSBuild client execution can finish.
+            Build errors are not included. The client could finish successfully and the build at the same time could result in a build error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
