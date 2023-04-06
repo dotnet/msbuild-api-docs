@@ -617,9 +617,8 @@
         <Parameter Name="entryProjectTargets" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="entryProjectTargets">
-                The target list for the <see cref="P:Microsoft.Build.Graph.ProjectGraph.GraphRoots" />. May be null or empty, in which case the entry projects' default
-                targets will be used.
+        <param name="entryProjectTargets">The target list for the entry project. May be null or empty, in which case the entry
+            projects' default targets will be used.
             </param>
         <summary>
                 Gets the target list to be executed for every project in the graph, given a particular target list for the entry

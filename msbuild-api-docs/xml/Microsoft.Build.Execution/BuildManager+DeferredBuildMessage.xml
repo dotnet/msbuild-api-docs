@@ -49,6 +49,52 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeferredBuildMessage (string text, Microsoft.Build.Framework.MessageImportance importance, string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, valuetype Microsoft.Build.Framework.MessageImportance importance, string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (text As String, importance As MessageImportance, filePath As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage : string * Microsoft.Build.Framework.MessageImportance * string -&gt; Microsoft.Build.Execution.BuildManager.DeferredBuildMessage" Usage="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage (text, importance, filePath)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DeferredBuildMessage(System::String ^ text, Microsoft::Build::Framework::MessageImportance importance, System::String ^ filePath);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" Index="1" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="filePath" Type="System.String" Index="2" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="importance">To be added.</param>
+        <param name="filePath">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilePath As String" />
+      <MemberSignature Language="F#" Value="member this.FilePath : string" Usage="Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FilePath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Importance">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.MessageImportance Importance { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance Importance" />
