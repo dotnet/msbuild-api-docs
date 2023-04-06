@@ -864,6 +864,8 @@
     </Type>
     <Type Name="Microsoft.Build.Execution.BuildManager/DeferredBuildMessage" Id="T:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage">
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance,System.String)" />
+      <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Importance" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Text" />
     </Type>
@@ -1277,6 +1279,7 @@
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnknownServerState" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode">
       <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
@@ -1780,6 +1783,11 @@
     <Type Name="Microsoft.Build.Framework.RequiredRuntimeAttribute" Id="T:Microsoft.Build.Framework.RequiredRuntimeAttribute">
       <Member Id="M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)" />
       <Member Id="P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ResponseFileUsedEventArgs" Id="T:Microsoft.Build.Framework.ResponseFileUsedEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ResponseFileUsedEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.ResponseFileUsedEventArgs.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Build.Framework.ResponseFileUsedEventArgs.ResponseFilePath" />
     </Type>
     <Type Name="Microsoft.Build.Framework.RunInMTAAttribute" Id="T:Microsoft.Build.Framework.RunInMTAAttribute">
       <Member Id="M:Microsoft.Build.Framework.RunInMTAAttribute.#ctor" />
@@ -2650,6 +2658,9 @@
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetLogicalProject" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetProperty(System.String)" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetPropertyValue(System.String)" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesContains(System.String)" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesCount" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesEnumerable" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.MarkDirty" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.ReevaluateIfNecessary(Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveGlobalProperty(System.String)" />
@@ -4945,6 +4956,7 @@
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version471" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version472" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version48" />
+      <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version481" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.VersionLatest" />
     </Type>
     <Type Name="Microsoft.Build.Utilities.TargetPlatformSDK" Id="T:Microsoft.Build.Utilities.TargetPlatformSDK">

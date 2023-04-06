@@ -128,5 +128,31 @@
             </summary>
       </Docs>
     </Member>
+    <Member MemberName="UnknownServerState">
+      <MemberSignature Language="C#" Value="UnknownServerState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.MSBuildClientExitType UnknownServerState = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnknownServerState" />
+      <MemberSignature Language="VB.NET" Value="UnknownServerState" />
+      <MemberSignature Language="F#" Value="UnknownServerState = 5" Usage="Microsoft.Build.Experimental.MSBuildClientExitType.UnknownServerState" />
+      <MemberSignature Language="C++ CLI" Value="UnknownServerState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The client is not able to identify the server state.
+            </summary>
+        <remarks>
+            This may happen when mutex that is regulating the server state throws.
+            See: https://github.com/dotnet/msbuild/issues/7993.
+            </remarks>
+      </Docs>
+    </Member>
   </Members>
 </Type>
