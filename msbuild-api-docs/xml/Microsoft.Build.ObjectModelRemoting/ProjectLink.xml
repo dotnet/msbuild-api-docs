@@ -630,6 +630,84 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GlobalPropertiesContains">
+      <MemberSignature Language="C#" Value="public virtual bool GlobalPropertiesContains (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GlobalPropertiesContains(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesContains(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GlobalPropertiesContains (key As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member GlobalPropertiesContains : string -&gt; bool&#xA;override this.GlobalPropertiesContains : string -&gt; bool" Usage="projectLink.GlobalPropertiesContains key" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool GlobalPropertiesContains(System::String ^ key);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key to check for in the dictionary</param>
+        <summary>
+            Indicates whether a specified key is in the global properties dictionary. This provides a default implementation
+            to avoid a breaking change, but it is often overriden for performance.
+            </summary>
+        <returns>True if the key is in the global properties; false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalPropertiesCount">
+      <MemberSignature Language="C#" Value="public virtual int GlobalPropertiesCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GlobalPropertiesCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesCount" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GlobalPropertiesCount () As Integer" />
+      <MemberSignature Language="F#" Value="abstract member GlobalPropertiesCount : unit -&gt; int&#xA;override this.GlobalPropertiesCount : unit -&gt; int" Usage="projectLink.GlobalPropertiesCount " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int GlobalPropertiesCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Indicates how many properties are in the global properties dictionary. This provides a default implementation to
+            avoid a breaking change, but it is often overriden for performance.
+            </summary>
+        <returns>The number of properties in the global properties dictionary</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalPropertiesEnumerable">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; GlobalPropertiesEnumerable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; GlobalPropertiesEnumerable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesEnumerable" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GlobalPropertiesEnumerable () As IEnumerable(Of KeyValuePair(Of String, String))" />
+      <MemberSignature Language="F#" Value="abstract member GlobalPropertiesEnumerable : unit -&gt; seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;&#xA;override this.GlobalPropertiesEnumerable : unit -&gt; seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;" Usage="projectLink.GlobalPropertiesEnumerable " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ GlobalPropertiesEnumerable();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Allows enumeration over the keys and values in the global properties dictionary. This provides a default
+            implementation to avoid a breaking change, but it can be overriden for performance.
+            </summary>
+        <returns>An enumerable of the keys and values in the global properties dictionary</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Imports">
       <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt; Imports { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.Build.Evaluation.ResolvedImport&gt; Imports" />
