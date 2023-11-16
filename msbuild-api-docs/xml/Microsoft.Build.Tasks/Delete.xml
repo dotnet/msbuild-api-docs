@@ -1,10 +1,15 @@
 <Type Name="Delete" FullName="Microsoft.Build.Tasks.Delete">
-  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Delete" />
-  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.IIncrementalTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask, IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17" />
   <TypeSignature Language="C#" Value="public sealed class Delete : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Delete&#xA;Inherits TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
@@ -39,6 +44,9 @@
     </Interface>
     <Interface FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="msbuild-17">
+      <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -202,6 +210,29 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Delete.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool with get, set" Usage="Microsoft.Build.Tasks.Delete.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set question parameter to verify if this is incremental.
+            </summary>
+        <value>To be added.</value>
+        <remarks />
+      </Docs>
+    </Member>
     <Member MemberName="Files">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Files { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Files" />
@@ -244,6 +275,52 @@
         <value>The files to delete.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Retries">
+      <MemberSignature Language="C#" Value="public int Retries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Retries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Delete.Retries" />
+      <MemberSignature Language="VB.NET" Value="Public Property Retries As Integer" />
+      <MemberSignature Language="F#" Value="member this.Retries : int with get, set" Usage="Microsoft.Build.Tasks.Delete.Retries" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Retries { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the number of times to attempt to copy, if all previous attempts failed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryDelayMilliseconds">
+      <MemberSignature Language="C#" Value="public int RetryDelayMilliseconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RetryDelayMilliseconds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Delete.RetryDelayMilliseconds" />
+      <MemberSignature Language="VB.NET" Value="Public Property RetryDelayMilliseconds As Integer" />
+      <MemberSignature Language="F#" Value="member this.RetryDelayMilliseconds : int with get, set" Usage="Microsoft.Build.Tasks.Delete.RetryDelayMilliseconds" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RetryDelayMilliseconds { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the delay, in milliseconds, between any necessary retries.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="TreatErrorsAsWarnings">

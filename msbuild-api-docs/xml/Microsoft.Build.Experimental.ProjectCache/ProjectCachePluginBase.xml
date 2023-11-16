@@ -135,5 +135,108 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="HandleFileAccess">
+      <MemberSignature Language="C#" Value="public virtual void HandleFileAccess (Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Experimental.FileAccess.FileAccessData fileAccessData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleFileAccess(valuetype Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, valuetype Microsoft.Build.Experimental.FileAccess.FileAccessData fileAccessData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleFileAccess(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.FileAccessData)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub HandleFileAccess (fileAccessContext As FileAccessContext, fileAccessData As FileAccessData)" />
+      <MemberSignature Language="F#" Value="abstract member HandleFileAccess : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.FileAccessData -&gt; unit&#xA;override this.HandleFileAccess : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.FileAccessData -&gt; unit" Usage="projectCachePluginBase.HandleFileAccess (fileAccessContext, fileAccessData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void HandleFileAccess(Microsoft::Build::Experimental::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Experimental::FileAccess::FileAccessData fileAccessData);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17">
+          <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="fileAccessData" Type="Microsoft.Build.Experimental.FileAccess.FileAccessData" Index="1" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="fileAccessData">To be added.</param>
+        <summary>
+                Called for each file access from an MSBuild node or one of its children.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProcess">
+      <MemberSignature Language="C#" Value="public virtual void HandleProcess (Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Experimental.FileAccess.ProcessData processData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleProcess(valuetype Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, valuetype Microsoft.Build.Experimental.FileAccess.ProcessData processData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleProcess(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.ProcessData)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub HandleProcess (fileAccessContext As FileAccessContext, processData As ProcessData)" />
+      <MemberSignature Language="F#" Value="abstract member HandleProcess : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.ProcessData -&gt; unit&#xA;override this.HandleProcess : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.ProcessData -&gt; unit" Usage="projectCachePluginBase.HandleProcess (fileAccessContext, processData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void HandleProcess(Microsoft::Build::Experimental::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Experimental::FileAccess::ProcessData processData);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17">
+          <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="processData" Type="Microsoft.Build.Experimental.FileAccess.ProcessData" Index="1" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="processData">To be added.</param>
+        <summary>
+                Called for each new child process created by an MSBuild node or one of its children.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProjectFinishedAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task HandleProjectFinishedAsync (Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Execution.BuildResult buildResult, Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase logger, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task HandleProjectFinishedAsync(valuetype Microsoft.Build.Experimental.ProjectCache.FileAccessContext fileAccessContext, class Microsoft.Build.Execution.BuildResult buildResult, class Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase logger, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleProjectFinishedAsync(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Execution.BuildResult,Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function HandleProjectFinishedAsync (fileAccessContext As FileAccessContext, buildResult As BuildResult, logger As PluginLoggerBase, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member HandleProjectFinishedAsync : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Execution.BuildResult * Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.HandleProjectFinishedAsync : Microsoft.Build.Experimental.ProjectCache.FileAccessContext * Microsoft.Build.Execution.BuildResult * Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="projectCachePluginBase.HandleProjectFinishedAsync (fileAccessContext, buildResult, logger, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Threading::Tasks::Task ^ HandleProjectFinishedAsync(Microsoft::Build::Experimental::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Execution::BuildResult ^ buildResult, Microsoft::Build::Experimental::ProjectCache::PluginLoggerBase ^ logger, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="buildResult" Type="Microsoft.Build.Execution.BuildResult" Index="1" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="logger" Type="Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase" Index="2" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="buildResult">To be added.</param>
+        <param name="logger">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+                Called when a build request finishes execution. This provides an opportunity for the plugin to take action on the
+                aggregated file access reports from <see cref="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleFileAccess(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.FileAccessData)" />.
+                Errors are checked via <see cref="P:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.HasLoggedErrors" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
   </Members>
 </Type>

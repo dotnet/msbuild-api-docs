@@ -106,6 +106,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Interactive">
+      <MemberSignature Language="C#" Value="public bool Interactive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Interactive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Definition.ProjectOptions.Interactive" />
+      <MemberSignature Language="VB.NET" Value="Public Property Interactive As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Interactive : bool with get, set" Usage="Microsoft.Build.Definition.ProjectOptions.Interactive" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Interactive { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating if loading the project is allowed to interact with the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="LoadSettings">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectLoadSettings LoadSettings { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Evaluation.ProjectLoadSettings LoadSettings" />
@@ -146,7 +169,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The <see cref="P:Microsoft.Build.Definition.ProjectOptions.ProjectCollection" /> the project is added to. Default is <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection" />/&gt;
+            The <see cref="P:Microsoft.Build.Definition.ProjectOptions.ProjectCollection" /> the project is added to. Default is <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

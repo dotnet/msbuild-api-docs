@@ -1,0 +1,187 @@
+<Type Name="ProcessData" FullName="Microsoft.Build.Experimental.FileAccess.ProcessData">
+  <TypeSignature Language="C#" Value="public struct ProcessData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ProcessData extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.FileAccess.ProcessData" />
+  <TypeSignature Language="VB.NET" Value="Public Structure ProcessData" />
+  <TypeSignature Language="F#" Value="type ProcessData = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class ProcessData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Process data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessData (string processName, uint processId, uint parentProcessId, DateTime creationDateTime, DateTime exitDateTime, uint exitCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string processName, unsigned int32 processId, unsigned int32 parentProcessId, valuetype System.DateTime creationDateTime, valuetype System.DateTime exitDateTime, unsigned int32 exitCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.FileAccess.ProcessData.#ctor(System.String,System.UInt32,System.UInt32,System.DateTime,System.DateTime,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (processName As String, processId As UInteger, parentProcessId As UInteger, creationDateTime As DateTime, exitDateTime As DateTime, exitCode As UInteger)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.FileAccess.ProcessData : string * uint32 * uint32 * DateTime * DateTime * uint32 -&gt; Microsoft.Build.Experimental.FileAccess.ProcessData" Usage="new Microsoft.Build.Experimental.FileAccess.ProcessData (processName, processId, parentProcessId, creationDateTime, exitDateTime, exitCode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProcessData(System::String ^ processName, System::UInt32 processId, System::UInt32 parentProcessId, DateTime creationDateTime, DateTime exitDateTime, System::UInt32 exitCode);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="processName" Type="System.String" />
+        <Parameter Name="processId" Type="System.UInt32" />
+        <Parameter Name="parentProcessId" Type="System.UInt32" />
+        <Parameter Name="creationDateTime" Type="System.DateTime" />
+        <Parameter Name="exitDateTime" Type="System.DateTime" />
+        <Parameter Name="exitCode" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="processName">To be added.</param>
+        <param name="processId">To be added.</param>
+        <param name="parentProcessId">To be added.</param>
+        <param name="creationDateTime">To be added.</param>
+        <param name="exitDateTime">To be added.</param>
+        <param name="exitCode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationDateTime">
+      <MemberSignature Language="C#" Value="public DateTime CreationDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreationDateTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.CreationDateTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CreationDateTime As DateTime" />
+      <MemberSignature Language="F#" Value="member this.CreationDateTime : DateTime" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.CreationDateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime CreationDateTime { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The creation date time.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitCode">
+      <MemberSignature Language="C#" Value="public uint ExitCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 ExitCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ExitCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExitCode As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ExitCode : uint32" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.ExitCode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 ExitCode { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The exit code.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitDateTime">
+      <MemberSignature Language="C#" Value="public DateTime ExitDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExitDateTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ExitDateTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExitDateTime As DateTime" />
+      <MemberSignature Language="F#" Value="member this.ExitDateTime : DateTime" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.ExitDateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime ExitDateTime { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The exit date time.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentProcessId">
+      <MemberSignature Language="C#" Value="public uint ParentProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 ParentProcessId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ParentProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentProcessId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ParentProcessId : uint32" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.ParentProcessId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 ParentProcessId { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The parent process id.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public uint ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProcessId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ProcessId : uint32" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 ProcessId { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The process id.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessName">
+      <MemberSignature Language="C#" Value="public string ProcessName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProcessName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProcessName As String" />
+      <MemberSignature Language="F#" Value="member this.ProcessName : string" Usage="Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProcessName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The process name.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

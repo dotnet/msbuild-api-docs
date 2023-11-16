@@ -1,0 +1,205 @@
+<Type Name="RequestedAccess" FullName="Microsoft.Build.Experimental.FileAccess.RequestedAccess">
+  <TypeSignature Language="C#" Value="public enum RequestedAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RequestedAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.FileAccess.RequestedAccess" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RequestedAccess" />
+  <TypeSignature Language="F#" Value="type RequestedAccess = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class RequestedAccess" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Level of access requested by a reported file operation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess All = unsigned int8(31)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.All" />
+      <MemberSignature Language="VB.NET" Value="All" />
+      <MemberSignature Language="F#" Value="All = 31" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.All" />
+      <MemberSignature Language="C++ CLI" Value="All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>31</MemberValue>
+      <Docs>
+        <summary>
+            All defined access levels requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enumerate">
+      <MemberSignature Language="C#" Value="Enumerate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess Enumerate = unsigned int8(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Enumerate" />
+      <MemberSignature Language="VB.NET" Value="Enumerate" />
+      <MemberSignature Language="F#" Value="Enumerate = 8" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.Enumerate" />
+      <MemberSignature Language="C++ CLI" Value="Enumerate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Directory enumeration access requested (on the directory itself; immediate children will be enumerated).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerationProbe">
+      <MemberSignature Language="C#" Value="EnumerationProbe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess EnumerationProbe = unsigned int8(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.EnumerationProbe" />
+      <MemberSignature Language="VB.NET" Value="EnumerationProbe" />
+      <MemberSignature Language="F#" Value="EnumerationProbe = 16" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.EnumerationProbe" />
+      <MemberSignature Language="C++ CLI" Value="EnumerationProbe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            Metadata-only probe access requested; probed as part of a directory enumeration (e.g. <see cref="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindNextFile" />).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No access requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Probe">
+      <MemberSignature Language="C#" Value="Probe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess Probe = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Probe" />
+      <MemberSignature Language="VB.NET" Value="Probe" />
+      <MemberSignature Language="F#" Value="Probe = 4" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.Probe" />
+      <MemberSignature Language="C++ CLI" Value="Probe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Metadata-only probe access requested (e.g. <see cref="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributes" />).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess Read = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Read" />
+      <MemberSignature Language="VB.NET" Value="Read" />
+      <MemberSignature Language="F#" Value="Read = 1" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.Read" />
+      <MemberSignature Language="C++ CLI" Value="Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Read access requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWrite">
+      <MemberSignature Language="C#" Value="ReadWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess ReadWrite = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.ReadWrite" />
+      <MemberSignature Language="VB.NET" Value="ReadWrite" />
+      <MemberSignature Language="F#" Value="ReadWrite = 3" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.ReadWrite" />
+      <MemberSignature Language="C++ CLI" Value="ReadWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Both read and write access requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess Write = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Write" />
+      <MemberSignature Language="VB.NET" Value="Write" />
+      <MemberSignature Language="F#" Value="Write = 2" Usage="Microsoft.Build.Experimental.FileAccess.RequestedAccess.Write" />
+      <MemberSignature Language="C++ CLI" Value="Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Write access requested.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

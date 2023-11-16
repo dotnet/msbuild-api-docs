@@ -334,6 +334,33 @@
         <exception cref="T:System.ArgumentNullException">Thrown when <c>unformatted</c> is null.</exception>
       </Docs>
     </Member>
+    <Member MemberName="GetInnerExceptionMessageString">
+      <MemberSignature Language="C#" Value="public static string GetInnerExceptionMessageString (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetInnerExceptionMessageString(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetInnerExceptionMessageString(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetInnerExceptionMessageString (e As Exception) As String" />
+      <MemberSignature Language="F#" Value="static member GetInnerExceptionMessageString : Exception -&gt; string" Usage="Microsoft.Build.Utilities.TaskLoggingHelper.GetInnerExceptionMessageString e" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetInnerExceptionMessageString(Exception ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" Index="0" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="e">Exception to flatten.</param>
+        <summary>
+            Flatten the inner exception message
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetResourceMessage">
       <MemberSignature Language="C#" Value="public virtual string GetResourceMessage (string resourceName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceMessage(string resourceName) cil managed" />

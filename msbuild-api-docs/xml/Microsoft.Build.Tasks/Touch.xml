@@ -1,10 +1,15 @@
 <Type Name="Touch" FullName="Microsoft.Build.Tasks.Touch">
-  <TypeSignature Language="C#" Value="public class Touch : Microsoft.Build.Tasks.TaskExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Touch extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="C#" Value="public class Touch : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Touch extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Touch" />
-  <TypeSignature Language="VB.NET" Value="Public Class Touch&#xA;Inherits TaskExtension" />
-  <TypeSignature Language="F#" Value="type Touch = class&#xA;    inherit TaskExtension" />
-  <TypeSignature Language="C++ CLI" Value="public ref class Touch : Microsoft::Build::Tasks::TaskExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Class Touch&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type Touch = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Touch : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class Touch : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Touch extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public Class Touch&#xA;Inherits TaskExtension&#xA;Implements IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="F#" Value="type Touch = class&#xA;    inherit TaskExtension&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Touch : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,7 +29,11 @@
   <Base>
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17">
+      <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             This class defines the touch task.</summary>
@@ -144,6 +153,30 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Touch.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool with get, set" Usage="Microsoft.Build.Tasks.Touch.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Question the incremental nature of this task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>When Question is true, skip touching the disk to avoid causing incremental issue.
+            Unless the file doesn't exists, in which case, error out.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Files">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Files { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Files" />
@@ -237,6 +270,29 @@
           <see langword="true" /> if the <c>Touch</c> task forces a file touch even if the files are read-only; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Importance">
+      <MemberSignature Language="C#" Value="public string Importance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Importance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Touch.Importance" />
+      <MemberSignature Language="VB.NET" Value="Public Property Importance As String" />
+      <MemberSignature Language="F#" Value="member this.Importance : string with get, set" Usage="Microsoft.Build.Tasks.Touch.Importance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Importance { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Importance: high, normal, low (default normal)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Time">

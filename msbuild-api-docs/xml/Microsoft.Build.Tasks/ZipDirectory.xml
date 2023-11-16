@@ -1,10 +1,15 @@
 <Type Name="ZipDirectory" FullName="Microsoft.Build.Tasks.ZipDirectory">
-  <TypeSignature Language="C#" Value="public sealed class ZipDirectory : Microsoft.Build.Tasks.TaskExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZipDirectory extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="C#" Value="public sealed class ZipDirectory : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZipDirectory extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ZipDirectory" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension" />
-  <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class ZipDirectory : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZipDirectory extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension&#xA;Implements IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -12,7 +17,11 @@
   <Base>
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17">
+      <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
@@ -84,6 +93,29 @@
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ZipDirectory.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool with get, set" Usage="Microsoft.Build.Tasks.ZipDirectory.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Question the incremental nature of this task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>This task does not support incremental build and will error out instead.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Overwrite">

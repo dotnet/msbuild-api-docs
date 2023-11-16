@@ -1,10 +1,15 @@
 <Type Name="BuildEventArgsReader" FullName="Microsoft.Build.Logging.BuildEventArgsReader">
-  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BuildEventArgsReader" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IDisposable" />
-  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IDisposable" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable, Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications, class Microsoft.Build.Logging.IBuildEventStringsReader, class System.IDisposable" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IBuildEventArgsReaderNotifications, IDisposable" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IBuildEventArgsReaderNotifications&#xA;    interface IBuildEventStringsReader&#xA;    interface IDisposable" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable, Microsoft::Build::Logging::IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -15,6 +20,12 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="msbuild-17">
+      <InterfaceName>Microsoft.Build.Logging.IBuildEventArgsReaderNotifications</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="msbuild-17">
+      <InterfaceName>Microsoft.Build.Logging.IBuildEventStringsReader</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -74,12 +85,13 @@
       </Docs>
     </Member>
     <Member MemberName="Read">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs Read ();" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs Read ();" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.BuildEventArgs Read() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsReader.Read" />
       <MemberSignature Language="VB.NET" Value="Public Function Read () As BuildEventArgs" />
       <MemberSignature Language="F#" Value="member this.Read : unit -&gt; Microsoft.Build.Framework.BuildEventArgs" Usage="buildEventArgsReader.Read " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::BuildEventArgs ^ Read();" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs? Read ();" FrameworkAlternate="msbuild-17" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -97,6 +109,59 @@
             The next <see cref="T:Microsoft.Build.Framework.BuildEventArgs" />.
             If there are no more records, returns <see langword="null" />.
             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringEncountered">
+      <MemberSignature Language="C#" Value="public event Action? StringEncountered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action StringEncountered" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BuildEventArgsReader.StringEncountered" />
+      <MemberSignature Language="VB.NET" Value="Public Event StringEncountered As Action " />
+      <MemberSignature Language="F#" Value="member this.StringEncountered : Action " Usage="member this.StringEncountered : System.Action " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event Action ^ StringEncountered;" />
+      <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:Microsoft.Build.Logging.IBuildEventStringsReader.StringEncountered</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An event that allows the caller to be notified when a string is encountered in the binary log.
+            BinaryReader passed in ctor is at the beginning of the string at this point.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringReadDone">
+      <MemberSignature Language="C#" Value="public event Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;? StringReadDone;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.StringReadEventArgs&gt; StringReadDone" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BuildEventArgsReader.StringReadDone" />
+      <MemberSignature Language="VB.NET" Value="Public Event StringReadDone As Action(Of StringReadEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StringReadDone : Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " Usage="member this.StringReadDone : System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event Action&lt;Microsoft::Build::Logging::StringReadEventArgs ^&gt; ^ StringReadDone;" />
+      <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:Microsoft.Build.Logging.IBuildEventStringsReader.StringReadDone</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An event that allows the subscriber to be notified when a string is read from the binary log.
+            Subscriber may adjust the string by setting <see cref="P:Microsoft.Build.Logging.StringReadEventArgs.StringToBeUsed" /> property.
+            The passed event arg can be reused and should not be stored.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,10 +1,15 @@
 <Type Name="LoggerException" FullName="Microsoft.Build.Framework.LoggerException">
-  <TypeSignature Language="C#" Value="public class LoggerException : Exception" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LoggerException extends System.Exception" />
+  <TypeSignature Language="C#" Value="public class LoggerException : Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LoggerException extends System.Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.LoggerException" />
-  <TypeSignature Language="VB.NET" Value="Public Class LoggerException&#xA;Inherits Exception" />
-  <TypeSignature Language="F#" Value="type LoggerException = class&#xA;    inherit Exception" />
-  <TypeSignature Language="C++ CLI" Value="public ref class LoggerException : Exception" />
+  <TypeSignature Language="VB.NET" Value="Public Class LoggerException&#xA;Inherits Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type LoggerException = class&#xA;    inherit Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LoggerException : Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class LoggerException : Microsoft.Build.Framework.BuildException.BuildExceptionBase" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LoggerException extends Microsoft.Build.Framework.BuildException.BuildExceptionBase" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public Class LoggerException&#xA;Inherits BuildExceptionBase" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="F#" Value="type LoggerException = class&#xA;    inherit BuildExceptionBase" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LoggerException : Microsoft::Build::Framework::BuildException::BuildExceptionBase" FrameworkAlternate="msbuild-17" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -14,6 +19,7 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17">Microsoft.Build.Framework.BuildException.BuildExceptionBase</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
@@ -252,6 +258,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FlushCustomState">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IDictionary&lt;string,string&gt; FlushCustomState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; FlushCustomState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.LoggerException.FlushCustomState" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function FlushCustomState () As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="override this.FlushCustomState : unit -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="loggerException.FlushCustomState " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ FlushCustomState();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetObjectData">
       <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
@@ -313,6 +341,30 @@
             Gets the F1-help keyword associated with this error, for the host IDE.
             </summary>
         <value>The keyword string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCustomState">
+      <MemberSignature Language="C#" Value="protected override void InitializeCustomState (System.Collections.Generic.IDictionary&lt;string,string&gt; state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeCustomState(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.LoggerException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub InitializeCustomState (state As IDictionary(Of String, String))" />
+      <MemberSignature Language="F#" Value="override this.InitializeCustomState : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="loggerException.InitializeCustomState state" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void InitializeCustomState(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
