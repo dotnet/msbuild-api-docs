@@ -1,15 +1,15 @@
 <Type Name="BuildEventArgsReader" FullName="Microsoft.Build.Logging.BuildEventArgsReader">
-  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class System.IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BuildEventArgsReader" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
-  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable, Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications, class Microsoft.Build.Logging.IBuildEventStringsReader, class System.IDisposable" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IBuildEventArgsReaderNotifications, IDisposable" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IBuildEventArgsReaderNotifications&#xA;    interface IBuildEventStringsReader&#xA;    interface IDisposable" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable, Microsoft::Build::Logging::IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable, Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications, class Microsoft.Build.Logging.IBuildEventStringsReader, class System.IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IBuildEventArgsReaderNotifications, IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IBuildEventArgsReaderNotifications&#xA;    interface IBuildEventStringsReader&#xA;    interface IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable, Microsoft::Build::Logging::IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -21,13 +21,23 @@
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
-    <Interface FrameworkAlternate="msbuild-17">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
       <InterfaceName>Microsoft.Build.Logging.IBuildEventArgsReaderNotifications</InterfaceName>
     </Interface>
-    <Interface FrameworkAlternate="msbuild-17">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
       <InterfaceName>Microsoft.Build.Logging.IBuildEventStringsReader</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Deserializes and returns BuildEventArgs-derived objects from a BinaryReader
@@ -85,18 +95,24 @@
       </Docs>
     </Member>
     <Member MemberName="Read">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs Read ();" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs Read ();" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.BuildEventArgs Read() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsReader.Read" />
       <MemberSignature Language="VB.NET" Value="Public Function Read () As BuildEventArgs" />
       <MemberSignature Language="F#" Value="member this.Read : unit -&gt; Microsoft.Build.Framework.BuildEventArgs" Usage="buildEventArgsReader.Read " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::BuildEventArgs ^ Read();" />
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs? Read ();" FrameworkAlternate="msbuild-17" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs? Read ();" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.BuildEventArgs</ReturnType>
       </ReturnValue>
@@ -127,6 +143,20 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[add: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;add: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[remove: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;remove: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Action</ReturnType>
       </ReturnValue>
@@ -153,6 +183,12 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;</ReturnType>
       </ReturnValue>

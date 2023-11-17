@@ -16,12 +16,22 @@
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
   </Base>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Parameters>
     <Parameter Name="commandLine" Type="System.String[]" />
   </Parameters>
   <ReturnValue>
     <ReturnType>System.ValueTuple&lt;System.Int32,System.String&gt;</ReturnType>
     <Attributes>
+      <Attribute>
+        <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+        <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+      </Attribute>
       <Attribute>
         <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })]</AttributeName>
         <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })&gt;]</AttributeName>

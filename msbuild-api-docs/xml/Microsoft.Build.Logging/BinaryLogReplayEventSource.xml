@@ -14,6 +14,16 @@
     <BaseTypeName>Microsoft.Build.Logging.EventArgsDispatcher</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Provides a method to read a binary log file (*.binlog) and replay all stored BuildEventArgs
@@ -51,6 +61,12 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Action&lt;Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt;</ReturnType>
       </ReturnValue>
@@ -77,7 +93,7 @@
         <ReturnType>System.IO.BinaryReader</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFilePath" />
@@ -132,8 +148,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
         <param name="binaryReader">The binary log content binary reader - caller is responsible for disposing.</param>
