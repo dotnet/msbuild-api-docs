@@ -1200,6 +1200,34 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="LogBuildFinishedEvent">
+      <MemberSignature Language="C#" Value="public void LogBuildFinishedEvent (bool success);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogBuildFinishedEvent(bool success) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.LogBuildFinishedEvent(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub LogBuildFinishedEvent (success As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.LogBuildFinishedEvent : bool -&gt; unit" Usage="projectCollection.LogBuildFinishedEvent success" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void LogBuildFinishedEvent(bool success);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="success" Type="System.Boolean" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="success">To be added.</param>
+        <summary>
+            Logs a BuildFinished event. This is used specifically when a ProjectCollection is created but never actually built, yet a BuildFinished event
+            is still desired. As an example, if a Project is just meant to be evaluated, but a binlog is also collected, that binlog should be able to
+            say the build succeeded or failed. This provides a mechanism to achieve that.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Loggers">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Framework.ILogger&gt; Loggers { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Framework.ILogger&gt; Loggers" />

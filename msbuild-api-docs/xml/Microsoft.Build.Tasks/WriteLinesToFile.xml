@@ -1,10 +1,15 @@
 <Type Name="WriteLinesToFile" FullName="Microsoft.Build.Tasks.WriteLinesToFile">
-  <TypeSignature Language="C#" Value="public class WriteLinesToFile : Microsoft.Build.Tasks.TaskExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WriteLinesToFile extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="C#" Value="public class WriteLinesToFile : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WriteLinesToFile extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.WriteLinesToFile" />
-  <TypeSignature Language="VB.NET" Value="Public Class WriteLinesToFile&#xA;Inherits TaskExtension" />
-  <TypeSignature Language="F#" Value="type WriteLinesToFile = class&#xA;    inherit TaskExtension" />
-  <TypeSignature Language="C++ CLI" Value="public ref class WriteLinesToFile : Microsoft::Build::Tasks::TaskExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Class WriteLinesToFile&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type WriteLinesToFile = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class WriteLinesToFile : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class WriteLinesToFile : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WriteLinesToFile extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class WriteLinesToFile&#xA;Inherits TaskExtension&#xA;Implements IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type WriteLinesToFile = class&#xA;    inherit TaskExtension&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class WriteLinesToFile : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -24,7 +29,11 @@
   <Base>
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             Appends a list of items to a file. One item per line with carriage returns in-between.</summary>
@@ -66,6 +75,27 @@
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.WriteLinesToFile" /> class.</summary>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeIncremental">
+      <MemberSignature Language="C#" Value="public bool CanBeIncremental { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WriteLinesToFile.CanBeIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanBeIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanBeIncremental : bool" Usage="Microsoft.Build.Tasks.WriteLinesToFile.CanBeIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanBeIncremental { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Encoding">
@@ -139,6 +169,29 @@
         <returns />
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WriteLinesToFile.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool with get, set" Usage="Microsoft.Build.Tasks.WriteLinesToFile.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Question whether this task is incremental.
+            </summary>
+        <value>To be added.</value>
+        <remarks>When question is true, then this task would not write to disk.  If CanBeIncremental is true, then error out.</remarks>
       </Docs>
     </Member>
     <Member MemberName="File">

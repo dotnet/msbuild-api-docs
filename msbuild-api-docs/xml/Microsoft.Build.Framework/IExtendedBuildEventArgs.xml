@@ -1,0 +1,122 @@
+<Type Name="IExtendedBuildEventArgs" FullName="Microsoft.Build.Framework.IExtendedBuildEventArgs">
+  <TypeSignature Language="C#" Value="public interface IExtendedBuildEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IExtendedBuildEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IExtendedBuildEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IExtendedBuildEventArgs" />
+  <TypeSignature Language="F#" Value="type IExtendedBuildEventArgs = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IExtendedBuildEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Interface for Extended EventArgs to allow enriching particular events with extended data.
+            Deriving from EventArgs will be deprecated soon and using Extended EventArgs is recommended for custom Event Args.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtendedData">
+      <MemberSignature Language="C#" Value="public string? ExtendedData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedData As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedData : string with get, set" Usage="Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[set: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Transparent data as string.
+            Custom code is responsible to serialize and deserialize this string to structured data - if needed.
+            Custom code can use any serialization they deem safe - e.g. json for textual data, base64 for binary data...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string?&gt;? ExtendedMetadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; ExtendedMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedMetadata As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtendedMetadata : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ ExtendedMetadata { System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Metadata of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />.
+            Example usage:
+              - data which needed in custom code to properly routing this message without interpreting/deserializing <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />.
+              - simple extended data can be transferred in form of dictionary key-value per one extended property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedType">
+      <MemberSignature Language="C#" Value="public string ExtendedType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedType As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedType : string with get, set" Usage="Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unique string identifying type of extended data so receiver side knows how to interpret, deserialize and handle <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

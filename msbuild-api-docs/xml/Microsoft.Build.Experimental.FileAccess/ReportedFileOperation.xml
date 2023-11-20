@@ -1,0 +1,1455 @@
+<Type Name="ReportedFileOperation" FullName="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation">
+  <TypeSignature Language="C#" Value="public enum ReportedFileOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReportedFileOperation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ReportedFileOperation" />
+  <TypeSignature Language="F#" Value="type ReportedFileOperation = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class ReportedFileOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Which operation resulted in a reported file access.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChangedReadWriteToReadAccess">
+      <MemberSignature Language="C#" Value="ChangedReadWriteToReadAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ChangedReadWriteToReadAccess = unsigned int8(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ChangedReadWriteToReadAccess" />
+      <MemberSignature Language="VB.NET" Value="ChangedReadWriteToReadAccess" />
+      <MemberSignature Language="F#" Value="ChangedReadWriteToReadAccess = 32" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ChangedReadWriteToReadAccess" />
+      <MemberSignature Language="C++ CLI" Value="ChangedReadWriteToReadAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>
+            This is a quasi operation. We issue this
+            report when Detours is changing file open
+            request with Read/Write access to Read access only.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFileDestination">
+      <MemberSignature Language="C#" Value="CopyFileDestination" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CopyFileDestination = unsigned int8(22)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileDestination" />
+      <MemberSignature Language="VB.NET" Value="CopyFileDestination" />
+      <MemberSignature Language="F#" Value="CopyFileDestination = 22" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileDestination" />
+      <MemberSignature Language="C++ CLI" Value="CopyFileDestination" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>22</MemberValue>
+      <Docs>
+        <summary>
+            CopyFile (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFileSource">
+      <MemberSignature Language="C#" Value="CopyFileSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CopyFileSource = unsigned int8(21)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileSource" />
+      <MemberSignature Language="VB.NET" Value="CopyFileSource" />
+      <MemberSignature Language="F#" Value="CopyFileSource = 21" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileSource" />
+      <MemberSignature Language="C++ CLI" Value="CopyFileSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>21</MemberValue>
+      <Docs>
+        <summary>
+            CopyFile (source; read).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDirectory">
+      <MemberSignature Language="C#" Value="CreateDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateDirectory = unsigned int8(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateDirectory" />
+      <MemberSignature Language="VB.NET" Value="CreateDirectory" />
+      <MemberSignature Language="F#" Value="CreateDirectory = 8" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateDirectory" />
+      <MemberSignature Language="C++ CLI" Value="CreateDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            CreateDirectory.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFile">
+      <MemberSignature Language="C#" Value="CreateFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateFile = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateFile" />
+      <MemberSignature Language="VB.NET" Value="CreateFile" />
+      <MemberSignature Language="F#" Value="CreateFile = 1" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateFile" />
+      <MemberSignature Language="C++ CLI" Value="CreateFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            CreateFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHardLinkDestination">
+      <MemberSignature Language="C#" Value="CreateHardLinkDestination" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateHardLinkDestination = unsigned int8(24)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkDestination" />
+      <MemberSignature Language="VB.NET" Value="CreateHardLinkDestination" />
+      <MemberSignature Language="F#" Value="CreateHardLinkDestination = 24" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkDestination" />
+      <MemberSignature Language="C++ CLI" Value="CreateHardLinkDestination" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>24</MemberValue>
+      <Docs>
+        <summary>
+            CreateHardLink (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHardLinkSource">
+      <MemberSignature Language="C#" Value="CreateHardLinkSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateHardLinkSource = unsigned int8(23)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkSource" />
+      <MemberSignature Language="VB.NET" Value="CreateHardLinkSource" />
+      <MemberSignature Language="F#" Value="CreateHardLinkSource = 23" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkSource" />
+      <MemberSignature Language="C++ CLI" Value="CreateHardLinkSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>23</MemberValue>
+      <Docs>
+        <summary>
+            CreateHardLink (source; read).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProcess">
+      <MemberSignature Language="C#" Value="CreateProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateProcess = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateProcess" />
+      <MemberSignature Language="VB.NET" Value="CreateProcess" />
+      <MemberSignature Language="F#" Value="CreateProcess = 2" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateProcess" />
+      <MemberSignature Language="C++ CLI" Value="CreateProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            CreateProcess.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSymbolicLinkSource">
+      <MemberSignature Language="C#" Value="CreateSymbolicLinkSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation CreateSymbolicLinkSource = unsigned int8(37)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateSymbolicLinkSource" />
+      <MemberSignature Language="VB.NET" Value="CreateSymbolicLinkSource" />
+      <MemberSignature Language="F#" Value="CreateSymbolicLinkSource = 37" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateSymbolicLinkSource" />
+      <MemberSignature Language="C++ CLI" Value="CreateSymbolicLinkSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>37</MemberValue>
+      <Docs>
+        <summary>
+            Access checks for source of CreateSymbolicLink API.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFile">
+      <MemberSignature Language="C#" Value="DeleteFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation DeleteFile = unsigned int8(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.DeleteFile" />
+      <MemberSignature Language="VB.NET" Value="DeleteFile" />
+      <MemberSignature Language="F#" Value="DeleteFile = 9" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.DeleteFile" />
+      <MemberSignature Language="C++ CLI" Value="DeleteFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            DeleteFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirstFileEx">
+      <MemberSignature Language="C#" Value="FindFirstFileEx" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation FindFirstFileEx = unsigned int8(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindFirstFileEx" />
+      <MemberSignature Language="VB.NET" Value="FindFirstFileEx" />
+      <MemberSignature Language="F#" Value="FindFirstFileEx = 6" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindFirstFileEx" />
+      <MemberSignature Language="C++ CLI" Value="FindFirstFileEx" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            FindFirstFileEx.
+            </summary>
+        <remarks>
+            FindFirstFile also indicates this op, since we implement it in terms of FindFirstFileEx.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindNextFile">
+      <MemberSignature Language="C#" Value="FindNextFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation FindNextFile = unsigned int8(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindNextFile" />
+      <MemberSignature Language="VB.NET" Value="FindNextFile" />
+      <MemberSignature Language="F#" Value="FindNextFile = 7" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindNextFile" />
+      <MemberSignature Language="C++ CLI" Value="FindNextFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            FindNextFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstAllowWriteCheckInProcess">
+      <MemberSignature Language="C#" Value="FirstAllowWriteCheckInProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation FirstAllowWriteCheckInProcess = unsigned int8(33)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FirstAllowWriteCheckInProcess" />
+      <MemberSignature Language="VB.NET" Value="FirstAllowWriteCheckInProcess" />
+      <MemberSignature Language="F#" Value="FirstAllowWriteCheckInProcess = 33" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FirstAllowWriteCheckInProcess" />
+      <MemberSignature Language="C++ CLI" Value="FirstAllowWriteCheckInProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>33</MemberValue>
+      <Docs>
+        <summary>
+            This is a quasi operation. The sandbox issues this only when FileAccessPolicy.OverrideAllowWriteForExistingFiles is set, representing
+            that an allow for write check was performed for a given path for the first time (in the scope of a process, another process in the same process
+            tree may also report this for the same path).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileAttributes">
+      <MemberSignature Language="C#" Value="GetFileAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation GetFileAttributes = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributes" />
+      <MemberSignature Language="VB.NET" Value="GetFileAttributes" />
+      <MemberSignature Language="F#" Value="GetFileAttributes = 3" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributes" />
+      <MemberSignature Language="C++ CLI" Value="GetFileAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            GetFileAttributes.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileAttributesEx">
+      <MemberSignature Language="C#" Value="GetFileAttributesEx" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation GetFileAttributesEx = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributesEx" />
+      <MemberSignature Language="VB.NET" Value="GetFileAttributesEx" />
+      <MemberSignature Language="F#" Value="GetFileAttributesEx = 4" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributesEx" />
+      <MemberSignature Language="C++ CLI" Value="GetFileAttributesEx" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            GetFileAttributesEx.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthClose">
+      <MemberSignature Language="C#" Value="KAuthClose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthClose = unsigned int8(57)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthClose" />
+      <MemberSignature Language="VB.NET" Value="KAuthClose" />
+      <MemberSignature Language="F#" Value="KAuthClose = 57" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthClose" />
+      <MemberSignature Language="C++ CLI" Value="KAuthClose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>57</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCloseModified">
+      <MemberSignature Language="C#" Value="KAuthCloseModified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCloseModified = unsigned int8(58)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCloseModified" />
+      <MemberSignature Language="VB.NET" Value="KAuthCloseModified" />
+      <MemberSignature Language="F#" Value="KAuthCloseModified = 58" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCloseModified" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCloseModified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>58</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCopyDest">
+      <MemberSignature Language="C#" Value="KAuthCopyDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCopyDest = unsigned int8(50)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopyDest" />
+      <MemberSignature Language="VB.NET" Value="KAuthCopyDest" />
+      <MemberSignature Language="F#" Value="KAuthCopyDest = 50" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopyDest" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCopyDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>50</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCopySource">
+      <MemberSignature Language="C#" Value="KAuthCopySource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCopySource = unsigned int8(49)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopySource" />
+      <MemberSignature Language="VB.NET" Value="KAuthCopySource" />
+      <MemberSignature Language="F#" Value="KAuthCopySource = 49" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopySource" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCopySource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>49</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCreateDir">
+      <MemberSignature Language="C#" Value="KAuthCreateDir" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCreateDir = unsigned int8(55)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateDir" />
+      <MemberSignature Language="VB.NET" Value="KAuthCreateDir" />
+      <MemberSignature Language="F#" Value="KAuthCreateDir = 55" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateDir" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCreateDir" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>55</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCreateHardlinkDest">
+      <MemberSignature Language="C#" Value="KAuthCreateHardlinkDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCreateHardlinkDest = unsigned int8(48)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkDest" />
+      <MemberSignature Language="VB.NET" Value="KAuthCreateHardlinkDest" />
+      <MemberSignature Language="F#" Value="KAuthCreateHardlinkDest = 48" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkDest" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCreateHardlinkDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>48</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthCreateHardlinkSource">
+      <MemberSignature Language="C#" Value="KAuthCreateHardlinkSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthCreateHardlinkSource = unsigned int8(47)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkSource" />
+      <MemberSignature Language="VB.NET" Value="KAuthCreateHardlinkSource" />
+      <MemberSignature Language="F#" Value="KAuthCreateHardlinkSource = 47" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkSource" />
+      <MemberSignature Language="C++ CLI" Value="KAuthCreateHardlinkSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>47</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthDeleteDir">
+      <MemberSignature Language="C#" Value="KAuthDeleteDir" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthDeleteDir = unsigned int8(51)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteDir" />
+      <MemberSignature Language="VB.NET" Value="KAuthDeleteDir" />
+      <MemberSignature Language="F#" Value="KAuthDeleteDir = 51" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteDir" />
+      <MemberSignature Language="C++ CLI" Value="KAuthDeleteDir" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>51</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthDeleteFile">
+      <MemberSignature Language="C#" Value="KAuthDeleteFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthDeleteFile = unsigned int8(52)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteFile" />
+      <MemberSignature Language="VB.NET" Value="KAuthDeleteFile" />
+      <MemberSignature Language="F#" Value="KAuthDeleteFile = 52" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteFile" />
+      <MemberSignature Language="C++ CLI" Value="KAuthDeleteFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>52</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthGetAttributes">
+      <MemberSignature Language="C#" Value="KAuthGetAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthGetAttributes = unsigned int8(59)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthGetAttributes" />
+      <MemberSignature Language="VB.NET" Value="KAuthGetAttributes" />
+      <MemberSignature Language="F#" Value="KAuthGetAttributes = 59" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthGetAttributes" />
+      <MemberSignature Language="C++ CLI" Value="KAuthGetAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>59</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthMoveDest">
+      <MemberSignature Language="C#" Value="KAuthMoveDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthMoveDest = unsigned int8(46)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveDest" />
+      <MemberSignature Language="VB.NET" Value="KAuthMoveDest" />
+      <MemberSignature Language="F#" Value="KAuthMoveDest = 46" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveDest" />
+      <MemberSignature Language="C++ CLI" Value="KAuthMoveDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>46</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthMoveSource">
+      <MemberSignature Language="C#" Value="KAuthMoveSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthMoveSource = unsigned int8(45)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveSource" />
+      <MemberSignature Language="VB.NET" Value="KAuthMoveSource" />
+      <MemberSignature Language="F#" Value="KAuthMoveSource = 45" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveSource" />
+      <MemberSignature Language="C++ CLI" Value="KAuthMoveSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>45</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthOpenDir">
+      <MemberSignature Language="C#" Value="KAuthOpenDir" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthOpenDir = unsigned int8(53)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthOpenDir" />
+      <MemberSignature Language="VB.NET" Value="KAuthOpenDir" />
+      <MemberSignature Language="F#" Value="KAuthOpenDir = 53" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthOpenDir" />
+      <MemberSignature Language="C++ CLI" Value="KAuthOpenDir" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>53</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthReadFile">
+      <MemberSignature Language="C#" Value="KAuthReadFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthReadFile = unsigned int8(54)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthReadFile" />
+      <MemberSignature Language="VB.NET" Value="KAuthReadFile" />
+      <MemberSignature Language="F#" Value="KAuthReadFile = 54" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthReadFile" />
+      <MemberSignature Language="C++ CLI" Value="KAuthReadFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>54</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthVNodeExecute">
+      <MemberSignature Language="C#" Value="KAuthVNodeExecute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthVNodeExecute = unsigned int8(60)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeExecute" />
+      <MemberSignature Language="VB.NET" Value="KAuthVNodeExecute" />
+      <MemberSignature Language="F#" Value="KAuthVNodeExecute = 60" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeExecute" />
+      <MemberSignature Language="C++ CLI" Value="KAuthVNodeExecute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>60</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthVNodeProbe">
+      <MemberSignature Language="C#" Value="KAuthVNodeProbe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthVNodeProbe = unsigned int8(63)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeProbe" />
+      <MemberSignature Language="VB.NET" Value="KAuthVNodeProbe" />
+      <MemberSignature Language="F#" Value="KAuthVNodeProbe = 63" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeProbe" />
+      <MemberSignature Language="C++ CLI" Value="KAuthVNodeProbe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>63</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthVNodeRead">
+      <MemberSignature Language="C#" Value="KAuthVNodeRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthVNodeRead = unsigned int8(62)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeRead" />
+      <MemberSignature Language="VB.NET" Value="KAuthVNodeRead" />
+      <MemberSignature Language="F#" Value="KAuthVNodeRead = 62" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeRead" />
+      <MemberSignature Language="C++ CLI" Value="KAuthVNodeRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>62</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthVNodeWrite">
+      <MemberSignature Language="C#" Value="KAuthVNodeWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthVNodeWrite = unsigned int8(61)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeWrite" />
+      <MemberSignature Language="VB.NET" Value="KAuthVNodeWrite" />
+      <MemberSignature Language="F#" Value="KAuthVNodeWrite = 61" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeWrite" />
+      <MemberSignature Language="C++ CLI" Value="KAuthVNodeWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>61</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KAuthWriteFile">
+      <MemberSignature Language="C#" Value="KAuthWriteFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation KAuthWriteFile = unsigned int8(56)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthWriteFile" />
+      <MemberSignature Language="VB.NET" Value="KAuthWriteFile" />
+      <MemberSignature Language="F#" Value="KAuthWriteFile = 56" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthWriteFile" />
+      <MemberSignature Language="C++ CLI" Value="KAuthWriteFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>56</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacLookup">
+      <MemberSignature Language="C#" Value="MacLookup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacLookup = unsigned int8(42)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacLookup" />
+      <MemberSignature Language="VB.NET" Value="MacLookup" />
+      <MemberSignature Language="F#" Value="MacLookup = 42" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacLookup" />
+      <MemberSignature Language="C++ CLI" Value="MacLookup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>42</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacReadlink">
+      <MemberSignature Language="C#" Value="MacReadlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacReadlink = unsigned int8(43)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacReadlink" />
+      <MemberSignature Language="VB.NET" Value="MacReadlink" />
+      <MemberSignature Language="F#" Value="MacReadlink = 43" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacReadlink" />
+      <MemberSignature Language="C++ CLI" Value="MacReadlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>43</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacVNodeCloneDest">
+      <MemberSignature Language="C#" Value="MacVNodeCloneDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacVNodeCloneDest = unsigned int8(66)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneDest" />
+      <MemberSignature Language="VB.NET" Value="MacVNodeCloneDest" />
+      <MemberSignature Language="F#" Value="MacVNodeCloneDest = 66" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneDest" />
+      <MemberSignature Language="C++ CLI" Value="MacVNodeCloneDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>66</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacVNodeCloneSource">
+      <MemberSignature Language="C#" Value="MacVNodeCloneSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacVNodeCloneSource = unsigned int8(65)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneSource" />
+      <MemberSignature Language="VB.NET" Value="MacVNodeCloneSource" />
+      <MemberSignature Language="F#" Value="MacVNodeCloneSource = 65" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneSource" />
+      <MemberSignature Language="C++ CLI" Value="MacVNodeCloneSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>65</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacVNodeCreate">
+      <MemberSignature Language="C#" Value="MacVNodeCreate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacVNodeCreate = unsigned int8(44)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCreate" />
+      <MemberSignature Language="VB.NET" Value="MacVNodeCreate" />
+      <MemberSignature Language="F#" Value="MacVNodeCreate = 44" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCreate" />
+      <MemberSignature Language="C++ CLI" Value="MacVNodeCreate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>44</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MacVNodeWrite">
+      <MemberSignature Language="C#" Value="MacVNodeWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MacVNodeWrite = unsigned int8(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeWrite" />
+      <MemberSignature Language="VB.NET" Value="MacVNodeWrite" />
+      <MemberSignature Language="F#" Value="MacVNodeWrite = 64" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeWrite" />
+      <MemberSignature Language="C++ CLI" Value="MacVNodeWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFileDestination">
+      <MemberSignature Language="C#" Value="MoveFileDestination" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MoveFileDestination = unsigned int8(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileDestination" />
+      <MemberSignature Language="VB.NET" Value="MoveFileDestination" />
+      <MemberSignature Language="F#" Value="MoveFileDestination = 11" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileDestination" />
+      <MemberSignature Language="C++ CLI" Value="MoveFileDestination" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>
+            MoveFile (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFileSource">
+      <MemberSignature Language="C#" Value="MoveFileSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MoveFileSource = unsigned int8(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileSource" />
+      <MemberSignature Language="VB.NET" Value="MoveFileSource" />
+      <MemberSignature Language="F#" Value="MoveFileSource = 10" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileSource" />
+      <MemberSignature Language="C++ CLI" Value="MoveFileSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            MoveFile (source; read and deleted).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFileWithProgressDest">
+      <MemberSignature Language="C#" Value="MoveFileWithProgressDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MoveFileWithProgressDest = unsigned int8(39)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressDest" />
+      <MemberSignature Language="VB.NET" Value="MoveFileWithProgressDest" />
+      <MemberSignature Language="F#" Value="MoveFileWithProgressDest = 39" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressDest" />
+      <MemberSignature Language="C++ CLI" Value="MoveFileWithProgressDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>39</MemberValue>
+      <Docs>
+        <summary>
+            Access check for MoveFileWithProgress dest target.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFileWithProgressSource">
+      <MemberSignature Language="C#" Value="MoveFileWithProgressSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MoveFileWithProgressSource = unsigned int8(38)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressSource" />
+      <MemberSignature Language="VB.NET" Value="MoveFileWithProgressSource" />
+      <MemberSignature Language="F#" Value="MoveFileWithProgressSource = 38" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressSource" />
+      <MemberSignature Language="C++ CLI" Value="MoveFileWithProgressSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>38</MemberValue>
+      <Docs>
+        <summary>
+            Access check for MoveFileWithgProgress source target.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipleOperations">
+      <MemberSignature Language="C#" Value="MultipleOperations" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation MultipleOperations = unsigned int8(40)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MultipleOperations" />
+      <MemberSignature Language="VB.NET" Value="MultipleOperations" />
+      <MemberSignature Language="F#" Value="MultipleOperations = 40" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MultipleOperations" />
+      <MemberSignature Language="C++ CLI" Value="MultipleOperations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>40</MemberValue>
+      <Docs>
+        <summary>
+            Multiple operations lumped into one.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NtCreateFile">
+      <MemberSignature Language="C#" Value="NtCreateFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation NtCreateFile = unsigned int8(29)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtCreateFile" />
+      <MemberSignature Language="VB.NET" Value="NtCreateFile" />
+      <MemberSignature Language="F#" Value="NtCreateFile = 29" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtCreateFile" />
+      <MemberSignature Language="C++ CLI" Value="NtCreateFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>29</MemberValue>
+      <Docs>
+        <summary>
+            NtCreateFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NtQueryDirectoryFile">
+      <MemberSignature Language="C#" Value="NtQueryDirectoryFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation NtQueryDirectoryFile = unsigned int8(27)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtQueryDirectoryFile" />
+      <MemberSignature Language="VB.NET" Value="NtQueryDirectoryFile" />
+      <MemberSignature Language="F#" Value="NtQueryDirectoryFile = 27" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtQueryDirectoryFile" />
+      <MemberSignature Language="C++ CLI" Value="NtQueryDirectoryFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>27</MemberValue>
+      <Docs>
+        <summary>
+            NtQueryDirectoryFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="Process" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation Process = unsigned int8(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Process" />
+      <MemberSignature Language="VB.NET" Value="Process" />
+      <MemberSignature Language="F#" Value="Process = 5" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Process" />
+      <MemberSignature Language="C++ CLI" Value="Process" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Process forked.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessExit">
+      <MemberSignature Language="C#" Value="ProcessExit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ProcessExit = unsigned int8(41)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ProcessExit" />
+      <MemberSignature Language="VB.NET" Value="ProcessExit" />
+      <MemberSignature Language="F#" Value="ProcessExit = 41" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ProcessExit" />
+      <MemberSignature Language="C++ CLI" Value="ProcessExit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>41</MemberValue>
+      <Docs>
+        <summary>
+            Process exited.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDirectory">
+      <MemberSignature Language="C#" Value="RemoveDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation RemoveDirectory = unsigned int8(25)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectory" />
+      <MemberSignature Language="VB.NET" Value="RemoveDirectory" />
+      <MemberSignature Language="F#" Value="RemoveDirectory = 25" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectory" />
+      <MemberSignature Language="C++ CLI" Value="RemoveDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>25</MemberValue>
+      <Docs>
+        <summary>
+            RemoveDirectory.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDirectorySource">
+      <MemberSignature Language="C#" Value="RemoveDirectorySource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation RemoveDirectorySource = unsigned int8(26)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectorySource" />
+      <MemberSignature Language="VB.NET" Value="RemoveDirectorySource" />
+      <MemberSignature Language="F#" Value="RemoveDirectorySource = 26" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectorySource" />
+      <MemberSignature Language="C++ CLI" Value="RemoveDirectorySource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>26</MemberValue>
+      <Docs>
+        <summary>
+            RemoveDirectory (source; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReparsePointTarget">
+      <MemberSignature Language="C#" Value="ReparsePointTarget" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ReparsePointTarget = unsigned int8(35)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTarget" />
+      <MemberSignature Language="VB.NET" Value="ReparsePointTarget" />
+      <MemberSignature Language="F#" Value="ReparsePointTarget = 35" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTarget" />
+      <MemberSignature Language="C++ CLI" Value="ReparsePointTarget" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>35</MemberValue>
+      <Docs>
+        <summary>
+            Access of reparse point target.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReparsePointTargetCached">
+      <MemberSignature Language="C#" Value="ReparsePointTargetCached" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ReparsePointTargetCached = unsigned int8(36)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTargetCached" />
+      <MemberSignature Language="VB.NET" Value="ReparsePointTargetCached" />
+      <MemberSignature Language="F#" Value="ReparsePointTargetCached = 36" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTargetCached" />
+      <MemberSignature Language="C++ CLI" Value="ReparsePointTargetCached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>36</MemberValue>
+      <Docs>
+        <summary>
+            Access of reparse point target, cached by Detours.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileInformationByHandleDest">
+      <MemberSignature Language="C#" Value="SetFileInformationByHandleDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation SetFileInformationByHandleDest = unsigned int8(13)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleDest" />
+      <MemberSignature Language="VB.NET" Value="SetFileInformationByHandleDest" />
+      <MemberSignature Language="F#" Value="SetFileInformationByHandleDest = 13" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleDest" />
+      <MemberSignature Language="C++ CLI" Value="SetFileInformationByHandleDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>13</MemberValue>
+      <Docs>
+        <summary>
+            SetFileInformationByHandleDest (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileInformationByHandleSource">
+      <MemberSignature Language="C#" Value="SetFileInformationByHandleSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation SetFileInformationByHandleSource = unsigned int8(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleSource" />
+      <MemberSignature Language="VB.NET" Value="SetFileInformationByHandleSource" />
+      <MemberSignature Language="F#" Value="SetFileInformationByHandleSource = 12" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleSource" />
+      <MemberSignature Language="C++ CLI" Value="SetFileInformationByHandleSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>
+            SetFileInformationByHandleSource (source; read and deleted).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticallyLinkedProcess">
+      <MemberSignature Language="C#" Value="StaticallyLinkedProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation StaticallyLinkedProcess = unsigned int8(34)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.StaticallyLinkedProcess" />
+      <MemberSignature Language="VB.NET" Value="StaticallyLinkedProcess" />
+      <MemberSignature Language="F#" Value="StaticallyLinkedProcess = 34" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.StaticallyLinkedProcess" />
+      <MemberSignature Language="C++ CLI" Value="StaticallyLinkedProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>34</MemberValue>
+      <Docs>
+        <summary>
+            This operation used to indicate to the engine by the Linux sandbox that a process being executed statically links libc
+            and may have missing file observations.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation Unknown = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Unknown" />
+      <MemberSignature Language="C++ CLI" Value="Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Unknown operation.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwCreateFile">
+      <MemberSignature Language="C#" Value="ZwCreateFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwCreateFile = unsigned int8(30)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwCreateFile" />
+      <MemberSignature Language="VB.NET" Value="ZwCreateFile" />
+      <MemberSignature Language="F#" Value="ZwCreateFile = 30" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwCreateFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwCreateFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>30</MemberValue>
+      <Docs>
+        <summary>
+            ZwCreateFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwOpenFile">
+      <MemberSignature Language="C#" Value="ZwOpenFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwOpenFile = unsigned int8(31)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwOpenFile" />
+      <MemberSignature Language="VB.NET" Value="ZwOpenFile" />
+      <MemberSignature Language="F#" Value="ZwOpenFile = 31" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwOpenFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwOpenFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>31</MemberValue>
+      <Docs>
+        <summary>
+            ZwOpenFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwQueryDirectoryFile">
+      <MemberSignature Language="C#" Value="ZwQueryDirectoryFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwQueryDirectoryFile = unsigned int8(28)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwQueryDirectoryFile" />
+      <MemberSignature Language="VB.NET" Value="ZwQueryDirectoryFile" />
+      <MemberSignature Language="F#" Value="ZwQueryDirectoryFile = 28" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwQueryDirectoryFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwQueryDirectoryFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>28</MemberValue>
+      <Docs>
+        <summary>
+            ZwQueryDirectoryFile.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetDispositionInformationFile">
+      <MemberSignature Language="C#" Value="ZwSetDispositionInformationFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetDispositionInformationFile = unsigned int8(17)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetDispositionInformationFile" />
+      <MemberSignature Language="VB.NET" Value="ZwSetDispositionInformationFile" />
+      <MemberSignature Language="F#" Value="ZwSetDispositionInformationFile = 17" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetDispositionInformationFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetDispositionInformationFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>17</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetDispositionInformationFile (delete-on-close; deleted).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetFileNameInformationFileDest">
+      <MemberSignature Language="C#" Value="ZwSetFileNameInformationFileDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetFileNameInformationFileDest = unsigned int8(20)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileDest" />
+      <MemberSignature Language="VB.NET" Value="ZwSetFileNameInformationFileDest" />
+      <MemberSignature Language="F#" Value="ZwSetFileNameInformationFileDest = 20" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileDest" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetFileNameInformationFileDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>20</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetFileNameInformationFile (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetFileNameInformationFileSource">
+      <MemberSignature Language="C#" Value="ZwSetFileNameInformationFileSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetFileNameInformationFileSource = unsigned int8(19)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileSource" />
+      <MemberSignature Language="VB.NET" Value="ZwSetFileNameInformationFileSource" />
+      <MemberSignature Language="F#" Value="ZwSetFileNameInformationFileSource = 19" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileSource" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetFileNameInformationFileSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>19</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetFileNameInformationFile (source; read and written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetLinkInformationFile">
+      <MemberSignature Language="C#" Value="ZwSetLinkInformationFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetLinkInformationFile = unsigned int8(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetLinkInformationFile" />
+      <MemberSignature Language="VB.NET" Value="ZwSetLinkInformationFile" />
+      <MemberSignature Language="F#" Value="ZwSetLinkInformationFile = 16" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetLinkInformationFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetLinkInformationFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetLinkInformationFileDest.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetModeInformationFile">
+      <MemberSignature Language="C#" Value="ZwSetModeInformationFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetModeInformationFile = unsigned int8(18)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetModeInformationFile" />
+      <MemberSignature Language="VB.NET" Value="ZwSetModeInformationFile" />
+      <MemberSignature Language="F#" Value="ZwSetModeInformationFile = 18" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetModeInformationFile" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetModeInformationFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>18</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetModeInformationFile (delete-on-close; deleted).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetRenameInformationFileDest">
+      <MemberSignature Language="C#" Value="ZwSetRenameInformationFileDest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetRenameInformationFileDest = unsigned int8(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileDest" />
+      <MemberSignature Language="VB.NET" Value="ZwSetRenameInformationFileDest" />
+      <MemberSignature Language="F#" Value="ZwSetRenameInformationFileDest = 15" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileDest" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetRenameInformationFileDest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetRenameInformationFileDest (destination; written).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZwSetRenameInformationFileSource">
+      <MemberSignature Language="C#" Value="ZwSetRenameInformationFileSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation ZwSetRenameInformationFileSource = unsigned int8(14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileSource" />
+      <MemberSignature Language="VB.NET" Value="ZwSetRenameInformationFileSource" />
+      <MemberSignature Language="F#" Value="ZwSetRenameInformationFileSource = 14" Usage="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileSource" />
+      <MemberSignature Language="C++ CLI" Value="ZwSetRenameInformationFileSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.FileAccess.ReportedFileOperation</ReturnType>
+      </ReturnValue>
+      <MemberValue>14</MemberValue>
+      <Docs>
+        <summary>
+            ZwSetRenameInformationFileSource (source; read and deleted).
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

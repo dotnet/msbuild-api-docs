@@ -1,0 +1,300 @@
+<Type Name="ExtendedCustomBuildEventArgs" FullName="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ExtendedCustomBuildEventArgs : Microsoft.Build.Framework.CustomBuildEventArgs, Microsoft.Build.Framework.IExtendedBuildEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtendedCustomBuildEventArgs extends Microsoft.Build.Framework.CustomBuildEventArgs implements class Microsoft.Build.Framework.IExtendedBuildEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ExtendedCustomBuildEventArgs&#xA;Inherits CustomBuildEventArgs&#xA;Implements IExtendedBuildEventArgs" />
+  <TypeSignature Language="F#" Value="type ExtendedCustomBuildEventArgs = class&#xA;    inherit CustomBuildEventArgs&#xA;    interface IExtendedBuildEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ExtendedCustomBuildEventArgs sealed : Microsoft::Build::Framework::CustomBuildEventArgs, Microsoft::Build::Framework::IExtendedBuildEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.CustomBuildEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IExtendedBuildEventArgs</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Generic custom event.
+            Extended data are implemented by <see cref="T:Microsoft.Build.Framework.IExtendedBuildEventArgs" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedCustomBuildEventArgs (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs : string -&gt; Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Usage="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs type" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedCustomBuildEventArgs(System::String ^ type);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedCustomBuildEventArgs (string type, string? message, string? helpKeyword, string? senderName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs : string * string * string * string -&gt; Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Usage="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs (type, message, helpKeyword, senderName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedCustomBuildEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of sender</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedCustomBuildEventArgs (string type, string? message, string? helpKeyword, string? senderName, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs : string * string * string * string * DateTime -&gt; Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Usage="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs (type, message, helpKeyword, senderName, eventTimestamp)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedCustomBuildEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, DateTime eventTimestamp);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of sender</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <summary>
+            This constructor allows event data to be initialized including timestamp.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedCustomBuildEventArgs (string type, string? message, string? helpKeyword, string? senderName, DateTime eventTimestamp, params object[]? messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String, eventTimestamp As DateTime, ParamArray messageArgs As Object())" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs : string * string * string * string * DateTime * obj[] -&gt; Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Usage="new Microsoft.Build.Framework.ExtendedCustomBuildEventArgs (type, message, helpKeyword, senderName, eventTimestamp, messageArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedCustomBuildEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, DateTime eventTimestamp, ... cli::array &lt;System::Object ^&gt; ^ messageArgs);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of sender</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <param name="messageArgs">Message arguments</param>
+        <summary>
+            This constructor allows event data to be initialized including timestamp.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedData">
+      <MemberSignature Language="C#" Value="public string? ExtendedData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedData" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedData As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedData : string with get, set" Usage="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[set: System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string?&gt;? ExtendedMetadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; ExtendedMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedMetadata As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtendedMetadata : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ ExtendedMetadata { System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedMetadata</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedType">
+      <MemberSignature Language="C#" Value="public string ExtendedType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedType As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedType : string with get, set" Usage="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

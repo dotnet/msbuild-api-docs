@@ -1,10 +1,15 @@
 <Type Name="InvalidProjectFileException" FullName="Microsoft.Build.Exceptions.InvalidProjectFileException">
-  <TypeSignature Language="C#" Value="public sealed class InvalidProjectFileException : Exception" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InvalidProjectFileException extends System.Exception" />
+  <TypeSignature Language="C#" Value="public sealed class InvalidProjectFileException : Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InvalidProjectFileException extends System.Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Exceptions.InvalidProjectFileException" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InvalidProjectFileException&#xA;Inherits Exception" />
-  <TypeSignature Language="F#" Value="type InvalidProjectFileException = class&#xA;    inherit Exception" />
-  <TypeSignature Language="C++ CLI" Value="public ref class InvalidProjectFileException sealed : Exception" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InvalidProjectFileException&#xA;Inherits Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type InvalidProjectFileException = class&#xA;    inherit Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InvalidProjectFileException sealed : Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public sealed class InvalidProjectFileException : Microsoft.Build.Framework.BuildException.BuildExceptionBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InvalidProjectFileException extends Microsoft.Build.Framework.BuildException.BuildExceptionBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InvalidProjectFileException&#xA;Inherits BuildExceptionBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type InvalidProjectFileException = class&#xA;    inherit BuildExceptionBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InvalidProjectFileException sealed : Microsoft::Build::Framework::BuildException::BuildExceptionBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -12,6 +17,7 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Framework.BuildException.BuildExceptionBase</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
@@ -355,6 +361,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FlushCustomState">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IDictionary&lt;string,string&gt; FlushCustomState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; FlushCustomState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.FlushCustomState" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function FlushCustomState () As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="override this.FlushCustomState : unit -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="invalidProjectFileException.FlushCustomState " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ FlushCustomState();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetObjectData">
       <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
@@ -368,6 +396,12 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Obsolete(DiagnosticId="SYSLIB0051")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete(DiagnosticId="SYSLIB0051")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -447,6 +481,30 @@
             Gets the F1-help keyword (if any) associated with this error, for the host IDE.
             </summary>
         <value>The keyword string, or null.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCustomState">
+      <MemberSignature Language="C#" Value="protected override void InitializeCustomState (System.Collections.Generic.IDictionary&lt;string,string&gt; state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeCustomState(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub InitializeCustomState (state As IDictionary(Of String, String))" />
+      <MemberSignature Language="F#" Value="override this.InitializeCustomState : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="invalidProjectFileException.InitializeCustomState state" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void InitializeCustomState(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
