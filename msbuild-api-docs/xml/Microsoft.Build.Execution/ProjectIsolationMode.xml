@@ -1,0 +1,97 @@
+<Type Name="ProjectIsolationMode" FullName="Microsoft.Build.Execution.ProjectIsolationMode">
+  <TypeSignature Language="C#" Value="public enum ProjectIsolationMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProjectIsolationMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectIsolationMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ProjectIsolationMode" />
+  <TypeSignature Language="F#" Value="type ProjectIsolationMode = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class ProjectIsolationMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The isolation mode to use.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="False" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.ProjectIsolationMode False = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.ProjectIsolationMode.False" />
+      <MemberSignature Language="VB.NET" Value="False" />
+      <MemberSignature Language="F#" Value="False = 0" Usage="Microsoft.Build.Execution.ProjectIsolationMode.False" />
+      <MemberSignature Language="C++ CLI" Value="False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectIsolationMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Do not enable isolation.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageUponIsolationViolation">
+      <MemberSignature Language="C#" Value="MessageUponIsolationViolation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.ProjectIsolationMode MessageUponIsolationViolation = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.ProjectIsolationMode.MessageUponIsolationViolation" />
+      <MemberSignature Language="VB.NET" Value="MessageUponIsolationViolation" />
+      <MemberSignature Language="F#" Value="MessageUponIsolationViolation = 1" Usage="Microsoft.Build.Execution.ProjectIsolationMode.MessageUponIsolationViolation" />
+      <MemberSignature Language="C++ CLI" Value="MessageUponIsolationViolation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectIsolationMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Enable isolation and log isolation violations as messages.
+            </summary>
+        <remarks>
+            Under this mode, only the results from top-level targets
+            are serialized if the -orc switch is supplied to mitigate
+            the chances of an isolation-violating target on a
+            dependency project using incorrect state due to its
+            dependency on a cached target whose side effects would
+            not be taken into account. (E.g., the definition of a property.)
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="True" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.ProjectIsolationMode True = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.ProjectIsolationMode.True" />
+      <MemberSignature Language="VB.NET" Value="True" />
+      <MemberSignature Language="F#" Value="True = 2" Usage="Microsoft.Build.Execution.ProjectIsolationMode.True" />
+      <MemberSignature Language="C++ CLI" Value="True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectIsolationMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Enable isolation and log isolation violations as errors.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

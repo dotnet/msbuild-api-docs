@@ -234,6 +234,7 @@
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemGroupElement" />
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String)" />
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String,System.String,Microsoft.Build.Construction.ElementLocation)" />
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateNewInstance(Microsoft.Build.Construction.ProjectRootElement)" />
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateOnErrorElement(System.String)" />
       <Member Id="M:Microsoft.Build.Construction.ProjectRootElement.CreateOtherwiseElement" />
@@ -443,6 +444,7 @@
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.DirectoryCacheFactory" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.EvaluationContext" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.GlobalProperties" />
+      <Member Id="P:Microsoft.Build.Definition.ProjectOptions.Interactive" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.LoadSettings" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.ProjectCollection" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.SubToolsetVersion" />
@@ -628,6 +630,7 @@
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.LoadProject(System.Xml.XmlReader,System.String)" />
+      <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.LogBuildFinishedEvent(System.Boolean)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterForwardingLoggers(System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger(Microsoft.Build.Framework.ILogger)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.RegisterLoggers(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
@@ -796,7 +799,9 @@
       <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.FlushCustomState" />
       <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.Exceptions.BuildAbortedException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Exceptions.BuildAbortedException.ErrorCode" />
     </Type>
     <Type Name="Microsoft.Build.Exceptions.CircularDependencyException" Id="T:Microsoft.Build.Exceptions.CircularDependencyException">
@@ -806,7 +811,9 @@
       <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor" />
       <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.FlushCustomState" />
       <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InternalLoggerException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Exceptions.InternalLoggerException.BuildEventArgs" />
       <Member Id="P:Microsoft.Build.Exceptions.InternalLoggerException.ErrorCode" />
       <Member Id="P:Microsoft.Build.Exceptions.InternalLoggerException.HelpKeyword" />
@@ -817,7 +824,9 @@
       <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String,System.Exception)" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.FlushCustomState" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InvalidProjectFileException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Exceptions.InvalidProjectFileException.BaseMessage" />
       <Member Id="P:Microsoft.Build.Exceptions.InvalidProjectFileException.ColumnNumber" />
       <Member Id="P:Microsoft.Build.Exceptions.InvalidProjectFileException.EndColumnNumber" />
@@ -837,7 +846,9 @@
       <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor(System.String,System.Exception)" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor(System.String,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.FlushCustomState" />
       <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.ErrorCode" />
     </Type>
   </Namespace>
@@ -864,6 +875,8 @@
     </Type>
     <Type Name="Microsoft.Build.Execution.BuildManager/DeferredBuildMessage" Id="T:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage">
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance,System.String)" />
+      <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Importance" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Text" />
     </Type>
@@ -899,7 +912,9 @@
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.OnlyLogCriticalEvents" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.OutputResultsCacheFile" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectIsolationMode" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectLoadSettings" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.Question" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ResetCaches" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.SaveOperatingEnvironment" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ShutdownInProcNodeOnBuildFinish" />
@@ -1070,6 +1085,11 @@
       <Member Id="F:Microsoft.Build.Execution.ProjectInstanceSettings.Immutable" />
       <Member Id="F:Microsoft.Build.Execution.ProjectInstanceSettings.ImmutableWithFastItemLookup" />
       <Member Id="F:Microsoft.Build.Execution.ProjectInstanceSettings.None" />
+    </Type>
+    <Type Name="Microsoft.Build.Execution.ProjectIsolationMode" Id="T:Microsoft.Build.Execution.ProjectIsolationMode">
+      <Member Id="F:Microsoft.Build.Execution.ProjectIsolationMode.False" />
+      <Member Id="F:Microsoft.Build.Execution.ProjectIsolationMode.MessageUponIsolationViolation" />
+      <Member Id="F:Microsoft.Build.Execution.ProjectIsolationMode.True" />
     </Type>
     <Type Name="Microsoft.Build.Execution.ProjectItemDefinitionInstance" Id="T:Microsoft.Build.Execution.ProjectItemDefinitionInstance">
       <Member Id="M:Microsoft.Build.Execution.ProjectItemDefinitionInstance.GetMetadata(System.String)" />
@@ -1260,6 +1280,149 @@
       <Member Id="F:Microsoft.Build.Execution.TargetResultCode.Success" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.Experimental.FileAccess">
+    <Type Name="Microsoft.Build.Experimental.FileAccess.DesiredAccess" Id="T:Microsoft.Build.Experimental.FileAccess.DesiredAccess">
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.DELETE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_ADD_FILE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_ADD_SUBDIRECTORY" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_APPEND_DATA" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_DELETE_CHILD" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_EXECUTE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_LIST_DIRECTORY" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_READ_ATTRIBUTES" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_READ_EA" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_WRITE_ATTRIBUTES" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_WRITE_DATA" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.FILE_WRITE_EA" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.GENERIC_ALL" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.GENERIC_EXECUTE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.GENERIC_READ" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.GENERIC_WRITE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.SYNCHRONIZE" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.FileAccess.FileAccessData" Id="T:Microsoft.Build.Experimental.FileAccess.FileAccessData">
+      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.DesiredAccess" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Error" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.FlagsAndAttributes" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.IsAnAugmentedFileAccess" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Operation" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Path" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.ProcessArgs" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.ProcessId" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.RequestedAccess" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes" Id="T:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes">
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_ARCHIVE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_DIRECTORY" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_ENCRYPED" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_HIDDEN" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_NORMAL" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_OFFLINE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_READONLY" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_SYSTEM" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_ATTRIBUTE_TEMPORARY" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_BACKUP_SEMANTICS" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_DELETE_ON_CLOSE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_NO_BUFFERING" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_OPEN_NO_RECALL" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_OPEN_REPARSE_POINT" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_OVERLAPPED" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_POSIX_SEMANTICS" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_RANDOM_ACCESS" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_SEQUENTIAL_SCAN" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_SESSION_AWARE" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes.FILE_FLAG_WRITE_THROUGH" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.FileAccess.ProcessData" Id="T:Microsoft.Build.Experimental.FileAccess.ProcessData">
+      <Member Id="M:Microsoft.Build.Experimental.FileAccess.ProcessData.#ctor(System.String,System.UInt32,System.UInt32,System.DateTime,System.DateTime,System.UInt32)" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.CreationDateTime" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ExitCode" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ExitDateTime" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ParentProcessId" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessId" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.ProcessData.ProcessName" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation" Id="T:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation">
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ChangedReadWriteToReadAccess" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileDestination" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CopyFileSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateDirectory" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkDestination" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateHardLinkSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateProcess" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.CreateSymbolicLinkSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.DeleteFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindFirstFileEx" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FindNextFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.FirstAllowWriteCheckInProcess" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributes" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.GetFileAttributesEx" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthClose" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCloseModified" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopyDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCopySource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateDir" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthCreateHardlinkSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteDir" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthDeleteFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthGetAttributes" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthMoveSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthOpenDir" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthReadFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeExecute" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeProbe" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeRead" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthVNodeWrite" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.KAuthWriteFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacLookup" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacReadlink" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCloneSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeCreate" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MacVNodeWrite" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileDestination" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MoveFileWithProgressSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.MultipleOperations" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtCreateFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.NtQueryDirectoryFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Process" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ProcessExit" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectory" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.RemoveDirectorySource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTarget" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ReparsePointTargetCached" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.SetFileInformationByHandleSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.StaticallyLinkedProcess" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.Unknown" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwCreateFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwOpenFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwQueryDirectoryFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetDispositionInformationFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetFileNameInformationFileSource" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetLinkInformationFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetModeInformationFile" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileDest" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.ReportedFileOperation.ZwSetRenameInformationFileSource" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.FileAccess.RequestedAccess" Id="T:Microsoft.Build.Experimental.FileAccess.RequestedAccess">
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.All" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Enumerate" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.EnumerationProbe" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.None" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Probe" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Read" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.ReadWrite" />
+      <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Write" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Build.Experimental">
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
@@ -1277,6 +1440,7 @@
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
+      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnknownServerState" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode">
       <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
@@ -1308,6 +1472,12 @@
       <Member Id="F:Microsoft.Build.Experimental.ProjectCache.CacheResultType.CacheNotApplicable" />
       <Member Id="F:Microsoft.Build.Experimental.ProjectCache.CacheResultType.None" />
     </Type>
+    <Type Name="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Id="T:Microsoft.Build.Experimental.ProjectCache.FileAccessContext">
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.FileAccessContext.#ctor(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Collections.Generic.IReadOnlyList{System.String})" />
+      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.FileAccessContext.GlobalProperties" />
+      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.FileAccessContext.ProjectFullPath" />
+      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.FileAccessContext.Targets" />
+    </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase" Id="T:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.#ctor" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase.LogError(System.String)" />
@@ -1337,6 +1507,9 @@
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.BeginBuildAsync(Microsoft.Build.Experimental.ProjectCache.CacheContext,Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.EndBuildAsync(Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.GetCacheResultAsync(Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleFileAccess(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.FileAccessData)" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleProcess(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.ProcessData)" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase.HandleProjectFinishedAsync(Microsoft.Build.Experimental.ProjectCache.FileAccessContext,Microsoft.Build.Execution.BuildResult,Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.ProxyTargets" Id="T:Microsoft.Build.Experimental.ProjectCache.ProxyTargets">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.ProxyTargets.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
@@ -1373,6 +1546,23 @@
   </Namespace>
   <Namespace Name="Microsoft.Build.Framework">
     <Type Name="Microsoft.Build.Framework.AnyEventHandler" Id="T:Microsoft.Build.Framework.AnyEventHandler" />
+    <Type Name="Microsoft.Build.Framework.AssemblyLoadBuildEventArgs" Id="T:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.#ctor(Microsoft.Build.Framework.AssemblyLoadingContext,System.String,System.String,System.String,System.Guid,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.AppDomainDescriptor" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.AssemblyName" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.AssemblyPath" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.LoadingContext" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.LoadingInitiator" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.Message" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.MVID" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyLoadingContext" Id="T:Microsoft.Build.Framework.AssemblyLoadingContext">
+      <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.Evaluation" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.LoggerInitialization" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.SdkResolution" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.TaskRun" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.BuildEngineResult" Id="T:Microsoft.Build.Framework.BuildEngineResult">
       <Member Id="M:Microsoft.Build.Framework.BuildEngineResult.#ctor(System.Boolean,System.Collections.Generic.List{System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.ITaskItem[]}})" />
       <Member Id="P:Microsoft.Build.Framework.BuildEngineResult.Result" />
@@ -1520,6 +1710,47 @@
       <Member Id="M:Microsoft.Build.Framework.EnvironmentVariableReadEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="P:Microsoft.Build.Framework.EnvironmentVariableReadEventArgs.EnvironmentVariableName" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedBuildErrorEventArgs" Id="T:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.ExtendedType" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Id="T:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedType" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedBuildWarningEventArgs" Id="T:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedType" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Id="T:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.ExtendedType" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" Id="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs">
       <Member Id="M:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean)" />
@@ -1612,6 +1843,11 @@
     <Type Name="Microsoft.Build.Framework.IEventSource4" Id="T:Microsoft.Build.Framework.IEventSource4">
       <Member Id="M:Microsoft.Build.Framework.IEventSource4.IncludeEvaluationPropertiesAndItems" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.IExtendedBuildEventArgs" Id="T:Microsoft.Build.Framework.IExtendedBuildEventArgs">
+      <Member Id="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.IForwardingLogger" Id="T:Microsoft.Build.Framework.IForwardingLogger">
       <Member Id="P:Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector" />
       <Member Id="P:Microsoft.Build.Framework.IForwardingLogger.NodeId" />
@@ -1619,6 +1855,9 @@
     <Type Name="Microsoft.Build.Framework.IGeneratedTask" Id="T:Microsoft.Build.Framework.IGeneratedTask">
       <Member Id="M:Microsoft.Build.Framework.IGeneratedTask.GetPropertyValue(Microsoft.Build.Framework.TaskPropertyInfo)" />
       <Member Id="M:Microsoft.Build.Framework.IGeneratedTask.SetPropertyValue(Microsoft.Build.Framework.TaskPropertyInfo,System.Object)" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.IIncrementalTask" Id="T:Microsoft.Build.Framework.IIncrementalTask">
+      <Member Id="P:Microsoft.Build.Framework.IIncrementalTask.FailIfNotIncremental" />
     </Type>
     <Type Name="Microsoft.Build.Framework.ILogger" Id="T:Microsoft.Build.Framework.ILogger">
       <Member Id="M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
@@ -1682,7 +1921,9 @@
       <Member Id="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String,System.Exception)" />
       <Member Id="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String,System.Exception,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.LoggerException.FlushCustomState" />
       <Member Id="M:Microsoft.Build.Framework.LoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.Framework.LoggerException.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="P:Microsoft.Build.Framework.LoggerException.ErrorCode" />
       <Member Id="P:Microsoft.Build.Framework.LoggerException.HelpKeyword" />
     </Type>
@@ -1780,6 +2021,11 @@
     <Type Name="Microsoft.Build.Framework.RequiredRuntimeAttribute" Id="T:Microsoft.Build.Framework.RequiredRuntimeAttribute">
       <Member Id="M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)" />
       <Member Id="P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ResponseFileUsedEventArgs" Id="T:Microsoft.Build.Framework.ResponseFileUsedEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ResponseFileUsedEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.ResponseFileUsedEventArgs.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Build.Framework.ResponseFileUsedEventArgs.ResponseFilePath" />
     </Type>
     <Type Name="Microsoft.Build.Framework.RunInMTAAttribute" Id="T:Microsoft.Build.Framework.RunInMTAAttribute">
       <Member Id="M:Microsoft.Build.Framework.RunInMTAAttribute.#ctor" />
@@ -1961,6 +2207,14 @@
       <Member Id="M:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="P:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.PropertyName" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Build.Framework.BuildException">
+    <Type Name="Microsoft.Build.Framework.BuildException.BuildExceptionBase" Id="T:Microsoft.Build.Framework.BuildException.BuildExceptionBase">
+      <Member Id="M:Microsoft.Build.Framework.BuildException.BuildExceptionBase.FlushCustomState" />
+      <Member Id="M:Microsoft.Build.Framework.BuildException.BuildExceptionBase.InitializeCustomState(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Build.Framework.BuildException.BuildExceptionBase.ToString" />
+      <Member Id="P:Microsoft.Build.Framework.BuildException.BuildExceptionBase.StackTrace" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Framework.Profiler">
@@ -2176,11 +2430,16 @@
       <Member Id="F:Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode.ZipFile" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogReplayEventSource" Id="T:Microsoft.Build.Logging.BinaryLogReplayEventSource">
+      <Member Id="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.NotificationsSourceCreated" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.#ctor" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenReader(System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.BinaryReader,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BuildEventArgsReader" Id="T:Microsoft.Build.Logging.BuildEventArgsReader">
+      <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.StringEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.StringReadDone" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.#ctor(System.IO.BinaryReader,System.Int32)" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.Dispose" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.Read" />
@@ -2263,6 +2522,11 @@
       <Member Id="P:Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger" />
       <Member Id="P:Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription" />
     </Type>
+    <Type Name="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" Id="T:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" />
+    <Type Name="Microsoft.Build.Logging.IBuildEventStringsReader" Id="T:Microsoft.Build.Logging.IBuildEventStringsReader">
+      <Member Id="E:Microsoft.Build.Logging.IBuildEventStringsReader.StringEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.IBuildEventStringsReader.StringReadDone" />
+    </Type>
     <Type Name="Microsoft.Build.Logging.LoggerDescription" Id="T:Microsoft.Build.Logging.LoggerDescription">
       <Member Id="M:Microsoft.Build.Logging.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
       <Member Id="M:Microsoft.Build.Logging.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity,System.Boolean)" />
@@ -2279,7 +2543,23 @@
       <Member Id="P:Microsoft.Build.Logging.ProfilerLogger.Parameters" />
       <Member Id="P:Microsoft.Build.Logging.ProfilerLogger.Verbosity" />
     </Type>
+    <Type Name="Microsoft.Build.Logging.StringReadEventArgs" Id="T:Microsoft.Build.Logging.StringReadEventArgs">
+      <Member Id="M:Microsoft.Build.Logging.StringReadEventArgs.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Build.Logging.StringReadEventArgs.OriginalString" />
+      <Member Id="P:Microsoft.Build.Logging.StringReadEventArgs.StringToBeUsed" />
+    </Type>
     <Type Name="Microsoft.Build.Logging.WriteHandler" Id="T:Microsoft.Build.Logging.WriteHandler" />
+  </Namespace>
+  <Namespace Name="Microsoft.Build.Logging.SimpleErrorLogger">
+    <Type Name="Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger" Id="T:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger">
+      <Member Id="M:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.Shutdown" />
+      <Member Id="P:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.HasLoggedErrors" />
+      <Member Id="P:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.Parameters" />
+      <Member Id="P:Microsoft.Build.Logging.SimpleErrorLogger.SimpleErrorLogger.Verbosity" />
+    </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.ObjectModelRemoting">
     <Type Name="Microsoft.Build.ObjectModelRemoting.ExternalProjectsProvider" Id="T:Microsoft.Build.ObjectModelRemoting.ExternalProjectsProvider">
@@ -2436,6 +2716,9 @@
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetLogicalProject" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetProperty(System.String)" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GetPropertyValue(System.String)" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesContains(System.String)" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesCount" />
+      <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.GlobalPropertiesEnumerable" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.MarkDirty" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.ReevaluateIfNecessary(Microsoft.Build.Evaluation.Context.EvaluationContext)" />
       <Member Id="M:Microsoft.Build.ObjectModelRemoting.ProjectLink.RemoveGlobalProperty(System.String)" />
@@ -2695,6 +2978,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Copy.DestinationFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.DestinationFolder" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.ErrorIfLinkFails" />
+      <Member Id="P:Microsoft.Build.Tasks.Copy.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.Retries" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds" />
@@ -2750,7 +3034,10 @@
       <Member Id="M:Microsoft.Build.Tasks.Delete.Cancel" />
       <Member Id="M:Microsoft.Build.Tasks.Delete.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.DeletedFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.Delete.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.Files" />
+      <Member Id="P:Microsoft.Build.Tasks.Delete.Retries" />
+      <Member Id="P:Microsoft.Build.Tasks.Delete.RetryDelayMilliseconds" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.TreatErrorsAsWarnings" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.DownloadFile" Id="T:Microsoft.Build.Tasks.DownloadFile">
@@ -2760,6 +3047,7 @@
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.DestinationFileName" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.DestinationFolder" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.DownloadedFile" />
+      <Member Id="P:Microsoft.Build.Tasks.DownloadFile.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.Retries" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.RetryDelayMilliseconds" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.SkipUnchangedFiles" />
@@ -2969,6 +3257,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.ExcludedInputPaths" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.ExecuteAsTool" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.ExtractResWFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateResource.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.FilesWritten" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.MinimalRebuildFromTracking" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.NeverLockTypeAssemblies" />
@@ -2993,6 +3282,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.TrackFileAccess" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.UsePreserializedResources" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.UseSourcePath" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateResource.WarnOnBinaryFormatterUse" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetAssemblyIdentity" Id="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.#ctor" />
@@ -3132,6 +3422,7 @@
       <Member Id="M:Microsoft.Build.Tasks.MakeDir.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.MakeDir.Directories" />
       <Member Id="P:Microsoft.Build.Tasks.MakeDir.DirectoriesCreated" />
+      <Member Id="P:Microsoft.Build.Tasks.MakeDir.FailIfNotIncremental" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Message" Id="T:Microsoft.Build.Tasks.Message">
       <Member Id="M:Microsoft.Build.Tasks.Message.#ctor" />
@@ -3149,6 +3440,7 @@
       <Member Id="M:Microsoft.Build.Tasks.Move.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.Move.DestinationFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Move.DestinationFolder" />
+      <Member Id="P:Microsoft.Build.Tasks.Move.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.Move.MovedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Move.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Move.SourceFiles" />
@@ -3181,6 +3473,7 @@
       <Member Id="M:Microsoft.Build.Tasks.RemoveDir.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.RemoveDir.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDir.Directories" />
+      <Member Id="P:Microsoft.Build.Tasks.RemoveDir.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDir.RemovedDirectories" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.RemoveDuplicates" Id="T:Microsoft.Build.Tasks.RemoveDuplicates">
@@ -3189,6 +3482,21 @@
       <Member Id="P:Microsoft.Build.Tasks.RemoveDuplicates.Filtered" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDuplicates.HadAnyDuplicates" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDuplicates.Inputs" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.RequiresFramework35SP1Assembly" Id="T:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly">
+      <Member Id="M:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Assemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.CreateDesktopShortcut" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.DeploymentManifestEntryPoint" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.EntryPoint" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ErrorReportUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Files" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ReferencedAssemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.RequiresMinimumFramework35SP1" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SigningManifests" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SuiteName" />
+      <Member Id="P:Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.TargetFrameworkVersion" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveAssemblyReference" Id="T:Microsoft.Build.Tasks.ResolveAssemblyReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveAssemblyReference.#ctor" />
@@ -3207,6 +3515,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnNETStandard" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnSystemRuntime" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DoNotCopyLocalIfInGac" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependenciesOfExternallyResolvedReferences" />
@@ -3424,8 +3733,10 @@
       <Member Id="M:Microsoft.Build.Tasks.Touch.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.Touch.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.AlwaysCreate" />
+      <Member Id="P:Microsoft.Build.Tasks.Touch.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.Files" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.ForceTouch" />
+      <Member Id="P:Microsoft.Build.Tasks.Touch.Importance" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.Time" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.TouchedFiles" />
     </Type>
@@ -3435,6 +3746,7 @@
       <Member Id="M:Microsoft.Build.Tasks.Unzip.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.DestinationFolder" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.Exclude" />
+      <Member Id="P:Microsoft.Build.Tasks.Unzip.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.Include" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.SkipUnchangedFiles" />
@@ -3468,7 +3780,9 @@
     <Type Name="Microsoft.Build.Tasks.WriteLinesToFile" Id="T:Microsoft.Build.Tasks.WriteLinesToFile">
       <Member Id="M:Microsoft.Build.Tasks.WriteLinesToFile.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.WriteLinesToFile.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.CanBeIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.Encoding" />
+      <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.File" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.Lines" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.Overwrite" />
@@ -3518,6 +3832,7 @@
       <Member Id="M:Microsoft.Build.Tasks.ZipDirectory.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.ZipDirectory.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.DestinationFile" />
+      <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.Overwrite" />
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.SourceDirectory" />
     </Type>
@@ -4254,8 +4569,13 @@
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.AMD64" />
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.ARM" />
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.ARM64" />
+      <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.ARMV6" />
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.IA64" />
+      <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.LOONGARCH64" />
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.MSIL" />
+      <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.PPC64LE" />
+      <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.S390X" />
+      <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.WASM" />
       <Member Id="F:Microsoft.Build.Utilities.ProcessorArchitecture.X86" />
       <Member Id="P:Microsoft.Build.Utilities.ProcessorArchitecture.CurrentProcessArchitecture" />
     </Type>
@@ -4334,6 +4654,7 @@
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version471" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version472" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version48" />
+      <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version481" />
       <Member Id="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.VersionLatest" />
     </Type>
     <Type Name="Microsoft.Build.Utilities.TargetPlatformSDK" Id="T:Microsoft.Build.Utilities.TargetPlatformSDK">
@@ -4394,6 +4715,7 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.ExtractMessageCode(System.String,System.String@)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.FormatResourceString(System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.FormatString(System.String,System.Object[])" />
+      <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetInnerExceptionMessageString(System.Exception)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetResourceMessage(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(Microsoft.Build.Framework.MessageImportance,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(System.String)" />
@@ -4552,10 +4874,12 @@
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ResponseFileEscape(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ValidateParameters" />
+      <Member Id="P:Microsoft.Build.Utilities.ToolTask.canBeIncremental" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EchoOff" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.ExitCode" />
+      <Member Id="P:Microsoft.Build.Utilities.ToolTask.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.HasLoggedErrors" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.ResponseFileEncoding" />

@@ -539,7 +539,8 @@
       <Docs>
         <summary>
             Input cache files that MSBuild will use to read build results from.
-            Setting this also turns on isolated builds.
+            If the isolation mode is set to <see cref="F:Microsoft.Build.Execution.ProjectIsolationMode.False" />,
+            this sets the isolation mode to <see cref="F:Microsoft.Build.Execution.ProjectIsolationMode.True" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -585,10 +586,12 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value indicating whether projects should build in isolation.
+            Gets or sets a value indicating the isolation mode to use.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Kept for API backwards compatibility.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="LegacyThreadingSemantics">
@@ -881,7 +884,8 @@
       <Docs>
         <summary>
             Output cache file where MSBuild will write the contents of its build result caches during EndBuild.
-            Setting this also turns on isolated builds.
+            If the isolation mode is set to <see cref="F:Microsoft.Build.Execution.ProjectIsolationMode.False" />,
+            this sets the isolation mode to <see cref="F:Microsoft.Build.Execution.ProjectIsolationMode.True" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -911,6 +915,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ProjectIsolationMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectIsolationMode ProjectIsolationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.ProjectIsolationMode ProjectIsolationMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ProjectIsolationMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProjectIsolationMode As ProjectIsolationMode" />
+      <MemberSignature Language="F#" Value="member this.ProjectIsolationMode : Microsoft.Build.Execution.ProjectIsolationMode with get, set" Usage="Microsoft.Build.Execution.BuildParameters.ProjectIsolationMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::ProjectIsolationMode ProjectIsolationMode { Microsoft::Build::Execution::ProjectIsolationMode get(); void set(Microsoft::Build::Execution::ProjectIsolationMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectIsolationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating the isolation mode to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ProjectLoadSettings">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectLoadSettings ProjectLoadSettings { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Evaluation.ProjectLoadSettings ProjectLoadSettings" />
@@ -931,6 +958,52 @@
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <nodoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Question">
+      <MemberSignature Language="C#" Value="public bool Question { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Question" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.Question" />
+      <MemberSignature Language="VB.NET" Value="Public Property Question As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Question : bool with get, set" Usage="Microsoft.Build.Execution.BuildParameters.Question" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Question { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value that will error when the build process fails an incremental check.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportFileAccesses">
+      <MemberSignature Language="C#" Value="public bool ReportFileAccesses { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReportFileAccesses" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ReportFileAccesses" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReportFileAccesses As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReportFileAccesses : bool with get, set" Usage="Microsoft.Build.Execution.BuildParameters.ReportFileAccesses" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReportFileAccesses { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether file accesses should be reported to any configured project cache plugins.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ResetCaches">

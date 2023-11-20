@@ -1255,6 +1255,38 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="CreateMetadataElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name, string unevaluatedValue, Microsoft.Build.Construction.ElementLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement(string name, string unevaluatedValue, class Microsoft.Build.Construction.ElementLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String,System.String,Microsoft.Build.Construction.ElementLocation)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateMetadataElement (name As String, unevaluatedValue As String, location As ElementLocation) As ProjectMetadataElement" />
+      <MemberSignature Language="F#" Value="member this.CreateMetadataElement : string * string * Microsoft.Build.Construction.ElementLocation -&gt; Microsoft.Build.Construction.ProjectMetadataElement" Usage="projectRootElement.CreateMetadataElement (name, unevaluatedValue, location)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectMetadataElement ^ CreateMetadataElement(System::String ^ name, System::String ^ unevaluatedValue, Microsoft::Build::Construction::ElementLocation ^ location);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectMetadataElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="unevaluatedValue" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="location" Type="Microsoft.Build.Construction.ElementLocation" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="unevaluatedValue">To be added.</param>
+        <param name="location">To be added.</param>
+        <summary>
+            Creates a metadata node.
+            Caller must add it to the location of choice in the project.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreateNewInstance">
       <MemberSignature Language="C#" Value="protected override Microsoft.Build.Construction.ProjectElement CreateNewInstance (Microsoft.Build.Construction.ProjectRootElement owner);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.Build.Construction.ProjectElement CreateNewInstance(class Microsoft.Build.Construction.ProjectRootElement owner) cil managed" />

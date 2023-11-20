@@ -18,6 +18,14 @@
       <AttributeName Language="C#">[System.Serializable]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
     </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -44,7 +52,7 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ResponseFileUsedEventArgs (string responseFilePath);" />
+      <MemberSignature Language="C#" Value="public ResponseFileUsedEventArgs (string? responseFilePath);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string responseFilePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ResponseFileUsedEventArgs.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (responseFilePath As String)" />

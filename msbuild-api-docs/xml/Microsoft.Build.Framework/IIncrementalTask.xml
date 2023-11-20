@@ -1,0 +1,44 @@
+<Type Name="IIncrementalTask" FullName="Microsoft.Build.Framework.IIncrementalTask">
+  <TypeSignature Language="C#" Value="public interface IIncrementalTask" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IIncrementalTask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IIncrementalTask" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IIncrementalTask" />
+  <TypeSignature Language="F#" Value="type IIncrementalTask = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IIncrementalTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface for tasks which is supports incrementality.
+            </summary>
+    <remarks>The tasks implementing this interface should return false to stop the build when in <see cref="P:Microsoft.Build.Framework.IIncrementalTask.FailIfNotIncremental" /> is true and task is not fully incremental.  Try to provide helpful information to diagnose incremental behavior.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IIncrementalTask.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool" Usage="Microsoft.Build.Framework.IIncrementalTask.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental {  void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set by MSBuild when Question flag is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

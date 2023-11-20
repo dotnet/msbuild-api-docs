@@ -1,0 +1,466 @@
+<Type Name="ExtendedBuildMessageEventArgs" FullName="Microsoft.Build.Framework.ExtendedBuildMessageEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ExtendedBuildMessageEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs, Microsoft.Build.Framework.IExtendedBuildEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtendedBuildMessageEventArgs extends Microsoft.Build.Framework.BuildMessageEventArgs implements class Microsoft.Build.Framework.IExtendedBuildEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ExtendedBuildMessageEventArgs&#xA;Inherits BuildMessageEventArgs&#xA;Implements IExtendedBuildEventArgs" />
+  <TypeSignature Language="F#" Value="type ExtendedBuildMessageEventArgs = class&#xA;    inherit BuildMessageEventArgs&#xA;    interface IExtendedBuildEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ExtendedBuildMessageEventArgs sealed : Microsoft::Build::Framework::BuildMessageEventArgs, Microsoft::Build::Framework::IExtendedBuildEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildMessageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IExtendedBuildEventArgs</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Generic custom build events including extended data for event enriching.
+            Extended data are implemented by <see cref="T:Microsoft.Build.Framework.IExtendedBuildEventArgs" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs type" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <summary>
+            This constructor specifies only type of extended data.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String, importance As MessageImportance)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * Microsoft.Build.Framework.MessageImportance -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, message, helpKeyword, senderName, importance)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <summary>
+            This constructor allows all event data to be initialized
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String, importance As MessageImportance, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * Microsoft.Build.Framework.MessageImportance * DateTime -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, message, helpKeyword, senderName, importance, eventTimestamp)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance, DateTime eventTimestamp);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <summary>
+            This constructor allows a timestamp to be set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, params object[]? messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, message As String, helpKeyword As String, senderName As String, importance As MessageImportance, eventTimestamp As DateTime, ParamArray messageArgs As Object())" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * Microsoft.Build.Framework.MessageImportance * DateTime * obj[] -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, message, helpKeyword, senderName, importance, eventTimestamp, messageArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance, DateTime eventTimestamp, ... cli::array &lt;System::Object ^&gt; ^ messageArgs);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <param name="messageArgs">message arguments</param>
+        <summary>
+            This constructor allows a timestamp to be set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? subcategory, string? code, string? file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, subcategory As String, code As String, file As String, lineNumber As Integer, columnNumber As Integer, endLineNumber As Integer, endColumnNumber As Integer, message As String, helpKeyword As String, senderName As String, importance As MessageImportance)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * int * int * int * int * string * string * string * Microsoft.Build.Framework.MessageImportance -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, subcategory, code, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, helpKeyword, senderName, importance)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ subcategory, System::String ^ code, System::String ^ file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="subcategory">event sub-category</param>
+        <param name="code">event code</param>
+        <param name="file">file associated with the event</param>
+        <param name="lineNumber">line number (0 if not applicable)</param>
+        <param name="columnNumber">column number (0 if not applicable)</param>
+        <param name="endLineNumber">end line number (0 if not applicable)</param>
+        <param name="endColumnNumber">end column number (0 if not applicable)</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <summary>
+            This constructor allows all event data to be initialized
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? subcategory, string? code, string? file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, subcategory As String, code As String, file As String, lineNumber As Integer, columnNumber As Integer, endLineNumber As Integer, endColumnNumber As Integer, message As String, helpKeyword As String, senderName As String, importance As MessageImportance, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * int * int * int * int * string * string * string * Microsoft.Build.Framework.MessageImportance * DateTime -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, subcategory, code, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, helpKeyword, senderName, importance, eventTimestamp)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ subcategory, System::String ^ code, System::String ^ file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance, DateTime eventTimestamp);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="subcategory">event sub-category</param>
+        <param name="code">event code</param>
+        <param name="file">file associated with the event</param>
+        <param name="lineNumber">line number (0 if not applicable)</param>
+        <param name="columnNumber">column number (0 if not applicable)</param>
+        <param name="endLineNumber">end line number (0 if not applicable)</param>
+        <param name="endColumnNumber">end column number (0 if not applicable)</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <summary>
+            This constructor which allows a timestamp to be set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedBuildMessageEventArgs (string type, string? subcategory, string? code, string? file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string? message, string? helpKeyword, string? senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, params object[]? messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, subcategory As String, code As String, file As String, lineNumber As Integer, columnNumber As Integer, endLineNumber As Integer, endColumnNumber As Integer, message As String, helpKeyword As String, senderName As String, importance As MessageImportance, eventTimestamp As DateTime, ParamArray messageArgs As Object())" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs : string * string * string * string * int * int * int * int * string * string * string * Microsoft.Build.Framework.MessageImportance * DateTime * obj[] -&gt; Microsoft.Build.Framework.ExtendedBuildMessageEventArgs" Usage="new Microsoft.Build.Framework.ExtendedBuildMessageEventArgs (type, subcategory, code, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, helpKeyword, senderName, importance, eventTimestamp, messageArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ExtendedBuildMessageEventArgs(System::String ^ type, System::String ^ subcategory, System::String ^ code, System::String ^ file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, System::String ^ message, System::String ^ helpKeyword, System::String ^ senderName, Microsoft::Build::Framework::MessageImportance importance, DateTime eventTimestamp, ... cli::array &lt;System::Object ^&gt; ^ messageArgs);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="type">Type of <see cref="P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType" />.</param>
+        <param name="subcategory">event sub-category</param>
+        <param name="code">event code</param>
+        <param name="file">file associated with the event</param>
+        <param name="lineNumber">line number (0 if not applicable)</param>
+        <param name="columnNumber">column number (0 if not applicable)</param>
+        <param name="endLineNumber">end line number (0 if not applicable)</param>
+        <param name="endColumnNumber">end column number (0 if not applicable)</param>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="senderName">name of event sender</param>
+        <param name="importance">importance of the message</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <param name="messageArgs">message arguments</param>
+        <summary>
+            This constructor which allows a timestamp to be set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedData">
+      <MemberSignature Language="C#" Value="public string? ExtendedData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedData" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedData As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedData : string with get, set" Usage="Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedData</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string?&gt;? ExtendedMetadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; ExtendedMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedMetadata As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ExtendedMetadata : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ ExtendedMetadata { System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedMetadata</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedType">
+      <MemberSignature Language="C#" Value="public string ExtendedType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtendedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtendedType As String" />
+      <MemberSignature Language="F#" Value="member this.ExtendedType : string with get, set" Usage="Microsoft.Build.Framework.ExtendedBuildMessageEventArgs.ExtendedType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtendedType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IExtendedBuildEventArgs.ExtendedType</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[set: System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
