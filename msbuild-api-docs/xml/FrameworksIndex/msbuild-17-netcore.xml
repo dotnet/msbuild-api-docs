@@ -1301,10 +1301,12 @@
       <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.SYNCHRONIZE" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.FileAccess.FileAccessData" Id="T:Microsoft.Build.Experimental.FileAccess.FileAccessData">
-      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.CorrelationId" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.DesiredAccess" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Error" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.FlagsAndAttributes" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Id" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.IsAnAugmentedFileAccess" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Operation" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Path" />
@@ -1451,11 +1453,13 @@
   <Namespace Name="Microsoft.Build.Experimental.ProjectCache">
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheContext" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheContext">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheContext.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Microsoft.Build.FileSystem.MSBuildFileSystemBase,Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheContext.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Microsoft.Build.FileSystem.MSBuildFileSystemBase,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.FileSystem" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.Graph" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.GraphEntryPoints" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.MSBuildExePath" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.PluginSettings" />
+      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.RequestedTargets" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheResult" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheResult">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheResult.IndicateCacheHit(Microsoft.Build.Execution.BuildResult)" />
@@ -1741,6 +1745,15 @@
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedData" />
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedMetadata" />
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedType" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs" Id="T:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedType" />
     </Type>
     <Type Name="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Id="T:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs">
       <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String)" />
@@ -2881,6 +2894,58 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Tasks">
+    <Type Name="Microsoft.Build.Tasks.AL" Id="T:Microsoft.Build.Tasks.AL">
+      <Member Id="M:Microsoft.Build.Tasks.AL.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.AlgorithmId" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.BaseAddress" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.CompanyName" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Configuration" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Copyright" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Culture" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.DelaySign" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Description" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.EmbedResources" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.EvidenceFile" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.FileVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Flags" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.GenerateFullPaths" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.KeyContainer" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.KeyFile" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.LinkResources" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.MainEntryPoint" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.OutputAssembly" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Platform" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Prefer32Bit" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.ProductName" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.ProductVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.ResponseFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.SdkToolsPath" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.SourceModules" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.TargetType" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.TemplateFile" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Title" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Trademark" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Version" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Win32Icon" />
+      <Member Id="P:Microsoft.Build.Tasks.AL.Win32Resource" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.AspNetCompiler" Id="T:Microsoft.Build.Tasks.AspNetCompiler">
+      <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Clean" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Debug" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.DelaySign" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.FixedNames" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Force" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.KeyContainer" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.KeyFile" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.MetabasePath" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.TargetFrameworkMoniker" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.TargetPath" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Updateable" />
+      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.VirtualPath" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.AssignCulture" Id="T:Microsoft.Build.Tasks.AssignCulture">
       <Member Id="M:Microsoft.Build.Tasks.AssignCulture.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.AssignCulture.Execute" />
@@ -3189,6 +3254,26 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.SuggestedRedirects" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.TargetName" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.GenerateBootstrapper" Id="T:Microsoft.Build.Tasks.GenerateBootstrapper">
+      <Member Id="M:Microsoft.Build.Tasks.GenerateBootstrapper.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationFile" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationName" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperComponentFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperItems" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperKeyFile" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ComponentsLocation" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ComponentsUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.CopyComponents" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.Culture" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.FallbackCulture" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.OutputPath" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.SupportUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.Validate" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.VisualStudioVersion" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateDeploymentManifest" Id="T:Microsoft.Build.Tasks.GenerateDeploymentManifest">
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.Execute" />
@@ -3284,6 +3369,15 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.UseSourcePath" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateResource.WarnOnBinaryFormatterUse" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.GenerateTrustInfo" Id="T:Microsoft.Build.Tasks.GenerateTrustInfo">
+      <Member Id="M:Microsoft.Build.Tasks.GenerateTrustInfo.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.ApplicationDependencies" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetFrameworkMoniker" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.GetAssemblyIdentity" Id="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.Execute" />
@@ -3327,6 +3421,17 @@
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion47Path" />
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion48Path" />
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkPath.Path" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.GetFrameworkSdkPath" Id="T:Microsoft.Build.Tasks.GetFrameworkSdkPath">
+      <Member Id="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion20Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion35Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion40Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion451Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion45Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion461Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion46Path" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.Path" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetInstalledSDKLocations" Id="T:Microsoft.Build.Tasks.GetInstalledSDKLocations">
       <Member Id="M:Microsoft.Build.Tasks.GetInstalledSDKLocations.#ctor" />
@@ -3400,6 +3505,11 @@
       <Member Id="M:Microsoft.Build.Tasks.IFixedTypeInfo.ReleaseTypeAttr(System.IntPtr)" />
       <Member Id="M:Microsoft.Build.Tasks.IFixedTypeInfo.ReleaseVarDesc(System.IntPtr)" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract" Id="T:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract">
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.Assemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.AssemblyListFile" />
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.TypeLibFiles" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.LC" Id="T:Microsoft.Build.Tasks.LC">
       <Member Id="M:Microsoft.Build.Tasks.LC.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.LC.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
@@ -3468,6 +3578,13 @@
       <Member Id="M:Microsoft.Build.Tasks.ReadLinesFromFile.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ReadLinesFromFile.File" />
       <Member Id="P:Microsoft.Build.Tasks.ReadLinesFromFile.Lines" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.RegisterAssembly" Id="T:Microsoft.Build.Tasks.RegisterAssembly">
+      <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.Assemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile" />
+      <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase" />
+      <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.RemoveDir" Id="T:Microsoft.Build.Tasks.RemoveDir">
       <Member Id="M:Microsoft.Build.Tasks.RemoveDir.#ctor" />
@@ -3567,7 +3684,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveComReference" Id="T:Microsoft.Build.Tasks.ResolveComReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveComReference.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.ResolveComReference.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.DelaySign" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool" />
@@ -3625,6 +3741,17 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetCulture" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkIdentifier" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.ResolveNativeReference" Id="T:Microsoft.Build.Tasks.ResolveNativeReference">
+      <Member Id="M:Microsoft.Build.Tasks.ResolveNativeReference.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseTlbFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedPrerequisiteAssemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedTypeLibraries" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainingReferenceFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.NativeReferences" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" Id="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput">
       <Member Id="M:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.#ctor" />
@@ -3711,6 +3838,9 @@
       <Member Id="M:Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString(System.String,System.Object[])" />
       <Member Id="P:Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.TaskRequiresFramework" Id="T:Microsoft.Build.Tasks.TaskRequiresFramework">
+      <Member Id="M:Microsoft.Build.Tasks.TaskRequiresFramework.Execute" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.Telemetry" Id="T:Microsoft.Build.Tasks.Telemetry">
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.Execute" />
@@ -3740,6 +3870,12 @@
       <Member Id="P:Microsoft.Build.Tasks.Touch.Time" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.TouchedFiles" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.UnregisterAssembly" Id="T:Microsoft.Build.Tasks.UnregisterAssembly">
+      <Member Id="M:Microsoft.Build.Tasks.UnregisterAssembly.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.Assemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.AssemblyListFile" />
+      <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.Unzip" Id="T:Microsoft.Build.Tasks.Unzip">
       <Member Id="M:Microsoft.Build.Tasks.Unzip.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.Unzip.Cancel" />
@@ -3751,6 +3887,14 @@
       <Member Id="P:Microsoft.Build.Tasks.Unzip.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.SkipUnchangedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.SourceFiles" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.UpdateManifest" Id="T:Microsoft.Build.Tasks.UpdateManifest">
+      <Member Id="M:Microsoft.Build.Tasks.UpdateManifest.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationManifest" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationPath" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.InputManifest" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.OutputManifest" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.TargetFrameworkVersion" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.VerifyFileHash" Id="T:Microsoft.Build.Tasks.VerifyFileHash">
       <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.#ctor" />
@@ -3768,6 +3912,21 @@
       <Member Id="P:Microsoft.Build.Tasks.Warning.HelpKeyword" />
       <Member Id="P:Microsoft.Build.Tasks.Warning.HelpLink" />
       <Member Id="P:Microsoft.Build.Tasks.Warning.Text" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.WinMDExp" Id="T:Microsoft.Build.Tasks.WinMDExp">
+      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.#ctor" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.AssemblyUnificationPolicy" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.InputPDBFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.OutputPDBFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.References" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
+      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.WriteCodeFragment" Id="T:Microsoft.Build.Tasks.WriteCodeFragment">
       <Member Id="M:Microsoft.Build.Tasks.WriteCodeFragment.#ctor" />

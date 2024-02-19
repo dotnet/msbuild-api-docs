@@ -23,20 +23,20 @@
   </Attributes>
   <Docs>
     <summary>
-            Enumeration of the levels of detail of an event log.
-            </summary>
+             Enumeration of the levels of detail of an event log.
+             </summary>
     <remarks>
-            The level of detail (i.e. verbosity) of an event log is entirely controlled by the logger generating the log -- a logger
-            will be directed to keep its verbosity at a certain level, based on user preferences, but a logger is free to choose the
-            events it logs for each verbosity level.
+             The level of detail (i.e. verbosity) of an event log is entirely controlled by the logger generating the log -- a logger
+             will be directed to keep its verbosity at a certain level, based on user preferences, but a logger is free to choose the
+             events it logs for each verbosity level.
             
-            LOGGING GUIDELINES FOR EACH VERBOSITY LEVEL:
-            1) Quiet -- only display a summary at the end of build
-            2) Minimal -- only display errors, warnings, high importance events and a build summary
-            3) Normal -- display all errors, warnings, high importance events, some status events, and a build summary
-            4) Detailed -- display all errors, warnings, high and normal importance events, all status events, and a build summary
-            5) Diagnostic -- display all events, and a build summary
-            </remarks>
+             LOGGING GUIDELINES FOR EACH VERBOSITY LEVEL:
+             1) Quiet -- only display a summary at the end of build
+             2) Minimal -- only display errors, warnings, high importance events and a build summary
+             3) Normal -- display all errors, warnings, high importance events, some status events, and a build summary
+             4) Detailed -- display all errors, warnings, high and normal importance events, all status events, and a build summary
+             5) Diagnostic -- display all events, and a build summary
+             </remarks>
   </Docs>
   <Members>
     <Member MemberName="Detailed">

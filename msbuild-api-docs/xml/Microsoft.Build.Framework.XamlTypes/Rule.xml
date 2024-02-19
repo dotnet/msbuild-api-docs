@@ -33,7 +33,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Used to represent the schema information for a Tool, a Custom Build Rule, a PropertyPage, etc. 
+            Used to represent the schema information for a Tool, a Custom Build Rule, a PropertyPage, etc.
             </summary>
     <remarks>
       <para>
@@ -166,7 +166,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The list of <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s that properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> belong to. 
+            The list of <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s that properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> belong to.
             </summary>
         <value>Returns the list of properties.</value>
         <remarks>
@@ -243,7 +243,7 @@
       <Docs>
         <summary>
             The <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> for all the properties in this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. This is overriden by any
-            data source defined locally for a property. 
+            data source defined locally for a property.
             </summary>
         <value>Returns the data source.</value>
         <remarks>
@@ -283,10 +283,10 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for use by a prospective UI client. 
+            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> for use by a prospective UI client.
             </summary>
         <value>Returns the description.</value>
-        <remarks> 
+        <remarks>
             This field is optional and is culture sensitive.
             </remarks>
       </Docs>
@@ -319,11 +319,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
+            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
             </summary>
         <value>Returns the name.</value>
         <remarks>
-            This field is optional and is culture sensitive. When this property is not set, it is assigned the same 
+            This field is optional and is culture sensitive. When this property is not set, it is assigned the same
             value as the <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.Name" /> property (and hence, would not be localized).
             </remarks>
       </Docs>
@@ -379,8 +379,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This property returns the union of XAML specified <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s and auto-generated 
-            <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s. The latter are created from the missing categories that are being referred to by the 
+            This property returns the union of XAML specified <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s and auto-generated
+            <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s. The latter are created from the missing categories that are being referred to by the
             properties in this Rule. The auto-generated <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />s only have their name set.
             </summary>
         <value>Returns the union of categories.</value>
@@ -479,7 +479,7 @@
       <Docs>
         <summary>
             Returns all properties partitioned into categories. The return value is never
-            null. 
+            null.
             The returned list may contain auto-generated categories. Note that if a <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />
             (or its derived classes) refer to a property that is not specified, then an new
             Category is generated for the same. If not category is specified for the property, then
@@ -487,7 +487,7 @@
             The list of categories is exactly as specified in the Xaml file. The auto-generated
             categories come (in no strict order) after the specified categories.
             </summary>
-        <returns> A dictionary whose keys are the <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> names and 
+        <returns> A dictionary whose keys are the <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> names and
             the value is the list of properties in that category. </returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -671,7 +671,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Help information for this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. 
+            Help information for this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.
             </summary>
         <value>Returns the Help information.</value>
         <remarks>
@@ -732,11 +732,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. 
+            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.
             </summary>
         <value>Returns the name.</value>
         <remarks>
-            This field is mandatory and culture invariant. The value of this field cannot be set to the empty string. 
+            This field is mandatory and culture invariant. The value of this field cannot be set to the empty string.
             </remarks>
       </Docs>
     </Member>
@@ -864,7 +864,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The UI renderer template used to display this Rule. 
+            The UI renderer template used to display this Rule.
             </summary>
         <value>Returns the UI template.</value>
         <remarks>
@@ -968,7 +968,7 @@
             This field is optional and culture invariant.
             </remarks>
         <example>
-            Example: Consider <c>/D:WIN32</c>. In this switch and value representation, ":" is the separator since its separates the switch <c>D</c> 
+            Example: Consider <c>/D:WIN32</c>. In this switch and value representation, ":" is the separator since its separates the switch <c>D</c>
             from its value <c>WIN32</c>.
             </example>
       </Docs>
@@ -1037,7 +1037,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            This is used to specify whether multiple files need to be batched on one command line invocation. 
+            This is used to specify whether multiple files need to be batched on one command line invocation.
             </summary>
         <value>Returns <see langword="true" /> if multiple files can be batched; otherwise, <see langword="false" />.</value>
         <remarks>

@@ -35,12 +35,12 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public FileAccessData (Microsoft.Build.Experimental.FileAccess.ReportedFileOperation operation, Microsoft.Build.Experimental.FileAccess.RequestedAccess requestedAccess, uint processId, uint error, Microsoft.Build.Experimental.FileAccess.DesiredAccess desiredAccess, Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes flagsAndAttributes, string path, string? processArgs, bool isAnAugmentedFileAccess);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation operation, valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess requestedAccess, unsigned int32 processId, unsigned int32 error, valuetype Microsoft.Build.Experimental.FileAccess.DesiredAccess desiredAccess, valuetype Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes flagsAndAttributes, string path, string processArgs, bool isAnAugmentedFileAccess) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (operation As ReportedFileOperation, requestedAccess As RequestedAccess, processId As UInteger, error As UInteger, desiredAccess As DesiredAccess, flagsAndAttributes As FlagsAndAttributes, path As String, processArgs As String, isAnAugmentedFileAccess As Boolean)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.FileAccess.FileAccessData : Microsoft.Build.Experimental.FileAccess.ReportedFileOperation * Microsoft.Build.Experimental.FileAccess.RequestedAccess * uint32 * uint32 * Microsoft.Build.Experimental.FileAccess.DesiredAccess * Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes * string * string * bool -&gt; Microsoft.Build.Experimental.FileAccess.FileAccessData" Usage="new Microsoft.Build.Experimental.FileAccess.FileAccessData (operation, requestedAccess, processId, error, desiredAccess, flagsAndAttributes, path, processArgs, isAnAugmentedFileAccess)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; FileAccessData(Microsoft::Build::Experimental::FileAccess::ReportedFileOperation operation, Microsoft::Build::Experimental::FileAccess::RequestedAccess requestedAccess, System::UInt32 processId, System::UInt32 error, Microsoft::Build::Experimental::FileAccess::DesiredAccess desiredAccess, Microsoft::Build::Experimental::FileAccess::FlagsAndAttributes flagsAndAttributes, System::String ^ path, System::String ^ processArgs, bool isAnAugmentedFileAccess);" />
+      <MemberSignature Language="C#" Value="public FileAccessData (Microsoft.Build.Experimental.FileAccess.ReportedFileOperation operation, Microsoft.Build.Experimental.FileAccess.RequestedAccess requestedAccess, uint processId, uint id, uint correlationId, uint error, Microsoft.Build.Experimental.FileAccess.DesiredAccess desiredAccess, Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes flagsAndAttributes, string path, string? processArgs, bool isAnAugmentedFileAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Experimental.FileAccess.ReportedFileOperation operation, valuetype Microsoft.Build.Experimental.FileAccess.RequestedAccess requestedAccess, unsigned int32 processId, unsigned int32 id, unsigned int32 correlationId, unsigned int32 error, valuetype Microsoft.Build.Experimental.FileAccess.DesiredAccess desiredAccess, valuetype Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes flagsAndAttributes, string path, string processArgs, bool isAnAugmentedFileAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (operation As ReportedFileOperation, requestedAccess As RequestedAccess, processId As UInteger, id As UInteger, correlationId As UInteger, error As UInteger, desiredAccess As DesiredAccess, flagsAndAttributes As FlagsAndAttributes, path As String, processArgs As String, isAnAugmentedFileAccess As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.FileAccess.FileAccessData : Microsoft.Build.Experimental.FileAccess.ReportedFileOperation * Microsoft.Build.Experimental.FileAccess.RequestedAccess * uint32 * uint32 * uint32 * uint32 * Microsoft.Build.Experimental.FileAccess.DesiredAccess * Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes * string * string * bool -&gt; Microsoft.Build.Experimental.FileAccess.FileAccessData" Usage="new Microsoft.Build.Experimental.FileAccess.FileAccessData (operation, requestedAccess, processId, id, correlationId, error, desiredAccess, flagsAndAttributes, path, processArgs, isAnAugmentedFileAccess)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; FileAccessData(Microsoft::Build::Experimental::FileAccess::ReportedFileOperation operation, Microsoft::Build::Experimental::FileAccess::RequestedAccess requestedAccess, System::UInt32 processId, System::UInt32 id, System::UInt32 correlationId, System::UInt32 error, Microsoft::Build::Experimental::FileAccess::DesiredAccess desiredAccess, Microsoft::Build::Experimental::FileAccess::FlagsAndAttributes flagsAndAttributes, System::String ^ path, System::String ^ processArgs, bool isAnAugmentedFileAccess);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -50,6 +50,8 @@
         <Parameter Name="operation" Type="Microsoft.Build.Experimental.FileAccess.ReportedFileOperation" />
         <Parameter Name="requestedAccess" Type="Microsoft.Build.Experimental.FileAccess.RequestedAccess" />
         <Parameter Name="processId" Type="System.UInt32" />
+        <Parameter Name="id" Type="System.UInt32" />
+        <Parameter Name="correlationId" Type="System.UInt32" />
         <Parameter Name="error" Type="System.UInt32" />
         <Parameter Name="desiredAccess" Type="Microsoft.Build.Experimental.FileAccess.DesiredAccess" />
         <Parameter Name="flagsAndAttributes" Type="Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes" />
@@ -68,6 +70,8 @@
         <param name="operation">To be added.</param>
         <param name="requestedAccess">To be added.</param>
         <param name="processId">To be added.</param>
+        <param name="id">To be added.</param>
+        <param name="correlationId">To be added.</param>
         <param name="error">To be added.</param>
         <param name="desiredAccess">To be added.</param>
         <param name="flagsAndAttributes">To be added.</param>
@@ -75,6 +79,33 @@
         <param name="processArgs">To be added.</param>
         <param name="isAnAugmentedFileAccess">To be added.</param>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public uint CorrelationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.CorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CorrelationId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.CorrelationId : uint32" Usage="Microsoft.Build.Experimental.FileAccess.FileAccessData.CorrelationId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 CorrelationId { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Correlation id of file access.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -155,6 +186,33 @@
       </ReturnValue>
       <Docs>
         <summary>The file flags and attributes.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public uint Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Id : uint32" Usage="Microsoft.Build.Experimental.FileAccess.FileAccessData.Id" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 Id { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Id of file access.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -318,6 +376,12 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Experimental.FileAccess.RequestedAccess</ReturnType>
       </ReturnValue>
