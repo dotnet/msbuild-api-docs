@@ -26,7 +26,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Represents a <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> property. 
+            Represents a <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> property.
             </summary>
     <remarks>
       <para>This represents schema information (name, allowed values, etc) of a <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> property.
@@ -156,18 +156,18 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of the category to which this property belongs to. 
+            The name of the category to which this property belongs to.
             </summary>
         <value>The name of the category to which this property belongs.</value>
         <remarks>
           <para>
-            If the value of this field  does not correspond to the <c>Name</c> 
+            If the value of this field  does not correspond to the <c>Name</c>
             property of a <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Category" /> element defined in
             the containing <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />, a default <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Category" /> with this name
-            is auto-generated and added to the containing <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> class. 
+            is auto-generated and added to the containing <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> class.
             </para>
           <para>
-            This field is optional and is culture invariant. 
+            This field is optional and is culture invariant.
             </para>
           <para>
             When this field is not specified, this property is added to a
@@ -239,11 +239,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The data source where the current value of this property is stored. 
+            The data source where the current value of this property is stored.
             </summary>
         <value>The data source where the current value of this property is stored.</value>
         <remarks>
-            If defined, it overrides the 
+            If defined, it overrides the
             <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> property on the containing <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. This field is mandatory only if the parent
             <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> does not have the data source initialized. The getter for this property returns
             only the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.DataSource" /> set directly on this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> instance.
@@ -282,7 +282,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Specifies the default value for this property. 
+            Specifies the default value for this property.
             </summary>
         <value>The default value for this property.</value>
         <remarks>
@@ -323,10 +323,10 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> for use by a prospective UI client. 
+            Description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> for use by a prospective UI client.
             </summary>
         <value>The description of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
-        <remarks> 
+        <remarks>
             This field is optional and is culture sensitive.
             </remarks>
       </Docs>
@@ -359,11 +359,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
+            The name that could be used by a prospective UI client to display this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
             </summary>
         <value>The display name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
-            This field is optional and is culture sensitive. When this property is not set, it is assigned the same 
+            This field is optional and is culture sensitive. When this property is not set, it is assigned the same
             value as the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" /> property (and hence, would not be localized).
             </remarks>
       </Docs>
@@ -469,7 +469,7 @@
             </summary>
         <value>The Help context to use when the user presses F1.</value>
         <remarks>
-            This property uses the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> property to display the help context of the specified 
+            This property uses the <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> property to display the help context of the specified
             help file. This field is optional. This
             form of specifying the help page for a property takes lower precedence than both <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" />
             and <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />.
@@ -511,7 +511,7 @@
             The help file to use when the user hits F1. Must specify <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" /> along with this.
             </summary>
         <value>The Help file to use when the user presses F1.</value>
-        <remarks> 
+        <remarks>
             This property goes along with <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />. <seealso cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />. This
             form of specifying the help page for a property takes lower precedence than both <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" />
             and <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />.
@@ -555,7 +555,7 @@
             </summary>
         <value>The URL of the Help page for this property.</value>
         <remarks>
-            This property is higher in priority that <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" /> + <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" /> 
+            This property is higher in priority that <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" /> + <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" />
             (i.e., these two properties are ignored if <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />
             is specified), but lower in priority than <see cref="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" />.
             This field is optional and is culture insensitive.
@@ -666,7 +666,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
+            Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
             </summary>
         <value>Additional attributes of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
@@ -740,11 +740,11 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />. 
+            The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.
             </summary>
         <value>The name of this <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</value>
         <remarks>
-            This field is mandatory and culture invariant. The value of this field cannot be set to the empty string. 
+            This field is mandatory and culture invariant. The value of this field cannot be set to the empty string.
             </remarks>
       </Docs>
     </Member>
@@ -776,7 +776,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Tells if this property is a read-only property. 
+            Tells if this property is a read-only property.
             </summary>
         <value>
           <see langword="true" /> if this is a read-only property; otherwise, <see langword="false" />.</value>
@@ -821,7 +821,7 @@
             This field is optional and culture invariant.
             </remarks>
         <example>
-            Example: Consider <c>/D:WIN32</c>. In this switch and value representation, ":" is the separator since its separates the switch <c>D</c> 
+            Example: Consider <c>/D:WIN32</c>. In this switch and value representation, ":" is the separator since its separates the switch <c>D</c>
             from its value <c>WIN32</c>.
             </example>
       </Docs>
@@ -968,7 +968,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            List of value editors for this property. 
+            List of value editors for this property.
             </summary>
         <value>The list of value editors for this property.</value>
         <remarks>

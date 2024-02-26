@@ -1,10 +1,15 @@
 <Type Name="GenerateBootstrapper" FullName="Microsoft.Build.Tasks.GenerateBootstrapper">
-  <TypeSignature Language="C#" Value="public sealed class GenerateBootstrapper : Microsoft.Build.Tasks.TaskExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateBootstrapper extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="C#" Value="public sealed class GenerateBootstrapper : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateBootstrapper extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateBootstrapper" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateBootstrapper&#xA;Inherits TaskExtension" />
-  <TypeSignature Language="F#" Value="type GenerateBootstrapper = class&#xA;    inherit TaskExtension" />
-  <TypeSignature Language="C++ CLI" Value="public ref class GenerateBootstrapper sealed : Microsoft::Build::Tasks::TaskExtension" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateBootstrapper&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type GenerateBootstrapper = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GenerateBootstrapper sealed : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public sealed class GenerateBootstrapper : Microsoft.Build.Tasks.TaskRequiresFramework" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateBootstrapper extends Microsoft.Build.Tasks.TaskRequiresFramework" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateBootstrapper&#xA;Inherits TaskRequiresFramework" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type GenerateBootstrapper = class&#xA;    inherit TaskRequiresFramework" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GenerateBootstrapper sealed : Microsoft::Build::Tasks::TaskRequiresFramework" FrameworkAlternate="msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -23,6 +28,7 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17-netcore">Microsoft.Build.Tasks.TaskRequiresFramework</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -158,12 +164,12 @@
       </Docs>
     </Member>
     <Member MemberName="ApplicationRequiresElevation">
-      <MemberSignature Language="C#" Value="public bool ApplicationRequiresElevation { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Property ApplicationRequiresElevation As Boolean" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.ApplicationRequiresElevation : bool with get, set" Usage="Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ApplicationRequiresElevation { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public bool ApplicationRequiresElevation { get; set; }" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationRequiresElevation As Boolean" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="F#" Value="member this.ApplicationRequiresElevation : bool with get, set" Usage="Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ApplicationRequiresElevation { bool get(); void set(bool value); };" FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
@@ -188,7 +194,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-15;msbuild-16;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets whether a component runs with elevated permissions when it is installed on a target computer.</summary>

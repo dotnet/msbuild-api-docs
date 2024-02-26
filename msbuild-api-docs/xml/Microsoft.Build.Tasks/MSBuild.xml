@@ -35,7 +35,7 @@
     <summary>Implements the <c>MSBuild</c> task. Use the <c>MSBuild</c> element in your project file to create and execute this task. For usage and parameter information, see MSBuild Task.</summary>
     <remarks>
             This class implements the "MSBuild" task, which hands off child project files to the MSBuild engine to be built.
-            Marked RunInMTA because there is no reason MSBuild tasks should run on a thread other than that of the 
+            Marked RunInMTA because there is no reason MSBuild tasks should run on a thread other than that of the
             RequestBuilder which spawned them.
             </remarks>
     <forInternalUseOnly />
@@ -256,7 +256,7 @@
                 The fact that this is a `string[]` makes the following illegal:
                     `<MSBuild Properties="TargetPath=@(OutputPathItem)" />`
                 The engine fails on this because it doesn't like item lists being concatenated with string
-                constants when the data is being passed into an array parameter.  So the workaround is to 
+                constants when the data is being passed into an array parameter.  So the workaround is to
                 write this in the project file:
                     `<MSBuild Properties="@(OutputPathItem-&gt;'TargetPath=%(Identity)')" />`
                 ]]></format>

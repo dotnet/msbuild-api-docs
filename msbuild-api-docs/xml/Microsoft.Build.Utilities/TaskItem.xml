@@ -64,8 +64,8 @@
  ]]></format>
     </remarks>
     <comment>
-            Surprisingly few of these Utilities TaskItems are created: typically several orders of magnitude fewer than the number of engine TaskItems.
-            </comment>
+             Surprisingly few of these Utilities TaskItems are created: typically several orders of magnitude fewer than the number of engine TaskItems.
+             </comment>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -264,8 +264,8 @@
             2) writing to this dictionary should not be reflected in the underlying item.
             </remarks>
         <comments>
-            Returns an UNESCAPED version of the custom metadata. For the escaped version (which 
-            is how it is stored internally), call ITaskItem2.CloneCustomMetadataEscaped. 
+            Returns an UNESCAPED version of the custom metadata. For the escaped version (which
+            is how it is stored internally), call ITaskItem2.CloneCustomMetadataEscaped.
             </comments>
       </Docs>
     </Member>
@@ -360,7 +360,7 @@
         <returns>The metadata value.</returns>
         <remarks>To be added.</remarks>
         <comments>
-            Returns the unescaped value of the metadata requested. 
+            Returns the unescaped value of the metadata requested.
             </comments>
       </Docs>
     </Member>
@@ -463,9 +463,9 @@
  ]]></format>
         </remarks>
         <comments>
-            This one is a bit tricky.  Orcas assumed that the value being set was escaped, but 
+            This one is a bit tricky.  Orcas assumed that the value being set was escaped, but
             that the value being returned was unescaped.  Maintain that behaviour here.  To get
-            the escaped value, use ITaskItem2.EvaluatedIncludeEscaped. 
+            the escaped value, use ITaskItem2.EvaluatedIncludeEscaped.
             </comments>
       </Docs>
     </Member>
@@ -672,7 +672,7 @@
             Sets the escaped value of the metadata with the specified name.</summary>
         <remarks>To be added.</remarks>
         <comments>
-            Assumes the value is passed in unescaped. 
+            Assumes the value is passed in unescaped.
             </comments>
       </Docs>
     </Member>
@@ -797,7 +797,7 @@
             Sets one of the arbitrary metadata on the item.</summary>
         <remarks>To be added.</remarks>
         <comments>
-            Assumes that the value being passed in is in its escaped form. 
+            Assumes that the value being passed in is in its escaped form.
             </comments>
       </Docs>
     </Member>

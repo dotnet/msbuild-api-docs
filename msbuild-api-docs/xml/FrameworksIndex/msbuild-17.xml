@@ -1302,10 +1302,12 @@
       <Member Id="F:Microsoft.Build.Experimental.FileAccess.DesiredAccess.SYNCHRONIZE" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.FileAccess.FileAccessData" Id="T:Microsoft.Build.Experimental.FileAccess.FileAccessData">
-      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.CorrelationId" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.DesiredAccess" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Error" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.FlagsAndAttributes" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Id" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.IsAnAugmentedFileAccess" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Operation" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Path" />
@@ -1452,11 +1454,13 @@
   <Namespace Name="Microsoft.Build.Experimental.ProjectCache">
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheContext" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheContext">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheContext.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Microsoft.Build.FileSystem.MSBuildFileSystemBase,Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
+      <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheContext.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Microsoft.Build.FileSystem.MSBuildFileSystemBase,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.IReadOnlyCollection{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.FileSystem" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.Graph" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.GraphEntryPoints" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.MSBuildExePath" />
       <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.PluginSettings" />
+      <Member Id="P:Microsoft.Build.Experimental.ProjectCache.CacheContext.RequestedTargets" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheResult" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheResult">
       <Member Id="M:Microsoft.Build.Experimental.ProjectCache.CacheResult.IndicateCacheHit(Microsoft.Build.Execution.BuildResult)" />
@@ -1742,6 +1746,15 @@
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedData" />
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedMetadata" />
       <Member Id="P:Microsoft.Build.Framework.ExtendedBuildWarningEventArgs.ExtendedType" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs" Id="T:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedData" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ExtendedCriticalBuildMessageEventArgs.ExtendedType" />
     </Type>
     <Type Name="Microsoft.Build.Framework.ExtendedCustomBuildEventArgs" Id="T:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs">
       <Member Id="M:Microsoft.Build.Framework.ExtendedCustomBuildEventArgs.#ctor(System.String)" />
@@ -3594,6 +3607,12 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.GetAssembliesMetadata" Id="T:Microsoft.Build.Tasks.GetAssembliesMetadata">
+      <Member Id="M:Microsoft.Build.Tasks.GetAssembliesMetadata.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.GetAssembliesMetadata.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssembliesMetadata" />
+      <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssemblyPaths" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.GetAssemblyIdentity" Id="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.Execute" />
@@ -3721,6 +3740,11 @@
       <Member Id="M:Microsoft.Build.Tasks.IFixedTypeInfo.ReleaseFuncDesc(System.IntPtr)" />
       <Member Id="M:Microsoft.Build.Tasks.IFixedTypeInfo.ReleaseTypeAttr(System.IntPtr)" />
       <Member Id="M:Microsoft.Build.Tasks.IFixedTypeInfo.ReleaseVarDesc(System.IntPtr)" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract" Id="T:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract">
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.Assemblies" />
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.AssemblyListFile" />
+      <Member Id="P:Microsoft.Build.Tasks.IUnregisterAssemblyTaskContract.TypeLibFiles" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.LC" Id="T:Microsoft.Build.Tasks.LC">
       <Member Id="M:Microsoft.Build.Tasks.LC.#ctor" />
@@ -4056,6 +4080,7 @@
       <Member Id="M:Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString(System.String,System.Object[])" />
       <Member Id="P:Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources" />
     </Type>
+    <Type Name="Microsoft.Build.Tasks.TaskRequiresFramework" Id="T:Microsoft.Build.Tasks.TaskRequiresFramework" />
     <Type Name="Microsoft.Build.Tasks.Telemetry" Id="T:Microsoft.Build.Tasks.Telemetry">
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.Execute" />

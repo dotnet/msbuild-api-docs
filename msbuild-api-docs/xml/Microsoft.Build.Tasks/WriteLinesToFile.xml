@@ -89,6 +89,12 @@
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Obsolete]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -191,7 +197,8 @@
             Question whether this task is incremental.
             </summary>
         <value>To be added.</value>
-        <remarks>When question is true, then this task would not write to disk.  If CanBeIncremental is true, then error out.</remarks>
+        <remarks>When question is true, then error out if WriteOnlyWhenDifferent would have
+            written to the file.</remarks>
       </Docs>
     </Member>
     <Member MemberName="File">
