@@ -1,0 +1,123 @@
+<Type Name="GetAssembliesMetadata" FullName="Microsoft.Build.Tasks.GetAssembliesMetadata">
+  <TypeSignature Language="C#" Value="public class GetAssembliesMetadata : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetAssembliesMetadata extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GetAssembliesMetadata" />
+  <TypeSignature Language="VB.NET" Value="Public Class GetAssembliesMetadata&#xA;Inherits TaskExtension" />
+  <TypeSignature Language="F#" Value="type GetAssembliesMetadata = class&#xA;    inherit TaskExtension" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GetAssembliesMetadata : Microsoft::Build::Tasks::TaskExtension" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Resolves metadata for the specified set of assemblies.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetAssembliesMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetAssembliesMetadata.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GetAssembliesMetadata();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssembliesMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssembliesMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssembliesMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssembliesMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssembliesMetadata As ITaskItem()" />
+      <MemberSignature Language="F#" Value="member this.AssembliesMetadata : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.GetAssembliesMetadata.AssembliesMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ AssembliesMetadata { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Microsoft.Build.Framework.Output]</AttributeName>
+          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Output&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a list of resolved assembly metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyPaths">
+      <MemberSignature Language="C#" Value="public string[] AssemblyPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AssemblyPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssemblyPaths" />
+      <MemberSignature Language="VB.NET" Value="Public Property AssemblyPaths As String()" />
+      <MemberSignature Language="F#" Value="member this.AssemblyPaths : string[] with get, set" Usage="Microsoft.Build.Tasks.GetAssembliesMetadata.AssemblyPaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ AssemblyPaths { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
+          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of assembly paths.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetAssembliesMetadata.Execute" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="getAssembliesMetadata.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Execute the task.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

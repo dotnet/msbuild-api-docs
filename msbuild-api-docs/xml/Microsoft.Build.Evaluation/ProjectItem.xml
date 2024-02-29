@@ -130,7 +130,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the evaluated value of the include, unescaped. 
+            Gets the evaluated value of the include, unescaped.
             </summary>
         <value>The evaluated value of the Include attribute.</value>
         <remarks>
@@ -203,7 +203,7 @@
       <Docs>
         <param name="name">The name of the metadata whose value is retrieved.</param>
         <summary>
-            Get the evaluated value of a metadata on this item, possibly from an item definition. 
+            Get the evaluated value of a metadata on this item, possibly from an item definition.
             Returns empty string if it does not exist.
             To determine whether a piece of metadata does not exist vs. simply has no value, use <see cref="M:Microsoft.Build.Evaluation.ProjectItem.HasMetadata(System.String)">HasMetadata</see>.
             May be used to access the value of built-in metadata, such as "FullPath".
@@ -510,7 +510,7 @@
         <summary>
             Renames the item.
             Equivalent to setting the <see cref="P:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude" /> value.
-            Generally, no expansion occurs. This is because it would potentially result in several items, 
+            Generally, no expansion occurs. This is because it would potentially result in several items,
             which is not meaningful semantics when renaming a single item.
             However if the item does not need to be split (which would invalidate its ProjectItemElement),
             and the new value expands to exactly one item, then its evaluated include is updated
@@ -518,12 +518,12 @@
             </summary>
         <remarks>
             Even if the new value expands to zero items, we do not expand it.
-            The common case we are interested in for expansion here is setting something 
-            like "$(sourcesroot)\foo.cs" and expanding that to a single item. 
-            If say "@(foo)" is set as the new name, and it expands to blank, that might 
-            be surprising to the host and maybe even unhandled, if on full reevaluation 
-            it wouldn’t expand to blank. That’s why we're being cautious and supporting 
-            the most common scenario only. 
+            The common case we are interested in for expansion here is setting something
+            like "$(sourcesroot)\foo.cs" and expanding that to a single item.
+            If say "@(foo)" is set as the new name, and it expands to blank, that might
+            be surprising to the host and maybe even unhandled, if on full reevaluation
+            it wouldn’t expand to blank. That’s why we're being cautious and supporting
+            the most common scenario only.
             Many hosts will do a ReevaluateIfNecessary before reading anyway.
             </remarks>
       </Docs>
@@ -588,14 +588,14 @@
         <param name="name">Metadata name</param>
         <param name="unevaluatedValue">Metadata value</param>
         <param name="propagateMetadataToSiblingItems">
-            If true, adds direct metadata to the <see cref="T:Microsoft.Build.Construction.ProjectItemElement" /> from which this <see cref="T:Microsoft.Build.Evaluation.ProjectItem" /> originated. The intent is to affect all other sibling items.
-            </param>
+             If true, adds direct metadata to the <see cref="T:Microsoft.Build.Construction.ProjectItemElement" /> from which this <see cref="T:Microsoft.Build.Evaluation.ProjectItem" /> originated. The intent is to affect all other sibling items.
+             </param>
         <summary>
-            Overload of <see cref="M:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue(System.String,System.String)" />. Adds the option of not splitting the item element and thus affecting all sibling items.
-            Sibling items are defined as all ProjectItem instances that were created from the same item element.
+             Overload of <see cref="M:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue(System.String,System.String)" />. Adds the option of not splitting the item element and thus affecting all sibling items.
+             Sibling items are defined as all ProjectItem instances that were created from the same item element.
             
-            This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state without a reevaluation
-            </summary>
+             This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state without a reevaluation
+             </summary>
         <returns>Returns the new or existing metadatum.</returns>
         <remarks>To be added.</remarks>
       </Docs>

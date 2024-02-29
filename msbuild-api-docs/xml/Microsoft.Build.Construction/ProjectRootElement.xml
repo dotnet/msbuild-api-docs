@@ -26,14 +26,14 @@
   </Attributes>
   <Docs>
     <summary>
-            ProjectRootElement class represents an MSBuild project, an MSBuild targets file or any other file that conforms to MSBuild
-            project file schema.
-            This class and its related classes allow a complete MSBuild project or targets file to be read and written.
-            Comments and whitespace cannot be edited through this model at present.
+             ProjectRootElement class represents an MSBuild project, an MSBuild targets file or any other file that conforms to MSBuild
+             project file schema.
+             This class and its related classes allow a complete MSBuild project or targets file to be read and written.
+             Comments and whitespace cannot be edited through this model at present.
             
-            Each project root element is associated with exactly one ProjectCollection. This allows the owner of that project collection
-            to control its lifetime and not be surprised by edits via another project collection.
-            </summary>
+             Each project root element is associated with exactly one ProjectCollection. This allows the owner of that project collection
+             to control its lifetime and not be surprised by edits via another project collection.
+             </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -502,7 +502,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Condition should never be set, but the getter returns null instead of throwing 
+            Condition should never be set, but the getter returns null instead of throwing
             because a nonexistent condition is implicitly true
             </summary>
         <value>Always returns <see langword="null" />.</value>
@@ -973,7 +973,7 @@
       <Parameters />
       <Docs>
         <summary>
-            Creates an import group. 
+            Creates an import group.
             Caller must add it to the location of choice in the project.
             </summary>
         <returns>The import group.</returns>
@@ -1748,7 +1748,7 @@ The caller must add the UsingTask element to the location of choice in the proje
             Creates a using task.
             Caller must add it to the location of choice in the project.
             Exactly one of assembly file and assembly name must be provided.
-            Also allows providing optional runtime and architecture specifiers.  Null is OK. 
+            Also allows providing optional runtime and architecture specifiers.  Null is OK.
             </summary>
         <returns>The UsingTask element.</returns>
         <remarks>
@@ -1997,10 +1997,10 @@ The caller must add the UsingTask element to the location of choice in the proje
       </ReturnValue>
       <Docs>
         <summary>
-            The directory that the project is in. 
+            The directory that the project is in.
             Essential for evaluating relative paths.
             Is never null, even if the FullPath does not contain directory information.
-            If the project has not been loaded from disk and has not been given a path, returns the current-directory from 
+            If the project has not been loaded from disk and has not been given a path, returns the current-directory from
             the time the project was loaded - this is the same behavior as Whidbey/Orcas.
             If the project has not been loaded from disk but has been given a path, this path may not exist.
             </summary>
@@ -2762,10 +2762,10 @@ The caller must add the UsingTask element to the location of choice in the proje
         <param name="throwIfUnsavedChanges">To be added.</param>
         <param name="preserveFormatting">To be added.</param>
         <summary>
-            Reload the existing project root element from its file.
-            An <see cref="T:System.InvalidOperationException" /> is thrown if the project root element is not associated with any file on disk.
+             Reload the existing project root element from its file.
+             An <see cref="T:System.InvalidOperationException" /> is thrown if the project root element is not associated with any file on disk.
             
-            See <see cref="M:Microsoft.Build.Construction.ProjectRootElement.ReloadFrom(System.Xml.XmlReader,System.Boolean,System.Nullable{System.Boolean})" /></summary>
+             See <see cref="M:Microsoft.Build.Construction.ProjectRootElement.ReloadFrom(System.Xml.XmlReader,System.Boolean,System.Nullable{System.Boolean})" /></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2793,10 +2793,10 @@ The caller must add the UsingTask element to the location of choice in the proje
         <param name="throwIfUnsavedChanges">To be added.</param>
         <param name="preserveFormatting">To be added.</param>
         <summary>
-            Reload the existing project root element from the given path
-            An <see cref="T:System.InvalidOperationException" /> is thrown if the path does not exist.
+             Reload the existing project root element from the given path
+             An <see cref="T:System.InvalidOperationException" /> is thrown if the path does not exist.
             
-            See <see cref="M:Microsoft.Build.Construction.ProjectRootElement.ReloadFrom(System.Xml.XmlReader,System.Boolean,System.Nullable{System.Boolean})" /></summary>
+             See <see cref="M:Microsoft.Build.Construction.ProjectRootElement.ReloadFrom(System.Xml.XmlReader,System.Boolean,System.Nullable{System.Boolean})" /></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2822,23 +2822,23 @@ The caller must add the UsingTask element to the location of choice in the proje
       <Docs>
         <param name="reader">Reader to read from</param>
         <param name="throwIfUnsavedChanges">
-              If set to false, the reload operation will discard any unsaved changes.
-              Otherwise, an <see cref="T:System.InvalidOperationException" /> is thrown when unsaved changes are present.
-            </param>
+               If set to false, the reload operation will discard any unsaved changes.
+               Otherwise, an <see cref="T:System.InvalidOperationException" /> is thrown when unsaved changes are present.
+             </param>
         <param name="preserveFormatting">
-              Whether the reload should preserve formatting or not. A null value causes the reload to reuse the existing <see cref="P:Microsoft.Build.Construction.ProjectRootElement.PreserveFormatting" /> value.
-            </param>
+               Whether the reload should preserve formatting or not. A null value causes the reload to reuse the existing <see cref="P:Microsoft.Build.Construction.ProjectRootElement.PreserveFormatting" /> value.
+             </param>
         <summary>
-            Reload the existing project root element from the given <paramref name="reader" />
-            A reload operation completely replaces the state of this <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> object. This operation marks the 
-            object as dirty (see <see cref="M:Microsoft.Build.Construction.ProjectRootElement.MarkDirty(System.String,System.String)" /> for side effects). 
+             Reload the existing project root element from the given <paramref name="reader" />
+             A reload operation completely replaces the state of this <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> object. This operation marks the
+             object as dirty (see <see cref="M:Microsoft.Build.Construction.ProjectRootElement.MarkDirty(System.String,System.String)" /> for side effects).
             
-            If the new state has invalid XML or MSBuild syntax, then this method throws an <see cref="T:Microsoft.Build.Exceptions.InvalidProjectFileException" />.
-            When this happens, the state of this object does not change.
+             If the new state has invalid XML or MSBuild syntax, then this method throws an <see cref="T:Microsoft.Build.Exceptions.InvalidProjectFileException" />.
+             When this happens, the state of this object does not change.
             
-            Reloading from an XMLReader will retain the previous root element location (<see cref="P:Microsoft.Build.Construction.ProjectRootElement.FullPath" />, <see cref="P:Microsoft.Build.Construction.ProjectRootElement.DirectoryPath" />, <see cref="P:Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation" />).
+             Reloading from an XMLReader will retain the previous root element location (<see cref="P:Microsoft.Build.Construction.ProjectRootElement.FullPath" />, <see cref="P:Microsoft.Build.Construction.ProjectRootElement.DirectoryPath" />, <see cref="P:Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation" />).
             
-            </summary>
+             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3445,26 +3445,26 @@ The caller must add the UsingTask element to the location of choice in the proje
       </ReturnValue>
       <Docs>
         <summary>
-            Version number of this object.
-            A host can compare this to a stored version number to determine whether
-            a project's XML has changed, even if it has also been saved since.
+             Version number of this object.
+             A host can compare this to a stored version number to determine whether
+             a project's XML has changed, even if it has also been saved since.
             
-            The actual value is meaningless: an edit may increment it more than once,
-            so it should only be compared to a stored value.
-            </summary>
+             The actual value is meaningless: an edit may increment it more than once,
+             so it should only be compared to a stored value.
+             </summary>
         <value>The version number of this object.</value>
         <remarks>
-            Used by the Project class to figure whether changes have occurred that 
-            it might want to pick up by reevaluation.
+             Used by the Project class to figure whether changes have occurred that
+             it might want to pick up by reevaluation.
             
-            Used by the ProjectRootElement class to determine whether it needs to save.
+             Used by the ProjectRootElement class to determine whether it needs to save.
             
-            This number is unique to the appdomain. That means that it is possible
-            to know when a ProjectRootElement has been unloaded (perhaps after modification) and
-            reloaded -- the version won't reset to '0'.
+             This number is unique to the appdomain. That means that it is possible
+             to know when a ProjectRootElement has been unloaded (perhaps after modification) and
+             reloaded -- the version won't reset to '0'.
             
-            We're assuming we don't have over 2 billion edits.
-            </remarks>
+             We're assuming we don't have over 2 billion edits.
+             </remarks>
       </Docs>
     </Member>
   </Members>
