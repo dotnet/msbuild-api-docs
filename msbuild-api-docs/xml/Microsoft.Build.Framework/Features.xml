@@ -1,0 +1,61 @@
+<Type Name="Features" FullName="Microsoft.Build.Framework.Features">
+  <TypeSignature Language="C#" Value="public static class Features" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Features extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.Features" />
+  <TypeSignature Language="VB.NET" Value="Public Class Features" />
+  <TypeSignature Language="F#" Value="type Features = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Features abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class is used to manage features.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckFeatureAvailability">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Framework.FeatureStatus CheckFeatureAvailability (string featureName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Build.Framework.FeatureStatus CheckFeatureAvailability(string featureName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.Features.CheckFeatureAvailability(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CheckFeatureAvailability (featureName As String) As FeatureStatus" />
+      <MemberSignature Language="F#" Value="static member CheckFeatureAvailability : string -&gt; Microsoft.Build.Framework.FeatureStatus" Usage="Microsoft.Build.Framework.Features.CheckFeatureAvailability featureName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Framework::FeatureStatus CheckFeatureAvailability(System::String ^ featureName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.FeatureStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="featureName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="featureName">The name of the feature.</param>
+        <summary>
+            Checks if a feature is available or not.
+            </summary>
+        <returns>A feature status <see cref="T:Microsoft.Build.Framework.FeatureStatus" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

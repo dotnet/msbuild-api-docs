@@ -1610,6 +1610,35 @@ abstract class CustomToolTask : ToolTask
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartToolProcess">
+      <MemberSignature Language="C#" Value="protected virtual System.Diagnostics.Process StartToolProcess (System.Diagnostics.Process proc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Diagnostics.Process StartToolProcess(class System.Diagnostics.Process proc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.StartToolProcess(System.Diagnostics.Process)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function StartToolProcess (proc As Process) As Process" />
+      <MemberSignature Language="F#" Value="abstract member StartToolProcess : System.Diagnostics.Process -&gt; System.Diagnostics.Process&#xA;override this.StartToolProcess : System.Diagnostics.Process -&gt; System.Diagnostics.Process" Usage="toolTask.StartToolProcess proc" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Diagnostics::Process ^ StartToolProcess(System::Diagnostics::Process ^ proc);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proc" Type="System.Diagnostics.Process" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="proc">Fully populated <see cref="T:System.Diagnostics.Process" /> instance representing the tool process to be started.</param>
+        <summary>
+            We expect tasks to override this method if they need information about the tool process or its process events during task execution.
+            Implementation should make sure that the task is started in this method.
+            Starts the process during task execution. 
+            </summary>
+        <returns>A started process. This could be <paramref name="proc" /> or another <see cref="T:System.Diagnostics.Process" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TaskProcessTerminationTimeout">
       <MemberSignature Language="C#" Value="protected int TaskProcessTerminationTimeout { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 TaskProcessTerminationTimeout" />

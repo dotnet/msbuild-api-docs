@@ -1,11 +1,16 @@
 <Type Name="BinaryLogReplayEventSource" FullName="Microsoft.Build.Logging.BinaryLogReplayEventSource">
-  <TypeSignature Language="C#" Value="public sealed class BinaryLogReplayEventSource : Microsoft.Build.Logging.EventArgsDispatcher" />
+  <TypeSignature Language="C#" Value="public sealed class BinaryLogReplayEventSource : Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BinaryLogReplayEventSource" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher" />
-  <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class BinaryLogReplayEventSource : Microsoft.Build.Logging.EventArgsDispatcher, Microsoft.Build.Framework.IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher implements class Microsoft.Build.Framework.IEventSource, class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher&#xA;Implements IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher&#xA;    interface IEventSource&#xA;    interface IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher, Microsoft::Build::Framework::IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -13,7 +18,14 @@
   <Base>
     <BaseTypeName>Microsoft.Build.Logging.EventArgsDispatcher</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <InterfaceName>Microsoft.Build.Framework.IEventSource</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <InterfaceName>Microsoft.Build.Logging.IBuildEventArgsReaderNotifications</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Attributes>
     <Attribute FrameworkAlternate="msbuild-17-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
@@ -49,14 +61,60 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="NotificationsSourceCreated">
-      <MemberSignature Language="C#" Value="public event Action&lt;Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt;? NotificationsSourceCreated;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt; NotificationsSourceCreated" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.NotificationsSourceCreated" />
-      <MemberSignature Language="VB.NET" Value="Public Event NotificationsSourceCreated As Action(Of IBuildEventArgsReaderNotifications) " />
-      <MemberSignature Language="F#" Value="member this.NotificationsSourceCreated : Action&lt;Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt; " Usage="member this.NotificationsSourceCreated : System.Action&lt;Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt; " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Action&lt;Microsoft::Build::Logging::IBuildEventArgsReaderNotifications ^&gt; ^ NotificationsSourceCreated;" />
+    <Member MemberName="AllowForwardCompatibility">
+      <MemberSignature Language="C#" Value="public bool AllowForwardCompatibility { init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowForwardCompatibility" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowForwardCompatibility As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowForwardCompatibility : bool" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowForwardCompatibility {  void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unknown build events or unknown parts of known build events will be ignored if this is set to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileFormatVersion">
+      <MemberSignature Language="C#" Value="public int FileFormatVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FileFormatVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FileFormatVersion As Integer" />
+      <MemberSignature Language="F#" Value="member this.FileFormatVersion : int" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int FileFormatVersion { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered">
+      <MemberSignature Language="C#" Value="event Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;? Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.ArchiveFileEventArgs&gt; Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.Microsoft#Build#Logging#IBuildEventArgsReaderNotifications#ArchiveFileEncountered" />
+      <MemberSignature Language="VB.NET" Value="Custom Event ArchiveFileEncountered As Action(Of ArchiveFileEventArgs) Implements Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" />
+      <MemberSignature Language="F#" Value="member this.Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered : Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt; " Usage="member this.Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered : System.Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt; " />
       <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -68,12 +126,148 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.Action&lt;Microsoft.Build.Logging.IBuildEventArgsReaderNotifications&gt;</ReturnType>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone">
+      <MemberSignature Language="C#" Value="event Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;? Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.StringReadEventArgs&gt; Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.Microsoft#Build#Logging#IBuildEventArgsReaderNotifications#StringReadDone" />
+      <MemberSignature Language="VB.NET" Value="Custom Event StringReadDone As Action(Of StringReadEventArgs) Implements Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" />
+      <MemberSignature Language="F#" Value="member this.Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone : Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " Usage="member this.Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone : System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumReaderVersion">
+      <MemberSignature Language="C#" Value="public int MinimumReaderVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumReaderVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinimumReaderVersion As Integer" />
+      <MemberSignature Language="F#" Value="member this.MinimumReaderVersion : int" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinimumReaderVersion { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenBuildEventsReader">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Logging.BuildEventArgsReader OpenBuildEventsReader (string sourceFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Logging.BuildEventArgsReader OpenBuildEventsReader(string sourceFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OpenBuildEventsReader (sourceFilePath As String) As BuildEventArgsReader" />
+      <MemberSignature Language="F#" Value="static member OpenBuildEventsReader : string -&gt; Microsoft.Build.Logging.BuildEventArgsReader" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader sourceFilePath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Logging::BuildEventArgsReader ^ OpenBuildEventsReader(System::String ^ sourceFilePath);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.BuildEventArgsReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFilePath" />
         <summary>
-            Raised once <see cref="T:Microsoft.Build.Logging.BuildEventArgsReader" /> is created during replaying
+            Creates a <see cref="T:System.IO.BinaryReader" /> for the provided binary log file.
+            Performs decompression and buffering in the optimal way.
+            Caller is responsible for disposing the returned reader.
             </summary>
+        <returns>BinaryReader of the given binlog file.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenBuildEventsReader">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Logging.BuildEventArgsReader OpenBuildEventsReader (System.IO.BinaryReader binaryReader, bool closeInput, bool allowForwardCompatibility = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Logging.BuildEventArgsReader OpenBuildEventsReader(class System.IO.BinaryReader binaryReader, bool closeInput, bool allowForwardCompatibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader(System.IO.BinaryReader,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OpenBuildEventsReader (binaryReader As BinaryReader, closeInput As Boolean, Optional allowForwardCompatibility As Boolean = false) As BuildEventArgsReader" />
+      <MemberSignature Language="F#" Value="static member OpenBuildEventsReader : System.IO.BinaryReader * bool * bool -&gt; Microsoft.Build.Logging.BuildEventArgsReader" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader (binaryReader, closeInput, allowForwardCompatibility)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.BuildEventArgsReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="allowForwardCompatibility" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="binaryReader" />
+        <param name="closeInput">Indicates whether the passed BinaryReader should be closed on disposing.</param>
+        <param name="allowForwardCompatibility">Unknown build events or unknown parts of known build events will be ignored if this is set to true.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.Build.Logging.BuildEventArgsReader" /> for the provided binary reader over binary log file.
+            Caller is responsible for disposing the returned reader.
+            </summary>
+        <returns>BuildEventArgsReader over the given binlog file binary reader.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenReader">
+      <MemberSignature Language="C#" Value="public static System.IO.BinaryReader OpenReader (System.IO.Stream sourceFileStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.BinaryReader OpenReader(class System.IO.Stream sourceFileStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenReader(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OpenReader (sourceFileStream As Stream) As BinaryReader" />
+      <MemberSignature Language="F#" Value="static member OpenReader : System.IO.Stream -&gt; System.IO.BinaryReader" Usage="Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenReader sourceFileStream" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::IO::BinaryReader ^ OpenReader(System::IO::Stream ^ sourceFileStream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.BinaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFileStream">Stream over the binlog file</param>
+        <summary>
+            Creates a <see cref="T:System.IO.BinaryReader" /> for the provided binary log file.
+            Performs decompression and buffering in the optimal way.
+            Caller is responsible for disposing the returned reader.
+            </summary>
+        <returns>BinaryReader of the given binlog file.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,6 +300,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RecoverableReadError">
+      <MemberSignature Language="C#" Value="public event Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt;? RecoverableReadError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; RecoverableReadError" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.RecoverableReadError" />
+      <MemberSignature Language="VB.NET" Value="Public Event RecoverableReadError As Action(Of BinaryLogReaderErrorEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.RecoverableReadError : Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; " Usage="member this.RecoverableReadError : System.Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event Action&lt;Microsoft::Build::Logging::BinaryLogReaderErrorEventArgs ^&gt; ^ RecoverableReadError;" />
+      <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.RecoverableReadError</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.RecoverableReadError" />
+      </Docs>
+    </Member>
     <Member MemberName="Replay">
       <MemberSignature Language="C#" Value="public void Replay (string sourceFilePath);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Replay(string sourceFilePath) cil managed" />
@@ -126,6 +350,34 @@
       </Parameters>
       <Docs>
         <param name="sourceFilePath">The full file path of the binary log file</param>
+        <summary>
+            Read the provided binary log file and raise corresponding events for each BuildEventArgs
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replay">
+      <MemberSignature Language="C#" Value="public void Replay (Microsoft.Build.Logging.BuildEventArgsReader reader, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Replay(class Microsoft.Build.Logging.BuildEventArgsReader reader, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(Microsoft.Build.Logging.BuildEventArgsReader,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Replay (reader As BuildEventArgsReader, cancellationToken As CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.Replay : Microsoft.Build.Logging.BuildEventArgsReader * System.Threading.CancellationToken -&gt; unit" Usage="binaryLogReplayEventSource.Replay (reader, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Replay(Microsoft::Build::Logging::BuildEventArgsReader ^ reader, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="Microsoft.Build.Logging.BuildEventArgsReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="reader">The build events reader - caller is responsible for disposing.</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> indicating the replay should stop as soon as possible.</param>
         <summary>
             Read the provided binary log file and raise corresponding events for each BuildEventArgs
             </summary>
@@ -161,6 +413,34 @@
       </Docs>
     </Member>
     <Member MemberName="Replay">
+      <MemberSignature Language="C#" Value="public void Replay (System.IO.Stream sourceFileStream, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Replay(class System.IO.Stream sourceFileStream, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.Stream,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Replay (sourceFileStream As Stream, cancellationToken As CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.Replay : System.IO.Stream * System.Threading.CancellationToken -&gt; unit" Usage="binaryLogReplayEventSource.Replay (sourceFileStream, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Replay(System::IO::Stream ^ sourceFileStream, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFileStream">Stream over the binlog content.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Read the provided binary log file opened as a stream and raise corresponding events for each BuildEventArgs
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replay">
       <MemberSignature Language="C#" Value="public void Replay (string sourceFilePath, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Replay(string sourceFilePath, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
@@ -181,6 +461,36 @@
       </Parameters>
       <Docs>
         <param name="sourceFilePath">The full file path of the binary log file</param>
+        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> indicating the replay should stop as soon as possible.</param>
+        <summary>
+            Read the provided binary log file and raise corresponding events for each BuildEventArgs
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replay">
+      <MemberSignature Language="C#" Value="public void Replay (System.IO.BinaryReader binaryReader, bool closeInput, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Replay(class System.IO.BinaryReader binaryReader, bool closeInput, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.BinaryReader,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Replay (binaryReader As BinaryReader, closeInput As Boolean, cancellationToken As CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.Replay : System.IO.BinaryReader * bool * System.Threading.CancellationToken -&gt; unit" Usage="binaryLogReplayEventSource.Replay (binaryReader, closeInput, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Replay(System::IO::BinaryReader ^ binaryReader, bool closeInput, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="binaryReader">The binary log content binary reader - caller is responsible for disposing, unless <paramref name="closeInput" /> is set to true.</param>
+        <param name="closeInput">Indicates whether the passed BinaryReader should be closed on disposing.</param>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> indicating the replay should stop as soon as possible.</param>
         <summary>
             Read the provided binary log file and raise corresponding events for each BuildEventArgs

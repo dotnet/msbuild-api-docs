@@ -1195,6 +1195,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FromImmutableProjectSource">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Execution.ProjectInstance FromImmutableProjectSource (Microsoft.Build.Evaluation.Project project, Microsoft.Build.Execution.ProjectInstanceSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Execution.ProjectInstance FromImmutableProjectSource(class Microsoft.Build.Evaluation.Project project, valuetype Microsoft.Build.Execution.ProjectInstanceSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectInstance.FromImmutableProjectSource(Microsoft.Build.Evaluation.Project,Microsoft.Build.Execution.ProjectInstanceSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromImmutableProjectSource (project As Project, settings As ProjectInstanceSettings) As ProjectInstance" />
+      <MemberSignature Language="F#" Value="static member FromImmutableProjectSource : Microsoft.Build.Evaluation.Project * Microsoft.Build.Execution.ProjectInstanceSettings -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="Microsoft.Build.Execution.ProjectInstance.FromImmutableProjectSource (project, settings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Execution::ProjectInstance ^ FromImmutableProjectSource(Microsoft::Build::Evaluation::Project ^ project, Microsoft::Build::Execution::ProjectInstanceSettings settings);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.Evaluation.Project" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="settings" Type="Microsoft.Build.Execution.ProjectInstanceSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="project">The immutable <see cref="T:Microsoft.Build.Evaluation.Project" /> on which the ProjectInstance is based.</param>
+        <param name="settings">The <see cref="T:Microsoft.Build.Execution.ProjectInstanceSettings" /> to use.</param>
+        <summary>
+            Create a ProjectInstance from an immutable project source.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FromProjectRootElement">
       <MemberSignature Language="C#" Value="public static Microsoft.Build.Execution.ProjectInstance FromProjectRootElement (Microsoft.Build.Construction.ProjectRootElement rootElement, Microsoft.Build.Definition.ProjectOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Execution.ProjectInstance FromProjectRootElement(class Microsoft.Build.Construction.ProjectRootElement rootElement, class Microsoft.Build.Definition.ProjectOptions options) cil managed" />
@@ -1374,8 +1403,8 @@
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__191))&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__192))]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__192))&gt;]</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__196))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Execution.ProjectInstance+&lt;GetItemsByItemTypeAndEvaluatedInclude&gt;d__196))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
