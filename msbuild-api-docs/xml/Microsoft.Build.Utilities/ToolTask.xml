@@ -1205,6 +1205,97 @@ abstract class CustomToolTask : ToolTask
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReceiveExitNotification">
+      <MemberSignature Language="C#" Value="protected void ReceiveExitNotification (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReceiveExitNotification(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ReceiveExitNotification(System.Object,System.EventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ReceiveExitNotification (sender As Object, e As EventArgs)" />
+      <MemberSignature Language="F#" Value="member this.ReceiveExitNotification : obj * EventArgs -&gt; unit" Usage="toolTask.ReceiveExitNotification (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void ReceiveExitNotification(System::Object ^ sender, EventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="e" Type="System.EventArgs" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sender" />
+        <param name="e" />
+        <summary>
+            Signals when the tool exits. The Process object executing the tool
+            calls this method when the tool exits.
+            </summary>
+        <remarks>This method is used as a System.EventHandler delegate.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveStandardErrorData">
+      <MemberSignature Language="C#" Value="protected void ReceiveStandardErrorData (object sender, System.Diagnostics.DataReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReceiveStandardErrorData(object sender, class System.Diagnostics.DataReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ReceiveStandardErrorData(System.Object,System.Diagnostics.DataReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ReceiveStandardErrorData (sender As Object, e As DataReceivedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.ReceiveStandardErrorData : obj * System.Diagnostics.DataReceivedEventArgs -&gt; unit" Usage="toolTask.ReceiveStandardErrorData (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void ReceiveStandardErrorData(System::Object ^ sender, System::Diagnostics::DataReceivedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="e" Type="System.Diagnostics.DataReceivedEventArgs" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sender" />
+        <param name="e" />
+        <summary>
+            Queues up the output from the stderr stream of the process executing
+            the tool, and signals the availability of the data. The Process object
+            executing the tool calls this method for every line of text that the
+            tool writes to stderr.
+            </summary>
+        <remarks>This method is used as a System.Diagnostics.DataReceivedEventHandler delegate.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveStandardOutputData">
+      <MemberSignature Language="C#" Value="protected void ReceiveStandardOutputData (object sender, System.Diagnostics.DataReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReceiveStandardOutputData(object sender, class System.Diagnostics.DataReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ReceiveStandardOutputData(System.Object,System.Diagnostics.DataReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ReceiveStandardOutputData (sender As Object, e As DataReceivedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.ReceiveStandardOutputData : obj * System.Diagnostics.DataReceivedEventArgs -&gt; unit" Usage="toolTask.ReceiveStandardOutputData (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void ReceiveStandardOutputData(System::Object ^ sender, System::Diagnostics::DataReceivedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="e" Type="System.Diagnostics.DataReceivedEventArgs" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="sender" />
+        <param name="e" />
+        <summary>
+            Queues up the output from the stdout stream of the process executing
+            the tool, and signals the availability of the data. The Process object
+            executing the tool calls this method for every line of text that the
+            tool writes to stdout.
+            </summary>
+        <remarks>This method is used as a System.Diagnostics.DataReceivedEventHandler delegate.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ResponseFileEncoding">
       <MemberSignature Language="C#" Value="protected virtual System.Text.Encoding ResponseFileEncoding { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ResponseFileEncoding" />

@@ -1,0 +1,407 @@
+<Type Name="TaskInvocationAnalysisData+TaskParameter" FullName="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter">
+  <TypeSignature Language="C#" Value="public class TaskInvocationAnalysisData.TaskParameter : IEquatable&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit TaskInvocationAnalysisData/TaskParameter extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter" />
+  <TypeSignature Language="VB.NET" Value="Public Class TaskInvocationAnalysisData.TaskParameter&#xA;Implements IEquatable(Of TaskInvocationAnalysisData.TaskParameter)" />
+  <TypeSignature Language="F#" Value="type TaskInvocationAnalysisData.TaskParameter = class&#xA;    interface IEquatable&lt;TaskInvocationAnalysisData.TaskParameter&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public: ref class TaskInvocationAnalysisData::TaskParameter : IEquatable&lt;Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <param name="Value">The value passed to (when <paramref name="IsOutput" /> is false) or from
+            (when <paramref name="IsOutput" /> is true) a task. This object can be of any type supported
+            in task parameters: <see cref="T:Microsoft.Build.Framework.ITaskItem" />, <see cref="T:Microsoft.Build.Framework.ITaskItem" />[],
+            bool, string, or anything else convertible to/from string.</param>
+    <param name="IsOutput">True for output parameters, false for input parameters.</param>
+    <summary>
+            Represents an input or output parameter of a task.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskParameter (Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.#ctor(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; TaskParameter(Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ original);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskParameter (object? Value, bool IsOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object Value, bool IsOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.#ctor(System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Value As Object, IsOutput As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter : obj * bool -&gt; Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter" Usage="new Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter (Value, IsOutput)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskParameter(System::Object ^ Value, bool IsOutput);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="IsOutput" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Value">The value passed to (when <paramref name="IsOutput" /> is false) or from
+            (when <paramref name="IsOutput" /> is true) a task. This object can be of any type supported
+            in task parameters: <see cref="T:Microsoft.Build.Framework.ITaskItem" />, <see cref="T:Microsoft.Build.Framework.ITaskItem" />[],
+            bool, string, or anything else convertible to/from string.</param>
+        <param name="IsOutput">True for output parameters, false for input parameters.</param>
+        <summary>
+            Represents an input or output parameter of a task.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As TaskInvocationAnalysisData.TaskParameter" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ &lt;Clone&gt;$();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out object? Value, out bool IsOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] object&amp; Value, [out] bool&amp; IsOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Deconstruct(System.Object@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef Value As Object, ByRef IsOutput As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Deconstruct([Runtime::InteropServices::Out] System::Object ^ % Value, [Runtime::InteropServices::Out] bool % IsOutput);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" RefType="out" />
+        <Parameter Name="IsOutput" Type="System.Boolean" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="Value">To be added.</param>
+        <param name="IsOutput">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EqualityContract" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Type ^ EqualityContract { Type ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As TaskInvocationAnalysisData.TaskParameter) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutput">
+      <MemberSignature Language="C#" Value="public bool IsOutput { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutput" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.IsOutput" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsOutput As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsOutput : bool with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.IsOutput" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOutput { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>True for output parameters, false for input parameters.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter? left, Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter left, class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.op_Equality(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As TaskInvocationAnalysisData.TaskParameter, right As TaskInvocationAnalysisData.TaskParameter) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ left, Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter" />
+        <Parameter Name="right" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter? left, Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter left, class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.op_Inequality(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As TaskInvocationAnalysisData.TaskParameter, right As TaskInvocationAnalysisData.TaskParameter) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ left, Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^ right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter" />
+        <Parameter Name="right" Type="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool PrintMembers(System::Text::StringBuilder ^ builder);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object? Value { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Value { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The value passed to (when <paramref name="IsOutput" /> is false) or from
+            (when <paramref name="IsOutput" /> is true) a task. This object can be of any type supported
+            in task parameters: <see cref="T:Microsoft.Build.Framework.ITaskItem" />, <see cref="T:Microsoft.Build.Framework.ITaskItem" />[],
+            bool, string, or anything else convertible to/from string.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

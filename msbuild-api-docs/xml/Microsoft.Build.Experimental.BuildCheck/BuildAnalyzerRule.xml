@@ -1,0 +1,188 @@
+<Type Name="BuildAnalyzerRule" FullName="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule">
+  <TypeSignature Language="C#" Value="public class BuildAnalyzerRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildAnalyzerRule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildAnalyzerRule" />
+  <TypeSignature Language="F#" Value="type BuildAnalyzerRule = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildAnalyzerRule" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a rule that is a unit of build analysis.
+            <see cref="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer" /> is a unit of executing the analysis, but it can be discovering multiple distinct violation types,
+             for this reason a single <see cref="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer" /> can expose multiple <see cref="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" />s.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildAnalyzerRule (string id, string title, string description, string messageFormat, Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration defaultConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string title, string description, string messageFormat, class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration defaultConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (id As String, title As String, description As String, messageFormat As String, defaultConfiguration As BuildAnalyzerConfiguration)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule : string * string * string * string * Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration -&gt; Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Usage="new Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule (id, title, description, messageFormat, defaultConfiguration)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildAnalyzerRule(System::String ^ id, System::String ^ title, System::String ^ description, System::String ^ messageFormat, Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerConfiguration ^ defaultConfiguration);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="messageFormat" Type="System.String" />
+        <Parameter Name="defaultConfiguration" Type="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="id">To be added.</param>
+        <param name="title">To be added.</param>
+        <param name="description">To be added.</param>
+        <param name="messageFormat">To be added.</param>
+        <param name="defaultConfiguration">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration DefaultConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration DefaultConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.DefaultConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultConfiguration As BuildAnalyzerConfiguration" />
+      <MemberSignature Language="F#" Value="member this.DefaultConfiguration : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration" Usage="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.DefaultConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerConfiguration ^ DefaultConfiguration { Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerConfiguration ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default configuration - overridable by the user via .editorconfig.
+            If no user specified configuration is provided, this default will be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Description" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Description" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            More detailed description of the violation the rule can be reporting (with possible suggestions).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Id" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The identification of the rule.
+            
+             Some background on ids:
+              * https://github.com/dotnet/roslyn-analyzers/blob/main/src/Utilities/Compiler/DiagnosticCategoryAndIdRanges.txt
+              * https://github.com/dotnet/roslyn/issues/40351
+            
+             Quick suggestion now - let's force external ids to start with 'X', for ours - avoid 'MSB'
+              maybe - BT - build static/styling; BA - build authoring; BE - build execution/environment; BC - build configuration
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageFormat">
+      <MemberSignature Language="C#" Value="public string MessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.MessageFormat" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageFormat As String" />
+      <MemberSignature Language="F#" Value="member this.MessageFormat : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.MessageFormat" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MessageFormat { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Message format that will be used by the actual reports (<see cref="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" />) - those will just supply the actual arguments.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Title" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Title As String" />
+      <MemberSignature Language="F#" Value="member this.Title : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Title" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Title { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The descriptive short summary of the rule.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
