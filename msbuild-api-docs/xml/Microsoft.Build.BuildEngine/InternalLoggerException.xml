@@ -10,6 +10,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
@@ -56,11 +57,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> class.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            Default constructor.
+            </summary>
+        <remarks>
+            This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
+            </remarks>
+        <owner>SumedhK</owner>
+        <exception cref="T:System.InvalidOperationException" />
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -76,14 +84,21 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message">The error message that explains the reason for the exception.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> class using the specified values.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message" />
+        <summary>
+            Creates an instance of this exception using the specified error message.
+            </summary>
+        <remarks>
+            This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
+            </remarks>
+        <owner>SumedhK</owner>
+        <exception cref="T:System.InvalidOperationException" />
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -99,16 +114,23 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
         <Parameter Name="innerException" Type="System.Exception" />
       </Parameters>
       <Docs>
-        <param name="message">The error message that explains the reason for the exception.</param>
-        <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (<see langword="Nothing" /> in Visual Basic), the current exception is raised in a <see langword="catch" /> block that handles the inner exception.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> class using the specified values.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message" />
+        <param name="innerException" />
+        <summary>
+            Creates an instance of this exception using the specified error message and inner exception.
+            </summary>
+        <remarks>
+            This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
+            </remarks>
+        <owner>SumedhK</owner>
+        <exception cref="T:System.InvalidOperationException" />
       </Docs>
     </Member>
     <Member MemberName="BuildEventArgs">
@@ -124,6 +146,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -135,9 +158,12 @@
         <ReturnType>Microsoft.Build.Framework.BuildEventArgs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the details of the build event, if any, that was being logged.</summary>
-        <value>The details of the build event that was being logged.</value>
+        <summary>
+            Gets the details of the build event (if any) that was being logged.
+            </summary>
+        <value>The build event args, or null.</value>
         <remarks>To be added.</remarks>
+        <owner>SumedhK</owner>
       </Docs>
     </Member>
     <Member MemberName="ErrorCode">
@@ -153,6 +179,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -164,9 +191,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the error code associated with this exception's message.</summary>
-        <value>The text for the error code.</value>
+        <summary>
+            Gets the error code associated with this exception's message (not the inner exception).
+            </summary>
+        <value>The error code string.</value>
         <remarks>To be added.</remarks>
+        <owner>SumedhK</owner>
       </Docs>
     </Member>
     <Member MemberName="GetObjectData">
@@ -182,6 +212,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -210,6 +241,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -221,9 +253,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the F1-help keyword associated with this error.</summary>
-        <value>The F1-help keyword associated with this error.</value>
+        <summary>
+            Gets the F1-help keyword associated with this error, for the host IDE.
+            </summary>
+        <value>The keyword string.</value>
         <remarks>To be added.</remarks>
+        <owner>SumedhK</owner>
       </Docs>
     </Member>
     <Member MemberName="InitializationException">
@@ -238,6 +273,7 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -249,7 +285,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets whether an exception occurred during logger initialization.</summary>
+        <summary>
+            True if the exception occurred during logger initialization
+            </summary>
         <value>
           <see langword="true" /> if the exception occurred during logger initialization, <see langword="false" /> otherwise.</value>
         <remarks>To be added.</remarks>

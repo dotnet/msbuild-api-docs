@@ -10,19 +10,30 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a project that can be built using MSBuild.</summary>
+    <summary>
+             This class represents an MSBuild project.  It is a container for items,
+             properties, and targets.  It can load in project content from in-memory
+             XML or from an XML file, and it can save to an XML file, preserving
+             most whitespace and all XML comments.
+            
+             All Project objects must be associated with an Engine object, in order
+             to get at the loggers and other shared information.  Also, when doing
+             a "build", the Engine needs to keep track of which projects are currently
+             building.
+             </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -67,6 +78,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -76,7 +88,10 @@
       </Attributes>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Project" /> class.</summary>
+        <summary>
+            This default constructor creates a new Project object associated with
+            the global Engine object.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -88,6 +103,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -103,6 +119,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -114,8 +131,10 @@
         <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" />
       </Parameters>
       <Docs>
-        <param name="engine">The <see cref="T:Microsoft.Build.BuildEngine.Engine" /> instance to use for creating the project in memory.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Project" /> class using the supplied <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <param name="engine">Engine that will build this project.</param>
+        <summary>
+            Creates an instance of this class for the given engine.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -141,16 +160,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersion" Type="System.String" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="engine">The <see cref="T:Microsoft.Build.BuildEngine.Engine" /> instance to use for creating the project in memory.</param>
-        <param name="toolsVersion">The <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" /> to use for creating the project in memory.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Project" /> class using the supplied <see cref="T:Microsoft.Build.BuildEngine.Engine" /> and <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" />.</summary>
+        <param name="engine">Engine that will build this project. May be null if the global engine is expected.</param>
+        <param name="toolsVersion">Tools version to use during builds of this project instance. May be null,
+            in which case we will use the value in the Project's ToolsVersion attribute, or else the engine
+            default value.</param>
+        <summary>
+            Creates an instance of this class for the given engine, specifying a tools version to
+            use during builds of this project.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewImport">
@@ -166,6 +192,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -175,10 +202,13 @@
         <Parameter Name="condition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The name of the project file to import. Corresponds to the <see langword="Project" /> attribute of the <see langword="Import" /> element.</param>
-        <param name="condition">The condition to evaluate before importing the project. Corresponds to the <see langword="Condition" /> attribute of the <see langword="Import" /> element.</param>
-        <summary>Adds an Import element to the end of the project.</summary>
+        <param name="projectFile" />
+        <param name="condition" />
+        <summary>
+            Adds a new &lt;Import&gt; element to the end of the project.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="AddNewItem">
@@ -203,6 +233,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
@@ -212,10 +243,13 @@
         <Parameter Name="itemInclude" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemName">The name of the item collection to add the item to. Corresponds to the user-defined name of the <see langword="Item" /> element.</param>
-        <param name="itemInclude">The value of the <see langword="Include" /> attribute of the item.</param>
-        <summary>Adds the specified Item element to the project.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> containing the created item.</returns>
+        <param name="itemName">The name of the item list this item belongs to.</param>
+        <param name="itemInclude">The value of the item's <c>Include</c> attribute i.e. the item-spec</param>
+        <summary>
+            Called from the IDE to add a new item of a particular type to the project file. This method tries to add the new item
+            near the other items of the same type.
+            </summary>
+        <returns>The new item after evaluation.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -224,6 +258,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewItem">
@@ -239,6 +274,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
@@ -249,12 +285,13 @@
         <Parameter Name="treatItemIncludeAsLiteral" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="itemName">The name of the item collection to add the item to. Corresponds to the user-defined name of the <see langword="Item" /> element.</param>
-        <param name="itemInclude">The value of the <see langword="Include" /> attribute of the item.</param>
-        <param name="treatItemIncludeAsLiteral">
-          <see langword="true" /> to treat the <paramref name="itemInclude" /> parameter as a literal value; otherwise, <see langword="false" />.</param>
-        <summary>Adds the specified Item element to the project.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> containing the created item.</returns>
+        <param name="itemName" />
+        <param name="itemInclude" />
+        <param name="treatItemIncludeAsLiteral" />
+        <summary>
+            Adds a new item to the project, and optionally escapes the Include value so it's treated as a literal value.
+            </summary>
+        <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -263,6 +300,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewItemGroup">
@@ -278,15 +316,21 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Adds a new ItemGroup element to the project.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing the created item group.</returns>
+        <summary>
+            Adds a new &lt;ItemGroup&gt; element to the project, and returns the
+            corresponding BuildItemGroup object which can then be populated with
+            items or anything else that might belong inside an &lt;ItemGroup&gt;.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewPropertyGroup">
@@ -302,6 +346,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
@@ -310,11 +355,15 @@
         <Parameter Name="insertAtEndOfProject" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="insertAtEndOfProject">
-          <see langword="true" /> to insert the <see langword="PropertyGroup" /> at the end of the project; otherwise, <see langword="false" />.</param>
-        <summary>Adds a new PropertyGroup element to the project.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> containing the created property group.</returns>
+        <param name="insertAtEndOfProject" />
+        <summary>
+            Adds a new &lt;PropertyGroup&gt; element to the project, and returns the
+            corresponding BuildPropertyGroup object which can then be populated with
+            properties.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewUsingTaskFromAssemblyFile">
@@ -330,6 +379,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -345,10 +395,13 @@
         <Parameter Name="assemblyFile" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskName">The name of the task to reference from the assembly. Corresponds to the <see langword="TaskName" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <param name="assemblyFile">The file path to the assembly. Corresponds to the <see langword="AssemblyFile" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <summary>Adds a new UsingTask element with the specified assembly file.</summary>
+        <param name="taskName" />
+        <param name="assemblyFile" />
+        <summary>
+            Adds a new &lt;UsingTask&gt; element to the end of the project
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>LukaszG</owner>
       </Docs>
     </Member>
     <Member MemberName="AddNewUsingTaskFromAssemblyName">
@@ -364,6 +417,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -379,10 +433,13 @@
         <Parameter Name="assemblyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskName">The name of the task to reference from the assembly. Corresponds to the <see langword="TaskName" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <param name="assemblyName">The name of the assembly to load. Corresponds to the <see langword="AssemblyName" /> attribute of the <see langword="UsingTask" /> element.</param>
-        <summary>Adds a new UsingTask element with the specified assembly name.</summary>
+        <param name="taskName" />
+        <param name="assemblyName" />
+        <summary>
+            Adds a new &lt;UsingTask&gt; element to the end of the project
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>LukaszG</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="Build">
@@ -407,16 +464,19 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Builds the default targets of the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <summary>
+            Builds the default targets in this project.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -432,6 +492,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -440,11 +501,13 @@
         <Parameter Name="targetName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="targetName">The target to build.</param>
-        <summary>Builds the specified target in the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="targetName" />
+        <summary>
+            Builds the specified target in this project.
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
+        <owner>JomoF</owner>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -460,6 +523,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -468,11 +532,20 @@
         <Parameter Name="targetNames" Type="System.String[]" />
       </Parameters>
       <Docs>
-        <param name="targetNames">The list of targets to build. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) to build the default targets.</param>
-        <summary>Builds the specified list of targets in the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <param name="targetNames" />
+        <summary>
+            Builds the specified list of targets in this project.
+            </summary>
+        <returns />
+        <remarks>
+            This is the public method that host IDEs can call to build a project.
+            It just turns around and calls "BuildProject" on the engine object.
+            All builds must go through the engine object, because it needs to
+            keep track of the projects that are currently in progress, so that
+            we don't end up in infinite loops when we have circular project-to-
+            project dependencies.
+            </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -488,6 +561,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -497,12 +571,21 @@
         <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
       </Parameters>
       <Docs>
-        <param name="targetNames">The list of targets to build. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) to build the default targets.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" />) if outputs are not needed.</param>
-        <summary>Builds the specified list of targets in the project, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <param name="targetNames" />
+        <param name="targetOutputs" />
+        <summary>
+            Builds the specified list of targets in this project, and returns the target outputs.
+            </summary>
+        <returns />
+        <remarks>
+            This is the public method that host IDEs can call to build a project.
+            It just turns around and calls "BuildProject" on the engine object.
+            All builds must go through the engine object, because it needs to
+            keep track of the projects that are currently in progress, so that
+            we don't end up in infinite loops when we have circular project-to-
+            project dependencies.
+            </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Build">
@@ -518,6 +601,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -528,13 +612,23 @@
         <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
       </Parameters>
       <Docs>
-        <param name="targetNames">The list of targets to build. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) to build the default targets.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" />) if outputs are not needed.</param>
-        <param name="buildFlags">The <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> to apply to the build.</param>
-        <summary>Builds the specified list of targets in the project using the specified settings, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <param name="targetNames" />
+        <param name="targetOutputs" />
+        <param name="buildFlags" />
+        <summary>
+            Builds the specified list of targets in this project using the specified
+            flags, and returns the target outputs.
+            </summary>
+        <returns />
+        <remarks>
+            This is the public method that host IDEs can call to build a project.
+            It just turns around and calls "BuildProject" on the engine object.
+            All builds must go through the engine object, because it needs to
+            keep track of the projects that are currently in progress, so that
+            we don't end up in infinite loops when we have circular project-to-
+            project dependencies.
+            </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildEnabled">
@@ -550,12 +644,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value indicating whether the project is enabled for building tasks and targets.</summary>
+        <summary>
+            This controls whether or not the building of targets/tasks is enabled for this
+            project.  This is for security purposes in case a host wants to closely
+            control which projects it allows to run targets/tasks.  By default, for a newly
+            created project, we will use whatever setting is in the parent engine.
+            </summary>
         <value>
           <see langword="true" /> if the project is enabled for building tasks and targets; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -566,6 +666,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="DefaultTargets">
@@ -581,14 +682,20 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>DefaultTargets</c> attribute of the Project element in the MSBuild project.</summary>
+        <summary>
+            Read-write accessor for the "DefaultTargets" attribute of the
+            &lt;Project&gt; element.  This is passed in and out as a semicolon-separated
+            list of target names.
+            </summary>
         <value>A semi-colon (;) delimited list of the targets specified in the <c>DefaultTargets</c> attribute.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="DefaultToolsVersion">
@@ -603,12 +710,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the ToolsVersion XML attribute found on the Project element in the project file.</summary>
+        <summary>
+             Public read-write accessor for the ToolsVersion xml attribute found on the
+             &lt;Project /&gt; element.  If this attribute is not present on the &lt;Project/&gt;
+             element, getting the value will return the default tools version of the parent Engine.
+            
+             NOTE: This value is distinct from the effective tools version used during a build,
+             as that value may be overridden during construction of the Project instance or
+             by setting the Project.ToolsVersion property. Setting this attribute value will not change the
+             effective tools version if it has been overridden. To change the effective tools version,
+             set the Project.ToolsVersion property.
+             </summary>
         <value>A string representing the Tools version.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -637,12 +755,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Text.Encoding</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the encoding for the project file.</summary>
+        <summary>
+            Internal method for getting the project file encoding. When we have the managed vsproject assembly, this should be made public.
+            </summary>
         <value>An <see cref="T:System.Text.Encoding" /> value of the project file.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -660,12 +781,20 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the items evaluated during the build.</summary>
+        <summary>
+            Read-only accessor for the final collection of evaluated items, taking
+            into account all conditions and property expansions.  Through this
+            collection, the caller can modify any of the items present, and it
+            will be reflected in the project file the next time it is saved.
+            However, adding or deleting items from this collection will not impact
+            the project.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing the items evaluated during the build.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -675,6 +804,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="EvaluatedItemsIgnoringCondition">
@@ -690,12 +820,25 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of all items in a project, even those not used in the build process because a Condition attribute evaluated to <see langword="false" />.</summary>
+        <summary>
+             Read-only accessor for the collection of evaluated items, taking into
+             account property expansions and wildcards, but ignoring "Condition"s.
+             This way, an IDE can display all items regardless of whether they're
+             relevant for a particular build flavor or not.  Through this
+             collection, the caller can modify any of the items present, and it
+             will be reflected in the project file the next time it is saved.
+             However, adding or deleting items from this collection will not impact
+             the project.
+            
+             See the comments for the "evaluatedItemsIgnoringCondition" member
+             variable up above.
+             </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all items in a project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -705,6 +848,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="EvaluatedProperties">
@@ -720,12 +864,26 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the properties evaluated during the build.</summary>
+        <summary>
+             Read-only accessor for the final set of evaluated properties for
+             this project.  This takes into account all conditions and property
+             expansions, and gives back a single linear collection of project-level
+             properties, which includes global properties, environment variable
+             properties, reserved properties, and normal/imported properties.
+             Through this collection, the caller can modify any normal
+             properties, and the changes will be reflected in the project file
+             when it is saved again.  However, adding or deleting properties
+             from this collection will not impact the project.
+            
+             PERF WARNING: cloning a BuildPropertyGroup can be very expensive -- use
+             only when a copy of the entire property bag is strictly necessary
+             </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> containing the properties evaluated during the build.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -738,6 +896,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="FullFileName">
@@ -753,6 +912,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -764,7 +924,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the fully qualified path and file name of the project file.</summary>
+        <summary>
+            Gets or sets the fully qualified path + filename of the project file. This could be empty-string if the project
+            doesn't have a file associated with it -- for example, if we were given the XML in memory.
+            </summary>
         <value>The full path of the project file.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -774,6 +937,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GetConditionedPropertyValues">
@@ -789,6 +953,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
@@ -797,9 +962,13 @@
         <Parameter Name="propertyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The property to use when generating the list of possible values.</param>
-        <summary>Returns a list of possible values for the specified property.</summary>
-        <returns>The list of possible values for the property.</returns>
+        <param name="propertyName" />
+        <summary>
+            This returns a list of possible values for a particular property.  It
+            gathers this list by looking at all of the "Condition" attributes
+            in the project file.
+            </summary>
+        <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -808,6 +977,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GetEvaluatedItemsByName">
@@ -823,6 +993,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
@@ -831,10 +1002,13 @@
         <Parameter Name="itemName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemName">The name of the item collection.</param>
-        <summary>Returns all evaluated items belonging to the specified item collection.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all of the evaluated items belonging to the specified item collection.</returns>
+        <param name="itemName" />
+        <summary>
+            Retrieves a group of evaluated items of a particular item type.
+            </summary>
+        <returns>items of requested type</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GetEvaluatedItemsByNameIgnoringCondition">
@@ -850,6 +1024,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
@@ -858,10 +1033,15 @@
         <Parameter Name="itemName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemName">The name of the specified item collection.</param>
-        <summary>Returns all items belonging to the specified item collection.</summary>
-        <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> containing all items belonging to the specified item collection, even those not used in the build process because a Condition attribute evaluated to <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <param name="itemName" />
+        <summary>
+            Retrieves a group of evaluated items of a particular item type. This is really just about the items that are persisted
+            in the project file, ignoring all "Condition"s, so that an IDE can display all items regardless of whether they're
+            relevant for a particular build flavor or not.
+            </summary>
+        <returns>items of requested type</returns>
+        <remarks>See the comments for the "evaluatedItemsByNameIgnoringCondition" member variable up above.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GetEvaluatedProperty">
@@ -877,6 +1057,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -885,9 +1066,13 @@
         <Parameter Name="propertyName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property.</param>
-        <summary>Returns the value of the specified property.</summary>
-        <returns>The value of the specified property.</returns>
+        <param name="propertyName">Name of the property to retrieve.</param>
+        <summary>
+            Returns a single evaluated property value.
+            Call this to retrieve a few properties. If you need to retrieve many properties
+            use EvaluatedProperty accessor.
+            </summary>
+        <returns>The property value.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -911,6 +1096,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -919,10 +1105,13 @@
         <Parameter Name="id" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id">The name of the element in the <see langword="ProjectExtensions" /> element to return.</param>
-        <summary>Returns a string value of the XML from the specified element in the ProjectExtensions element.</summary>
-        <returns>The string value of the specified element in the <c>ProjectExtensions</c> element of the project.</returns>
+        <param name="id" />
+        <summary>
+            Returns the project extensions string for the given ID.
+            </summary>
+        <returns>String value of specified ID.</returns>
         <remarks>To be added.</remarks>
+        <owner>JomoF</owner>
       </Docs>
     </Member>
     <Member MemberName="GlobalProperties">
@@ -938,12 +1127,20 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a collection of the global properties for the project.</summary>
+        <summary>
+            Read-write accessor for the project's global properties collection.
+            To set or modify global properties, a caller can hand us an entire
+            new BuildPropertyGroup here, or can simply modify the properties in the
+            BuildPropertyGroup that is already here.  Global properties are those
+            defined via the "/p:" switch on the MSBuild.exe command-line, or
+            properties like "Configuration" set by the IDE prior to invoking MSBuild.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> containing the global properties for the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -953,6 +1150,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="HasToolsVersionAttribute">
@@ -967,12 +1165,17 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets whether the Project file has the ToolsVersion XML attribute.</summary>
+        <summary>
+            Public read  accessor to determine if the Project file has the ToolsVersion xml attribute
+            e.g. &lt;Project ToolsVersion="3.5"/&gt; . This is different to knowing the inherited
+            value and allows us to spot Whidbey (VS 8.0) projects.
+            </summary>
         <value>
           <see langword="true" /> if the project has the ToolsVersion attribute; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -998,12 +1201,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.ImportCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the projects imported into this project.</summary>
+        <summary>
+            Read-only accessor for the imported projects of this project
+            </summary>
         <value>An <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> of the projects imported into this project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1013,6 +1219,7 @@
   
  ]]></format>
         </remarks>
+        <owner>LukaszG</owner>
       </Docs>
     </Member>
     <Member MemberName="InitialTargets">
@@ -1028,14 +1235,22 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>InitialTargets</c> attribute of the Project element in the MSBuild project.</summary>
+        <summary>
+            Read-write accessor for the "InitialTargets" attribute of the
+            &lt;Project&gt; element.  This is passed in and out as a semicolon-separated
+            list of target names.  The "get" returns all of the initial targets in both
+            the main project and all imported projects (after property expansion).  The
+            "set" only sets the initial targets for the main project.
+            </summary>
         <value>A semi-colon (;) delimited list of the targets specified in the <c>InitialTargets</c> attribute.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="IsDirty">
@@ -1051,6 +1266,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1062,10 +1278,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the project has changed and needs to be saved to a file.</summary>
+        <summary>
+            Tells you whether this project file is dirty such that it would need
+            to get saved to disk.
+            </summary>
         <value>
           <see langword="true" /> if the project has changed and needs to be saved; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="IsValidated">
@@ -1081,6 +1301,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1096,10 +1317,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the project is to be validated against a schema.</summary>
+        <summary>
+            Indicates if the project (file) is to be validated against a schema.
+            </summary>
         <value>
           <see langword="true" /> if the project is to be validated against a schema; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <owner>SumedhK</owner>
       </Docs>
     </Member>
     <Member MemberName="ItemGroups">
@@ -1115,12 +1339,17 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroupCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the item groups specified with the ItemGroup element in the project.</summary>
+        <summary>
+            Read-only accessor for the raw item groups of this project.
+            This is essentially a reflection of the data in the XML for this
+            project's items as well as any &lt;Import&gt;'d projects.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> containing the item groups specified in the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1138,6 +1367,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="Load">
@@ -1173,6 +1403,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1188,9 +1419,11 @@
       </Parameters>
       <Docs>
         <param name="textReader">The <see cref="T:System.IO.TextReader" /> to load.</param>
-        <summary>Loads the contents of the specified <see cref="T:System.IO.TextReader" /> into the <see cref="T:Microsoft.Build.BuildEngine.Project" /> object.</summary>
+        <summary>
+            Reads in the contents of this project from a string containing the Xml contents.
+            </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">The file used by the <paramref name="textReader" /><see cref="T:System.IO.TextReader" /> is not a valid project file.</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <Member MemberName="Load">
@@ -1206,6 +1439,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1221,7 +1455,9 @@
       </Parameters>
       <Docs>
         <param name="projectFileName">The project file to load.</param>
-        <summary>Loads the contents of the specified project file into the <see cref="T:Microsoft.Build.BuildEngine.Project" /> object.</summary>
+        <summary>
+            Reads in the contents of this project from a project XML file on disk.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1233,7 +1469,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">The file specified by <paramref name="projectFileName" /> is not a valid project file.</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <Member MemberName="Load">
@@ -1248,19 +1484,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="textReader" Type="System.IO.TextReader" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="textReader" Type="System.IO.TextReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="textReader">A <see cref="T:System.IO.TextReader" /> object containing the project contents.</param>
         <param name="projectLoadSettings">A <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> value that specifies the settings for the project being loaded.</param>
-        <summary>Reads the contents of this project from a string containing the XML contents.</summary>
+        <summary>
+            Reads in the contents of this project from a string containing the Xml contents.
+            </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <Member MemberName="Load">
@@ -1275,19 +1515,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFileName" Type="System.String" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectFileName">A string representing the name of the file to load.</param>
         <param name="projectLoadSettings">A <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> value that specifies the settings for the project being loaded.</param>
-        <summary>Reads the contents of this project from a project XML file on disk.</summary>
+        <summary>
+            Reads in the contents of this project from a project XML file on disk.
+            </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <MemberGroup MemberName="LoadXml">
@@ -1312,6 +1556,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1327,7 +1572,9 @@
       </Parameters>
       <Docs>
         <param name="projectXml">The string of XML to load.</param>
-        <summary>Loads the contents of the specified string into the <see cref="T:Microsoft.Build.BuildEngine.Project" /> object.</summary>
+        <summary>
+            Reads in the contents of this project from a string containing the Xml contents.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1339,7 +1586,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">The XML contained in <paramref name="projectXML" /> is not a valid project file.</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <Member MemberName="LoadXml">
@@ -1354,19 +1601,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectXml" Type="System.String" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectXml" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectXml">A string containing the project contents.</param>
         <param name="projectLoadSettings">A <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> value that specifies the settings for the project being loaded.</param>
-        <summary>Reads the contents of this project from a string containing the XML contents.</summary>
+        <summary>
+            Reads in the contents of this project from a string containing the Xml contents.
+            </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
       </Docs>
     </Member>
     <Member MemberName="MarkProjectAsDirty">
@@ -1382,14 +1633,20 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Sets the <see cref="P:Microsoft.Build.BuildEngine.Project.IsDirty" /> property of the project to <see langword="true" />.</summary>
+        <summary>
+            This forces a re-evaluation of the project the next time somebody
+            calls EvaluatedProperties or EvaluatedItems.  It is also a signal
+            that the project file is dirty and needs to be saved to disk.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="ParentEngine">
@@ -1405,14 +1662,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.Engine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> that builds the project.</summary>
-        <value>The parent <see cref="T:Microsoft.Build.BuildEngine.Engine" /> object.</value>
+        <summary>
+            Gets the parent engine object.
+            </summary>
+        <value>Engine object.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="PropertyGroups">
@@ -1428,12 +1689,17 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroupCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the property groups specified with the PropertyGroup element in the project.</summary>
+        <summary>
+            Read-only accessor for the raw property groups of this project.
+            This is essentially a reflection of the data in the XML for this
+            project's properties as well as any &lt;Import&gt;'d projects.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> containing the property groups specified in the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1451,6 +1717,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveAllItemGroups">
@@ -1466,14 +1733,19 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Removes all item groups from the project, but does not modify imported projects.</summary>
+        <summary>
+            Removes all &lt;ItemGroup&gt;'s from the main project file, but doesn't
+            touch anything in any of the imported project files.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveAllPropertyGroups">
@@ -1489,14 +1761,19 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Removes all property groups from the project, but does not modify imported projects.</summary>
+        <summary>
+            Removes all &lt;PropertyGroup&gt;'s from the main project file, but doesn't
+            touch anything in any of the imported project files.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveImportedPropertyGroup">
@@ -1511,16 +1788,19 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="propertyGroupToRemove">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> object representing the group to remove.</param>
-        <summary>Removes the specified property group from the main project file.</summary>
+        <param name="propertyGroupToRemove" />
+        <summary>
+            Removes a &lt;PropertyGroup&gt; from the main project file.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1537,6 +1817,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1545,9 +1826,12 @@
         <Parameter Name="itemToRemove" Type="Microsoft.Build.BuildEngine.BuildItem" />
       </Parameters>
       <Docs>
-        <param name="itemToRemove">The item to remove from the project.</param>
-        <summary>Removes the specified item from the project.</summary>
+        <param name="itemToRemove" />
+        <summary>
+            Removes an item from the main project file.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveItemGroup">
@@ -1563,6 +1847,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1571,9 +1856,12 @@
         <Parameter Name="itemGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildItemGroup" />
       </Parameters>
       <Docs>
-        <param name="itemGroupToRemove">The item group to remove from the project.</param>
-        <summary>Removes the specified item group from the project.</summary>
+        <param name="itemGroupToRemove" />
+        <summary>
+            Removes a &lt;ItemGroup&gt; from the main project file.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveItemGroupsWithMatchingCondition">
@@ -1589,6 +1877,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1597,9 +1886,14 @@
         <Parameter Name="matchCondition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="matchCondition">The condition to match when removing item groups.</param>
-        <summary>Removes all item groups with the specified condition from the project, but does not modify imported projects.</summary>
+        <param name="matchCondition" />
+        <summary>
+            Removes all &lt;ItemGroup&gt;'s from the main project file that have a
+            specific "Condition".  This will not remove any item groups from
+            imported project files.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemoveItemsByName">
@@ -1615,6 +1909,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1623,9 +1918,12 @@
         <Parameter Name="itemName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="itemName">The item collection to remove.</param>
-        <summary>Removes all items in the specified item collection from the project, but does not modify imported projects.</summary>
+        <param name="itemName" />
+        <summary>
+            Removes all items of a particular type from the main project file.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemovePropertyGroup">
@@ -1641,6 +1939,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1649,9 +1948,12 @@
         <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
       </Parameters>
       <Docs>
-        <param name="propertyGroupToRemove">The property group to remove from the project.</param>
-        <summary>Removes the specified property group from the project.</summary>
+        <param name="propertyGroupToRemove" />
+        <summary>
+            Removes a &lt;PropertyGroup&gt; from the main project file.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="RemovePropertyGroupsWithMatchingCondition">
@@ -1684,6 +1986,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1698,9 +2001,14 @@
         <Parameter Name="matchCondition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="matchCondition">The condition to match when removing property groups.</param>
-        <summary>Removes all property groups with the specified condition from the project, but does not modify imported projects.</summary>
+        <param name="matchCondition">Condition on the PropertyGroups</param>
+        <summary>
+            Removes all &lt;PropertyGroup&gt;'s from the main project file that have a
+            specific "Condition".  This will not remove any property groups from
+            imported project files.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="RemovePropertyGroupsWithMatchingCondition">
@@ -1715,18 +2023,23 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="matchCondition" Type="System.String" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="includeImportedPropertyGroups" Type="System.Boolean" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="matchCondition" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="includeImportedPropertyGroups" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="matchCondition">A string representing the condition of the PropertyGroups that you want removed.</param>
-        <param name="includeImportedPropertyGroups">A boolean value indicating whether to include imported property groups in the search.</param>
-        <summary>Removes all &lt;PropertyGroup&gt;'s from the main project file that have a specific "Condition."</summary>
+        <param name="matchCondition">Condition on the PropertyGroups</param>
+        <param name="includeImportedPropertyGroups" />
+        <summary>
+            Removes all &lt;PropertyGroup&gt;'s from the main project file that have a
+            specific "Condition".  This will not remove any property groups from
+            imported project files.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1735,6 +2048,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="ResetBuildStatus">
@@ -1750,14 +2064,19 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Resets the status every target in the project so that the next build will build all targets again.</summary>
+        <summary>
+            Resets the state of each target in this project back to "NotStarted",
+            so that a subsequent build will actually build those targets again.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="Save">
@@ -1782,6 +2101,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1790,9 +2110,12 @@
         <Parameter Name="textWriter" Type="System.IO.TextWriter" />
       </Parameters>
       <Docs>
-        <param name="textWriter">The <see cref="T:System.IO.TextWriter" /> object in which to save the project.</param>
-        <summary>Saves the project in the specified <see cref="T:System.IO.TextWriter" /> object.</summary>
+        <param name="textWriter" />
+        <summary>
+            Saves the current contents of the project to a TextWriter object.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -1808,6 +2131,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1816,9 +2140,13 @@
         <Parameter Name="projectFileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFileName">The name of the file in which to save the project.</param>
-        <summary>Saves the project to the specified file.</summary>
+        <param name="projectFileName" />
+        <summary>
+            Saves the current contents of the project to an XML project file on disk.
+            This method will NOT add the ?xml node if it's not already present
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -1834,6 +2162,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1843,10 +2172,14 @@
         <Parameter Name="encoding" Type="System.Text.Encoding" />
       </Parameters>
       <Docs>
-        <param name="projectFileName">The name of the file in which to save the project.</param>
-        <param name="encoding">The <see cref="T:System.Text.Encoding" /> value with which to save the file.</param>
-        <summary>Saves the project in the specified file with the specified encoding.</summary>
+        <param name="projectFileName" />
+        <param name="encoding" />
+        <summary>
+            Saves the current contents of the project to an XML project file on
+            disk using the supplied encoding.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>LukaszG</owner>
       </Docs>
     </Member>
     <Member MemberName="SchemaFile">
@@ -1862,6 +2195,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1877,9 +2211,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the XML schema file to use when validating the project.</summary>
+        <summary>
+            The schema against which the project (file) and all its imported files are validated.
+            </summary>
         <value>The XML schema file to use when validating the project.</value>
         <remarks>To be added.</remarks>
+        <owner>SumedhK</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="SetImportedProperty">
@@ -1904,6 +2241,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1921,12 +2259,18 @@
         <Parameter Name="importProject" Type="Microsoft.Build.BuildEngine.Project" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <param name="importProject">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> that contains the specified property.</param>
-        <summary>Sets the value of a property in the specified imported project.</summary>
+        <param name="propertyName" />
+        <param name="propertyValue" />
+        <param name="condition" />
+        <param name="importProject" />
+        <summary>
+            Sets the value of a property that comes from an imported project.
+            Updates the current project (the one this method is called on) with
+            a property that has no Xml behind it, and updates the imported project
+            with a real backed property.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>DavidLe</owner>
       </Docs>
     </Member>
     <Member MemberName="SetImportedProperty">
@@ -1942,6 +2286,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1954,13 +2299,18 @@
         <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <param name="importedProject">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> that contains the specified property.</param>
-        <param name="position">A <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> value indicating the location to insert the property.</param>
-        <summary>Sets the value of a property in the specified imported project.</summary>
+        <param name="propertyName">Property name.</param>
+        <param name="propertyValue">Property value.</param>
+        <param name="condition">The condition for this property.</param>
+        <param name="importedProject">Specifies the project the property is imported from.</param>
+        <param name="position">Specifies the position within the project file for the property.</param>
+        <summary>
+            Set a property at a particular position inside an imported project file.
+            The property will be in a group that has the specified condition.
+            If necessary, a new property or property group will be created.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>DavidLe</owner>
       </Docs>
     </Member>
     <Member MemberName="SetImportedProperty">
@@ -1976,6 +2326,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1989,14 +2340,17 @@
         <Parameter Name="treatPropertyValueAsLiteral" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <param name="importedProject">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> that contains the specified property.</param>
-        <param name="position">A <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> value indicating the location to insert the property.</param>
-        <param name="treatPropertyValueAsLiteral">
-          <see langword="true" /> to treat the <paramref name="propertyValue" /> parameter as a literal value; otherwise, <see langword="false" />.</param>
-        <summary>Sets the value of a property in the specified imported project.</summary>
+        <param name="propertyName">Property name.</param>
+        <param name="propertyValue">Property value.</param>
+        <param name="condition">The condition for this property.</param>
+        <param name="importedProject">Specifies the project the property is imported from.</param>
+        <param name="position">Specifies the position within the project file for the property.</param>
+        <param name="treatPropertyValueAsLiteral" />
+        <summary>
+            Set a property at a particular position inside an imported project file.
+            The property will be in a group that has the specified condition.
+            If necessary, a new property or property group will be created.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2005,6 +2359,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="SetProjectExtensions">
@@ -2020,6 +2375,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2029,10 +2385,13 @@
         <Parameter Name="content" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id">The name of the XML element to create as a child of the <see langword="ProjectExtensions" /> element.</param>
-        <param name="content">The text value of the created XML element.</param>
-        <summary>Sets the ProjectExtensions element of the project with the specified element name and content.</summary>
+        <param name="id" />
+        <param name="content" />
+        <summary>
+            Sets the project extensions string.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>JomoF</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="SetProperty">
@@ -2057,6 +2416,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2072,10 +2432,13 @@
         <Parameter Name="propertyValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <summary>Sets the value of the specified property.</summary>
+        <param name="propertyName" />
+        <param name="propertyValue" />
+        <summary>
+            Sets (or adds) a property to the project at a sensible location.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="SetProperty">
@@ -2091,6 +2454,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2107,11 +2471,23 @@
         <Parameter Name="condition" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <summary>Sets the value of the specified property.</summary>
+        <param name="propertyName" />
+        <param name="propertyValue" />
+        <param name="condition" />
+        <summary>
+             This method is called from the IDE to set a particular property at
+             the project level.  The IDE doesn't care which property group it's
+             in, as long as it gets set.  This method will search the existing
+             property groups for a property with this name.  If found, it will
+             change the value in place.  Otherwise, it will either add a new
+             property to that property group, or possibly even add a new property
+             group to the project.
+            
+             This method also takes the "Condition" string for the property group
+             that the IDE wants this property placed under.
+             </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel, DavidLe</owner>
       </Docs>
     </Member>
     <Member MemberName="SetProperty">
@@ -2127,6 +2503,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2144,11 +2521,15 @@
         <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <param name="position">A <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> value indicating the location to insert the property.</param>
-        <summary>Sets the value of the specified property.</summary>
+        <param name="propertyName">Property name.</param>
+        <param name="propertyValue">Property value.</param>
+        <param name="condition">The condition for this property.</param>
+        <param name="position">Specifies the position within the project file for the property.</param>
+        <summary>
+            Set a property at a particular position inside the project file.
+            The property will be in a group that has the specified condition.
+            If necessary, a new property or property group will be created.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2157,6 +2538,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="SetProperty">
@@ -2172,6 +2554,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2184,14 +2567,17 @@
         <Parameter Name="treatPropertyValueAsLiteral" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The name of the property to change.</param>
-        <param name="propertyValue">The value to assign the property.</param>
-        <param name="condition">The condition to use on the property. Corresponds to the <see langword="Condition" /> attribute of the Property element.</param>
-        <param name="position">A <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> value indicating the location to insert the property.</param>
-        <param name="treatPropertyValueAsLiteral">
-          <see langword="true" /> to treat the <paramref name="propertyValue" /> parameter as a literal value; otherwise, <see langword="false" />.</param>
-        <summary>Sets the value of the specified property.</summary>
+        <param name="propertyName" />
+        <param name="propertyValue" />
+        <param name="condition" />
+        <param name="position" />
+        <param name="treatPropertyValueAsLiteral" />
+        <summary>
+            Sets a property, and optionally escapes it so that it will be treated as a literal
+            value despite any special characters that may be in it.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Targets">
@@ -2207,12 +2593,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.TargetCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the targets in the project.</summary>
+        <summary>
+            Read-only accessor for the target groups of this project.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> of the targets in the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2222,6 +2611,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="TimeOfLastDirty">
@@ -2237,6 +2627,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2248,9 +2639,13 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a <see cref="T:System.DateTime" /> object indicating the time the project was last changed in a way that required it to be saved to a file.</summary>
-        <value>A <see cref="T:System.DateTime" /> object indicating the time the project was last changed in a way that required it to be saved to a file.</value>
+        <summary>
+            Returns the timestamp of when the project was last touched in a way
+            that would require it to need to be saved.
+            </summary>
+        <value>The DateTime object indicating when project was dirtied.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="ToolsVersion">
@@ -2265,12 +2660,24 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the current version of the Toolset being used by the project.</summary>
+        <summary>
+             When gotten, returns the effective tools version being used by this project.
+             If the tools version is being overridden, the overriding value will be the effective tools version.
+             Otherwise, if there is a ToolsVersion attribute on the Project element, that is the effective tools version.
+             Otherwise, the default tools version of the parent engine is the effective tools version.
+            
+             When set, overrides the current tools version of this project with the provided value.
+            
+             NOTE: This is distinct to the ToolsVersion attribute, if any, on the Project element.
+             To get and set the ToolsVersion attribute on the Project element use the Project.DefaultToolsVersion
+             property.
+             </summary>
         <value>A string representing the version number of the Toolset.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2300,14 +2707,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.UsingTaskCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a collection of the UsingTask elements in the project.</summary>
+        <summary>
+            Read-only accessor for the UsingTask elements of this project.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> of the <c>UsingTask</c> elements in the project.</value>
         <remarks>To be added.</remarks>
+        <owner>LukaszG</owner>
       </Docs>
     </Member>
     <Member MemberName="Xml">
@@ -2323,12 +2734,16 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the XML representing the project.</summary>
+        <summary>
+            Read-only accessor for the string of Xml representing this project.
+            Used for verification in unit testing.
+            </summary>
         <value>The full XML representing the project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2341,6 +2756,7 @@
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
   </Members>

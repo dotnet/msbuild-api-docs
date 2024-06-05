@@ -13,6 +13,10 @@
     <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -37,6 +41,10 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Conversion.ProjectFileConverter" /> class.</summary>
@@ -58,6 +66,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -90,6 +102,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
@@ -125,6 +141,10 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
@@ -156,8 +176,12 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless overload instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless overload instead")&gt;]</AttributeName>
         </Attribute>
@@ -176,6 +200,7 @@
         <param name="projectLoadSettings">A <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> flag that determine whether the project ignores non-existent .target files when loading.</param>
         <summary>Converts the project specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" /> property and saves it in the file specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile" /> property.</summary>
         <remarks>To be added.</remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Convert">
@@ -193,6 +218,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -214,6 +243,7 @@
         <param name="msbuildBinPath">The fully qualified path to MSBuild.exe.</param>
         <summary>This is the entry point method, which performs the project file format conversion. This method will overwrite "newProjectFile" if it already exists, so the caller of this method should confirm with the user if that's what they really want to do.</summary>
         <remarks>To be added.</remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="ConvertInMemory">
@@ -244,6 +274,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
@@ -278,8 +312,12 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless ConvertInMemory() method instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless ConvertInMemory() method instead")&gt;]</AttributeName>
         </Attribute>
@@ -299,6 +337,7 @@
         <summary>Creates a new project in memory from the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" />.</summary>
         <returns>The converted <see cref="T:Microsoft.Build.BuildEngine.Project" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="ConvertInMemory">
@@ -317,8 +356,12 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Use parameterless ConvertInMemory() method instead")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use parameterless ConvertInMemory() method instead")&gt;]</AttributeName>
         </Attribute>
@@ -336,6 +379,7 @@
         <summary>This is the entry point method, which performs the project file format conversion. This method will simply create a new MSBuild Project object in memory, instead of trying to write it to disk.</summary>
         <returns>The converted <see cref="T:Microsoft.Build.BuildEngine.Project" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="FSharpSpecificConversions">
@@ -350,11 +394,15 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="actuallyMakeChanges" Type="System.Boolean" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="actuallyMakeChanges" Type="System.Boolean" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="actuallyMakeChanges">if true, make the changes, otherwise, don't actually make any changes, but return whether you would make the changes</param>
@@ -363,6 +411,27 @@
  This involves: changing the location of FSharp targets, and for 2008CTP, adding explicit mscorlib and FSharp.Core references.</summary>
         <returns>
           <see langword="true" /> if anything was (would be) changed; otherwise, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMinorUpgrade">
+      <MemberSignature Language="C#" Value="public bool IsMinorUpgrade { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMinorUpgrade" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Conversion.ProjectFileConverter.IsMinorUpgrade" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsMinorUpgrade As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsMinorUpgrade : bool with get, set" Usage="Microsoft.Build.Conversion.ProjectFileConverter.IsMinorUpgrade" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsMinorUpgrade { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,6 +450,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -417,6 +490,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -460,6 +537,10 @@
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
@@ -501,6 +582,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Conversion.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Conversion.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
