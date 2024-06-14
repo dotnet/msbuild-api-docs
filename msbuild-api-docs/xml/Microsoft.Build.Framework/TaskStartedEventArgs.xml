@@ -143,6 +143,76 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskStartedEventArgs (string message, string helpKeyword, string projectFile, string taskFile, string taskName, string taskAssemblyLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string taskFile, string taskName, string taskAssemblyLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, taskFile As String, taskName As String, taskAssemblyLocation As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.TaskStartedEventArgs : string * string * string * string * string * string -&gt; Microsoft.Build.Framework.TaskStartedEventArgs" Usage="new Microsoft.Build.Framework.TaskStartedEventArgs (message, helpKeyword, projectFile, taskFile, taskName, taskAssemblyLocation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskStartedEventArgs(System::String ^ message, System::String ^ helpKeyword, System::String ^ projectFile, System::String ^ taskFile, System::String ^ taskName, System::String ^ taskAssemblyLocation);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="projectFile" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskFile" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskName" Type="System.String" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskAssemblyLocation" Type="System.String" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project file</param>
+        <param name="taskFile">file in which the task is defined</param>
+        <param name="taskName">task name</param>
+        <param name="taskAssemblyLocation">The location of the assembly containing the implementation of the task.</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskStartedEventArgs (string message, string helpKeyword, string projectFile, string taskFile, string taskName, DateTime eventTimestamp, string taskAssemblyLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string taskFile, string taskName, valuetype System.DateTime eventTimestamp, string taskAssemblyLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, projectFile As String, taskFile As String, taskName As String, eventTimestamp As DateTime, taskAssemblyLocation As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.TaskStartedEventArgs : string * string * string * string * string * DateTime * string -&gt; Microsoft.Build.Framework.TaskStartedEventArgs" Usage="new Microsoft.Build.Framework.TaskStartedEventArgs (message, helpKeyword, projectFile, taskFile, taskName, eventTimestamp, taskAssemblyLocation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskStartedEventArgs(System::String ^ message, System::String ^ helpKeyword, System::String ^ projectFile, System::String ^ taskFile, System::String ^ taskName, DateTime eventTimestamp, System::String ^ taskAssemblyLocation);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="projectFile" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskFile" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskName" Type="System.String" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="taskAssemblyLocation" Type="System.String" Index="6" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="message">text message</param>
+        <param name="helpKeyword">help keyword </param>
+        <param name="projectFile">project file</param>
+        <param name="taskFile">file in which the task is defined</param>
+        <param name="taskName">task name</param>
+        <param name="eventTimestamp">Timestamp when event was created</param>
+        <param name="taskAssemblyLocation">The location of the assembly containing the implementation of the task.</param>
+        <summary>
+            This constructor allows event data to be initialized.
+            Sender is assumed to be "MSBuild".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ColumnNumber">
       <MemberSignature Language="C#" Value="public int ColumnNumber { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnNumber" />
@@ -160,7 +230,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Column number of the task invocation in the project file
+            Column number of the task invocation in the project file.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -183,7 +253,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Line number of the task invocation in the project file
+            Line number of the task invocation in the project file.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -242,6 +312,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TaskAssemblyLocation">
+      <MemberSignature Language="C#" Value="public string TaskAssemblyLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskAssemblyLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskAssemblyLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskAssemblyLocation As String" />
+      <MemberSignature Language="F#" Value="member this.TaskAssemblyLocation : string" Usage="Microsoft.Build.Framework.TaskStartedEventArgs.TaskAssemblyLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskAssemblyLocation { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location of the assembly containing the implementation of the task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TaskFile">
       <MemberSignature Language="C#" Value="public string TaskFile { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TaskFile" />
@@ -268,7 +361,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            MSBuild file where this task was defined.
+            MSBuild file in which this task was invoked.
             </summary>
         <value>The MSBuild file where the task was defined.</value>
         <remarks>To be added.</remarks>

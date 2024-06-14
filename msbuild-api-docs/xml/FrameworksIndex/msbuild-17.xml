@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msbuild-17">
   <Assemblies>
+    <Assembly Name="Microsoft.Build.Conversion.Core" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build" Version="15.1.0.0" />
+    <Assembly Name="Microsoft.Build.Engine" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Framework" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Tasks.Core" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Utilities.Core" Version="15.1.0.0" />
@@ -13,6 +15,417 @@
       <Member Id="P:Microsoft.Build.BackEnd.SdkResolution.SdkResolverException.Sdk" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.BuildEngine">
+    <Type Name="Microsoft.Build.BuildEngine.BuildItem" Id="T:Microsoft.Build.BuildEngine.BuildItem">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,Microsoft.Build.Framework.ITaskItem)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.Clone" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.CopyCustomMetadataTo(Microsoft.Build.BuildEngine.BuildItem)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.GetEvaluatedMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.GetMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.HasMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.RemoveMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.Exclude" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.FinalItemSpec" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.Include" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.MetadataCount" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.MetadataNames" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItem.Name" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildItemGroup" Id="T:Microsoft.Build.BuildEngine.BuildItemGroup">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clear" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clone(System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItemAt(System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroup.ToArray" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroup.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroup.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroup.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildItemGroupCollection" Id="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroupCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildItemGroupCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildProperty" Id="T:Microsoft.Build.BuildEngine.BuildProperty">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildProperty.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildProperty.Clone(System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildProperty.op_Explicit(Microsoft.Build.BuildEngine.BuildProperty)~System.String" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildProperty.ToString" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildProperty.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildProperty.FinalValue" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildProperty.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildProperty.Name" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildPropertyGroup" Id="T:Microsoft.Build.BuildEngine.BuildPropertyGroup">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.#ctor(Microsoft.Build.BuildEngine.Project)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty(System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.Clear" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.Clone(System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty(Microsoft.Build.BuildEngine.BuildProperty)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetImportedPropertyGroupCondition(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty(System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" Id="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildSettings" Id="T:Microsoft.Build.BuildEngine.BuildSettings">
+      <Member Id="F:Microsoft.Build.BuildEngine.BuildSettings.DoNotResetPreviouslyBuiltTargets" />
+      <Member Id="F:Microsoft.Build.BuildEngine.BuildSettings.None" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.BuildTask" Id="T:Microsoft.Build.BuildEngine.BuildTask">
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputItem(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputProperty(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.Execute" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterNames" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterValue(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildTask.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildTask.ContinueOnError" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildTask.HostObject" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildTask.Name" />
+      <Member Id="P:Microsoft.Build.BuildEngine.BuildTask.Type" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ColorResetter" Id="T:Microsoft.Build.BuildEngine.ColorResetter" />
+    <Type Name="Microsoft.Build.BuildEngine.ColorSetter" Id="T:Microsoft.Build.BuildEngine.ColorSetter" />
+    <Type Name="Microsoft.Build.BuildEngine.ConfigurableForwardingLogger" Id="T:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger">
+      <Member Id="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.ForwardToCentralLogger(Microsoft.Build.Framework.BuildEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Shutdown" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.BuildEventRedirector" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.NodeId" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Parameters" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Verbosity" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ConsoleLogger" Id="T:Microsoft.Build.BuildEngine.ConsoleLogger">
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity,Microsoft.Build.BuildEngine.WriteHandler,Microsoft.Build.BuildEngine.ColorSetter,Microsoft.Build.BuildEngine.ColorResetter)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.ApplyParameter(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildFinishedHandler(System.Object,Microsoft.Build.Framework.BuildFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildStartedHandler(System.Object,Microsoft.Build.Framework.BuildStartedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.CustomEventHandler(System.Object,Microsoft.Build.Framework.CustomBuildEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.ErrorHandler(System.Object,Microsoft.Build.Framework.BuildErrorEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.MessageHandler(System.Object,Microsoft.Build.Framework.BuildMessageEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectFinishedHandler(System.Object,Microsoft.Build.Framework.ProjectFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectStartedHandler(System.Object,Microsoft.Build.Framework.ProjectStartedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.Shutdown" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetFinishedHandler(System.Object,Microsoft.Build.Framework.TargetFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetStartedHandler(System.Object,Microsoft.Build.Framework.TargetStartedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskFinishedHandler(System.Object,Microsoft.Build.Framework.TaskFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskStartedHandler(System.Object,Microsoft.Build.Framework.TaskStartedEventArgs)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ConsoleLogger.WarningHandler(System.Object,Microsoft.Build.Framework.BuildWarningEventArgs)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConsoleLogger.Parameters" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConsoleLogger.ShowSummary" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConsoleLogger.SkipProjectStartedText" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConsoleLogger.Verbosity" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ConsoleLogger.WriteHandler" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.DistributedFileLogger" Id="T:Microsoft.Build.BuildEngine.DistributedFileLogger">
+      <Member Id="M:Microsoft.Build.BuildEngine.DistributedFileLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Shutdown" />
+      <Member Id="P:Microsoft.Build.BuildEngine.DistributedFileLogger.BuildEventRedirector" />
+      <Member Id="P:Microsoft.Build.BuildEngine.DistributedFileLogger.NodeId" />
+      <Member Id="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Parameters" />
+      <Member Id="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Verbosity" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Engine" Id="T:Microsoft.Build.BuildEngine.Engine">
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations,System.Int32,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[])" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[])" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFiles(System.String[],System.String[][],Microsoft.Build.BuildEngine.BuildPropertyGroup[],System.Collections.IDictionary[],Microsoft.Build.BuildEngine.BuildSettings,System.String[])" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.CreateNewProject" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.GetLoadedProject(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.RegisterDistributedLogger(Microsoft.Build.Framework.ILogger,Microsoft.Build.BuildEngine.LoggerDescription)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.RegisterLogger(Microsoft.Build.Framework.ILogger)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.Shutdown" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.UnloadAllProjects" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.UnloadProject(Microsoft.Build.BuildEngine.Project)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.BinPath" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.BuildEnabled" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.DefaultToolsVersion" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.GlobalEngine" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.IsBuilding" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.OnlyLogCriticalEvents" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.Toolsets" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Engine.Version" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.FileLogger" Id="T:Microsoft.Build.BuildEngine.FileLogger">
+      <Member Id="M:Microsoft.Build.BuildEngine.FileLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.FileLogger.Shutdown" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Import" Id="T:Microsoft.Build.BuildEngine.Import">
+      <Member Id="P:Microsoft.Build.BuildEngine.Import.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Import.EvaluatedProjectPath" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Import.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Import.ProjectPath" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ImportCollection" Id="T:Microsoft.Build.BuildEngine.ImportCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.ImportCollection.AddNewImport(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(Microsoft.Build.BuildEngine.Import[],System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ImportCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ImportCollection.RemoveImport(Microsoft.Build.BuildEngine.Import)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ImportCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ImportCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ImportCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.InternalLoggerException" Id="T:Microsoft.Build.BuildEngine.InternalLoggerException">
+      <Member Id="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InternalLoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InternalLoggerException.BuildEventArgs" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InternalLoggerException.ErrorCode" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InternalLoggerException.HelpKeyword" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InternalLoggerException.InitializationException" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.InvalidProjectFileException" Id="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.Xml.XmlNode,System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.BaseMessage" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ColumnNumber" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndColumnNumber" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndLineNumber" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorCode" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorSubcategory" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.HelpKeyword" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.LineNumber" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.Message" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ProjectFile" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" Id="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException">
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.ErrorCode" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.LocalNode" Id="T:Microsoft.Build.BuildEngine.LocalNode">
+      <Member Id="M:Microsoft.Build.BuildEngine.LocalNode.StartLocalNodeServer(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.LoggerDescription" Id="T:Microsoft.Build.BuildEngine.LoggerDescription">
+      <Member Id="M:Microsoft.Build.BuildEngine.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.LoggerDescription.LoggerSwitchParameters" />
+      <Member Id="P:Microsoft.Build.BuildEngine.LoggerDescription.Verbosity" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Project" Id="T:Microsoft.Build.BuildEngine.Project">
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.#ctor" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewImport(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewItemGroup" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewPropertyGroup(System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyFile(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyName(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Build" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Build(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Build(System.String[])" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.GetConditionedPropertyValues(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByName(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByNameIgnoringCondition(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedProperty(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.GetProjectExtensions(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Load(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Load(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.MarkProjectAsDirty" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveAllItemGroups" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveAllPropertyGroups" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveImportedPropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroup(Microsoft.Build.BuildEngine.BuildItemGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroupsWithMatchingCondition(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemoveItemsByName(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.ResetBuildStatus" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Save(System.IO.TextWriter)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Save(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.Save(System.String,System.Text.Encoding)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetProjectExtensions(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.BuildEnabled" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.DefaultTargets" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.Encoding" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.EvaluatedItems" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.EvaluatedItemsIgnoringCondition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.EvaluatedProperties" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.FullFileName" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.GlobalProperties" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.HasToolsVersionAttribute" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.Imports" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.InitialTargets" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.IsDirty" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.IsValidated" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.ItemGroups" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.ParentEngine" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.PropertyGroups" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.SchemaFile" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.Targets" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.TimeOfLastDirty" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.UsingTasks" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Project.Xml" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ProjectLoadSettings" Id="T:Microsoft.Build.BuildEngine.ProjectLoadSettings">
+      <Member Id="F:Microsoft.Build.BuildEngine.ProjectLoadSettings.IgnoreMissingImports" />
+      <Member Id="F:Microsoft.Build.BuildEngine.ProjectLoadSettings.None" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.PropertyPosition" Id="T:Microsoft.Build.BuildEngine.PropertyPosition">
+      <Member Id="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastImport" />
+      <Member Id="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastPropertyGroup" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.RemoteErrorException" Id="T:Microsoft.Build.BuildEngine.RemoteErrorException">
+      <Member Id="M:Microsoft.Build.BuildEngine.RemoteErrorException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.SolutionWrapperProject" Id="T:Microsoft.Build.BuildEngine.SolutionWrapperProject">
+      <Member Id="M:Microsoft.Build.BuildEngine.SolutionWrapperProject.Generate(System.String,System.String,Microsoft.Build.Framework.BuildEventContext)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Target" Id="T:Microsoft.Build.BuildEngine.Target">
+      <Member Id="M:Microsoft.Build.BuildEngine.Target.AddNewTask(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Target.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Target.RemoveTask(Microsoft.Build.BuildEngine.BuildTask)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.DependsOnTargets" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.Inputs" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.Name" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Target.Outputs" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.TargetCollection" Id="T:Microsoft.Build.BuildEngine.TargetCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.TargetCollection.AddNewTarget(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.TargetCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.TargetCollection.Exists(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.TargetCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.TargetCollection.RemoveTarget(Microsoft.Build.BuildEngine.Target)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.TargetCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.TargetCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Build.BuildEngine.TargetCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.TargetCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Toolset" Id="T:Microsoft.Build.BuildEngine.Toolset">
+      <Member Id="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String,Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.Toolset.Clone" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Toolset.BuildProperties" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Toolset.ToolsPath" />
+      <Member Id="P:Microsoft.Build.BuildEngine.Toolset.ToolsVersion" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ToolsetCollection" Id="T:Microsoft.Build.BuildEngine.ToolsetCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.Add(Microsoft.Build.BuildEngine.Toolset)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.Clear" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.Contains(Microsoft.Build.BuildEngine.Toolset)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.Contains(System.String)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.CopyTo(Microsoft.Build.BuildEngine.Toolset[],System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.Remove(Microsoft.Build.BuildEngine.Toolset)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.ToolsetCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ToolsetCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ToolsetCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.Build.BuildEngine.ToolsetCollection.ToolsVersions" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Id="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations">
+      <Member Id="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.ConfigurationFile" />
+      <Member Id="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.None" />
+      <Member Id="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.Registry" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.UsingTask" Id="T:Microsoft.Build.BuildEngine.UsingTask">
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTask.AssemblyFile" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTask.AssemblyName" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTask.Condition" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTask.IsImported" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTask.TaskName" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.UsingTaskCollection" Id="T:Microsoft.Build.BuildEngine.UsingTaskCollection">
+      <Member Id="M:Microsoft.Build.BuildEngine.UsingTaskCollection.CopyTo(Microsoft.Build.BuildEngine.UsingTask[],System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.UsingTaskCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Build.BuildEngine.UsingTaskCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTaskCollection.Count" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTaskCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Build.BuildEngine.UsingTaskCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.Utilities" Id="T:Microsoft.Build.BuildEngine.Utilities">
+      <Member Id="M:Microsoft.Build.BuildEngine.Utilities.Escape(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Build.BuildEngine.WriteHandler" Id="T:Microsoft.Build.BuildEngine.WriteHandler" />
+  </Namespace>
   <Namespace Name="Microsoft.Build.Construction">
     <Type Name="Microsoft.Build.Construction.ElementLocation" Id="T:Microsoft.Build.Construction.ElementLocation">
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.#ctor" />
@@ -20,6 +433,7 @@
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.GetHashCode" />
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.ToString" />
       <Member Id="P:Microsoft.Build.Construction.ElementLocation.Column" />
+      <Member Id="P:Microsoft.Build.Construction.ElementLocation.EmptyLocation" />
       <Member Id="P:Microsoft.Build.Construction.ElementLocation.File" />
       <Member Id="P:Microsoft.Build.Construction.ElementLocation.Line" />
       <Member Id="P:Microsoft.Build.Construction.ElementLocation.LocationString" />
@@ -438,6 +852,25 @@
       <Member Id="P:Microsoft.Build.Construction.UsingTaskParameterGroupElement.Parameters" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.Conversion">
+    <Type Name="Microsoft.Build.Conversion.ProjectFileConverter" Id="T:Microsoft.Build.Conversion.ProjectFileConverter">
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.#ctor" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.Convert" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.Convert(Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.Convert(System.String)" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory(Microsoft.Build.BuildEngine.Engine)" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory(Microsoft.Build.BuildEngine.Engine,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <Member Id="M:Microsoft.Build.Conversion.ProjectFileConverter.FSharpSpecificConversions(System.Boolean)" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.ConversionSkippedBecauseProjectAlreadyConverted" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.ConversionWarnings" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.IsMinorUpgrade" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.IsUserFile" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" />
+      <Member Id="P:Microsoft.Build.Conversion.ProjectFileConverter.SolutionFile" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Build.Definition">
     <Type Name="Microsoft.Build.Definition.ProjectOptions" Id="T:Microsoft.Build.Definition.ProjectOptions">
       <Member Id="M:Microsoft.Build.Definition.ProjectOptions.#ctor" />
@@ -459,6 +892,7 @@
     <Type Name="Microsoft.Build.Evaluation.Context.EvaluationContext/SharingPolicy" Id="T:Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy">
       <Member Id="F:Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy.Isolated" />
       <Member Id="F:Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy.Shared" />
+      <Member Id="F:Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy.SharedSDKCache" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Evaluation">
@@ -900,6 +1334,7 @@
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.HostServices" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.InputResultsCacheFiles" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.Interactive" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.IsBuildCheckEnabled" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.IsolateProjects" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.LegacyThreadingSemantics" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.Loggers" />
@@ -962,6 +1397,7 @@
       <Member Id="M:Microsoft.Build.Execution.BuildResult.AddResultsForTarget(System.String,Microsoft.Build.Execution.TargetResult)" />
       <Member Id="M:Microsoft.Build.Execution.BuildResult.HasResultsForTarget(System.String)" />
       <Member Id="M:Microsoft.Build.Execution.BuildResult.MergeResults(Microsoft.Build.Execution.BuildResult)" />
+      <Member Id="P:Microsoft.Build.Execution.BuildResult.BuildRequestDataFlags" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.CircularDependency" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.ConfigurationId" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.Exception" />
@@ -1047,6 +1483,7 @@
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.ExpandString(System.String)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.FilteredCopy(Microsoft.Build.Execution.RequestedProjectState)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.FromFile(System.String,Microsoft.Build.Definition.ProjectOptions)" />
+      <Member Id="M:Microsoft.Build.Execution.ProjectInstance.FromImmutableProjectSource(Microsoft.Build.Evaluation.Project,Microsoft.Build.Execution.ProjectInstanceSettings)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.FromProjectRootElement(Microsoft.Build.Construction.ProjectRootElement,Microsoft.Build.Definition.ProjectOptions)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Execution.ProjectItemDefinitionInstance)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Execution.ProjectItemInstance)" />
@@ -1279,6 +1716,119 @@
       <Member Id="F:Microsoft.Build.Execution.TargetResultCode.Failure" />
       <Member Id="F:Microsoft.Build.Execution.TargetResultCode.Skipped" />
       <Member Id="F:Microsoft.Build.Execution.TargetResultCode.Success" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Build.Experimental.BuildCheck">
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.AnalysisData" Id="T:Microsoft.Build.Experimental.BuildCheck.AnalysisData">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.AnalysisData.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.AnalysisData.ProjectFileDirectory" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.AnalysisData.ProjectFilePath" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.#ctor" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.Dispose" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.Initialize(Microsoft.Build.Experimental.BuildCheck.ConfigurationContext)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.RegisterActions(Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.FriendlyName" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer.SupportedRules" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.#ctor" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.Default" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.EvaluationAnalysisScope" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.IsEnabled" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.Null" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration.Severity" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerResultSeverity" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerResultSeverity">
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerResultSeverity.Error" />
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerResultSeverity.Info" />
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerResultSeverity.Warning" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.DefaultConfiguration" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Description" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Id" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.MessageFormat" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule.Title" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1.ReportResult(Microsoft.Build.Experimental.BuildCheck.BuildCheckResult)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1.Data" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.#ctor(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.FormatMessage" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.BuildAnalyzerRule" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.LocationString" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageArgs" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageFormat" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.ConfigurationContext" Id="T:Microsoft.Build.Experimental.BuildCheck.ConfigurationContext">
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ConfigurationContext.CustomConfigurationData" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" Id="T:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.GetHashCode" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.NotNull(Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.ConfigurationData" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.Null" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.RuleId" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData" Id="T:Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData">
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData.EvaluatedProperties" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope" Id="T:Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope">
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope.ProjectOnly" />
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope.ProjectWithAllImports" />
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope.ProjectWithImportsFromCurrentWorkTree" />
+      <Member Id="F:Microsoft.Build.Experimental.BuildCheck.EvaluationAnalysisScope.ProjectWithImportsWithoutSdks" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext" Id="T:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEvaluatedPropertiesAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData}})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterParsedItemsAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData}})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterTaskInvocationAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData}})" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.ItemsHolder" Id="T:Microsoft.Build.Experimental.BuildCheck.ItemsHolder">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectItemElement},System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectItemGroupElement})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.GetItemsOfType(System.String)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.ItemGroups" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.Items" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.ItemTypeExtensions" Id="T:Microsoft.Build.Experimental.BuildCheck.ItemTypeExtensions">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.ItemTypeExtensions.GetItemsOfType(System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectItemElement},System.String)" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData" Id="T:Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData">
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData.ItemsHolder" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData" Id="T:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData">
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.Parameters" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskAssemblyLocation" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskInvocationLocation" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskName" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter" Id="T:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.#ctor(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.#ctor(System.Object,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.&lt;Clone&gt;$" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Deconstruct(System.Object@,System.Boolean@)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EnumerateStringValues" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EnumerateValues" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.GetHashCode" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.op_Equality(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.op_Inequality(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.ToString" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EqualityContract" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.IsOutput" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Value" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Experimental.FileAccess">
@@ -1715,6 +2265,22 @@
       <Member Id="M:Microsoft.Build.Framework.EnvironmentVariableReadEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="P:Microsoft.Build.Framework.EnvironmentVariableReadEventArgs.EnvironmentVariableName" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.EventSourceExtensions" Id="T:Microsoft.Build.Framework.EventSourceExtensions">
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleAnyEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.AnyEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleBuildFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildFinishedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleBuildStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildStartedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleCustomEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.CustomBuildEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleErrorRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildErrorEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleMessageRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildMessageEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleProjectFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.ProjectFinishedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleProjectStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.ProjectStartedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleStatusEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildStatusEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTargetFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TargetFinishedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTargetStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TargetStartedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTaskFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TaskFinishedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTaskStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TaskStartedEventHandler)" />
+      <Member Id="M:Microsoft.Build.Framework.EventSourceExtensions.HandleWarningRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildWarningEventHandler)" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.ExtendedBuildErrorEventArgs" Id="T:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs">
       <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.ExtendedBuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
@@ -1778,6 +2344,15 @@
       <Member Id="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)" />
       <Member Id="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.ProjectFile" />
       <Member Id="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.TargetNames" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.Features" Id="T:Microsoft.Build.Framework.Features">
+      <Member Id="M:Microsoft.Build.Framework.Features.CheckFeatureAvailability(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.FeatureStatus" Id="T:Microsoft.Build.Framework.FeatureStatus">
+      <Member Id="F:Microsoft.Build.Framework.FeatureStatus.Available" />
+      <Member Id="F:Microsoft.Build.Framework.FeatureStatus.NotAvailable" />
+      <Member Id="F:Microsoft.Build.Framework.FeatureStatus.Preview" />
+      <Member Id="F:Microsoft.Build.Framework.FeatureStatus.Undefined" />
     </Type>
     <Type Name="Microsoft.Build.Framework.IBuildEngine" Id="T:Microsoft.Build.Framework.IBuildEngine">
       <Member Id="M:Microsoft.Build.Framework.IBuildEngine.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary)" />
@@ -2176,11 +2751,14 @@
     <Type Name="Microsoft.Build.Framework.TaskFinishedEventHandler" Id="T:Microsoft.Build.Framework.TaskFinishedEventHandler" />
     <Type Name="Microsoft.Build.Framework.TaskParameterEventArgs" Id="T:Microsoft.Build.Framework.TaskParameterEventArgs">
       <Member Id="M:Microsoft.Build.Framework.TaskParameterEventArgs.#ctor(Microsoft.Build.Framework.TaskParameterMessageKind,System.String,System.Collections.IList,System.Boolean,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskParameterEventArgs.#ctor(Microsoft.Build.Framework.TaskParameterMessageKind,System.String,System.String,System.String,System.Collections.IList,System.Boolean,System.DateTime)" />
       <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.Items" />
       <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.ItemType" />
       <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.Kind" />
       <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.LogItemMetadata" />
       <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.Message" />
+      <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.ParameterName" />
+      <Member Id="P:Microsoft.Build.Framework.TaskParameterEventArgs.PropertyName" />
     </Type>
     <Type Name="Microsoft.Build.Framework.TaskParameterMessageKind" Id="T:Microsoft.Build.Framework.TaskParameterMessageKind">
       <Member Id="F:Microsoft.Build.Framework.TaskParameterMessageKind.AddItem" />
@@ -2203,10 +2781,13 @@
       <Member Id="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.ColumnNumber" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.LineNumber" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.Message" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.ProjectFile" />
+      <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskAssemblyLocation" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskFile" />
       <Member Id="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskName" />
     </Type>
@@ -2644,6 +3225,29 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Logging">
+    <Type Name="Microsoft.Build.Logging.ArchiveData" Id="T:Microsoft.Build.Logging.ArchiveData">
+      <Member Id="M:Microsoft.Build.Logging.ArchiveData.Dispose" />
+      <Member Id="M:Microsoft.Build.Logging.ArchiveData.ToArchiveFile" />
+      <Member Id="P:Microsoft.Build.Logging.ArchiveData.FullPath" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.ArchiveFile" Id="T:Microsoft.Build.Logging.ArchiveFile">
+      <Member Id="M:Microsoft.Build.Logging.ArchiveFile.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.ArchiveFile.ToArchiveFile" />
+      <Member Id="P:Microsoft.Build.Logging.ArchiveFile.Content" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.ArchiveFileEventArgs" Id="T:Microsoft.Build.Logging.ArchiveFileEventArgs">
+      <Member Id="M:Microsoft.Build.Logging.ArchiveFileEventArgs.#ctor(Microsoft.Build.Logging.ArchiveData)" />
+      <Member Id="P:Microsoft.Build.Logging.ArchiveFileEventArgs.ArchiveData" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.ArchiveFileEventArgsExtensions" Id="T:Microsoft.Build.Logging.ArchiveFileEventArgsExtensions">
+      <Member Id="M:Microsoft.Build.Logging.ArchiveFileEventArgsExtensions.ToArchiveFileHandler(System.Action{Microsoft.Build.Logging.StringReadEventArgs})" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.ArchiveStream" Id="T:Microsoft.Build.Logging.ArchiveStream">
+      <Member Id="M:Microsoft.Build.Logging.ArchiveStream.#ctor(System.String,System.IO.StreamReader)" />
+      <Member Id="M:Microsoft.Build.Logging.ArchiveStream.Dispose" />
+      <Member Id="M:Microsoft.Build.Logging.ArchiveStream.ToArchiveFile" />
+      <Member Id="P:Microsoft.Build.Logging.ArchiveStream.ContentReader" />
+    </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogger" Id="T:Microsoft.Build.Logging.BinaryLogger">
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.#ctor" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
@@ -2657,20 +3261,70 @@
       <Member Id="F:Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode.None" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode.ZipFile" />
     </Type>
+    <Type Name="Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs" Id="T:Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs">
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs.GetFormattedMessage" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs.ErrorType" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs.RecordKind" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.BinaryLogRecordKind" Id="T:Microsoft.Build.Logging.BinaryLogRecordKind">
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyLoad" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildFinished" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildStarted" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.CriticalBuildMessage" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EndOfFile" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EnvironmentVariableRead" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Error" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Message" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.NameValueList" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationFinished" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationStarted" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectFinished" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectImportArchive" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectImported" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectStarted" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.PropertyInitialValueSet" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.PropertyReassignment" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ResponseFileUsed" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.String" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TargetFinished" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TargetSkipped" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TargetStarted" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TaskCommandLine" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TaskFinished" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TaskParameter" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.TaskStarted" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.UninitializedPropertyRead" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Warning" />
+    </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogReplayEventSource" Id="T:Microsoft.Build.Logging.BinaryLogReplayEventSource">
-      <Member Id="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.NotificationsSourceCreated" />
+      <Member Id="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.Microsoft#Build#Logging#IBuildEventArgsReaderNotifications#ArchiveFileEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.Microsoft#Build#Logging#IBuildEventArgsReaderNotifications#StringReadDone" />
+      <Member Id="E:Microsoft.Build.Logging.BinaryLogReplayEventSource.RecoverableReadError" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.#ctor" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader(System.IO.BinaryReader,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenBuildEventsReader(System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenReader(System.IO.Stream)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.OpenReader(System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(Microsoft.Build.Logging.BuildEventArgsReader,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.BinaryReader,System.Boolean,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.BinaryReader,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.IO.Stream,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BuildEventArgsReader" Id="T:Microsoft.Build.Logging.BuildEventArgsReader">
-      <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.StringEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.ArchiveFileEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.RecoverableReadError" />
       <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.StringReadDone" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.#ctor(System.IO.BinaryReader,System.Int32)" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.Dispose" />
       <Member Id="M:Microsoft.Build.Logging.BuildEventArgsReader.Read" />
+      <Member Id="P:Microsoft.Build.Logging.BuildEventArgsReader.CloseInput" />
+      <Member Id="P:Microsoft.Build.Logging.BuildEventArgsReader.SkipUnknownEventParts" />
+      <Member Id="P:Microsoft.Build.Logging.BuildEventArgsReader.SkipUnknownEvents" />
     </Type>
     <Type Name="Microsoft.Build.Logging.ColorResetter" Id="T:Microsoft.Build.Logging.ColorResetter" />
     <Type Name="Microsoft.Build.Logging.ColorSetter" Id="T:Microsoft.Build.Logging.ColorSetter" />
@@ -2750,10 +3404,10 @@
       <Member Id="P:Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger" />
       <Member Id="P:Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription" />
     </Type>
-    <Type Name="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" Id="T:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" />
-    <Type Name="Microsoft.Build.Logging.IBuildEventStringsReader" Id="T:Microsoft.Build.Logging.IBuildEventStringsReader">
-      <Member Id="E:Microsoft.Build.Logging.IBuildEventStringsReader.StringEncountered" />
-      <Member Id="E:Microsoft.Build.Logging.IBuildEventStringsReader.StringReadDone" />
+    <Type Name="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" Id="T:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications">
+      <Member Id="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered" />
+      <Member Id="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.RecoverableReadError" />
+      <Member Id="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone" />
     </Type>
     <Type Name="Microsoft.Build.Logging.LoggerDescription" Id="T:Microsoft.Build.Logging.LoggerDescription">
       <Member Id="M:Microsoft.Build.Logging.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
@@ -2761,6 +3415,7 @@
       <Member Id="M:Microsoft.Build.Logging.LoggerDescription.CreateLogger" />
       <Member Id="P:Microsoft.Build.Logging.LoggerDescription.IsOptional" />
       <Member Id="P:Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters" />
+      <Member Id="P:Microsoft.Build.Logging.LoggerDescription.Name" />
       <Member Id="P:Microsoft.Build.Logging.LoggerDescription.Verbosity" />
     </Type>
     <Type Name="Microsoft.Build.Logging.ProfilerLogger" Id="T:Microsoft.Build.Logging.ProfilerLogger">
@@ -2770,6 +3425,11 @@
       <Member Id="P:Microsoft.Build.Logging.ProfilerLogger.FileToLog" />
       <Member Id="P:Microsoft.Build.Logging.ProfilerLogger.Parameters" />
       <Member Id="P:Microsoft.Build.Logging.ProfilerLogger.Verbosity" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.ReaderErrorType" Id="T:Microsoft.Build.Logging.ReaderErrorType">
+      <Member Id="F:Microsoft.Build.Logging.ReaderErrorType.UnknownEventData" />
+      <Member Id="F:Microsoft.Build.Logging.ReaderErrorType.UnknownEventType" />
+      <Member Id="F:Microsoft.Build.Logging.ReaderErrorType.UnknownFormatOfEventData" />
     </Type>
     <Type Name="Microsoft.Build.Logging.StringReadEventArgs" Id="T:Microsoft.Build.Logging.StringReadEventArgs">
       <Member Id="M:Microsoft.Build.Logging.StringReadEventArgs.#ctor(System.String)" />
@@ -3109,6 +3769,14 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Tasks">
+    <Type Name="Microsoft.Build.Tasks.AddToWin32Manifest" Id="T:Microsoft.Build.Tasks.AddToWin32Manifest">
+      <Member Id="M:Microsoft.Build.Tasks.AddToWin32Manifest.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.AddToWin32Manifest.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.ApplicationManifest" />
+      <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.ManifestPath" />
+      <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.OutputDirectory" />
+      <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.SupportedArchitectures" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.AL" Id="T:Microsoft.Build.Tasks.AL">
       <Member Id="M:Microsoft.Build.Tasks.AL.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.AL.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
@@ -3181,6 +3849,7 @@
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.AssignedFilesWithNoCulture" />
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.CultureNeutralAssignedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.Files" />
+      <Member Id="P:Microsoft.Build.Tasks.AssignCulture.RespectAlreadyAssignedItemCulture" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.AssignLinkMetadata" Id="T:Microsoft.Build.Tasks.AssignLinkMetadata">
       <Member Id="M:Microsoft.Build.Tasks.AssignLinkMetadata.#ctor" />
@@ -3276,6 +3945,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.SkipUnchangedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.SourceFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.Copy.SourceFolders" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.UseSymboliclinksIfPossible" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.WroteAtLeastOneFile" />
@@ -3629,6 +4299,7 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetFileHash" Id="T:Microsoft.Build.Tasks.GetFileHash">
       <Member Id="M:Microsoft.Build.Tasks.GetFileHash.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.GetFileHash.Cancel" />
       <Member Id="M:Microsoft.Build.Tasks.GetFileHash.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GetFileHash.Algorithm" />
       <Member Id="P:Microsoft.Build.Tasks.GetFileHash.Files" />
@@ -3807,6 +4478,14 @@
       <Member Id="P:Microsoft.Build.Tasks.MSBuild.ToolsVersion" />
       <Member Id="P:Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion" />
       <Member Id="P:Microsoft.Build.Tasks.MSBuild.UseResultsCache" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.MSBuildInternalMessage" Id="T:Microsoft.Build.Tasks.MSBuildInternalMessage">
+      <Member Id="M:Microsoft.Build.Tasks.MSBuildInternalMessage.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.MSBuildInternalMessage.Execute" />
+      <Member Id="P:Microsoft.Build.Tasks.MSBuildInternalMessage.FormatArguments" />
+      <Member Id="P:Microsoft.Build.Tasks.MSBuildInternalMessage.MessageImportance" />
+      <Member Id="P:Microsoft.Build.Tasks.MSBuildInternalMessage.ResourceName" />
+      <Member Id="P:Microsoft.Build.Tasks.MSBuildInternalMessage.Severity" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ReadLinesFromFile" Id="T:Microsoft.Build.Tasks.ReadLinesFromFile">
       <Member Id="M:Microsoft.Build.Tasks.ReadLinesFromFile.#ctor" />
@@ -4140,6 +4819,7 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.VerifyFileHash" Id="T:Microsoft.Build.Tasks.VerifyFileHash">
       <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.Cancel" />
       <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.Algorithm" />
       <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.File" />
@@ -5158,6 +5838,9 @@
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute" />
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute" />
     </Type>
+    <Type Name="Microsoft.Build.Utilities.LockCheck" Id="T:Microsoft.Build.Utilities.LockCheck">
+      <Member Id="M:Microsoft.Build.Utilities.LockCheck.GetLockedFileMessage(System.String)" />
+    </Type>
     <Type Name="Microsoft.Build.Utilities.Logger" Id="T:Microsoft.Build.Utilities.Logger">
       <Member Id="M:Microsoft.Build.Utilities.Logger.#ctor" />
       <Member Id="M:Microsoft.Build.Utilities.Logger.FormatErrorEvent(Microsoft.Build.Framework.BuildErrorEventArgs)" />
@@ -5356,6 +6039,7 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectFinished(System.String,System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectStarted(System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogIncludeGeneratedFile(System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])" />
@@ -5496,8 +6180,12 @@
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.LogPathToTool(System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.LogToolCommand(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ProcessStarted" />
+      <Member Id="M:Microsoft.Build.Utilities.ToolTask.ReceiveExitNotification(System.Object,System.EventArgs)" />
+      <Member Id="M:Microsoft.Build.Utilities.ToolTask.ReceiveStandardErrorData(System.Object,System.Diagnostics.DataReceivedEventArgs)" />
+      <Member Id="M:Microsoft.Build.Utilities.ToolTask.ReceiveStandardOutputData(System.Object,System.Diagnostics.DataReceivedEventArgs)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ResponseFileEscape(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution" />
+      <Member Id="M:Microsoft.Build.Utilities.ToolTask.StartToolProcess(System.Diagnostics.Process)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.canBeIncremental" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EchoOff" />

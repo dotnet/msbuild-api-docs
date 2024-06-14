@@ -1,0 +1,237 @@
+<Type Name="CustomConfigurationData" FullName="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData">
+  <TypeSignature Language="C#" Value="public sealed class CustomConfigurationData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CustomConfigurationData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CustomConfigurationData" />
+  <TypeSignature Language="F#" Value="type CustomConfigurationData = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CustomConfigurationData sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Holder for the key-value pairs of unstructured data from .editorconfig file,
+             that were attribute to a particular rule, but were not recognized by the infrastructure.
+            The configuration data that is recognized by the infrastructure is passed as <see cref="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerConfiguration" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomConfigurationData (string ruleId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ruleId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ruleId As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData : string -&gt; Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" Usage="new Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData ruleId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CustomConfigurationData(System::String ^ ruleId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ruleId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ruleId">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomConfigurationData (string ruleId, System.Collections.Generic.Dictionary&lt;string,string&gt; properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ruleId, class System.Collections.Generic.Dictionary`2&lt;string, string&gt; properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ruleId As String, properties As Dictionary(Of String, String))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData : string * System.Collections.Generic.Dictionary&lt;string, string&gt; -&gt; Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" Usage="new Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData (ruleId, properties)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CustomConfigurationData(System::String ^ ruleId, System::Collections::Generic::Dictionary&lt;System::String ^, System::String ^&gt; ^ properties);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ruleId" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="ruleId">To be added.</param>
+        <param name="properties">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? ConfigurationData { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; ConfigurationData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.ConfigurationData" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfigurationData As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationData : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.ConfigurationData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ ConfigurationData { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Key-value pairs of unstructured data from .editorconfig file.
+             E.g. if in editorconfig file we'd have:
+             [*.csrpoj]
+             build_analyzer.microsoft.BC0101.name_of_targets_to_restrict = "Build,CoreCompile,ResolveAssemblyReferences"
+            
+             the ConfigurationData would be:
+             "name_of_targets_to_restrict" -&gt; "Build,CoreCompile,ResolveAssemblyReferences"
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="customConfigurationData.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="customConfigurationData.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotNull">
+      <MemberSignature Language="C#" Value="public static bool NotNull (Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool NotNull(class Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.NotNull(Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NotNull (data As CustomConfigurationData) As Boolean" />
+      <MemberSignature Language="F#" Value="static member NotNull : Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData -&gt; bool" Usage="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.NotNull data" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool NotNull(Microsoft::Build::Experimental::BuildCheck::CustomConfigurationData ^ data);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData Null { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData Null" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.Null" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Null As CustomConfigurationData" />
+      <MemberSignature Language="F#" Value="static member Null : Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData" Usage="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.Null" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Build::Experimental::BuildCheck::CustomConfigurationData ^ Null { Microsoft::Build::Experimental::BuildCheck::CustomConfigurationData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleId">
+      <MemberSignature Language="C#" Value="public string RuleId { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuleId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.RuleId" />
+      <MemberSignature Language="VB.NET" Value="Public Property RuleId As String" />
+      <MemberSignature Language="F#" Value="member this.RuleId : string with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData.RuleId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RuleId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifier of the rule that the configuration data is for.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

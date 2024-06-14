@@ -1,0 +1,53 @@
+<Type Name="LockCheck" FullName="Microsoft.Build.Utilities.LockCheck">
+  <TypeSignature Language="C#" Value="public static class LockCheck" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit LockCheck extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.LockCheck" />
+  <TypeSignature Language="VB.NET" Value="Public Class LockCheck" />
+  <TypeSignature Language="F#" Value="type LockCheck = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LockCheck abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements checking what processes are locking a file on Windows.
+            It uses the Restart Manager API to do this. Other platforms are skipped.
+            Use the method <see cref="M:Microsoft.Build.Utilities.LockCheck.GetLockedFileMessage(System.String)" /> to get a message to inform the user which processes have a lock on a given file.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetLockedFileMessage">
+      <MemberSignature Language="C#" Value="public static string GetLockedFileMessage (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetLockedFileMessage(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.LockCheck.GetLockedFileMessage(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetLockedFileMessage (filePath As String) As String" />
+      <MemberSignature Language="F#" Value="static member GetLockedFileMessage : string -&gt; string" Usage="Microsoft.Build.Utilities.LockCheck.GetLockedFileMessage filePath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetLockedFileMessage(System::String ^ filePath);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">The path of the file to check.</param>
+        <summary>
+            Try to get a message to inform the user which processes have a lock on a given file. On Windows it uses the Restart Manager API.
+            </summary>
+        <returns>A message to inform the user which processes have a lock on the file if known, <see cref="F:System.String.Empty" /> otherwise. Always returns <see cref="F:System.String.Empty" /> on operating systems other than Windows.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

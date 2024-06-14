@@ -53,6 +53,41 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskParameterEventArgs (Microsoft.Build.Framework.TaskParameterMessageKind kind, string parameterName, string propertyName, string itemType, System.Collections.IList items, bool logItemMetadata, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Framework.TaskParameterMessageKind kind, string parameterName, string propertyName, string itemType, class System.Collections.IList items, bool logItemMetadata, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskParameterEventArgs.#ctor(Microsoft.Build.Framework.TaskParameterMessageKind,System.String,System.String,System.String,System.Collections.IList,System.Boolean,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (kind As TaskParameterMessageKind, parameterName As String, propertyName As String, itemType As String, items As IList, logItemMetadata As Boolean, eventTimestamp As DateTime)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.TaskParameterEventArgs : Microsoft.Build.Framework.TaskParameterMessageKind * string * string * string * System.Collections.IList * bool * DateTime -&gt; Microsoft.Build.Framework.TaskParameterEventArgs" Usage="new Microsoft.Build.Framework.TaskParameterEventArgs (kind, parameterName, propertyName, itemType, items, logItemMetadata, eventTimestamp)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskParameterEventArgs(Microsoft::Build::Framework::TaskParameterMessageKind kind, System::String ^ parameterName, System::String ^ propertyName, System::String ^ itemType, System::Collections::IList ^ items, bool logItemMetadata, DateTime eventTimestamp);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.Build.Framework.TaskParameterMessageKind" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="parameterName" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="propertyName" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="itemType" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="items" Type="System.Collections.IList" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="logItemMetadata" Type="System.Boolean" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="6" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <param name="parameterName">To be added.</param>
+        <param name="propertyName">To be added.</param>
+        <param name="itemType">To be added.</param>
+        <param name="items">To be added.</param>
+        <param name="logItemMetadata">To be added.</param>
+        <param name="eventTimestamp">To be added.</param>
+        <summary>
+            Creates an instance of this class for the given task parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Items">
       <MemberSignature Language="C#" Value="public System.Collections.IList Items { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Items" />
@@ -69,7 +104,9 @@
         <ReturnType>System.Collections.IList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The values being manipulated (added, removed, passed to/from task).
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -90,7 +127,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of the item being manipulated, e.g. "Compile" if this is an item operation. If this object represents a task input, this property should be set
+            to the same value as <see cref="P:Microsoft.Build.Framework.TaskParameterEventArgs.ParameterName" /> for backward compatibility. Similarly, if this object represents a task output assigned to a property,
+            this should be set to the same value as <see cref="P:Microsoft.Build.Framework.TaskParameterEventArgs.PropertyName" /> for backward compatibility.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -111,7 +152,9 @@
         <ReturnType>Microsoft.Build.Framework.TaskParameterMessageKind</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The kind of event represented by this instance.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -132,7 +175,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            True if the <see cref="P:Microsoft.Build.Framework.TaskParameterEventArgs.Message" /> string should include metadata.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,6 +199,54 @@
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public string ParameterName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskParameterEventArgs.ParameterName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterName : string" Usage="Microsoft.Build.Framework.TaskParameterEventArgs.ParameterName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParameterName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the parameter if <see cref="P:Microsoft.Build.Framework.TaskParameterEventArgs.Kind" /> is <see cref="F:Microsoft.Build.Framework.TaskParameterMessageKind.TaskInput" /> or <see cref="F:Microsoft.Build.Framework.TaskParameterMessageKind.TaskOutput" />,
+            null otherwise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskParameterEventArgs.PropertyName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyName As String" />
+      <MemberSignature Language="F#" Value="member this.PropertyName : string" Usage="Microsoft.Build.Framework.TaskParameterEventArgs.PropertyName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PropertyName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the property if <see cref="P:Microsoft.Build.Framework.TaskParameterEventArgs.Kind" /> is <see cref="F:Microsoft.Build.Framework.TaskParameterMessageKind.TaskOutput" /> and the task output
+            is assigned to a property, null otherwise.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

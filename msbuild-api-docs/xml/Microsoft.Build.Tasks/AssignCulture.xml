@@ -395,5 +395,29 @@
         <forInternalUseOnly />
       </Docs>
     </Member>
+    <Member MemberName="RespectAlreadyAssignedItemCulture">
+      <MemberSignature Language="C#" Value="public bool RespectAlreadyAssignedItemCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RespectAlreadyAssignedItemCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.RespectAlreadyAssignedItemCulture" />
+      <MemberSignature Language="VB.NET" Value="Public Property RespectAlreadyAssignedItemCulture As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RespectAlreadyAssignedItemCulture : bool with get, set" Usage="Microsoft.Build.Tasks.AssignCulture.RespectAlreadyAssignedItemCulture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RespectAlreadyAssignedItemCulture { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the flag set to 'true' the incoming list with existing Culture metadata will not be ammended and CultureNeutralAssignedFiles filename will be equal to the original.
+            In case the Culture metadata was not provided, the logic of RespectAlreadyAssignedItemCulture will not take any effect.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
   </Members>
 </Type>

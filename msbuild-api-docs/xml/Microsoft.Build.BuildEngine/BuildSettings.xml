@@ -10,6 +10,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -21,7 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Specifies the settings for a build.</summary>
+    <summary>
+            Flags for controlling the build.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -38,13 +41,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildSettings</ReturnType>
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>Specifies that no important external state has changed and no previously built targets should be rebuilt.</summary>
+        <summary>
+            When this flag is passed in, MSBuild assumes that no important external
+            state has changed (for example, no files reference by the project have
+            been modified) and doesn't rebuild any previously built targets.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -60,13 +68,16 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.BuildSettings</ReturnType>
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>Specifies that the build should run normally.</summary>
+        <summary>
+            The default build.
+            </summary>
       </Docs>
     </Member>
   </Members>

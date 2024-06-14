@@ -35,7 +35,7 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>
-            Instructs the <see cref="T:Microsoft.Build.Evaluation.Context.EvaluationContext" /> not to reuse state between the different project evaluations that use it.
+            Instructs the <see cref="T:Microsoft.Build.Evaluation.Context.EvaluationContext" /> to not reuse any cached state between the different project evaluations that use it.
             </summary>
       </Docs>
     </Member>
@@ -57,7 +57,30 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>
-            Instructs the <see cref="T:Microsoft.Build.Evaluation.Context.EvaluationContext" /> to reuse state between the different project evaluations that use it.
+            Instructs the <see cref="T:Microsoft.Build.Evaluation.Context.EvaluationContext" /> to reuse all cached state between the different project evaluations that use it.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SharedSDKCache">
+      <MemberSignature Language="C#" Value="SharedSDKCache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.Context.EvaluationContext/SharingPolicy SharedSDKCache = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy.SharedSDKCache" />
+      <MemberSignature Language="VB.NET" Value="SharedSDKCache" />
+      <MemberSignature Language="F#" Value="SharedSDKCache = 2" Usage="Microsoft.Build.Evaluation.Context.EvaluationContext.SharingPolicy.SharedSDKCache" />
+      <MemberSignature Language="C++ CLI" Value="SharedSDKCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Context.EvaluationContext+SharingPolicy</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Instructs the <see cref="T:Microsoft.Build.Evaluation.Context.EvaluationContext" /> to reuse SDK resolver cache between the different project evaluations that use it.
+            No other cached state is reused.
             </summary>
       </Docs>
     </Member>

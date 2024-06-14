@@ -1,0 +1,104 @@
+<Type Name="ArchiveFile" FullName="Microsoft.Build.Logging.ArchiveFile">
+  <TypeSignature Language="C#" Value="public sealed class ArchiveFile : Microsoft.Build.Logging.ArchiveData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArchiveFile extends Microsoft.Build.Logging.ArchiveData" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.ArchiveFile" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ArchiveFile&#xA;Inherits ArchiveData" />
+  <TypeSignature Language="F#" Value="type ArchiveFile = class&#xA;    inherit ArchiveData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ArchiveFile sealed : Microsoft::Build::Logging::ArchiveData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Logging.ArchiveData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Fully materialized (in-memory) embedded file.
+            Easier to work with (the content is expressed in a single string), but more memory greedy.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArchiveFile (string fullPath, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fullPath, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ArchiveFile.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (fullPath As String, content As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Logging.ArchiveFile : string * string -&gt; Microsoft.Build.Logging.ArchiveFile" Usage="new Microsoft.Build.Logging.ArchiveFile (fullPath, content)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ArchiveFile(System::String ^ fullPath, System::String ^ content);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fullPath" Type="System.String" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fullPath">To be added.</param>
+        <param name="content">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ArchiveFile.Content" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Content As String" />
+      <MemberSignature Language="F#" Value="member this.Content : string" Usage="Microsoft.Build.Logging.ArchiveFile.Content" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Content { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The content of the original file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArchiveFile">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Logging.ArchiveFile ToArchiveFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.Build.Logging.ArchiveFile ToArchiveFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ArchiveFile.ToArchiveFile" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToArchiveFile () As ArchiveFile" />
+      <MemberSignature Language="F#" Value="override this.ToArchiveFile : unit -&gt; Microsoft.Build.Logging.ArchiveFile" Usage="archiveFile.ToArchiveFile " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Microsoft::Build::Logging::ArchiveFile ^ ToArchiveFile();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.ArchiveFile</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.Build.Logging.ArchiveData.ToArchiveFile" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

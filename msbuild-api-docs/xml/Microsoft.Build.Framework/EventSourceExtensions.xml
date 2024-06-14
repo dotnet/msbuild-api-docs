@@ -1,0 +1,416 @@
+<Type Name="EventSourceExtensions" FullName="Microsoft.Build.Framework.EventSourceExtensions">
+  <TypeSignature Language="C#" Value="public static class EventSourceExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EventSourceExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.EventSourceExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module EventSourceExtensions" />
+  <TypeSignature Language="F#" Value="type EventSourceExtensions = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class EventSourceExtensions abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Helper methods for <see cref="T:Microsoft.Build.Framework.IEventSource" /> interface.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HandleAnyEventRaised">
+      <MemberSignature Language="C#" Value="public static void HandleAnyEventRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.AnyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleAnyEventRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.AnyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleAnyEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.AnyEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleAnyEventRaised (eventSource As IEventSource, handler As AnyEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleAnyEventRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.AnyEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleAnyEventRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleAnyEventRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::AnyEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.AnyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleBuildFinished">
+      <MemberSignature Language="C#" Value="public static void HandleBuildFinished (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildFinishedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleBuildFinished(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildFinishedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleBuildFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildFinishedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleBuildFinished (eventSource As IEventSource, handler As BuildFinishedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleBuildFinished : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildFinishedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleBuildFinished (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleBuildFinished(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildFinishedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildFinishedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleBuildStarted">
+      <MemberSignature Language="C#" Value="public static void HandleBuildStarted (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildStartedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleBuildStarted(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildStartedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleBuildStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildStartedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleBuildStarted (eventSource As IEventSource, handler As BuildStartedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleBuildStarted : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildStartedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleBuildStarted (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleBuildStarted(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildStartedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildStartedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleCustomEventRaised">
+      <MemberSignature Language="C#" Value="public static void HandleCustomEventRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.CustomBuildEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleCustomEventRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.CustomBuildEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleCustomEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.CustomBuildEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleCustomEventRaised (eventSource As IEventSource, handler As CustomBuildEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleCustomEventRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.CustomBuildEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleCustomEventRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleCustomEventRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::CustomBuildEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.CustomBuildEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleErrorRaised">
+      <MemberSignature Language="C#" Value="public static void HandleErrorRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildErrorEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleErrorRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildErrorEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleErrorRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildErrorEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleErrorRaised (eventSource As IEventSource, handler As BuildErrorEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleErrorRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildErrorEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleErrorRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleErrorRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildErrorEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildErrorEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleMessageRaised">
+      <MemberSignature Language="C#" Value="public static void HandleMessageRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildMessageEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleMessageRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildMessageEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleMessageRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildMessageEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleMessageRaised (eventSource As IEventSource, handler As BuildMessageEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleMessageRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildMessageEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleMessageRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleMessageRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildMessageEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildMessageEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProjectFinished">
+      <MemberSignature Language="C#" Value="public static void HandleProjectFinished (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.ProjectFinishedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleProjectFinished(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.ProjectFinishedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleProjectFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.ProjectFinishedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleProjectFinished (eventSource As IEventSource, handler As ProjectFinishedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleProjectFinished : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.ProjectFinishedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleProjectFinished (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleProjectFinished(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::ProjectFinishedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.ProjectFinishedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProjectStarted">
+      <MemberSignature Language="C#" Value="public static void HandleProjectStarted (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.ProjectStartedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleProjectStarted(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.ProjectStartedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleProjectStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.ProjectStartedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleProjectStarted (eventSource As IEventSource, handler As ProjectStartedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleProjectStarted : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.ProjectStartedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleProjectStarted (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleProjectStarted(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::ProjectStartedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.ProjectStartedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleStatusEventRaised">
+      <MemberSignature Language="C#" Value="public static void HandleStatusEventRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildStatusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleStatusEventRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildStatusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleStatusEventRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildStatusEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleStatusEventRaised (eventSource As IEventSource, handler As BuildStatusEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleStatusEventRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildStatusEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleStatusEventRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleStatusEventRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildStatusEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildStatusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.StatusEventRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTargetFinished">
+      <MemberSignature Language="C#" Value="public static void HandleTargetFinished (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.TargetFinishedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleTargetFinished(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.TargetFinishedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTargetFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TargetFinishedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleTargetFinished (eventSource As IEventSource, handler As TargetFinishedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleTargetFinished : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.TargetFinishedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleTargetFinished (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleTargetFinished(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::TargetFinishedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.TargetFinishedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.TargetFinished" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTargetStarted">
+      <MemberSignature Language="C#" Value="public static void HandleTargetStarted (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.TargetStartedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleTargetStarted(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.TargetStartedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTargetStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TargetStartedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleTargetStarted (eventSource As IEventSource, handler As TargetStartedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleTargetStarted : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.TargetStartedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleTargetStarted (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleTargetStarted(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::TargetStartedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.TargetStartedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskFinished">
+      <MemberSignature Language="C#" Value="public static void HandleTaskFinished (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.TaskFinishedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleTaskFinished(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.TaskFinishedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTaskFinished(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TaskFinishedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleTaskFinished (eventSource As IEventSource, handler As TaskFinishedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleTaskFinished : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.TaskFinishedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleTaskFinished (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleTaskFinished(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::TaskFinishedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.TaskFinishedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskStarted">
+      <MemberSignature Language="C#" Value="public static void HandleTaskStarted (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.TaskStartedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleTaskStarted(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.TaskStartedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleTaskStarted(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.TaskStartedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleTaskStarted (eventSource As IEventSource, handler As TaskStartedEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleTaskStarted : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.TaskStartedEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleTaskStarted (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleTaskStarted(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::TaskStartedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.TaskStartedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleWarningRaised">
+      <MemberSignature Language="C#" Value="public static void HandleWarningRaised (this Microsoft.Build.Framework.IEventSource eventSource, Microsoft.Build.Framework.BuildWarningEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HandleWarningRaised(class Microsoft.Build.Framework.IEventSource eventSource, class Microsoft.Build.Framework.BuildWarningEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.EventSourceExtensions.HandleWarningRaised(Microsoft.Build.Framework.IEventSource,Microsoft.Build.Framework.BuildWarningEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub HandleWarningRaised (eventSource As IEventSource, handler As BuildWarningEventHandler)" />
+      <MemberSignature Language="F#" Value="static member HandleWarningRaised : Microsoft.Build.Framework.IEventSource * Microsoft.Build.Framework.BuildWarningEventHandler -&gt; unit" Usage="Microsoft.Build.Framework.EventSourceExtensions.HandleWarningRaised (eventSource, handler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void HandleWarningRaised(Microsoft::Build::Framework::IEventSource ^ eventSource, Microsoft::Build::Framework::BuildWarningEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" RefType="this" />
+        <Parameter Name="handler" Type="Microsoft.Build.Framework.BuildWarningEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource" />
+        <param name="handler">Handler to the event. If this handler is already subscribed, single subscription will be ensured.</param>
+        <summary>
+            Helper method ensuring single deduplicated subscription to the <see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

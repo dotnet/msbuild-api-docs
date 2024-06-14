@@ -1,0 +1,227 @@
+<Type Name="BuildCheckResult" FullName="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult">
+  <TypeSignature Language="C#" Value="public sealed class BuildCheckResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BuildCheckResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BuildCheckResult" />
+  <TypeSignature Language="F#" Value="type BuildCheckResult = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildCheckResult sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Representation of a single report of a single finding from a BuildAnalyzer
+            Each rule has upfront known message format - so only the concrete arguments are added
+            Optionally a location is attached - in the near future we might need to support multiple locations
+             (for 2 cases - a) grouped result for multiple occurrences; b) a single report for a finding resulting from combination of multiple locations)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildCheckResult (Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule buildAnalyzerRule, Microsoft.Build.Construction.ElementLocation location, string[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule buildAnalyzerRule, class Microsoft.Build.Construction.ElementLocation location, string[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.#ctor(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buildAnalyzerRule As BuildAnalyzerRule, location As ElementLocation, messageArgs As String())" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.BuildCheckResult : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule * Microsoft.Build.Construction.ElementLocation * string[] -&gt; Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" Usage="new Microsoft.Build.Experimental.BuildCheck.BuildCheckResult (buildAnalyzerRule, location, messageArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildCheckResult(Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ buildAnalyzerRule, Microsoft::Build::Construction::ElementLocation ^ location, cli::array &lt;System::String ^&gt; ^ messageArgs);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildAnalyzerRule" Type="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" />
+        <Parameter Name="location" Type="Microsoft.Build.Construction.ElementLocation" />
+        <Parameter Name="messageArgs" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="buildAnalyzerRule">To be added.</param>
+        <param name="location">To be added.</param>
+        <param name="messageArgs">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildAnalyzerRule">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule BuildAnalyzerRule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule BuildAnalyzerRule" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.BuildAnalyzerRule" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildAnalyzerRule As BuildAnalyzerRule" />
+      <MemberSignature Language="F#" Value="member this.BuildAnalyzerRule : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.BuildAnalyzerRule" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ BuildAnalyzerRule { Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.BuildCheck.BuildCheckResult Create (Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule rule, Microsoft.Build.Construction.ElementLocation location, params string[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Experimental.BuildCheck.BuildCheckResult Create(class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule rule, class Microsoft.Build.Construction.ElementLocation location, string[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (rule As BuildAnalyzerRule, location As ElementLocation, ParamArray messageArgs As String()) As BuildCheckResult" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule * Microsoft.Build.Construction.ElementLocation * string[] -&gt; Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create (rule, location, messageArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Experimental::BuildCheck::BuildCheckResult ^ Create(Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ rule, Microsoft::Build::Construction::ElementLocation ^ location, ... cli::array &lt;System::String ^&gt; ^ messageArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildCheckResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" />
+        <Parameter Name="location" Type="Microsoft.Build.Construction.ElementLocation" />
+        <Parameter Name="messageArgs" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="rule">To be added.</param>
+        <param name="location">To be added.</param>
+        <param name="messageArgs">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatMessage">
+      <MemberSignature Language="C#" Value="public string FormatMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string FormatMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.FormatMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Function FormatMessage () As String" />
+      <MemberSignature Language="F#" Value="abstract member FormatMessage : unit -&gt; string&#xA;override this.FormatMessage : unit -&gt; string" Usage="buildCheckResult.FormatMessage " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ FormatMessage();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.Location : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ Location { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional location of the finding (in near future we might need to support multiple locations).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationString">
+      <MemberSignature Language="C#" Value="public string LocationString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocationString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.LocationString" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocationString As String" />
+      <MemberSignature Language="F#" Value="member this.LocationString : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.LocationString" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocationString { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageArgs">
+      <MemberSignature Language="C#" Value="public string[] MessageArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] MessageArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageArgs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageArgs As String()" />
+      <MemberSignature Language="F#" Value="member this.MessageArgs : string[]" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ MessageArgs { cli::array &lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageFormat">
+      <MemberSignature Language="C#" Value="public string MessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageFormat" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageFormat As String" />
+      <MemberSignature Language="F#" Value="member this.MessageFormat : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageFormat" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MessageFormat { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

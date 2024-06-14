@@ -1,0 +1,128 @@
+<Type Name="ItemsHolder" FullName="Microsoft.Build.Experimental.BuildCheck.ItemsHolder">
+  <TypeSignature Language="C#" Value="public class ItemsHolder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemsHolder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.ItemsHolder" />
+  <TypeSignature Language="VB.NET" Value="Public Class ItemsHolder" />
+  <TypeSignature Language="F#" Value="type ItemsHolder = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ItemsHolder" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <param name="items" />
+    <param name="itemGroups" />
+    <summary>
+            Holder for evaluated items and item groups.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemsHolder (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt; items, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; itemGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectItemElement&gt; items, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectItemGroupElement&gt; itemGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectItemElement},System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectItemGroupElement})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (items As IEnumerable(Of ProjectItemElement), itemGroups As IEnumerable(Of ProjectItemGroupElement))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.ItemsHolder : seq&lt;Microsoft.Build.Construction.ProjectItemElement&gt; * seq&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; -&gt; Microsoft.Build.Experimental.BuildCheck.ItemsHolder" Usage="new Microsoft.Build.Experimental.BuildCheck.ItemsHolder (items, itemGroups)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ItemsHolder(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ items, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ itemGroups);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt;" />
+        <Parameter Name="itemGroups" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items" />
+        <param name="itemGroups" />
+        <summary>
+            Holder for evaluated items and item groups.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemsOfType">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt; GetItemsOfType (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectItemElement&gt; GetItemsOfType(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.GetItemsOfType(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetItemsOfType (itemType As String) As IEnumerable(Of ProjectItemElement)" />
+      <MemberSignature Language="F#" Value="member this.GetItemsOfType : string -&gt; seq&lt;Microsoft.Build.Construction.ProjectItemElement&gt;" Usage="itemsHolder.GetItemsOfType itemType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ GetItemsOfType(System::String ^ itemType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.ItemGroups" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemGroups As IEnumerable(Of ProjectItemGroupElement)" />
+      <MemberSignature Language="F#" Value="member this.ItemGroups : seq&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;" Usage="Microsoft.Build.Experimental.BuildCheck.ItemsHolder.ItemGroups" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ ItemGroups { System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemGroupElement ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectItemElement&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.ItemsHolder.Items" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Items As IEnumerable(Of ProjectItemElement)" />
+      <MemberSignature Language="F#" Value="member this.Items : seq&lt;Microsoft.Build.Construction.ProjectItemElement&gt;" Usage="Microsoft.Build.Experimental.BuildCheck.ItemsHolder.Items" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ Items { System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectItemElement ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectItemElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
