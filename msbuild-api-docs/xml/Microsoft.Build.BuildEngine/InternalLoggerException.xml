@@ -23,17 +23,24 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>This exception is used to wrap an unhandled exception from a logger.</summary>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This exception is used to wrap an unhandled exception from a logger. This exception aborts the build, and it can only be
+            thrown by the MSBuild engine.
+            </summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This exception can only be thrown by the MSBuild engine.  
-  
- This exception stops the build.  
-  
- ]]></format>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
     </remarks>
+    <owner>SumedhK</owner>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -222,10 +229,24 @@
         <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
       </Parameters>
       <Docs>
-        <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-        <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
-        <remarks>To be added.</remarks>
+        <param name="info" />
+        <param name="context" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            ISerializable method which we must override since Exception implements this interface
+            If we ever add new members to this class, we'll need to update this.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HelpKeyword">

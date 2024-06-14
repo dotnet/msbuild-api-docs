@@ -29,8 +29,26 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>Implements the standard console logger that outputs event data to the console window during a build.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This class implements the default logger that outputs event data
+            to the console (stdout).
+            It is a facade: it creates, wraps and delegates to a kind of BaseConsoleLogger,
+            either SerialConsoleLogger or ParallelConsoleLogger.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+    </remarks>
+    <remarks>This class is not thread safe.</remarks>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -64,8 +82,21 @@
       </Attributes>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> class.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            Default constructor.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -87,9 +118,24 @@
         <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
       </Parameters>
       <Docs>
-        <param name="verbosity">The <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> to apply to the logger.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> class with the specified <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />.</summary>
-        <remarks>To be added.</remarks>
+        <param name="verbosity">Verbosity level.</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Create a logger instance with a specific verbosity.  This logs to
+            the default console.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -114,12 +160,26 @@
         <Parameter Name="colorReset" Type="Microsoft.Build.BuildEngine.ColorResetter" />
       </Parameters>
       <Docs>
-        <param name="verbosity">The <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> to apply to the logger.</param>
-        <param name="write">The <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> for the logger to use.</param>
-        <param name="colorSet">The <see cref="T:Microsoft.Build.BuildEngine.ColorSetter" /> for the logger to use.</param>
-        <param name="colorReset">The <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" /> for the logger to use.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> class with the specified <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />, <see cref="T:Microsoft.Build.BuildEngine.ColorSetter" />, and <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" /> values.</summary>
-        <remarks>To be added.</remarks>
+        <param name="verbosity" />
+        <param name="write" />
+        <param name="colorSet" />
+        <param name="colorReset" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Initializes the logger, with alternate output handlers.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplyParameter">
@@ -147,8 +207,23 @@
       <Docs>
         <param name="parameterName">The parameter name to add to the logger.</param>
         <param name="parameterValue">The parameter value to assign to the <paramref name="parameterName" />.</param>
-        <summary>Adds the specified parameter name and value to the logger.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            Apply a parameter.
+            NOTE: This method was public by accident in Whidbey, so it cannot be made internal now. It has
+            no good reason for being public.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildFinishedHandler">
@@ -174,10 +249,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.BuildFinishedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for build finished events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildStartedHandler">
@@ -203,10 +292,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.BuildStartedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for build started events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomEventHandler">
@@ -234,8 +337,21 @@
       <Docs>
         <param name="sender">The source of the event.</param>
         <param name="e">A <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            Prints a custom event
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ErrorHandler">
@@ -263,8 +379,22 @@
       <Docs>
         <param name="sender">The source of the event.</param>
         <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Prints an error event
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <MemberGroup MemberName="Initialize">
@@ -301,9 +431,23 @@
         <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
       </Parameters>
       <Docs>
-        <param name="eventSource">The <see cref="T:Microsoft.Build.Framework.IEventSource" /> to register with the logger.</param>
-        <summary>Registers the logger for the specified events.</summary>
-        <remarks>To be added.</remarks>
+        <param name="eventSource">Available events.</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Signs up the console logger for all build events.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Initialize">
@@ -333,8 +477,19 @@
       <Docs>
         <param name="eventSource">The <see cref="T:Microsoft.Build.Framework.IEventSource" /> to register with the logger.</param>
         <param name="nodeCount">The number of nodes to initialize.</param>
-        <summary>Registers the logger for the specified events.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MessageHandler">
@@ -362,8 +517,22 @@
       <Docs>
         <param name="sender">The source of the event.</param>
         <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Prints a message event
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Parameters">
@@ -388,18 +557,22 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the parameters passed to the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</summary>
-        <value>The parameters passed to the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</value>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            The console logger takes a single parameter to suppress the output of the errors
+            and warnings summary at the end of a build.
+            </summary>
+        <value>null</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/ConsoleLogger/Parameters/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -426,10 +599,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.ProjectFinishedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for project finished events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectStartedHandler">
@@ -455,10 +642,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for project started events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowSummary">
@@ -480,10 +681,23 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value indicating whether the logger will display a summary of errors and warnings.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            Suppresses the display of error and warnings summary.
+            </summary>
         <value>
           <see langword="true" /> if the logger will display a summary of errors and warnings; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
@@ -509,14 +723,22 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Stops the logger and releases all resources.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            The console logger does not need to release any resources.
+            This method does nothing.
+            </summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default console logger does not need to release any resources. This method does nothing.  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -539,10 +761,24 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value indicating whether the logger will display messages when new projects are started during the build.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Suppresses the display of project headers. Project headers are
+            displayed by default unless this property is set.
+            </summary>
         <value>
           <see langword="true" /> to display messages when new projects are started during the build; otherwise, <see langword="false" />. The default is <see langword="true" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>This is only needed by the IDE logger.
+            <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format></remarks>
       </Docs>
     </Member>
     <Member MemberName="TargetFinishedHandler">
@@ -568,10 +804,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.TargetFinishedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.TargetFinished" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for target finished events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TargetStartedHandler">
@@ -597,10 +847,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.TargetStartedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for target started events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TaskFinishedHandler">
@@ -626,10 +890,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.TaskFinishedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for task finished events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TaskStartedHandler">
@@ -655,10 +933,24 @@
         <Parameter Name="e" Type="Microsoft.Build.Framework.TaskStartedEventArgs" />
       </Parameters>
       <Docs>
-        <param name="sender">The source of the event.</param>
-        <param name="e">A <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <param name="sender">sender (should be null)</param>
+        <param name="e">event arguments</param>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Handler for task started events
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Verbosity">
@@ -683,9 +975,22 @@
         <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> level of the logger.</summary>
-        <value>The <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> level of the logger.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            Gets or sets the level of detail to show in the event log.
+            </summary>
+        <value>Verbosity level.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WarningHandler">
@@ -713,8 +1018,22 @@
       <Docs>
         <param name="sender">The source of the event.</param>
         <param name="e">A <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" /> that contains the event data.</param>
-        <summary>Handles the <see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" /> event.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Prints a warning event
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteHandler">

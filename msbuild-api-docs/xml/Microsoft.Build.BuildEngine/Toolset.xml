@@ -16,14 +16,21 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Represents a Toolset in MSBuild. For more information about Toolsets, see Standard and Custom Toolset Configurations.</summary>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Aggregation of a toolset version (eg. "2.0"), tools path, and optional set of associated properties
+            </summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A <xref:Microsoft.Build.BuildEngine.Toolset> object has a corresponding `ToolsVersion` value that represents the value of the `ToolsVersion` attribute on the [Project Element (MSBuild)](/visualstudio/msbuild/project-element-msbuild) as well as a `ToolsPath` value that indicates where the Toolset is located.  
-  
- ]]></format>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
     </remarks>
   </Docs>
   <Members>

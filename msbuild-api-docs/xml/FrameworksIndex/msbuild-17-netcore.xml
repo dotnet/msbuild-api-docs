@@ -1720,6 +1720,7 @@
   <Namespace Name="Microsoft.Build.Experimental.BuildCheck">
     <Type Name="Microsoft.Build.Experimental.BuildCheck.AnalysisData" Id="T:Microsoft.Build.Experimental.BuildCheck.AnalysisData">
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.AnalysisData.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.AnalysisData.ProjectFileDirectory" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.AnalysisData.ProjectFilePath" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer" Id="T:Microsoft.Build.Experimental.BuildCheck.BuildAnalyzer">
@@ -1815,6 +1816,8 @@
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.#ctor(System.Object,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.&lt;Clone&gt;$" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Deconstruct(System.Object@,System.Boolean@)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EnumerateStringValues" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.EnumerateValues" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter)" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.Equals(System.Object)" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter.GetHashCode" />
@@ -5371,6 +5374,9 @@
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnSuccess" />
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute" />
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute" />
+    </Type>
+    <Type Name="Microsoft.Build.Utilities.LockCheck" Id="T:Microsoft.Build.Utilities.LockCheck">
+      <Member Id="M:Microsoft.Build.Utilities.LockCheck.GetLockedFileMessage(System.String)" />
     </Type>
     <Type Name="Microsoft.Build.Utilities.Logger" Id="T:Microsoft.Build.Utilities.Logger">
       <Member Id="M:Microsoft.Build.Utilities.Logger.#ctor" />

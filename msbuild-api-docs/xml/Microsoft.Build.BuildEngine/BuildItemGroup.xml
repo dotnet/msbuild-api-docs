@@ -27,22 +27,23 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a collection of <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects.</summary>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This class represents a collection of items.  It may be represented
+            physically by an &lt;ItemGroup&gt; element persisted in the project file,
+            or it may just be a virtual BuildItemGroup (e.g., the evaluated items).
+            </summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A <xref:Microsoft.Build.BuildEngine.BuildItemGroup> object can represent an  element in the project, or a virtual collection of items, containing the items created after evaluating wildcards in the `Include` and `Exclude` attributes of an `Item` element.  
-  
-   
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
     </remarks>
   </Docs>
   <Members>
@@ -62,8 +63,22 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> class.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Default constructor, which initializes a virtual (non-persisted) BuildItemGroup.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <MemberGroup MemberName="AddNewItem">
@@ -111,18 +126,24 @@
       <Docs>
         <param name="itemName">The <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> property value to assign the new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
         <param name="itemInclude">The <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> property value to assign the new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
-        <summary>Adds a new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> with the specified <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> and <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> property values to the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Creates a new BuildItem defined by the given "Type" and "Include", and
+            adds it to the end of this BuildItemGroup.
+            If the group is persisted, the item is persisted; otherwise it is virtual
+            </summary>
         <returns>The new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItem/Overview/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -154,9 +175,24 @@
         <param name="itemInclude">The <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> property value to assign the new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
         <param name="treatItemIncludeAsLiteral">
           <see langword="true" /> to treat the <paramref name="itemInclude" /> parameter as a literal value; otherwise, <see langword="false" />.</param>
-        <summary>Adds a new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> with the specified <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> and <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> property values to the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />, allowing you to specify whether the <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> property value is treated as a literal.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Adds a new item to the ItemGroup, optional treating the item Include as literal so that
+            any special characters will be escaped before persisting it.
+            </summary>
         <returns>The new <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -179,8 +215,23 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Removes the <see cref="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition" /> property value and all <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects from the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Removes all Items from this BuildItemGroup, and also deletes the Condition
+            and Name.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Clone">
@@ -207,19 +258,26 @@
       <Docs>
         <param name="deepClone">
           <see langword="true" /> to create a deep copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />; otherwise, <see langword="false" />.</param>
-        <summary>Creates a deep or shallow copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Clones the BuildItemGroup.  A shallow clone here is one that references
+            the same BuildItem objects as the original, whereas a deep clone actually
+            clones the BuildItem objects as well.  If this is a persisted BuildItemGroup,
+            only deep clones are allowed, because you can't have the same XML
+            element belonging to two parents.
+            </summary>
         <returns>A copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A shallow copy of a <xref:Microsoft.Build.BuildEngine.BuildItemGroup> references the same property group as the original. Modifications a shallow copy will be reflected in both copies.  
-  
- A deep copy of a <xref:Microsoft.Build.BuildEngine.BuildItemGroup> creates a new XML element to reference so that both copies of the <xref:Microsoft.Build.BuildEngine.BuildItemGroup> can be independently modified.  
-  
- If the <xref:Microsoft.Build.BuildEngine.BuildItemGroup> corresponds directly to a  element in the project (rather than corresponding to a collection of items created after evaluating wildcards in the `Include` and `Exclude` attributes of an `Item` element), only deep copies are allowed.  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -242,9 +300,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>Condition</c> attribute value of the item group.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Accessor for the condition on the item group.
+            </summary>
         <value>The <c>Condition</c> attribute value of the item group.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -266,9 +338,23 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Number of items in this group.
+            </summary>
         <value>An integer value representing the number of <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -294,23 +380,24 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This IEnumerable method returns an IEnumerator object, which allows
+            the caller to enumerate through the BuildItem objects contained in
+            this BuildItemGroup.
+            </summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> for the entire <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildItem> objects in the <xref:Microsoft.Build.BuildEngine.BuildItemGroup>.  
-  
-   
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildItemGroup/GetEnumerator/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -339,10 +426,27 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value indicating whether the item group was imported into the project.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This returns a boolean telling you whether this particular item
+            group was imported from another project, or whether it was defined
+            in the main project.  For virtual item groups which have no
+            persistence, this is false.
+            </summary>
         <value>
           <see langword="true" /> if the item group was imported into the project; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -368,9 +472,23 @@
       </Parameters>
       <Docs>
         <param name="index">The zero-based index of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> object to get or set.</param>
-        <summary>Gets or sets a <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> object in this <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Gets the item at the specified index.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> object in this <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveItem">
@@ -435,8 +553,23 @@
       </Parameters>
       <Docs>
         <param name="index">The zero-based index of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> object to remove.</param>
-        <summary>Removes the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> at the specified index from the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Removes the item at the specified index.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">If index is out of bounds</exception>
       </Docs>
     </Member>
     <Member MemberName="ToArray">
@@ -459,9 +592,24 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Copies the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> to a new array.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Copies the items in this group into a new array.
+            NOTE: the copies are NOT clones i.e. only the references are copied
+            </summary>
         <returns>A new array containing the <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> objects copied from the <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
   </Members>

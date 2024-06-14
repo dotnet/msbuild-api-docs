@@ -23,18 +23,26 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a single property in an MSBuild project.</summary>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This class holds an MSBuild property.  This may be a property that is
+            represented in the MSBuild project file by an XML element, or it
+            may not be represented in any real XML file (e.g., global properties,
+            environment properties, etc.)
+            </summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildProperty/Overview/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
     </remarks>
+    <owner>rgoel</owner>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -63,10 +71,27 @@
         <Parameter Name="propertyValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="propertyName">The property name.</param>
-        <param name="propertyValue">The property value.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> class with the specified name and value.</summary>
-        <remarks>To be added.</remarks>
+        <param name="propertyName" />
+        <param name="propertyValue" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Constructor, which initializes the property from just the property
+            name and value, creating it as a "normal" property.  This ends up
+            creating a new XML element for the property under a dummy XML document.
+            </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Clone">
@@ -91,20 +116,32 @@
         <Parameter Name="deepClone" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="deepClone">
-          <see langword="true" /> to create a deep copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />; otherwise, <see langword="false" />.</param>
-        <summary>Creates a deep or shallow copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />.</summary>
-        <returns>A copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />.</returns>
+        <param name="deepClone" />
+        <summary>
+             This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+             <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+             
+             Creates a shallow or deep clone of this BuildProperty object.
+            
+             A shallow clone points at the same XML element as the original, so
+             that modifications to the name or value will be reflected in both
+             copies.  However, the two copies could have different a finalValue.
+            
+             A deep clone actually clones the XML element as well, so that the
+             two copies are completely independent of each other.
+             </summary>
+        <returns />
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A shallow copy of a <xref:Microsoft.Build.BuildEngine.BuildProperty> references the same XML element as the original. Modifications to the name or value of a shallow copy will be reflected in both copies. However, depending on property evaluation, the two copies could have different <xref:Microsoft.Build.BuildEngine.BuildProperty.FinalValue%2A> property values.  
-  
- A deep copy of a <xref:Microsoft.Build.BuildEngine.BuildProperty> creates a new XML element to reference so that both copies of the <xref:Microsoft.Build.BuildEngine.BuildProperty> can be independently modified.  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+             ## Remarks
+             > [!WARNING]
+             > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+             > <xref:Microsoft.Build.Construction>
+             > <xref:Microsoft.Build.Evaluation>
+             > <xref:Microsoft.Build.Execution>
+             ]]></format>
         </remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Condition">
@@ -126,9 +163,24 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the <c>Condition</c> attribute value of the property.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Accessor for the condition on the property.
+            </summary>
         <value>The <c>Condition</c> attribute value of the property.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="FinalValue">
@@ -150,9 +202,24 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the final value of the property after all property evaluations have been performed.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Returns the unescaped value of the property.
+            </summary>
         <value>The final value of the property after all property evaluations have been performed.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="IsImported">
@@ -174,10 +241,25 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value indicating whether the property was imported into the project.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Did this property originate from an imported project file?
+            </summary>
         <value>
           <see langword="true" /> if the property was imported into the project; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -199,19 +281,29 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the property name.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Accessor for the property name.  This is read-only, so one cannot
+            change the property name once it's set ... your only option is
+            to create a new BuildProperty object.  The reason is that BuildProperty objects
+            are often stored in hash tables where the hash function is based
+            on the property name.  Modifying the property name of an existing
+            BuildProperty object would make the hash table incorrect.
+            </summary>
         <value>The property name.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildProperty/Overview/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="op_Explicit">
@@ -236,12 +328,26 @@
         <Parameter Name="propertyToCast" Type="Microsoft.Build.BuildEngine.BuildProperty" />
       </Parameters>
       <Docs>
-        <param name="propertyToCast">The <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> to convert to a string.</param>
-        <summary>Converts a <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> to a <see langword="String" />.</summary>
-        <returns>A <see langword="String" />, whose contents are the same as the <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> property of the <paramref name="propertyToCast" /> parameter.</returns>
+        <param name="propertyToCast" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This allows an implicit typecast from a "BuildProperty" to a "string"
+            when trying to access the property's value.
+            </summary>
+        <returns />
         <remarks>
-          <format type="text/markdown"><![CDATA[The equivalent method for this operator is <xref:Microsoft.Build.BuildEngine.BuildProperty.ToString?displayProperty=nameWithType>]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
+        <owner>rgoel</owner>
       </Docs>
     </Member>
     <Member MemberName="ToString">
@@ -270,9 +376,24 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Returns the string that represents the property <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Returns the property value.
+            </summary>
         <returns>The string that represents the property <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -294,19 +415,25 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the property value.</summary>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Accessor for the property value.  Normal properties can be modified;
+            other property types cannot.
+            </summary>
         <value>The property value.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/BuildProperty/Overview/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
   </Members>

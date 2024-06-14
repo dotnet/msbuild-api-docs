@@ -27,8 +27,22 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a single Target element in an MSBuild project.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+            This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This class represents a single target in its parent project.
+            </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This class (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNewTask">
@@ -53,10 +67,25 @@
         <Parameter Name="taskName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="taskName">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to add to the <see langword="Target" /> element.</param>
-        <summary>Adds the specified Task element to the Target element.</summary>
+        <param name="taskName" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Adds a task with the specified name to the end of this target.  This method
+            does all of the work to manipulate the project's XML content.
+            </summary>
         <returns>A <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object represents a child <c>Task</c> element of the <c>Target</c> element.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Condition">
@@ -78,9 +107,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Condition</c> attribute value of the Target element.</summary>
-        <value>The <c>Condition</c> attribute value of the <c>Target</c> element.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Accessor for the item's "condition". Returned unevaluated.
+            </summary>
+        <value>Condition string.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DependsOnTargets">
@@ -102,9 +145,24 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>DependsOnTargets</c> attribute value of the Target element, which is a semicolon-separated list.</summary>
-        <value>The <c>DependsOnTargets</c> attribute value of the <c>Target</c> element.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Gets the target's unevaluated "DependsOnTargets" string.
+            Returns unevaluated.
+            </summary>
+        <value>The raw "DependsOnTargets" string.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -130,17 +188,23 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.Target" />.</summary>
-        <returns>An <see cref="T:System.Collections.IEnumerator" /> for the <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> objects in the <see cref="T:Microsoft.Build.BuildEngine.Target" />.</returns>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Allows the caller to use a foreach loop to enumerate through the individual
+            BuildTask objects contained within this Target.
+            </summary>
+        <returns />
         <remarks>
           <format type="text/markdown"><![CDATA[
-
-## Remarks
- This method allows the caller to use the `foreach` statement of the C# language (`for each` in Visual Basic) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildTask> objects in the <xref:Microsoft.Build.BuildEngine.Target>.
-
- A <xref:Microsoft.Build.BuildEngine.BuildTask> object represents a child [Task](/visualstudio/msbuild/task-element-msbuild) element of the `Target` element.
-
- ]]></format>
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -162,15 +226,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the items that are to be input into this target.</summary>
-        <value>A string representing the items.</value>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Gets the target's unevaluated "Inputs" string.
+            Returns unevaluated.
+            </summary>
+        <value>The raw "Inputs" string.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
-
-## Remarks
- Items inside this target attribute are used as the inputs in the top level dependency analysis.
-
- ]]></format>
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -199,10 +271,25 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the Target element was imported into the project.</summary>
-        <value>
-          <see langword="true" /> if the <c>Target</c> element was imported into the project; otherwise, <see langword="false" />.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            This returns a boolean telling you whether this particular target
+            was imported from another project, or whether it was defined
+            in the main project.
+            </summary>
+        <value />
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -230,9 +317,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <c>Name</c> attribute value of the Target element.</summary>
-        <value>The <c>Name</c> attribute value of the <c>Target</c> element.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Gets the target's name as specified in the "Name" attribute. The value of this attribute is never evaluated.
+            </summary>
+        <value>The target name string.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Outputs">
@@ -253,15 +354,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the expected outputs of this target.</summary>
-        <value>A string representing the outputs.</value>
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Gets the target's unevaluated "Outputs" string.
+            Returns unevaluated.
+            </summary>
+        <value>The raw "Outputs" string.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
-
-## Remarks
- You can apply transforms to this target attribute to transform a set of input items into a set of output items. This attribute is used not only for top level dependency analysis but also for the purposes of defining this targets outputs.
-
- ]]></format>
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -287,15 +396,24 @@
         <Parameter Name="taskElement" Type="Microsoft.Build.BuildEngine.BuildTask" />
       </Parameters>
       <Docs>
-        <param name="taskElement">The <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> object that represents the <see langword="Task" /> element to remove from the <see langword="Target" /> element.</param>
-        <summary>Removes the specified Task element from the Target element.</summary>
+        <param name="taskElement" />
+        <summary>
+            This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            <see href="/dotnet/api/microsoft.build.construction">Microsoft.Build.Construction</see><see href="/dotnet/api/microsoft.build.evaluation">Microsoft.Build.Evaluation</see><see href="/dotnet/api/microsoft.build.execution">Microsoft.Build.Execution</see>
+            
+            Removes the specified BuildTask from the target.  This method correctly updates
+            the project's XML content, so the task will no longer show up when the project
+            is saved out.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[
-
-## Remarks
- A <xref:Microsoft.Build.BuildEngine.BuildTask> object represents a child `Task` element of the `Target` element.
-
- ]]></format>
+            ## Remarks
+            > [!WARNING]
+            > This method (and the whole namespace) is deprecated. Please use the classes in these namespaces instead: 
+            > <xref:Microsoft.Build.Construction>
+            > <xref:Microsoft.Build.Evaluation>
+            > <xref:Microsoft.Build.Execution>
+            ]]></format>
         </remarks>
       </Docs>
     </Member>
