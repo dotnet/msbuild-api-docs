@@ -1,0 +1,93 @@
+<Type Name="ReaderErrorType" FullName="Microsoft.Build.Logging.ReaderErrorType">
+  <TypeSignature Language="C#" Value="public enum ReaderErrorType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReaderErrorType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.ReaderErrorType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ReaderErrorType" />
+  <TypeSignature Language="F#" Value="type ReaderErrorType = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class ReaderErrorType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Type of the error that occurred during reading.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="UnknownEventData">
+      <MemberSignature Language="C#" Value="UnknownEventData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Logging.ReaderErrorType UnknownEventData = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Logging.ReaderErrorType.UnknownEventData" />
+      <MemberSignature Language="VB.NET" Value="UnknownEventData" />
+      <MemberSignature Language="F#" Value="UnknownEventData = 1" Usage="Microsoft.Build.Logging.ReaderErrorType.UnknownEventData" />
+      <MemberSignature Language="C++ CLI" Value="UnknownEventData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.ReaderErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The encountered event is known to the reader and reader is able to read the event as it knows it.
+            However there are some extra data (append only extension to the event in future version), that reader cannot interpret,
+             it can only skip it.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownEventType">
+      <MemberSignature Language="C#" Value="UnknownEventType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Logging.ReaderErrorType UnknownEventType = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Logging.ReaderErrorType.UnknownEventType" />
+      <MemberSignature Language="VB.NET" Value="UnknownEventType" />
+      <MemberSignature Language="F#" Value="UnknownEventType = 0" Usage="Microsoft.Build.Logging.ReaderErrorType.UnknownEventType" />
+      <MemberSignature Language="C++ CLI" Value="UnknownEventType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.ReaderErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The encountered event is completely unknown to the reader. It cannot interpret any part of it.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownFormatOfEventData">
+      <MemberSignature Language="C#" Value="UnknownFormatOfEventData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Logging.ReaderErrorType UnknownFormatOfEventData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Logging.ReaderErrorType.UnknownFormatOfEventData" />
+      <MemberSignature Language="VB.NET" Value="UnknownFormatOfEventData" />
+      <MemberSignature Language="F#" Value="UnknownFormatOfEventData = 2" Usage="Microsoft.Build.Logging.ReaderErrorType.UnknownFormatOfEventData" />
+      <MemberSignature Language="C++ CLI" Value="UnknownFormatOfEventData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.ReaderErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The encountered event type is known to the reader, but the reader cannot interpret the data of the event.
+            This is probably caused by an event definition changing more than just adding fields.
+            The reader can only skip the event in full.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

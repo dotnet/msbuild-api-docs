@@ -1,0 +1,97 @@
+<Type Name="BuildCheckDataContext&lt;T&gt;" FullName="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class BuildCheckDataContext&lt;T&gt; where T : AnalysisData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildCheckDataContext`1&lt;(class Microsoft.Build.Experimental.BuildCheck.AnalysisData) T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildCheckDataContext(Of T)" />
+  <TypeSignature Language="F#" Value="type BuildCheckDataContext&lt;'T (requires 'T :&gt; AnalysisData)&gt; = class" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA; where T : AnalysisDatapublic ref class BuildCheckDataContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>Microsoft.Build.Experimental.BuildCheck.AnalysisData</BaseTypeName>
+      </Constraints>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">The type of the actual data for analysis.</typeparam>
+    <summary>
+            Data passed from infrastructure to build analyzers.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public T Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Data" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1.Data" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Data As T" />
+      <MemberSignature Language="F#" Value="member this.Data : 'T" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;'T (requires 'T :&gt; Microsoft.Build.Experimental.BuildCheck.AnalysisData)&gt;.Data" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property T Data { T get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Data to be analyzed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportResult">
+      <MemberSignature Language="C#" Value="public void ReportResult (Microsoft.Build.Experimental.BuildCheck.BuildCheckResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReportResult(class Microsoft.Build.Experimental.BuildCheck.BuildCheckResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1.ReportResult(Microsoft.Build.Experimental.BuildCheck.BuildCheckResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReportResult (result As BuildCheckResult)" />
+      <MemberSignature Language="F#" Value="member this.ReportResult : Microsoft.Build.Experimental.BuildCheck.BuildCheckResult -&gt; unit" Usage="buildCheckDataContext.ReportResult result" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReportResult(Microsoft::Build::Experimental::BuildCheck::BuildCheckResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" />
+      </Parameters>
+      <Docs>
+        <param name="result" />
+        <summary>
+            Method for reporting the result of the build analyzer rule.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

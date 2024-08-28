@@ -1477,6 +1477,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LogIncludeGeneratedFile">
+      <MemberSignature Language="C#" Value="public void LogIncludeGeneratedFile (string filePath, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogIncludeGeneratedFile(string filePath, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogIncludeGeneratedFile(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub LogIncludeGeneratedFile (filePath As String, content As String)" />
+      <MemberSignature Language="F#" Value="member this.LogIncludeGeneratedFile : string * string -&gt; unit" Usage="taskLoggingHelper.LogIncludeGeneratedFile (filePath, content)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void LogIncludeGeneratedFile(System::String ^ filePath, System::String ^ content);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="content" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">The file path relative to the currecnt project.</param>
+        <param name="content">The content of the file.</param>
+        <summary>
+            Logs a file generated from the given data.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <MemberGroup MemberName="LogMessage">
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>

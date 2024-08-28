@@ -1,0 +1,126 @@
+<Type Name="TaskInvocationAnalysisData" FullName="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData">
+  <TypeSignature Language="C#" Value="public sealed class TaskInvocationAnalysisData : Microsoft.Build.Experimental.BuildCheck.AnalysisData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TaskInvocationAnalysisData extends Microsoft.Build.Experimental.BuildCheck.AnalysisData" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TaskInvocationAnalysisData&#xA;Inherits AnalysisData" />
+  <TypeSignature Language="F#" Value="type TaskInvocationAnalysisData = class&#xA;    inherit AnalysisData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TaskInvocationAnalysisData sealed : Microsoft::Build::Experimental::BuildCheck::AnalysisData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Experimental.BuildCheck.AnalysisData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            BuildCheck OM data representing a task executed by a project.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData/TaskParameter&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As IReadOnlyDictionary(Of String, TaskInvocationAnalysisData.TaskParameter)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Generic.IReadOnlyDictionary&lt;string, Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskParameter&gt;" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.Parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^&gt; ^ Parameters { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData::TaskParameter ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData+TaskParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parameters of the task, keyed by parameter name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskAssemblyLocation">
+      <MemberSignature Language="C#" Value="public string TaskAssemblyLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskAssemblyLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskAssemblyLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskAssemblyLocation As String" />
+      <MemberSignature Language="F#" Value="member this.TaskAssemblyLocation : string" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskAssemblyLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskAssemblyLocation { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location of the assembly containing the implementation of the task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskInvocationLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation TaskInvocationLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation TaskInvocationLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskInvocationLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskInvocationLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="member this.TaskInvocationLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskInvocationLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ TaskInvocationLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The project file and line/column number where the task is invoked.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="public string TaskName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskName As String" />
+      <MemberSignature Language="F#" Value="member this.TaskName : string" Usage="Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData.TaskName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
