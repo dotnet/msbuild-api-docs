@@ -10,19 +10,24 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.ProjectCollection from the Microsoft.Build assembly instead.")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.ProjectCollection from the Microsoft.Build assembly instead.")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents the MSBuild engine.</summary>
+    <summary>
+            This class represents the MSBuild engine. In a system of project-to-project dependencies, this class keeps track of the
+            various projects being built, so that we can avoid building the same target in the same project more than once in a given
+            build.
+            </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -39,6 +44,7 @@
   
  ]]></format>
     </remarks>
+    <owner>RGoel</owner>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -73,6 +79,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -82,7 +89,11 @@
       </Attributes>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class.</summary>
+        <summary>
+            Default constructor that reads toolset information from both the registry
+            and configuration file.
+            The need for parameterless constructor is dictated by COM interop.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -108,6 +119,7 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -116,11 +128,13 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class.</summary>
+        <summary>
+            Constructor providing the global properties the engine should inherit.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -136,6 +150,7 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -144,11 +159,13 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="locations">A <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> enumeration that specifies the location of the Toolset definition.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class.</summary>
+        <summary>
+            Constructor to specify whether toolsets should be initialized from the msbuild configuration file and from the registry
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -165,9 +182,10 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("If you were simply passing in the .NET Framework location as the BinPath, just change to the parameterless Engine() constructor. Otherwise, you can define custom toolsets in the registry or config file, or by adding elements to the Engine's ToolsetCollection. Then use either the Engine() or Engine(ToolsetLocations) constructor instead.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("If you were simply passing in the .NET Framework location as the BinPath, just change to the parameterless Engine() constructor. Otherwise, you can define custom toolsets in the registry or config file, or by adding elements to the Engine's ToolsetCollection. Then use either the Engine() or Engine(ToolsetLocations) constructor instead.")&gt;]</AttributeName>
         </Attribute>
@@ -177,7 +195,9 @@
       </Parameters>
       <Docs>
         <param name="binPath">The path to MSBuild.exe.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class that has the specified <see cref="P:Microsoft.Build.BuildEngine.Engine.BinPath" />.</summary>
+        <summary>
+            Constructor to initialize binPath.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -193,6 +213,7 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -201,13 +222,16 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
         <param name="locations">A <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> enumeration specifies the location of the Toolset definition.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class.</summary>
+        <summary>
+            Constructor to specify the global properties the engine should inherit and
+            the locations the engine should inspect for toolset definitions.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -223,6 +247,7 @@
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -231,10 +256,10 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="numberOfCpus" Type="System.Int32" Index="2" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="localNodeProviderParameters" Type="System.String" Index="3" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="numberOfCpus" Type="System.Int32" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="localNodeProviderParameters" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
@@ -245,7 +270,9 @@
  <see langword="MSBUILDLOCATION" /> Indicates where the build process can find MSBuild.exe. This path enables the MSBuild engine to locate MSBuild.exe and start it as a local node. <see langword="MSBUILDLOCATION" /> is the only essential parameter for a host. The default value is C:\Windows\Microsoft.Net\Framework\v3.5\.  
   
  <see langword="NODEREUSE" /> Indicates whether the child nodes should remain after the build finishes, in case they can be used later by another build. The nodes are discarded automatically after one minute of non-use. The default value is <see langword="true" />.</param>
-        <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> class.</summary>
+        <summary>
+            Constructor used by msbuild.exe and any other multiproc aware MSBuild hosts.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,9 +289,10 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Avoid setting BinPath. If you were simply passing in the .NET Framework location as the BinPath, no other action is necessary. Otherwise, define Toolsets instead in the registry or config file, or by adding elements to the Engine's ToolsetCollection, in order to use a custom BinPath.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Avoid setting BinPath. If you were simply passing in the .NET Framework location as the BinPath, no other action is necessary. Otherwise, define Toolsets instead in the registry or config file, or by adding elements to the Engine's ToolsetCollection, in order to use a custom BinPath.")&gt;]</AttributeName>
         </Attribute>
@@ -273,44 +301,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the path to MSBuild.exe.</summary>
-        <value>The path to MSBuild.exe.</value>
+        <summary>
+            Obsolete way to get or set the tools path for the current default tools version.
+            </summary>
+        <value>The MSBuild path.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- In MSBuild 3.5, the "BinPath" is superseded by the "ToolsPath." Therefore, in the .Targets file, use MSBuildToolsPath rather than MBBuildBinPath. In the MSBuild object model, "BinPath" relates to the Toolset you are running. The steps to get the path from the build engine are as follows:  
-  
-1.  Get the default tools version.  
-  
-2.  Get the Toolset map.  
-  
-3.  Find the Toolset, based on the string in the map.  
-  
-4.  Get the Toolset.  
-  
-5.  Get the path from the Toolset.  
-  
- This procedure is not required if you are creating the engine. In that case, you already know the Toolset path.  
-  
- Because projects in a solution can use different Toolsets, you can also obtain the MSBuild.exe path from the project, as follows.  
-  
-```  
-project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue   
-```  
-  
- For more information about Toolsets, see `MSBuild Tool Set (ToolsVersion)`.  
-  
-   
-  
-## Examples  
- The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  
-  
- :::code language="csharp" source="~/snippets/csharp/Microsoft.Build.BuildEngine/ConsoleLogger/Parameters/Program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb" id="Snippet1":::  
-  
- ]]></format>
-        </remarks>
+            BinPath is an obsolete concept. We retain it for now for all the hosts that use the BinPath
+            property, or the Engine(binPath) constructor, but internally it is just the tools path
+            of the default tools version.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildEnabled">
@@ -326,6 +325,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -341,10 +341,15 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value that indicates whether the building of targets in the project is enabled.</summary>
+        <summary>
+            This is the default value used by newly created projects for whether or not the building
+            of targets is enabled.  This is for security purposes in case a host wants to closely
+            control which projects it allows to run targets/tasks.
+            </summary>
         <value>
           <see langword="true" /> if the building of targets in the project is enabled; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="BuildProject">
@@ -369,6 +374,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -383,11 +389,14 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to build.</param>
-        <summary>Builds the specified <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <param name="project" />
+        <summary>
+            Builds the default targets in an already-loaded project.
+            </summary>
         <returns>
           <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProject">
@@ -403,6 +412,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -412,12 +422,15 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to build.</param>
-        <param name="targetName">The <see langword="Name" /> attribute of the Target element to build.</param>
-        <summary>Builds the specified target of the specified <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <param name="project" />
+        <param name="targetName" />
+        <summary>
+            Builds a single target in an already-loaded project.
+            </summary>
         <returns>
           <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProject">
@@ -433,6 +446,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -448,12 +462,15 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetNames" Type="System.String[]" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <summary>Builds the specified targets of the specified <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <param name="project" />
+        <param name="targetNames" />
+        <summary>
+            Builds a list of targets in an already-loaded project.
+            </summary>
         <returns>
           <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProject">
@@ -469,6 +486,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -485,13 +503,16 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) if outputs are not required.</param>
-        <summary>Builds the specified targets of the specified <see cref="T:Microsoft.Build.BuildEngine.Project" />, and returns the outputs of the targets.</summary>
+        <param name="project" />
+        <param name="targetNames" />
+        <param name="targetOutputs" />
+        <summary>
+            Builds a list of targets in an already-loaded project, and returns the target outputs.
+            </summary>
         <returns>
           <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProject">
@@ -507,6 +528,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -518,14 +540,17 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) if outputs are not required.</param>
-        <param name="buildFlags">The <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> to apply to the build.</param>
-        <summary>Builds the specified targets of the specified <see cref="T:Microsoft.Build.BuildEngine.Project" /> with the specified <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" />, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="project" />
+        <param name="targetNames" />
+        <param name="targetOutputs" />
+        <param name="buildFlags">whether previously built targets should be reset or not</param>
+        <summary>
+            Builds a list of targets in an already-loaded project using the specified
+            flags, and returns the target outputs.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <MemberGroup MemberName="BuildProjectFile">
@@ -561,6 +586,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -569,10 +595,11 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="projectFile" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <summary>Loads the specified project file and builds the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <summary>
+            Loads a project file from disk, and builds the default targets.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -584,6 +611,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -599,6 +627,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -608,12 +637,14 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <param name="targetName">The <see langword="Name" /> attribute of the Target element to build.</param>
-        <summary>Loads the specified project file and builds the specified target of the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <param name="targetName">Can be null, if caller wants to build the default targets for the project.</param>
+        <summary>
+            Loads a project file from disk, and builds the specified target.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -629,6 +660,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -638,12 +670,14 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetNames" Type="System.String[]" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <summary>Loads the specified project file and builds the specified targets of the project.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <param name="targetNames">Can be null, if caller wants to build the default targets for the project.</param>
+        <summary>
+            Loads a project file from disk, and builds the specified list of targets.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -659,6 +693,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -675,13 +710,16 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <param name="globalProperties">The <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> to apply to the build.</param>
-        <summary>Loads the specified project file and builds the specified targets of the project with the specified <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <param name="targetNames">Can be null, if caller wants to build the default targets for the project.</param>
+        <param name="globalProperties">Can be null if no global properties are needed.</param>
+        <summary>
+            Loads a project file from disk, and builds the specified list of targets.  This overload
+            takes a set of global properties to use for the build.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -697,6 +735,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -714,14 +753,17 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <param name="globalProperties">The <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> to apply to the build.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) if outputs are not required.</param>
-        <summary>Loads the specified project file and builds the specified targets of the project with the specified <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <param name="targetNames">Can be null, if caller wants to build the default targets for the project.</param>
+        <param name="globalProperties">Can be null if no global properties are needed.</param>
+        <param name="targetOutputs">Can be null if outputs are not needed.</param>
+        <summary>
+            Loads a project file from disk, and builds the specified list of targets.  This overload
+            takes a set of global properties to use for the build and returns the target outputs.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -737,6 +779,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -749,15 +792,22 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The project file to load and build.</param>
-        <param name="targetNames">An array that contains the <see langword="Name" /> attributes of the Target elements to build.</param>
-        <param name="globalProperties">The <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> to apply to the build.</param>
-        <param name="targetOutputs">The outputs of the built targets. This parameter can be a null reference (<see langword="Nothing" /> in Visual Basic) if outputs are not required.</param>
-        <param name="buildFlags">The <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> to apply to the build.</param>
-        <summary>Loads the specified project file and builds the specified targets of the project with the specified <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> and <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, and returns the outputs of the targets.</summary>
-        <returns>
-          <see langword="true" /> if the build was successful; otherwise, <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <param name="projectFile" />
+        <param name="targetNames">Can be null, if caller wants to build the default targets for the project.</param>
+        <param name="globalProperties">Can be null if no global properties are needed.</param>
+        <param name="targetOutputs">Can be null if outputs are not needed.</param>
+        <param name="buildFlags">Specifies additional options to alter the behavior of the build.</param>
+        <summary>
+            Loads a project file from disk, and builds the specified list of targets.  This overload
+            takes a set of global properties to use for the build, returns the target outputs, and also
+            allows the caller to specify additional build flags.
+            </summary>
+        <returns>true, if build succeeds</returns>
+        <remarks>
+            If this project file is already in our list of in-progress projects, we use the
+            existing Project object instead of instantiating a new one. Always use this method to
+            build projects within projects, otherwise the build won't be optimized.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFile">
@@ -772,36 +822,37 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetNames" Type="System.String[]" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="2" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" Index="3" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersion" Type="System.String" Index="5" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetNames" Type="System.String[]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersion" Type="System.String" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="projectFile">The name of the project to build.</param>
-        <param name="targetNames">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> array of targets for each project. Can be <see langword="null" /> if you want to build the default targets for the project.</param>
-        <param name="globalProperties">An <see cref="T:System.Collections.IDictionary" /> array of properties for each project. Can be <see langword="null" /> if no global properties are required.</param>
-        <param name="targetOutputs">A <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> array of tables for target outputs. Can be <see langword="null" /> if outputs are not required.</param>
-        <param name="buildFlags">A string array of additional build flags.</param>
-        <param name="toolsVersion">The ToolsVersion to impose on the project in this build.</param>
-        <summary>Loads a project file from disk and builds the given targets.</summary>
-        <returns>
-          <see langword="true" /> if the build succeeds; otherwise, <see langword="false" />.</returns>
+        <param name="projectFile" />
+        <param name="targetNames">Can be null, if caller wants to build the default targets for the project.</param>
+        <param name="globalProperties">Can be null if no global properties are needed.</param>
+        <param name="targetOutputs">Can be null if outputs are not needed.</param>
+        <param name="buildFlags">Specifies additional options to alter the behavior of the build.</param>
+        <param name="toolsVersion">Tools version to impose on the project in this build</param>
+        <summary>
+            Loads a project file from disk, and builds the specified list of targets.  This overload
+            takes a set of global properties to use for the build, returns the target outputs, and also
+            allows the caller to specify additional build flags.
+            </summary>
+        <returns>true, if build succeeds</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This overload takes a set of global properties for each project to use for the build, returns the target outputs, and also enables the caller to specify additional build flags.  
-  
- ]]></format>
-        </remarks>
+            If this project file is already in our list of in-progress projects, we use the
+            existing Project object instead of instantiating a new one. Always use this method to
+            build projects within projects, otherwise the build won't be optimized.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildProjectFiles">
@@ -816,28 +867,32 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFiles" Type="System.String[]" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetNamesPerProject" Type="System.String[][]" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="globalPropertiesPerProject" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup[]" Index="2" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" Index="3" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersions" Type="System.String[]" Index="5" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFiles" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetNamesPerProject" Type="System.String[][]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalPropertiesPerProject" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup[]" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersions" Type="System.String[]" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
-        <param name="projectFiles">A string list of project files to build. This value cannot be <see langword="null" />.</param>
-        <param name="targetNamesPerProject">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> array of targets for each project.</param>
-        <param name="globalPropertiesPerProject">An <see cref="T:System.Collections.IDictionary" /> array of properties for each project. This value cannot be <see langword="null" />.</param>
-        <param name="targetOutputsPerProject">A <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> array of tables for target outputs. This value cannot be <see langword="null" />.</param>
-        <param name="buildFlags">A string array of additional build flags.</param>
-        <param name="toolsVersions">The ToolsVersion to impose on the project in this build.</param>
-        <summary>Loads a set of project files from disk and then builds the given list of targets for each project.</summary>
-        <returns>
-          <see langword="true" /> if the project built successfully; otherwise, <see langword="false" />.</returns>
+        <param name="projectFiles">Array of project files to build (can't be null)</param>
+        <param name="targetNamesPerProject">Array of targets for each project(can't be null)</param>
+        <param name="globalPropertiesPerProject">Array of properties for each project (can't be null)</param>
+        <param name="targetOutputsPerProject">Array of tables for target outputs (can't be null)</param>
+        <param name="buildFlags" />
+        <param name="toolsVersions">Tools version to impose on the project in this build</param>
+        <summary>
+            Loads a set of project files from disk, and builds the given list of targets for each one. This overload
+            takes a set of global properties for each project to use for the build, returns the target outputs,
+            and also allows the caller to specify additional build flags.
+            </summary>
+        <returns>True if all given project build successfully</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -861,15 +916,20 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.Project</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Creates an empty <see cref="T:Microsoft.Build.BuildEngine.Project" /> object that is associated with this <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
-        <returns>The created <see cref="T:Microsoft.Build.BuildEngine.Project" /> object.</returns>
+        <summary>
+            Creates a new empty Project object that is associated with this engine. All projects must be associated with an
+            engine, because they need loggers, global properties, reserved properties, etc.
+            </summary>
+        <returns>The created project.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="DefaultToolsVersion">
@@ -884,12 +944,18 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The default ToolsVersion of this build engine.</summary>
+        <summary>
+            The default tools version of this Engine. Projects use this tools version if they
+            aren't otherwise told what tools version to use.
+            This value is gotten from the .exe.config file, or else in the registry,
+            or if neither specify a default tools version then it is hard-coded to the tools version "2.0".
+            </summary>
         <value>A string that represents the default ToolsVersion.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -914,6 +980,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.Project</ReturnType>
@@ -922,10 +989,14 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="projectFullFileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="projectFullFileName">The fully qualified file path to the project file of the <see cref="T:Microsoft.Build.BuildEngine.Project" /> object.</param>
-        <summary>Returns the <see cref="T:Microsoft.Build.BuildEngine.Project" /> object that is associated with the specified project file.</summary>
-        <returns>The <see cref="T:Microsoft.Build.BuildEngine.Project" /> object that associated with the specified project file. If no <see cref="T:Microsoft.Build.BuildEngine.Project" /> object is associated with the specified project file, the method returns a null reference (<see langword="Nothing" /> in Visual Basic).</returns>
+        <param name="projectFullFileName" />
+        <summary>
+            Retrieves the project object for the specified project file full path, if it has
+            been loaded by this Engine.  Returns null if this project is unknown to us.
+            </summary>
+        <returns>The project object associated with this engine that matches the full path.</returns>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GlobalEngine">
@@ -941,14 +1012,19 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.Engine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the <see cref="T:Microsoft.Build.BuildEngine.Engine" /> that is global (shared) for this <see cref="T:System.AppDomain" />.</summary>
-        <value>The <see cref="T:Microsoft.Build.BuildEngine.Engine" /> that is global (shared) for this <see cref="T:System.AppDomain" />.</value>
+        <summary>
+            Returns an instance of the Engine that is global (shared) for this AppDomain.
+            Delays creation until necessary.
+            </summary>
+        <value>The global Engine instance.</value>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="GlobalProperties">
@@ -964,6 +1040,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -979,8 +1056,12 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a collection of the global properties for the project.</summary>
-        <value>A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that contains the global properties for the project.</value>
+        <summary>
+            Accessor for the engine's global properties. Global properties are those that would be set via the /p: switch at the
+            command-line, or things that the IDE wants to set before building a project (such as the "Configuration" property).
+            These global properties shall be applied to all projects that are built with this engine.
+            </summary>
+        <value>The global property bag.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -989,6 +1070,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
   
  ]]></format>
         </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="IsBuilding">
@@ -1003,12 +1085,15 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets whether a project is currently being built.</summary>
+        <summary>
+            Is this engine in the process of building?
+            </summary>
         <value>
           <see langword="true" /> if a build is in progress; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -1034,12 +1119,15 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value that indicates whether to only log critical events, such as warnings and errors, during the build.</summary>
+        <summary>
+            When true, only log critical events such as warnings and errors. Has to be in here for API compat
+            </summary>
         <value>
           <see langword="true" /> if only critical events should be logged; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
@@ -1057,18 +1145,23 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="centralLogger" Type="Microsoft.Build.Framework.ILogger" Index="0" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="forwardingLogger" Type="Microsoft.Build.BuildEngine.LoggerDescription" Index="1" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="centralLogger" Type="Microsoft.Build.Framework.ILogger" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="forwardingLogger" Type="Microsoft.Build.BuildEngine.LoggerDescription" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="centralLogger">An <see cref="T:Microsoft.Build.Framework.ILogger" /> that represents the central logger.</param>
         <param name="forwardingLogger">A <see cref="T:Microsoft.Build.BuildEngine.LoggerDescription" /> that represents the forwarding logger.</param>
-        <summary>Registers distributed loggers with the build engine.</summary>
+        <summary>
+            Called to register distributed loggers with the engine.
+            This method is not thread safe. All loggers should registered prior to
+            starting the build in order to guarantee uniform behavior
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1077,6 +1170,8 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
   
  ]]></format>
         </remarks>
+        <exception cref="T:Microsoft.Build.Framework.LoggerException">Logger indicating it failed in a controlled way</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InternalLoggerException">Logger threw arbitrary exception</exception>
       </Docs>
     </Member>
     <Member MemberName="RegisterLogger">
@@ -1092,6 +1187,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1101,7 +1197,9 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
       </Parameters>
       <Docs>
         <param name="logger">The logger to associate with the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</param>
-        <summary>Registers the specified logger with the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <summary>
+            Called to register loggers with the engine. Once loggers are registered, all build events will be sent to them.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1120,6 +1218,8 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
   
  ]]></format>
         </remarks>
+        <exception cref="T:Microsoft.Build.Framework.LoggerException">Logger indicating it failed in a controlled way</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InternalLoggerException">Logger threw arbitrary exception</exception>
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
@@ -1134,13 +1234,17 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Called when the host is finished with this build engine. It unregisters loggers and shuts down nodes.</summary>
+        <summary>
+            Called when the host is done with this engine; unregisters loggers and
+            shuts down nodes and TEM's.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1156,6 +1260,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyName>Microsoft.Build.Engine</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1167,7 +1272,9 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <ReturnType>Microsoft.Build.BuildEngine.ToolsetCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the collection of Toolsets that are recognized by this build engine instance.</summary>
+        <summary>
+            Returns the collection of Toolsets recognized by this Engine instance.
+            </summary>
         <value>A <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> of the tools sets recognized by this engine instance.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1185,14 +1292,19 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Removes all references to <see cref="T:Microsoft.Build.BuildEngine.Project" /> objects from the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <summary>
+            Remove all references to Project objects from our cache.  This is called by the
+            IDE on Solution Close.
+            </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="UnloadProject">
@@ -1208,6 +1320,7 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1216,9 +1329,19 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
       </Parameters>
       <Docs>
-        <param name="project">The <see cref="T:Microsoft.Build.BuildEngine.Project" /> to remove from the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</param>
-        <summary>Removes the reference to the specified <see cref="T:Microsoft.Build.BuildEngine.Project" /> from the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <param name="project" />
+        <summary>
+             Removes a project object from our hash table of loaded projects.  After this is
+             called, it is illegal to attempt to do anything else with the Project, so don't
+             call it unless you are completely done with the project.
+            
+             IDEs should call this when they're done with a particular project.  This
+             causes us to unhook the project from the Engine object, so that there
+             will be no more references to the project, and the garbage collector
+             can clean up.
+             </summary>
         <remarks>To be added.</remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
     <Member MemberName="UnregisterAllLoggers">
@@ -1234,13 +1357,16 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Unregisters all loggers from the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <summary>
+            Clear out all registered loggers so that none are registered.
+            </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1257,6 +1383,8 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
   
  ]]></format>
         </remarks>
+        <exception cref="T:Microsoft.Build.Framework.LoggerException">Logger indicating it failed in a controlled way</exception>
+        <exception cref="T:Microsoft.Build.BuildEngine.InternalLoggerException">Logger threw arbitrary exception</exception>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -1272,14 +1400,21 @@ project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Version</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the version of the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
-        <value>The version of the <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            Gets the file version of the file in which the Engine assembly lies.
+            </summary>
+        <value>The engine version string.</value>
+        <remarks>
+            This is the Windows file version (specifically the value of the ProductVersion
+            resource), not necessarily the assembly version.
+            </remarks>
+        <owner>RGoel</owner>
       </Docs>
     </Member>
   </Members>

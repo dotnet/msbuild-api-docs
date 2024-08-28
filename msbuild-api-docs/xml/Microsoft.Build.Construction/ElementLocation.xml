@@ -81,6 +81,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EmptyLocation">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ElementLocation EmptyLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Construction.ElementLocation EmptyLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ElementLocation.EmptyLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EmptyLocation As ElementLocation" />
+      <MemberSignature Language="F#" Value="static member EmptyLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ElementLocation.EmptyLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Build::Construction::ElementLocation ^ EmptyLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the empty element location.
+            This is not to be used when something is "missing": that should have a null location.
+            It is to be used for the project location when the project has not been given a name.
+            In that case, it exists, but can't have a specific location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Equals">
       <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />

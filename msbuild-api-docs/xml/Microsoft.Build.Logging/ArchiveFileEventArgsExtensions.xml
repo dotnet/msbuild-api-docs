@@ -1,0 +1,70 @@
+<Type Name="ArchiveFileEventArgsExtensions" FullName="Microsoft.Build.Logging.ArchiveFileEventArgsExtensions">
+  <TypeSignature Language="C#" Value="public static class ArchiveFileEventArgsExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ArchiveFileEventArgsExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.ArchiveFileEventArgsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ArchiveFileEventArgsExtensions" />
+  <TypeSignature Language="F#" Value="type ArchiveFileEventArgsExtensions = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ArchiveFileEventArgsExtensions abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToArchiveFileHandler">
+      <MemberSignature Language="C#" Value="public static Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt; ToArchiveFileHandler (this Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; stringHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Action`1&lt;class Microsoft.Build.Logging.ArchiveFileEventArgs&gt; ToArchiveFileHandler(class System.Action`1&lt;class Microsoft.Build.Logging.StringReadEventArgs&gt; stringHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ArchiveFileEventArgsExtensions.ToArchiveFileHandler(System.Action{Microsoft.Build.Logging.StringReadEventArgs})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ToArchiveFileHandler (stringHandler As Action(Of StringReadEventArgs)) As Action(Of ArchiveFileEventArgs)" />
+      <MemberSignature Language="F#" Value="static member ToArchiveFileHandler : Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; -&gt; Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;" Usage="Microsoft.Build.Logging.ArchiveFileEventArgsExtensions.ToArchiveFileHandler stringHandler" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Action&lt;Microsoft::Build::Logging::ArchiveFileEventArgs ^&gt; ^ ToArchiveFileHandler(Action&lt;Microsoft::Build::Logging::StringReadEventArgs ^&gt; ^ stringHandler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stringHandler" Type="System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="stringHandler">To be added.</param>
+        <summary>
+             Helper method that allows to subscribe to <see cref="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered" /> event via <see cref="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone" /> event handler.
+            
+             This applies only when subscriber is OK with greedy reading entire content of the file and is interested only in the individual strings (e.g. for sensitive data redaction purposes),
+              without distinction what each individual string means (e.g. they do not care about distinction between path and content or between individual files - they just need all textual data).
+            
+             <example><code>
+             private void OnStringReadDone(StringReadEventArgs e)
+             {
+                 e.StringToBeUsed = e.StringToBeUsed.Replace("foo", "bar");
+             }
+            
+             private void SubscribeToEvents()
+             {
+                 reader.StringReadDone += OnStringReadDone;
+                 reader.ArchiveFileEncountered += ((Action&lt;StringReadEventArgs&gt;)OnStringReadDone).ToArchiveFileHandler();
+             }
+             </code></example></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
