@@ -10,12 +10,15 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>Specifies constants that define the location in the project to insert a property.</summary>
+    <summary>
+            The position of a property to be set inside a project file.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -32,13 +35,17 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.PropertyPosition</ReturnType>
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>Replace the existing Property element if it exists. Otherwise, create the <c>Property</c> after the last Import element in the project.</summary>
+        <summary>
+            Replace existing compatible property if present.
+            Otherwise, create the property after the last imported project.
+            </summary>
       </Docs>
     </Member>
     <Member MemberName="UseExistingOrCreateAfterLastPropertyGroup">
@@ -54,13 +61,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.BuildEngine.PropertyPosition</ReturnType>
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>Replace the existing Property element if it exists. Otherwise, if possible, create a new <c>Property</c> element as a child of an existing compatible PropertyGroup element. If necessary, create a new compatible <c>PropertyGroup</c> element immediately following the last <c>PropertyGroup</c> in the project.</summary>
+        <summary>
+            Replace existing compatible property if present.
+            Otherwise, if possible, create a new property in an existing compatible property group.
+            If necessary, create a new compatible property group right after the last one in the project.
+            </summary>
       </Docs>
     </Member>
   </Members>

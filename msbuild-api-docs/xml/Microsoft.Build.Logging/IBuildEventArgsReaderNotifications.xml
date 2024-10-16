@@ -1,18 +1,15 @@
 <Type Name="IBuildEventArgsReaderNotifications" FullName="Microsoft.Build.Logging.IBuildEventArgsReaderNotifications">
-  <TypeSignature Language="C#" Value="public interface IBuildEventArgsReaderNotifications : Microsoft.Build.Logging.IBuildEventStringsReader" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBuildEventArgsReaderNotifications implements class Microsoft.Build.Logging.IBuildEventStringsReader" />
+  <TypeSignature Language="C#" Value="public interface IBuildEventArgsReaderNotifications" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBuildEventArgsReaderNotifications" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" />
-  <TypeSignature Language="VB.NET" Value="Public Interface IBuildEventArgsReaderNotifications&#xA;Implements IBuildEventStringsReader" />
-  <TypeSignature Language="F#" Value="type IBuildEventArgsReaderNotifications = interface&#xA;    interface IBuildEventStringsReader" />
-  <TypeSignature Language="C++ CLI" Value="public interface class IBuildEventArgsReaderNotifications : Microsoft::Build::Logging::IBuildEventStringsReader" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IBuildEventArgsReaderNotifications" />
+  <TypeSignature Language="F#" Value="type IBuildEventArgsReaderNotifications = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IBuildEventArgsReaderNotifications" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
-    <Interface>
-      <InterfaceName>Microsoft.Build.Logging.IBuildEventStringsReader</InterfaceName>
-    </Interface>
   </Interfaces>
   <Docs>
     <summary>
@@ -20,5 +17,112 @@
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
-  <Members />
+  <Members>
+    <Member MemberName="ArchiveFileEncountered">
+      <MemberSignature Language="C#" Value="event Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;? ArchiveFileEncountered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.ArchiveFileEventArgs&gt; ArchiveFileEncountered" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.ArchiveFileEncountered" />
+      <MemberSignature Language="VB.NET" Value="Event ArchiveFileEncountered As Action(Of ArchiveFileEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ArchiveFileEncountered : Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt; " Usage="member this.ArchiveFileEncountered : System.Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Action&lt;Microsoft::Build::Logging::ArchiveFileEventArgs ^&gt; ^ ArchiveFileEncountered;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.ArchiveFileEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             An event that allows the caller to be notified when an embedded file is encountered in the binary log.
+             When subscriber is OK with greedy reading entire content of the file and is interested only in the individual strings (e.g. for sensitive data redaction purposes),
+              it can simplify subscribing to this event, by using handler with same signature as handler for <see cref="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone" /> and wrapping it via
+             <see cref="M:Microsoft.Build.Logging.ArchiveFileEventArgsExtensions.ToArchiveFileHandler(System.Action{Microsoft.Build.Logging.StringReadEventArgs})" /> extension.
+             </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <code>
+             private void OnStringReadDone(StringReadEventArgs e)
+             {
+                 e.StringToBeUsed = e.StringToBeUsed.Replace("foo", "bar");
+             }
+            
+             private void SubscribeToEvents()
+             {
+                 reader.StringReadDone += OnStringReadDone;
+                 reader.ArchiveFileEncountered += ((Action&lt;StringReadEventArgs&gt;)OnStringReadDone).ToArchiveFileHandler();
+             }
+             </code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="RecoverableReadError">
+      <MemberSignature Language="C#" Value="event Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt;? RecoverableReadError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; RecoverableReadError" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.RecoverableReadError" />
+      <MemberSignature Language="VB.NET" Value="Event RecoverableReadError As Action(Of BinaryLogReaderErrorEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.RecoverableReadError : Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; " Usage="member this.RecoverableReadError : System.Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Action&lt;Microsoft::Build::Logging::BinaryLogReaderErrorEventArgs ^&gt; ^ RecoverableReadError;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Receives recoverable errors during reading.
+            Communicates type of the error, kind of the record that encountered the error and the message detailing the error.
+            In case of <see cref="F:Microsoft.Build.Logging.ReaderErrorType.UnknownEventData" /> this is raised before returning the structured representation of a build event
+            that has some extra unknown data in the binlog. In case of other error types this event is raised and the offending build event is skipped and not returned.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringReadDone">
+      <MemberSignature Language="C#" Value="event Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;? StringReadDone;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Microsoft.Build.Logging.StringReadEventArgs&gt; StringReadDone" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Build.Logging.IBuildEventArgsReaderNotifications.StringReadDone" />
+      <MemberSignature Language="VB.NET" Value="Event StringReadDone As Action(Of StringReadEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StringReadDone : Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " Usage="member this.StringReadDone : System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Action&lt;Microsoft::Build::Logging::StringReadEventArgs ^&gt; ^ StringReadDone;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.Build.Logging.StringReadEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An event that allows the subscriber to be notified when a string is read from the binary log.
+            Subscriber may adjust the string by setting <see cref="P:Microsoft.Build.Logging.StringReadEventArgs.StringToBeUsed" /> property.
+            The passed event arg can be reused and should not be stored.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
 </Type>
