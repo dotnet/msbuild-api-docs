@@ -63,6 +63,28 @@
             </summary>
       </Docs>
     </Member>
+    <Member MemberName="DefaultTargets">
+      <MemberSignature Language="C#" Value="DefaultTargets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.TargetBuiltReason DefaultTargets = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.TargetBuiltReason.DefaultTargets" />
+      <MemberSignature Language="VB.NET" Value="DefaultTargets" />
+      <MemberSignature Language="F#" Value="DefaultTargets = 5" Usage="Microsoft.Build.Framework.TargetBuiltReason.DefaultTargets" />
+      <MemberSignature Language="C++ CLI" Value="DefaultTargets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TargetBuiltReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The target was one of the default targets of the project.
+            </summary>
+      </Docs>
+    </Member>
     <Member MemberName="DependsOn">
       <MemberSignature Language="C#" Value="DependsOn" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.TargetBuiltReason DependsOn = int32(2)" />
@@ -82,6 +104,50 @@
       <Docs>
         <summary>
             The target was part of the parent's DependsOn list.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryTargets">
+      <MemberSignature Language="C#" Value="EntryTargets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.TargetBuiltReason EntryTargets = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.TargetBuiltReason.EntryTargets" />
+      <MemberSignature Language="VB.NET" Value="EntryTargets" />
+      <MemberSignature Language="F#" Value="EntryTargets = 6" Usage="Microsoft.Build.Framework.TargetBuiltReason.EntryTargets" />
+      <MemberSignature Language="C++ CLI" Value="EntryTargets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TargetBuiltReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            The target was one of the targets explicitly called to be built.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialTargets">
+      <MemberSignature Language="C#" Value="InitialTargets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.TargetBuiltReason InitialTargets = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.TargetBuiltReason.InitialTargets" />
+      <MemberSignature Language="VB.NET" Value="InitialTargets" />
+      <MemberSignature Language="F#" Value="InitialTargets = 4" Usage="Microsoft.Build.Framework.TargetBuiltReason.InitialTargets" />
+      <MemberSignature Language="C++ CLI" Value="InitialTargets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TargetBuiltReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The target was defined as an initial target of the project.
             </summary>
       </Docs>
     </Member>

@@ -1,0 +1,93 @@
+<Type Name="EvaluationCheckScope" FullName="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope">
+  <TypeSignature Language="C#" Value="public enum EvaluationCheckScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EvaluationCheckScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope" />
+  <TypeSignature Language="VB.NET" Value="Public Enum EvaluationCheckScope" />
+  <TypeSignature Language="F#" Value="type EvaluationCheckScope = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class EvaluationCheckScope" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+             For datasource events that can differentiate from where exactly they originate - e.g.
+              For a condition string or AST - was that directly in the checked project or imported?
+            
+             Ignored by infrastructure if the current datasource doesn't support this level of setting.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope All = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.All" />
+      <MemberSignature Language="VB.NET" Value="All" />
+      <MemberSignature Language="F#" Value="All = 2" Usage="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.All" />
+      <MemberSignature Language="C++ CLI" Value="All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            All data will be sent to the check.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFileOnly">
+      <MemberSignature Language="C#" Value="ProjectFileOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope ProjectFileOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.ProjectFileOnly" />
+      <MemberSignature Language="VB.NET" Value="ProjectFileOnly" />
+      <MemberSignature Language="F#" Value="ProjectFileOnly = 0" Usage="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.ProjectFileOnly" />
+      <MemberSignature Language="C++ CLI" Value="ProjectFileOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Only the data from currently checked project will be sent to the check. Imports will be discarded.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkTreeImports">
+      <MemberSignature Language="C#" Value="WorkTreeImports" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope WorkTreeImports = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.WorkTreeImports" />
+      <MemberSignature Language="VB.NET" Value="WorkTreeImports" />
+      <MemberSignature Language="F#" Value="WorkTreeImports = 1" Usage="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.WorkTreeImports" />
+      <MemberSignature Language="C++ CLI" Value="WorkTreeImports" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Only the data from currently checked project and imports from files not recognized to be in nuget cache or SDK install folder will be sent to the check. Other imports will be discarded.
+            The generated nuget.g.props, nuget.g.targets will be ignored as well.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

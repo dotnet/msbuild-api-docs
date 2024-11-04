@@ -1,0 +1,194 @@
+<Type Name="CheckConfiguration" FullName="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration">
+  <TypeSignature Language="C#" Value="public class CheckConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class CheckConfiguration" />
+  <TypeSignature Language="F#" Value="type CheckConfiguration = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CheckConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Configuration for a build check.
+            Default values can be specified by the Check in code.
+            Users can overwrite the defaults by explicit settings in the .editorconfig file.
+            Each rule can have its own configuration, which can differ per each project.
+            The <see cref="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.EvaluationCheckScope" /> setting must be same for all rules in the same check (but can differ between projects)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CheckConfiguration();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.BuildCheck.CheckConfiguration Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Experimental.BuildCheck.CheckConfiguration Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Default" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As CheckConfiguration" />
+      <MemberSignature Language="F#" Value="static member Default : Microsoft.Build.Experimental.BuildCheck.CheckConfiguration" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Default" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Build::Experimental::BuildCheck::CheckConfiguration ^ Default { Microsoft::Build::Experimental::BuildCheck::CheckConfiguration ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.CheckConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluationCheckScope">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope? EvaluationCheckScope { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope&gt; EvaluationCheckScope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.EvaluationCheckScope" />
+      <MemberSignature Language="VB.NET" Value="Public Property EvaluationCheckScope As Nullable(Of EvaluationCheckScope)" />
+      <MemberSignature Language="F#" Value="member this.EvaluationCheckScope : Nullable&lt;Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope&gt; with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.EvaluationCheckScope" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope&gt; EvaluationCheckScope { Nullable&lt;Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope&gt; get(); void set(Nullable&lt;Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             This applies only to specific events, that can distinguish whether they are directly inferred from
+              the current project, or from some import. If supported it can help tuning the level of detail or noise from check.
+            
+             If not supported by the data source - then the setting is ignored
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool? IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.IsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEnabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : Nullable&lt;bool&gt;" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.IsEnabled" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; IsEnabled { Nullable&lt;bool&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether the check rule is enabled.
+            If all rules within the check are not enabled, it will not be run.
+            If some rules are enabled and some are not, the check will be run and reports will be post-filtered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.BuildCheck.CheckConfiguration Null { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Experimental.BuildCheck.CheckConfiguration Null" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Null" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Null As CheckConfiguration" />
+      <MemberSignature Language="F#" Value="static member Null : Microsoft.Build.Experimental.BuildCheck.CheckConfiguration" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Null" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Build::Experimental::BuildCheck::CheckConfiguration ^ Null { Microsoft::Build::Experimental::BuildCheck::CheckConfiguration ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Experimental.BuildCheck.CheckConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleId">
+      <MemberSignature Language="C#" Value="public string? RuleId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuleId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.RuleId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RuleId As String" />
+      <MemberSignature Language="F#" Value="member this.RuleId : string" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.RuleId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RuleId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Severity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.BuildCheck.CheckResultSeverity? Severity { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Build.Experimental.BuildCheck.CheckResultSeverity&gt; Severity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Severity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Severity As Nullable(Of CheckResultSeverity)" />
+      <MemberSignature Language="F#" Value="member this.Severity : Nullable&lt;Microsoft.Build.Experimental.BuildCheck.CheckResultSeverity&gt; with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration.Severity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Build::Experimental::BuildCheck::CheckResultSeverity&gt; Severity { Nullable&lt;Microsoft::Build::Experimental::BuildCheck::CheckResultSeverity&gt; get(); void set(Nullable&lt;Microsoft::Build::Experimental::BuildCheck::CheckResultSeverity&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Build.Experimental.BuildCheck.CheckResultSeverity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The severity of the result for the rule.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
