@@ -1,0 +1,194 @@
+<Type Name="BuildSubmissionStartedEventArgs" FullName="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class BuildSubmissionStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BuildSubmissionStartedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BuildSubmissionStartedEventArgs&#xA;Inherits BuildStatusEventArgs" />
+  <TypeSignature Language="F#" Value="type BuildSubmissionStartedEventArgs = class&#xA;    inherit BuildStatusEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildSubmissionStartedEventArgs sealed : Microsoft::Build::Framework::BuildStatusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildSubmissionStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildSubmissionStartedEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructor with default values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildSubmissionStartedEventArgs (System.Collections.Generic.IReadOnlyDictionary&lt;string,string?&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;string&gt; entryProjectsFullPath, System.Collections.Generic.IEnumerable&lt;string&gt; targetNames, Microsoft.Build.Execution.BuildRequestDataFlags flags, int submissionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;string&gt; entryProjectsFullPath, class System.Collections.Generic.IEnumerable`1&lt;string&gt; targetNames, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, int32 submissionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},Microsoft.Build.Execution.BuildRequestDataFlags,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IReadOnlyDictionary(Of String, String), entryProjectsFullPath As IEnumerable(Of String), targetNames As IEnumerable(Of String), flags As BuildRequestDataFlags, submissionId As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildSubmissionStartedEventArgs : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * seq&lt;string&gt; * seq&lt;string&gt; * Microsoft.Build.Execution.BuildRequestDataFlags * int -&gt; Microsoft.Build.Framework.BuildSubmissionStartedEventArgs" Usage="new Microsoft.Build.Framework.BuildSubmissionStartedEventArgs (globalProperties, entryProjectsFullPath, targetNames, flags, submissionId)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildSubmissionStartedEventArgs(System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ entryProjectsFullPath, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ targetNames, Microsoft::Build::Execution::BuildRequestDataFlags flags, int submissionId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="entryProjectsFullPath" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="targetNames" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
+        <Parameter Name="submissionId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">To be added.</param>
+        <param name="entryProjectsFullPath">To be added.</param>
+        <param name="targetNames">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="submissionId">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryProjectsFullPath">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; EntryProjectsFullPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EntryProjectsFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.EntryProjectsFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property EntryProjectsFullPath As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.EntryProjectsFullPath : seq&lt;string&gt; with get, set" Usage="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.EntryProjectsFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EntryProjectsFullPath { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); void set(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildRequestDataFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.BuildRequestDataFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.Flags" />
+      <MemberSignature Language="VB.NET" Value="Public Property Flags As BuildRequestDataFlags" />
+      <MemberSignature Language="F#" Value="member this.Flags : Microsoft.Build.Execution.BuildRequestDataFlags with get, set" Usage="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.Flags" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildRequestDataFlags Flags { Microsoft::Build::Execution::BuildRequestDataFlags get(); void set(Microsoft::Build::Execution::BuildRequestDataFlags value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string?&gt; GlobalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.GlobalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public Property GlobalProperties As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.GlobalProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalProperties { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); void set(System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public int SubmissionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.SubmissionId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubmissionId As Integer" />
+      <MemberSignature Language="F#" Value="member this.SubmissionId : int with get, set" Usage="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.SubmissionId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int SubmissionId { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; TargetNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; TargetNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.TargetNames" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetNames As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.TargetNames : seq&lt;string&gt; with get, set" Usage="Microsoft.Build.Framework.BuildSubmissionStartedEventArgs.TargetNames" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ TargetNames { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); void set(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -18,6 +18,10 @@
       <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
     </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -75,17 +79,24 @@
       </Docs>
     </Member>
     <Member MemberName="FilePath">
-      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" FrameworkAlternate="msbuild-17" />
       <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilePath As String" />
       <MemberSignature Language="F#" Value="member this.FilePath : string" Usage="Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FilePath { System::String ^ get(); };" />
+      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
