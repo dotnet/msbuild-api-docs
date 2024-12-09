@@ -1,0 +1,181 @@
+<Type Name="Check" FullName="Microsoft.Build.Experimental.BuildCheck.Check">
+  <TypeSignature Language="C#" Value="public abstract class Check : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Check extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.Check" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Check&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Check = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Check abstract : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Base class for build checks.
+            Same base will be used for custom and built-in checks.
+            <see cref="T:Microsoft.Build.Experimental.BuildCheck.Check" /> is a unit of build checks execution, but it can contain multiple rules - each representing a distinct violation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Check ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.Check.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Check();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.Check.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="check.Dispose " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FriendlyName">
+      <MemberSignature Language="C#" Value="public abstract string FriendlyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FriendlyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.Check.FriendlyName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FriendlyName As String" />
+      <MemberSignature Language="F#" Value="member this.FriendlyName : string" Usage="Microsoft.Build.Experimental.BuildCheck.Check.FriendlyName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FriendlyName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Friendly name of the check.
+            Should be unique - as it will be used in the tracing stats, infrastructure error messages, etc.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public abstract void Initialize (Microsoft.Build.Experimental.BuildCheck.ConfigurationContext configurationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Experimental.BuildCheck.ConfigurationContext configurationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.Check.Initialize(Microsoft.Build.Experimental.BuildCheck.ConfigurationContext)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Initialize (configurationContext As ConfigurationContext)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.Build.Experimental.BuildCheck.ConfigurationContext -&gt; unit" Usage="check.Initialize configurationContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Initialize(Microsoft::Build::Experimental::BuildCheck::ConfigurationContext ^ configurationContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configurationContext" Type="Microsoft.Build.Experimental.BuildCheck.ConfigurationContext" />
+      </Parameters>
+      <Docs>
+        <param name="configurationContext">
+            Custom data (not recognized by the infrastructure) passed from .editorconfig
+            Currently the custom data has to be identical for all rules in the check and all projects.
+            </param>
+        <summary>
+            Optional initialization of the check.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterActions">
+      <MemberSignature Language="C#" Value="public abstract void RegisterActions (Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext registrationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterActions(class Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext registrationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.Check.RegisterActions(Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterActions (registrationContext As IBuildCheckRegistrationContext)" />
+      <MemberSignature Language="F#" Value="abstract member RegisterActions : Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext -&gt; unit" Usage="check.RegisterActions registrationContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterActions(Microsoft::Build::Experimental::BuildCheck::IBuildCheckRegistrationContext ^ registrationContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registrationContext" Type="Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext" />
+      </Parameters>
+      <Docs>
+        <param name="registrationContext">
+            The context that enables subscriptions for data pumping from the infrastructure.
+            </param>
+        <summary>
+            Used by the implementors to subscribe to data and events they are interested in.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedRules">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.CheckRule&gt; SupportedRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Experimental.BuildCheck.CheckRule&gt; SupportedRules" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.Check.SupportedRules" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SupportedRules As IReadOnlyList(Of CheckRule)" />
+      <MemberSignature Language="F#" Value="member this.SupportedRules : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.CheckRule&gt;" Usage="Microsoft.Build.Experimental.BuildCheck.Check.SupportedRules" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Experimental::BuildCheck::CheckRule ^&gt; ^ SupportedRules { System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Experimental::BuildCheck::CheckRule ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.CheckRule&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Single or multiple rules supported by the check.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

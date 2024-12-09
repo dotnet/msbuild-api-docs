@@ -1,10 +1,15 @@
 <Type Name="BuildSubmission" FullName="Microsoft.Build.Execution.BuildSubmission">
-  <TypeSignature Language="C#" Value="public class BuildSubmission" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildSubmission extends System.Object" />
+  <TypeSignature Language="C#" Value="public class BuildSubmission" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildSubmission extends System.Object" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildSubmission" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildSubmission" />
-  <TypeSignature Language="F#" Value="type BuildSubmission = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildSubmission" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildSubmission" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type BuildSubmission = class" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildSubmission" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class BuildSubmission : Microsoft.Build.Execution.BuildSubmissionBase&lt;Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.Execution.BuildResult&gt;" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildSubmission extends Microsoft.Build.Execution.BuildSubmissionBase`2&lt;class Microsoft.Build.Execution.BuildRequestData, class Microsoft.Build.Execution.BuildResult&gt;" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildSubmission&#xA;Inherits BuildSubmissionBase(Of BuildRequestData, BuildResult)" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BuildSubmission = class&#xA;    inherit BuildSubmissionBase&lt;BuildRequestData, BuildResult&gt;" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildSubmission : Microsoft::Build::Execution::BuildSubmissionBase&lt;Microsoft::Build::Execution::BuildRequestData ^, Microsoft::Build::Execution::BuildResult ^&gt;" FrameworkAlternate="msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -12,11 +17,22 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17-netcore">Microsoft.Build.Execution.BuildSubmissionBase&lt;Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.Execution.BuildResult&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRequestData">Microsoft.Build.Execution.BuildRequestData</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TResultData">Microsoft.Build.Execution.BuildResult</BaseTypeArgument>
+    </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            A BuildSubmission represents an build request which has been submitted to the BuildManager for processing.  It may be used to
+            A BuildSubmission represents a build request which has been submitted to the BuildManager for processing.  It may be used to
             execute synchronous or asynchronous build requests and provides access to the results upon completion.
             </summary>
     <remarks>
@@ -25,12 +41,13 @@
   </Docs>
   <Members>
     <Member MemberName="AsyncContext">
-      <MemberSignature Language="C#" Value="public object AsyncContext { get; }" />
+      <MemberSignature Language="C#" Value="public object AsyncContext { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance object AsyncContext" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.AsyncContext" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AsyncContext As Object" />
       <MemberSignature Language="F#" Value="member this.AsyncContext : obj" Usage="Microsoft.Build.Execution.BuildSubmission.AsyncContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ AsyncContext { System::Object ^ get(); };" />
+      <MemberSignature Language="C#" Value="public object? AsyncContext { get; }" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -52,6 +69,7 @@
             </summary>
         <value>The asynchronous context provided to <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, or <see langword="null" /> if no context is provided.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.AsyncContext" />
       </Docs>
     </Member>
     <Member MemberName="BuildManager">
@@ -68,6 +86,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -82,15 +104,20 @@
             </summary>
         <value>The build manager this build submission is associated with.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.BuildManager" />
       </Docs>
     </Member>
     <Member MemberName="BuildResult">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult BuildResult { get; set; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult BuildResult { get; set; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.BuildResult BuildResult" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.BuildResult" />
-      <MemberSignature Language="VB.NET" Value="Public Property BuildResult As BuildResult" />
-      <MemberSignature Language="F#" Value="member this.BuildResult : Microsoft.Build.Execution.BuildResult with get, set" Usage="Microsoft.Build.Execution.BuildSubmission.BuildResult" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildResult ^ BuildResult { Microsoft::Build::Execution::BuildResult ^ get(); void set(Microsoft::Build::Execution::BuildResult ^ value); };" />
+      <MemberSignature Language="VB.NET" Value="Public Property BuildResult As BuildResult" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="F#" Value="member this.BuildResult : Microsoft.Build.Execution.BuildResult with get, set" Usage="Microsoft.Build.Execution.BuildSubmission.BuildResult" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildResult ^ BuildResult { Microsoft::Build::Execution::BuildResult ^ get(); void set(Microsoft::Build::Execution::BuildResult ^ value); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult? BuildResult { get; }" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildResult As BuildResult" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="member this.BuildResult : Microsoft.Build.Execution.BuildResult" Usage="Microsoft.Build.Execution.BuildSubmission.BuildResult" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildResult ^ BuildResult { Microsoft::Build::Execution::BuildResult ^ get(); };" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -123,15 +150,70 @@
   
  ]]></format>
         </remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase`2.BuildResult" />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckResultValidForCompletion">
+      <MemberSignature Language="C#" Value="protected internal override void CheckResultValidForCompletion (Microsoft.Build.Execution.BuildResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CheckResultValidForCompletion(class Microsoft.Build.Execution.BuildResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.CheckResultValidForCompletion(Microsoft.Build.Execution.BuildResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub CheckResultValidForCompletion (result As BuildResult)" />
+      <MemberSignature Language="F#" Value="override this.CheckResultValidForCompletion : Microsoft.Build.Execution.BuildResult -&gt; unit" Usage="buildSubmission.CheckResultValidForCompletion result" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void CheckResultValidForCompletion(Microsoft::Build::Execution::BuildResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="Microsoft.Build.Execution.BuildResult" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFailedResult">
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.Build.Execution.BuildResult CreateFailedResult (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.Build.Execution.BuildResult CreateFailedResult(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.CreateFailedResult(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateFailedResult (exception As Exception) As BuildResult" />
+      <MemberSignature Language="F#" Value="override this.CreateFailedResult : Exception -&gt; Microsoft.Build.Execution.BuildResult" Usage="buildSubmission.CreateFailedResult exception" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::Build::Execution::BuildResult ^ CreateFailedResult(Exception ^ exception);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="exception">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult Execute ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.BuildResult Execute() cil managed" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult Execute ();" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.BuildResult Execute() cil managed" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.Execute" />
-      <MemberSignature Language="VB.NET" Value="Public Function Execute () As BuildResult" />
-      <MemberSignature Language="F#" Value="member this.Execute : unit -&gt; Microsoft.Build.Execution.BuildResult" Usage="buildSubmission.Execute " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::BuildResult ^ Execute();" />
+      <MemberSignature Language="VB.NET" Value="Public Function Execute () As BuildResult" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="F#" Value="member this.Execute : unit -&gt; Microsoft.Build.Execution.BuildResult" Usage="buildSubmission.Execute " FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::BuildResult ^ Execute();" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Execution.BuildResult Execute ();" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.Build.Execution.BuildResult Execute() cil managed" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As BuildResult" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; Microsoft.Build.Execution.BuildResult" Usage="buildSubmission.Execute " FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Microsoft::Build::Execution::BuildResult ^ Execute();" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -152,12 +234,14 @@
       </Docs>
     </Member>
     <Member MemberName="ExecuteAsync">
-      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context);" />
+      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExecuteAsync(class Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ExecuteAsync (callback As BuildSubmissionCompleteCallback, context As Object)" />
-      <MemberSignature Language="F#" Value="member this.ExecuteAsync : Microsoft.Build.Execution.BuildSubmissionCompleteCallback * obj -&gt; unit" Usage="buildSubmission.ExecuteAsync (callback, context)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : Microsoft.Build.Execution.BuildSubmissionCompleteCallback * obj -&gt; unit" Usage="buildSubmission.ExecuteAsync (callback, context)" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ExecuteAsync(Microsoft::Build::Execution::BuildSubmissionCompleteCallback ^ callback, System::Object ^ context);" />
+      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback? callback, object? context);" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="override this.ExecuteAsync : Microsoft.Build.Execution.BuildSubmissionCompleteCallback * obj -&gt; unit" Usage="buildSubmission.ExecuteAsync (callback, context)" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -210,6 +294,28 @@
         <value>
           <see langword="true" /> if this build submission is complete; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.IsCompleted" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompletition">
+      <MemberSignature Language="C#" Value="protected internal override void OnCompletition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnCompletition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.OnCompletition" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnCompletition ()" />
+      <MemberSignature Language="F#" Value="override this.OnCompletition : unit -&gt; unit" Usage="buildSubmission.OnCompletition " />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnCompletition();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SubmissionId">
@@ -247,6 +353,7 @@
   
  ]]></format>
         </remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.SubmissionId" />
       </Docs>
     </Member>
     <Member MemberName="WaitHandle">
@@ -263,6 +370,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -277,6 +388,7 @@
             </summary>
         <value>Returns null until <see cref="M:Microsoft.Build.Execution.BuildSubmission.Execute" /> or <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> returns, then returns the WaitHandle object.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.WaitHandle" />
       </Docs>
     </Member>
   </Members>

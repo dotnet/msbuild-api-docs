@@ -1,0 +1,126 @@
+<Type Name="IMSBuildElementLocation" FullName="Microsoft.Build.Shared.IMSBuildElementLocation">
+  <TypeSignature Language="C#" Value="public interface IMSBuildElementLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMSBuildElementLocation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Shared.IMSBuildElementLocation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IMSBuildElementLocation" />
+  <TypeSignature Language="F#" Value="type IMSBuildElementLocation = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IMSBuildElementLocation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the location information for error reporting purposes.  This is normally used to
+            associate a run-time error with the original XML.
+            This is not used for arbitrary errors from tasks, which store location in a BuildXXXXEventArgs.
+            All implementations should be IMMUTABLE.
+            Any editing of the project XML through the MSBuild API's will invalidate locations in that XML until the XML is reloaded.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Shared.IMSBuildElementLocation.Column" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Column As Integer" />
+      <MemberSignature Language="F#" Value="member this.Column : int" Usage="Microsoft.Build.Shared.IMSBuildElementLocation.Column" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Column { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The column number where this element exists in its file.
+            The first column is numbered 1.
+            Zero indicates "unknown location".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="public string File { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string File" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Shared.IMSBuildElementLocation.File" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property File As String" />
+      <MemberSignature Language="F#" Value="member this.File : string" Usage="Microsoft.Build.Shared.IMSBuildElementLocation.File" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ File { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The file from which this particular element originated.  It may
+            differ from the ProjectFile if, for instance, it was part of
+            an import or originated in a targets file.
+            Should always have a value.
+            If not known, returns empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public int Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Shared.IMSBuildElementLocation.Line" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Line As Integer" />
+      <MemberSignature Language="F#" Value="member this.Line : int" Usage="Microsoft.Build.Shared.IMSBuildElementLocation.Line" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Line { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The line number where this element exists in its file.
+            The first line is numbered 1.
+            Zero indicates "unknown location".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationString">
+      <MemberSignature Language="C#" Value="public string LocationString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocationString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Shared.IMSBuildElementLocation.LocationString" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocationString As String" />
+      <MemberSignature Language="F#" Value="member this.LocationString : string" Usage="Microsoft.Build.Shared.IMSBuildElementLocation.LocationString" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocationString { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location in a form suitable for replacement
+            into a message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

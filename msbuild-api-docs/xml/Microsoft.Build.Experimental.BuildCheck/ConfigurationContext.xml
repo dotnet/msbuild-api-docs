@@ -18,18 +18,37 @@
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(1)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(1)&gt;]</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            Holder of an optional configuration from .editorconfig file (not recognized by the infrastructure)
+            Holder of configuration from .editorconfig file (not recognized by the infrastructure)
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="CheckConfig">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.Infrastructure.CheckConfigurationEffective&gt; CheckConfig { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Experimental.BuildCheck.Infrastructure.CheckConfigurationEffective&gt; CheckConfig" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.ConfigurationContext.CheckConfig" />
+      <MemberSignature Language="VB.NET" Value="Public Property CheckConfig As IReadOnlyList(Of CheckConfigurationEffective)" />
+      <MemberSignature Language="F#" Value="member this.CheckConfig : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.Infrastructure.CheckConfigurationEffective&gt; with get, set" Usage="Microsoft.Build.Experimental.BuildCheck.ConfigurationContext.CheckConfig" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Experimental::BuildCheck::Infrastructure::CheckConfigurationEffective ^&gt; ^ CheckConfig { System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Experimental::BuildCheck::Infrastructure::CheckConfigurationEffective ^&gt; ^ get(); void set(System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Experimental::BuildCheck::Infrastructure::CheckConfigurationEffective ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.Infrastructure.CheckConfigurationEffective&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Infrastructure configuration data
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CustomConfigurationData">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData&gt; CustomConfigurationData { get; init; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Experimental.BuildCheck.CustomConfigurationData&gt; CustomConfigurationData" />

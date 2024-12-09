@@ -1,0 +1,54 @@
+<Type Name="BuildCheckReplayModeConnector" FullName="Microsoft.Build.Experimental.BuildCheck.BuildCheckReplayModeConnector">
+  <TypeSignature Language="C#" Value="public static class BuildCheckReplayModeConnector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BuildCheckReplayModeConnector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckReplayModeConnector" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildCheckReplayModeConnector" />
+  <TypeSignature Language="F#" Value="type BuildCheckReplayModeConnector = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildCheckReplayModeConnector abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The class that creates an <see cref="T:Microsoft.Build.Framework.IEventSource" /> for binary log replay with BuildCheck enabled.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetMergedEventSource">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Framework.IEventSource GetMergedEventSource (Microsoft.Build.Execution.BuildManager buildManager, Microsoft.Build.Framework.IEventSource replayEventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Framework.IEventSource GetMergedEventSource(class Microsoft.Build.Execution.BuildManager buildManager, class Microsoft.Build.Framework.IEventSource replayEventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckReplayModeConnector.GetMergedEventSource(Microsoft.Build.Execution.BuildManager,Microsoft.Build.Framework.IEventSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetMergedEventSource (buildManager As BuildManager, replayEventSource As IEventSource) As IEventSource" />
+      <MemberSignature Language="F#" Value="static member GetMergedEventSource : Microsoft.Build.Execution.BuildManager * Microsoft.Build.Framework.IEventSource -&gt; Microsoft.Build.Framework.IEventSource" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckReplayModeConnector.GetMergedEventSource (buildManager, replayEventSource)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Framework::IEventSource ^ GetMergedEventSource(Microsoft::Build::Execution::BuildManager ^ buildManager, Microsoft::Build::Framework::IEventSource ^ replayEventSource);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IEventSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildManager" Type="Microsoft.Build.Execution.BuildManager" />
+        <Parameter Name="replayEventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="buildManager">
+          <see cref="T:Microsoft.Build.Execution.BuildManager" /> to get the registered <see cref="T:Microsoft.Build.Experimental.BuildCheck.Infrastructure.IBuildCheckManagerProvider" /> component from.</param>
+        <param name="replayEventSource">The initial event source.</param>
+        <summary>
+            Gets merged <see cref="T:Microsoft.Build.Framework.IEventSource" /> for binary log replay with BuildCheck enabled.
+            </summary>
+        <returns>The merged <see cref="T:Microsoft.Build.Framework.IEventSource" />. Used for binary log replay.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

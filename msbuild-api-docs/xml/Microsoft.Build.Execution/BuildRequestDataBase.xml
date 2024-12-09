@@ -1,0 +1,206 @@
+<Type Name="BuildRequestDataBase" FullName="Microsoft.Build.Execution.BuildRequestDataBase">
+  <TypeSignature Language="C#" Value="public abstract class BuildRequestDataBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BuildRequestDataBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildRequestDataBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BuildRequestDataBase" />
+  <TypeSignature Language="F#" Value="type BuildRequestDataBase = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildRequestDataBase abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildRequestDataBase (System.Collections.Generic.ICollection&lt;string&gt; targetNames, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Execution.HostServices? hostServices);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.ICollection`1&lt;string&gt; targetNames, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestDataBase.#ctor(System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.BuildRequestDataFlags,Microsoft.Build.Execution.HostServices)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (targetNames As ICollection(Of String), flags As BuildRequestDataFlags, hostServices As HostServices)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestDataBase : System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.BuildRequestDataFlags * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Execution.BuildRequestDataBase" Usage="new Microsoft.Build.Execution.BuildRequestDataBase (targetNames, flags, hostServices)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BuildRequestDataBase(System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetNames, Microsoft::Build::Execution::BuildRequestDataFlags flags, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetNames" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
+        <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="targetNames">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="hostServices">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryProjectsFullPath">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;string&gt; EntryProjectsFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EntryProjectsFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.EntryProjectsFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EntryProjectsFullPath As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.EntryProjectsFullPath : seq&lt;string&gt;" Usage="Microsoft.Build.Execution.BuildRequestDataBase.EntryProjectsFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EntryProjectsFullPath { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildRequestDataFlags Flags { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.BuildRequestDataFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.Flags" />
+      <MemberSignature Language="VB.NET" Value="Public Property Flags As BuildRequestDataFlags" />
+      <MemberSignature Language="F#" Value="member this.Flags : Microsoft.Build.Execution.BuildRequestDataFlags with get, set" Usage="Microsoft.Build.Execution.BuildRequestDataBase.Flags" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Build::Execution::BuildRequestDataFlags Flags {  public:&#xA;Microsoft::Build::Execution::BuildRequestDataFlags get(); protected:&#xA; void set(Microsoft::Build::Execution::BuildRequestDataFlags value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Extra flags for this BuildRequest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalPropertiesLookup">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IReadOnlyDictionary&lt;string,string?&gt; GlobalPropertiesLookup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GlobalPropertiesLookup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.GlobalPropertiesLookup" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property GlobalPropertiesLookup As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalPropertiesLookup : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Execution.BuildRequestDataBase.GlobalPropertiesLookup" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalPropertiesLookup { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the global properties to use for this entry point.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices? HostServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.HostServices HostServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.HostServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostServices As HostServices" />
+      <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices" Usage="Microsoft.Build.Execution.BuildRequestDataBase.HostServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::HostServices ^ HostServices { Microsoft::Build::Execution::HostServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.HostServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the HostServices object for this request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGraphRequest">
+      <MemberSignature Language="C#" Value="public abstract bool IsGraphRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGraphRequest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.IsGraphRequest" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsGraphRequest As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGraphRequest : bool" Usage="Microsoft.Build.Execution.BuildRequestDataBase.IsGraphRequest" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsGraphRequest { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; TargetNames { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; TargetNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestDataBase.TargetNames" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetNames As ICollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.TargetNames : System.Collections.Generic.ICollection&lt;string&gt; with get, set" Usage="Microsoft.Build.Execution.BuildRequestDataBase.TargetNames" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ TargetNames {  public:&#xA;System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); protected:&#xA; void set(System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the targets to build.
+            </summary>
+        <value>An array of targets in the project to be built.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
