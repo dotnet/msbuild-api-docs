@@ -31,7 +31,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buildFinishedAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.BuildFinishedCheckData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="buildFinishedAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.BuildFinishedCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
         <param name="buildFinishedAction">To be added.</param>
@@ -55,7 +55,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="environmentVariableAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EnvironmentVariableCheckData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="environmentVariableAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EnvironmentVariableCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
         <param name="environmentVariableAction">To be added.</param>
@@ -63,13 +63,13 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="RegisterEvaluatedPropertiesAction">
-      <MemberSignature Language="C#" Value="public void RegisterEvaluatedPropertiesAction (Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData&gt;&gt; evaluatedPropertiesAction);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterEvaluatedPropertiesAction(class System.Action`1&lt;class Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1&lt;class Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData&gt;&gt; evaluatedPropertiesAction) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEvaluatedPropertiesAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData}})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub RegisterEvaluatedPropertiesAction (evaluatedPropertiesAction As Action(Of BuildCheckDataContext(Of EvaluatedPropertiesAnalysisData)))" />
-      <MemberSignature Language="F#" Value="abstract member RegisterEvaluatedPropertiesAction : Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData&gt;&gt; -&gt; unit" Usage="iBuildCheckRegistrationContext.RegisterEvaluatedPropertiesAction evaluatedPropertiesAction" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterEvaluatedPropertiesAction(Action&lt;Microsoft::Build::Experimental::BuildCheck::BuildCheckDataContext&lt;Microsoft::Build::Experimental::BuildCheck::EvaluatedPropertiesAnalysisData ^&gt; ^&gt; ^ evaluatedPropertiesAction);" />
+    <Member MemberName="RegisterEvaluatedItemsAction">
+      <MemberSignature Language="C#" Value="public void RegisterEvaluatedItemsAction (Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData&gt;&gt; evaluatedItemsAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterEvaluatedItemsAction(class System.Action`1&lt;class Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1&lt;class Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData&gt;&gt; evaluatedItemsAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEvaluatedItemsAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData}})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterEvaluatedItemsAction (evaluatedItemsAction As Action(Of BuildCheckDataContext(Of EvaluatedItemsCheckData)))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterEvaluatedItemsAction : Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData&gt;&gt; -&gt; unit" Usage="iBuildCheckRegistrationContext.RegisterEvaluatedItemsAction evaluatedItemsAction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterEvaluatedItemsAction(Action&lt;Microsoft::Build::Experimental::BuildCheck::BuildCheckDataContext&lt;Microsoft::Build::Experimental::BuildCheck::EvaluatedItemsCheckData ^&gt; ^&gt; ^ evaluatedItemsAction);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -79,10 +79,10 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="evaluatedPropertiesAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesAnalysisData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="evaluatedItemsAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="evaluatedPropertiesAction">To be added.</param>
+        <param name="evaluatedItemsAction">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -103,34 +103,10 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="evaluatedPropertiesAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="evaluatedPropertiesAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
         <param name="evaluatedPropertiesAction">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RegisterParsedItemsAction">
-      <MemberSignature Language="C#" Value="public void RegisterParsedItemsAction (Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData&gt;&gt; parsedItemsAction);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterParsedItemsAction(class System.Action`1&lt;class Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1&lt;class Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData&gt;&gt; parsedItemsAction) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterParsedItemsAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData}})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub RegisterParsedItemsAction (parsedItemsAction As Action(Of BuildCheckDataContext(Of ParsedItemsAnalysisData)))" />
-      <MemberSignature Language="F#" Value="abstract member RegisterParsedItemsAction : Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData&gt;&gt; -&gt; unit" Usage="iBuildCheckRegistrationContext.RegisterParsedItemsAction parsedItemsAction" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterParsedItemsAction(Action&lt;Microsoft::Build::Experimental::BuildCheck::BuildCheckDataContext&lt;Microsoft::Build::Experimental::BuildCheck::ParsedItemsAnalysisData ^&gt; ^&gt; ^ parsedItemsAction);" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="parsedItemsAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ParsedItemsAnalysisData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17" />
-      </Parameters>
-      <Docs>
-        <param name="parsedItemsAction">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,11 +123,17 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use RegisterEvaluatedItemsAction to obtain evaluated items of a project.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use RegisterEvaluatedItemsAction to obtain evaluated items of a project.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="parsedItemsAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="parsedItemsAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
         <param name="parsedItemsAction">To be added.</param>
@@ -159,13 +141,13 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="RegisterTaskInvocationAction">
-      <MemberSignature Language="C#" Value="public void RegisterTaskInvocationAction (Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData&gt;&gt; taskInvocationAction);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterTaskInvocationAction(class System.Action`1&lt;class Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1&lt;class Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData&gt;&gt; taskInvocationAction) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterTaskInvocationAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData}})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub RegisterTaskInvocationAction (taskInvocationAction As Action(Of BuildCheckDataContext(Of TaskInvocationAnalysisData)))" />
-      <MemberSignature Language="F#" Value="abstract member RegisterTaskInvocationAction : Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData&gt;&gt; -&gt; unit" Usage="iBuildCheckRegistrationContext.RegisterTaskInvocationAction taskInvocationAction" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterTaskInvocationAction(Action&lt;Microsoft::Build::Experimental::BuildCheck::BuildCheckDataContext&lt;Microsoft::Build::Experimental::BuildCheck::TaskInvocationAnalysisData ^&gt; ^&gt; ^ taskInvocationAction);" />
+    <Member MemberName="RegisterProjectImportedAction">
+      <MemberSignature Language="C#" Value="public void RegisterProjectImportedAction (Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData&gt;&gt; projectImportedAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterProjectImportedAction(class System.Action`1&lt;class Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1&lt;class Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData&gt;&gt; projectImportedAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterProjectImportedAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData}})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterProjectImportedAction (projectImportedAction As Action(Of BuildCheckDataContext(Of ProjectImportedCheckData)))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterProjectImportedAction : Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData&gt;&gt; -&gt; unit" Usage="iBuildCheckRegistrationContext.RegisterProjectImportedAction projectImportedAction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterProjectImportedAction(Action&lt;Microsoft::Build::Experimental::BuildCheck::BuildCheckDataContext&lt;Microsoft::Build::Experimental::BuildCheck::ProjectImportedCheckData ^&gt; ^&gt; ^ projectImportedAction);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -175,10 +157,10 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="taskInvocationAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationAnalysisData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17" />
+        <Parameter Name="projectImportedAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="taskInvocationAction">To be added.</param>
+        <param name="projectImportedAction">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,7 +181,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="taskInvocationAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData&gt;&gt;" Index="0" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="taskInvocationAction" Type="System.Action&lt;Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData&gt;&gt;" />
       </Parameters>
       <Docs>
         <param name="taskInvocationAction">To be added.</param>

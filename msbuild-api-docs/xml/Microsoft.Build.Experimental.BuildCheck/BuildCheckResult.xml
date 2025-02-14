@@ -30,31 +30,6 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildCheckResult (Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule buildAnalyzerRule, Microsoft.Build.Construction.ElementLocation location, string[] messageArgs);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule buildAnalyzerRule, class Microsoft.Build.Construction.ElementLocation location, string[] messageArgs) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.#ctor(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (buildAnalyzerRule As BuildAnalyzerRule, location As ElementLocation, messageArgs As String())" />
-      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.BuildCheckResult : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule * Microsoft.Build.Construction.ElementLocation * string[] -&gt; Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" Usage="new Microsoft.Build.Experimental.BuildCheck.BuildCheckResult (buildAnalyzerRule, location, messageArgs)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildCheckResult(Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ buildAnalyzerRule, Microsoft::Build::Construction::ElementLocation ^ location, cli::array &lt;System::String ^&gt; ^ messageArgs);" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="buildAnalyzerRule" Type="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Index="0" FrameworkAlternate="msbuild-17" />
-        <Parameter Name="location" Type="Microsoft.Build.Construction.ElementLocation" Index="1" FrameworkAlternate="msbuild-17" />
-        <Parameter Name="messageArgs" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-17" />
-      </Parameters>
-      <Docs>
-        <param name="buildAnalyzerRule">To be added.</param>
-        <param name="location">To be added.</param>
-        <param name="messageArgs">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildCheckResult (Microsoft.Build.Experimental.BuildCheck.CheckRule checkConfig, Microsoft.Build.Shared.IMSBuildElementLocation location, string[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Experimental.BuildCheck.CheckRule checkConfig, class Microsoft.Build.Shared.IMSBuildElementLocation location, string[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.#ctor(Microsoft.Build.Experimental.BuildCheck.CheckRule,Microsoft.Build.Shared.IMSBuildElementLocation,System.String[])" />
@@ -67,36 +42,15 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="checkConfig" Type="Microsoft.Build.Experimental.BuildCheck.CheckRule" Index="0" FrameworkAlternate="msbuild-17-netcore" />
-        <Parameter Name="location" Type="Microsoft.Build.Shared.IMSBuildElementLocation" Index="1" FrameworkAlternate="msbuild-17-netcore" />
-        <Parameter Name="messageArgs" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-17-netcore" />
+        <Parameter Name="checkConfig" Type="Microsoft.Build.Experimental.BuildCheck.CheckRule" />
+        <Parameter Name="location" Type="Microsoft.Build.Shared.IMSBuildElementLocation" />
+        <Parameter Name="messageArgs" Type="System.String[]" />
       </Parameters>
       <Docs>
         <param name="checkConfig">To be added.</param>
         <param name="location">To be added.</param>
         <param name="messageArgs">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="BuildAnalyzerRule">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule BuildAnalyzerRule { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule BuildAnalyzerRule" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.BuildAnalyzerRule" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildAnalyzerRule As BuildAnalyzerRule" />
-      <MemberSignature Language="F#" Value="member this.BuildAnalyzerRule : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.BuildAnalyzerRule" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ BuildAnalyzerRule { Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ get(); };" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Build</AssemblyName>
-        <AssemblyVersion>15.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,39 +75,24 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.Build.Experimental.BuildCheck.BuildCheckResult Create (Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule rule, Microsoft.Build.Construction.ElementLocation location, params string[] messageArgs);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Experimental.BuildCheck.BuildCheckResult Create(class Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule rule, class Microsoft.Build.Construction.ElementLocation location, string[] messageArgs) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create(Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule,Microsoft.Build.Construction.ElementLocation,System.String[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (rule As BuildAnalyzerRule, location As ElementLocation, ParamArray messageArgs As String()) As BuildCheckResult" />
-      <MemberSignature Language="F#" Value="static member Create : Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule * Microsoft.Build.Construction.ElementLocation * string[] -&gt; Microsoft.Build.Experimental.BuildCheck.BuildCheckResult" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create (rule, location, messageArgs)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Experimental::BuildCheck::BuildCheckResult ^ Create(Microsoft::Build::Experimental::BuildCheck::BuildAnalyzerRule ^ rule, Microsoft::Build::Construction::ElementLocation ^ location, ... cli::array &lt;System::String ^&gt; ^ messageArgs);" />
-      <MemberType>Method</MemberType>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public string Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Code" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Code" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Code As String" />
+      <MemberSignature Language="F#" Value="member this.Code : string" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Code" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Code { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildCheckResult</ReturnType>
+        <ReturnType>System.String</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="rule" Type="Microsoft.Build.Experimental.BuildCheck.BuildAnalyzerRule" Index="0" FrameworkAlternate="msbuild-17" />
-        <Parameter Name="location" Type="Microsoft.Build.Construction.ElementLocation" Index="1" FrameworkAlternate="msbuild-17" />
-        <Parameter Name="messageArgs" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-17">
-          <Attributes>
-            <Attribute>
-              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
-              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
       <Docs>
-        <param name="rule">To be added.</param>
-        <param name="location">To be added.</param>
-        <param name="messageArgs">To be added.</param>
         <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,9 +112,9 @@
         <ReturnType>Microsoft.Build.Experimental.BuildCheck.BuildCheckResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="rule" Type="Microsoft.Build.Experimental.BuildCheck.CheckRule" Index="0" FrameworkAlternate="msbuild-17-netcore" />
-        <Parameter Name="location" Type="Microsoft.Build.Shared.IMSBuildElementLocation" Index="1" FrameworkAlternate="msbuild-17-netcore" />
-        <Parameter Name="messageArgs" Type="System.String[]" Index="2" FrameworkAlternate="msbuild-17-netcore">
+        <Parameter Name="rule" Type="Microsoft.Build.Experimental.BuildCheck.CheckRule" />
+        <Parameter Name="location" Type="Microsoft.Build.Shared.IMSBuildElementLocation" />
+        <Parameter Name="messageArgs" Type="System.String[]">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -216,25 +155,19 @@
       </Docs>
     </Member>
     <Member MemberName="Location">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation Location { get; }" FrameworkAlternate="msbuild-17" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" FrameworkAlternate="msbuild-17" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Shared.IMSBuildElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Shared.IMSBuildElementLocation Location" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As ElementLocation" FrameworkAlternate="msbuild-17" />
-      <MemberSignature Language="F#" Value="member this.Location : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" FrameworkAlternate="msbuild-17" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ Location { Microsoft::Build::Construction::ElementLocation ^ get(); };" FrameworkAlternate="msbuild-17" />
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Shared.IMSBuildElementLocation Location { get; }" FrameworkAlternate="msbuild-17-netcore" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Shared.IMSBuildElementLocation Location" FrameworkAlternate="msbuild-17-netcore" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As IMSBuildElementLocation" FrameworkAlternate="msbuild-17-netcore" />
-      <MemberSignature Language="F#" Value="member this.Location : Microsoft.Build.Shared.IMSBuildElementLocation" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" FrameworkAlternate="msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Shared::IMSBuildElementLocation ^ Location { Microsoft::Build::Shared::IMSBuildElementLocation ^ get(); };" FrameworkAlternate="msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As IMSBuildElementLocation" />
+      <MemberSignature Language="F#" Value="member this.Location : Microsoft.Build.Shared.IMSBuildElementLocation" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Shared::IMSBuildElementLocation ^ Location { Microsoft::Build::Shared::IMSBuildElementLocation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="msbuild-17">Microsoft.Build.Construction.ElementLocation</ReturnType>
-        <ReturnType FrameworkAlternate="msbuild-17-netcore">Microsoft.Build.Shared.IMSBuildElementLocation</ReturnType>
+        <ReturnType>Microsoft.Build.Shared.IMSBuildElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

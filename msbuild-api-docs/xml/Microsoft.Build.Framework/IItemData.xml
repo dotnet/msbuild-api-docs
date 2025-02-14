@@ -1,0 +1,68 @@
+<Type Name="IItemData" FullName="Microsoft.Build.Framework.IItemData">
+  <TypeSignature Language="C#" Value="public interface IItemData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IItemData" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IItemData" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IItemData" />
+  <TypeSignature Language="F#" Value="type IItemData = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IItemData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a metadata that can natively provide it's metadata.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnumerateMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; EnumerateMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; EnumerateMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IItemData.EnumerateMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public Function EnumerateMetadata () As IEnumerable(Of KeyValuePair(Of String, String))" />
+      <MemberSignature Language="F#" Value="abstract member EnumerateMetadata : unit -&gt; seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;" Usage="iItemData.EnumerateMetadata " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ EnumerateMetadata();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The item metadata
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedInclude">
+      <MemberSignature Language="C#" Value="public string EvaluatedInclude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EvaluatedInclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IItemData.EvaluatedInclude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EvaluatedInclude As String" />
+      <MemberSignature Language="F#" Value="member this.EvaluatedInclude : string" Usage="Microsoft.Build.Framework.IItemData.EvaluatedInclude" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EvaluatedInclude { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the item evaluated include data. It is in fact a 'specification' of the item (e.g. path on disk to a specific ProjectReference)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

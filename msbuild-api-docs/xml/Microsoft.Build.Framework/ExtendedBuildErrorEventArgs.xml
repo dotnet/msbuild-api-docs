@@ -183,7 +183,14 @@
         <Parameter Name="columnNumber" Type="System.Int32" />
         <Parameter Name="endLineNumber" Type="System.Int32" />
         <Parameter Name="endColumnNumber" Type="System.Int32" />
-        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="message" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" />
         <Parameter Name="senderName" Type="System.String" />
         <Parameter Name="eventTimestamp" Type="System.DateTime" />
@@ -248,10 +255,24 @@
         <Parameter Name="columnNumber" Type="System.Int32" />
         <Parameter Name="endLineNumber" Type="System.Int32" />
         <Parameter Name="endColumnNumber" Type="System.Int32" />
-        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="message" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" />
         <Parameter Name="senderName" Type="System.String" />
-        <Parameter Name="helpLink" Type="System.String" />
+        <Parameter Name="helpLink" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("Uri")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("Uri")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="eventTimestamp" Type="System.DateTime" />
         <Parameter Name="messageArgs" Type="System.Object[]">
           <Attributes>

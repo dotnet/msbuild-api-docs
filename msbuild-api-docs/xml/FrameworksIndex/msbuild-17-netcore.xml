@@ -15,6 +15,13 @@
       <Member Id="P:Microsoft.Build.BackEnd.SdkResolution.SdkResolverException.Sdk" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.BuildCheck.Infrastructure">
+    <Type Name="Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier" Id="T:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier">
+      <Member Id="M:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope(Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,Microsoft.Build.Shared.IMSBuildElementLocation,System.String)" />
+      <Member Id="M:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope(Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,System.String,System.String)" />
+      <Member Id="P:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsScopingReady" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Build.BuildEngine">
     <Type Name="Microsoft.Build.BuildEngine.BuildItem" Id="T:Microsoft.Build.BuildEngine.BuildItem">
       <Member Id="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,Microsoft.Build.Framework.ITaskItem)" />
@@ -429,6 +436,7 @@
   <Namespace Name="Microsoft.Build.Construction">
     <Type Name="Microsoft.Build.Construction.ElementLocation" Id="T:Microsoft.Build.Construction.ElementLocation">
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.#ctor" />
+      <Member Id="M:Microsoft.Build.Construction.ElementLocation.Create(System.String,System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.Equals(System.Object)" />
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.GetHashCode" />
       <Member Id="M:Microsoft.Build.Construction.ElementLocation.ToString" />
@@ -1117,6 +1125,7 @@
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadata(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.HasMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.Microsoft#Build#Framework#IItemData#EnumerateMetadata" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.RemoveMetadata(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.Rename(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue(System.String,System.String)" />
@@ -1621,6 +1630,7 @@
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.GetMetadata(System.String)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.GetMetadataValue(System.String)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.HasMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#IItemData#EnumerateMetadata" />
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#CloneCustomMetadata" />
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
       <Member Id="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#GetMetadata(System.String)" />
@@ -1777,6 +1787,7 @@
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Create(Microsoft.Build.Experimental.BuildCheck.CheckRule,Microsoft.Build.Shared.IMSBuildElementLocation,System.String[])" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.FormatMessage" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.CheckRule" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Code" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.Location" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.LocationString" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckResult.MessageArgs" />
@@ -1816,8 +1827,10 @@
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.CheckRule" Id="T:Microsoft.Build.Experimental.BuildCheck.CheckRule">
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CheckRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Experimental.BuildCheck.CheckConfiguration)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.CheckRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Experimental.BuildCheck.CheckConfiguration,System.String)" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.DefaultConfiguration" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.Description" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.HelpLinkUri" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.Id" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.MessageFormat" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.Title" />
@@ -1841,8 +1854,14 @@
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EnvironmentVariableCheckData.EnvironmentVariableName" />
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EnvironmentVariableCheckData.EnvironmentVariableValue" />
     </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData" Id="T:Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData">
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData.EnumerateItemsOfType(System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData.EnumerateItemsOfTypes(System.String[])" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData.EvaluatedItems" />
+    </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData" Id="T:Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData">
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData.EvaluatedProperties" />
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData.GlobalProperties" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope" Id="T:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope">
       <Member Id="F:Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope.All" />
@@ -1852,8 +1871,10 @@
     <Type Name="Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext" Id="T:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext">
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterBuildFinishedAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.BuildFinishedCheckData}})" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEnvironmentVariableReadAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EnvironmentVariableCheckData}})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEvaluatedItemsAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData}})" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterEvaluatedPropertiesAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.EvaluatedPropertiesCheckData}})" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterParsedItemsAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData}})" />
+      <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterProjectImportedAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData}})" />
       <Member Id="M:Microsoft.Build.Experimental.BuildCheck.IBuildCheckRegistrationContext.RegisterTaskInvocationAction(System.Action{Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext{Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData}})" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.ItemsHolder" Id="T:Microsoft.Build.Experimental.BuildCheck.ItemsHolder">
@@ -1867,6 +1888,9 @@
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData" Id="T:Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData">
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData.ItemsHolder" />
+    </Type>
+    <Type Name="Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData" Id="T:Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData">
+      <Member Id="P:Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData.ImportedProjectFileFullPath" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData" Id="T:Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData">
       <Member Id="P:Microsoft.Build.Experimental.BuildCheck.TaskInvocationCheckData.Parameters" />
@@ -2273,6 +2297,7 @@
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
+      <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)" />
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
       <Member Id="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
@@ -2539,6 +2564,10 @@
     <Type Name="Microsoft.Build.Framework.IIncrementalTask" Id="T:Microsoft.Build.Framework.IIncrementalTask">
       <Member Id="P:Microsoft.Build.Framework.IIncrementalTask.FailIfNotIncremental" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.IItemData" Id="T:Microsoft.Build.Framework.IItemData">
+      <Member Id="M:Microsoft.Build.Framework.IItemData.EnumerateMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.IItemData.EvaluatedInclude" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.ILogger" Id="T:Microsoft.Build.Framework.ILogger">
       <Member Id="M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
       <Member Id="M:Microsoft.Build.Framework.ILogger.Shutdown" />
@@ -2585,6 +2614,12 @@
       <Member Id="M:Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral(System.String,System.String)" />
       <Member Id="P:Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.ItemData" Id="T:Microsoft.Build.Framework.ItemData">
+      <Member Id="M:Microsoft.Build.Framework.ItemData.#ctor(System.String,System.Object)" />
+      <Member Id="M:Microsoft.Build.Framework.ItemData.EnumerateMetadata" />
+      <Member Id="P:Microsoft.Build.Framework.ItemData.EvaluatedInclude" />
+      <Member Id="P:Microsoft.Build.Framework.ItemData.Type" />
     </Type>
     <Type Name="Microsoft.Build.Framework.LazyFormattedBuildEventArgs" Id="T:Microsoft.Build.Framework.LazyFormattedBuildEventArgs">
       <Member Id="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor" />
@@ -2675,6 +2710,18 @@
       <Member Id="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" />
     </Type>
     <Type Name="Microsoft.Build.Framework.ProjectStartedEventHandler" Id="T:Microsoft.Build.Framework.ProjectStartedEventHandler" />
+    <Type Name="Microsoft.Build.Framework.PropertyData" Id="T:Microsoft.Build.Framework.PropertyData">
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.Deconstruct(System.String@,System.String@)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.Equals(Microsoft.Build.Framework.PropertyData)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.GetHashCode" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.op_Equality(Microsoft.Build.Framework.PropertyData,Microsoft.Build.Framework.PropertyData)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.op_Inequality(Microsoft.Build.Framework.PropertyData,Microsoft.Build.Framework.PropertyData)" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyData.ToString" />
+      <Member Id="P:Microsoft.Build.Framework.PropertyData.Name" />
+      <Member Id="P:Microsoft.Build.Framework.PropertyData.Value" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.PropertyInitialValueSetEventArgs" Id="T:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs">
       <Member Id="M:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
@@ -3153,6 +3200,7 @@
     </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogRecordKind" Id="T:Microsoft.Build.Logging.BinaryLogRecordKind">
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyLoad" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCanceled" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCheckAcquisition" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCheckError" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCheckMessage" />
@@ -3205,6 +3253,16 @@
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.BuildEventArgsExtensions" Id="T:Microsoft.Build.Logging.BuildEventArgsExtensions">
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems(Microsoft.Build.Framework.ProjectStartedEventArgs)" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs,System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType(Microsoft.Build.Framework.ProjectStartedEventArgs,System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs,System.String[])" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes(Microsoft.Build.Framework.ProjectStartedEventArgs,System.String[])" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs)" />
+      <Member Id="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties(Microsoft.Build.Framework.ProjectStartedEventArgs)" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BuildEventArgsReader" Id="T:Microsoft.Build.Logging.BuildEventArgsReader">
       <Member Id="E:Microsoft.Build.Logging.BuildEventArgsReader.ArchiveFileEncountered" />
@@ -3737,6 +3795,7 @@
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.CultureNeutralAssignedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.Files" />
       <Member Id="P:Microsoft.Build.Tasks.AssignCulture.RespectAlreadyAssignedItemCulture" />
+      <Member Id="P:Microsoft.Build.Tasks.AssignCulture.WarnOnCultureOverwritten" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.AssignLinkMetadata" Id="T:Microsoft.Build.Tasks.AssignLinkMetadata">
       <Member Id="M:Microsoft.Build.Tasks.AssignLinkMetadata.#ctor" />

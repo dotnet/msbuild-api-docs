@@ -14,7 +14,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -48,12 +48,47 @@
         <Parameter Name="defaultConfiguration" Type="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration" />
       </Parameters>
       <Docs>
-        <param name="id">To be added.</param>
-        <param name="title">To be added.</param>
-        <param name="description">To be added.</param>
-        <param name="messageFormat">To be added.</param>
-        <param name="defaultConfiguration">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="id">The id of the rule - used to denote the violation in the outputs</param>
+        <param name="title">The title of the rule - currently unused</param>
+        <param name="description">The detailed description of the rule - currently unused</param>
+        <param name="messageFormat">The message format to be used during reporting the violation.</param>
+        <param name="defaultConfiguration">The default config of this rule - applicable if user doesn't specify custom values in .editorconfig.</param>
+        <summary>
+            Creates the descriptor of the BuildCheck rule
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckRule (string id, string title, string description, string messageFormat, Microsoft.Build.Experimental.BuildCheck.CheckConfiguration defaultConfiguration, string helpLinkUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string title, string description, string messageFormat, class Microsoft.Build.Experimental.BuildCheck.CheckConfiguration defaultConfiguration, string helpLinkUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.BuildCheck.CheckRule.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Experimental.BuildCheck.CheckConfiguration,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (id As String, title As String, description As String, messageFormat As String, defaultConfiguration As CheckConfiguration, helpLinkUri As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.BuildCheck.CheckRule : string * string * string * string * Microsoft.Build.Experimental.BuildCheck.CheckConfiguration * string -&gt; Microsoft.Build.Experimental.BuildCheck.CheckRule" Usage="new Microsoft.Build.Experimental.BuildCheck.CheckRule (id, title, description, messageFormat, defaultConfiguration, helpLinkUri)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CheckRule(System::String ^ id, System::String ^ title, System::String ^ description, System::String ^ messageFormat, Microsoft::Build::Experimental::BuildCheck::CheckConfiguration ^ defaultConfiguration, System::String ^ helpLinkUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="messageFormat" Type="System.String" />
+        <Parameter Name="defaultConfiguration" Type="Microsoft.Build.Experimental.BuildCheck.CheckConfiguration" />
+        <Parameter Name="helpLinkUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">The id of the rule - used to denote the violation in the outputs</param>
+        <param name="title">The title of the rule - currently unused</param>
+        <param name="description">The detailed description of the rule - currently unused</param>
+        <param name="messageFormat">The message format to be used during reporting the violation.</param>
+        <param name="defaultConfiguration">The default config of this rule - applicable if user doesn't specify custom values in .editorconfig.</param>
+        <param name="helpLinkUri">Optional link to more detailed help for the violation.</param>
+        <summary>
+            Creates the descriptor of the BuildCheck rule
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -100,6 +135,27 @@
         <summary>
             More detailed description of the violation the rule can be reporting (with possible suggestions).
             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpLinkUri">
+      <MemberSignature Language="C#" Value="public string HelpLinkUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpLinkUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.CheckRule.HelpLinkUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HelpLinkUri As String" />
+      <MemberSignature Language="F#" Value="member this.HelpLinkUri : string" Usage="Microsoft.Build.Experimental.BuildCheck.CheckRule.HelpLinkUri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HelpLinkUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,0 +1,129 @@
+<Type Name="CheckScopeClassifier" FullName="Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier">
+  <TypeSignature Language="C#" Value="public static class CheckScopeClassifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed CheckScopeClassifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier" />
+  <TypeSignature Language="VB.NET" Value="Public Class CheckScopeClassifier" />
+  <TypeSignature Language="F#" Value="type CheckScopeClassifier = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CheckScopeClassifier abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsActionInObservedScope">
+      <MemberSignature Language="C#" Value="public static bool IsActionInObservedScope (Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope scope, Microsoft.Build.Shared.IMSBuildElementLocation? location, string projectFileFullPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsActionInObservedScope(valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope scope, class Microsoft.Build.Shared.IMSBuildElementLocation location, string projectFileFullPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope(Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,Microsoft.Build.Shared.IMSBuildElementLocation,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsActionInObservedScope (scope As EvaluationCheckScope, location As IMSBuildElementLocation, projectFileFullPath As String) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsActionInObservedScope : Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope * Microsoft.Build.Shared.IMSBuildElementLocation * string -&gt; bool" Usage="Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope (scope, location, projectFileFullPath)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsActionInObservedScope(Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope scope, Microsoft::Build::Shared::IMSBuildElementLocation ^ location, System::String ^ projectFileFullPath);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope" />
+        <Parameter Name="location" Type="Microsoft.Build.Shared.IMSBuildElementLocation">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="projectFileFullPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope" />
+        <param name="location" />
+        <param name="projectFileFullPath" />
+        <summary>
+            Indicates whether given location is in the observed scope, based on currently built project path.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsActionInObservedScope">
+      <MemberSignature Language="C#" Value="public static bool IsActionInObservedScope (Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope scope, string? filePathOfEvent, string projectFileFullPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsActionInObservedScope(valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope scope, string filePathOfEvent, string projectFileFullPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope(Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsActionInObservedScope (scope As EvaluationCheckScope, filePathOfEvent As String, projectFileFullPath As String) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsActionInObservedScope : Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope * string * string -&gt; bool" Usage="Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsActionInObservedScope (scope, filePathOfEvent, projectFileFullPath)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsActionInObservedScope(Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope scope, System::String ^ filePathOfEvent, System::String ^ projectFileFullPath);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope" />
+        <Parameter Name="filePathOfEvent" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="projectFileFullPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope" />
+        <param name="filePathOfEvent" />
+        <param name="projectFileFullPath" />
+        <summary>
+            Indicates whether given location is in the observed scope, based on currently built project path.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsScopingReady">
+      <MemberSignature Language="C#" Value="public static Func&lt;Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,bool&gt; IsScopingReady { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Func`2&lt;valuetype Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope, bool&gt; IsScopingReady" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsScopingReady" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property IsScopingReady As Func(Of EvaluationCheckScope, Boolean)" />
+      <MemberSignature Language="F#" Value="static member IsScopingReady : Func&lt;Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope, bool&gt;" Usage="Microsoft.Build.BuildCheck.Infrastructure.CheckScopeClassifier.IsScopingReady" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Func&lt;Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope, bool&gt; ^ IsScopingReady { Func&lt;Microsoft::Build::Experimental::BuildCheck::EvaluationCheckScope, bool&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;Microsoft.Build.Experimental.BuildCheck.EvaluationCheckScope,System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Notifies the subscribers that the scoping is ready.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
