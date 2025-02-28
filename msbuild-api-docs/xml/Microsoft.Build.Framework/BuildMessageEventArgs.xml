@@ -112,6 +112,35 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildMessageEventArgs (string message, string file, int lineNumber, int columnNumber, Microsoft.Build.Framework.MessageImportance importance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string message, string file, int32 lineNumber, int32 columnNumber, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.Int32,System.Int32,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (message As String, file As String, lineNumber As Integer, columnNumber As Integer, importance As MessageImportance)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildMessageEventArgs : string * string * int * int * Microsoft.Build.Framework.MessageImportance -&gt; Microsoft.Build.Framework.BuildMessageEventArgs" Usage="new Microsoft.Build.Framework.BuildMessageEventArgs (message, file, lineNumber, columnNumber, importance)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BuildMessageEventArgs(System::String ^ message, System::String ^ file, int lineNumber, int columnNumber, Microsoft::Build::Framework::MessageImportance importance);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="file" Type="System.String" Index="1" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="lineNumber" Type="System.Int32" Index="2" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="columnNumber" Type="System.Int32" Index="3" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" Index="4" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="message">To be added.</param>
+        <param name="file">To be added.</param>
+        <param name="lineNumber">To be added.</param>
+        <param name="columnNumber">To be added.</param>
+        <param name="importance">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
@@ -150,6 +179,37 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildMessageEventArgs (string code, string message, string file, int lineNumber, int columnNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string code, string message, string file, int32 lineNumber, int32 columnNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (code As String, message As String, file As String, lineNumber As Integer, columnNumber As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildMessageEventArgs : string * string * string * int * int -&gt; Microsoft.Build.Framework.BuildMessageEventArgs" Usage="new Microsoft.Build.Framework.BuildMessageEventArgs (code, message, file, lineNumber, columnNumber)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BuildMessageEventArgs(System::String ^ code, System::String ^ message, System::String ^ file, int lineNumber, int columnNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="code" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="message" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="file" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="lineNumber" Type="System.Int32" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="columnNumber" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="code">event code</param>
+        <param name="file">file associated with the event</param>
+        <param name="lineNumber">line number (0 if not applicable)</param>
+        <param name="columnNumber">column number (0 if not applicable)</param>
+        <param name="message">text message</param>
+        <summary>
+            This constructor allows event data without ends to be initialized.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])" />
@@ -169,7 +229,14 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="senderName" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -307,7 +374,14 @@
         <Parameter Name="columnNumber" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="endLineNumber" Type="System.Int32" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="endColumnNumber" Type="System.Int32" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" Index="8" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="senderName" Type="System.String" Index="9" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" Index="10" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />

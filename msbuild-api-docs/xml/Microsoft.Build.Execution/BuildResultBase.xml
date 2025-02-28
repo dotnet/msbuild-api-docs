@@ -1,0 +1,137 @@
+<Type Name="BuildResultBase" FullName="Microsoft.Build.Execution.BuildResultBase">
+  <TypeSignature Language="C#" Value="public abstract class BuildResultBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BuildResultBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildResultBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BuildResultBase" />
+  <TypeSignature Language="F#" Value="type BuildResultBase = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildResultBase abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildResultBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResultBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BuildResultBase();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CircularDependency">
+      <MemberSignature Language="C#" Value="public abstract bool CircularDependency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CircularDependency" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResultBase.CircularDependency" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CircularDependency As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CircularDependency : bool" Usage="Microsoft.Build.Execution.BuildResultBase.CircularDependency" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool CircularDependency { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns a flag indicating if a circular dependency was detected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public abstract Exception? Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResultBase.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="Microsoft.Build.Execution.BuildResultBase.Exception" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Exception ^ Exception { Exception ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the exception generated while this result was run, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverallResult">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Execution.BuildResultCode OverallResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.BuildResultCode OverallResult" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResultBase.OverallResult" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OverallResult As BuildResultCode" />
+      <MemberSignature Language="F#" Value="member this.OverallResult : Microsoft.Build.Execution.BuildResultCode" Usage="Microsoft.Build.Execution.BuildResultBase.OverallResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Execution::BuildResultCode OverallResult { Microsoft::Build::Execution::BuildResultCode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the overall result for this result set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public abstract int SubmissionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResultBase.SubmissionId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SubmissionId As Integer" />
+      <MemberSignature Language="F#" Value="member this.SubmissionId : int" Usage="Microsoft.Build.Execution.BuildResultBase.SubmissionId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int SubmissionId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the submission id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

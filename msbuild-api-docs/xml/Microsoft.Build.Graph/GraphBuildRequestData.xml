@@ -1,18 +1,34 @@
 <Type Name="GraphBuildRequestData" FullName="Microsoft.Build.Graph.GraphBuildRequestData">
-  <TypeSignature Language="C#" Value="public sealed class GraphBuildRequestData" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GraphBuildRequestData extends System.Object" />
+  <TypeSignature Language="C#" Value="public sealed class GraphBuildRequestData" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GraphBuildRequestData extends System.Object" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Graph.GraphBuildRequestData" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GraphBuildRequestData" />
-  <TypeSignature Language="F#" Value="type GraphBuildRequestData = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildRequestData sealed" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GraphBuildRequestData" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="F#" Value="type GraphBuildRequestData = class" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildRequestData sealed" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class GraphBuildRequestData : Microsoft.Build.Execution.BuildRequestData&lt;Microsoft.Build.Graph.GraphBuildRequestData,Microsoft.Build.Graph.GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GraphBuildRequestData extends Microsoft.Build.Execution.BuildRequestData`2&lt;class Microsoft.Build.Graph.GraphBuildRequestData, class Microsoft.Build.Graph.GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GraphBuildRequestData&#xA;Inherits BuildRequestData(Of GraphBuildRequestData, GraphBuildResult)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type GraphBuildRequestData = class&#xA;    inherit BuildRequestData&lt;GraphBuildRequestData, GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildRequestData sealed : Microsoft::Build::Execution::BuildRequestData&lt;Microsoft::Build::Graph::GraphBuildRequestData ^, Microsoft::Build::Graph::GraphBuildResult ^&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Execution.BuildRequestData&lt;Microsoft.Build.Graph.GraphBuildRequestData,Microsoft.Build.Graph.GraphBuildResult&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRequestData">Microsoft.Build.Graph.GraphBuildRequestData</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TResultData">Microsoft.Build.Graph.GraphBuildResult</BaseTypeArgument>
+    </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             GraphBuildRequestData encapsulates all of the data needed to submit a graph build request.
@@ -96,12 +112,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Graph.ProjectGraph projectGraph, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraph As ProjectGraph, targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraph * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraph, targetsToBuild, hostServices)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraph ^ projectGraph, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -110,7 +127,14 @@
       <Parameters>
         <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectGraph">The graph to build.</param>
@@ -123,12 +147,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoint As ProjectGraphEntryPoint, targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraphEntryPoint * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoint, targetsToBuild, hostServices)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraphEntryPoint projectGraphEntryPoint, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -137,7 +162,14 @@
       <Parameters>
         <Parameter Name="projectGraphEntryPoint" Type="Microsoft.Build.Graph.ProjectGraphEntryPoint" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectGraphEntryPoint">The entry point to use in the build.</param>
@@ -150,12 +182,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -164,7 +197,14 @@
       <Parameters>
         <Parameter Name="projectGraphEntryPoints" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectGraphEntryPoints">The entry points to use in the build.</param>
@@ -177,12 +217,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Graph.ProjectGraph projectGraph, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraph,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraph As ProjectGraph, targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraph * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraph, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraph ^ projectGraph, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraph projectGraph, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -191,7 +232,14 @@
       <Parameters>
         <Parameter Name="projectGraph" Type="Microsoft.Build.Graph.ProjectGraph" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -206,12 +254,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoint As ProjectGraphEntryPoint, targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : Microsoft.Build.Graph.ProjectGraphEntryPoint * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoint, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(Microsoft::Build::Graph::ProjectGraphEntryPoint projectGraphEntryPoint, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (Microsoft.Build.Graph.ProjectGraphEntryPoint projectGraphEntryPoint, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -220,7 +269,14 @@
       <Parameters>
         <Parameter Name="projectGraphEntryPoint" Type="Microsoft.Build.Graph.ProjectGraphEntryPoint" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -235,12 +291,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -249,7 +306,14 @@
       <Parameters>
         <Parameter Name="projectGraphEntryPoints" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -264,12 +328,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFullPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), targetsToBuild As ICollection(Of String), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectFullPath, globalProperties, targetsToBuild, hostServices)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -279,7 +344,14 @@
         <Parameter Name="projectFullPath" Type="System.String" />
         <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectFullPath">The full path to the project file.</param>
@@ -293,12 +365,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Graph.GraphBuildOptions graphBuildOptions);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Graph.GraphBuildOptions graphBuildOptions);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, class Microsoft.Build.Graph.GraphBuildOptions graphBuildOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,Microsoft.Build.Graph.GraphBuildOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags, graphBuildOptions As GraphBuildOptions)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * Microsoft.Build.Graph.GraphBuildOptions -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectGraphEntryPoints, targetsToBuild, hostServices, flags, graphBuildOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ projectGraphEntryPoints, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, Microsoft::Build::Graph::GraphBuildOptions ^ graphBuildOptions);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; projectGraphEntryPoints, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Graph.GraphBuildOptions graphBuildOptions);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -307,7 +380,14 @@
       <Parameters>
         <Parameter Name="projectGraphEntryPoints" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
         <Parameter Name="graphBuildOptions" Type="Microsoft.Build.Graph.GraphBuildOptions" />
       </Parameters>
@@ -322,12 +402,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFullPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.ICollection`1&lt;string&gt; targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.ICollection{System.String},Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), targetsToBuild As ICollection(Of String), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.GraphBuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.ICollection&lt;string&gt; * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Graph.GraphBuildRequestData" Usage="new Microsoft.Build.Graph.GraphBuildRequestData (projectFullPath, globalProperties, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GraphBuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public GraphBuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.ICollection&lt;string&gt; targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -337,7 +418,14 @@
         <Parameter Name="projectFullPath" Type="System.String" />
         <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="targetsToBuild" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -349,6 +437,33 @@
         <summary>
             Constructs a GraphBuildRequestData for build requests based on project files.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryProjectsFullPath">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; EntryProjectsFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EntryProjectsFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.EntryProjectsFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property EntryProjectsFullPath As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.EntryProjectsFullPath : seq&lt;string&gt;" Usage="Microsoft.Build.Graph.GraphBuildRequestData.EntryProjectsFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EntryProjectsFullPath { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Graph.GraphBuildRequestData+&lt;get_EntryProjectsFullPath&gt;d__21))]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Graph.GraphBuildRequestData+&lt;get_EntryProjectsFullPath&gt;d__21))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -371,6 +486,34 @@
         <summary>
             Extra flags for this BuildRequest.
             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.Flags" />
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalPropertiesLookup">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IReadOnlyDictionary&lt;string,string?&gt; GlobalPropertiesLookup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GlobalPropertiesLookup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.GlobalPropertiesLookup" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property GlobalPropertiesLookup As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalPropertiesLookup : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Graph.GraphBuildRequestData.GlobalPropertiesLookup" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalPropertiesLookup { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -399,17 +542,24 @@
       </Docs>
     </Member>
     <Member MemberName="HostServices">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.HostServices HostServices" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.HostServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostServices As HostServices" />
       <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices" Usage="Microsoft.Build.Graph.GraphBuildRequestData.HostServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::HostServices ^ HostServices { Microsoft::Build::Execution::HostServices ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices? HostServices { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.HostServices</ReturnType>
       </ReturnValue>
@@ -419,20 +569,49 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.HostServices" />
       </Docs>
     </Member>
-    <Member MemberName="ProjectGraph">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.ProjectGraph ProjectGraph { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Graph.ProjectGraph ProjectGraph" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectGraph As ProjectGraph" />
-      <MemberSignature Language="F#" Value="member this.ProjectGraph : Microsoft.Build.Graph.ProjectGraph" Usage="Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::ProjectGraph ^ ProjectGraph { Microsoft::Build::Graph::ProjectGraph ^ get(); };" />
+    <Member MemberName="IsGraphRequest">
+      <MemberSignature Language="C#" Value="public override bool IsGraphRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGraphRequest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.IsGraphRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsGraphRequest As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGraphRequest : bool" Usage="Microsoft.Build.Graph.GraphBuildRequestData.IsGraphRequest" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsGraphRequest { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectGraph">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.ProjectGraph ProjectGraph { get; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Graph.ProjectGraph ProjectGraph" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectGraph As ProjectGraph" />
+      <MemberSignature Language="F#" Value="member this.ProjectGraph : Microsoft.Build.Graph.ProjectGraph" Usage="Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraph" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::ProjectGraph ^ ProjectGraph { Microsoft::Build::Graph::ProjectGraph ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.ProjectGraph? ProjectGraph { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Graph.ProjectGraph</ReturnType>
       </ReturnValue>
@@ -446,17 +625,24 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectGraphEntryPoints">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; ProjectGraphEntryPoints { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; ProjectGraphEntryPoints { get; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; ProjectGraphEntryPoints" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraphEntryPoints" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectGraphEntryPoints As IEnumerable(Of ProjectGraphEntryPoint)" />
       <MemberSignature Language="F#" Value="member this.ProjectGraphEntryPoints : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Usage="Microsoft.Build.Graph.GraphBuildRequestData.ProjectGraphEntryPoints" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ ProjectGraphEntryPoints { System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ get(); };" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;? ProjectGraphEntryPoints { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;</ReturnType>
       </ReturnValue>
@@ -490,6 +676,7 @@
             </summary>
         <value>An array of targets in the project to be built.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.TargetNames" />
       </Docs>
     </Member>
   </Members>

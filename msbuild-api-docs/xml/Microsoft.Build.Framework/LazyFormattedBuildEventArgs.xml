@@ -23,10 +23,6 @@
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-17-netcore">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.NullableContext(2)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.NullableContext(2)&gt;]</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -85,7 +81,14 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="message" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" />
         <Parameter Name="senderName" Type="System.String" />
       </Parameters>
@@ -114,7 +117,14 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="message" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" />
         <Parameter Name="senderName" Type="System.String" />
         <Parameter Name="eventTimestamp" Type="System.DateTime" />

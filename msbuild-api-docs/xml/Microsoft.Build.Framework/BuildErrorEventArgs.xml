@@ -80,6 +80,37 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildErrorEventArgs (string code, string message, string file, int lineNumber, int columnNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string code, string message, string file, int32 lineNumber, int32 columnNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (code As String, message As String, file As String, lineNumber As Integer, columnNumber As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildErrorEventArgs : string * string * string * int * int -&gt; Microsoft.Build.Framework.BuildErrorEventArgs" Usage="new Microsoft.Build.Framework.BuildErrorEventArgs (code, message, file, lineNumber, columnNumber)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BuildErrorEventArgs(System::String ^ code, System::String ^ message, System::String ^ file, int lineNumber, int columnNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="code" Type="System.String" Index="0" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="message" Type="System.String" Index="1" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="file" Type="System.String" Index="2" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="lineNumber" Type="System.Int32" Index="3" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+        <Parameter Name="columnNumber" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="code">event code</param>
+        <param name="file">file associated with the event</param>
+        <param name="lineNumber">line number (0 if not applicable)</param>
+        <param name="columnNumber">column number (0 if not applicable)</param>
+        <param name="message">text message</param>
+        <summary>
+            This constructor allows event data without ends to be initialized.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public BuildErrorEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
@@ -200,7 +231,14 @@
         <Parameter Name="columnNumber" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="endLineNumber" Type="System.Int32" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="endColumnNumber" Type="System.Int32" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" Index="8" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="senderName" Type="System.String" Index="9" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="eventTimestamp" Type="System.DateTime" Index="10" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -252,10 +290,24 @@
         <Parameter Name="columnNumber" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="endLineNumber" Type="System.Int32" Index="5" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="endColumnNumber" Type="System.Int32" Index="6" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="helpKeyword" Type="System.String" Index="8" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="senderName" Type="System.String" Index="9" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="helpLink" Type="System.String" Index="10" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="helpLink" Type="System.String" Index="10" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("Uri")]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("Uri")&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="eventTimestamp" Type="System.DateTime" Index="11" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="messageArgs" Type="System.Object[]" Index="12" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
           <Attributes>

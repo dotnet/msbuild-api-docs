@@ -1,10 +1,15 @@
 <Type Name="BuildRequestData" FullName="Microsoft.Build.Execution.BuildRequestData">
-  <TypeSignature Language="C#" Value="public class BuildRequestData" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildRequestData extends System.Object" />
+  <TypeSignature Language="C#" Value="public class BuildRequestData" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildRequestData extends System.Object" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildRequestData" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildRequestData" />
-  <TypeSignature Language="F#" Value="type BuildRequestData = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildRequestData" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildRequestData" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type BuildRequestData = class" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildRequestData" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class BuildRequestData : Microsoft.Build.Execution.BuildRequestData&lt;Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.Execution.BuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildRequestData extends Microsoft.Build.Execution.BuildRequestData`2&lt;class Microsoft.Build.Execution.BuildRequestData, class Microsoft.Build.Execution.BuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildRequestData&#xA;Inherits BuildRequestData(Of BuildRequestData, BuildResult)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BuildRequestData = class&#xA;    inherit BuildRequestData&lt;BuildRequestData, BuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildRequestData : Microsoft::Build::Execution::BuildRequestData&lt;Microsoft::Build::Execution::BuildRequestData ^, Microsoft::Build::Execution::BuildResult ^&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -12,11 +17,22 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Execution.BuildRequestData&lt;Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.Execution.BuildResult&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRequestData">Microsoft.Build.Execution.BuildRequestData</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TResultData">Microsoft.Build.Execution.BuildResult</BaseTypeArgument>
+    </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            BuildRequestData encapsulates all of the data needed to submit a build request.
+            BuildRequestData encapsulates all the data needed to submit a build request.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -97,12 +113,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -112,7 +129,14 @@
       <Parameters>
         <Parameter Name="projectInstance" Type="Microsoft.Build.Execution.ProjectInstance" />
         <Parameter Name="targetsToBuild" Type="System.String[]" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -127,12 +151,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt; propertiesToTransfer);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt; propertiesToTransfer);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, class System.Collections.Generic.IEnumerable`1&lt;string&gt; propertiesToTransfer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, propertiesToTransfer As IEnumerable(Of String))" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * seq&lt;string&gt; -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags, propertiesToTransfer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ propertiesToTransfer);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt;? propertiesToTransfer);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -142,9 +167,23 @@
       <Parameters>
         <Parameter Name="projectInstance" Type="Microsoft.Build.Execution.ProjectInstance" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
         <Parameter Name="targetsToBuild" Type="System.String[]" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="propertiesToTransfer" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="propertiesToTransfer" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectInstance">The instance to build.</param>
@@ -159,12 +198,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFullPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string?&gt; globalProperties, string? toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -179,10 +219,31 @@
       </Attributes>
       <Parameters>
         <Parameter Name="projectFullPath" Type="System.String" />
-        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
-        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="toolsVersion" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="targetsToBuild" Type="System.String[]" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="projectFullPath">The full path to the project file.</param>
@@ -197,12 +258,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt; propertiesToTransfer, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt; propertiesToTransfer, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, class System.Collections.Generic.IEnumerable`1&lt;string&gt; propertiesToTransfer, class Microsoft.Build.Execution.RequestedProjectState requestedProjectState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(Microsoft.Build.Execution.ProjectInstance,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,System.Collections.Generic.IEnumerable{System.String},Microsoft.Build.Execution.RequestedProjectState)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectInstance As ProjectInstance, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, propertiesToTransfer As IEnumerable(Of String), requestedProjectState As RequestedProjectState)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : Microsoft.Build.Execution.ProjectInstance * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * seq&lt;string&gt; * Microsoft.Build.Execution.RequestedProjectState -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectInstance, targetsToBuild, hostServices, flags, propertiesToTransfer, requestedProjectState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(Microsoft::Build::Execution::ProjectInstance ^ projectInstance, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ propertiesToTransfer, Microsoft::Build::Execution::RequestedProjectState ^ requestedProjectState);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable&lt;string&gt;? propertiesToTransfer, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -211,9 +273,23 @@
       <Parameters>
         <Parameter Name="projectInstance" Type="Microsoft.Build.Execution.ProjectInstance" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="targetsToBuild" Type="System.String[]" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="propertiesToTransfer" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="propertiesToTransfer" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="requestedProjectState" Type="Microsoft.Build.Execution.RequestedProjectState" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       </Parameters>
       <Docs>
@@ -230,12 +306,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFullPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices, flags)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string?&gt; globalProperties, string? toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -244,10 +321,31 @@
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="projectFullPath" Type="System.String" />
-        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
-        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="toolsVersion" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="targetsToBuild" Type="System.String[]" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" />
       </Parameters>
       <Docs>
@@ -264,12 +362,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFullPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string[] targetsToBuild, class Microsoft.Build.Execution.HostServices hostServices, valuetype Microsoft.Build.Execution.BuildRequestDataFlags flags, class Microsoft.Build.Execution.RequestedProjectState requestedProjectState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildRequestData.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String[],Microsoft.Build.Execution.HostServices,Microsoft.Build.Execution.BuildRequestDataFlags,Microsoft.Build.Execution.RequestedProjectState)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFullPath As String, globalProperties As IDictionary(Of String, String), toolsVersion As String, targetsToBuild As String(), hostServices As HostServices, flags As BuildRequestDataFlags, requestedProjectState As RequestedProjectState)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildRequestData : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string[] * Microsoft.Build.Execution.HostServices * Microsoft.Build.Execution.BuildRequestDataFlags * Microsoft.Build.Execution.RequestedProjectState -&gt; Microsoft.Build.Execution.BuildRequestData" Usage="new Microsoft.Build.Execution.BuildRequestData (projectFullPath, globalProperties, toolsVersion, targetsToBuild, hostServices, flags, requestedProjectState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildRequestData(System::String ^ projectFullPath, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, cli::array &lt;System::String ^&gt; ^ targetsToBuild, Microsoft::Build::Execution::HostServices ^ hostServices, Microsoft::Build::Execution::BuildRequestDataFlags flags, Microsoft::Build::Execution::RequestedProjectState ^ requestedProjectState);" />
+      <MemberSignature Language="C#" Value="public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary&lt;string,string?&gt; globalProperties, string? toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices? hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, Microsoft.Build.Execution.RequestedProjectState requestedProjectState);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -277,10 +376,31 @@
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="projectFullPath" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="toolsVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="toolsVersion" Type="System.String" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="targetsToBuild" Type="System.String[]" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="hostServices" Type="Microsoft.Build.Execution.HostServices" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="flags" Type="Microsoft.Build.Execution.BuildRequestDataFlags" Index="5" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
         <Parameter Name="requestedProjectState" Type="Microsoft.Build.Execution.RequestedProjectState" Index="6" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       </Parameters>
@@ -298,13 +418,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EntryProjectsFullPath">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; EntryProjectsFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EntryProjectsFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.EntryProjectsFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property EntryProjectsFullPath As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.EntryProjectsFullPath : seq&lt;string&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.EntryProjectsFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EntryProjectsFullPath { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ExplicitlySpecifiedToolsVersion">
-      <MemberSignature Language="C#" Value="public string ExplicitlySpecifiedToolsVersion { get; }" />
+      <MemberSignature Language="C#" Value="public string ExplicitlySpecifiedToolsVersion { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance string ExplicitlySpecifiedToolsVersion" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExplicitlySpecifiedToolsVersion As String" />
       <MemberSignature Language="F#" Value="member this.ExplicitlySpecifiedToolsVersion : string" Usage="Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExplicitlySpecifiedToolsVersion { System::String ^ get(); };" />
+      <MemberSignature Language="C#" Value="public string? ExplicitlySpecifiedToolsVersion { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -312,6 +454,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -356,6 +502,7 @@
             </summary>
         <value>The build request flags.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.Flags" />
       </Docs>
     </Member>
     <Member MemberName="GlobalProperties">
@@ -382,13 +529,42 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GlobalPropertiesLookup">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IReadOnlyDictionary&lt;string,string?&gt; GlobalPropertiesLookup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GlobalPropertiesLookup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.GlobalPropertiesLookup" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property GlobalPropertiesLookup As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GlobalPropertiesLookup : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.GlobalPropertiesLookup" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalPropertiesLookup { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="T:Microsoft.Build.Execution.BuildRequestDataBase" />
+      </Docs>
+    </Member>
     <Member MemberName="HostServices">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.HostServices HostServices" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.HostServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostServices As HostServices" />
       <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.Build.Execution.HostServices" Usage="Microsoft.Build.Execution.BuildRequestData.HostServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::HostServices ^ HostServices { Microsoft::Build::Execution::HostServices ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices? HostServices { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -396,6 +572,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -409,6 +589,28 @@
             Gets the HostServices object for this request.
             </summary>
         <value>The host service for this build.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.HostServices" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsGraphRequest">
+      <MemberSignature Language="C#" Value="public override bool IsGraphRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGraphRequest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.IsGraphRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsGraphRequest As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGraphRequest : bool" Usage="Microsoft.Build.Execution.BuildRequestData.IsGraphRequest" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsGraphRequest { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -445,12 +647,13 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectInstance">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance ProjectInstance { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance ProjectInstance { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.ProjectInstance ProjectInstance" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.ProjectInstance" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectInstance As ProjectInstance" />
       <MemberSignature Language="F#" Value="member this.ProjectInstance : Microsoft.Build.Execution.ProjectInstance" Usage="Microsoft.Build.Execution.BuildRequestData.ProjectInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::ProjectInstance ^ ProjectInstance { Microsoft::Build::Execution::ProjectInstance ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance? ProjectInstance { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -458,6 +661,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -483,18 +690,25 @@
       </Docs>
     </Member>
     <Member MemberName="PropertiesToTransfer">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; PropertiesToTransfer { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; PropertiesToTransfer { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; PropertiesToTransfer" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertiesToTransfer As IEnumerable(Of String)" />
       <MemberSignature Language="F#" Value="member this.PropertiesToTransfer : seq&lt;string&gt;" Usage="Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ PropertiesToTransfer { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt;? PropertiesToTransfer { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
       </ReturnValue>
@@ -507,17 +721,24 @@
       </Docs>
     </Member>
     <Member MemberName="RequestedProjectState">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.RequestedProjectState RequestedProjectState { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.RequestedProjectState RequestedProjectState { get; }" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.RequestedProjectState RequestedProjectState" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildRequestData.RequestedProjectState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestedProjectState As RequestedProjectState" />
       <MemberSignature Language="F#" Value="member this.RequestedProjectState : Microsoft.Build.Execution.RequestedProjectState" Usage="Microsoft.Build.Execution.BuildRequestData.RequestedProjectState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::RequestedProjectState ^ RequestedProjectState { Microsoft::Build::Execution::RequestedProjectState ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.RequestedProjectState? RequestedProjectState { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.RequestedProjectState</ReturnType>
       </ReturnValue>
@@ -558,6 +779,7 @@
             </summary>
         <value>An array of targets in the project to be built.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildRequestDataBase.TargetNames" />
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,260 @@
+<Type Name="BuildSubmissionBase" FullName="Microsoft.Build.Execution.BuildSubmissionBase">
+  <TypeSignature Language="C#" Value="public abstract class BuildSubmissionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BuildSubmissionBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildSubmissionBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BuildSubmissionBase" />
+  <TypeSignature Language="F#" Value="type BuildSubmissionBase = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildSubmissionBase abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal BuildSubmissionBase (Microsoft.Build.Execution.BuildManager buildManager, int submissionId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Execution.BuildManager buildManager, int32 submissionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmissionBase.#ctor(Microsoft.Build.Execution.BuildManager,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (buildManager As BuildManager, submissionId As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildSubmissionBase : Microsoft.Build.Execution.BuildManager * int -&gt; Microsoft.Build.Execution.BuildSubmissionBase" Usage="new Microsoft.Build.Execution.BuildSubmissionBase (buildManager, submissionId)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; BuildSubmissionBase(Microsoft::Build::Execution::BuildManager ^ buildManager, int submissionId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildManager" Type="Microsoft.Build.Execution.BuildManager" />
+        <Parameter Name="submissionId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buildManager">To be added.</param>
+        <param name="submissionId">To be added.</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncContext">
+      <MemberSignature Language="C#" Value="public object? AsyncContext { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmissionBase.AsyncContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property AsyncContext As Object" />
+      <MemberSignature Language="F#" Value="member this.AsyncContext : obj with get, set" Usage="Microsoft.Build.Execution.BuildSubmissionBase.AsyncContext" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::Object ^ AsyncContext {  public:&#xA;System::Object ^ get(); protected:&#xA; void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asynchronous context provided to <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildManager BuildManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.BuildManager BuildManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmissionBase.BuildManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildManager As BuildManager" />
+      <MemberSignature Language="F#" Value="member this.BuildManager : Microsoft.Build.Execution.BuildManager" Usage="Microsoft.Build.Execution.BuildSubmissionBase.BuildManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildManager ^ BuildManager { Microsoft::Build::Execution::BuildManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The BuildManager with which this submission is associated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckForCompletion">
+      <MemberSignature Language="C#" Value="protected internal abstract void CheckForCompletion ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void CheckForCompletion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmissionBase.CheckForCompletion" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Sub CheckForCompletion ()" />
+      <MemberSignature Language="F#" Value="abstract member CheckForCompletion : unit -&gt; unit" Usage="buildSubmissionBase.CheckForCompletion " />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract void CheckForCompletion();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionEvent">
+      <MemberSignature Language="C#" Value="protected readonly System.Threading.ManualResetEvent CompletionEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Threading.ManualResetEvent CompletionEvent" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildSubmissionBase.CompletionEvent" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly CompletionEvent As ManualResetEvent " />
+      <MemberSignature Language="F#" Value="val mutable CompletionEvent : System.Threading.ManualResetEvent" Usage="Microsoft.Build.Execution.BuildSubmissionBase.CompletionEvent" />
+      <MemberSignature Language="C++ CLI" Value="protected: initonly System::Threading::ManualResetEvent ^ CompletionEvent;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ManualResetEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The completion event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionInvoked">
+      <MemberSignature Language="C#" Value="protected int CompletionInvoked;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 CompletionInvoked" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildSubmissionBase.CompletionInvoked" />
+      <MemberSignature Language="VB.NET" Value="Protected CompletionInvoked As Integer " />
+      <MemberSignature Language="F#" Value="val mutable CompletionInvoked : int" Usage="Microsoft.Build.Execution.BuildSubmissionBase.CompletionInvoked" />
+      <MemberSignature Language="C++ CLI" Value="protected: int CompletionInvoked;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if it has been invoked
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmissionBase.IsCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsCompleted As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCompleted : bool" Usage="Microsoft.Build.Execution.BuildSubmissionBase.IsCompleted" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsCompleted { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this submission is complete.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompletition">
+      <MemberSignature Language="C#" Value="protected internal virtual void OnCompletition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCompletition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmissionBase.OnCompletition" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub OnCompletition ()" />
+      <MemberSignature Language="F#" Value="abstract member OnCompletition : unit -&gt; unit&#xA;override this.OnCompletition : unit -&gt; unit" Usage="buildSubmissionBase.OnCompletition " />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void OnCompletition();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public int SubmissionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmissionBase.SubmissionId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubmissionId As Integer" />
+      <MemberSignature Language="F#" Value="member this.SubmissionId : int" Usage="Microsoft.Build.Execution.BuildSubmissionBase.SubmissionId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int SubmissionId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An ID uniquely identifying this request from among other submissions within the same build.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle WaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle WaitHandle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmissionBase.WaitHandle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WaitHandle As WaitHandle" />
+      <MemberSignature Language="F#" Value="member this.WaitHandle : System.Threading.WaitHandle" Usage="Microsoft.Build.Execution.BuildSubmissionBase.WaitHandle" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Threading::WaitHandle ^ WaitHandle { System::Threading::WaitHandle ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A <see cref="T:System.Threading.WaitHandle" /> which will be signalled when the build is complete.  Valid after <see cref="M:Microsoft.Build.Execution.BuildSubmissionBase`2.Execute" /> or <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> returns, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

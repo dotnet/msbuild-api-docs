@@ -1,18 +1,34 @@
 <Type Name="GraphBuildSubmission" FullName="Microsoft.Build.Graph.GraphBuildSubmission">
-  <TypeSignature Language="C#" Value="public class GraphBuildSubmission" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GraphBuildSubmission extends System.Object" />
+  <TypeSignature Language="C#" Value="public class GraphBuildSubmission" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GraphBuildSubmission extends System.Object" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Graph.GraphBuildSubmission" />
-  <TypeSignature Language="VB.NET" Value="Public Class GraphBuildSubmission" />
-  <TypeSignature Language="F#" Value="type GraphBuildSubmission = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildSubmission" />
+  <TypeSignature Language="VB.NET" Value="Public Class GraphBuildSubmission" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="F#" Value="type GraphBuildSubmission = class" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildSubmission" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+  <TypeSignature Language="C#" Value="public class GraphBuildSubmission : Microsoft.Build.Execution.BuildSubmissionBase&lt;Microsoft.Build.Graph.GraphBuildRequestData,Microsoft.Build.Graph.GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GraphBuildSubmission extends Microsoft.Build.Execution.BuildSubmissionBase`2&lt;class Microsoft.Build.Graph.GraphBuildRequestData, class Microsoft.Build.Graph.GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class GraphBuildSubmission&#xA;Inherits BuildSubmissionBase(Of GraphBuildRequestData, GraphBuildResult)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type GraphBuildSubmission = class&#xA;    inherit BuildSubmissionBase&lt;GraphBuildRequestData, GraphBuildResult&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GraphBuildSubmission : Microsoft::Build::Execution::BuildSubmissionBase&lt;Microsoft::Build::Graph::GraphBuildRequestData ^, Microsoft::Build::Graph::GraphBuildResult ^&gt;" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Execution.BuildSubmissionBase&lt;Microsoft.Build.Graph.GraphBuildRequestData,Microsoft.Build.Graph.GraphBuildResult&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRequestData">Microsoft.Build.Graph.GraphBuildRequestData</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TResultData">Microsoft.Build.Graph.GraphBuildResult</BaseTypeArgument>
+    </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1, 1 })&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             A GraphBuildSubmission represents a graph build request which has been submitted to the BuildManager for processing.  It may be used to
@@ -24,17 +40,24 @@
   </Docs>
   <Members>
     <Member MemberName="AsyncContext">
-      <MemberSignature Language="C#" Value="public object AsyncContext { get; }" />
+      <MemberSignature Language="C#" Value="public object AsyncContext { get; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".property instance object AsyncContext" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildSubmission.AsyncContext" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AsyncContext As Object" />
       <MemberSignature Language="F#" Value="member this.AsyncContext : obj" Usage="Microsoft.Build.Graph.GraphBuildSubmission.AsyncContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ AsyncContext { System::Object ^ get(); };" />
+      <MemberSignature Language="C#" Value="public object? AsyncContext { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -44,6 +67,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.AsyncContext" />
       </Docs>
     </Member>
     <Member MemberName="BuildManager">
@@ -67,20 +91,28 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.BuildManager" />
       </Docs>
     </Member>
     <Member MemberName="BuildResult">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.GraphBuildResult BuildResult { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.GraphBuildResult BuildResult { get; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Graph.GraphBuildResult BuildResult" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.GraphBuildSubmission.BuildResult" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildResult As GraphBuildResult" />
       <MemberSignature Language="F#" Value="member this.BuildResult : Microsoft.Build.Graph.GraphBuildResult" Usage="Microsoft.Build.Graph.GraphBuildSubmission.BuildResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::GraphBuildResult ^ BuildResult { Microsoft::Build::Graph::GraphBuildResult ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.GraphBuildResult? BuildResult { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Graph.GraphBuildResult</ReturnType>
       </ReturnValue>
@@ -90,15 +122,70 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase`2.BuildResult" />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckResultValidForCompletion">
+      <MemberSignature Language="C#" Value="protected internal override void CheckResultValidForCompletion (Microsoft.Build.Graph.GraphBuildResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CheckResultValidForCompletion(class Microsoft.Build.Graph.GraphBuildResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildSubmission.CheckResultValidForCompletion(Microsoft.Build.Graph.GraphBuildResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub CheckResultValidForCompletion (result As GraphBuildResult)" />
+      <MemberSignature Language="F#" Value="override this.CheckResultValidForCompletion : Microsoft.Build.Graph.GraphBuildResult -&gt; unit" Usage="graphBuildSubmission.CheckResultValidForCompletion result" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void CheckResultValidForCompletion(Microsoft::Build::Graph::GraphBuildResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="Microsoft.Build.Graph.GraphBuildResult" Index="0" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFailedResult">
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.Build.Graph.GraphBuildResult CreateFailedResult (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.Build.Graph.GraphBuildResult CreateFailedResult(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildSubmission.CreateFailedResult(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateFailedResult (exception As Exception) As GraphBuildResult" />
+      <MemberSignature Language="F#" Value="override this.CreateFailedResult : Exception -&gt; Microsoft.Build.Graph.GraphBuildResult" Usage="graphBuildSubmission.CreateFailedResult exception" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::Build::Graph::GraphBuildResult ^ CreateFailedResult(Exception ^ exception);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Graph.GraphBuildResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" Index="0" FrameworkAlternate="msbuild-17-netcore;msbuild-17" />
+      </Parameters>
+      <Docs>
+        <param name="exception">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.GraphBuildResult Execute ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Graph.GraphBuildResult Execute() cil managed" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.GraphBuildResult Execute ();" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Graph.GraphBuildResult Execute() cil managed" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildSubmission.Execute" />
-      <MemberSignature Language="VB.NET" Value="Public Function Execute () As GraphBuildResult" />
-      <MemberSignature Language="F#" Value="member this.Execute : unit -&gt; Microsoft.Build.Graph.GraphBuildResult" Usage="graphBuildSubmission.Execute " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Graph::GraphBuildResult ^ Execute();" />
+      <MemberSignature Language="VB.NET" Value="Public Function Execute () As GraphBuildResult" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+      <MemberSignature Language="F#" Value="member this.Execute : unit -&gt; Microsoft.Build.Graph.GraphBuildResult" Usage="graphBuildSubmission.Execute " FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Graph::GraphBuildResult ^ Execute();" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Graph.GraphBuildResult Execute ();" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.Build.Graph.GraphBuildResult Execute() cil managed" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As GraphBuildResult" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; Microsoft.Build.Graph.GraphBuildResult" Usage="graphBuildSubmission.Execute " FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Microsoft::Build::Graph::GraphBuildResult ^ Execute();" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -118,12 +205,14 @@
       </Docs>
     </Member>
     <Member MemberName="ExecuteAsync">
-      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback callback, object context);" />
+      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback callback, object context);" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExecuteAsync(class Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback callback, object context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.GraphBuildSubmission.ExecuteAsync(Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ExecuteAsync (callback As GraphBuildSubmissionCompleteCallback, context As Object)" />
-      <MemberSignature Language="F#" Value="member this.ExecuteAsync : Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback * obj -&gt; unit" Usage="graphBuildSubmission.ExecuteAsync (callback, context)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback * obj -&gt; unit" Usage="graphBuildSubmission.ExecuteAsync (callback, context)" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ExecuteAsync(Microsoft::Build::Graph::GraphBuildSubmissionCompleteCallback ^ callback, System::Object ^ context);" />
+      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback? callback, object? context);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="override this.ExecuteAsync : Microsoft.Build.Graph.GraphBuildSubmissionCompleteCallback * obj -&gt; unit" Usage="graphBuildSubmission.ExecuteAsync (callback, context)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -167,6 +256,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.IsCompleted" />
       </Docs>
     </Member>
     <Member MemberName="SubmissionId">
@@ -190,6 +280,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.SubmissionId" />
       </Docs>
     </Member>
     <Member MemberName="WaitHandle">
@@ -213,6 +304,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.Build.Execution.BuildSubmissionBase.WaitHandle" />
       </Docs>
     </Member>
   </Members>

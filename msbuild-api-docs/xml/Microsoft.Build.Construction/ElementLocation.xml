@@ -1,10 +1,15 @@
 <Type Name="ElementLocation" FullName="Microsoft.Build.Construction.ElementLocation">
-  <TypeSignature Language="C#" Value="public abstract class ElementLocation" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ElementLocation extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class ElementLocation" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ElementLocation extends System.Object" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ElementLocation" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ElementLocation" />
-  <TypeSignature Language="F#" Value="type ElementLocation = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ElementLocation abstract" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ElementLocation" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type ElementLocation = class" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ElementLocation abstract" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public abstract class ElementLocation : Microsoft.Build.Shared.IMSBuildElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ElementLocation extends System.Object implements class Microsoft.Build.Shared.IMSBuildElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ElementLocation&#xA;Implements IMSBuildElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type ElementLocation = class&#xA;    interface IMSBuildElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ElementLocation abstract : Microsoft::Build::Shared::IMSBuildElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -13,7 +18,11 @@
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <InterfaceName>Microsoft.Build.Shared.IMSBuildElementLocation</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Attributes>
     <Attribute>
       <AttributeName Language="C#">[System.Serializable]</AttributeName>
@@ -57,6 +66,9 @@
       <MemberSignature Language="F#" Value="member this.Column : int" Usage="Microsoft.Build.Construction.ElementLocation.Column" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Column { int get(); };" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-17;msbuild-17-netcore">P:Microsoft.Build.Shared.IMSBuildElementLocation.Column</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -79,6 +91,42 @@
             </summary>
         <value>Returns <see cref="T:System.Int32" />.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ElementLocation Create (string file, int line, int column);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ElementLocation Create(string file, int32 line, int32 column) cil managed" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ElementLocation.Create(System.String,System.Int32,System.Int32)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (file As String, line As Integer, column As Integer) As ElementLocation" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="F#" Value="static member Create : string * int * int -&gt; Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ElementLocation.Create (file, line, column)" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Construction::ElementLocation ^ Create(System::String ^ file, int line, int column);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="line" Type="System.Int32" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="column" Type="System.Int32" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="file">To be added.</param>
+        <param name="line">To be added.</param>
+        <param name="column">To be added.</param>
+        <summary>
+            Constructor for the case where we have most or all information.
+            Numerical values must be 1-based, non-negative; 0 indicates unknown
+            File may be null, indicating the file was not loaded from disk.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            In AG there are 600 locations that have a file but zero line and column.
+            In theory yet another derived class could be made for these to save 4 bytes each.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="EmptyLocation">
@@ -145,6 +193,9 @@
       <MemberSignature Language="F#" Value="member this.File : string" Usage="Microsoft.Build.Construction.ElementLocation.File" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ File { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-17;msbuild-17-netcore">P:Microsoft.Build.Shared.IMSBuildElementLocation.File</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -203,6 +254,9 @@
       <MemberSignature Language="F#" Value="member this.Line : int" Usage="Microsoft.Build.Construction.ElementLocation.Line" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Line { int get(); };" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-17;msbuild-17-netcore">P:Microsoft.Build.Shared.IMSBuildElementLocation.Line</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -235,6 +289,9 @@
       <MemberSignature Language="F#" Value="member this.LocationString : string" Usage="Microsoft.Build.Construction.ElementLocation.LocationString" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocationString { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-17;msbuild-17-netcore">P:Microsoft.Build.Shared.IMSBuildElementLocation.LocationString</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>

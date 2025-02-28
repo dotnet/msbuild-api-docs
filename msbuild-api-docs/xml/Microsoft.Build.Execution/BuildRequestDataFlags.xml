@@ -10,6 +10,13 @@
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="Microsoft.Build" FromVersion="15.1.0.0" To="Microsoft.Build.Framework" ToVersion="15.1.0.0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
@@ -48,13 +55,17 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
         <summary>
-            When this flag is present, caches including the <see cref="T:Microsoft.Build.Evaluation.ProjectRootElementCacheBase" /> will be cleared
+            When this flag is present, caches including the "ProjectRootElementCacheBase" will be cleared
             after the build request completes.  This is used when the build request is known to modify a lot of
             state such as restoring packages or generating parts of the import graph.
             </summary>
@@ -72,6 +83,10 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
       </ReturnValue>
@@ -79,7 +94,7 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
       <Docs>
         <summary>
             When this flag is present, an unresolved MSBuild project SDK will fail the build.  This flag is used to
-            change the <see cref="F:Microsoft.Build.Execution.BuildRequestDataFlags.IgnoreMissingEmptyAndInvalidImports" /> behavior to still fail when an SDK is missing
+            change the "IgnoreMissingEmptyAndInvalidImports" behavior to still fail when an SDK is missing
             because those are more fatal.
             </summary>
       </Docs>
@@ -95,6 +110,10 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -132,13 +151,17 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
       </ReturnValue>
       <MemberValue>64</MemberValue>
       <Docs>
         <summary>
-            When this flag is present, projects loaded during build will ignore missing imports (<see cref="F:Microsoft.Build.Evaluation.ProjectLoadSettings.IgnoreMissingImports" /> and <see cref="F:Microsoft.Build.Evaluation.ProjectLoadSettings.IgnoreInvalidImports" />).
+            When this flag is present, projects loaded during build will ignore missing imports ("ProjectLoadSettings.IgnoreMissingImports" and "ProjectLoadSettings.IgnoreInvalidImports").
             This is especially useful during a restore since some imports might come from packages that haven't been restored yet.
             </summary>
       </Docs>
@@ -154,6 +177,10 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -179,14 +206,18 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            When this flag is present, the <see cref="T:Microsoft.Build.Execution.BuildResult" /> issued in response to this request will
-            include <see cref="P:Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" />.
+            When this flag is present, the "BuildResult" issued in response to this request will
+            include "BuildResult.ProjectStateAfterBuild".
             </summary>
       </Docs>
     </Member>
@@ -202,14 +233,18 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
       </ReturnValue>
       <MemberValue>32</MemberValue>
       <Docs>
         <summary>
-            When this flag is present, the <see cref="T:Microsoft.Build.Execution.BuildResult" /> issued in response to this request will
-            include a <see cref="P:Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" /> that includes ONLY the
+            When this flag is present, the "BuildResult" issued in response to this request will
+            include a "BuildResult.ProjectStateAfterBuild" that includes ONLY the
             explicitly-requested properties, items, and metadata.
             </summary>
       </Docs>
@@ -225,6 +260,10 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -247,6 +286,10 @@ The `IgnoreExistingProjectState` flag has no effect on target results, so if a p
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

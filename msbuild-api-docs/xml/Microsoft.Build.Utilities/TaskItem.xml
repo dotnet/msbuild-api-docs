@@ -100,18 +100,19 @@
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>
             Default constructor -- we need it so this type is COM-createable.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor enables this type to be COM-creatable.  
-  
- ]]></format>
-        </remarks>
+            This constructor exists only so that the type is COM-creatable. Prefer <see cref="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)" />.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
