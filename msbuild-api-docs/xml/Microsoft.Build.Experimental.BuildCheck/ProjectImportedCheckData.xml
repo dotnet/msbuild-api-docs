@@ -1,0 +1,56 @@
+<Type Name="ProjectImportedCheckData" FullName="Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData">
+  <TypeSignature Language="C#" Value="public class ProjectImportedCheckData : Microsoft.Build.Experimental.BuildCheck.CheckData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectImportedCheckData extends Microsoft.Build.Experimental.BuildCheck.CheckData" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectImportedCheckData&#xA;Inherits CheckData" />
+  <TypeSignature Language="F#" Value="type ProjectImportedCheckData = class&#xA;    inherit CheckData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectImportedCheckData : Microsoft::Build::Experimental::BuildCheck::CheckData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Experimental.BuildCheck.CheckData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents data for a check related to an imported project in MSBuild.
+            </summary>
+    <remarks>
+            This class extends the base <see cref="T:Microsoft.Build.Experimental.BuildCheck.CheckData" /> class to include
+            information specific to imported projects.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ImportedProjectFileFullPath">
+      <MemberSignature Language="C#" Value="public string ImportedProjectFileFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImportedProjectFileFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData.ImportedProjectFileFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportedProjectFileFullPath As String" />
+      <MemberSignature Language="F#" Value="member this.ImportedProjectFileFullPath : string" Usage="Microsoft.Build.Experimental.BuildCheck.ProjectImportedCheckData.ImportedProjectFileFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ImportedProjectFileFullPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the file path of the imported project.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

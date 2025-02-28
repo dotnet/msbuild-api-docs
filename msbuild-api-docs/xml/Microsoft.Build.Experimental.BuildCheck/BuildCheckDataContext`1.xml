@@ -1,14 +1,10 @@
 <Type Name="BuildCheckDataContext&lt;T&gt;" FullName="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;T&gt;">
-  <TypeSignature Language="C#" Value="public class BuildCheckDataContext&lt;T&gt; where T : AnalysisData" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildCheckDataContext`1&lt;(class Microsoft.Build.Experimental.BuildCheck.AnalysisData) T&gt; extends System.Object" FrameworkAlternate="msbuild-17" />
+  <TypeSignature Language="C#" Value="public class BuildCheckDataContext&lt;T&gt; where T : CheckData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildCheckDataContext`1&lt;(class Microsoft.Build.Experimental.BuildCheck.CheckData) T&gt; extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1" />
   <TypeSignature Language="VB.NET" Value="Public Class BuildCheckDataContext(Of T)" />
-  <TypeSignature Language="F#" Value="type BuildCheckDataContext&lt;'T (requires 'T :&gt; AnalysisData)&gt; = class" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA; where T : AnalysisDatapublic ref class BuildCheckDataContext" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="C#" Value="public class BuildCheckDataContext&lt;T&gt; where T : CheckData" FrameworkAlternate="msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildCheckDataContext`1&lt;(class Microsoft.Build.Experimental.BuildCheck.CheckData) T&gt; extends System.Object" FrameworkAlternate="msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type BuildCheckDataContext&lt;'T (requires 'T :&gt; CheckData)&gt; = class" FrameworkAlternate="msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA; where T : CheckDatapublic ref class BuildCheckDataContext" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type BuildCheckDataContext&lt;'T (requires 'T :&gt; CheckData)&gt; = class" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA; where T : CheckDatapublic ref class BuildCheckDataContext" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -16,7 +12,7 @@
   <TypeParameters>
     <TypeParameter Name="T">
       <Constraints>
-        <BaseTypeName>Microsoft.Build.Experimental.BuildCheck.AnalysisData</BaseTypeName>
+        <BaseTypeName>Microsoft.Build.Experimental.BuildCheck.CheckData</BaseTypeName>
       </Constraints>
       <Attributes>
         <Attribute FrameworkAlternate="msbuild-17-netcore">
@@ -49,9 +45,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance !T Data" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext`1.Data" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Data As T" />
-      <MemberSignature Language="F#" Value="member this.Data : 'T" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;'T (requires 'T :&gt; Microsoft.Build.Experimental.BuildCheck.AnalysisData)&gt;.Data" FrameworkAlternate="msbuild-17" />
+      <MemberSignature Language="F#" Value="member this.Data : 'T" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;'T (requires 'T :&gt; Microsoft.Build.Experimental.BuildCheck.CheckData)&gt;.Data" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property T Data { T get(); };" />
-      <MemberSignature Language="F#" Value="member this.Data : 'T" Usage="Microsoft.Build.Experimental.BuildCheck.BuildCheckDataContext&lt;'T (requires 'T :&gt; Microsoft.Build.Experimental.BuildCheck.CheckData)&gt;.Data" FrameworkAlternate="msbuild-17-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

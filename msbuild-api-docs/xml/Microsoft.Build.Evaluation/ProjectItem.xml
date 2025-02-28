@@ -1,10 +1,15 @@
 <Type Name="ProjectItem" FullName="Microsoft.Build.Evaluation.ProjectItem">
-  <TypeSignature Language="C#" Value="public class ProjectItem" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItem extends System.Object" />
+  <TypeSignature Language="C#" Value="public class ProjectItem" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItem extends System.Object" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectItem" />
-  <TypeSignature Language="VB.NET" Value="Public Class ProjectItem" />
-  <TypeSignature Language="F#" Value="type ProjectItem = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ProjectItem" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectItem" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type ProjectItem = class" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectItem" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class ProjectItem : Microsoft.Build.Framework.IItemData" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItem extends System.Object implements class Microsoft.Build.Framework.IItemData" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectItem&#xA;Implements IItemData" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type ProjectItem = class&#xA;    interface IItemData" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectItem : Microsoft::Build::Framework::IItemData" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -13,7 +18,11 @@
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+      <InterfaceName>Microsoft.Build.Framework.IItemData</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Attributes>
     <Attribute>
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{ItemType}={EvaluatedInclude} [{UnevaluatedInclude}] #DirectMetadata={DirectMetadataCount}")]</AttributeName>
@@ -114,6 +123,9 @@
       <MemberSignature Language="F#" Value="member this.EvaluatedInclude : string" Usage="Microsoft.Build.Evaluation.ProjectItem.EvaluatedInclude" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EvaluatedInclude { System::String ^ get(); };" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-17;msbuild-17-netcore">P:Microsoft.Build.Framework.IItemData.EvaluatedInclude</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -134,13 +146,9 @@
             </summary>
         <value>The evaluated value of the Include attribute.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Escaped characters are not present.  
-  
- ]]></format>
-        </remarks>
+            Gets the evaluated value of the include, unescaped.
+            </remarks>
+        <inheritdoc cref="P:Microsoft.Build.Framework.IItemData.EvaluatedInclude" />
       </Docs>
     </Member>
     <Member MemberName="GetMetadata">
@@ -397,6 +405,32 @@
             </summary>
         <value>The count of metadata for this item, including any metadata originating from item definitions, and any built-in metadata.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.IItemData.EnumerateMetadata">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; IItemData.EnumerateMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; Microsoft.Build.Framework.IItemData.EnumerateMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.Microsoft#Build#Framework#IItemData#EnumerateMetadata" />
+      <MemberSignature Language="VB.NET" Value="Function EnumerateMetadata () As IEnumerable(Of KeyValuePair(Of String, String)) Implements IItemData.EnumerateMetadata" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Build.Framework.IItemData.EnumerateMetadata : unit -&gt; seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;&#xA;override this.Microsoft.Build.Framework.IItemData.EnumerateMetadata : unit -&gt; seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;" Usage="projectItem.Microsoft.Build.Framework.IItemData.EnumerateMetadata " />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ Microsoft.Build.Framework.IItemData.EnumerateMetadata() = Microsoft::Build::Framework::IItemData::EnumerateMetadata;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.IItemData.EnumerateMetadata</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.Build.Framework.IItemData.EnumerateMetadata" />
       </Docs>
     </Member>
     <Member MemberName="Project">

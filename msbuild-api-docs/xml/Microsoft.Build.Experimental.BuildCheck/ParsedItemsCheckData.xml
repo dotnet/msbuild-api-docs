@@ -1,10 +1,10 @@
 <Type Name="ParsedItemsCheckData" FullName="Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData">
-  <TypeSignature Language="C#" Value="public class ParsedItemsCheckData : Microsoft.Build.Experimental.BuildCheck.CheckData" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParsedItemsCheckData extends Microsoft.Build.Experimental.BuildCheck.CheckData" />
+  <TypeSignature Language="C#" Value="public sealed class ParsedItemsCheckData : Microsoft.Build.Experimental.BuildCheck.CheckData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ParsedItemsCheckData extends Microsoft.Build.Experimental.BuildCheck.CheckData" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.BuildCheck.ParsedItemsCheckData" />
-  <TypeSignature Language="VB.NET" Value="Public Class ParsedItemsCheckData&#xA;Inherits CheckData" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ParsedItemsCheckData&#xA;Inherits CheckData" />
   <TypeSignature Language="F#" Value="type ParsedItemsCheckData = class&#xA;    inherit CheckData" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ParsedItemsCheckData : Microsoft::Build::Experimental::BuildCheck::CheckData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ParsedItemsCheckData sealed : Microsoft::Build::Experimental::BuildCheck::CheckData" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -15,14 +15,18 @@
   <Interfaces />
   <Attributes>
     <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("Use EvaluatedItemsData for access to evaluated items.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("Use EvaluatedItemsData for access to evaluated items.", false)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
     <summary>
-            BuildCheck OM data representing the evaluated items of a project.
-            </summary>
+            BuildCheck OM data representing the evaluated items of a project - but only those defined within the project!.
+            No explicit nor implicit imports are regarded. If you are looking the get all evaluated items - use <see cref="T:Microsoft.Build.Experimental.BuildCheck.EvaluatedItemsCheckData" /></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>

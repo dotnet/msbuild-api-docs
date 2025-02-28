@@ -1,0 +1,260 @@
+<Type Name="BuildEventArgsExtensions" FullName="Microsoft.Build.Logging.BuildEventArgsExtensions">
+  <TypeSignature Language="C#" Value="public static class BuildEventArgsExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BuildEventArgsExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BuildEventArgsExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module BuildEventArgsExtensions" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsExtensions = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsExtensions abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Helper extension methods for working with data passed via
+            <see cref="T:Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs" /> and <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnumerateItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItems (this Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItems(class Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItems (eventArgs As ProjectEvaluationFinishedEventArgs) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItems : Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems eventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItems(Microsoft::Build::Framework::ProjectEvaluationFinishedEventArgs ^ eventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <summary>
+            Lazy enumerates and partially strong types items from Items property.
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItems (this Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItems(class Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems(Microsoft.Build.Framework.ProjectStartedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItems (eventArgs As ProjectStartedEventArgs) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItems : Microsoft.Build.Framework.ProjectStartedEventArgs -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItems eventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItems(Microsoft::Build::Framework::ProjectStartedEventArgs ^ eventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <summary>
+            Lazy enumerates and strong types items from Items property.
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateItemsOfType">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfType (this Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfType(class Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItemsOfType (eventArgs As ProjectEvaluationFinishedEventArgs, typeName As String) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItemsOfType : Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs * string -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType (eventArgs, typeName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItemsOfType(Microsoft::Build::Framework::ProjectEvaluationFinishedEventArgs ^ eventArgs, System::String ^ typeName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs" RefType="this" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <param name="typeName">To be added.</param>
+        <summary>
+            Lazy enumerates and partially strong types items from Items property. Only items with matching type will be returned (case-insensitive, MSBuild valid names only).
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateItemsOfType">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfType (this Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfType(class Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType(Microsoft.Build.Framework.ProjectStartedEventArgs,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItemsOfType (eventArgs As ProjectStartedEventArgs, typeName As String) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItemsOfType : Microsoft.Build.Framework.ProjectStartedEventArgs * string -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfType (eventArgs, typeName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItemsOfType(Microsoft::Build::Framework::ProjectStartedEventArgs ^ eventArgs, System::String ^ typeName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" RefType="this" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <param name="typeName">To be added.</param>
+        <summary>
+            Lazy enumerates and partially strong types items from Items property. Only items with matching type will be returned (case-insensitive, MSBuild valid names only).
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateItemsOfTypes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfTypes (this Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs, string[] typeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfTypes(class Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs, string[] typeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItemsOfTypes (eventArgs As ProjectEvaluationFinishedEventArgs, typeNames As String()) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItemsOfTypes : Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs * string[] -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes (eventArgs, typeNames)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItemsOfTypes(Microsoft::Build::Framework::ProjectEvaluationFinishedEventArgs ^ eventArgs, cli::array &lt;System::String ^&gt; ^ typeNames);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs" RefType="this" />
+        <Parameter Name="typeNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <param name="typeNames">To be added.</param>
+        <summary>
+            Lazy enumerates and partially strong types items from Items property. Only items with any matching type will be returned (case-insensitive, MSBuild valid names only).
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateItemsOfTypes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfTypes (this Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs, string[] typeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.ItemData&gt; EnumerateItemsOfTypes(class Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs, string[] typeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes(Microsoft.Build.Framework.ProjectStartedEventArgs,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateItemsOfTypes (eventArgs As ProjectStartedEventArgs, typeNames As String()) As IEnumerable(Of ItemData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateItemsOfTypes : Microsoft.Build.Framework.ProjectStartedEventArgs * string[] -&gt; seq&lt;Microsoft.Build.Framework.ItemData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateItemsOfTypes (eventArgs, typeNames)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ItemData&gt; ^ EnumerateItemsOfTypes(Microsoft::Build::Framework::ProjectStartedEventArgs ^ eventArgs, cli::array &lt;System::String ^&gt; ^ typeNames);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ItemData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" RefType="this" />
+        <Parameter Name="typeNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <param name="typeNames">To be added.</param>
+        <summary>
+            Lazy enumerates and partially strong types items from Items property. Only items with any matching type will be returned (case-insensitive, MSBuild valid names only).
+            The actual item value is proxied via accessor methods - to be able to provide defined interface
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateProperties">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.PropertyData&gt; EnumerateProperties (this Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.PropertyData&gt; EnumerateProperties(class Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties(Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateProperties (eventArgs As ProjectEvaluationFinishedEventArgs) As IEnumerable(Of PropertyData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateProperties : Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs -&gt; seq&lt;Microsoft.Build.Framework.PropertyData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties eventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::PropertyData&gt; ^ EnumerateProperties(Microsoft::Build::Framework::ProjectEvaluationFinishedEventArgs ^ eventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.PropertyData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectEvaluationFinishedEventArgs" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <summary>
+            Lazy enumerates and strong types properties from Properties property.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateProperties">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.PropertyData&gt; EnumerateProperties (this Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Framework.PropertyData&gt; EnumerateProperties(class Microsoft.Build.Framework.ProjectStartedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties(Microsoft.Build.Framework.ProjectStartedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnumerateProperties (eventArgs As ProjectStartedEventArgs) As IEnumerable(Of PropertyData)" />
+      <MemberSignature Language="F#" Value="static member EnumerateProperties : Microsoft.Build.Framework.ProjectStartedEventArgs -&gt; seq&lt;Microsoft.Build.Framework.PropertyData&gt;" Usage="Microsoft.Build.Logging.BuildEventArgsExtensions.EnumerateProperties eventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::PropertyData&gt; ^ EnumerateProperties(Microsoft::Build::Framework::ProjectStartedEventArgs ^ eventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.PropertyData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <summary>
+            Lazy enumerates and strong types properties from Properties property.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
