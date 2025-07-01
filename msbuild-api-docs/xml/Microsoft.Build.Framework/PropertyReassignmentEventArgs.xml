@@ -81,6 +81,48 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyReassignmentEventArgs (string propertyName, string previousValue, string newValue, string location, string file, int line, int column, string message, string helpKeyword = default, string senderName = default, Microsoft.Build.Framework.MessageImportance importance = Microsoft.Build.Framework.MessageImportance.Low);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, string previousValue, string newValue, string location, string file, int32 line, int32 column, string message, string helpKeyword, string senderName, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.PropertyReassignmentEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (propertyName As String, previousValue As String, newValue As String, location As String, file As String, line As Integer, column As Integer, message As String, Optional helpKeyword As String = Nothing, Optional senderName As String = Nothing, Optional importance As MessageImportance = Microsoft.Build.Framework.MessageImportance.Low)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.PropertyReassignmentEventArgs : string * string * string * string * string * int * int * string * string * string * Microsoft.Build.Framework.MessageImportance -&gt; Microsoft.Build.Framework.PropertyReassignmentEventArgs" Usage="new Microsoft.Build.Framework.PropertyReassignmentEventArgs (propertyName, previousValue, newValue, location, file, line, column, message, helpKeyword, senderName, importance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="previousValue" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="newValue" Type="System.String" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="location" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="file" Type="System.String" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="line" Type="System.Int32" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="column" Type="System.Int32" Index="6" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="message" Type="System.String" Index="7" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="8" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="senderName" Type="System.String" Index="9" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" Index="10" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">The name of the property whose value was reassigned.</param>
+        <param name="previousValue">The previous value of the reassigned property.</param>
+        <param name="newValue">The new value of the reassigned property.</param>
+        <param name="location">The property location (XML, command line, etc).</param>
+        <param name="file">The file associated with the event.</param>
+        <param name="line">The line number (0 if not applicable).</param>
+        <param name="column">The column number (0 if not applicable).</param>
+        <param name="message">The message of the property.</param>
+        <param name="helpKeyword">The help keyword.</param>
+        <param name="senderName">The sender name of the event.</param>
+        <param name="importance">The importance of the message.</param>
+        <summary>
+            Creates an instance of the <see cref="T:Microsoft.Build.Framework.PropertyReassignmentEventArgs" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Location">
       <MemberSignature Language="C#" Value="public string Location { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Location" />

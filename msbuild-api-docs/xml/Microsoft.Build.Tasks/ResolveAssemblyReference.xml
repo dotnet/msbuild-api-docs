@@ -747,6 +747,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableCustomCulture">
+      <MemberSignature Language="C#" Value="public bool EnableCustomCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCustomCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.EnableCustomCulture" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableCustomCulture As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableCustomCulture : bool with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.EnableCustomCulture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableCustomCulture { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Contains the information if custom culture is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public override bool Execute ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
@@ -1561,6 +1584,29 @@
         <value>The list of directories which contain the redist lists for the most current framework which can be targeted on the machine. If this is not set, then the highest framework installed on the machine for a given target framework identifier is searched and used.</value>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NonCultureResourceDirectories">
+      <MemberSignature Language="C#" Value="public string[] NonCultureResourceDirectories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] NonCultureResourceDirectories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveAssemblyReference.NonCultureResourceDirectories" />
+      <MemberSignature Language="VB.NET" Value="Public Property NonCultureResourceDirectories As String()" />
+      <MemberSignature Language="F#" Value="member this.NonCultureResourceDirectories : string[] with get, set" Usage="Microsoft.Build.Tasks.ResolveAssemblyReference.NonCultureResourceDirectories" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ NonCultureResourceDirectories { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Contains list of directories that point to custom culture resources that has to be ignored by MSBuild.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="OutputUnresolvedAssemblyConflicts">
