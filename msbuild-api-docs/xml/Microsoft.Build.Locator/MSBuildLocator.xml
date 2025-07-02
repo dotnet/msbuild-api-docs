@@ -20,6 +20,48 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AllowQueryAllDotnetLocations">
+      <MemberSignature Language="C#" Value="public static bool AllowQueryAllDotnetLocations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AllowQueryAllDotnetLocations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllDotnetLocations" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property AllowQueryAllDotnetLocations As Boolean" />
+      <MemberSignature Language="F#" Value="static member AllowQueryAllDotnetLocations : bool with get, set" Usage="Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllDotnetLocations" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool AllowQueryAllDotnetLocations { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowQueryAllRuntimeVersions">
+      <MemberSignature Language="C#" Value="public static bool AllowQueryAllRuntimeVersions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AllowQueryAllRuntimeVersions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllRuntimeVersions" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property AllowQueryAllRuntimeVersions As Boolean" />
+      <MemberSignature Language="F#" Value="static member AllowQueryAllRuntimeVersions : bool with get, set" Usage="Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllRuntimeVersions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool AllowQueryAllRuntimeVersions { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Locator</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CanRegister">
       <MemberSignature Language="C#" Value="public static bool CanRegister { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool CanRegister" />
@@ -224,7 +266,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="msbuildSearchPaths" Type="System.String[]" Index="0" FrameworkAlternate="msbuildlocator-1.4;msbuildlocator-1.5;msbuildlocator-1.4-netcore;msbuildlocator-1.5-netcore" />
+        <Parameter Name="msbuildSearchPaths" Type="System.String[]" Index="0" FrameworkAlternate="msbuildlocator-1.4;msbuildlocator-1.5;msbuildlocator-1.4-netcore;msbuildlocator-1.5-netcore;msbuildlocator-1.6;msbuildlocator-1.6-netcore;msbuildlocator-1.7;msbuildlocator-1.7-netcore;msbuildlocator-1.8;msbuildlocator-1.8-netcore;msbuildlocator-1.9;msbuildlocator-1.9-netcore" />
       </Parameters>
       <Docs>
         <param name="msbuildSearchPaths">
@@ -253,6 +295,12 @@
         <AssemblyName>Microsoft.Build.Locator</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuildlocator-1.5;msbuildlocator-1.5-netcore;msbuildlocator-1.6;msbuildlocator-1.6-netcore;msbuildlocator-1.7;msbuildlocator-1.7-netcore;msbuildlocator-1.8;msbuildlocator-1.8-netcore;msbuildlocator-1.9;msbuildlocator-1.9-netcore">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>

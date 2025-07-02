@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Framework Name="msbuildlocator-1.9-netcore">
+  <Assemblies>
+    <Assembly Name="Microsoft.Build.Locator" Version="1.0.0.0" />
+  </Assemblies>
+  <Namespace Name="Microsoft.Build.Locator">
+    <Type Name="Microsoft.Build.Locator.DiscoveryType" Id="T:Microsoft.Build.Locator.DiscoveryType">
+      <Member Id="F:Microsoft.Build.Locator.DiscoveryType.DeveloperConsole" />
+      <Member Id="F:Microsoft.Build.Locator.DiscoveryType.DotNetSdk" />
+      <Member Id="F:Microsoft.Build.Locator.DiscoveryType.VisualStudioSetup" />
+    </Type>
+    <Type Name="Microsoft.Build.Locator.MSBuildLocator" Id="T:Microsoft.Build.Locator.MSBuildLocator">
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.QueryVisualStudioInstances(Microsoft.Build.Locator.VisualStudioInstanceQueryOptions)" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.RegisterDefaults" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.RegisterInstance(Microsoft.Build.Locator.VisualStudioInstance)" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String)" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.RegisterMSBuildPath(System.String[])" />
+      <Member Id="M:Microsoft.Build.Locator.MSBuildLocator.Unregister" />
+      <Member Id="P:Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllDotnetLocations" />
+      <Member Id="P:Microsoft.Build.Locator.MSBuildLocator.AllowQueryAllRuntimeVersions" />
+      <Member Id="P:Microsoft.Build.Locator.MSBuildLocator.CanRegister" />
+      <Member Id="P:Microsoft.Build.Locator.MSBuildLocator.IsRegistered" />
+    </Type>
+    <Type Name="Microsoft.Build.Locator.VisualStudioInstance" Id="T:Microsoft.Build.Locator.VisualStudioInstance">
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstance.DiscoveryType" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstance.MSBuildPath" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstance.Name" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstance.Version" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstance.VisualStudioRootPath" />
+    </Type>
+    <Type Name="Microsoft.Build.Locator.VisualStudioInstanceQueryOptions" Id="T:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions">
+      <Member Id="M:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.#ctor" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.AllowAllDotnetLocations" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.AllowAllRuntimeVersions" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.Default" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.DiscoveryTypes" />
+      <Member Id="P:Microsoft.Build.Locator.VisualStudioInstanceQueryOptions.WorkingDirectory" />
+    </Type>
+  </Namespace>
+</Framework>
