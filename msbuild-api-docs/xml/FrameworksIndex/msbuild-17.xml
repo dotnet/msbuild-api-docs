@@ -1097,6 +1097,7 @@
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.LoadedProjects" />
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.Loggers" />
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents" />
+      <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.PropertiesFromCommandLine" />
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation" />
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.ToolsetLocations" />
       <Member Id="P:Microsoft.Build.Evaluation.ProjectCollection.Toolsets" />
@@ -1311,6 +1312,7 @@
       <Member Id="M:Microsoft.Build.Execution.BuildManager.EndBuild" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.Finalize" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.GetProjectInstanceForBuild(Microsoft.Build.Evaluation.Project)" />
+      <Member Id="M:Microsoft.Build.Execution.BuildManager.GetWorkerProcesses" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.PendBuildRequest(Microsoft.Build.Execution.BuildRequestData)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.PendBuildRequest(Microsoft.Build.Graph.GraphBuildRequestData)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.ResetCaches" />
@@ -1359,6 +1361,7 @@
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectIsolationMode" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectLoadSettings" />
+      <Member Id="P:Microsoft.Build.Execution.BuildParameters.PropertiesFromCommandLine" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.Question" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ReportFileAccesses" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ResetCaches" />
@@ -1422,6 +1425,7 @@
       <Member Id="M:Microsoft.Build.Execution.BuildResult.AddResultsForTarget(System.String,Microsoft.Build.Execution.TargetResult)" />
       <Member Id="M:Microsoft.Build.Execution.BuildResult.HasResultsForTarget(System.String)" />
       <Member Id="M:Microsoft.Build.Execution.BuildResult.MergeResults(Microsoft.Build.Execution.BuildResult)" />
+      <Member Id="M:Microsoft.Build.Execution.BuildResult.TryGetResultsForTarget(System.String,Microsoft.Build.Execution.TargetResult@)" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.BuildRequestDataFlags" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.CircularDependency" />
       <Member Id="P:Microsoft.Build.Execution.BuildResult.ConfigurationId" />
@@ -1765,6 +1769,7 @@
       <Member Id="P:Microsoft.Build.Execution.RequestedProjectState.PropertyFilters" />
     </Type>
     <Type Name="Microsoft.Build.Execution.TargetResult" Id="T:Microsoft.Build.Execution.TargetResult">
+      <Member Id="M:Microsoft.Build.Execution.TargetResult.TargetResultCodeToString" />
       <Member Id="P:Microsoft.Build.Execution.TargetResult.Exception" />
       <Member Id="P:Microsoft.Build.Execution.TargetResult.Items" />
       <Member Id="P:Microsoft.Build.Execution.TargetResult.ResultCode" />
@@ -2725,13 +2730,16 @@
     </Type>
     <Type Name="Microsoft.Build.Framework.PropertyInitialValueSetEventArgs" Id="T:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs">
       <Member Id="M:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="P:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.Message" />
       <Member Id="P:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.PropertyName" />
       <Member Id="P:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.PropertySource" />
       <Member Id="P:Microsoft.Build.Framework.PropertyInitialValueSetEventArgs.PropertyValue" />
     </Type>
     <Type Name="Microsoft.Build.Framework.PropertyReassignmentEventArgs" Id="T:Microsoft.Build.Framework.PropertyReassignmentEventArgs">
       <Member Id="M:Microsoft.Build.Framework.PropertyReassignmentEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.PropertyReassignmentEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Framework.PropertyReassignmentEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.Location" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.Message" />
@@ -2943,6 +2951,7 @@
     <Type Name="Microsoft.Build.Framework.UninitializedPropertyReadEventArgs" Id="T:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs">
       <Member Id="M:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <Member Id="P:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.Message" />
       <Member Id="P:Microsoft.Build.Framework.UninitializedPropertyReadEventArgs.PropertyName" />
     </Type>
   </Namespace>
@@ -3600,6 +3609,15 @@
       <Member Id="P:Microsoft.Build.Logging.StringReadEventArgs.OriginalString" />
       <Member Id="P:Microsoft.Build.Logging.StringReadEventArgs.StringToBeUsed" />
     </Type>
+    <Type Name="Microsoft.Build.Logging.TerminalLogger" Id="T:Microsoft.Build.Logging.TerminalLogger">
+      <Member Id="M:Microsoft.Build.Logging.TerminalLogger.CreateTerminalOrConsoleLogger(System.String[])" />
+      <Member Id="M:Microsoft.Build.Logging.TerminalLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <Member Id="M:Microsoft.Build.Logging.TerminalLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <Member Id="M:Microsoft.Build.Logging.TerminalLogger.ParseParameters" />
+      <Member Id="M:Microsoft.Build.Logging.TerminalLogger.Shutdown" />
+      <Member Id="P:Microsoft.Build.Logging.TerminalLogger.Parameters" />
+      <Member Id="P:Microsoft.Build.Logging.TerminalLogger.Verbosity" />
+    </Type>
     <Type Name="Microsoft.Build.Logging.WriteHandler" Id="T:Microsoft.Build.Logging.WriteHandler" />
   </Namespace>
   <Namespace Name="Microsoft.Build.Logging.SimpleErrorLogger">
@@ -4144,6 +4162,7 @@
       <Member Id="M:Microsoft.Build.Tasks.CreateManifestResourceName.Execute" />
       <Member Id="M:Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile(System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier(System.String)" />
+      <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.EnableCustomCulture" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" />
@@ -4722,6 +4741,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnNETStandard" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DependsOnSystemRuntime" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.DoNotCopyLocalIfInGac" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.EnableCustomCulture" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies" />
@@ -4739,6 +4759,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblySubsetTables" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.LatestTargetFrameworkDirectories" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.NonCultureResourceDirectories" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.OutputUnresolvedAssemblyConflicts" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.ProfileName" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles" />
@@ -6171,6 +6192,7 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.#ctor" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.#ctor(Microsoft.Build.Framework.ITaskItem)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Collections.IDictionary)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />

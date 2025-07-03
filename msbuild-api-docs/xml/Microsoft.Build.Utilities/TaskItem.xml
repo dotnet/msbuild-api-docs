@@ -111,7 +111,7 @@
         <summary>
             Default constructor -- we need it so this type is COM-createable.</summary>
         <remarks>
-            This constructor exists only so that the type is COM-creatable. Prefer <see cref="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)" />.
+            This constructor exists only so that the type is COM-creatable. Prefer <see cref="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Boolean)" />.
             </remarks>
       </Docs>
     </Member>
@@ -181,7 +181,40 @@
         <summary>
             This constructor creates a new task item, given the item spec.</summary>
         <remarks>To be added.</remarks>
-        <comments>Assumes the itemspec passed in is escaped.</comments>
+        <comments>Assumes the itemspec passed in is escaped and represents a file path. </comments>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskItem (string itemSpec, bool treatAsFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemSpec, bool treatAsFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (itemSpec As String, treatAsFilePath As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.TaskItem : string * bool -&gt; Microsoft.Build.Utilities.TaskItem" Usage="new Microsoft.Build.Utilities.TaskItem (itemSpec, treatAsFilePath)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskItem(System::String ^ itemSpec, bool treatAsFilePath);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemSpec" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="treatAsFilePath" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="itemSpec">The item-spec string.</param>
+        <param name="treatAsFilePath">
+            Specifies whether or not to treat the value in <see name="itemSpec" />
+            as a file path and attempt to normalize it.
+            </param>
+        <summary>
+            This constructor creates a new task item, given the item spec.
+            </summary>
+        <remarks>To be added.</remarks>
+        <comments>
+            Assumes the itemspec passed in is escaped.
+            If <see name="treatAsFilePath" /> is set to <see langword="true" />, the value in <see name="itemSpec" />
+            will be fixed up as a path by having any backslashes replaced with slashes.
+            </comments>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
