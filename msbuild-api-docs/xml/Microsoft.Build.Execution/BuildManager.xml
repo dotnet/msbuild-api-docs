@@ -448,6 +448,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetWorkerProcesses">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Process&gt; GetWorkerProcesses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Diagnostics.Process&gt; GetWorkerProcesses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildManager.GetWorkerProcesses" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetWorkerProcesses () As IEnumerable(Of Process)" />
+      <MemberSignature Language="F#" Value="member this.GetWorkerProcesses : unit -&gt; seq&lt;System.Diagnostics.Process&gt;" Usage="buildManager.GetWorkerProcesses " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;System::Diagnostics::Process ^&gt; ^ GetWorkerProcesses();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Process&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Point in time snapshot of all worker processes leveraged by this BuildManager.
+            This is meant to be used by VS. External users should not this is only best-effort, point-in-time functionality
+             without guarantee of 100% correctness and safety.
+            </summary>
+        <returns>Enumeration of <see cref="T:System.Diagnostics.Process" /> objects that were valid during the time of call to this function.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PendBuildRequest">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildSubmission PendBuildRequest (Microsoft.Build.Execution.BuildRequestData requestData);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.BuildSubmission PendBuildRequest(class Microsoft.Build.Execution.BuildRequestData requestData) cil managed" />

@@ -568,5 +568,43 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TryGetResultsForTarget">
+      <MemberSignature Language="C#" Value="public bool TryGetResultsForTarget (string target, out Microsoft.Build.Execution.TargetResult? value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetResultsForTarget(string target, [out] class Microsoft.Build.Execution.TargetResult&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResult.TryGetResultsForTarget(System.String,Microsoft.Build.Execution.TargetResult@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetResultsForTarget (target As String, ByRef value As TargetResult) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetResultsForTarget : string * TargetResult -&gt; bool" Usage="buildResult.TryGetResultsForTarget (target, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetResultsForTarget(System::String ^ target, [Runtime::InteropServices::Out] Microsoft::Build::Execution::TargetResult ^ % value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="value" Type="Microsoft.Build.Execution.TargetResult" RefType="out" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
+            </Attribute>
+            <Attribute FrameworkAlternate="msbuild-17-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
   </Members>
 </Type>
