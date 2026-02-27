@@ -18,6 +18,10 @@
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")&gt;]</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -82,10 +86,10 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="fileSystem" Type="Microsoft.Build.FileSystem.MSBuildFileSystemBase" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="requestedTargets" Type="System.Collections.Generic.IReadOnlyCollection&lt;System.String&gt;" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="graph" Type="Microsoft.Build.Graph.ProjectGraph" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="fileSystem" Type="Microsoft.Build.FileSystem.MSBuildFileSystemBase" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="requestedTargets" Type="System.Collections.Generic.IReadOnlyCollection&lt;System.String&gt;" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="graph" Type="Microsoft.Build.Graph.ProjectGraph" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
           <Attributes>
             <Attribute FrameworkAlternate="msbuild-17-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
@@ -93,7 +97,7 @@
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="graphEntryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+        <Parameter Name="graphEntryPoints" Type="System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
           <Attributes>
             <Attribute FrameworkAlternate="msbuild-17-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>

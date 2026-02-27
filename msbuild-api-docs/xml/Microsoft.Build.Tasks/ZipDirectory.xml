@@ -5,11 +5,11 @@
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
-  <TypeSignature Language="C#" Value="public sealed class ZipDirectory : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZipDirectory extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension&#xA;Implements IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class ZipDirectory : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZipDirectory extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipDirectory&#xA;Inherits TaskExtension&#xA;Implements IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type ZipDirectory = class&#xA;    inherit TaskExtension&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ZipDirectory sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -18,7 +18,7 @@
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
     </Interface>
   </Interfaces>
@@ -41,6 +41,118 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLevel">
+      <MemberSignature Language="C#" Value="public string? CompressionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompressionLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ZipDirectory.CompressionLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property CompressionLevel As String" />
+      <MemberSignature Language="F#" Value="member this.CompressionLevel : string with get, set" Usage="Microsoft.Build.Tasks.ZipDirectory.CompressionLevel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CompressionLevel { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the compression level to use when creating the zip archive.
+            Valid values are "Optimal", "Fastest", and "NoCompression".
+            This parameter is optional.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Versions of MSBuild that run on .NET (not .NET Framework) additionally support
+            the "SmallestSize" compression level. Attempting to use that level on
+            .NET Framework will use the default compression level instead, and log a warning.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLevelFastest">
+      <MemberSignature Language="C#" Value="public const string CompressionLevelFastest;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CompressionLevelFastest" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.ZipDirectory.CompressionLevelFastest" />
+      <MemberSignature Language="VB.NET" Value="Public Const CompressionLevelFastest As String " />
+      <MemberSignature Language="F#" Value="val mutable CompressionLevelFastest : string" Usage="Microsoft.Build.Tasks.ZipDirectory.CompressionLevelFastest" />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ CompressionLevelFastest;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLevelNoCompression">
+      <MemberSignature Language="C#" Value="public const string CompressionLevelNoCompression;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CompressionLevelNoCompression" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.ZipDirectory.CompressionLevelNoCompression" />
+      <MemberSignature Language="VB.NET" Value="Public Const CompressionLevelNoCompression As String " />
+      <MemberSignature Language="F#" Value="val mutable CompressionLevelNoCompression : string" Usage="Microsoft.Build.Tasks.ZipDirectory.CompressionLevelNoCompression" />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ CompressionLevelNoCompression;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLevelOptimal">
+      <MemberSignature Language="C#" Value="public const string CompressionLevelOptimal;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CompressionLevelOptimal" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.ZipDirectory.CompressionLevelOptimal" />
+      <MemberSignature Language="VB.NET" Value="Public Const CompressionLevelOptimal As String " />
+      <MemberSignature Language="F#" Value="val mutable CompressionLevelOptimal : string" Usage="Microsoft.Build.Tasks.ZipDirectory.CompressionLevelOptimal" />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ CompressionLevelOptimal;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLevelSmallestSize">
+      <MemberSignature Language="C#" Value="public const string CompressionLevelSmallestSize;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CompressionLevelSmallestSize" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.ZipDirectory.CompressionLevelSmallestSize" />
+      <MemberSignature Language="VB.NET" Value="Public Const CompressionLevelSmallestSize As String " />
+      <MemberSignature Language="F#" Value="val mutable CompressionLevelSmallestSize : string" Usage="Microsoft.Build.Tasks.ZipDirectory.CompressionLevelSmallestSize" />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ CompressionLevelSmallestSize;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Note: This compression level is unavailable on .NET Framework.
+            Attempts to use it on .NET Framework will use the default compression level instead, and log a warning.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,7 +247,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets a value indicating if the destination file should be overwritten.
+            Gets or sets a value indicating whether the destination file should be overwritten.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

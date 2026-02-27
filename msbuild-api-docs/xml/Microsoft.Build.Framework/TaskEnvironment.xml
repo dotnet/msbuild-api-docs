@@ -1,0 +1,179 @@
+<Type Name="TaskEnvironment" FullName="Microsoft.Build.Framework.TaskEnvironment">
+  <TypeSignature Language="C#" Value="public sealed class TaskEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TaskEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskEnvironment" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TaskEnvironment" />
+  <TypeSignature Language="F#" Value="type TaskEnvironment = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TaskEnvironment sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides an <see cref="T:Microsoft.Build.Framework.IMultiThreadableTask" /> with access to a run-time execution environment including
+            environment variables, file paths, and process management capabilities.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAbsolutePath">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath GetAbsolutePath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Framework.AbsolutePath GetAbsolutePath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.GetAbsolutePath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAbsolutePath (path As String) As AbsolutePath" />
+      <MemberSignature Language="F#" Value="member this.GetAbsolutePath : string -&gt; Microsoft.Build.Framework.AbsolutePath" Usage="taskEnvironment.GetAbsolutePath path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::AbsolutePath GetAbsolutePath(System::String ^ path);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AbsolutePath</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to convert.</param>
+        <summary>
+            Converts a relative or absolute path string to an absolute path.
+            This function resolves paths relative to ProjectDirectory.
+            </summary>
+        <returns>An absolute path representation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public string? GetEnvironmentVariable (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetEnvironmentVariable(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariable(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnvironmentVariable (name As String) As String" />
+      <MemberSignature Language="F#" Value="member this.GetEnvironmentVariable : string -&gt; string" Usage="taskEnvironment.GetEnvironmentVariable name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetEnvironmentVariable(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the environment variable.</param>
+        <summary>
+            Gets the value of an environment variable.
+            </summary>
+        <returns>The value of the environment variable, or null if it does not exist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; GetEnvironmentVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; GetEnvironmentVariables() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariables" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnvironmentVariables () As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.GetEnvironmentVariables : unit -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="taskEnvironment.GetEnvironmentVariables " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ GetEnvironmentVariables();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a dictionary containing all environment variables.
+            </summary>
+        <returns>A read-only dictionary of environment variables.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProcessStartInfo">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ProcessStartInfo GetProcessStartInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.ProcessStartInfo GetProcessStartInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.GetProcessStartInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProcessStartInfo () As ProcessStartInfo" />
+      <MemberSignature Language="F#" Value="member this.GetProcessStartInfo : unit -&gt; System.Diagnostics.ProcessStartInfo" Usage="taskEnvironment.GetProcessStartInfo " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Diagnostics::ProcessStartInfo ^ GetProcessStartInfo();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessStartInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new ProcessStartInfo configured for the current task execution environment.
+            </summary>
+        <returns>A ProcessStartInfo object configured for the current task execution environment.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectDirectory">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath ProjectDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.AbsolutePath ProjectDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskEnvironment.ProjectDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectDirectory As AbsolutePath" />
+      <MemberSignature Language="F#" Value="member this.ProjectDirectory : Microsoft.Build.Framework.AbsolutePath" Usage="Microsoft.Build.Framework.TaskEnvironment.ProjectDirectory" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::AbsolutePath ProjectDirectory { Microsoft::Build::Framework::AbsolutePath get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AbsolutePath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the project directory for the task execution.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public void SetEnvironmentVariable (string name, string? value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEnvironmentVariable(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.SetEnvironmentVariable(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetEnvironmentVariable (name As String, value As String)" />
+      <MemberSignature Language="F#" Value="member this.SetEnvironmentVariable : string * string -&gt; unit" Usage="taskEnvironment.SetEnvironmentVariable (name, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEnvironmentVariable(System::String ^ name, System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the environment variable.</param>
+        <param name="value">The value to set, or null to remove the environment variable.</param>
+        <summary>
+            Sets the value of an environment variable.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

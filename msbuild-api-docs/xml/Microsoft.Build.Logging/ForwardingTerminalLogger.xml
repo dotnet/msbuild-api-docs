@@ -1,0 +1,338 @@
+<Type Name="ForwardingTerminalLogger" FullName="Microsoft.Build.Logging.ForwardingTerminalLogger">
+  <TypeSignature Language="C#" Value="public sealed class ForwardingTerminalLogger : Microsoft.Build.Framework.IForwardingLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ForwardingTerminalLogger extends System.Object implements class Microsoft.Build.Framework.IForwardingLogger, class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.ForwardingTerminalLogger" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ForwardingTerminalLogger&#xA;Implements IForwardingLogger" />
+  <TypeSignature Language="F#" Value="type ForwardingTerminalLogger = class&#xA;    interface IForwardingLogger&#xA;    interface INodeLogger&#xA;    interface ILogger" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ForwardingTerminalLogger sealed : Microsoft::Build::Framework::IForwardingLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IForwardingLogger</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ILogger</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A forwarding logger that forwards events relevant to implementing the TerminalLogger from build nodes to the central nodes.
+            This logger
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForwardingTerminalLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ForwardingTerminalLogger();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEventRedirector">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IEventRedirector? BuildEventRedirector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IEventRedirector BuildEventRedirector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ForwardingTerminalLogger.BuildEventRedirector" />
+      <MemberSignature Language="VB.NET" Value="Public Property BuildEventRedirector As IEventRedirector" />
+      <MemberSignature Language="F#" Value="member this.BuildEventRedirector : Microsoft.Build.Framework.IEventRedirector with get, set" Usage="Microsoft.Build.Logging.ForwardingTerminalLogger.BuildEventRedirector" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::IEventRedirector ^ BuildEventRedirector { Microsoft::Build::Framework::IEventRedirector ^ get(); void set(Microsoft::Build::Framework::IEventRedirector ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IEventRedirector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardEventUnconditionally">
+      <MemberSignature Language="C#" Value="public void ForwardEventUnconditionally (object sender, Microsoft.Build.Framework.BuildEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForwardEventUnconditionally(object sender, class Microsoft.Build.Framework.BuildEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.ForwardEventUnconditionally(System.Object,Microsoft.Build.Framework.BuildEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ForwardEventUnconditionally (sender As Object, e As BuildEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.ForwardEventUnconditionally : obj * Microsoft.Build.Framework.BuildEventArgs -&gt; unit" Usage="forwardingTerminalLogger.ForwardEventUnconditionally (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ForwardEventUnconditionally(System::Object ^ sender, Microsoft::Build::Framework::BuildEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">To be added.</param>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (eventSource As IEventSource)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.Build.Framework.IEventSource -&gt; unit&#xA;override this.Initialize : Microsoft.Build.Framework.IEventSource -&gt; unit" Usage="forwardingTerminalLogger.Initialize eventSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Initialize(Microsoft::Build::Framework::IEventSource ^ eventSource);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (eventSource As IEventSource, nodeCount As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.Build.Framework.IEventSource * int -&gt; unit&#xA;override this.Initialize : Microsoft.Build.Framework.IEventSource * int -&gt; unit" Usage="forwardingTerminalLogger.Initialize (eventSource, nodeCount)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Initialize(Microsoft::Build::Framework::IEventSource ^ eventSource, int nodeCount);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.INodeLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">To be added.</param>
+        <param name="nodeCount">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="MessageRaised">
+      <MemberSignature Language="C#" Value="public void MessageRaised (object sender, Microsoft.Build.Framework.BuildMessageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MessageRaised(object sender, class Microsoft.Build.Framework.BuildMessageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.MessageRaised(System.Object,Microsoft.Build.Framework.BuildMessageEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MessageRaised (sender As Object, e As BuildMessageEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.MessageRaised : obj * Microsoft.Build.Framework.BuildMessageEventArgs -&gt; unit" Usage="forwardingTerminalLogger.MessageRaised (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void MessageRaised(System::Object ^ sender, Microsoft::Build::Framework::BuildMessageEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildMessageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">To be added.</param>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeId">
+      <MemberSignature Language="C#" Value="public int NodeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ForwardingTerminalLogger.NodeId" />
+      <MemberSignature Language="VB.NET" Value="Public Property NodeId As Integer" />
+      <MemberSignature Language="F#" Value="member this.NodeId : int with get, set" Usage="Microsoft.Build.Logging.ForwardingTerminalLogger.NodeId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NodeId { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IForwardingLogger.NodeId</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public string? Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ForwardingTerminalLogger.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As String" />
+      <MemberSignature Language="F#" Value="member this.Parameters : string with get, set" Usage="Microsoft.Build.Logging.ForwardingTerminalLogger.Parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Parameters { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.ILogger.Parameters</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.Shutdown" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Shutdown ()" />
+      <MemberSignature Language="F#" Value="abstract member Shutdown : unit -&gt; unit&#xA;override this.Shutdown : unit -&gt; unit" Usage="forwardingTerminalLogger.Shutdown " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Shutdown();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.ILogger.Shutdown</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TaskFinished">
+      <MemberSignature Language="C#" Value="public void TaskFinished (object sender, Microsoft.Build.Framework.TaskFinishedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TaskFinished(object sender, class Microsoft.Build.Framework.TaskFinishedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.TaskFinished(System.Object,Microsoft.Build.Framework.TaskFinishedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TaskFinished (sender As Object, e As TaskFinishedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.TaskFinished : obj * Microsoft.Build.Framework.TaskFinishedEventArgs -&gt; unit" Usage="forwardingTerminalLogger.TaskFinished (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TaskFinished(System::Object ^ sender, Microsoft::Build::Framework::TaskFinishedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TaskFinishedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">To be added.</param>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskStarted">
+      <MemberSignature Language="C#" Value="public void TaskStarted (object sender, Microsoft.Build.Framework.TaskStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TaskStarted(object sender, class Microsoft.Build.Framework.TaskStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.ForwardingTerminalLogger.TaskStarted(System.Object,Microsoft.Build.Framework.TaskStartedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TaskStarted (sender As Object, e As TaskStartedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.TaskStarted : obj * Microsoft.Build.Framework.TaskStartedEventArgs -&gt; unit" Usage="forwardingTerminalLogger.TaskStarted (sender, e)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TaskStarted(System::Object ^ sender, Microsoft::Build::Framework::TaskStartedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TaskStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">To be added.</param>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.ForwardingTerminalLogger.Verbosity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Verbosity As LoggerVerbosity" />
+      <MemberSignature Language="F#" Value="member this.Verbosity : Microsoft.Build.Framework.LoggerVerbosity with get, set" Usage="Microsoft.Build.Logging.ForwardingTerminalLogger.Verbosity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::LoggerVerbosity Verbosity { Microsoft::Build::Framework::LoggerVerbosity get(); void set(Microsoft::Build::Framework::LoggerVerbosity value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.ILogger.Verbosity</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

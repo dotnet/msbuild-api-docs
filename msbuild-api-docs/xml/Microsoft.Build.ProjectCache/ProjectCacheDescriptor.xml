@@ -1,0 +1,171 @@
+<Type Name="ProjectCacheDescriptor" FullName="Microsoft.Build.ProjectCache.ProjectCacheDescriptor">
+  <TypeSignature Language="C#" Value="public class ProjectCacheDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectCacheDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.ProjectCache.ProjectCacheDescriptor" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectCacheDescriptor" />
+  <TypeSignature Language="F#" Value="type ProjectCacheDescriptor = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectCacheDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromAssemblyPath">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromAssemblyPath (string pluginAssemblyPath, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromAssemblyPath(string pluginAssemblyPath, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromAssemblyPath (pluginAssemblyPath As String, Optional pluginSettings As IReadOnlyDictionary(Of String, String) = Nothing) As ProjectCacheDescriptor" />
+      <MemberSignature Language="F#" Value="static member FromAssemblyPath : string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Build.ProjectCache.ProjectCacheDescriptor" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromAssemblyPath (pluginAssemblyPath, pluginSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.ProjectCache.ProjectCacheDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginAssemblyPath" Type="System.String" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pluginAssemblyPath">To be added.</param>
+        <param name="pluginSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromInstance">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromInstance (Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase experimentalPluginInstance, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromInstance(class Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase experimentalPluginInstance, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromInstance(Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromInstance (experimentalPluginInstance As ProjectCachePluginBase, Optional pluginSettings As IReadOnlyDictionary(Of String, String) = Nothing) As ProjectCacheDescriptor" />
+      <MemberSignature Language="F#" Value="static member FromInstance : Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Build.ProjectCache.ProjectCacheDescriptor" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromInstance (experimentalPluginInstance, pluginSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Microsoft.Build.Experimental.ProjectCachePluginBase was moved to Microsoft.Build.ProjectCache, migrate your plugins and use the new type instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Microsoft.Build.Experimental.ProjectCachePluginBase was moved to Microsoft.Build.ProjectCache, migrate your plugins and use the new type instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.ProjectCache.ProjectCacheDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="experimentalPluginInstance" Type="Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="experimentalPluginInstance">To be added.</param>
+        <param name="pluginSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromInstance">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromInstance (Microsoft.Build.ProjectCache.ProjectCachePluginBase pluginInstance, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt;? pluginSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.ProjectCache.ProjectCacheDescriptor FromInstance(class Microsoft.Build.ProjectCache.ProjectCachePluginBase pluginInstance, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; pluginSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromInstance(Microsoft.Build.ProjectCache.ProjectCachePluginBase,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromInstance (pluginInstance As ProjectCachePluginBase, Optional pluginSettings As IReadOnlyDictionary(Of String, String) = Nothing) As ProjectCacheDescriptor" />
+      <MemberSignature Language="F#" Value="static member FromInstance : Microsoft.Build.ProjectCache.ProjectCachePluginBase * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Microsoft.Build.ProjectCache.ProjectCacheDescriptor" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.FromInstance (pluginInstance, pluginSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.ProjectCache.ProjectCacheDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginInstance" Type="Microsoft.Build.ProjectCache.ProjectCachePluginBase" />
+        <Parameter Name="pluginSettings" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pluginInstance">To be added.</param>
+        <param name="pluginSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PluginAssemblyPath">
+      <MemberSignature Language="C#" Value="public string? PluginAssemblyPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PluginAssemblyPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginAssemblyPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PluginAssemblyPath As String" />
+      <MemberSignature Language="F#" Value="member this.PluginAssemblyPath : string" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginAssemblyPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PluginAssemblyPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the path to the assembly containing the project cache plugin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PluginInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.ProjectCache.IProjectCachePluginBase? PluginInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.ProjectCache.IProjectCachePluginBase PluginInstance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginInstance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PluginInstance As IProjectCachePluginBase" />
+      <MemberSignature Language="F#" Value="member this.PluginInstance : Microsoft.Build.ProjectCache.IProjectCachePluginBase" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginInstance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::ProjectCache::IProjectCachePluginBase ^ PluginInstance { Microsoft::Build::ProjectCache::IProjectCachePluginBase ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.ProjectCache.IProjectCachePluginBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PluginSettings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; PluginSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; PluginSettings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginSettings" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PluginSettings As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.PluginSettings : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.Build.ProjectCache.ProjectCacheDescriptor.PluginSettings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ PluginSettings { System::Collections::Generic::IReadOnlyDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

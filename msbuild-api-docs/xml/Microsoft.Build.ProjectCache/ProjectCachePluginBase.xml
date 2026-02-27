@@ -1,0 +1,246 @@
+<Type Name="ProjectCachePluginBase" FullName="Microsoft.Build.ProjectCache.ProjectCachePluginBase">
+  <TypeSignature Language="C#" Value="public abstract class ProjectCachePluginBase : Microsoft.Build.ProjectCache.IProjectCachePluginBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectCachePluginBase extends System.Object implements class Microsoft.Build.ProjectCache.IProjectCachePluginBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.ProjectCache.ProjectCachePluginBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectCachePluginBase&#xA;Implements IProjectCachePluginBase" />
+  <TypeSignature Language="F#" Value="type ProjectCachePluginBase = class&#xA;    interface IProjectCachePluginBase" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectCachePluginBase abstract : Microsoft::Build::ProjectCache::IProjectCachePluginBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.ProjectCache.IProjectCachePluginBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+                Only one plugin instance can exist for a given BuildManager BeginBuild / EndBuild session.
+                Any exceptions thrown by the plugin will cause MSBuild to fail the build.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProjectCachePluginBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProjectCachePluginBase();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginBuildAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task BeginBuildAsync (Microsoft.Build.ProjectCache.CacheContext context, Microsoft.Build.ProjectCache.PluginLoggerBase logger, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task BeginBuildAsync(class Microsoft.Build.ProjectCache.CacheContext context, class Microsoft.Build.ProjectCache.PluginLoggerBase logger, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.BeginBuildAsync(Microsoft.Build.ProjectCache.CacheContext,Microsoft.Build.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginBuildAsync (context As CacheContext, logger As PluginLoggerBase, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member BeginBuildAsync : Microsoft.Build.ProjectCache.CacheContext * Microsoft.Build.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="projectCachePluginBase.BeginBuildAsync (context, logger, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task ^ BeginBuildAsync(Microsoft::Build::ProjectCache::CacheContext ^ context, Microsoft::Build::ProjectCache::PluginLoggerBase ^ logger, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Build.ProjectCache.CacheContext" />
+        <Parameter Name="logger" Type="Microsoft.Build.ProjectCache.PluginLoggerBase" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="logger">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+                Called once before the build, to have the plugin instantiate its state.
+                Errors are checked via <see cref="P:Microsoft.Build.ProjectCache.PluginLoggerBase.HasLoggedErrors" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndBuildAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task EndBuildAsync (Microsoft.Build.ProjectCache.PluginLoggerBase logger, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task EndBuildAsync(class Microsoft.Build.ProjectCache.PluginLoggerBase logger, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.EndBuildAsync(Microsoft.Build.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function EndBuildAsync (logger As PluginLoggerBase, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member EndBuildAsync : Microsoft.Build.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="projectCachePluginBase.EndBuildAsync (logger, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task ^ EndBuildAsync(Microsoft::Build::ProjectCache::PluginLoggerBase ^ logger, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Build.ProjectCache.PluginLoggerBase" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="logger">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+                Called once after all the build to let the plugin do any post build operations (log metrics, cleanup, etc).
+                Errors are checked via <see cref="P:Microsoft.Build.ProjectCache.PluginLoggerBase.HasLoggedErrors" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheResultAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Build.ProjectCache.CacheResult&gt; GetCacheResultAsync (Microsoft.Build.Execution.BuildRequestData buildRequest, Microsoft.Build.ProjectCache.PluginLoggerBase logger, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Build.ProjectCache.CacheResult&gt; GetCacheResultAsync(class Microsoft.Build.Execution.BuildRequestData buildRequest, class Microsoft.Build.ProjectCache.PluginLoggerBase logger, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.GetCacheResultAsync(Microsoft.Build.Execution.BuildRequestData,Microsoft.Build.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetCacheResultAsync (buildRequest As BuildRequestData, logger As PluginLoggerBase, cancellationToken As CancellationToken) As Task(Of CacheResult)" />
+      <MemberSignature Language="F#" Value="abstract member GetCacheResultAsync : Microsoft.Build.Execution.BuildRequestData * Microsoft.Build.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Build.ProjectCache.CacheResult&gt;" Usage="projectCachePluginBase.GetCacheResultAsync (buildRequest, logger, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;Microsoft::Build::ProjectCache::CacheResult ^&gt; ^ GetCacheResultAsync(Microsoft::Build::Execution::BuildRequestData ^ buildRequest, Microsoft::Build::ProjectCache::PluginLoggerBase ^ logger, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Build.ProjectCache.CacheResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildRequest" Type="Microsoft.Build.Execution.BuildRequestData" />
+        <Parameter Name="logger" Type="Microsoft.Build.ProjectCache.PluginLoggerBase" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buildRequest">To be added.</param>
+        <param name="logger">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+                Called once for each build request.
+                Operation needs to be atomic. Any side effects (IO, environment variables, etc) need to be reverted upon
+                cancellation.
+                MSBuild may choose to cancel this method and build the project itself.
+                Errors are checked via <see cref="P:Microsoft.Build.ProjectCache.PluginLoggerBase.HasLoggedErrors" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleFileAccess">
+      <MemberSignature Language="C#" Value="public virtual void HandleFileAccess (Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Experimental.FileAccess.FileAccessData fileAccessData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleFileAccess(valuetype Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, valuetype Microsoft.Build.Experimental.FileAccess.FileAccessData fileAccessData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.HandleFileAccess(Microsoft.Build.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.FileAccessData)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub HandleFileAccess (fileAccessContext As FileAccessContext, fileAccessData As FileAccessData)" />
+      <MemberSignature Language="F#" Value="abstract member HandleFileAccess : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.FileAccessData -&gt; unit&#xA;override this.HandleFileAccess : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.FileAccessData -&gt; unit" Usage="projectCachePluginBase.HandleFileAccess (fileAccessContext, fileAccessData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void HandleFileAccess(Microsoft::Build::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Experimental::FileAccess::FileAccessData fileAccessData);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.ProjectCache.FileAccessContext" />
+        <Parameter Name="fileAccessData" Type="Microsoft.Build.Experimental.FileAccess.FileAccessData" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="fileAccessData">To be added.</param>
+        <summary>
+                Called for each file access from an MSBuild node or one of its children.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProcess">
+      <MemberSignature Language="C#" Value="public virtual void HandleProcess (Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Experimental.FileAccess.ProcessData processData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleProcess(valuetype Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, valuetype Microsoft.Build.Experimental.FileAccess.ProcessData processData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.HandleProcess(Microsoft.Build.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.ProcessData)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub HandleProcess (fileAccessContext As FileAccessContext, processData As ProcessData)" />
+      <MemberSignature Language="F#" Value="abstract member HandleProcess : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.ProcessData -&gt; unit&#xA;override this.HandleProcess : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Experimental.FileAccess.ProcessData -&gt; unit" Usage="projectCachePluginBase.HandleProcess (fileAccessContext, processData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void HandleProcess(Microsoft::Build::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Experimental::FileAccess::ProcessData processData);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.ProjectCache.FileAccessContext" />
+        <Parameter Name="processData" Type="Microsoft.Build.Experimental.FileAccess.ProcessData" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="processData">To be added.</param>
+        <summary>
+                Called for each new child process created by an MSBuild node or one of its children.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleProjectFinishedAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task HandleProjectFinishedAsync (Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, Microsoft.Build.Execution.BuildResult buildResult, Microsoft.Build.ProjectCache.PluginLoggerBase logger, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task HandleProjectFinishedAsync(valuetype Microsoft.Build.ProjectCache.FileAccessContext fileAccessContext, class Microsoft.Build.Execution.BuildResult buildResult, class Microsoft.Build.ProjectCache.PluginLoggerBase logger, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.HandleProjectFinishedAsync(Microsoft.Build.ProjectCache.FileAccessContext,Microsoft.Build.Execution.BuildResult,Microsoft.Build.ProjectCache.PluginLoggerBase,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function HandleProjectFinishedAsync (fileAccessContext As FileAccessContext, buildResult As BuildResult, logger As PluginLoggerBase, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member HandleProjectFinishedAsync : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Execution.BuildResult * Microsoft.Build.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.HandleProjectFinishedAsync : Microsoft.Build.ProjectCache.FileAccessContext * Microsoft.Build.Execution.BuildResult * Microsoft.Build.ProjectCache.PluginLoggerBase * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="projectCachePluginBase.HandleProjectFinishedAsync (fileAccessContext, buildResult, logger, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Threading::Tasks::Task ^ HandleProjectFinishedAsync(Microsoft::Build::ProjectCache::FileAccessContext fileAccessContext, Microsoft::Build::Execution::BuildResult ^ buildResult, Microsoft::Build::ProjectCache::PluginLoggerBase ^ logger, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.ProjectCache.FileAccessContext" />
+        <Parameter Name="buildResult" Type="Microsoft.Build.Execution.BuildResult" />
+        <Parameter Name="logger" Type="Microsoft.Build.ProjectCache.PluginLoggerBase" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="fileAccessContext">To be added.</param>
+        <param name="buildResult">To be added.</param>
+        <param name="logger">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+                Called when a build request finishes execution. This provides an opportunity for the plugin to take action on the
+                aggregated file access reports from <see cref="M:Microsoft.Build.ProjectCache.ProjectCachePluginBase.HandleFileAccess(Microsoft.Build.ProjectCache.FileAccessContext,Microsoft.Build.Experimental.FileAccess.FileAccessData)" />.
+                Errors are checked via <see cref="P:Microsoft.Build.ProjectCache.PluginLoggerBase.HasLoggedErrors" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="OutOfProcRarNode" FullName="Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode">
+  <TypeSignature Language="C#" Value="public sealed class OutOfProcRarNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutOfProcRarNode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OutOfProcRarNode" />
+  <TypeSignature Language="F#" Value="type OutOfProcRarNode = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class OutOfProcRarNode sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Implements a persistent node for the ResolveAssemblyReferences task.
+            This manages the lifecycle of the multi-instance pipe server which executes RAR requests
+            and does not invoke the task itself.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfProcRarNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OutOfProcRarNode();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfProcRarNode (int maxNumberOfConcurrentTasks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maxNumberOfConcurrentTasks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (maxNumberOfConcurrentTasks As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode : int -&gt; Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode" Usage="new Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode maxNumberOfConcurrentTasks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OutOfProcRarNode(int maxNumberOfConcurrentTasks);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maxNumberOfConcurrentTasks" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxNumberOfConcurrentTasks">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason Run (out Exception? shutdownException, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason Run([out] class System.Exception&amp; shutdownException, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssemblyDependency.OutOfProcRarNode.Run(System.Exception@,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Run (ByRef shutdownException As Exception, Optional cancellationToken As CancellationToken = Nothing) As RarNodeShutdownReason" />
+      <MemberSignature Language="F#" Value="member this.Run : Exception * System.Threading.CancellationToken -&gt; Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason" Usage="outOfProcRarNode.Run (shutdownException, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdownException" Type="System.Exception" RefType="out" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="shutdownException">The exception which caused shutdown, if any.</param>
+        <param name="cancellationToken">A cancellation token to observe while running the node loop.</param>
+        <summary>
+            Starts the node and begins processing RAR execution requests until cancelled.
+            </summary>
+        <returns>The reason for the node shutdown.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
