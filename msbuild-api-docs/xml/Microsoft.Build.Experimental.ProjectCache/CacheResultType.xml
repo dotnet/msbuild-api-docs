@@ -12,6 +12,12 @@
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Result types that a plugin can return for a given build request.

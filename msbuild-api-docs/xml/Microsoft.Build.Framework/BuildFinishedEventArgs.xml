@@ -84,7 +84,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, succeeded As Boolean)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildFinishedEventArgs : string * string * bool -&gt; Microsoft.Build.Framework.BuildFinishedEventArgs" Usage="new Microsoft.Build.Framework.BuildFinishedEventArgs (message, helpKeyword, succeeded)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildFinishedEventArgs(System::String ^ message, System::String ^ helpKeyword, bool succeeded);" />
-      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded);" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -116,7 +116,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, succeeded As Boolean, eventTimestamp As DateTime)" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildFinishedEventArgs : string * string * bool * DateTime -&gt; Microsoft.Build.Framework.BuildFinishedEventArgs" Usage="new Microsoft.Build.Framework.BuildFinishedEventArgs (message, helpKeyword, succeeded, eventTimestamp)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildFinishedEventArgs(System::String ^ message, System::String ^ helpKeyword, bool succeeded, DateTime eventTimestamp);" />
-      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded, DateTime eventTimestamp);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded, DateTime eventTimestamp);" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -130,10 +130,10 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="succeeded" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="succeeded" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="message">text message</param>
@@ -153,7 +153,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, helpKeyword As String, succeeded As Boolean, eventTimestamp As DateTime, ParamArray messageArgs As Object())" />
       <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.BuildFinishedEventArgs : string * string * bool * DateTime * obj[] -&gt; Microsoft.Build.Framework.BuildFinishedEventArgs" Usage="new Microsoft.Build.Framework.BuildFinishedEventArgs (message, helpKeyword, succeeded, eventTimestamp, messageArgs)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BuildFinishedEventArgs(System::String ^ message, System::String ^ helpKeyword, bool succeeded, DateTime eventTimestamp, ... cli::array &lt;System::Object ^&gt; ^ messageArgs);" />
-      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded, DateTime eventTimestamp, params object[]? messageArgs);" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public BuildFinishedEventArgs (string? message, string? helpKeyword, bool succeeded, DateTime eventTimestamp, params object[]? messageArgs);" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -161,11 +161,11 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="succeeded" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="messageArgs" Type="System.Object[]" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="helpKeyword" Type="System.String" Index="1" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="succeeded" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" Index="3" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="messageArgs" Type="System.Object[]" Index="4" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>

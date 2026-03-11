@@ -1,0 +1,61 @@
+<Type Name="IMultiThreadableTask" FullName="Microsoft.Build.Framework.IMultiThreadableTask">
+  <TypeSignature Language="C#" Value="public interface IMultiThreadableTask : Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMultiThreadableTask implements class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IMultiThreadableTask" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IMultiThreadableTask&#xA;Implements ITask" />
+  <TypeSignature Language="F#" Value="type IMultiThreadableTask = interface&#xA;    interface ITask" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IMultiThreadableTask : Microsoft::Build::Framework::ITask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Interface for tasks that can execute in a thread-safe manner within MSBuild's multithreaded execution model. 
+            Tasks that implement this interface declare their capability to run in multiple threads within one process.
+            </summary>
+    <remarks>
+            The task <strong>must</strong>:
+            <list type="bullet"><item>Use the provided <see cref="P:Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment" /> for all modifications to process state such as environment variables,
+              working directory, or process spawning instead of directly modifying global process state</item><item>Not depend on global process state for correct operation, including avoiding relative path
+              resolution that relies on the current working directory</item><item>Use <see cref="M:Microsoft.Build.Framework.TaskEnvironment.GetAbsolutePath(System.String)" /> instead of <see cref="M:System.IO.Path.GetFullPath(System.String)" /> for path resolution</item><item>Handle any internal synchronization if the task spawns multiple threads internally</item></list>
+            Tasks implementing this interface can be safely executed in parallel with other tasks or
+            instances of the same task within a single MSBuild process, enabling better performance
+            in multithreaded build scenarios.
+            
+            See the <see href="https://github.com/dotnet/msbuild/blob/main/documentation/specs/multithreading/thread-safe-tasks.md">Thread-Safe Tasks specification</see> for detailed guidelines on thread-safe task development.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TaskEnvironment">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskEnvironment TaskEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.TaskEnvironment TaskEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Property TaskEnvironment As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="member this.TaskEnvironment : Microsoft.Build.Framework.TaskEnvironment with get, set" Usage="Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::TaskEnvironment ^ TaskEnvironment { Microsoft::Build::Framework::TaskEnvironment ^ get(); void set(Microsoft::Build::Framework::TaskEnvironment ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the task execution environment, which provides access to project current directory and environment variables in a thread-safe manner.
+            </summary>
+        <value>Task environment which provides access to project current directory and environment variables.</value>
+        <remarks>
+            This property is set on behalf of the Task by the MSBuild engine before the Task is executed. It should <strong>never</strong> be set by a Task itself.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

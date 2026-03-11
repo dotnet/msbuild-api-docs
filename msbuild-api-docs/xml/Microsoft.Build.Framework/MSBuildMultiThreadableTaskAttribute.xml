@@ -1,0 +1,62 @@
+<Type Name="MSBuildMultiThreadableTaskAttribute" FullName="Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute">
+  <TypeSignature Language="C#" Value="public class MSBuildMultiThreadableTaskAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MSBuildMultiThreadableTaskAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class MSBuildMultiThreadableTaskAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="F#" Value="type MSBuildMultiThreadableTaskAttribute = class&#xA;    inherit Attribute" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildMultiThreadableTaskAttribute : Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute that marks a task class as thread-safe for multithreaded execution.
+            </summary>
+    <remarks>
+            Task classes marked with this attribute indicate they can be safely executed in parallel 
+            in the same process with other tasks.
+            
+            Tasks using this attribute must satisfy strict requirements:
+            - Must not modify global process state (environment variables, working directory, etc.)
+            - Must not depend on global process state, including relative path resolution
+            
+            MSBuild detects this attribute by its namespace and name only, ignoring the defining assembly.
+            This allows customers to define the attribute in their own assemblies alongside their tasks.
+            
+            When defining polyfilled versions of this attribute in customer assemblies,
+            they must also specify Inherited = false to ensure proper non-inheritable semantics.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildMultiThreadableTaskAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuildMultiThreadableTaskAttribute();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the MSBuildMultiThreadableTaskAttribute class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -60,10 +60,59 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="args">Command line arguments for the logger configuration. Currently, only 'tl|terminallogger' and 'v|verbosity' are supported right now.</param>
+        <param name="args">Command line arguments for the logger configuration. Currently, only 'tl|terminallogger', 'v|verbosity', 'tlp|terminalloggerparameters', and 'clp|consoleloggerparameters' are supported.</param>
         <summary>
             Creates a Terminal logger if possible, or a Console logger.
             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTerminalOrConsoleLoggerWithForwarding">
+      <MemberSignature Language="C#" Value="public static (Microsoft.Build.Framework.ILogger, Microsoft.Build.Logging.ForwardingLoggerRecord?) CreateTerminalOrConsoleLoggerWithForwarding (string[]? args = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`2&lt;class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; CreateTerminalOrConsoleLoggerWithForwarding(string[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.TerminalLogger.CreateTerminalOrConsoleLoggerWithForwarding(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateTerminalOrConsoleLoggerWithForwarding (Optional args As String() = Nothing) As ValueTuple(Of ILogger, ForwardingLoggerRecord)" />
+      <MemberSignature Language="F#" Value="static member CreateTerminalOrConsoleLoggerWithForwarding : string[] -&gt; ValueTuple&lt;Microsoft.Build.Framework.ILogger, Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" Usage="Microsoft.Build.Logging.TerminalLogger.CreateTerminalOrConsoleLoggerWithForwarding args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;Microsoft.Build.Framework.ILogger,Microsoft.Build.Logging.ForwardingLoggerRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="args">Command line arguments for the logger configuration. Currently, only 'tl|terminallogger', 'v|verbosity', 'tlp|terminalloggerparameters', and 'clp|consoleloggerparameters' are supported.</param>
+        <summary>
+            Creates a Terminal logger if possible, or a Console logger. If the created logger supports remote logging,
+            also provides a ForwardingLoggerRecord to wrap it for forwarding.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMinimumMessageImportance">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.MessageImportance GetMinimumMessageImportance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Framework.MessageImportance GetMinimumMessageImportance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.TerminalLogger.GetMinimumMessageImportance" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMinimumMessageImportance () As MessageImportance" />
+      <MemberSignature Language="F#" Value="member this.GetMinimumMessageImportance : unit -&gt; Microsoft.Build.Framework.MessageImportance" Usage="terminalLogger.GetMinimumMessageImportance " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::MessageImportance GetMinimumMessageImportance();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

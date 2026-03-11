@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Interface IBuildEngine3&#xA;Implements IBuildEngine2" />
   <TypeSignature Language="F#" Value="type IBuildEngine3 = interface&#xA;    interface IBuildEngine2&#xA;    interface IBuildEngine" />
   <TypeSignature Language="C++ CLI" Value="public interface class IBuildEngine3 : Microsoft::Build::Framework::IBuildEngine2" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBuildEngine3 implements class Microsoft.Build.Framework.IBuildEngine, class Microsoft.Build.Framework.IBuildEngine2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBuildEngine3 implements class Microsoft.Build.Framework.IBuildEngine, class Microsoft.Build.Framework.IBuildEngine2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -94,7 +94,9 @@
         <summary>
             Waits to reacquire control after yielding.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method must be called to regain control after <see cref="M:Microsoft.Build.Framework.IBuildEngine3.Yield" /> has been called.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Yield">
@@ -120,13 +122,12 @@
             build while that work completes.
             </summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- There is only one node (msbuild.exe process) per CPU. Only one project, target, and task can build at any time on a node. If a task is waiting, for example, for a spawned tool or some other event to complete, the task can call Yield, which returns immediately. This lets the node build a target in another project, if any are available.  When the task is ready to continue, it should call <xref:Microsoft.Build.Framework.IBuildEngine3.Reacquire%2A>. As a rough rule, if a task expects that an operation will take more than 20 or 30 seconds, it can choose to call `Yield` before it starts the operation, and `Reacquire` when the operation is complete.  
-  
- ]]></format>
-        </remarks>
+            After calling <see cref="M:Microsoft.Build.Framework.IBuildEngine3.Yield" />, global process state like environment variables and current working directory 
+            can change arbitrarily until <see cref="M:Microsoft.Build.Framework.IBuildEngine3.Reacquire" /> returns. As a result, if you are going to depend on any of 
+            that state, for instance by opening files by relative path, rather than calling 
+            <c>ITaskItem.GetMetadata("FullPath")</c>, you must do so before calling <see cref="M:Microsoft.Build.Framework.IBuildEngine3.Yield" />. 
+            The recommended pattern is to figure out what all the long-running work is and start it before yielding.
+            </remarks>
       </Docs>
     </Member>
   </Members>

@@ -5,11 +5,11 @@
   <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
-  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable, Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications, class System.IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IBuildEventArgsReaderNotifications, IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IBuildEventArgsReaderNotifications&#xA;    interface IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable, Microsoft::Build::Logging::IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class BuildEventArgsReader : IDisposable, Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildEventArgsReader extends System.Object implements class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications, class System.IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildEventArgsReader&#xA;Implements IBuildEventArgsReaderNotifications, IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type BuildEventArgsReader = class&#xA;    interface IBuildEventArgsReaderNotifications&#xA;    interface IDisposable" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildEventArgsReader : IDisposable, Microsoft::Build::Logging::IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -21,7 +21,7 @@
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
-    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Logging.IBuildEventArgsReaderNotifications</InterfaceName>
     </Interface>
   </Interfaces>
@@ -148,7 +148,7 @@
       <MemberSignature Language="VB.NET" Value="Public Function Read () As BuildEventArgs" />
       <MemberSignature Language="F#" Value="member this.Read : unit -&gt; Microsoft.Build.Framework.BuildEventArgs" Usage="buildEventArgsReader.Read " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::BuildEventArgs ^ Read();" />
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs? Read ();" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs? Read ();" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

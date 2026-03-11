@@ -1,0 +1,306 @@
+<Type Name="AbsolutePath" FullName="Microsoft.Build.Framework.AbsolutePath">
+  <TypeSignature Language="C#" Value="public readonly struct AbsolutePath : IEquatable&lt;Microsoft.Build.Framework.AbsolutePath&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AbsolutePath extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.Build.Framework.AbsolutePath&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AbsolutePath" />
+  <TypeSignature Language="VB.NET" Value="Public Structure AbsolutePath&#xA;Implements IEquatable(Of AbsolutePath)" />
+  <TypeSignature Language="F#" Value="type AbsolutePath = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class AbsolutePath : IEquatable&lt;Microsoft::Build::Framework::AbsolutePath&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Build.Framework.AbsolutePath&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents an absolute file system path.
+            </summary>
+    <remarks>
+            This struct wraps a string representing an absolute file system path.
+            Path equality comparisons are case-sensitive or case-insensitive depending on the operating system's
+            file system conventions (case-sensitive on Linux, case-insensitive on Windows and macOS).
+            Does not perform any normalization beyond validating the path is fully qualified.
+            A default instance (created via <c>default(AbsolutePath)</c>) has a null Value 
+            and should not be used. Two default instances are considered equal.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbsolutePath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (path As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.AbsolutePath : string -&gt; Microsoft.Build.Framework.AbsolutePath" Usage="new Microsoft.Build.Framework.AbsolutePath path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; AbsolutePath(System::String ^ path);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The absolute path string.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> struct.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbsolutePath (string path, Microsoft.Build.Framework.AbsolutePath basePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype Microsoft.Build.Framework.AbsolutePath basePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.#ctor(System.String,Microsoft.Build.Framework.AbsolutePath)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (path As String, basePath As AbsolutePath)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.AbsolutePath : string * Microsoft.Build.Framework.AbsolutePath -&gt; Microsoft.Build.Framework.AbsolutePath" Usage="new Microsoft.Build.Framework.AbsolutePath (path, basePath)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; AbsolutePath(System::String ^ path, Microsoft::Build::Framework::AbsolutePath basePath);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="basePath" Type="Microsoft.Build.Framework.AbsolutePath" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to combine with the base path.</param>
+        <param name="basePath">The base path to combine with.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> struct by combining an absolute path with a relative path.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Build.Framework.AbsolutePath other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.Build.Framework.AbsolutePath other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.Equals(Microsoft.Build.Framework.AbsolutePath)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As AbsolutePath) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Build.Framework.AbsolutePath -&gt; bool" Usage="absolutePath.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Build::Framework::AbsolutePath other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Build.Framework.AbsolutePath" />
+      </Parameters>
+      <Docs>
+        <param name="other">The <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> is equal to the current instance.
+            </summary>
+        <returns>
+          <c>true</c> if the paths are equal according to the operating system's file system case sensitivity rules; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="absolutePath.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to compare with the current instance.</param>
+        <summary>
+            Determines whether the specified object is equal to the current <see cref="T:Microsoft.Build.Framework.AbsolutePath" />.
+            </summary>
+        <returns>
+          <c>true</c> if the specified object is an <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> and is equal to the current instance; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="absolutePath.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a hash code for this <see cref="T:Microsoft.Build.Framework.AbsolutePath" />.
+            </summary>
+        <returns>A hash code that is consistent with the equality comparison.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Build.Framework.AbsolutePath left, Microsoft.Build.Framework.AbsolutePath right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.Build.Framework.AbsolutePath left, valuetype Microsoft.Build.Framework.AbsolutePath right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.op_Equality(Microsoft.Build.Framework.AbsolutePath,Microsoft.Build.Framework.AbsolutePath)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As AbsolutePath, right As AbsolutePath) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Build.Framework.AbsolutePath * Microsoft.Build.Framework.AbsolutePath -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Build::Framework::AbsolutePath left, Microsoft::Build::Framework::AbsolutePath right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Framework.AbsolutePath" />
+        <Parameter Name="right" Type="Microsoft.Build.Framework.AbsolutePath" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first path to compare.</param>
+        <param name="right">The second path to compare.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> instances are equal.
+            </summary>
+        <returns>
+          <c>true</c> if the paths are equal; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator string (Microsoft.Build.Framework.AbsolutePath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Implicit(valuetype Microsoft.Build.Framework.AbsolutePath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.op_Implicit(Microsoft.Build.Framework.AbsolutePath)~System.String" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (path As AbsolutePath) As String" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.Build.Framework.AbsolutePath -&gt; string" Usage="Microsoft.Build.Framework.AbsolutePath.op_Implicit path" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator System::String ^(Microsoft::Build::Framework::AbsolutePath path);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="Microsoft.Build.Framework.AbsolutePath" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to convert.</param>
+        <summary>
+            Implicitly converts an AbsolutePath to a string.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Build.Framework.AbsolutePath left, Microsoft.Build.Framework.AbsolutePath right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.Build.Framework.AbsolutePath left, valuetype Microsoft.Build.Framework.AbsolutePath right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.op_Inequality(Microsoft.Build.Framework.AbsolutePath,Microsoft.Build.Framework.AbsolutePath)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As AbsolutePath, right As AbsolutePath) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Build.Framework.AbsolutePath * Microsoft.Build.Framework.AbsolutePath -&gt; bool" Usage="Microsoft.Build.Framework.AbsolutePath.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Build::Framework::AbsolutePath left, Microsoft::Build::Framework::AbsolutePath right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Framework.AbsolutePath" />
+        <Parameter Name="right" Type="Microsoft.Build.Framework.AbsolutePath" />
+      </Parameters>
+      <Docs>
+        <param name="left">The first path to compare.</param>
+        <param name="right">The second path to compare.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> instances are not equal.
+            </summary>
+        <returns>
+          <c>true</c> if the paths are not equal; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="absolutePath.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this path.
+            </summary>
+        <returns>The path as a string.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AbsolutePath.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As String" />
+      <MemberSignature Language="F#" Value="member this.Value : string" Usage="Microsoft.Build.Framework.AbsolutePath.Value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Value { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The normalized string representation of this path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
