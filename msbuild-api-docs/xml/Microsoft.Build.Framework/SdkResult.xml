@@ -67,6 +67,29 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnvironmentVariablesToAdd">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,string&gt; EnvironmentVariablesToAdd { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; EnvironmentVariablesToAdd" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.SdkResult.EnvironmentVariablesToAdd" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property EnvironmentVariablesToAdd As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.EnvironmentVariablesToAdd : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Build.Framework.SdkResult.EnvironmentVariablesToAdd" />
+      <MemberSignature Language="C++ CLI" Value="public:  virtual property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ EnvironmentVariablesToAdd {  public:&#xA;System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); protected:&#xA; void set(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Environment variables that should be added to the evaluation.  This allows an SDK resolver to provide information to the build
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ItemsToAdd">
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Framework.SdkResultItem&gt; ItemsToAdd { get; protected set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Framework.SdkResultItem&gt; ItemsToAdd" />

@@ -1,0 +1,246 @@
+<Type Name="TaskHostParameters" FullName="Microsoft.Build.Framework.TaskHostParameters">
+  <TypeSignature Language="C#" Value="public readonly struct TaskHostParameters : IEquatable&lt;Microsoft.Build.Framework.TaskHostParameters&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TaskHostParameters extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.Build.Framework.TaskHostParameters&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskHostParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Structure TaskHostParameters&#xA;Implements IEquatable(Of TaskHostParameters)" />
+  <TypeSignature Language="F#" Value="type TaskHostParameters = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class TaskHostParameters : IEquatable&lt;Microsoft::Build::Framework::TaskHostParameters&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Build.Framework.TaskHostParameters&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A readonly struct that represents task host parameters used to determine which host process to launch.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Architecture">
+      <MemberSignature Language="C#" Value="public string? Architecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Architecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskHostParameters.Architecture" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Architecture As String" />
+      <MemberSignature Language="F#" Value="member this.Architecture : string" Usage="Microsoft.Build.Framework.TaskHostParameters.Architecture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Architecture { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the target architecture (e.g., "x64", "x86", "arm64").
+            </summary>
+        <value>The architecture identifier, or an empty string if not specified.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DotnetHostPath">
+      <MemberSignature Language="C#" Value="public string? DotnetHostPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DotnetHostPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskHostParameters.DotnetHostPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DotnetHostPath As String" />
+      <MemberSignature Language="F#" Value="member this.DotnetHostPath : string" Usage="Microsoft.Build.Framework.TaskHostParameters.DotnetHostPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DotnetHostPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the path to the dotnet host executable.
+            </summary>
+        <value>The dotnet host path, or null if not specified.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Build.Framework.TaskHostParameters Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype Microsoft.Build.Framework.TaskHostParameters Empty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.TaskHostParameters.Empty" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Empty As TaskHostParameters " />
+      <MemberSignature Language="F#" Value=" staticval mutable Empty : Microsoft.Build.Framework.TaskHostParameters" Usage="Microsoft.Build.Framework.TaskHostParameters.Empty" />
+      <MemberSignature Language="C++ CLI" Value="public: static initonly Microsoft::Build::Framework::TaskHostParameters Empty;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskHostParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A static empty instance to avoid allocations when default parameters are needed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Build.Framework.TaskHostParameters other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.Build.Framework.TaskHostParameters other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskHostParameters.Equals(Microsoft.Build.Framework.TaskHostParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As TaskHostParameters) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Build.Framework.TaskHostParameters -&gt; bool" Usage="taskHostParameters.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Build::Framework::TaskHostParameters other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Build.Framework.TaskHostParameters" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskHostParameters.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="taskHostParameters.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskHostParameters.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="taskHostParameters.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildAssemblyPath">
+      <MemberSignature Language="C#" Value="public string? MSBuildAssemblyPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildAssemblyPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskHostParameters.MSBuildAssemblyPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MSBuildAssemblyPath As String" />
+      <MemberSignature Language="F#" Value="member this.MSBuildAssemblyPath : string" Usage="Microsoft.Build.Framework.TaskHostParameters.MSBuildAssemblyPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MSBuildAssemblyPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the path to the MSBuild assembly.
+            </summary>
+        <value>The MSBuild assembly path, or null if not specified.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runtime">
+      <MemberSignature Language="C#" Value="public string? Runtime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Runtime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskHostParameters.Runtime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Runtime As String" />
+      <MemberSignature Language="F#" Value="member this.Runtime : string" Usage="Microsoft.Build.Framework.TaskHostParameters.Runtime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Runtime { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the target runtime identifier (e.g., "net8.0", "net472").
+            </summary>
+        <value>The runtime identifier, or null if not specified.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskHostFactoryExplicitlyRequested">
+      <MemberSignature Language="C#" Value="public bool? TaskHostFactoryExplicitlyRequested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; TaskHostFactoryExplicitlyRequested" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskHostParameters.TaskHostFactoryExplicitlyRequested" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskHostFactoryExplicitlyRequested As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.TaskHostFactoryExplicitlyRequested : Nullable&lt;bool&gt;" Usage="Microsoft.Build.Framework.TaskHostParameters.TaskHostFactoryExplicitlyRequested" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; TaskHostFactoryExplicitlyRequested { Nullable&lt;bool&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets if Task Host Factory was requested explicitly (by specifying TaskHost="TaskHostFactory" in UsingTask element).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

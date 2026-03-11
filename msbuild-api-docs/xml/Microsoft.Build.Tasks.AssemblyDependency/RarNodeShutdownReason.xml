@@ -1,0 +1,111 @@
+<Type Name="RarNodeShutdownReason" FullName="Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason">
+  <TypeSignature Language="C#" Value="public enum RarNodeShutdownReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RarNodeShutdownReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RarNodeShutdownReason" />
+  <TypeSignature Language="F#" Value="type RarNodeShutdownReason = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class RarNodeShutdownReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Reasons why the RAR node shutdown.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlreadyRunning">
+      <MemberSignature Language="C#" Value="AlreadyRunning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason AlreadyRunning = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.AlreadyRunning" />
+      <MemberSignature Language="VB.NET" Value="AlreadyRunning" />
+      <MemberSignature Language="F#" Value="AlreadyRunning = 1" Usage="Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.AlreadyRunning" />
+      <MemberSignature Language="C++ CLI" Value="AlreadyRunning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The RAR node is already running.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="Complete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason Complete = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.Complete" />
+      <MemberSignature Language="VB.NET" Value="Complete" />
+      <MemberSignature Language="F#" Value="Complete = 0" Usage="Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.Complete" />
+      <MemberSignature Language="C++ CLI" Value="Complete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The RAR node was instructed to terminate and gracefully shut down.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimedOut">
+      <MemberSignature Language="C#" Value="ConnectionTimedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason ConnectionTimedOut = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.ConnectionTimedOut" />
+      <MemberSignature Language="VB.NET" Value="ConnectionTimedOut" />
+      <MemberSignature Language="F#" Value="ConnectionTimedOut = 2" Usage="Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.ConnectionTimedOut" />
+      <MemberSignature Language="C++ CLI" Value="ConnectionTimedOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The RAR node timed out waiting for a connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 3" Usage="Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason.Error" />
+      <MemberSignature Language="C++ CLI" Value="Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.AssemblyDependency.RarNodeShutdownReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The RAR node encountered an unrecoverable error.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

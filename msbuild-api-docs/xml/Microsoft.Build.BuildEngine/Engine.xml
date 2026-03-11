@@ -17,7 +17,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.ProjectCollection from the Microsoft.Build assembly instead.")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.ProjectCollection from the Microsoft.Build assembly instead.")&gt;]</AttributeName>
     </Attribute>
@@ -128,7 +128,7 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
@@ -159,7 +159,7 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="locations">A <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> enumeration that specifies the location of the Toolset definition.</param>
@@ -185,7 +185,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("If you were simply passing in the .NET Framework location as the BinPath, just change to the parameterless Engine() constructor. Otherwise, you can define custom toolsets in the registry or config file, or by adding elements to the Engine's ToolsetCollection. Then use either the Engine() or Engine(ToolsetLocations) constructor instead.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("If you were simply passing in the .NET Framework location as the BinPath, just change to the parameterless Engine() constructor. Otherwise, you can define custom toolsets in the registry or config file, or by adding elements to the Engine's ToolsetCollection. Then use either the Engine() or Engine(ToolsetLocations) constructor instead.")&gt;]</AttributeName>
         </Attribute>
@@ -222,8 +222,8 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
@@ -256,10 +256,10 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="numberOfCpus" Type="System.Int32" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="localNodeProviderParameters" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="numberOfCpus" Type="System.Int32" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="localNodeProviderParameters" Type="System.String" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="globalProperties">A <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> that represents properties to be passed to the child engine.</param>
@@ -292,7 +292,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Obsolete("Avoid setting BinPath. If you were simply passing in the .NET Framework location as the BinPath, no other action is necessary. Otherwise, define Toolsets instead in the registry or config file, or by adding elements to the Engine's ToolsetCollection, in order to use a custom BinPath.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Avoid setting BinPath. If you were simply passing in the .NET Framework location as the BinPath, no other action is necessary. Otherwise, define Toolsets instead in the registry or config file, or by adding elements to the Engine's ToolsetCollection, in order to use a custom BinPath.")&gt;]</AttributeName>
         </Attribute>
@@ -828,12 +828,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetNames" Type="System.String[]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersion" Type="System.String" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFile" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetNames" Type="System.String[]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersion" Type="System.String" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectFile" />
@@ -873,12 +873,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFiles" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetNamesPerProject" Type="System.String[][]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="globalPropertiesPerProject" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup[]" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersions" Type="System.String[]" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFiles" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetNamesPerProject" Type="System.String[][]" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="globalPropertiesPerProject" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup[]" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" Index="4" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersions" Type="System.String[]" Index="5" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectFiles">Array of project files to build (can't be null)</param>
@@ -1151,8 +1151,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="centralLogger" Type="Microsoft.Build.Framework.ILogger" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="forwardingLogger" Type="Microsoft.Build.BuildEngine.LoggerDescription" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="centralLogger" Type="Microsoft.Build.Framework.ILogger" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="forwardingLogger" Type="Microsoft.Build.BuildEngine.LoggerDescription" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="centralLogger">An <see cref="T:Microsoft.Build.Framework.ILogger" /> that represents the central logger.</param>

@@ -17,7 +17,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")&gt;]</AttributeName>
     </Attribute>
@@ -163,8 +163,8 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="toolsVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="toolsVersion" Type="System.String" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="engine">Engine that will build this project. May be null if the global engine is expected.</param>
@@ -1490,8 +1490,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="textReader" Type="System.IO.TextReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="textReader" Type="System.IO.TextReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="textReader">A <see cref="T:System.IO.TextReader" /> object containing the project contents.</param>
@@ -1521,8 +1521,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectFileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectFileName" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectFileName">A string representing the name of the file to load.</param>
@@ -1607,8 +1607,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="projectXml" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectXml" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="projectXml">A string containing the project contents.</param>
@@ -1794,7 +1794,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="propertyGroupToRemove" />
@@ -2029,8 +2029,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="matchCondition" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="includeImportedPropertyGroups" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="matchCondition" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="includeImportedPropertyGroups" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       </Parameters>
       <Docs>
         <param name="matchCondition">Condition on the PropertyGroups</param>

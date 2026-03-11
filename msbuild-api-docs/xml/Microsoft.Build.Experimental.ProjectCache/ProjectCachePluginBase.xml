@@ -1,10 +1,15 @@
 <Type Name="ProjectCachePluginBase" FullName="Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase">
-  <TypeSignature Language="C#" Value="public abstract class ProjectCachePluginBase" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectCachePluginBase extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class ProjectCachePluginBase" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectCachePluginBase extends System.Object" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Experimental.ProjectCache.ProjectCachePluginBase" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectCachePluginBase" />
-  <TypeSignature Language="F#" Value="type ProjectCachePluginBase = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ProjectCachePluginBase abstract" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectCachePluginBase" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type ProjectCachePluginBase = class" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectCachePluginBase abstract" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public abstract class ProjectCachePluginBase : Microsoft.Build.ProjectCache.IProjectCachePluginBase" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectCachePluginBase extends System.Object implements class Microsoft.Build.ProjectCache.IProjectCachePluginBase" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectCachePluginBase&#xA;Implements IProjectCachePluginBase" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type ProjectCachePluginBase = class&#xA;    interface IProjectCachePluginBase" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectCachePluginBase abstract : Microsoft::Build::ProjectCache::IProjectCachePluginBase" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -12,11 +17,19 @@
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <InterfaceName>Microsoft.Build.ProjectCache.IProjectCachePluginBase</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Attributes>
     <Attribute FrameworkAlternate="msbuild-17-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This class was moved to Microsoft.Build.ProjectCache namespace")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -154,7 +167,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
@@ -163,8 +176,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="fileAccessData" Type="Microsoft.Build.Experimental.FileAccess.FileAccessData" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="fileAccessData" Type="Microsoft.Build.Experimental.FileAccess.FileAccessData" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="fileAccessContext">To be added.</param>
@@ -188,7 +201,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
@@ -197,8 +210,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="processData" Type="Microsoft.Build.Experimental.FileAccess.ProcessData" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="processData" Type="Microsoft.Build.Experimental.FileAccess.ProcessData" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="fileAccessContext">To be added.</param>
@@ -225,10 +238,10 @@
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="buildResult" Type="Microsoft.Build.Execution.BuildResult" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="logger" Type="Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="fileAccessContext" Type="Microsoft.Build.Experimental.ProjectCache.FileAccessContext" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="buildResult" Type="Microsoft.Build.Execution.BuildResult" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="logger" Type="Microsoft.Build.Experimental.ProjectCache.PluginLoggerBase" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="fileAccessContext">To be added.</param>

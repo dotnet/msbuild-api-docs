@@ -6,11 +6,11 @@
   <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher" FrameworkAlternate="msbuild-16;msbuild-16-netcore" />
-  <TypeSignature Language="C#" Value="public sealed class BinaryLogReplayEventSource : Microsoft.Build.Logging.EventArgsDispatcher, Microsoft.Build.Framework.IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher implements class Microsoft.Build.Framework.IEventSource, class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher&#xA;Implements IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher&#xA;    interface IEventSource&#xA;    interface IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher, Microsoft::Build::Framework::IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class BinaryLogReplayEventSource : Microsoft.Build.Logging.EventArgsDispatcher, Microsoft.Build.Framework.IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BinaryLogReplayEventSource extends Microsoft.Build.Logging.EventArgsDispatcher implements class Microsoft.Build.Framework.IEventSource, class Microsoft.Build.Logging.IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BinaryLogReplayEventSource&#xA;Inherits EventArgsDispatcher&#xA;Implements IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type BinaryLogReplayEventSource = class&#xA;    inherit EventArgsDispatcher&#xA;    interface IEventSource&#xA;    interface IBuildEventArgsReaderNotifications" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BinaryLogReplayEventSource sealed : Microsoft::Build::Logging::EventArgsDispatcher, Microsoft::Build::Framework::IEventSource" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -19,10 +19,10 @@
     <BaseTypeName>Microsoft.Build.Logging.EventArgsDispatcher</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Framework.IEventSource</InterfaceName>
     </Interface>
-    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+    <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Logging.IBuildEventArgsReaderNotifications</InterfaceName>
     </Interface>
   </Interfaces>
@@ -194,7 +194,7 @@
         <ReturnType>Microsoft.Build.Logging.BuildEventArgsReader</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFilePath" />
@@ -222,9 +222,9 @@
         <ReturnType>Microsoft.Build.Logging.BuildEventArgsReader</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="allowForwardCompatibility" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="allowForwardCompatibility" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="binaryReader" />
@@ -254,7 +254,7 @@
         <ReturnType>System.IO.BinaryReader</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFileStream">Stream over the binlog file</param>
@@ -283,7 +283,7 @@
         <ReturnType>System.IO.BinaryReader</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFilePath" />
@@ -368,8 +368,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="reader" Type="Microsoft.Build.Logging.BuildEventArgsReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="reader" Type="Microsoft.Build.Logging.BuildEventArgsReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="reader">The build events reader - caller is responsible for disposing.</param>
@@ -396,8 +396,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="binaryReader">The binary log content binary reader - caller is responsible for disposing.</param>
@@ -424,8 +424,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="sourceFileStream" Type="System.IO.Stream" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFileStream">Stream over the binlog content.</param>
@@ -452,8 +452,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="sourceFilePath" Type="System.String" Index="0" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="sourceFilePath">The full file path of the binary log file</param>
@@ -480,9 +480,9 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+        <Parameter Name="binaryReader" Type="System.IO.BinaryReader" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="closeInput" Type="System.Boolean" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="binaryReader">The binary log content binary reader - caller is responsible for disposing, unless <paramref name="closeInput" /> is set to true.</param>

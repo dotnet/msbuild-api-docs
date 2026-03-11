@@ -5,11 +5,11 @@
   <TypeSignature Language="VB.NET" Value="Public Class BuildResult" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="F#" Value="type BuildResult = class" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="C++ CLI" Value="public ref class BuildResult" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-  <TypeSignature Language="C#" Value="public class BuildResult : Microsoft.Build.Execution.BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildResult extends Microsoft.Build.Execution.BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public Class BuildResult&#xA;Inherits BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="F#" Value="type BuildResult = class&#xA;    inherit BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class BuildResult : Microsoft::Build::Execution::BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public class BuildResult : Microsoft.Build.Execution.BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildResult extends Microsoft.Build.Execution.BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuildResult&#xA;Inherits BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type BuildResult = class&#xA;    inherit BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuildResult : Microsoft::Build::Execution::BuildResultBase" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -17,7 +17,7 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
-    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore">Microsoft.Build.Execution.BuildResultBase</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">Microsoft.Build.Execution.BuildResultBase</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
@@ -118,9 +118,9 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CircularDependency As Boolean" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.CircularDependency : bool" Usage="Microsoft.Build.Execution.BuildResult.CircularDependency" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CircularDependency { bool get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C#" Value="public override bool CircularDependency { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property CircularDependency As Boolean" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool CircularDependency { bool get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public override bool CircularDependency { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property CircularDependency As Boolean" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool CircularDependency { bool get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -190,9 +190,9 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="Microsoft.Build.Execution.BuildResult.Exception" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Exception ^ Exception { Exception ^ get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C#" Value="public override Exception? Exception { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Exception As Exception" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Exception ^ Exception { Exception ^ get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public override Exception? Exception { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Exception As Exception" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Exception ^ Exception { Exception ^ get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -403,9 +403,9 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OverallResult As BuildResultCode" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.OverallResult : Microsoft.Build.Execution.BuildResultCode" Usage="Microsoft.Build.Execution.BuildResult.OverallResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildResultCode OverallResult { Microsoft::Build::Execution::BuildResultCode get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C#" Value="public override Microsoft.Build.Execution.BuildResultCode OverallResult { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property OverallResult As BuildResultCode" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Execution::BuildResultCode OverallResult { Microsoft::Build::Execution::BuildResultCode get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Execution.BuildResultCode OverallResult { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property OverallResult As BuildResultCode" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Execution::BuildResultCode OverallResult { Microsoft::Build::Execution::BuildResultCode get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -464,7 +464,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property ProjectStateAfterBuild As ProjectInstance" />
       <MemberSignature Language="F#" Value="member this.ProjectStateAfterBuild : Microsoft.Build.Execution.ProjectInstance with get, set" Usage="Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::ProjectInstance ^ ProjectStateAfterBuild { Microsoft::Build::Execution::ProjectInstance ^ get(); void set(Microsoft::Build::Execution::ProjectInstance ^ value); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance? ProjectStateAfterBuild { get; set; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance? ProjectStateAfterBuild { get; set; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -538,9 +538,9 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubmissionId As Integer" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="F#" Value="member this.SubmissionId : int" Usage="Microsoft.Build.Execution.BuildResult.SubmissionId" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int SubmissionId { int get(); };" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C#" Value="public override int SubmissionId { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SubmissionId As Integer" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int SubmissionId { int get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public override int SubmissionId { get; }" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SubmissionId As Integer" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int SubmissionId { int get(); };" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -584,8 +584,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore" />
-        <Parameter Name="value" Type="Microsoft.Build.Execution.TargetResult" RefType="out" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore">
+        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="value" Type="Microsoft.Build.Execution.TargetResult" RefType="out" Index="1" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
           <Attributes>
             <Attribute FrameworkAlternate="msbuild-17-netcore">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>

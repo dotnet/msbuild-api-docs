@@ -378,6 +378,52 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableRarNode">
+      <MemberSignature Language="C#" Value="public bool EnableRarNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableRarNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.EnableRarNode" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableRarNode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableRarNode : bool with get, set" Usage="Microsoft.Build.Execution.BuildParameters.EnableRarNode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableRarNode { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true, the ResolveAssemblyReferences task executes in an out-of-proc node which persists across builds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTargetOutputLogging">
+      <MemberSignature Language="C#" Value="public bool EnableTargetOutputLogging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTargetOutputLogging" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.EnableTargetOutputLogging" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableTargetOutputLogging As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableTargetOutputLogging : bool with get, set" Usage="Microsoft.Build.Execution.BuildParameters.EnableTargetOutputLogging" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableTargetOutputLogging { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true, target outputs (and returns) are logged as well.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="EnvironmentProperties">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; EnvironmentProperties { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; EnvironmentProperties" />
@@ -821,6 +867,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MultiThreaded">
+      <MemberSignature Language="C#" Value="public bool MultiThreaded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MultiThreaded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.MultiThreaded" />
+      <MemberSignature Language="VB.NET" Value="Public Property MultiThreaded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MultiThreaded : bool with get, set" Usage="Microsoft.Build.Execution.BuildParameters.MultiThreaded" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool MultiThreaded { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables running build in multiple in-proc nodes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="NodeExeLocation">
       <MemberSignature Language="C#" Value="public string NodeExeLocation { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string NodeExeLocation" />
@@ -915,19 +984,24 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectCacheDescriptor">
-      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor { get; set; }" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" />
       <MemberSignature Language="VB.NET" Value="Public Property ProjectCacheDescriptor As ProjectCacheDescriptor" />
-      <MemberSignature Language="F#" Value="member this.ProjectCacheDescriptor : Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor with get, set" Usage="Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ ProjectCacheDescriptor { Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ get(); void set(Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ProjectCacheDescriptor : Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor with get, set" Usage="Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ ProjectCacheDescriptor { Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ get(); void set(Microsoft::Build::Experimental::ProjectCache::ProjectCacheDescriptor ^ value); };" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+      <MemberSignature Language="C#" Value="public Microsoft.Build.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor { get; set; }" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.ProjectCache.ProjectCacheDescriptor ProjectCacheDescriptor" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="F#" Value="member this.ProjectCacheDescriptor : Microsoft.Build.ProjectCache.ProjectCacheDescriptor with get, set" Usage="Microsoft.Build.Execution.BuildParameters.ProjectCacheDescriptor" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::ProjectCache::ProjectCacheDescriptor ^ ProjectCacheDescriptor { Microsoft::Build::ProjectCache::ProjectCacheDescriptor ^ get(); void set(Microsoft::Build::ProjectCache::ProjectCacheDescriptor ^ value); };" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore">Microsoft.Build.Experimental.ProjectCache.ProjectCacheDescriptor</ReturnType>
+        <ReturnType FrameworkAlternate="msbuild-18;msbuild-18-netcore">Microsoft.Build.ProjectCache.ProjectCacheDescriptor</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -935,7 +1009,9 @@
             in addition to any potential project caches described in each project.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This property had the type "Experimental.ProjectCache.ProjectCacheDescriptor" until 17.14 (inclusive).
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectIsolationMode">
