@@ -45,6 +45,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AdditionalFilePaths">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; AdditionalFilePaths { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; AdditionalFilePaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogger.AdditionalFilePaths" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalFilePaths As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalFilePaths : System.Collections.Generic.IReadOnlyList&lt;string&gt; with get, set" Usage="Microsoft.Build.Logging.BinaryLogger.AdditionalFilePaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ AdditionalFilePaths { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); void set(System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets additional output file paths. When set, the binlog will be copied to all these paths
+            after the build completes. The primary FilePath will be used as the temporary write location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This property is intended for internal use by MSBuild command-line processing.
+            It should not be set by external code or logger implementations.
+            Use multiple logger instances with different Parameters instead.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CollectProjectImports">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode CollectProjectImports { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Logging.BinaryLogger/ProjectImportsCollectionMode CollectProjectImports" />
@@ -65,6 +93,62 @@
             Gets or sets whether to capture and embed project and target source files used during the build.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractFilePathFromParameters">
+      <MemberSignature Language="C#" Value="public static string ExtractFilePathFromParameters (string parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ExtractFilePathFromParameters(string parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogger.ExtractFilePathFromParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExtractFilePathFromParameters (parameters As String) As String" />
+      <MemberSignature Language="F#" Value="static member ExtractFilePathFromParameters : string -&gt; string" Usage="Microsoft.Build.Logging.BinaryLogger.ExtractFilePathFromParameters parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ ExtractFilePathFromParameters(System::String ^ parameters);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.String" Index="0" FrameworkAlternate="msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">The parameters string (e.g., "output.binlog" or "output.binlog;ProjectImports=None")</param>
+        <summary>
+            Extracts the file path from binary logger parameters string.
+            This is a helper method for processing multiple binlog parameters.
+            </summary>
+        <returns>The resolved file path, or "msbuild.binlog" if no path is specified</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractNonPathParameters">
+      <MemberSignature Language="C#" Value="public static string ExtractNonPathParameters (string parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ExtractNonPathParameters(string parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogger.ExtractNonPathParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExtractNonPathParameters (parameters As String) As String" />
+      <MemberSignature Language="F#" Value="static member ExtractNonPathParameters : string -&gt; string" Usage="Microsoft.Build.Logging.BinaryLogger.ExtractNonPathParameters parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ ExtractNonPathParameters(System::String ^ parameters);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.String" Index="0" FrameworkAlternate="msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">The parameters string (e.g., "output.binlog;ProjectImports=None")</param>
+        <summary>
+            Extracts the non-file-path parameters from binary logger parameters string.
+            This is used to compare configurations between multiple binlog parameters.
+            </summary>
+        <returns>A normalized string of non-path parameters, or empty string if only path parameters</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -158,6 +242,33 @@
             will be null for wildcard patterns, and callers should handle expansion separately if needed.
             </remarks>
         <exception cref="T:Microsoft.Build.Framework.LoggerException">Thrown when the parameters string contains invalid parameters.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessParameters">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters ProcessParameters (string[] binaryLoggerParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Build.Logging.BinaryLogger/ProcessedBinaryLoggerParameters ProcessParameters(string[] binaryLoggerParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogger.ProcessParameters(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ProcessParameters (binaryLoggerParameters As String()) As BinaryLogger.ProcessedBinaryLoggerParameters" />
+      <MemberSignature Language="F#" Value="static member ProcessParameters : string[] -&gt; Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters" Usage="Microsoft.Build.Logging.BinaryLogger.ProcessParameters binaryLoggerParameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Build::Logging::BinaryLogger::ProcessedBinaryLoggerParameters ProcessParameters(cli::array &lt;System::String ^&gt; ^ binaryLoggerParameters);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Logging.BinaryLogger+ProcessedBinaryLoggerParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryLoggerParameters" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="binaryLoggerParameters">Array of parameter strings from command line</param>
+        <summary>
+            Processes multiple binary logger parameter sets and returns distinct paths and configuration info.
+            </summary>
+        <returns>Processed result with distinct parameter sets and configuration info</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
