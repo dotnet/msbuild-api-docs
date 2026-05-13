@@ -5,11 +5,16 @@
   <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
   <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore" />
-  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.IIncrementalTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask, IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework.IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.IIncrementalTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18" />
+  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask, IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18" />
+  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask&#xA;    interface IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask, Microsoft::Build::Framework::IIncrementalTask" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18" />
+  <TypeSignature Language="C#" Value="public class Delete : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework.IIncrementalTask, Microsoft.Build.Framework.IMultiThreadableTask" FrameworkAlternate="msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.IIncrementalTask, class Microsoft.Build.Framework.IMultiThreadableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class Delete&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask, IIncrementalTask, IMultiThreadableTask" FrameworkAlternate="msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type Delete = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask&#xA;    interface IIncrementalTask&#xA;    interface IMultiThreadableTask" FrameworkAlternate="msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Delete : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask, Microsoft::Build::Framework::IIncrementalTask, Microsoft::Build::Framework::IMultiThreadableTask" FrameworkAlternate="msbuild-18-netcore" />
   <TypeSignature Language="C#" Value="public sealed class Delete : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Delete extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Delete&#xA;Inherits TaskExtension" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
@@ -48,7 +53,16 @@
     <Interface FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
     </Interface>
+    <Interface FrameworkAlternate="msbuild-18-netcore">
+      <InterfaceName>Microsoft.Build.Framework.IMultiThreadableTask</InterfaceName>
+    </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Delete files from disk.</summary>
@@ -321,6 +335,31 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskEnvironment">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskEnvironment TaskEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.TaskEnvironment TaskEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Delete.TaskEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Property TaskEnvironment As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="member this.TaskEnvironment : Microsoft.Build.Framework.TaskEnvironment with get, set" Usage="Microsoft.Build.Tasks.Delete.TaskEnvironment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::TaskEnvironment ^ TaskEnvironment { Microsoft::Build::Framework::TaskEnvironment ^ get(); void set(Microsoft::Build::Framework::TaskEnvironment ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="TreatErrorsAsWarnings">

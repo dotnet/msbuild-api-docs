@@ -13,6 +13,12 @@
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Task that emits an error given a resource string. Engine will add project file path and line/column

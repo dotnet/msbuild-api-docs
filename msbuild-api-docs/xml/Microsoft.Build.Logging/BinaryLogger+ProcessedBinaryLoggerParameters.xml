@@ -1,0 +1,152 @@
+<Type Name="BinaryLogger+ProcessedBinaryLoggerParameters" FullName="Microsoft.Build.Logging.BinaryLogger+ProcessedBinaryLoggerParameters">
+  <TypeSignature Language="C#" Value="public readonly struct BinaryLogger.ProcessedBinaryLoggerParameters" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit BinaryLogger/ProcessedBinaryLoggerParameters extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Structure BinaryLogger.ProcessedBinaryLoggerParameters" />
+  <TypeSignature Language="F#" Value="type BinaryLogger.ProcessedBinaryLoggerParameters = struct" />
+  <TypeSignature Language="C++ CLI" Value="public: value class BinaryLogger::ProcessedBinaryLoggerParameters" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Result of processing multiple binary logger parameter sets.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessedBinaryLoggerParameters (System.Collections.Generic.IReadOnlyList&lt;string&gt; distinctParameterSets, bool allConfigurationsIdentical, System.Collections.Generic.IReadOnlyList&lt;string&gt; additionalFilePaths, System.Collections.Generic.IReadOnlyList&lt;string&gt; duplicateFilePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; distinctParameterSets, bool allConfigurationsIdentical, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; additionalFilePaths, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; duplicateFilePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.#ctor(System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Collections.Generic.IReadOnlyList{System.String},System.Collections.Generic.IReadOnlyList{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (distinctParameterSets As IReadOnlyList(Of String), allConfigurationsIdentical As Boolean, additionalFilePaths As IReadOnlyList(Of String), duplicateFilePaths As IReadOnlyList(Of String))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters : System.Collections.Generic.IReadOnlyList&lt;string&gt; * bool * System.Collections.Generic.IReadOnlyList&lt;string&gt; * System.Collections.Generic.IReadOnlyList&lt;string&gt; -&gt; Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters" Usage="new Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters (distinctParameterSets, allConfigurationsIdentical, additionalFilePaths, duplicateFilePaths)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProcessedBinaryLoggerParameters(System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ distinctParameterSets, bool allConfigurationsIdentical, System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ additionalFilePaths, System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ duplicateFilePaths);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinctParameterSets" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" />
+        <Parameter Name="allConfigurationsIdentical" Type="System.Boolean" />
+        <Parameter Name="additionalFilePaths" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" />
+        <Parameter Name="duplicateFilePaths" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="distinctParameterSets">List of distinct parameter sets that need separate logger instances.</param>
+        <param name="allConfigurationsIdentical">Whether all parameter sets have identical configurations.</param>
+        <param name="additionalFilePaths">Additional file paths to copy the binlog to.</param>
+        <param name="duplicateFilePaths">List of duplicate file paths that were filtered out.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters" /> struct.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalFilePaths">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; AdditionalFilePaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; AdditionalFilePaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AdditionalFilePaths" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalFilePaths As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalFilePaths : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AdditionalFilePaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ AdditionalFilePaths { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional file paths to copy the binlog to (only valid when AllConfigurationsIdentical is true).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllConfigurationsIdentical">
+      <MemberSignature Language="C#" Value="public bool AllConfigurationsIdentical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllConfigurationsIdentical" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AllConfigurationsIdentical" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllConfigurationsIdentical As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllConfigurationsIdentical : bool" Usage="Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AllConfigurationsIdentical" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllConfigurationsIdentical { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, all parameter sets have identical configurations (only file paths differ),
+            so a single logger can be used with file copying for additional paths.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinctParameterSets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; DistinctParameterSets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; DistinctParameterSets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DistinctParameterSets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DistinctParameterSets As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.DistinctParameterSets : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DistinctParameterSets" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ DistinctParameterSets { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of distinct parameter sets that need separate logger instances.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicateFilePaths">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; DuplicateFilePaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; DuplicateFilePaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DuplicateFilePaths" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DuplicateFilePaths As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.DuplicateFilePaths : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DuplicateFilePaths" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ DuplicateFilePaths { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of duplicate file paths that were filtered out.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
