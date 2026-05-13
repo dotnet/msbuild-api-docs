@@ -1328,9 +1328,17 @@
     <Type Name="Microsoft.Build.Execution.BuildManager/DeferredBuildMessage" Id="T:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage">
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance,System.String)" />
+      <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,System.String,Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity)" />
+      <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Code" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.FilePath" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Importance" />
+      <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.MessageSeverity" />
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Text" />
+    </Type>
+    <Type Name="Microsoft.Build.Execution.BuildManager/DeferredBuildMessageSeverity" Id="T:Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity">
+      <Member Id="F:Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity.Error" />
+      <Member Id="F:Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity.Message" />
+      <Member Id="F:Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity.Warning" />
     </Type>
     <Type Name="Microsoft.Build.Execution.BuildParameters" Id="T:Microsoft.Build.Execution.BuildParameters">
       <Member Id="M:Microsoft.Build.Execution.BuildParameters.#ctor" />
@@ -2091,7 +2099,7 @@
   </Namespace>
   <Namespace Name="Microsoft.Build.Experimental">
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
     </Type>
@@ -2216,6 +2224,7 @@
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.op_Implicit(Microsoft.Build.Framework.AbsolutePath)~System.String" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.op_Inequality(Microsoft.Build.Framework.AbsolutePath,Microsoft.Build.Framework.AbsolutePath)" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.ToString" />
+      <Member Id="P:Microsoft.Build.Framework.AbsolutePath.OriginalValue" />
       <Member Id="P:Microsoft.Build.Framework.AbsolutePath.Value" />
     </Type>
     <Type Name="Microsoft.Build.Framework.AnyEventHandler" Id="T:Microsoft.Build.Framework.AnyEventHandler" />
@@ -3456,12 +3465,23 @@
     </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogger" Id="T:Microsoft.Build.Logging.BinaryLogger">
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.#ctor" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogger.ExtractFilePathFromParameters(System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogger.ExtractNonPathParameters(System.String)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.ParseParameters(System.String)" />
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogger.ProcessParameters(System.String[])" />
       <Member Id="M:Microsoft.Build.Logging.BinaryLogger.Shutdown" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogger.AdditionalFilePaths" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogger.CollectProjectImports" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogger.Parameters" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogger.Verbosity" />
+    </Type>
+    <Type Name="Microsoft.Build.Logging.BinaryLogger/ProcessedBinaryLoggerParameters" Id="T:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters">
+      <Member Id="M:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.#ctor(System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Collections.Generic.IReadOnlyList{System.String},System.Collections.Generic.IReadOnlyList{System.String})" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AdditionalFilePaths" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.AllConfigurationsIdentical" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DistinctParameterSets" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogger.ProcessedBinaryLoggerParameters.DuplicateFilePaths" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogger/ProjectImportsCollectionMode" Id="T:Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode">
       <Member Id="F:Microsoft.Build.Logging.BinaryLogger.ProjectImportsCollectionMode.Embed" />
@@ -4283,6 +4303,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Copy.SkipUnchangedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.SourceFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.SourceFolders" />
+      <Member Id="P:Microsoft.Build.Tasks.Copy.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.UseSymboliclinksIfPossible" />
       <Member Id="P:Microsoft.Build.Tasks.Copy.WroteAtLeastOneFile" />
@@ -4338,6 +4359,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Delete.Files" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.Retries" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.RetryDelayMilliseconds" />
+      <Member Id="P:Microsoft.Build.Tasks.Delete.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.Delete.TreatErrorsAsWarnings" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.DownloadFile" Id="T:Microsoft.Build.Tasks.DownloadFile">
@@ -4777,6 +4799,7 @@
       <Member Id="P:Microsoft.Build.Tasks.MakeDir.Directories" />
       <Member Id="P:Microsoft.Build.Tasks.MakeDir.DirectoriesCreated" />
       <Member Id="P:Microsoft.Build.Tasks.MakeDir.FailIfNotIncremental" />
+      <Member Id="P:Microsoft.Build.Tasks.MakeDir.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Message" Id="T:Microsoft.Build.Tasks.Message">
       <Member Id="M:Microsoft.Build.Tasks.Message.#ctor" />
@@ -4830,6 +4853,7 @@
       <Member Id="M:Microsoft.Build.Tasks.ReadLinesFromFile.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ReadLinesFromFile.File" />
       <Member Id="P:Microsoft.Build.Tasks.ReadLinesFromFile.Lines" />
+      <Member Id="P:Microsoft.Build.Tasks.ReadLinesFromFile.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.RegisterAssembly" Id="T:Microsoft.Build.Tasks.RegisterAssembly">
       <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.#ctor" />
@@ -4847,6 +4871,7 @@
       <Member Id="P:Microsoft.Build.Tasks.RemoveDir.Directories" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDir.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.RemoveDir.RemovedDirectories" />
+      <Member Id="P:Microsoft.Build.Tasks.RemoveDir.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.RemoveDuplicates" Id="T:Microsoft.Build.Tasks.RemoveDuplicates">
       <Member Id="M:Microsoft.Build.Tasks.RemoveDuplicates.#ctor" />
@@ -5128,6 +5153,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Touch.Files" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.ForceTouch" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.Importance" />
+      <Member Id="P:Microsoft.Build.Tasks.Touch.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.Time" />
       <Member Id="P:Microsoft.Build.Tasks.Touch.TouchedFiles" />
     </Type>
@@ -5217,6 +5243,7 @@
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.File" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.Lines" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.Overwrite" />
+      <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.WriteLinesToFile.WriteOnlyWhenDifferent" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.XamlTaskFactory" Id="T:Microsoft.Build.Tasks.XamlTaskFactory">

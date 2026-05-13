@@ -33,7 +33,7 @@
             file system conventions (case-sensitive on Linux, case-insensitive on Windows and macOS).
             Does not perform any normalization beyond validating the path is fully qualified.
             A default instance (created via <c>default(AbsolutePath)</c>) has a null Value 
-            and should not be used. Two default instances are considered equal.
+            and represents an issue in path handling. Two default instances are considered equal.
             </remarks>
   </Docs>
   <Members>
@@ -58,6 +58,7 @@
             Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> struct.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="path" /> is null, empty, or not a rooted path.</exception>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -83,6 +84,7 @@
             Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> struct by combining an absolute path with a relative path.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown if <paramref name="path" /> is null or empty.</exception>
       </Docs>
     </Member>
     <Member MemberName="Equals">
@@ -252,6 +254,29 @@
             </summary>
         <returns>
           <c>true</c> if the paths are not equal; otherwise, <c>false</c>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalValue">
+      <MemberSignature Language="C#" Value="public string OriginalValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AbsolutePath.OriginalValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalValue As String" />
+      <MemberSignature Language="F#" Value="member this.OriginalValue : string" Usage="Microsoft.Build.Framework.AbsolutePath.OriginalValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OriginalValue { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The original string used to create this path.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

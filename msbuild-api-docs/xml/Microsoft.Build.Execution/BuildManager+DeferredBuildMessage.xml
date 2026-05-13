@@ -78,6 +78,56 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeferredBuildMessage (string text, string code, Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity messageSeverity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string code, valuetype Microsoft.Build.Execution.BuildManager/DeferredBuildMessageSeverity messageSeverity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,System.String,Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (text As String, code As String, messageSeverity As BuildManager.DeferredBuildMessageSeverity)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage : string * string * Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity -&gt; Microsoft.Build.Execution.BuildManager.DeferredBuildMessage" Usage="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage (text, code, messageSeverity)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DeferredBuildMessage(System::String ^ text, System::String ^ code, Microsoft::Build::Execution::BuildManager::DeferredBuildMessageSeverity messageSeverity);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" Index="0" FrameworkAlternate="msbuild-18-netcore" />
+        <Parameter Name="code" Type="System.String" Index="1" FrameworkAlternate="msbuild-18-netcore" />
+        <Parameter Name="messageSeverity" Type="Microsoft.Build.Execution.BuildManager+DeferredBuildMessageSeverity" Index="2" FrameworkAlternate="msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="text">The warning message text.</param>
+        <param name="code">The build message code (e.g., "MSB1070").</param>
+        <param name="messageSeverity">The severity of the deferred build message.</param>
+        <summary>
+            Creates a deferred warning message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public string? Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Code" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Code" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Code As String" />
+      <MemberSignature Language="F#" Value="member this.Code : string" Usage="Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Code" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Code { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Build event code (e.g., "MSB1070").
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="FilePath">
       <MemberSignature Language="C#" Value="public string? FilePath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
@@ -119,6 +169,27 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSeverity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity MessageSeverity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.BuildManager/DeferredBuildMessageSeverity MessageSeverity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.MessageSeverity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageSeverity As BuildManager.DeferredBuildMessageSeverity" />
+      <MemberSignature Language="F#" Value="member this.MessageSeverity : Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity" Usage="Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.MessageSeverity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Execution::BuildManager::DeferredBuildMessageSeverity MessageSeverity { Microsoft::Build::Execution::BuildManager::DeferredBuildMessageSeverity get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildManager+DeferredBuildMessageSeverity</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>
