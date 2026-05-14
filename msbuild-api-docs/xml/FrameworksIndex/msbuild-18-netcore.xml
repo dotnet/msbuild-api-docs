@@ -2929,11 +2929,13 @@
       <Member Id="P:Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName" />
     </Type>
     <Type Name="Microsoft.Build.Framework.TaskEnvironment" Id="T:Microsoft.Build.Framework.TaskEnvironment">
+      <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.CreateWithProjectDirectoryAndEnvironment(System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetAbsolutePath(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariable(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariables" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetProcessStartInfo" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.SetEnvironmentVariable(System.String,System.String)" />
+      <Member Id="P:Microsoft.Build.Framework.TaskEnvironment.Fallback" />
       <Member Id="P:Microsoft.Build.Framework.TaskEnvironment.ProjectDirectory" />
     </Type>
     <Type Name="Microsoft.Build.Framework.TaskFinishedEventArgs" Id="T:Microsoft.Build.Framework.TaskFinishedEventArgs">
@@ -4236,6 +4238,7 @@
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.AssignedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.Files" />
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.RootFolder" />
+      <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.CallTarget" Id="T:Microsoft.Build.Tasks.CallTarget">
       <Member Id="M:Microsoft.Build.Tasks.CallTarget.#ctor" />
@@ -4374,6 +4377,7 @@
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.RetryDelayMilliseconds" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.SkipUnchangedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.SourceUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.DownloadFile.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.DownloadFile.Timeout" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Error" Id="T:Microsoft.Build.Tasks.Error">
@@ -4459,6 +4463,7 @@
       <Member Id="P:Microsoft.Build.Tasks.FindUnderPath.InPath" />
       <Member Id="P:Microsoft.Build.Tasks.FindUnderPath.OutOfPath" />
       <Member Id="P:Microsoft.Build.Tasks.FindUnderPath.Path" />
+      <Member Id="P:Microsoft.Build.Tasks.FindUnderPath.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.FindUnderPath.UpdateToAbsolutePaths" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.FormatUrl" Id="T:Microsoft.Build.Tasks.FormatUrl">
@@ -4667,6 +4672,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GetFileHash.HashEncoding" />
       <Member Id="P:Microsoft.Build.Tasks.GetFileHash.Items" />
       <Member Id="P:Microsoft.Build.Tasks.GetFileHash.MetadataName" />
+      <Member Id="P:Microsoft.Build.Tasks.GetFileHash.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetFrameworkPath" Id="T:Microsoft.Build.Tasks.GetFrameworkPath">
       <Member Id="M:Microsoft.Build.Tasks.GetFrameworkPath.#ctor" />
@@ -4821,6 +4827,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Move.MovedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Move.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Move.SourceFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.Move.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.MSBuild" Id="T:Microsoft.Build.Tasks.MSBuild">
       <Member Id="M:Microsoft.Build.Tasks.MSBuild.#ctor" />
@@ -5175,6 +5182,7 @@
       <Member Id="P:Microsoft.Build.Tasks.Unzip.OverwriteReadOnlyFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.SkipUnchangedFiles" />
       <Member Id="P:Microsoft.Build.Tasks.Unzip.SourceFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.Unzip.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.UpdateManifest" Id="T:Microsoft.Build.Tasks.UpdateManifest">
       <Member Id="M:Microsoft.Build.Tasks.UpdateManifest.#ctor" />
@@ -5193,6 +5201,7 @@
       <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.File" />
       <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.Hash" />
       <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.HashEncoding" />
+      <Member Id="P:Microsoft.Build.Tasks.VerifyFileHash.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Warning" Id="T:Microsoft.Build.Tasks.Warning">
       <Member Id="M:Microsoft.Build.Tasks.Warning.#ctor" />
@@ -5233,6 +5242,7 @@
       <Member Id="P:Microsoft.Build.Tasks.WriteCodeFragment.Language" />
       <Member Id="P:Microsoft.Build.Tasks.WriteCodeFragment.OutputDirectory" />
       <Member Id="P:Microsoft.Build.Tasks.WriteCodeFragment.OutputFile" />
+      <Member Id="P:Microsoft.Build.Tasks.WriteCodeFragment.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.WriteLinesToFile" Id="T:Microsoft.Build.Tasks.WriteLinesToFile">
       <Member Id="M:Microsoft.Build.Tasks.WriteLinesToFile.#ctor" />
@@ -5266,6 +5276,7 @@
       <Member Id="P:Microsoft.Build.Tasks.XmlPeek.ProhibitDtd" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPeek.Query" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPeek.Result" />
+      <Member Id="P:Microsoft.Build.Tasks.XmlPeek.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPeek.XmlContent" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPeek.XmlInputPath" />
     </Type>
@@ -5274,6 +5285,7 @@
       <Member Id="M:Microsoft.Build.Tasks.XmlPoke.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Namespaces" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Query" />
+      <Member Id="P:Microsoft.Build.Tasks.XmlPoke.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Value" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.XmlInputPath" />
     </Type>
@@ -5283,6 +5295,7 @@
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.OutputPaths" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.Parameters" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.PreserveWhitespace" />
+      <Member Id="P:Microsoft.Build.Tasks.XslTransformation.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.UseTrustedSettings" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.XmlContent" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.XmlInputPaths" />
@@ -5302,6 +5315,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.Overwrite" />
       <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.SourceDirectory" />
+      <Member Id="P:Microsoft.Build.Tasks.ZipDirectory.TaskEnvironment" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Tasks.AssemblyDependency">
@@ -6584,6 +6598,7 @@
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.ExitCode" />
+      <Member Id="P:Microsoft.Build.Utilities.ToolTask.ExitCodeOverriddenToIndicateErrors" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.FailIfNotIncremental" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.HasLoggedErrors" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" />
