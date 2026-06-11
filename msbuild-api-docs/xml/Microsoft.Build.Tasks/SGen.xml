@@ -25,6 +25,12 @@
     <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Genererates a serialization assembly containing XML serializers for the input assembly.</summary>
