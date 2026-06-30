@@ -21,6 +21,74 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="CreateWithProjectDirectoryAndEnvironment">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Framework.TaskEnvironment CreateWithProjectDirectoryAndEnvironment (string projectDirectory, System.Collections.Generic.IDictionary&lt;string,string&gt;? environmentVariables = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Framework.TaskEnvironment CreateWithProjectDirectoryAndEnvironment(string projectDirectory, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; environmentVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.CreateWithProjectDirectoryAndEnvironment(System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateWithProjectDirectoryAndEnvironment (projectDirectory As String, Optional environmentVariables As IDictionary(Of String, String) = Nothing) As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="static member CreateWithProjectDirectoryAndEnvironment : string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Microsoft.Build.Framework.TaskEnvironment" Usage="Microsoft.Build.Framework.TaskEnvironment.CreateWithProjectDirectoryAndEnvironment (projectDirectory, environmentVariables)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectDirectory" Type="System.String" />
+        <Parameter Name="environmentVariables" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="projectDirectory">The initial working directory for the task.</param>
+        <param name="environmentVariables">A dictionary of environment variables to use, or <see langword="null" /> to use the current process environment variables.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.Build.Framework.TaskEnvironment" /> with isolated working directory and environment variables.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.Build.Framework.TaskEnvironment" /> with isolated environment state.</returns>
+        <remarks>
+            This method is primarily intended for testing scenarios. In normal MSBuild operation, the correct task environment is provided by the MSBuild engine.
+            The created TaskEnvironment provides isolated environment state similar to what tasks receive in multithreaded execution mode, enabling testing of task isolation behavior.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectDirectory" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectDirectory" /> is empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Framework.TaskEnvironment Fallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Framework.TaskEnvironment Fallback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskEnvironment.Fallback" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Fallback As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="static member Fallback : Microsoft.Build.Framework.TaskEnvironment" Usage="Microsoft.Build.Framework.TaskEnvironment.Fallback" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Build::Framework::TaskEnvironment ^ Fallback { Microsoft::Build::Framework::TaskEnvironment ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the fallback task environment that directly accesses the system environment variables
+            and working directory of the current process.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is the environment provided to tasks by the MSBuild engine in multi-process execution mode,
+            where each task runs in its own process and process-level state is inherently isolated.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetAbsolutePath">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath GetAbsolutePath (string path);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Framework.AbsolutePath GetAbsolutePath(string path) cil managed" />

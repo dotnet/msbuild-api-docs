@@ -1,10 +1,15 @@
 <Type Name="XmlPeek" FullName="Microsoft.Build.Tasks.XmlPeek">
-  <TypeSignature Language="C#" Value="public class XmlPeek : Microsoft.Build.Tasks.TaskExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlPeek extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="C#" Value="public class XmlPeek : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlPeek extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.XmlPeek" />
-  <TypeSignature Language="VB.NET" Value="Public Class XmlPeek&#xA;Inherits TaskExtension" />
-  <TypeSignature Language="F#" Value="type XmlPeek = class&#xA;    inherit TaskExtension" />
-  <TypeSignature Language="C++ CLI" Value="public ref class XmlPeek : Microsoft::Build::Tasks::TaskExtension" />
+  <TypeSignature Language="VB.NET" Value="Public Class XmlPeek&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type XmlPeek = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlPeek : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="C#" Value="public class XmlPeek : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlPeek extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IMultiThreadableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Class XmlPeek&#xA;Inherits TaskExtension&#xA;Implements IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type XmlPeek = class&#xA;    inherit TaskExtension&#xA;    interface IMultiThreadableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlPeek : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -16,7 +21,20 @@
   <Base>
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <InterfaceName>Microsoft.Build.Framework.IMultiThreadableTask</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             A task that returns values as specified by XPath Query
@@ -59,6 +77,9 @@
       <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="xmlPeek.Execute " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="msbuild-18;msbuild-18-netcore">M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -208,6 +229,31 @@
             The results returned by this task.</summary>
         <value>The results.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskEnvironment">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskEnvironment TaskEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.TaskEnvironment TaskEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XmlPeek.TaskEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Property TaskEnvironment As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="member this.TaskEnvironment : Microsoft.Build.Framework.TaskEnvironment with get, set" Usage="Microsoft.Build.Tasks.XmlPeek.TaskEnvironment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::TaskEnvironment ^ TaskEnvironment { Microsoft::Build::Framework::TaskEnvironment ^ get(); void set(Microsoft::Build::Framework::TaskEnvironment ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="XmlContent">

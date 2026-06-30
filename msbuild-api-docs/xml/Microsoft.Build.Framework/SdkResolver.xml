@@ -85,12 +85,13 @@
       </Docs>
     </Member>
     <Member MemberName="Resolve">
-      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Framework.SdkResult Resolve (Microsoft.Build.Framework.SdkReference sdkReference, Microsoft.Build.Framework.SdkResolverContext resolverContext, Microsoft.Build.Framework.SdkResultFactory factory);" />
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Framework.SdkResult Resolve (Microsoft.Build.Framework.SdkReference sdkReference, Microsoft.Build.Framework.SdkResolverContext resolverContext, Microsoft.Build.Framework.SdkResultFactory factory);" FrameworkAlternate="msbuild-15;msbuild-15-netcore;msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Framework.SdkResult Resolve(class Microsoft.Build.Framework.SdkReference sdkReference, class Microsoft.Build.Framework.SdkResolverContext resolverContext, class Microsoft.Build.Framework.SdkResultFactory factory) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkResolver.Resolve(Microsoft.Build.Framework.SdkReference,Microsoft.Build.Framework.SdkResolverContext,Microsoft.Build.Framework.SdkResultFactory)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Resolve (sdkReference As SdkReference, resolverContext As SdkResolverContext, factory As SdkResultFactory) As SdkResult" />
       <MemberSignature Language="F#" Value="abstract member Resolve : Microsoft.Build.Framework.SdkReference * Microsoft.Build.Framework.SdkResolverContext * Microsoft.Build.Framework.SdkResultFactory -&gt; Microsoft.Build.Framework.SdkResult" Usage="sdkResolver.Resolve (sdkReference, resolverContext, factory)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Build::Framework::SdkResult ^ Resolve(Microsoft::Build::Framework::SdkReference ^ sdkReference, Microsoft::Build::Framework::SdkResolverContext ^ resolverContext, Microsoft::Build::Framework::SdkResultFactory ^ factory);" />
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Framework.SdkResult? Resolve (Microsoft.Build.Framework.SdkReference sdkReference, Microsoft.Build.Framework.SdkResolverContext resolverContext, Microsoft.Build.Framework.SdkResultFactory factory);" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
@@ -109,16 +110,16 @@
         <param name="resolverContext">Context for resolving the SDK.</param>
         <param name="factory">Factory class to create an <see cref="T:Microsoft.Build.Framework.SdkResult" /></param>
         <summary>
-             Resolves the specified SDK reference.
-             </summary>
+            Resolves the specified SDK reference.
+            </summary>
         <returns>
-             An <see cref="T:Microsoft.Build.Framework.SdkResult" /> containing the resolved SDKs or associated error / reason
-             the SDK could not be resolved.  Return <see langword="null" /> if the resolver is not
-             applicable for a particular <see cref="T:Microsoft.Build.Framework.SdkReference" />.
-             </returns>
+            An <see cref="T:Microsoft.Build.Framework.SdkResult" /> containing the resolved SDKs or associated error / reason
+            the SDK could not be resolved.  Return <see langword="null" /> if the resolver is not
+            applicable for a particular <see cref="T:Microsoft.Build.Framework.SdkReference" />.
+            </returns>
         <remarks>
-              Note: You must use <see cref="T:Microsoft.Build.Framework.SdkResultFactory" /> to return a result.
-              </remarks>
+            Note: You must use <see cref="T:Microsoft.Build.Framework.SdkResultFactory" /> to return a result.
+            </remarks>
       </Docs>
     </Member>
   </Members>
