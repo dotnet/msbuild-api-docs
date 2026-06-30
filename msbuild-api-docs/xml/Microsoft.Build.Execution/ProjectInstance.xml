@@ -484,10 +484,14 @@
         <Parameter Name="value" Type="System.String" Index="1" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="name">The name of the environment variable.</param>
+        <param name="value">The value of the environment variable.</param>
+        <summary>
+            Adds an Environment Variable that was resolved by an <see cref="T:Microsoft.Build.Framework.SdkResolver" /> to the set of properties tracked by this <see cref="T:Microsoft.Build.Execution.ProjectInstance" />.
+            </summary>
+        <remarks>
+            SDK-resolved environment variables override ambient environment variables, but do not override regular properties defined in XML.
+            </remarks>
       </Docs>
     </Member>
     <MemberGroup MemberName="Build">

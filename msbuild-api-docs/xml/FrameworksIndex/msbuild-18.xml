@@ -4133,6 +4133,7 @@
       <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.ManifestPath" />
       <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.OutputDirectory" />
       <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.SupportedArchitectures" />
+      <Member Id="P:Microsoft.Build.Tasks.AddToWin32Manifest.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.AL" Id="T:Microsoft.Build.Tasks.AL">
       <Member Id="M:Microsoft.Build.Tasks.AL.#ctor" />
@@ -4339,6 +4340,7 @@
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.SourceFileExtension" />
+      <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.CreateManifestResourceName.UseDependentUponConvention" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.CreateProperty" Id="T:Microsoft.Build.Tasks.CreateProperty">
@@ -4596,6 +4598,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateManifestBase.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateResource" Id="T:Microsoft.Build.Tasks.GenerateResource">
       <Member Id="M:Microsoft.Build.Tasks.GenerateResource.#ctor" />
@@ -4715,6 +4718,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GetInstalledSDKLocations.SDKRegistryRoot" />
       <Member Id="P:Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformIdentifier" />
       <Member Id="P:Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.GetInstalledSDKLocations.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.GetInstalledSDKLocations.WarnWhenNoSDKsFound" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetReferenceAssemblyPaths" Id="T:Microsoft.Build.Tasks.GetReferenceAssemblyPaths">
@@ -4728,6 +4732,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkFallbackSearchPaths" />
       <Member Id="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker" />
       <Member Id="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMonikerDisplayName" />
+      <Member Id="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetSDKReferenceFiles" Id="T:Microsoft.Build.Tasks.GetSDKReferenceFiles">
       <Member Id="M:Microsoft.Build.Tasks.GetSDKReferenceFiles.#ctor" />
@@ -5032,6 +5037,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetCulture" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkIdentifier" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveManifestFiles.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveNativeReference" Id="T:Microsoft.Build.Tasks.ResolveNativeReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveNativeReference.#ctor" />
@@ -5192,6 +5198,7 @@
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.InputManifest" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.OutputManifest" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.TargetFrameworkVersion" />
+      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.VerifyFileHash" Id="T:Microsoft.Build.Tasks.VerifyFileHash">
       <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.#ctor" />
@@ -6571,6 +6578,7 @@
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.AdjustCommandsForOperatingSystem(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.CallHostObjectToExecute" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.Cancel" />
+      <Member Id="M:Microsoft.Build.Utilities.ToolTask.DeleteTempFile(Microsoft.Build.Framework.AbsolutePath)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.DeleteTempFile(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.Execute" />
       <Member Id="M:Microsoft.Build.Utilities.ToolTask.ExecuteTool(System.String,System.String,System.String)" />
@@ -6611,6 +6619,7 @@
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportanceToUse" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.StandardOutputLoggingImportance" />
+      <Member Id="P:Microsoft.Build.Utilities.ToolTask.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.TaskProcessTerminationTimeout" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.Timeout" />
       <Member Id="P:Microsoft.Build.Utilities.ToolTask.ToolCanceled" />
