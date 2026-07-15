@@ -92,5 +92,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ServerProcessExitCode">
+      <MemberSignature Language="C#" Value="public int? ServerProcessExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ServerProcessExitCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.MSBuildClientExitResult.ServerProcessExitCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ServerProcessExitCode As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.ServerProcessExitCode : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Build.Experimental.MSBuildClientExitResult.ServerProcessExitCode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;int&gt; ServerProcessExitCode { Nullable&lt;int&gt; get(); void set(Nullable&lt;int&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When this client launched a server child process and that process had already exited
+            by the time we observed the connection failure, this is its exit code. <c>null</c>
+            otherwise (server still running, never launched, or its state could not be queried).
+            Hosts use this to surface "server crashed immediately on launch" to the user instead
+            of a generic timeout message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
   </Members>
 </Type>

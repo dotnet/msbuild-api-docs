@@ -25,6 +25,12 @@
     <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             This class defines an "Exec" MSBuild task, which simply invokes the specified process with the specified arguments, waits
