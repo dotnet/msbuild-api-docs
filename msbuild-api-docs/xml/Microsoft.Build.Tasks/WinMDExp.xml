@@ -23,6 +23,12 @@
     <BaseTypeName FrameworkAlternate="msbuild-17-netcore">Microsoft.Build.Tasks.TaskRequiresFramework</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18">
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Exports a managed assembly to a windows runtime metadata.</summary>
@@ -171,6 +177,35 @@
         <summary>
             The full path of the tool to execute.</summary>
         <returns>The full path of the tool to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProcessStartInfo">
+      <MemberSignature Language="C#" Value="protected override System.Diagnostics.ProcessStartInfo GetProcessStartInfo (string pathToTool, string commandLineCommands, string responseFileSwitch);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Diagnostics.ProcessStartInfo GetProcessStartInfo(string pathToTool, string commandLineCommands, string responseFileSwitch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.GetProcessStartInfo(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetProcessStartInfo (pathToTool As String, commandLineCommands As String, responseFileSwitch As String) As ProcessStartInfo" />
+      <MemberSignature Language="F#" Value="override this.GetProcessStartInfo : string * string * string -&gt; System.Diagnostics.ProcessStartInfo" Usage="winMDExp.GetProcessStartInfo (pathToTool, commandLineCommands, responseFileSwitch)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Diagnostics::ProcessStartInfo ^ GetProcessStartInfo(System::String ^ pathToTool, System::String ^ commandLineCommands, System::String ^ responseFileSwitch);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessStartInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToTool" Type="System.String" Index="0" FrameworkAlternate="msbuild-18" />
+        <Parameter Name="commandLineCommands" Type="System.String" Index="1" FrameworkAlternate="msbuild-18" />
+        <Parameter Name="responseFileSwitch" Type="System.String" Index="2" FrameworkAlternate="msbuild-18" />
+      </Parameters>
+      <Docs>
+        <param name="pathToTool">To be added.</param>
+        <param name="commandLineCommands">To be added.</param>
+        <param name="responseFileSwitch">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

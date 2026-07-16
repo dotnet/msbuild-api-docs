@@ -1,0 +1,76 @@
+<Type Name="LoggersRegisteredEventArgs" FullName="Microsoft.Build.Framework.LoggersRegisteredEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class LoggersRegisteredEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit LoggersRegisteredEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.LoggersRegisteredEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class LoggersRegisteredEventArgs&#xA;Inherits BuildStatusEventArgs" />
+  <TypeSignature Language="F#" Value="type LoggersRegisteredEventArgs = class&#xA;    inherit BuildStatusEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LoggersRegisteredEventArgs sealed : Microsoft::Build::Framework::BuildStatusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Arguments for the loggers registered event, containing one or more logger registrations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoggersRegisteredEventArgs (System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt; loggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Framework.RegisteredLoggerInfo&gt; loggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.LoggersRegisteredEventArgs.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.Build.Framework.RegisteredLoggerInfo})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (loggers As IReadOnlyList(Of RegisteredLoggerInfo))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.LoggersRegisteredEventArgs : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt; -&gt; Microsoft.Build.Framework.LoggersRegisteredEventArgs" Usage="new Microsoft.Build.Framework.LoggersRegisteredEventArgs loggers" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; LoggersRegisteredEventArgs(System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::RegisteredLoggerInfo ^&gt; ^ loggers);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loggers" Type="System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="loggers">The list of registered loggers.</param>
+        <summary>
+            Initialize a new instance of the LoggersRegisteredEventArgs class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loggers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt; Loggers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Framework.RegisteredLoggerInfo&gt; Loggers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.LoggersRegisteredEventArgs.Loggers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Loggers As IReadOnlyList(Of RegisteredLoggerInfo)" />
+      <MemberSignature Language="F#" Value="member this.Loggers : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt;" Usage="Microsoft.Build.Framework.LoggersRegisteredEventArgs.Loggers" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::RegisteredLoggerInfo ^&gt; ^ Loggers { System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::RegisteredLoggerInfo ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.RegisteredLoggerInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The registered loggers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
