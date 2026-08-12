@@ -1,15 +1,15 @@
 <Type Name="GenerateLauncher" FullName="Microsoft.Build.Tasks.GenerateLauncher">
-  <TypeSignature Language="C#" Value="public sealed class GenerateLauncher : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18-netcore" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateLauncher extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class GenerateLauncher : Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateLauncher extends Microsoft.Build.Tasks.TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateLauncher" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateLauncher&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18-netcore" />
-  <TypeSignature Language="F#" Value="type GenerateLauncher = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public ref class GenerateLauncher sealed : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore;msbuild-18-netcore" />
-  <TypeSignature Language="C#" Value="public sealed class GenerateLauncher : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IMultiThreadableTask" FrameworkAlternate="msbuild-18" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateLauncher extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IMultiThreadableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-18" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateLauncher&#xA;Inherits TaskExtension&#xA;Implements IMultiThreadableTask" FrameworkAlternate="msbuild-18" />
-  <TypeSignature Language="F#" Value="type GenerateLauncher = class&#xA;    inherit TaskExtension&#xA;    interface IMultiThreadableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-18" />
-  <TypeSignature Language="C++ CLI" Value="public ref class GenerateLauncher sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IMultiThreadableTask" FrameworkAlternate="msbuild-18" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateLauncher&#xA;Inherits TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type GenerateLauncher = class&#xA;    inherit TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GenerateLauncher sealed : Microsoft::Build::Tasks::TaskExtension" FrameworkAlternate="msbuild-16;msbuild-16-netcore;msbuild-17;msbuild-17-netcore" />
+  <TypeSignature Language="C#" Value="public sealed class GenerateLauncher : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateLauncher extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.IMultiThreadableTask, class Microsoft.Build.Framework.ITask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenerateLauncher&#xA;Inherits TaskExtension&#xA;Implements IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="F#" Value="type GenerateLauncher = class&#xA;    inherit TaskExtension&#xA;    interface IMultiThreadableTask&#xA;    interface ITask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GenerateLauncher sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::IMultiThreadableTask" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -18,10 +18,10 @@
     <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface FrameworkAlternate="msbuild-18">
+    <Interface FrameworkAlternate="msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Framework.IMultiThreadableTask</InterfaceName>
     </Interface>
-    <Interface FrameworkAlternate="msbuild-18">
+    <Interface FrameworkAlternate="msbuild-18;msbuild-18-netcore">
       <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
     </Interface>
   </Interfaces>
@@ -30,7 +30,7 @@
       <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-18">
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
       <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
       <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
     </Attribute>
@@ -110,7 +110,7 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="msbuild-18">M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="msbuild-18;msbuild-18-netcore">M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>

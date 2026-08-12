@@ -24,7 +24,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-18">
+    <Attribute FrameworkAlternate="msbuild-18;msbuild-18-netcore">
       <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
       <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
     </Attribute>
@@ -196,9 +196,9 @@
         <ReturnType>System.Diagnostics.ProcessStartInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pathToTool" Type="System.String" Index="0" FrameworkAlternate="msbuild-18" />
-        <Parameter Name="commandLineCommands" Type="System.String" Index="1" FrameworkAlternate="msbuild-18" />
-        <Parameter Name="responseFileSwitch" Type="System.String" Index="2" FrameworkAlternate="msbuild-18" />
+        <Parameter Name="pathToTool" Type="System.String" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="commandLineCommands" Type="System.String" Index="1" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="responseFileSwitch" Type="System.String" Index="2" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
       </Parameters>
       <Docs>
         <param name="pathToTool">To be added.</param>

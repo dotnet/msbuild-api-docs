@@ -168,6 +168,32 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectGraph (Microsoft.Build.Graph.ProjectGraphOptions options, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Graph.ProjectGraphOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As ProjectGraphOptions, Optional cancellationToken As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Graph.ProjectGraph : Microsoft.Build.Graph.ProjectGraphOptions * System.Threading.CancellationToken -&gt; Microsoft.Build.Graph.ProjectGraph" Usage="new Microsoft.Build.Graph.ProjectGraph (options, cancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Build.Graph.ProjectGraphOptions" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="options">A <see cref="T:Microsoft.Build.Graph.ProjectGraphOptions" /> containing the entry projects, project collection, and other details about the graph.</param>
+        <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to observe.</param>
+        <summary>
+            Constructs a graph starting from the given graph options.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Build.Exceptions.InvalidProjectFileException">If the evaluation of any project in the graph fails.</exception>
+        <exception cref="T:Microsoft.Build.Exceptions.CircularDependencyException">If the evaluation is successful but the project graph contains a circular dependency.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ProjectGraph (System.Collections.Generic.IEnumerable&lt;string&gt; entryProjectFiles, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; entryProjectFiles, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{System.String},Microsoft.Build.Evaluation.ProjectCollection)" />

@@ -2100,6 +2100,7 @@
   <Namespace Name="Microsoft.Build.Experimental">
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
     </Type>
@@ -2107,6 +2108,7 @@
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClientExitResult.#ctor" />
       <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
       <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
+      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.ServerProcessExitCode" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.MSBuildClientExitType" Id="T:Microsoft.Build.Experimental.MSBuildClientExitType">
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
@@ -2682,6 +2684,10 @@
       <Member Id="P:Microsoft.Build.Framework.LoggerException.ErrorCode" />
       <Member Id="P:Microsoft.Build.Framework.LoggerException.HelpKeyword" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.LoggersRegisteredEventArgs" Id="T:Microsoft.Build.Framework.LoggersRegisteredEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.LoggersRegisteredEventArgs.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.Build.Framework.RegisteredLoggerInfo})" />
+      <Member Id="P:Microsoft.Build.Framework.LoggersRegisteredEventArgs.Loggers" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.LoggerVerbosity" Id="T:Microsoft.Build.Framework.LoggerVerbosity">
       <Member Id="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed" />
       <Member Id="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic" />
@@ -2783,6 +2789,13 @@
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.NewValue" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.PreviousValue" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.PropertyName" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.RegisteredLoggerInfo" Id="T:Microsoft.Build.Framework.RegisteredLoggerInfo">
+      <Member Id="M:Microsoft.Build.Framework.RegisteredLoggerInfo.#ctor(System.String,System.Collections.Generic.IReadOnlyList{System.String},System.Nullable{Microsoft.Build.Framework.LoggerVerbosity},System.String)" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.LoggerName" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.OutputFilePaths" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.Parameters" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.Verbosity" />
     </Type>
     <Type Name="Microsoft.Build.Framework.RegisteredTaskObjectLifetime" Id="T:Microsoft.Build.Framework.RegisteredTaskObjectLifetime">
       <Member Id="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.AppDomain" />
@@ -3402,6 +3415,7 @@
     <Type Name="Microsoft.Build.Graph.ProjectGraph" Id="T:Microsoft.Build.Graph.ProjectGraph">
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc,System.Int32,System.Threading.CancellationToken)" />
@@ -3435,10 +3449,22 @@
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.ProjectFile" />
     </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphMode" Id="T:Microsoft.Build.Graph.ProjectGraphMode">
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Default" />
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Full" />
+    </Type>
     <Type Name="Microsoft.Build.Graph.ProjectGraphNode" Id="T:Microsoft.Build.Graph.ProjectGraphNode">
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectInstance" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectReferences" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ReferencingProjects" />
+    </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphOptions" Id="T:Microsoft.Build.Graph.ProjectGraphOptions">
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraphOptions.#ctor" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.DegreeOfParallelism" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.EntryPoints" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.Mode" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectInstanceFactoryFunc" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Logging">
@@ -3516,6 +3542,7 @@
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EndOfFile" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EnvironmentVariableRead" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Error" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.LoggersRegistered" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Message" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.NameValueList" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationFinished" />
@@ -3555,6 +3582,7 @@
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FormatVersionMismatchWarning" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BuildEventArgsExtensions" Id="T:Microsoft.Build.Logging.BuildEventArgsExtensions">
@@ -4473,6 +4501,7 @@
       <Member Id="M:Microsoft.Build.Tasks.FormatUrl.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.FormatUrl.InputUrl" />
       <Member Id="P:Microsoft.Build.Tasks.FormatUrl.OutputUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.FormatUrl.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.FormatVersion" Id="T:Microsoft.Build.Tasks.FormatVersion">
       <Member Id="M:Microsoft.Build.Tasks.FormatVersion.#ctor" />
@@ -4517,6 +4546,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.OutputAppConfigFile" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.SuggestedRedirects" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.TargetName" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateBootstrapper" Id="T:Microsoft.Build.Tasks.GenerateBootstrapper">
       <Member Id="M:Microsoft.Build.Tasks.GenerateBootstrapper.#ctor" />
@@ -4571,6 +4601,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.LauncherPath" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.OutputEntryPoint" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.OutputPath" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.VisualStudioVersion" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateManifestBase" Id="T:Microsoft.Build.Tasks.GenerateManifestBase">
@@ -4656,6 +4687,7 @@
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.Assemblies" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.AssemblyFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetCompatiblePlatform" Id="T:Microsoft.Build.Tasks.GetCompatiblePlatform">
       <Member Id="M:Microsoft.Build.Tasks.GetCompatiblePlatform.#ctor" />
@@ -4965,6 +4997,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkSubsets" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkVersion" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolvedAssemblyConflicts" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolveFrameworkAssembliesFromHigherFrameworks" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.WarnOrErrorOnTargetArchitectureMismatch" />
@@ -5223,6 +5256,7 @@
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.GenerateFullPathToTool" />
+      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.GetProcessStartInfo(System.String,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.SkipTaskExecution" />
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.AssemblyUnificationPolicy" />
@@ -6649,15 +6683,6 @@
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version180" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest" />
     </Type>
-  </Namespace>
-  <Namespace Name="Microsoft.VisualStudio.Setup.Configuration">
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" Id="T:Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.InstanceState" Id="T:Microsoft.VisualStudio.Setup.Configuration.InstanceState" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" />
   </Namespace>
   <Namespace Name="System.Deployment.Internal.CodeSigning">
     <Type Name="System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription" Id="T:System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription">

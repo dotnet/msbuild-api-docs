@@ -81,6 +81,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildClient (string[] commandLine, string msbuildLocation, bool multiThreaded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] commandLine, string msbuildLocation, bool multiThreaded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (commandLine As String(), msbuildLocation As String, multiThreaded As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Experimental.MSBuildClient : string[] * string * bool -&gt; Microsoft.Build.Experimental.MSBuildClient" Usage="new Microsoft.Build.Experimental.MSBuildClient (commandLine, msbuildLocation, multiThreaded)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuildClient(cli::array &lt;System::String ^&gt; ^ commandLine, System::String ^ msbuildLocation, bool multiThreaded);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandLine" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="msbuildLocation" Type="System.String" Index="1" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="multiThreaded" Type="System.Boolean" Index="2" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">The command line to process. The first argument
+            on the command line is assumed to be the name/path of the executable, and is ignored</param>
+        <param name="msbuildLocation"> Full path to current MSBuild.exe if executable is MSBuild.exe,
+            or to version of MSBuild.dll found to be associated with the current process.</param>
+        <param name="multiThreaded">Whether this build is multithreaded (/mt). When true, the launched
+            server process is started with Server GC.</param>
+        <summary>
+            Public constructor with parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Experimental.MSBuildClientExitResult Execute (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Experimental.MSBuildClientExitResult Execute(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />

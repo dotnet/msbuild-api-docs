@@ -2100,6 +2100,7 @@
   <Namespace Name="Microsoft.Build.Experimental">
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
     </Type>
@@ -3414,6 +3415,7 @@
     <Type Name="Microsoft.Build.Graph.ProjectGraph" Id="T:Microsoft.Build.Graph.ProjectGraph">
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc,System.Int32,System.Threading.CancellationToken)" />
@@ -3447,10 +3449,22 @@
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.ProjectFile" />
     </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphMode" Id="T:Microsoft.Build.Graph.ProjectGraphMode">
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Default" />
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Full" />
+    </Type>
     <Type Name="Microsoft.Build.Graph.ProjectGraphNode" Id="T:Microsoft.Build.Graph.ProjectGraphNode">
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectInstance" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectReferences" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ReferencingProjects" />
+    </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphOptions" Id="T:Microsoft.Build.Graph.ProjectGraphOptions">
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraphOptions.#ctor" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.DegreeOfParallelism" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.EntryPoints" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.Mode" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectInstanceFactoryFunc" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Logging">
@@ -6669,15 +6683,6 @@
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version180" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest" />
     </Type>
-  </Namespace>
-  <Namespace Name="Microsoft.VisualStudio.Setup.Configuration">
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" Id="T:Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.InstanceState" Id="T:Microsoft.VisualStudio.Setup.Configuration.InstanceState" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" />
   </Namespace>
   <Namespace Name="System.Deployment.Internal.CodeSigning">
     <Type Name="System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription" Id="T:System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription">
