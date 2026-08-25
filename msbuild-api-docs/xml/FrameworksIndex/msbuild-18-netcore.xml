@@ -7,7 +7,6 @@
     <Assembly Name="Microsoft.Build.Framework" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Tasks.Core" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Utilities.Core" Version="15.1.0.0" />
-    <Assembly Name="MSBuild" Version="15.1.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Build.BackEnd.SdkResolution">
     <Type Name="Microsoft.Build.BackEnd.SdkResolution.SdkResolverException" Id="T:Microsoft.Build.BackEnd.SdkResolution.SdkResolverException">
@@ -436,27 +435,6 @@
       <Member Id="M:Microsoft.Build.BuildEngine.Utilities.Escape(System.String)" />
     </Type>
     <Type Name="Microsoft.Build.BuildEngine.WriteHandler" Id="T:Microsoft.Build.BuildEngine.WriteHandler" />
-  </Namespace>
-  <Namespace Name="Microsoft.Build.CommandLine">
-    <Type Name="Microsoft.Build.CommandLine.AutomaticEncodingRestorer" Id="T:Microsoft.Build.CommandLine.AutomaticEncodingRestorer">
-      <Member Id="M:Microsoft.Build.CommandLine.AutomaticEncodingRestorer.#ctor" />
-      <Member Id="M:Microsoft.Build.CommandLine.AutomaticEncodingRestorer.Dispose" />
-    </Type>
-    <Type Name="Microsoft.Build.CommandLine.MSBuildApp" Id="T:Microsoft.Build.CommandLine.MSBuildApp">
-      <Member Id="M:Microsoft.Build.CommandLine.MSBuildApp.Execute(System.String[])" />
-      <Member Id="M:Microsoft.Build.CommandLine.MSBuildApp.Main(System.String[])" />
-    </Type>
-    <Type Name="Microsoft.Build.CommandLine.MSBuildApp/ExitType" Id="T:Microsoft.Build.CommandLine.MSBuildApp.ExitType">
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.BuildError" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.InitializationError" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.LoggerAbort" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.LoggerFailure" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.MSBuildClientFailure" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.ProjectCacheFailure" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.Success" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.SwitchError" />
-      <Member Id="F:Microsoft.Build.CommandLine.MSBuildApp.ExitType.Unexpected" />
-    </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Construction">
     <Type Name="Microsoft.Build.Construction.ElementLocation" Id="T:Microsoft.Build.Construction.ElementLocation">
