@@ -1380,7 +1380,6 @@
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ProjectLoadSettings" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.PropertiesFromCommandLine" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.Question" />
-      <Member Id="P:Microsoft.Build.Execution.BuildParameters.ReportFileAccesses" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ResetCaches" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.SaveOperatingEnvironment" />
       <Member Id="P:Microsoft.Build.Execution.BuildParameters.ShutdownInProcNodeOnBuildFinish" />
@@ -2100,6 +2099,7 @@
   <Namespace Name="Microsoft.Build.Experimental">
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
     </Type>
@@ -2107,6 +2107,7 @@
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClientExitResult.#ctor" />
       <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
       <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
+      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.ServerProcessExitCode" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.MSBuildClientExitType" Id="T:Microsoft.Build.Experimental.MSBuildClientExitType">
       <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
@@ -2682,6 +2683,10 @@
       <Member Id="P:Microsoft.Build.Framework.LoggerException.ErrorCode" />
       <Member Id="P:Microsoft.Build.Framework.LoggerException.HelpKeyword" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.LoggersRegisteredEventArgs" Id="T:Microsoft.Build.Framework.LoggersRegisteredEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.LoggersRegisteredEventArgs.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.Build.Framework.RegisteredLoggerInfo})" />
+      <Member Id="P:Microsoft.Build.Framework.LoggersRegisteredEventArgs.Loggers" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.LoggerVerbosity" Id="T:Microsoft.Build.Framework.LoggerVerbosity">
       <Member Id="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed" />
       <Member Id="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic" />
@@ -2783,6 +2788,13 @@
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.NewValue" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.PreviousValue" />
       <Member Id="P:Microsoft.Build.Framework.PropertyReassignmentEventArgs.PropertyName" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.RegisteredLoggerInfo" Id="T:Microsoft.Build.Framework.RegisteredLoggerInfo">
+      <Member Id="M:Microsoft.Build.Framework.RegisteredLoggerInfo.#ctor(System.String,System.Collections.Generic.IReadOnlyList{System.String},System.Nullable{Microsoft.Build.Framework.LoggerVerbosity},System.String)" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.LoggerName" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.OutputFilePaths" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.Parameters" />
+      <Member Id="P:Microsoft.Build.Framework.RegisteredLoggerInfo.Verbosity" />
     </Type>
     <Type Name="Microsoft.Build.Framework.RegisteredTaskObjectLifetime" Id="T:Microsoft.Build.Framework.RegisteredTaskObjectLifetime">
       <Member Id="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.AppDomain" />
@@ -3086,220 +3098,6 @@
       <Member Id="P:Microsoft.Build.Framework.Profiler.ProfilerResult.ProfiledLocations" />
     </Type>
   </Namespace>
-  <Namespace Name="Microsoft.Build.Framework.XamlTypes">
-    <Type Name="Microsoft.Build.Framework.XamlTypes.Argument" Id="T:Microsoft.Build.Framework.XamlTypes.Argument">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Argument.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Argument.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Argument.IsRequired" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Argument.Property" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Argument.Separator" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.BaseProperty" Id="T:Microsoft.Build.Framework.XamlTypes.BaseProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Category" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ContainingRule" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.DataSource" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Description" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.IncludeInCommandLine" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.IsRequired" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.MultipleValuesAllowed" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ReadOnly" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Subcategory" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Switch" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Visible" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.BoolProperty" Id="T:Microsoft.Build.Framework.XamlTypes.BoolProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.BoolProperty.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.BoolProperty.ReverseSwitch" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.Category" Id="T:Microsoft.Build.Framework.XamlTypes.Category">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Category.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Category.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Category.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Category.Description" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Category.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Category.HelpString" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Category.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Category.Subtype" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.CategorySchema" Id="T:Microsoft.Build.Framework.XamlTypes.CategorySchema">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.CategorySchema.#ctor" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.ContentType" Id="T:Microsoft.Build.Framework.XamlTypes.ContentType">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.EndInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetMetadata(System.String)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.DefaultContentTypeForItemType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.Metadata" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ContentType.Name" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.DataSource" Id="T:Microsoft.Build.Framework.XamlTypes.DataSource">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.DataSource.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.ItemType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.Label" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.Persistence" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistenceStyle" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceType" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" Id="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation">
-      <Member Id="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.AfterContext" />
-      <Member Id="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.BeforeContext" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty" Id="T:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.EnumProvider" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.EnumProperty" Id="T:Microsoft.Build.Framework.XamlTypes.EnumProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.EnumValue" Id="T:Microsoft.Build.Framework.XamlTypes.EnumValue">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.EnumValue.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Arguments" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Description" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.HelpString" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Metadata" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Switch" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.EnumValue.SwitchPrefix" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.FileExtension" Id="T:Microsoft.Build.Framework.XamlTypes.FileExtension">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.FileExtension.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.FileExtension.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.FileExtension.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.FileExtension.ContentType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.FileExtension.Name" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.IntProperty" Id="T:Microsoft.Build.Framework.XamlTypes.IntProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.IntProperty.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.IntProperty.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MaxValue" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MinValue" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode" Id="T:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.ItemType" Id="T:Microsoft.Build.Framework.XamlTypes.ItemType">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ItemType.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ItemType.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ItemType.EndInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ItemType.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ItemType.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ItemType.DefaultContentType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ItemType.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ItemType.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ItemType.UpToDateCheckInput" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.NameValuePair" Id="T:Microsoft.Build.Framework.XamlTypes.NameValuePair">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.NameValuePair.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.NameValuePair.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.NameValuePair.Value" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions" Id="T:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.Rule" Id="T:Microsoft.Build.Framework.XamlTypes.Rule">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.EndInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesByCategory" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory(System.String)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.GetProperty(System.String)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Categories" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.CommandLine" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Description" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.FileExtension" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.HelpString" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Metadata" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Name" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Order" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Outputs" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Properties" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.Separator" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.Rule.ToolName" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.RuleBag" Id="T:Microsoft.Build.Framework.XamlTypes.RuleBag">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleBag.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleBag.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleBag.EndInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjects(System.Type)" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjectTypes" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.RuleBag.Rules" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.RuleOverrideMode" Id="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode">
-      <Member Id="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Extend" />
-      <Member Id="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Replace" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.RuleSchema" Id="T:Microsoft.Build.Framework.XamlTypes.RuleSchema">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.RuleSchema.#ctor" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.StringListProperty" Id="T:Microsoft.Build.Framework.XamlTypes.StringListProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.StringListProperty.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.StringProperty" Id="T:Microsoft.Build.Framework.XamlTypes.StringProperty">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.StringProperty.#ctor" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype" />
-    </Type>
-    <Type Name="Microsoft.Build.Framework.XamlTypes.ValueEditor" Id="T:Microsoft.Build.Framework.XamlTypes.ValueEditor">
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.#ctor" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.BeginInit" />
-      <Member Id="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.EndInit" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.DisplayName" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.EditorType" />
-      <Member Id="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.Metadata" />
-    </Type>
-  </Namespace>
   <Namespace Name="Microsoft.Build.Globbing">
     <Type Name="Microsoft.Build.Globbing.CompositeGlob" Id="T:Microsoft.Build.Globbing.CompositeGlob">
       <Member Id="M:Microsoft.Build.Globbing.CompositeGlob.#ctor(Microsoft.Build.Globbing.IMSBuildGlob[])" />
@@ -3402,6 +3200,7 @@
     <Type Name="Microsoft.Build.Graph.ProjectGraph" Id="T:Microsoft.Build.Graph.ProjectGraph">
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphEntryPoint,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(Microsoft.Build.Graph.ProjectGraphOptions,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint})" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc)" />
       <Member Id="M:Microsoft.Build.Graph.ProjectGraph.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Build.Graph.ProjectGraphEntryPoint},Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc,System.Int32,System.Threading.CancellationToken)" />
@@ -3435,10 +3234,22 @@
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphEntryPoint.ProjectFile" />
     </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphMode" Id="T:Microsoft.Build.Graph.ProjectGraphMode">
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Default" />
+      <Member Id="F:Microsoft.Build.Graph.ProjectGraphMode.Full" />
+    </Type>
     <Type Name="Microsoft.Build.Graph.ProjectGraphNode" Id="T:Microsoft.Build.Graph.ProjectGraphNode">
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectInstance" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ProjectReferences" />
       <Member Id="P:Microsoft.Build.Graph.ProjectGraphNode.ReferencingProjects" />
+    </Type>
+    <Type Name="Microsoft.Build.Graph.ProjectGraphOptions" Id="T:Microsoft.Build.Graph.ProjectGraphOptions">
+      <Member Id="M:Microsoft.Build.Graph.ProjectGraphOptions.#ctor" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.DegreeOfParallelism" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.EntryPoints" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.Mode" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" />
+      <Member Id="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectInstanceFactoryFunc" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Build.Logging">
@@ -3516,6 +3327,7 @@
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EndOfFile" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.EnvironmentVariableRead" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Error" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.LoggersRegistered" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Message" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.NameValueList" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationFinished" />
@@ -3555,6 +3367,7 @@
       <Member Id="M:Microsoft.Build.Logging.BinaryLogReplayEventSource.Replay(System.String,System.Threading.CancellationToken)" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.AllowForwardCompatibility" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FileFormatVersion" />
+      <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.FormatVersionMismatchWarning" />
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReplayEventSource.MinimumReaderVersion" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BuildEventArgsExtensions" Id="T:Microsoft.Build.Logging.BuildEventArgsExtensions">
@@ -4137,9 +3950,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.AL" Id="T:Microsoft.Build.Tasks.AL">
       <Member Id="M:Microsoft.Build.Tasks.AL.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.AL.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
-      <Member Id="M:Microsoft.Build.Tasks.AL.Execute" />
-      <Member Id="M:Microsoft.Build.Tasks.AL.GenerateFullPathToTool" />
       <Member Id="P:Microsoft.Build.Tasks.AL.AlgorithmId" />
       <Member Id="P:Microsoft.Build.Tasks.AL.BaseAddress" />
       <Member Id="P:Microsoft.Build.Tasks.AL.CompanyName" />
@@ -4168,21 +3978,13 @@
       <Member Id="P:Microsoft.Build.Tasks.AL.TargetType" />
       <Member Id="P:Microsoft.Build.Tasks.AL.TemplateFile" />
       <Member Id="P:Microsoft.Build.Tasks.AL.Title" />
-      <Member Id="P:Microsoft.Build.Tasks.AL.ToolName" />
       <Member Id="P:Microsoft.Build.Tasks.AL.Trademark" />
       <Member Id="P:Microsoft.Build.Tasks.AL.Version" />
       <Member Id="P:Microsoft.Build.Tasks.AL.Win32Icon" />
       <Member Id="P:Microsoft.Build.Tasks.AL.Win32Resource" />
     </Type>
-    <Type Name="Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" Id="T:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension">
-      <Member Id="P:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension.Log" />
-    </Type>
     <Type Name="Microsoft.Build.Tasks.AspNetCompiler" Id="T:Microsoft.Build.Tasks.AspNetCompiler">
       <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
-      <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.Execute" />
-      <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.GenerateFullPathToTool" />
-      <Member Id="M:Microsoft.Build.Tasks.AspNetCompiler.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Clean" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Debug" />
@@ -4195,7 +3997,6 @@
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.TargetFrameworkMoniker" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.TargetPath" />
-      <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.ToolName" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.Updateable" />
       <Member Id="P:Microsoft.Build.Tasks.AspNetCompiler.VirtualPath" />
     </Type>
@@ -4253,7 +4054,6 @@
       <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask(Microsoft.Build.Framework.ITask)" />
       <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.CreateTask(Microsoft.Build.Framework.IBuildEngine)" />
-      <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.GetAssemblyPath" />
       <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters" />
       <Member Id="M:Microsoft.Build.Tasks.CodeTaskFactory.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)" />
       <Member Id="P:Microsoft.Build.Tasks.CodeTaskFactory.FactoryName" />
@@ -4473,6 +4273,7 @@
       <Member Id="M:Microsoft.Build.Tasks.FormatUrl.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.FormatUrl.InputUrl" />
       <Member Id="P:Microsoft.Build.Tasks.FormatUrl.OutputUrl" />
+      <Member Id="P:Microsoft.Build.Tasks.FormatUrl.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.FormatVersion" Id="T:Microsoft.Build.Tasks.FormatVersion">
       <Member Id="M:Microsoft.Build.Tasks.FormatVersion.#ctor" />
@@ -4517,10 +4318,10 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.OutputAppConfigFile" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.SuggestedRedirects" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.TargetName" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateBindingRedirects.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateBootstrapper" Id="T:Microsoft.Build.Tasks.GenerateBootstrapper">
       <Member Id="M:Microsoft.Build.Tasks.GenerateBootstrapper.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.GenerateBootstrapper.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationFile" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationName" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationRequiresElevation" />
@@ -4571,6 +4372,7 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.LauncherPath" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.OutputEntryPoint" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.OutputPath" />
+      <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateLauncher.VisualStudioVersion" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateManifestBase" Id="T:Microsoft.Build.Tasks.GenerateManifestBase">
@@ -4637,7 +4439,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.GenerateTrustInfo" Id="T:Microsoft.Build.Tasks.GenerateTrustInfo">
       <Member Id="M:Microsoft.Build.Tasks.GenerateTrustInfo.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.GenerateTrustInfo.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.ApplicationDependencies" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions" />
@@ -4645,17 +4446,12 @@
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" />
       <Member Id="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile" />
     </Type>
-    <Type Name="Microsoft.Build.Tasks.GetAssembliesMetadata" Id="T:Microsoft.Build.Tasks.GetAssembliesMetadata">
-      <Member Id="M:Microsoft.Build.Tasks.GetAssembliesMetadata.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.GetAssembliesMetadata.Execute" />
-      <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssembliesMetadata" />
-      <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssemblyPaths" />
-    </Type>
     <Type Name="Microsoft.Build.Tasks.GetAssemblyIdentity" Id="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.Assemblies" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.AssemblyFiles" />
+      <Member Id="P:Microsoft.Build.Tasks.GetAssemblyIdentity.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetCompatiblePlatform" Id="T:Microsoft.Build.Tasks.GetCompatiblePlatform">
       <Member Id="M:Microsoft.Build.Tasks.GetCompatiblePlatform.#ctor" />
@@ -4699,7 +4495,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetFrameworkSdkPath" Id="T:Microsoft.Build.Tasks.GetFrameworkSdkPath">
       <Member Id="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion20Path" />
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion35Path" />
       <Member Id="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion40Path" />
@@ -4792,6 +4587,7 @@
       <Member Id="M:Microsoft.Build.Tasks.LC.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.LC.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
       <Member Id="M:Microsoft.Build.Tasks.LC.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <Member Id="M:Microsoft.Build.Tasks.LC.Execute" />
       <Member Id="M:Microsoft.Build.Tasks.LC.GenerateFullPathToTool" />
       <Member Id="M:Microsoft.Build.Tasks.LC.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Tasks.LC.LicenseTarget" />
@@ -4869,9 +4665,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.RegisterAssembly" Id="T:Microsoft.Build.Tasks.RegisterAssembly">
       <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.Execute" />
-      <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)" />
-      <Member Id="M:Microsoft.Build.Tasks.RegisterAssembly.ResolveRef(System.Reflection.Assembly)" />
       <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.Assemblies" />
       <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile" />
       <Member Id="P:Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase" />
@@ -4965,6 +4758,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkSubsets" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkVersion" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolvedAssemblyConflicts" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.UnresolveFrameworkAssembliesFromHigherFrameworks" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.WarnOrErrorOnTargetArchitectureMismatch" />
@@ -4979,7 +4773,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveComReference" Id="T:Microsoft.Build.Tasks.ResolveComReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveComReference.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.ResolveComReference.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.DelaySign" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool" />
@@ -5041,7 +4834,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveNativeReference" Id="T:Microsoft.Build.Tasks.ResolveNativeReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveNativeReference.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.ResolveNativeReference.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles" />
@@ -5101,10 +4893,8 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.SGen" Id="T:Microsoft.Build.Tasks.SGen">
       <Member Id="M:Microsoft.Build.Tasks.SGen.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.SGen.GenerateCommandLineCommands" />
+      <Member Id="M:Microsoft.Build.Tasks.SGen.Execute" />
       <Member Id="M:Microsoft.Build.Tasks.SGen.GenerateFullPathToTool" />
-      <Member Id="M:Microsoft.Build.Tasks.SGen.SkipTaskExecution" />
-      <Member Id="M:Microsoft.Build.Tasks.SGen.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Tasks.SGen.BuildAssemblyName" />
       <Member Id="P:Microsoft.Build.Tasks.SGen.BuildAssemblyPath" />
       <Member Id="P:Microsoft.Build.Tasks.SGen.DelaySign" />
@@ -5139,7 +4929,9 @@
       <Member Id="M:Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString(System.String,System.Object[])" />
       <Member Id="P:Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources" />
     </Type>
-    <Type Name="Microsoft.Build.Tasks.TaskRequiresFramework" Id="T:Microsoft.Build.Tasks.TaskRequiresFramework" />
+    <Type Name="Microsoft.Build.Tasks.TaskRequiresFramework" Id="T:Microsoft.Build.Tasks.TaskRequiresFramework">
+      <Member Id="M:Microsoft.Build.Tasks.TaskRequiresFramework.Execute" />
+    </Type>
     <Type Name="Microsoft.Build.Tasks.Telemetry" Id="T:Microsoft.Build.Tasks.Telemetry">
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.Telemetry.Execute" />
@@ -5172,7 +4964,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.UnregisterAssembly" Id="T:Microsoft.Build.Tasks.UnregisterAssembly">
       <Member Id="M:Microsoft.Build.Tasks.UnregisterAssembly.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.UnregisterAssembly.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.Assemblies" />
       <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.AssemblyListFile" />
       <Member Id="P:Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles" />
@@ -5192,13 +4983,11 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.UpdateManifest" Id="T:Microsoft.Build.Tasks.UpdateManifest">
       <Member Id="M:Microsoft.Build.Tasks.UpdateManifest.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.UpdateManifest.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationManifest" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationPath" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.InputManifest" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.OutputManifest" />
       <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.TargetFrameworkVersion" />
-      <Member Id="P:Microsoft.Build.Tasks.UpdateManifest.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.VerifyFileHash" Id="T:Microsoft.Build.Tasks.VerifyFileHash">
       <Member Id="M:Microsoft.Build.Tasks.VerifyFileHash.#ctor" />
@@ -5221,10 +5010,6 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.WinMDExp" Id="T:Microsoft.Build.Tasks.WinMDExp">
       <Member Id="M:Microsoft.Build.Tasks.WinMDExp.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
-      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.GenerateFullPathToTool" />
-      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.SkipTaskExecution" />
-      <Member Id="M:Microsoft.Build.Tasks.WinMDExp.ValidateParameters" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.AssemblyUnificationPolicy" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
@@ -5234,11 +5019,7 @@
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.References" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
-      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding" />
-      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding" />
-      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.ToolName" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
-      <Member Id="P:Microsoft.Build.Tasks.WinMDExp.UseNewLineSeparatorInResponseFile" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
       <Member Id="P:Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
     </Type>
@@ -5267,13 +5048,9 @@
       <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.CleanupTask(Microsoft.Build.Framework.ITask)" />
       <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.CreateTask(Microsoft.Build.Framework.IBuildEngine)" />
-      <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.GetAssemblyPath" />
       <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.GetTaskParameters" />
       <Member Id="M:Microsoft.Build.Tasks.XamlTaskFactory.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)" />
       <Member Id="P:Microsoft.Build.Tasks.XamlTaskFactory.FactoryName" />
-      <Member Id="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskElementContents" />
-      <Member Id="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskName" />
-      <Member Id="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskNamespace" />
       <Member Id="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskType" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.XmlPeek" Id="T:Microsoft.Build.Tasks.XmlPeek">
@@ -5783,16 +5560,12 @@
       <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlTlbId" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities" Id="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities">
-      <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.ComputeZonePermissionSet(System.String,System.Security.PermissionSet,System.String[])" />
-      <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.IdentityListToPermissionSet(System.String[])" />
-      <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList(System.Security.PermissionSet)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Uri,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Security.SecureString,System.Uri,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String,System.String,System.String,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.XmlToPermissionSet(System.Xml.XmlElement)" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" Id="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo">
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.#ctor" />
@@ -5809,7 +5582,6 @@
       <Member Id="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.String)" />
       <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission" />
       <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust" />
-      <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" />
       <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet" />
       <Member Id="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess" />
     </Type>
@@ -5977,83 +5749,6 @@
       <Member Id="M:Microsoft.Build.Tasks.Hosting.IVbcHostObjectFreeThreaded.Compile" />
     </Type>
   </Namespace>
-  <Namespace Name="Microsoft.Build.Tasks.Xaml">
-    <Type Name="Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation" Id="T:Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation">
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation.#ctor(System.String,System.String,System.Boolean,System.String)" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation.Separator" />
-    </Type>
-    <Type Name="Microsoft.Build.Tasks.Xaml.CommandLineGenerator" Id="T:Microsoft.Build.Tasks.Xaml.CommandLineGenerator">
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.CommandLineGenerator.#ctor(Microsoft.Build.Framework.XamlTypes.Rule,System.Collections.Generic.Dictionary{System.String,System.Object})" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.CommandLineGenerator.GenerateCommandLine" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AdditionalOptions" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AlwaysAppend" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineGenerator.CommandLineTemplate" />
-    </Type>
-    <Type Name="Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch" Id="T:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch">
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.#ctor(Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType)" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.AllowMultipleValues" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ArgumentRequired" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Arguments" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.BooleanValue" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Description" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.DisplayName" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FallbackArgumentParameter" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FalseSuffix" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IncludeInCommandLine" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IsValid" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Name" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Number" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Overrides" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Parents" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Required" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ReverseSwitchValue" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Reversible" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Separator" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.StringList" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.SwitchValue" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TaskItemArray" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TrueSuffix" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Type" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Value" />
-    </Type>
-    <Type Name="Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType" Id="T:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType">
-      <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.Boolean" />
-      <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.Integer" />
-      <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.ITaskItemArray" />
-      <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.String" />
-      <Member Id="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.StringArray" />
-    </Type>
-    <Type Name="Microsoft.Build.Tasks.Xaml.PropertyRelation" Id="T:Microsoft.Build.Tasks.Xaml.PropertyRelation">
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.PropertyRelation.#ctor" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.PropertyRelation.#ctor(System.String,System.String,System.Boolean)" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.PropertyRelation.Argument" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.PropertyRelation.Required" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.PropertyRelation.Value" />
-    </Type>
-    <Type Name="Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask" Id="T:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask">
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.#ctor(System.String[],System.Resources.ResourceManager)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AddActiveSwitchToolValue(Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CreateSwitchValue(System.String,System.String,System.String,System.Tuple{System.String,System.Boolean}[])" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.Execute" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateCommandLineCommands" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateFullPathToTool" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateResponseFileCommands" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.HandleTaskExecutionErrors" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.IsPropertySet(System.String)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReadSwitchMap(System.String,System.String[][],System.String)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReadSwitchMap2(System.String,System.Tuple{System.String,System.String,System.Tuple{System.String,System.Boolean}[]}[],System.String)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReplaceToolSwitch(Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ValidateInteger(System.String,System.Int32,System.Int32,System.Int32)" />
-      <Member Id="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ValidateParameters" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AcceptableNonZeroExitCodes" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitches" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitchesValues" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AdditionalOptions" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CommandLineTemplate" />
-      <Member Id="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ResponseFileEncoding" />
-    </Type>
-  </Namespace>
   <Namespace Name="Microsoft.Build.Utilities">
     <Type Name="Microsoft.Build.Utilities.AppDomainIsolatedTask" Id="T:Microsoft.Build.Utilities.AppDomainIsolatedTask">
       <Member Id="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor" />
@@ -6079,54 +5774,6 @@
       <Member Id="M:Microsoft.Build.Utilities.AssemblyFoldersFromConfigInfo.#ctor(System.String,System.Version)" />
       <Member Id="P:Microsoft.Build.Utilities.AssemblyFoldersFromConfigInfo.DirectoryPath" />
       <Member Id="P:Microsoft.Build.Utilities.AssemblyFoldersFromConfigInfo.TargetFrameworkVersion" />
-    </Type>
-    <Type Name="Microsoft.Build.Utilities.CanonicalTrackedInputFiles" Id="T:Microsoft.Build.Utilities.CanonicalTrackedInputFiles">
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation(System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.FileIsExcludedFromDependencyCheck(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntryForSourceRoot(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog(Microsoft.Build.Utilities.DependencyFilter)" />
-      <Member Id="P:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.DependencyTable" />
-    </Type>
-    <Type Name="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" Id="T:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles">
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputForSourceRoot(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputsForSourceRoot(System.String,Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputsForSourceRoot(System.String,System.String[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForNonCompositeSource(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForSource(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForSource(Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveOutputForSourceRoot(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveRootsWithSharedOutputs(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.SaveTlog" />
-      <Member Id="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.SaveTlog(Microsoft.Build.Utilities.DependencyFilter)" />
-      <Member Id="P:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.DependencyTable" />
     </Type>
     <Type Name="Microsoft.Build.Utilities.CommandLineBuilder" Id="T:Microsoft.Build.Utilities.CommandLineBuilder">
       <Member Id="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor" />
@@ -6156,90 +5803,10 @@
       <Member Id="P:Microsoft.Build.Utilities.CommandLineBuilder.CommandLine" />
       <Member Id="P:Microsoft.Build.Utilities.CommandLineBuilder.Length" />
     </Type>
-    <Type Name="Microsoft.Build.Utilities.DependencyFilter" Id="T:Microsoft.Build.Utilities.DependencyFilter" />
     <Type Name="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" Id="T:Microsoft.Build.Utilities.DotNetFrameworkArchitecture">
       <Member Id="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Bitness32" />
       <Member Id="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Bitness64" />
       <Member Id="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Current" />
-    </Type>
-    <Type Name="Microsoft.Build.Utilities.ExecutableType" Id="T:Microsoft.Build.Utilities.ExecutableType">
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.Managed32Bit" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.Managed64Bit" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.ManagedARM64" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.ManagedIL" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.Native32Bit" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.Native64Bit" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.NativeARM64" />
-      <Member Id="F:Microsoft.Build.Utilities.ExecutableType.SameAsCurrentProcess" />
-    </Type>
-    <Type Name="Microsoft.Build.Utilities.FileTracker" Id="T:Microsoft.Build.Utilities.FileTracker">
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.CreateRootingMarkerResponseFile(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.CreateRootingMarkerResponseFile(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.EndTrackingContext" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.EnsureFileTrackerOnPath" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.EnsureFileTrackerOnPath(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FileIsExcludedFromDependencies(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FileIsUnderPath(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FindTrackerOnPath" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.ForceOutOfProcTracking(Microsoft.Build.Utilities.ExecutableType)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.ForceOutOfProcTracking(Microsoft.Build.Utilities.ExecutableType,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.GetFileTrackerPath(Microsoft.Build.Utilities.ExecutableType)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.GetFileTrackerPath(Microsoft.Build.Utilities.ExecutableType,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.GetTrackerPath(Microsoft.Build.Utilities.ExecutableType)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.GetTrackerPath(Microsoft.Build.Utilities.ExecutableType,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.ResumeTracking" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.SetThreadCount(System.Int32)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartTrackingContext(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StartTrackingContextWithRoot(System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.StopTrackingAndCleanup" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.SuspendTracking" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.TrackerArguments(System.String,System.String,System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.TrackerArguments(System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.TrackerCommandArguments(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.TrackerResponseFileArguments(System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.TrackerResponseFileArguments(System.String,System.String,System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.WriteAllTLogs(System.String,System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FileTracker.WriteContextTLogs(System.String,System.String)" />
-    </Type>
-    <Type Name="Microsoft.Build.Utilities.FlatTrackingData" Id="T:Microsoft.Build.Utilities.FlatTrackingData">
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],System.DateTime)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],System.DateTime)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],System.DateTime,System.String[],System.Collections.Generic.IDictionary{System.String,System.DateTime})" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],System.DateTime,System.String[],System.Collections.Generic.IDictionary{System.String,System.DateTime},System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.#ctor(Microsoft.Build.Framework.ITaskItem[],System.DateTime)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.FileIsExcludedFromDependencyCheck(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.FinalizeTLogs(System.Boolean,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.GetLastWriteTimeUtc(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.IsUpToDate(Microsoft.Build.Utilities.Task,Microsoft.Build.Utilities.UpToDateCheckType,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.IsUpToDate(Microsoft.Build.Utilities.TaskLoggingHelper,Microsoft.Build.Utilities.UpToDateCheckType,Microsoft.Build.Utilities.FlatTrackingData,Microsoft.Build.Utilities.FlatTrackingData)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.SaveTlog" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.SaveTlog(Microsoft.Build.Utilities.DependencyFilter)" />
-      <Member Id="M:Microsoft.Build.Utilities.FlatTrackingData.UpdateFileEntryDetails" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.MissingFiles" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestFileName" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestFileTime" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestFileTimeUtc" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestTLogFileName" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTime" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTimeUtc" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.OldestFileName" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.OldestFileTime" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.OldestFileTimeUtc" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.SkipMissingFiles" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.TlogFiles" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.TlogsAvailable" />
-      <Member Id="P:Microsoft.Build.Utilities.FlatTrackingData.TreatRootMarkersAsEntries" />
     </Type>
     <Type Name="Microsoft.Build.Utilities.HostObjectInitializationStatus" Id="T:Microsoft.Build.Utilities.HostObjectInitializationStatus">
       <Member Id="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnFailure" />
@@ -6412,7 +5979,6 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.GetMetadata(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.TaskItem.InitializeLifetimeService" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#CloneCustomMetadataEscaped" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#GetMetadataValueEscaped(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#SetMetadataValueLiteral(System.String,System.String)" />
@@ -6433,7 +5999,6 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.FormatString(System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetInnerExceptionMessageString(System.Exception)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetResourceMessage(System.String)" />
-      <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.InitializeLifetimeService" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(Microsoft.Build.Framework.MessageImportance,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCriticalMessage(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
@@ -6473,7 +6038,6 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.Object[])" />
       <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
-      <Member Id="M:Microsoft.Build.Utilities.TaskLoggingHelper.MarkAsInactive" />
       <Member Id="P:Microsoft.Build.Utilities.TaskLoggingHelper.BuildEngine" />
       <Member Id="P:Microsoft.Build.Utilities.TaskLoggingHelper.HasLoggedErrors" />
       <Member Id="P:Microsoft.Build.Utilities.TaskLoggingHelper.HelpKeywordPrefix" />
@@ -6633,11 +6197,6 @@
     <Type Name="Microsoft.Build.Utilities.TrackedDependencies" Id="T:Microsoft.Build.Utilities.TrackedDependencies">
       <Member Id="M:Microsoft.Build.Utilities.TrackedDependencies.ExpandWildcards(Microsoft.Build.Framework.ITaskItem[])" />
     </Type>
-    <Type Name="Microsoft.Build.Utilities.UpToDateCheckType" Id="T:Microsoft.Build.Utilities.UpToDateCheckType">
-      <Member Id="F:Microsoft.Build.Utilities.UpToDateCheckType.InputNewerThanOutput" />
-      <Member Id="F:Microsoft.Build.Utilities.UpToDateCheckType.InputNewerThanTracking" />
-      <Member Id="F:Microsoft.Build.Utilities.UpToDateCheckType.InputOrOutputNewerThanTracking" />
-    </Type>
     <Type Name="Microsoft.Build.Utilities.VisualStudioVersion" Id="T:Microsoft.Build.Utilities.VisualStudioVersion">
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version100" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version110" />
@@ -6649,15 +6208,6 @@
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version180" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest" />
     </Type>
-  </Namespace>
-  <Namespace Name="Microsoft.VisualStudio.Setup.Configuration">
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" Id="T:Microsoft.VisualStudio.Setup.Configuration.IEnumSetupInstances" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.InstanceState" Id="T:Microsoft.VisualStudio.Setup.Configuration.InstanceState" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupConfiguration2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" Id="T:Microsoft.VisualStudio.Setup.Configuration.ISetupInstance2" />
-    <Type Name="Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" Id="T:Microsoft.VisualStudio.Setup.Configuration.SetupConfiguration" />
   </Namespace>
   <Namespace Name="System.Deployment.Internal.CodeSigning">
     <Type Name="System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription" Id="T:System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription">
