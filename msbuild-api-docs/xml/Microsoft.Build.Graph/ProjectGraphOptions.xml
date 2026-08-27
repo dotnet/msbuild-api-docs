@@ -1,0 +1,194 @@
+<Type Name="ProjectGraphOptions" FullName="Microsoft.Build.Graph.ProjectGraphOptions">
+  <TypeSignature Language="C#" Value="public readonly struct ProjectGraphOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ProjectGraphOptions extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Graph.ProjectGraphOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Structure ProjectGraphOptions" />
+  <TypeSignature Language="F#" Value="type ProjectGraphOptions = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class ProjectGraphOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.RequiredMember]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.RequiredMember&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents options to use when constructing a <see cref="T:Microsoft.Build.Graph.ProjectGraph" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectGraphOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Graph.ProjectGraphOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProjectGraphOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.CompilerFeatureRequired("RequiredMembers")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CompilerFeatureRequired("RequiredMembers")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>
+            Represents options to use when constructing a <see cref="T:Microsoft.Build.Graph.ProjectGraph" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DegreeOfParallelism">
+      <MemberSignature Language="C#" Value="public int DegreeOfParallelism { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DegreeOfParallelism" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.ProjectGraphOptions.DegreeOfParallelism" />
+      <MemberSignature Language="VB.NET" Value="Public Property DegreeOfParallelism As Integer" />
+      <MemberSignature Language="F#" Value="member this.DegreeOfParallelism : int with get, set" Usage="Microsoft.Build.Graph.ProjectGraphOptions.DegreeOfParallelism" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DegreeOfParallelism { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The degree of parallelism to use when constructing the graph. Defaults to the number of logical cores on the machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoints">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; EntryPoints { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; EntryPoints" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.ProjectGraphOptions.EntryPoints" />
+      <MemberSignature Language="VB.NET" Value="Public Property EntryPoints As IEnumerable(Of ProjectGraphEntryPoint)" />
+      <MemberSignature Language="F#" Value="member this.EntryPoints : seq&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt; with get, set" Usage="Microsoft.Build.Graph.ProjectGraphOptions.EntryPoints" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ EntryPoints { System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ get(); void set(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Graph::ProjectGraphEntryPoint&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.RequiredMember]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.RequiredMember&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Graph.ProjectGraphEntryPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A list of <see cref="T:Microsoft.Build.Graph.ProjectGraphEntryPoint" /> objects representing the entry points to use when constructing the graph.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.ProjectGraphMode Mode { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Graph.ProjectGraphMode Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.ProjectGraphOptions.Mode" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mode As ProjectGraphMode" />
+      <MemberSignature Language="F#" Value="member this.Mode : Microsoft.Build.Graph.ProjectGraphMode with get, set" Usage="Microsoft.Build.Graph.ProjectGraphOptions.Mode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::ProjectGraphMode Mode { Microsoft::Build::Graph::ProjectGraphMode get(); void set(Microsoft::Build::Graph::ProjectGraphMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Graph.ProjectGraphMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:Microsoft.Build.Graph.ProjectGraphMode" /> to use when constructing the graph. Defaults to <see cref="F:Microsoft.Build.Graph.ProjectGraphMode.Default" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectCollection">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectCollection ProjectCollection { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.ProjectCollection ProjectCollection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProjectCollection As ProjectCollection" />
+      <MemberSignature Language="F#" Value="member this.ProjectCollection : Microsoft.Build.Evaluation.ProjectCollection with get, set" Usage="Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Evaluation::ProjectCollection ^ ProjectCollection { Microsoft::Build::Evaluation::ProjectCollection ^ get(); void set(Microsoft::Build::Evaluation::ProjectCollection ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectCollection" /> to load projects into when constructing the graph. Defaults to <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectInstanceFactoryFunc">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc? ProjectInstanceFactoryFunc { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Graph.ProjectGraph/ProjectInstanceFactoryFunc ProjectInstanceFactoryFunc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Graph.ProjectGraphOptions.ProjectInstanceFactoryFunc" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProjectInstanceFactoryFunc As ProjectGraph.ProjectInstanceFactoryFunc" />
+      <MemberSignature Language="F#" Value="member this.ProjectInstanceFactoryFunc : Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc with get, set" Usage="Microsoft.Build.Graph.ProjectGraphOptions.ProjectInstanceFactoryFunc" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Graph::ProjectGraph::ProjectInstanceFactoryFunc ^ ProjectInstanceFactoryFunc { Microsoft::Build::Graph::ProjectGraph::ProjectInstanceFactoryFunc ^ get(); void set(Microsoft::Build::Graph::ProjectGraph::ProjectInstanceFactoryFunc ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Graph.ProjectGraph+ProjectInstanceFactoryFunc</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An optional <see cref="T:Microsoft.Build.Graph.ProjectGraph.ProjectInstanceFactoryFunc" /> to use when evaluating individual projects in the graph.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

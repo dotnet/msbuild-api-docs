@@ -21,7 +21,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17-netcore">
+    <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -52,7 +52,7 @@
       <Parameters>
         <Parameter Name="args" Type="System.String[]">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -83,7 +83,14 @@
         <ReturnType>System.ValueTuple&lt;Microsoft.Build.Framework.ILogger,Microsoft.Build.Logging.ForwardingLoggerRecord&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="args" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="args" Type="System.String[]" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-18-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="args">Command line arguments for the logger configuration. Currently, only 'tl|terminallogger', 'v|verbosity', 'tlp|terminalloggerparameters', and 'clp|consoleloggerparameters' are supported.</param>
@@ -191,7 +198,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>

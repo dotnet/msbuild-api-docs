@@ -487,6 +487,16 @@
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2026:RequiresUnreferencedCode", Justification="ClickOnce manifest generation reads and writes manifests with XmlSerializer; this task is inherently incompatible with trimming.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2026:RequiresUnreferencedCode", Justification="ClickOnce manifest generation reads and writes manifests with XmlSerializer; this task is inherently incompatible with trimming.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AotAnalysis", "IL3050:RequiresDynamicCode", Justification="ClickOnce manifest generation uses XmlSerializer and XslCompiledTransform; this task is inherently incompatible with Native AOT.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AotAnalysis", "IL3050:RequiresDynamicCode", Justification="ClickOnce manifest generation uses XmlSerializer and XslCompiledTransform; this task is inherently incompatible with Native AOT.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>

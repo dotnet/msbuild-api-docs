@@ -1,0 +1,67 @@
+<Type Name="ProjectGraphMode" FullName="Microsoft.Build.Graph.ProjectGraphMode">
+  <TypeSignature Language="C#" Value="public enum ProjectGraphMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProjectGraphMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Graph.ProjectGraphMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ProjectGraphMode" />
+  <TypeSignature Language="F#" Value="type ProjectGraphMode = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class ProjectGraphMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the mode to use when constructing a <see cref="T:Microsoft.Build.Graph.ProjectGraph" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Graph.ProjectGraphMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Graph.ProjectGraphMode.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 0" Usage="Microsoft.Build.Graph.ProjectGraphMode.Default" />
+      <MemberSignature Language="C++ CLI" Value="Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Graph.ProjectGraphMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Loads only the projects needed for a build, as specified by the entry points. This is the default mode.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Graph.ProjectGraphMode Full = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Graph.ProjectGraphMode.Full" />
+      <MemberSignature Language="VB.NET" Value="Full" />
+      <MemberSignature Language="F#" Value="Full = 1" Usage="Microsoft.Build.Graph.ProjectGraphMode.Full" />
+      <MemberSignature Language="C++ CLI" Value="Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Graph.ProjectGraphMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Loads a complete representation of the graph, even if they are not needed for the build.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

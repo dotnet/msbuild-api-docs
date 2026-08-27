@@ -18,7 +18,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17-netcore">
+    <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -68,7 +68,7 @@
       <Parameters>
         <Parameter Name="type" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -118,7 +118,7 @@
       <Parameters>
         <Parameter Name="type" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -170,7 +170,7 @@
       <Parameters>
         <Parameter Name="type" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -185,7 +185,7 @@
         <Parameter Name="endColumnNumber" Type="System.Int32" />
         <Parameter Name="message" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
             </Attribute>
@@ -200,7 +200,7 @@
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
               <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -242,7 +242,7 @@
       <Parameters>
         <Parameter Name="type" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -257,7 +257,7 @@
         <Parameter Name="endColumnNumber" Type="System.Int32" />
         <Parameter Name="message" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
             </Attribute>
@@ -267,7 +267,7 @@
         <Parameter Name="senderName" Type="System.String" />
         <Parameter Name="helpLink" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("Uri")]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("Uri")&gt;]</AttributeName>
             </Attribute>
@@ -280,7 +280,7 @@
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
               <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
-            <Attribute FrameworkAlternate="msbuild-17-netcore">
+            <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -298,8 +298,8 @@
         <param name="endColumnNumber">end column number (0 if not applicable)</param>
         <param name="message">text message</param>
         <param name="helpKeyword">help keyword </param>
-        <param name="senderName">name of event sender</param>
         <param name="helpLink">A link pointing to more information about the error </param>
+        <param name="senderName">name of event sender</param>
         <param name="eventTimestamp">Timestamp when event was created</param>
         <param name="messageArgs">message arguments</param>
         <summary>
@@ -349,7 +349,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
         </Attribute>
@@ -380,7 +380,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>

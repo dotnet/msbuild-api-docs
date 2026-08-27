@@ -82,6 +82,12 @@
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2072:UnrecognizedReflectionPattern", Justification="TaskType is a type from an assembly compiled at runtime from user-supplied source, so its constructor cannot be statically preserved; this factory is inherently incompatible with trimming.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2072:UnrecognizedReflectionPattern", Justification="TaskType is a type from an assembly compiled at runtime from user-supplied source, so its constructor cannot be statically preserved; this factory is inherently incompatible with trimming.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.ITask</ReturnType>
       </ReturnValue>
@@ -185,6 +191,16 @@
         <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2026:RequiresUnreferencedCode", Justification="RoslynCodeTaskFactory compiles and loads a task assembly at runtime and reflects over its exported types; this is inherently incompatible with trimming.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2026:RequiresUnreferencedCode", Justification="RoslynCodeTaskFactory compiles and loads a task assembly at runtime and reflects over its exported types; this is inherently incompatible with trimming.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2075:UnrecognizedReflectionPattern", Justification="The task type comes from an assembly compiled at runtime from user-supplied source, so its properties cannot be statically preserved.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("TrimAnalysis", "IL2075:UnrecognizedReflectionPattern", Justification="The task type comes from an assembly compiled at runtime from user-supplied source, so its properties cannot be statically preserved.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
