@@ -27,7 +27,15 @@
             This interface extends IBuildEngine to provide a mechanism allowing tasks to
             share data between task invocations.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>
+        In multithreaded builds, in-process thread nodes share registered task objects.
+        Tasks in different worker or TaskHost processes do not share registered task objects.
+      </para>
+      <para>
+        Registry operations are thread-safe, but registered objects must be safe for concurrent access.
+      </para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="GetRegisteredTaskObject">
@@ -89,7 +97,7 @@
         <param name="key">The key used to retrieve the object.</param>
         <param name="obj">The object to be held for later disposal.</param>
         <param name="lifetime">The lifetime of the object.</param>
-        <param name="allowEarlyCollection">The object may be disposed earlier that the requested time if
+        <param name="allowEarlyCollection">The object may be disposed earlier than the requested time if
             MSBuild needs to reclaim memory.</param>
         <summary>
             Registers an object with the system that will be disposed of at some specified time
@@ -102,6 +110,11 @@
             build.  It is strongly recommended that <paramref name="allowEarlyCollection" /> be set to true if the
             object will retain any significant amount of data, as this gives MSBuild the most flexibility to
             manage limited process memory resources.
+            </para>
+          <para>
+            In multithreaded builds, in-process thread nodes share registered task objects.
+            Tasks in different worker or TaskHost processes do not share registered task objects.
+            Registry operations are thread-safe, but registered objects must be safe for concurrent access.
             </para>
           <para>
             The thread on which the object is disposed may be arbitrary - however it is guaranteed not to
