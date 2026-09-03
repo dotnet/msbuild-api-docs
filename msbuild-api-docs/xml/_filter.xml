@@ -31,6 +31,9 @@
     <namespaceFilter name="System.Runtime.Versioning">
       <typeFilter name="*" expose="false" />
     </namespaceFilter>
+    <namespaceFilter name="Microsoft.Build.Framework">
+     <typeFilter name="OperatingSystem" expose="false" />
+    </namespaceFilter>
   </apiFilter>
   <attributeFilter apply="true">
     <!-- Most attributes in System.ComponentModel control designer behavior. Don't show them. -->
