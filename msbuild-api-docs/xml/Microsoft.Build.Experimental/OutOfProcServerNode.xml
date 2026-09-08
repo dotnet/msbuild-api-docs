@@ -14,7 +14,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
+    <Attribute FrameworkAlternate="msbuild-17-netcore">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -44,6 +44,33 @@
       <Docs>
         <param name="buildFunction">To be added.</param>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentBuildShutsDownServerNode">
+      <MemberSignature Language="C#" Value="public static bool CurrentBuildShutsDownServerNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Experimental.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CurrentBuildShutsDownServerNode As Boolean" />
+      <MemberSignature Language="F#" Value="static member CurrentBuildShutsDownServerNode : bool" Usage="Microsoft.Build.Experimental.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CurrentBuildShutsDownServerNode { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether the build currently being served by this server node will tear the node down afterward
+            instead of leaving it resident for reuse (a "short-lived" server — a <c>/mt</c> build with node reuse
+            off). Only meaningful from within a server build callback; written and read on the same build thread,
+            so no synchronization is needed. Public because MSBuild.exe reads it and Microsoft.Build exposes no
+            InternalsVisibleTo to it.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

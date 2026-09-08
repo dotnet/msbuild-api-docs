@@ -13,12 +13,6 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
-  <Attributes>
-    <Attribute FrameworkAlternate="msbuild-18-netcore">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
-    </Attribute>
-  </Attributes>
   <Docs>
     <summary>
             An abstract interface for classes that can resolve a Software Development Kit (SDK).
@@ -88,6 +82,56 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static void Register (Microsoft.Build.Framework.SdkResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Register(class Microsoft.Build.Framework.SdkResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.SdkResolver.Register(Microsoft.Build.Framework.SdkResolver)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub Register (resolver As SdkResolver)" />
+      <MemberSignature Language="F#" Value="static member Register : Microsoft.Build.Framework.SdkResolver -&gt; unit" Usage="Microsoft.Build.Framework.SdkResolver.Register resolver" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void Register(Microsoft::Build::Framework::SdkResolver ^ resolver);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.Build.Framework.SdkResolver" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">The resolver instance to register.</param>
+        <summary>
+            Registers an <see cref="T:Microsoft.Build.Framework.SdkResolver" /> to be consulted during SDK resolution by a host that runs
+            the MSBuild engine in-process (for example the .NET SDK CLI), without MSBuild discovering and
+            loading it from disk by reflection.
+            </summary>
+        <remarks>
+          <para>
+            This is the supported way to provide SDK resolvers in a trimmed or Native AOT host, where the
+            on-disk <c>SdkResolvers</c> probing and reflection-based loading used for plugin resolvers are
+            unavailable. The registered resolver is consulted on the same reflection-free code path as
+            MSBuild's built-in resolver, so it never triggers the dynamic-loading failure (MSB4282).
+            </para>
+          <para>
+            The registered resolver participates in resolution in <see cref="P:Microsoft.Build.Framework.SdkResolver.Priority" /> order alongside
+            MSBuild's built-in resolver, with no assembly loading or reflection. It is consulted for every
+            SDK reference in the process.
+            </para>
+          <para>
+            Intended to be called once per resolver during host initialization, before the first project is
+            evaluated. The set of registered resolvers is captured the first time an SDK is resolved in the
+            process; registrations performed after that point are not guaranteed to take effect.
+            </para>
+          <para>
+            This method is thread-safe. Registering the same instance more than once has no additional effect.
+            </para>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resolver" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="Resolve">

@@ -1,0 +1,55 @@
+<Type Name="BuiltInTasks" FullName="Microsoft.Build.Tasks.BuiltInTasks">
+  <TypeSignature Language="C#" Value="public static class BuiltInTasks" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BuiltInTasks extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.BuiltInTasks" />
+  <TypeSignature Language="VB.NET" Value="Public Class BuiltInTasks" />
+  <TypeSignature Language="F#" Value="type BuiltInTasks = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BuiltInTasks abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Pre-registers the commonly used built-in MSBuild tasks with the host task registry so they run with
+            no assembly loading or reflection - the path required in a trimmed or Native AOT host.
+            </summary>
+    <remarks>
+            The MSBuild engine (Microsoft.Build) cannot reference this task assembly
+            (Microsoft.Build.Tasks.Core), so these registrations are published from here. A host that runs the
+            engine in-process under trimming/AOT calls <see cref="M:Microsoft.Build.Tasks.BuiltInTasks.RegisterAll" /> once at startup, before its
+            first build, after which a stock build can run these tasks with the reflective task-execution path
+            disabled. Each registration roots the task type's public constructor and properties for trimming, so
+            construction and parameter binding stay trim-safe.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterAll">
+      <MemberSignature Language="C#" Value="public static void RegisterAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.BuiltInTasks.RegisterAll" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterAll ()" />
+      <MemberSignature Language="F#" Value="static member RegisterAll : unit -&gt; unit" Usage="Microsoft.Build.Tasks.BuiltInTasks.RegisterAll " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RegisterAll();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Registers the commonly used built-in tasks with the host task registry.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

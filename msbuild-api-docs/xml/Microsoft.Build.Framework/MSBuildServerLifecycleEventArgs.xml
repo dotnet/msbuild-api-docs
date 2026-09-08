@@ -1,0 +1,181 @@
+<Type Name="MSBuildServerLifecycleEventArgs" FullName="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class MSBuildServerLifecycleEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MSBuildServerLifecycleEventArgs extends Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MSBuildServerLifecycleEventArgs&#xA;Inherits BuildMessageEventArgs" />
+  <TypeSignature Language="F#" Value="type MSBuildServerLifecycleEventArgs = class&#xA;    inherit BuildMessageEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildServerLifecycleEventArgs sealed : Microsoft::Build::Framework::BuildMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildMessageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Records how a build related to the MSBuild Server node (spawned, reused, or requested but not used).
+            This is a dedicated, versionable event type rather than an ad-hoc message so that tooling can recognize
+            and render it structurally. It is written to the binary log under its own record kind; forward-compatible
+            binary-log readers that predate the record kind skip it via the length-prefixed record framing.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildServerLifecycleEventArgs (Microsoft.Build.Framework.MSBuildServerLifecycleKind kind, int processId, string? reason, string? reasonCode, string? message, Microsoft.Build.Framework.MessageImportance importance = Microsoft.Build.Framework.MessageImportance.Low, bool shortLived = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Framework.MSBuildServerLifecycleKind kind, int32 processId, string reason, string reasonCode, string message, valuetype Microsoft.Build.Framework.MessageImportance importance, bool shortLived) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.#ctor(Microsoft.Build.Framework.MSBuildServerLifecycleKind,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (kind As MSBuildServerLifecycleKind, processId As Integer, reason As String, reasonCode As String, message As String, Optional importance As MessageImportance = Microsoft.Build.Framework.MessageImportance.Low, Optional shortLived As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs : Microsoft.Build.Framework.MSBuildServerLifecycleKind * int * string * string * string * Microsoft.Build.Framework.MessageImportance * bool -&gt; Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs" Usage="new Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs (kind, processId, reason, reasonCode, message, importance, shortLived)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.Build.Framework.MSBuildServerLifecycleKind" />
+        <Parameter Name="processId" Type="System.Int32" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="reasonCode" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="shortLived" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="kind">How the build related to the MSBuild Server node.</param>
+        <param name="processId">The MSBuild Server node's process id (0 when not applicable, e.g. for <see cref="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />).</param>
+        <param name="reason">A localized, human-readable reason the server was not used (for <see cref="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />); otherwise <see langword="null" />.</param>
+        <param name="reasonCode">A stable, non-localized code for the fall-back cause (for <see cref="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />); otherwise <see langword="null" />.</param>
+        <param name="message">The localized, human-readable message describing the event.</param>
+        <param name="importance">The importance of the message.</param>
+        <param name="shortLived">
+          <see langword="true" /> when a spawned server will shut down after this build
+            instead of staying resident for reuse (a "short-lived" server).</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.MSBuildServerLifecycleKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MSBuildServerLifecycleKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As MSBuildServerLifecycleKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.Build.Framework.MSBuildServerLifecycleKind" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Kind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::MSBuildServerLifecycleKind Kind { Microsoft::Build::Framework::MSBuildServerLifecycleKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MSBuildServerLifecycleKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            How the build related to the MSBuild Server node.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public int ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProcessId As Integer" />
+      <MemberSignature Language="F#" Value="member this.ProcessId : int" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ProcessId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ProcessId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The MSBuild Server node's process id, or 0 when not applicable.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string? Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As String" />
+      <MemberSignature Language="F#" Value="member this.Reason : string" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Reason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Reason { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A localized, human-readable reason the server was not used (for
+            <see cref="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />); otherwise <see langword="null" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReasonCode">
+      <MemberSignature Language="C#" Value="public string? ReasonCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReasonCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ReasonCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReasonCode As String" />
+      <MemberSignature Language="F#" Value="member this.ReasonCode : string" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ReasonCode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ReasonCode { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A stable, non-localized code identifying the fall-back cause (for
+            <see cref="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />); otherwise <see langword="null" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortLived">
+      <MemberSignature Language="C#" Value="public bool ShortLived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShortLived" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ShortLived" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ShortLived As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShortLived : bool" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ShortLived" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShortLived { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="true" /> when a spawned server node will tear itself down after this build instead of
+            staying resident for reuse (a "short-lived" server — a <c>/mt</c> build with node reuse off).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
