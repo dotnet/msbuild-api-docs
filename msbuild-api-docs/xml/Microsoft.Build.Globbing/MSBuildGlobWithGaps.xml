@@ -17,6 +17,12 @@
       <InterfaceName>Microsoft.Build.Globbing.IMSBuildGlob</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
                 A glob with gaps. The gaps are represented as other globs.
