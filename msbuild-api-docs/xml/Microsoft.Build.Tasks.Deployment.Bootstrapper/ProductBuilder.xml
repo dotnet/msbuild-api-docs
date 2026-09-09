@@ -29,6 +29,12 @@
       <InterfaceName>Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilder</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             A buildable version of a Product.  Used for the BootstrapperBuilder's Build method.</summary>

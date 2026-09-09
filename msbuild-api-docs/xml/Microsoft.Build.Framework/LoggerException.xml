@@ -27,6 +27,10 @@
       <AttributeName Language="C#">[System.Serializable]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
     </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>
@@ -142,7 +146,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Obsolete(DiagnosticId="SYSLIB0051")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete(DiagnosticId="SYSLIB0051")&gt;]</AttributeName>
         </Attribute>
@@ -307,7 +311,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Obsolete(DiagnosticId="SYSLIB0051")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete(DiagnosticId="SYSLIB0051")&gt;]</AttributeName>
         </Attribute>
@@ -379,7 +383,14 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="state" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="state" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-17;msbuild-17-netcore;msbuild-18;msbuild-18-netcore">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-18-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="state">To be added.</param>

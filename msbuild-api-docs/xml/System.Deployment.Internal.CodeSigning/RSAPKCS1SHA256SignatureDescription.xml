@@ -21,6 +21,12 @@
     <BaseTypeName>System.Security.Cryptography.SignatureDescription</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Creates <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureFormatter" /> and <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureDeformatter" /> objects.</summary>
     <remarks>To be added.</remarks>
@@ -73,6 +79,12 @@
         <AssemblyName>System.Deployment</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("CreateDeformatter resolves the deformatter algorithm by name via reflection; matches the base SignatureDescription.CreateDeformatter requirement.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("CreateDeformatter resolves the deformatter algorithm by name via reflection; matches the base SignatureDescription.CreateDeformatter requirement.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.AsymmetricSignatureDeformatter</ReturnType>
       </ReturnValue>
@@ -107,6 +119,12 @@
         <AssemblyName>System.Deployment</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("CreateFormatter resolves the formatter algorithm by name via reflection; matches the base SignatureDescription.CreateFormatter requirement.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("CreateFormatter resolves the formatter algorithm by name via reflection; matches the base SignatureDescription.CreateFormatter requirement.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.AsymmetricSignatureFormatter</ReturnType>
       </ReturnValue>

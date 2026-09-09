@@ -34,7 +34,7 @@
       <AttributeName Language="C#">[Microsoft.Build.Framework.LoadInSeparateAppDomain]</AttributeName>
       <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.LoadInSeparateAppDomain&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="msbuild-17-netcore">
+    <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
       <AttributeName Language="C#">[System.Obsolete("AppDomains are no longer supported in .NET Core or .NET 5.0 or higher.")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("AppDomains are no longer supported in .NET Core or .NET 5.0 or higher.")&gt;]</AttributeName>
     </Attribute>
@@ -391,7 +391,7 @@
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="msbuild-17-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
           <AttributeName Language="C#">[System.Obsolete("AppDomains are no longer supported in .NET Core or .NET 5.0 or higher.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("AppDomains are no longer supported in .NET Core or .NET 5.0 or higher.")&gt;]</AttributeName>
         </Attribute>
