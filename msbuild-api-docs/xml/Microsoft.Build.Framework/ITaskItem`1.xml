@@ -1,0 +1,72 @@
+<Type Name="ITaskItem&lt;T&gt;" FullName="Microsoft.Build.Framework.ITaskItem&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface ITaskItem&lt;T&gt; : Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ITaskItem`1&lt;T&gt; implements class Microsoft.Build.Framework.ITaskItem, class Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ITaskItem`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITaskItem(Of T)&#xA;Implements ITaskItem2" />
+  <TypeSignature Language="F#" Value="type ITaskItem&lt;'T&gt; = interface&#xA;    interface ITaskItem2&#xA;    interface ITaskItem" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public interface class ITaskItem : Microsoft::Build::Framework::ITaskItem2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskItem</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskItem2</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of the value. Supported types are <see cref="T:Microsoft.Build.Framework.AbsolutePath" />, <see cref="T:System.IO.FileInfo" />, and <see cref="T:System.IO.DirectoryInfo" />.</typeparam>
+    <summary>
+            A strongly-typed task item interface that wraps a value of type <typeparamref name="T" />
+            and provides access to it along with standard task item functionality.
+            </summary>
+    <remarks>
+            This interface allows tasks to receive strongly-typed item parameters while still working with MSBuild's item system.
+            The value is parsed from the item's identity (ItemSpec) using MSBuild's standard parsing conventions.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITaskItem`1.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As T" />
+      <MemberSignature Language="F#" Value="member this.Value : 'T" Usage="Microsoft.Build.Framework.ITaskItem&lt;'T&gt;.Value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property T Value { T get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the strongly-typed value parsed from the item's identity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

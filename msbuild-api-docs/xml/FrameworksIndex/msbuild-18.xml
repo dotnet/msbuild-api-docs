@@ -887,6 +887,7 @@
       <Member Id="M:Microsoft.Build.Definition.ProjectOptions.#ctor" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.DirectoryCacheFactory" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.EvaluationContext" />
+      <Member Id="P:Microsoft.Build.Definition.ProjectOptions.EvaluationStage" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.Interactive" />
       <Member Id="P:Microsoft.Build.Definition.ProjectOptions.LoadSettings" />
@@ -1128,6 +1129,13 @@
       <Member Id="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.SkipEvaluation" />
       <Member Id="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.Toolsets" />
     </Type>
+    <Type Name="Microsoft.Build.Evaluation.ProjectEvaluationStage" Id="T:Microsoft.Build.Evaluation.ProjectEvaluationStage">
+      <Member Id="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Full" />
+      <Member Id="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.ItemDefinitions" />
+      <Member Id="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Items" />
+      <Member Id="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Properties" />
+      <Member Id="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.UsingTasks" />
+    </Type>
     <Type Name="Microsoft.Build.Evaluation.ProjectItem" Id="T:Microsoft.Build.Evaluation.ProjectItem">
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadata(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue(System.String)" />
@@ -1326,6 +1334,7 @@
       <Member Id="P:Microsoft.Build.Execution.BuildManager.DefaultBuildManager" />
     </Type>
     <Type Name="Microsoft.Build.Execution.BuildManager/DeferredBuildMessage" Id="T:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage">
+      <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(Microsoft.Build.Framework.BuildEventArgs)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance,System.String)" />
       <Member Id="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,System.String,Microsoft.Build.Execution.BuildManager.DeferredBuildMessageSeverity)" />
@@ -1581,6 +1590,7 @@
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.Directory" />
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.EvaluatedItemElements" />
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.EvaluationId" />
+      <Member Id="P:Microsoft.Build.Execution.ProjectInstance.EvaluationStage" />
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.FullPath" />
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.GlobalProperties" />
       <Member Id="P:Microsoft.Build.Execution.ProjectInstance.ImportPaths" />
@@ -1974,12 +1984,15 @@
     </Type>
     <Type Name="Microsoft.Build.Experimental.FileAccess.FileAccessData" Id="T:Microsoft.Build.Experimental.FileAccess.FileAccessData">
       <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Experimental.FileAccess.FileAccessData.#ctor(Microsoft.Build.Experimental.FileAccess.ReportedFileOperation,Microsoft.Build.Experimental.FileAccess.RequestedAccess,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Build.Experimental.FileAccess.DesiredAccess,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes,System.String,System.String,System.Boolean,System.String,Microsoft.Build.Experimental.FileAccess.FlagsAndAttributes)" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.CorrelationId" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.DesiredAccess" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.EnumeratePattern" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Error" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.FlagsAndAttributes" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Id" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.IsAnAugmentedFileAccess" />
+      <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.OpenedFileOrDirectoryAttributes" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Operation" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.Path" />
       <Member Id="P:Microsoft.Build.Experimental.FileAccess.FileAccessData.ProcessArgs" />
@@ -2101,6 +2114,7 @@
     <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
     </Type>
@@ -2121,6 +2135,7 @@
     <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode">
       <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
       <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.Run(System.Exception@)" />
+      <Member Id="P:Microsoft.Build.Experimental.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
     </Type>
     <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode/BuildCallback" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback" />
   </Namespace>
@@ -2651,6 +2666,9 @@
       <Member Id="P:Microsoft.Build.Framework.ITaskItem.MetadataCount" />
       <Member Id="P:Microsoft.Build.Framework.ITaskItem.MetadataNames" />
     </Type>
+    <Type Name="Microsoft.Build.Framework.ITaskItem`1" Id="T:Microsoft.Build.Framework.ITaskItem`1">
+      <Member Id="P:Microsoft.Build.Framework.ITaskItem`1.Value" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.ITaskItem2" Id="T:Microsoft.Build.Framework.ITaskItem2">
       <Member Id="M:Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped" />
       <Member Id="M:Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped(System.String)" />
@@ -2706,6 +2724,19 @@
     </Type>
     <Type Name="Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute" Id="T:Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute">
       <Member Id="M:Microsoft.Build.Framework.MSBuildMultiThreadableTaskAttribute.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs" Id="T:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.#ctor(Microsoft.Build.Framework.MSBuildServerLifecycleKind,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.Boolean)" />
+      <Member Id="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Kind" />
+      <Member Id="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ProcessId" />
+      <Member Id="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.Reason" />
+      <Member Id="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ReasonCode" />
+      <Member Id="P:Microsoft.Build.Framework.MSBuildServerLifecycleEventArgs.ShortLived" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.MSBuildServerLifecycleKind" Id="T:Microsoft.Build.Framework.MSBuildServerLifecycleKind">
+      <Member Id="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />
+      <Member Id="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.Reused" />
+      <Member Id="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.Spawned" />
     </Type>
     <Type Name="Microsoft.Build.Framework.OutputAttribute" Id="T:Microsoft.Build.Framework.OutputAttribute">
       <Member Id="M:Microsoft.Build.Framework.OutputAttribute.#ctor" />
@@ -2836,6 +2867,7 @@
     </Type>
     <Type Name="Microsoft.Build.Framework.SdkResolver" Id="T:Microsoft.Build.Framework.SdkResolver">
       <Member Id="M:Microsoft.Build.Framework.SdkResolver.#ctor" />
+      <Member Id="M:Microsoft.Build.Framework.SdkResolver.Register(Microsoft.Build.Framework.SdkResolver)" />
       <Member Id="M:Microsoft.Build.Framework.SdkResolver.Resolve(Microsoft.Build.Framework.SdkReference,Microsoft.Build.Framework.SdkResolverContext,Microsoft.Build.Framework.SdkResultFactory)" />
       <Member Id="P:Microsoft.Build.Framework.SdkResolver.Name" />
       <Member Id="P:Microsoft.Build.Framework.SdkResolver.Priority" />
@@ -2972,6 +3004,31 @@
       <Member Id="P:Microsoft.Build.Framework.TaskHostParameters.MSBuildAssemblyPath" />
       <Member Id="P:Microsoft.Build.Framework.TaskHostParameters.Runtime" />
       <Member Id="P:Microsoft.Build.Framework.TaskHostParameters.TaskHostFactoryExplicitlyRequested" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.TaskItem`1" Id="T:Microsoft.Build.Framework.TaskItem`1">
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.#ctor(`0)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.#ctor(Microsoft.Build.Framework.ITaskItem)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.CloneCustomMetadata" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.CloneCustomMetadataEscaped" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.Equals(Microsoft.Build.Framework.TaskItem{`0})" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.GetHashCode" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.GetMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.GetMetadataValueEscaped(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.op_Equality(Microsoft.Build.Framework.TaskItem{`0},Microsoft.Build.Framework.TaskItem{`0})" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.op_Implicit(`0)~Microsoft.Build.Framework.TaskItem{`0}" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.op_Implicit(Microsoft.Build.Framework.TaskItem{`0})~`0" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.op_Inequality(Microsoft.Build.Framework.TaskItem{`0},Microsoft.Build.Framework.TaskItem{`0})" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.RemoveMetadata(System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.SetMetadata(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.SetMetadataValueLiteral(System.String,System.String)" />
+      <Member Id="M:Microsoft.Build.Framework.TaskItem`1.ToString" />
+      <Member Id="P:Microsoft.Build.Framework.TaskItem`1.EvaluatedIncludeEscaped" />
+      <Member Id="P:Microsoft.Build.Framework.TaskItem`1.ItemSpec" />
+      <Member Id="P:Microsoft.Build.Framework.TaskItem`1.MetadataCount" />
+      <Member Id="P:Microsoft.Build.Framework.TaskItem`1.MetadataNames" />
+      <Member Id="P:Microsoft.Build.Framework.TaskItem`1.Value" />
     </Type>
     <Type Name="Microsoft.Build.Framework.TaskParameterEventArgs" Id="T:Microsoft.Build.Framework.TaskParameterEventArgs">
       <Member Id="M:Microsoft.Build.Framework.TaskParameterEventArgs.#ctor(Microsoft.Build.Framework.TaskParameterMessageKind,System.String,System.Collections.IList,System.Boolean,System.DateTime)" />
@@ -3544,6 +3601,7 @@
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Error" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.LoggersRegistered" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.Message" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.MSBuildServerLifecycle" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.NameValueList" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationFinished" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.ProjectEvaluationStarted" />
@@ -4268,6 +4326,9 @@
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.Files" />
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.RootFolder" />
       <Member Id="P:Microsoft.Build.Tasks.AssignTargetPath.TaskEnvironment" />
+    </Type>
+    <Type Name="Microsoft.Build.Tasks.BuiltInTasks" Id="T:Microsoft.Build.Tasks.BuiltInTasks">
+      <Member Id="M:Microsoft.Build.Tasks.BuiltInTasks.RegisterAll" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.CallTarget" Id="T:Microsoft.Build.Tasks.CallTarget">
       <Member Id="M:Microsoft.Build.Tasks.CallTarget.#ctor" />
@@ -5045,6 +5106,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedThumbprint" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveKeySource.ShowImportDialogDespitePreviousFailures" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveKeySource.SuppressAutoClosePasswordPrompt" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveKeySource.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveManifestFiles" Id="T:Microsoft.Build.Tasks.ResolveManifestFiles">
       <Member Id="M:Microsoft.Build.Tasks.ResolveManifestFiles.#ctor" />
@@ -6423,6 +6485,9 @@
       <Member Id="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager)" />
       <Member Id="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.Task.Execute" />
+      <Member Id="M:Microsoft.Build.Utilities.Task.RegisterTask(System.String,System.Func{Microsoft.Build.Framework.ITask})" />
+      <Member Id="M:Microsoft.Build.Utilities.Task.RegisterTask``1" />
+      <Member Id="M:Microsoft.Build.Utilities.Task.RegisterTask``1(System.Func{Microsoft.Build.Framework.TaskEnvironment,``0})" />
       <Member Id="P:Microsoft.Build.Utilities.Task.BuildEngine" />
       <Member Id="P:Microsoft.Build.Utilities.Task.BuildEngine2" />
       <Member Id="P:Microsoft.Build.Utilities.Task.BuildEngine3" />
@@ -6451,6 +6516,8 @@
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#GetMetadataValueEscaped(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#SetMetadataValueLiteral(System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.op_Explicit(Microsoft.Build.Utilities.TaskItem)~System.String" />
+      <Member Id="M:Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterItemType``1" />
+      <Member Id="M:Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterValueType``1" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.RemoveMetadata(System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.SetMetadata(System.String,System.String)" />
       <Member Id="M:Microsoft.Build.Utilities.TaskItem.ToString" />

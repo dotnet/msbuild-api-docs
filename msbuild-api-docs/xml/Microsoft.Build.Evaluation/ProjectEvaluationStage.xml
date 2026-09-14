@@ -1,0 +1,154 @@
+<Type Name="ProjectEvaluationStage" FullName="Microsoft.Build.Evaluation.ProjectEvaluationStage">
+  <TypeSignature Language="C#" Value="public enum ProjectEvaluationStage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProjectEvaluationStage extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectEvaluationStage" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ProjectEvaluationStage" />
+  <TypeSignature Language="F#" Value="type ProjectEvaluationStage = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class ProjectEvaluationStage" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Specifies how far project evaluation should proceed.
+            </summary>
+    <remarks>
+      <para>
+            MSBuild evaluation runs a fixed sequence of passes. Callers that only need data produced by
+            an early pass (for example, a property value) can request a partial evaluation that stops
+            after that pass, avoiding the cost of the later passes (item globbing, using-tasks, and
+            target registration).
+            </para>
+      <para>
+            The values are ordered by how much of evaluation is performed. A larger value performs strictly
+            more work than a smaller one. The default is <see cref="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Full" />, which preserves the historical
+            behavior of running every pass.
+            </para>
+      <para>
+            Reading state that a partial evaluation did not produce (for example, reading items after
+            stopping at <see cref="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Properties" />) throws <see cref="T:System.InvalidOperationException" />.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectEvaluationStage Full = int32(2147483647)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Full" />
+      <MemberSignature Language="VB.NET" Value="Full" />
+      <MemberSignature Language="F#" Value="Full = 2147483647" Usage="Microsoft.Build.Evaluation.ProjectEvaluationStage.Full" />
+      <MemberSignature Language="C++ CLI" Value="Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectEvaluationStage</ReturnType>
+      </ReturnValue>
+      <MemberValue>2147483647</MemberValue>
+      <Docs>
+        <summary>
+            Perform a complete evaluation, including target registration (pass 5). This is the default.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDefinitions">
+      <MemberSignature Language="C#" Value="ItemDefinitions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectEvaluationStage ItemDefinitions = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.ItemDefinitions" />
+      <MemberSignature Language="VB.NET" Value="ItemDefinitions" />
+      <MemberSignature Language="F#" Value="ItemDefinitions = 2" Usage="Microsoft.Build.Evaluation.ProjectEvaluationStage.ItemDefinitions" />
+      <MemberSignature Language="C++ CLI" Value="ItemDefinitions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectEvaluationStage</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Evaluate through item definitions (pass 2), then stop. Includes everything from
+            <see cref="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Properties" />. Items, using-tasks, and targets are not available.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="Items" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectEvaluationStage Items = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Items" />
+      <MemberSignature Language="VB.NET" Value="Items" />
+      <MemberSignature Language="F#" Value="Items = 3" Usage="Microsoft.Build.Evaluation.ProjectEvaluationStage.Items" />
+      <MemberSignature Language="C++ CLI" Value="Items" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectEvaluationStage</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Evaluate through items (passes 3 and 3.1), then stop. Includes everything from
+            <see cref="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.ItemDefinitions" />. Using-tasks and targets are not available.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="Properties" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectEvaluationStage Properties = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Properties" />
+      <MemberSignature Language="VB.NET" Value="Properties" />
+      <MemberSignature Language="F#" Value="Properties = 1" Usage="Microsoft.Build.Evaluation.ProjectEvaluationStage.Properties" />
+      <MemberSignature Language="C++ CLI" Value="Properties" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectEvaluationStage</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Evaluate initial properties, properties, and imports (passes 0 and 1), then stop.
+            Property values are final and equivalent to a full evaluation. Items, item definitions,
+            using-tasks, and targets are not available.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingTasks">
+      <MemberSignature Language="C#" Value="UsingTasks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Evaluation.ProjectEvaluationStage UsingTasks = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.UsingTasks" />
+      <MemberSignature Language="VB.NET" Value="UsingTasks" />
+      <MemberSignature Language="F#" Value="UsingTasks = 4" Usage="Microsoft.Build.Evaluation.ProjectEvaluationStage.UsingTasks" />
+      <MemberSignature Language="C++ CLI" Value="UsingTasks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectEvaluationStage</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Evaluate through using-tasks (pass 4), then stop. Includes everything from
+            <see cref="F:Microsoft.Build.Evaluation.ProjectEvaluationStage.Items" />. Targets are not available.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

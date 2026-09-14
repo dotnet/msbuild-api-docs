@@ -31,6 +31,33 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeferredBuildMessage (Microsoft.Build.Framework.BuildEventArgs buildEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.BuildEventArgs buildEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(Microsoft.Build.Framework.BuildEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buildEvent As BuildEventArgs)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage : Microsoft.Build.Framework.BuildEventArgs -&gt; Microsoft.Build.Execution.BuildManager.DeferredBuildMessage" Usage="new Microsoft.Build.Execution.BuildManager.DeferredBuildMessage buildEvent" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DeferredBuildMessage(Microsoft::Build::Framework::BuildEventArgs ^ buildEvent);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildEvent" Type="Microsoft.Build.Framework.BuildEventArgs" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="buildEvent">The pre-built event to raise.</param>
+        <summary>
+            Creates a deferred message backed by a pre-built <see cref="T:Microsoft.Build.Framework.BuildEventArgs" />. When the build
+            begins the event is raised as-is (via <see cref="M:Microsoft.Build.BackEnd.Logging.ILoggingService.LogBuildEvent(Microsoft.Build.Framework.BuildEventArgs)" />), letting a
+            caller emit a dedicated, structured event type instead of an ad-hoc comment. <see cref="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Text" />
+            mirrors the event's message and <see cref="P:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.Importance" /> is taken from the event when it is a
+            <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" /> (otherwise <see cref="F:Microsoft.Build.Framework.MessageImportance.Low" />).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DeferredBuildMessage (string text, Microsoft.Build.Framework.MessageImportance importance);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildManager.DeferredBuildMessage.#ctor(System.String,Microsoft.Build.Framework.MessageImportance)" />
@@ -117,12 +144,6 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute FrameworkAlternate="msbuild-18-netcore">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -147,7 +168,7 @@
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="msbuild-17-netcore;msbuild-18-netcore">
+        <Attribute FrameworkAlternate="msbuild-17-netcore">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -215,6 +236,12 @@
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>15.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>

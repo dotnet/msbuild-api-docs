@@ -1,0 +1,89 @@
+<Type Name="MSBuildServerLifecycleKind" FullName="Microsoft.Build.Framework.MSBuildServerLifecycleKind">
+  <TypeSignature Language="C#" Value="public enum MSBuildServerLifecycleKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MSBuildServerLifecycleKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.MSBuildServerLifecycleKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MSBuildServerLifecycleKind" />
+  <TypeSignature Language="F#" Value="type MSBuildServerLifecycleKind = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class MSBuildServerLifecycleKind" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Identifies how a build related to the MSBuild Server node.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NotUsed">
+      <MemberSignature Language="C#" Value="NotUsed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MSBuildServerLifecycleKind NotUsed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />
+      <MemberSignature Language="VB.NET" Value="NotUsed" />
+      <MemberSignature Language="F#" Value="NotUsed = 2" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleKind.NotUsed" />
+      <MemberSignature Language="C++ CLI" Value="NotUsed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MSBuildServerLifecycleKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            MSBuild Server was requested but not used; the build ran in-process instead.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reused">
+      <MemberSignature Language="C#" Value="Reused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MSBuildServerLifecycleKind Reused = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.Reused" />
+      <MemberSignature Language="VB.NET" Value="Reused" />
+      <MemberSignature Language="F#" Value="Reused = 1" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleKind.Reused" />
+      <MemberSignature Language="C++ CLI" Value="Reused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MSBuildServerLifecycleKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            An already-running MSBuild Server node was reused for this build.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Spawned">
+      <MemberSignature Language="C#" Value="Spawned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MSBuildServerLifecycleKind Spawned = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MSBuildServerLifecycleKind.Spawned" />
+      <MemberSignature Language="VB.NET" Value="Spawned" />
+      <MemberSignature Language="F#" Value="Spawned = 0" Usage="Microsoft.Build.Framework.MSBuildServerLifecycleKind.Spawned" />
+      <MemberSignature Language="C++ CLI" Value="Spawned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MSBuildServerLifecycleKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            A fresh MSBuild Server node was spawned to serve this build.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

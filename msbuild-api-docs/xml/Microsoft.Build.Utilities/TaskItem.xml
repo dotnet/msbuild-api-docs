@@ -750,6 +750,107 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="RegisterTaskParameterItemType&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void RegisterTaskParameterItemType&lt;T&gt; () where T : Microsoft.Build.Framework.ITaskItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterTaskParameterItemType&lt;(class Microsoft.Build.Framework.ITaskItem) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterItemType``1" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterTaskParameterItemType(Of T As ITaskItem) ()" />
+      <MemberSignature Language="F#" Value="static member RegisterTaskParameterItemType : unit -&gt; unit (requires 'T :&gt; Microsoft.Build.Framework.ITaskItem)" Usage="Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterItemType " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; where T : Microsoft::Build::Framework::ITaskItem static void RegisterTaskParameterItemType();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>Microsoft.Build.Framework.ITaskItem</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">
+            The <see cref="T:Microsoft.Build.Framework.ITaskItem" /> type to register. The type and its array form (<c>T[]</c>) both become
+            resolvable. Item-typed parameters are validated by assignability, not member-reflected, so the
+            type reference alone is preserved (no member rooting is required).
+            </typeparam>
+        <summary>
+            Registers an <see cref="T:Microsoft.Build.Framework.ITaskItem" /> type so it can be used as a task parameter type (the
+            <c>ParameterType</c> of a <c>&lt;UsingTask&gt;</c><c>&lt;ParameterGroup&gt;</c> parameter) in a
+            trimmed or Native AOT host, where resolving the type from its declared name by reflection is
+            unavailable.
+            </summary>
+        <remarks>
+          <para>
+            The MSBuild <see cref="T:Microsoft.Build.Framework.ITaskItem" /> types are already registered; call this only for an additional
+            item type a host uses as a task parameter type.
+            </para>
+          <para>
+            Intended to be called once per type during host initialization, before the first project is
+            evaluated. This method is thread-safe and idempotent.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTaskParameterValueType&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void RegisterTaskParameterValueType&lt;T&gt; () where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterTaskParameterValueType&lt;struct .ctor (class System.ValueType) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterValueType``1" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterTaskParameterValueType(Of T As Structure) ()" />
+      <MemberSignature Language="F#" Value="static member RegisterTaskParameterValueType : unit -&gt; unit (requires 'T : struct)" Usage="Microsoft.Build.Utilities.TaskItem.RegisterTaskParameterValueType " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; where T : value class static void RegisterTaskParameterValueType();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-18-netcore">
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">
+            The value type to register. Enums and user-defined structs are permitted. The type and its array
+            form (<c>T[]</c>) both become resolvable, and the type is rooted so a trimmer preserves it.
+            </typeparam>
+        <summary>
+            Registers a value type so it can be used as a task parameter type (the <c>ParameterType</c> of a
+            <c>&lt;UsingTask&gt;</c><c>&lt;ParameterGroup&gt;</c> parameter) in a trimmed or Native AOT host,
+            where resolving the type from its declared name by reflection is unavailable.
+            </summary>
+        <remarks>
+          <para>
+            The MSBuild intrinsic value types (<see cref="T:System.Boolean" />, <see cref="T:System.Int32" />, <see cref="T:System.DateTime" />,
+            and so on), <see cref="T:System.String" />, and the MSBuild <see cref="T:Microsoft.Build.Framework.ITaskItem" /> types are already
+            registered; call this only for an additional value type a host uses as a task parameter type.
+            </para>
+          <para>
+            Intended to be called once per type during host initialization, before the first project is
+            evaluated. This method is thread-safe and idempotent.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RemoveMetadata">
       <MemberSignature Language="C#" Value="public void RemoveMetadata (string metadataName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveMetadata(string metadataName) cil managed" />
