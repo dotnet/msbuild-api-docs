@@ -1,0 +1,132 @@
+<Type Name="MSBuildClientExitResult" FullName="Microsoft.Build.Server.MSBuildClientExitResult">
+  <TypeSignature Language="C#" Value="public sealed class MSBuildClientExitResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MSBuildClientExitResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Server.MSBuildClientExitResult" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MSBuildClientExitResult" />
+  <TypeSignature Language="F#" Value="type MSBuildClientExitResult = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MSBuildClientExitResult sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes how an <see cref="T:Microsoft.Build.Server.MSBuildClient" /> execution finished, and — when the build ran on
+            the server — the exit type the build itself produced.
+            </summary>
+    <remarks>
+            This type is public only so that the MSBuild command-line application can host the MSBuild server;
+            third-party use is not expected or supported. The server APIs only work to wrap the MSBuild CLI,
+            so invoke the CLI instead.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuildClientExitResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Server.MSBuildClientExitResult.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MSBuildClientExitResult();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildAppExitTypeString">
+      <MemberSignature Language="C#" Value="public string? MSBuildAppExitTypeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildAppExitTypeString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Server.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <MemberSignature Language="VB.NET" Value="Public Property MSBuildAppExitTypeString As String" />
+      <MemberSignature Language="F#" Value="member this.MSBuildAppExitTypeString : string with get, set" Usage="Microsoft.Build.Server.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MSBuildAppExitTypeString { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The build exit type. Possible values: MSBuildApp.ExitType serialized into a string.
+            This field is null if MSBuild client execution was not successful.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildClientExitType">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Server.MSBuildClientExitType MSBuildClientExitType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Server.MSBuildClientExitType MSBuildClientExitType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Server.MSBuildClientExitResult.MSBuildClientExitType" />
+      <MemberSignature Language="VB.NET" Value="Public Property MSBuildClientExitType As MSBuildClientExitType" />
+      <MemberSignature Language="F#" Value="member this.MSBuildClientExitType : Microsoft.Build.Server.MSBuildClientExitType with get, set" Usage="Microsoft.Build.Server.MSBuildClientExitResult.MSBuildClientExitType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Server::MSBuildClientExitType MSBuildClientExitType { Microsoft::Build::Server::MSBuildClientExitType get(); void set(Microsoft::Build::Server::MSBuildClientExitType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The MSBuild client exit type.
+            Covers different ways MSBuild client execution can finish.
+            Build errors are not included. The client could finish successfully and the build at the same time could result in a build error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerProcessExitCode">
+      <MemberSignature Language="C#" Value="public int? ServerProcessExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ServerProcessExitCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Server.MSBuildClientExitResult.ServerProcessExitCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ServerProcessExitCode As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.ServerProcessExitCode : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Build.Server.MSBuildClientExitResult.ServerProcessExitCode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;int&gt; ServerProcessExitCode { Nullable&lt;int&gt; get(); void set(Nullable&lt;int&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When this client launched a server child process and that process had already exited
+            by the time we observed the connection failure, this is its exit code. <c>null</c>
+            otherwise (server still running, never launched, or its state could not be queried).
+            Hosts use this to surface "server crashed immediately on launch" to the user instead
+            of a generic timeout message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

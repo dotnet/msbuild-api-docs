@@ -1,0 +1,121 @@
+<Type Name="OutOfProcServerNode" FullName="Microsoft.Build.Server.OutOfProcServerNode">
+  <TypeSignature Language="C#" Value="public sealed class OutOfProcServerNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutOfProcServerNode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Server.OutOfProcServerNode" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OutOfProcServerNode" />
+  <TypeSignature Language="F#" Value="type OutOfProcServerNode = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class OutOfProcServerNode sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class represents an implementation of INode for out-of-proc server nodes aka MSBuild server
+            </summary>
+    <remarks>
+            This type is public only so that the MSBuild command-line application can host the MSBuild server;
+            third-party use is not expected or supported. It exists to wrap the MSBuild CLI and offers nothing
+            beyond it, so invoke the CLI instead.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfProcServerNode (Microsoft.Build.Server.OutOfProcServerNode.BuildCallback buildFunction, string? instanceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Server.OutOfProcServerNode/BuildCallback buildFunction, string instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Server.OutOfProcServerNode.#ctor(Microsoft.Build.Server.OutOfProcServerNode.BuildCallback,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buildFunction As OutOfProcServerNode.BuildCallback, Optional instanceId As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Server.OutOfProcServerNode : Microsoft.Build.Server.OutOfProcServerNode.BuildCallback * string -&gt; Microsoft.Build.Server.OutOfProcServerNode" Usage="new Microsoft.Build.Server.OutOfProcServerNode (buildFunction, instanceId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildFunction" Type="Microsoft.Build.Server.OutOfProcServerNode+BuildCallback" />
+        <Parameter Name="instanceId" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="msbuild-18-netcore">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="buildFunction">To be added.</param>
+        <param name="instanceId">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentBuildShutsDownServerNode">
+      <MemberSignature Language="C#" Value="public static bool CurrentBuildShutsDownServerNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Server.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CurrentBuildShutsDownServerNode As Boolean" />
+      <MemberSignature Language="F#" Value="static member CurrentBuildShutsDownServerNode : bool" Usage="Microsoft.Build.Server.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CurrentBuildShutsDownServerNode { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether the build currently being served by this server node will tear the node down afterward
+            instead of leaving it resident for reuse (a "short-lived" server — a <c>/mt</c> build with node reuse
+            off). Only meaningful from within a server build callback; written and read on the same build thread,
+            so no synchronization is needed. Public because MSBuild.exe reads it and Microsoft.Build exposes no
+            InternalsVisibleTo to it.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.NodeEngineShutdownReason Run (out Exception? shutdownException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.Build.Execution.NodeEngineShutdownReason Run([out] class System.Exception&amp; shutdownException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Server.OutOfProcServerNode.Run(System.Exception@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Run (ByRef shutdownException As Exception) As NodeEngineShutdownReason" />
+      <MemberSignature Language="F#" Value="abstract member Run : Exception -&gt; Microsoft.Build.Execution.NodeEngineShutdownReason&#xA;override this.Run : Exception -&gt; Microsoft.Build.Execution.NodeEngineShutdownReason" Usage="outOfProcServerNode.Run shutdownException" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Build::Execution::NodeEngineShutdownReason Run([Runtime::InteropServices::Out] Exception ^ % shutdownException);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.NodeEngineShutdownReason</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdownException" Type="System.Exception" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="shutdownException">The exception which caused shutdown, if any.</param>
+        <summary>
+            Starts up the server node and processes all build requests until the server is requested to shut down.
+            </summary>
+        <returns>The reason for shutting down.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

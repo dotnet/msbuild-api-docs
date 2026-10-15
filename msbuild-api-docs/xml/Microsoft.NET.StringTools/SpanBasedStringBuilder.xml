@@ -1,0 +1,575 @@
+<Type Name="SpanBasedStringBuilder" FullName="Microsoft.NET.StringTools.SpanBasedStringBuilder">
+  <TypeSignature Language="C#" Value="public class SpanBasedStringBuilder : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpanBasedStringBuilder extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.NET.StringTools.SpanBasedStringBuilder" />
+  <TypeSignature Language="VB.NET" Value="Public Class SpanBasedStringBuilder&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SpanBasedStringBuilder = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SpanBasedStringBuilder : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A StringBuilder replacement that keeps a list of <see cref="T:System.ReadOnlyMemory`1" /> spans making up the intermediate string rather
+            than a copy of its characters. This has positive impact on both memory (no need to allocate space for the intermediate string)
+            and time (no need to copy characters to the intermediate string).
+            </summary>
+    <remarks>
+            The <see cref="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.ToString" /> method tries to intern the resulting string without even allocating it if it's already interned.
+            Use <see cref="M:Microsoft.NET.StringTools.Strings.GetSpanBasedStringBuilder" /> to take advantage of pooling to eliminate allocation overhead of this class.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpanBasedStringBuilder (int capacity = 4);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional capacity As Integer = 4)" />
+      <MemberSignature Language="F#" Value="new Microsoft.NET.StringTools.SpanBasedStringBuilder : int -&gt; Microsoft.NET.StringTools.SpanBasedStringBuilder" Usage="new Microsoft.NET.StringTools.SpanBasedStringBuilder capacity" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">To be added.</param>
+        <summary>
+            Constructs a new empty SpanBasedStringBuilder with the given expected number of spans.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpanBasedStringBuilder (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (str As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.NET.StringTools.SpanBasedStringBuilder : string -&gt; Microsoft.NET.StringTools.SpanBasedStringBuilder" Usage="new Microsoft.NET.StringTools.SpanBasedStringBuilder str" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SpanBasedStringBuilder(System::String ^ str);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">The string to wrap, must be non-null.</param>
+        <summary>
+            Constructs a new SpanBasedStringBuilder containing the given string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (ReadOnlyMemory&lt;char&gt; span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(valuetype System.ReadOnlyMemory`1&lt;char&gt; span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.ReadOnlyMemory{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Append (span As ReadOnlyMemory(Of Char))" />
+      <MemberSignature Language="F#" Value="member this.Append : ReadOnlyMemory&lt;char&gt; -&gt; unit" Usage="spanBasedStringBuilder.Append span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Append(ReadOnlyMemory&lt;char&gt; span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="System.ReadOnlyMemory&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="span">The character span to append.</param>
+        <summary>
+            Appends a character span represented by <see cref="T:System.ReadOnlyMemory`1" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (string? value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Append (value As String)" />
+      <MemberSignature Language="F#" Value="member this.Append : string -&gt; unit" Usage="spanBasedStringBuilder.Append value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Append(System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The string to append.</param>
+        <summary>
+            Appends a string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (string value, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(string value, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.String,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Append (value As String, startIndex As Integer, count As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Append : string * int * int -&gt; unit" Usage="spanBasedStringBuilder.Append (value, startIndex, count)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Append(System::String ^ value, int startIndex, int count);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">The string to append.</param>
+        <param name="startIndex">The start index of the substring within <paramref name="value" /> to append.</param>
+        <param name="count">The length of the substring to append.</param>
+        <summary>
+            Appends a substring.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Capacity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Capacity As Integer" />
+      <MemberSignature Language="F#" Value="member this.Capacity : int" Usage="Microsoft.NET.StringTools.SpanBasedStringBuilder.Capacity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Capacity { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the capacity of the SpanBasedStringBuilder in terms of number of spans it can hold without allocating.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="spanBasedStringBuilder.Clear " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears this instance making it represent an empty string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="spanBasedStringBuilder.Dispose " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases this instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (ReadOnlySpan&lt;char&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.ReadOnlySpan`1&lt;char&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ReadOnlySpan(Of Char)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : ReadOnlySpan&lt;char&gt; -&gt; bool" Usage="spanBasedStringBuilder.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(ReadOnlySpan&lt;char&gt; other);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (string other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(string other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : string -&gt; bool" Usage="spanBasedStringBuilder.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(System::String ^ other);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (ReadOnlySpan&lt;char&gt; other, StringComparison comparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.ReadOnlySpan`1&lt;char&gt; other, valuetype System.StringComparison comparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.ReadOnlySpan{System.Char},System.StringComparison)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ReadOnlySpan(Of Char), comparison As StringComparison) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : ReadOnlySpan&lt;char&gt; * StringComparison -&gt; bool" Usage="spanBasedStringBuilder.Equals (other, comparison)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(ReadOnlySpan&lt;char&gt; other, StringComparison comparison);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+        <Parameter Name="comparison" Type="System.StringComparison" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <param name="comparison">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (string other, StringComparison comparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(string other, valuetype System.StringComparison comparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.String,System.StringComparison)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As String, comparison As StringComparison) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : string * StringComparison -&gt; bool" Usage="spanBasedStringBuilder.Equals (other, comparison)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(System::String ^ other, StringComparison comparison);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.String" />
+        <Parameter Name="comparison" Type="System.StringComparison" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <param name="comparison">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public Microsoft.NET.StringTools.SpanBasedStringBuilder.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.NET.StringTools.SpanBasedStringBuilder/Enumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As SpanBasedStringBuilder.Enumerator" />
+      <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.NET.StringTools.SpanBasedStringBuilder.Enumerator" Usage="spanBasedStringBuilder.GetEnumerator " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::NET::StringTools::SpanBasedStringBuilder::Enumerator GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.NET.StringTools.SpanBasedStringBuilder+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new enumerator for enumerating characters in this string. Does not allocate.
+            </summary>
+        <returns>The enumerator.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public char this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As Char" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : char" Usage="Microsoft.NET.StringTools.SpanBasedStringBuilder.Item" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property char default[int] { char get(int index); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Microsoft.NET.StringTools.SpanBasedStringBuilder.Length" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Length { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the length of the string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="spanBasedStringBuilder.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts this instance to a System.String while first searching for a match in the intern table.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            May allocate depending on whether the string has already been interned.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trim">
+      <MemberSignature Language="C#" Value="public void Trim ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Trim() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Trim" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Trim ()" />
+      <MemberSignature Language="F#" Value="member this.Trim : unit -&gt; unit" Usage="spanBasedStringBuilder.Trim " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Trim();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes leading and trailing white-space characters from the string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trim">
+      <MemberSignature Language="C#" Value="public void Trim (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Trim(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Trim(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Trim (c As Char)" />
+      <MemberSignature Language="F#" Value="member this.Trim : char -&gt; unit" Usage="spanBasedStringBuilder.Trim c" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Trim(char c);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimEnd">
+      <MemberSignature Language="C#" Value="public void TrimEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimEnd" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrimEnd ()" />
+      <MemberSignature Language="F#" Value="member this.TrimEnd : unit -&gt; unit" Usage="spanBasedStringBuilder.TrimEnd " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TrimEnd();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes trailing white-space characters from the string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimEnd">
+      <MemberSignature Language="C#" Value="public void TrimEnd (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimEnd(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimEnd(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrimEnd (c As Char)" />
+      <MemberSignature Language="F#" Value="member this.TrimEnd : char -&gt; unit" Usage="spanBasedStringBuilder.TrimEnd c" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TrimEnd(char c);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimStart">
+      <MemberSignature Language="C#" Value="public void TrimStart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimStart() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimStart" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrimStart ()" />
+      <MemberSignature Language="F#" Value="member this.TrimStart : unit -&gt; unit" Usage="spanBasedStringBuilder.TrimStart " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TrimStart();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes leading white-space characters from the string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimStart">
+      <MemberSignature Language="C#" Value="public void TrimStart (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimStart(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimStart(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrimStart (c As Char)" />
+      <MemberSignature Language="F#" Value="member this.TrimStart : char -&gt; unit" Usage="spanBasedStringBuilder.TrimStart c" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TrimStart(char c);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

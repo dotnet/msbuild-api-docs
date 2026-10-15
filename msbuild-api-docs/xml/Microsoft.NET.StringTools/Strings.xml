@@ -1,0 +1,182 @@
+<Type Name="Strings" FullName="Microsoft.NET.StringTools.Strings">
+  <TypeSignature Language="C#" Value="public static class Strings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Strings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.NET.StringTools.Strings" />
+  <TypeSignature Language="VB.NET" Value="Public Class Strings" />
+  <TypeSignature Language="F#" Value="type Strings = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Strings abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearCachedStrings">
+      <MemberSignature Language="C#" Value="public static void ClearCachedStrings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearCachedStrings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.ClearCachedStrings" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ClearCachedStrings ()" />
+      <MemberSignature Language="F#" Value="static member ClearCachedStrings : unit -&gt; unit" Usage="Microsoft.NET.StringTools.Strings.ClearCachedStrings " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void ClearCachedStrings();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDiagnosticReport">
+      <MemberSignature Language="C#" Value="public static string CreateDiagnosticReport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateDiagnosticReport() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.CreateDiagnosticReport" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateDiagnosticReport () As String" />
+      <MemberSignature Language="F#" Value="static member CreateDiagnosticReport : unit -&gt; string" Usage="Microsoft.NET.StringTools.Strings.CreateDiagnosticReport " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ CreateDiagnosticReport();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves the diagnostic data describing the current state of the interner. Make sure to call <see cref="M:Microsoft.NET.StringTools.Strings.EnableDiagnostics" /> beforehand.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDiagnostics">
+      <MemberSignature Language="C#" Value="public static void EnableDiagnostics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableDiagnostics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.EnableDiagnostics" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub EnableDiagnostics ()" />
+      <MemberSignature Language="F#" Value="static member EnableDiagnostics : unit -&gt; unit" Usage="Microsoft.NET.StringTools.Strings.EnableDiagnostics " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void EnableDiagnostics();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enables diagnostics in the interner. Call <see cref="M:Microsoft.NET.StringTools.Strings.CreateDiagnosticReport" /> to retrieve the diagnostic data.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSpanBasedStringBuilder">
+      <MemberSignature Language="C#" Value="public static Microsoft.NET.StringTools.SpanBasedStringBuilder GetSpanBasedStringBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.NET.StringTools.SpanBasedStringBuilder GetSpanBasedStringBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.GetSpanBasedStringBuilder" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetSpanBasedStringBuilder () As SpanBasedStringBuilder" />
+      <MemberSignature Language="F#" Value="static member GetSpanBasedStringBuilder : unit -&gt; Microsoft.NET.StringTools.SpanBasedStringBuilder" Usage="Microsoft.NET.StringTools.Strings.GetSpanBasedStringBuilder " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::NET::StringTools::SpanBasedStringBuilder ^ GetSpanBasedStringBuilder();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.NET.StringTools.SpanBasedStringBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a new or recycled <see cref="T:Microsoft.NET.StringTools.SpanBasedStringBuilder" />.
+            </summary>
+        <returns>The SpanBasedStringBuilder.</returns>
+        <remarks>
+            Call <see cref="M:System.IDisposable.Dispose" /> on the returned instance to recycle it.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WeakIntern">
+      <MemberSignature Language="C#" Value="public static string WeakIntern (ReadOnlySpan&lt;char&gt; str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string WeakIntern(valuetype System.ReadOnlySpan`1&lt;char&gt; str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.WeakIntern(System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WeakIntern (str As ReadOnlySpan(Of Char)) As String" />
+      <MemberSignature Language="F#" Value="static member WeakIntern : ReadOnlySpan&lt;char&gt; -&gt; string" Usage="Microsoft.NET.StringTools.Strings.WeakIntern str" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ WeakIntern(ReadOnlySpan&lt;char&gt; str);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="str">The character span to intern.</param>
+        <summary>
+            Interns the given readonly span of characters, keeping only a weak reference to the returned value.
+            </summary>
+        <returns>A string equal to <paramref name="str" />, could be the result of calling ToString() on <paramref name="str" />.</returns>
+        <remarks>
+            The intern pool does not retain strong references to the strings it's holding so strings are automatically evicted
+            after they become unrooted. This is in contrast to <c>System.String.Intern</c> which holds strings forever.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WeakIntern">
+      <MemberSignature Language="C#" Value="public static string WeakIntern (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string WeakIntern(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.NET.StringTools.Strings.WeakIntern(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WeakIntern (str As String) As String" />
+      <MemberSignature Language="F#" Value="static member WeakIntern : string -&gt; string" Usage="Microsoft.NET.StringTools.Strings.WeakIntern str" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ WeakIntern(System::String ^ str);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.NET.StringTools</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">The string to intern.</param>
+        <summary>
+            Interns the given string, keeping only a weak reference to the returned value.
+            </summary>
+        <returns>A string equal to <paramref name="str" />, could be the same object as <paramref name="str" />.</returns>
+        <remarks>
+            The intern pool does not retain strong references to the strings it's holding so strings are automatically evicted
+            after they become unrooted. This is in contrast to <c>System.String.Intern</c> which holds strings forever.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
