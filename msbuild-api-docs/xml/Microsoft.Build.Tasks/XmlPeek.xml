@@ -152,8 +152,8 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Set to true to prohibit loading XML with embedded DTD and produce error MSB3733
-            if DTD is present. This was a pre-v15 behavior. By default, a DTD clause if any is ignored.
+            Prohibits loading XML with embedded DTD. When true (default), an error is raised if a DTD is present.
+            Set to false to opt out of DTD rejection and continue processing while ignoring the DTD.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

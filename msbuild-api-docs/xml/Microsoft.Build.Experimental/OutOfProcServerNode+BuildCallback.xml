@@ -5,10 +5,10 @@
   <TypeSignature Language="VB.NET" Value="Public Delegate Function OutOfProcServerNode.BuildCallback(commandLine As String) As ValueTuple(Of Integer, String) " FrameworkAlternate="msbuild-17" />
   <TypeSignature Language="F#" Value="type OutOfProcServerNode.BuildCallback = delegate of string -&gt; ValueTuple&lt;int, string&gt;" FrameworkAlternate="msbuild-17" />
   <TypeSignature Language="C++ CLI" Value="public: delegate ValueTuple&lt;int, System::String ^&gt; OutOfProcServerNode::BuildCallback(System::String ^ commandLine);" FrameworkAlternate="msbuild-17" />
-  <TypeSignature Language="C#" Value="public delegate (int exitCode, string exitType) OutOfProcServerNode.BuildCallback(string[] commandLine);" FrameworkAlternate="msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="VB.NET" Value="Public Delegate Function OutOfProcServerNode.BuildCallback(commandLine As String()) As ValueTuple(Of Integer, String) " FrameworkAlternate="msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="F#" Value="type OutOfProcServerNode.BuildCallback = delegate of string[] -&gt; ValueTuple&lt;int, string&gt;" FrameworkAlternate="msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
-  <TypeSignature Language="C++ CLI" Value="public: delegate ValueTuple&lt;int, System::String ^&gt; OutOfProcServerNode::BuildCallback(cli::array &lt;System::String ^&gt; ^ commandLine);" FrameworkAlternate="msbuild-17-netcore;msbuild-18;msbuild-18-netcore" />
+  <TypeSignature Language="C#" Value="public delegate (int exitCode, string exitType) OutOfProcServerNode.BuildCallback(string[] commandLine);" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function OutOfProcServerNode.BuildCallback(commandLine As String()) As ValueTuple(Of Integer, String) " FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="F#" Value="type OutOfProcServerNode.BuildCallback = delegate of string[] -&gt; ValueTuple&lt;int, string&gt;" FrameworkAlternate="msbuild-17-netcore" />
+  <TypeSignature Language="C++ CLI" Value="public: delegate ValueTuple&lt;int, System::String ^&gt; OutOfProcServerNode::BuildCallback(cli::array &lt;System::String ^&gt; ^ commandLine);" FrameworkAlternate="msbuild-17-netcore" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>15.1.0.0</AssemblyVersion>
@@ -22,11 +22,11 @@
   <ReturnValue>
     <ReturnType>System.ValueTuple&lt;System.Int32,System.String&gt;</ReturnType>
     <Attributes>
-      <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <Attribute>
         <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
         <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
       </Attribute>
-      <Attribute FrameworkAlternate="msbuild-17-netcore">
+      <Attribute>
         <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })]</AttributeName>
         <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "exitCode", "exitType" })&gt;]</AttributeName>
       </Attribute>

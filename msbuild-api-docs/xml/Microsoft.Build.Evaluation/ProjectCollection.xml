@@ -384,6 +384,56 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache, bool enableTargetOutputLogging, string parseConfigDirectory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int32 maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache, bool enableTargetOutputLogging, string parseConfigDirectory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (globalProperties As IDictionary(Of String, String), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord), toolsetDefinitionLocations As ToolsetDefinitionLocations, maxNodeCount As Integer, onlyLogCriticalEvents As Boolean, loadProjectsReadOnly As Boolean, useAsynchronousLogging As Boolean, reuseProjectRootElementCache As Boolean, enableTargetOutputLogging As Boolean, parseConfigDirectory As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.ProjectCollection : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; * Microsoft.Build.Evaluation.ToolsetDefinitionLocations * int * bool * bool * bool * bool * bool * string -&gt; Microsoft.Build.Evaluation.ProjectCollection" Usage="new Microsoft.Build.Evaluation.ProjectCollection (globalProperties, loggers, remoteLoggers, toolsetDefinitionLocations, maxNodeCount, onlyLogCriticalEvents, loadProjectsReadOnly, useAsynchronousLogging, reuseProjectRootElementCache, enableTargetOutputLogging, parseConfigDirectory)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ProjectCollection(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers, Microsoft::Build::Evaluation::ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents, bool loadProjectsReadOnly, bool useAsynchronousLogging, bool reuseProjectRootElementCache, bool enableTargetOutputLogging, System::String ^ parseConfigDirectory);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Registers loggers, which can load forwarding logger assemblies by reflection at runtime; incompatible with trimming.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Registers loggers, which can load forwarding logger assemblies by reflection at runtime; incompatible with trimming.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" Index="1" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" Index="2" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="toolsetDefinitionLocations" Type="Microsoft.Build.Evaluation.ToolsetDefinitionLocations" Index="3" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" Index="4" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="onlyLogCriticalEvents" Type="System.Boolean" Index="5" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="loadProjectsReadOnly" Type="System.Boolean" Index="6" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="useAsynchronousLogging" Type="System.Boolean" Index="7" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="reuseProjectRootElementCache" Type="System.Boolean" Index="8" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="enableTargetOutputLogging" Type="System.Boolean" Index="9" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+        <Parameter Name="parseConfigDirectory" Type="System.String" Index="10" FrameworkAlternate="msbuild-18;msbuild-18-netcore" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">To be added.</param>
+        <param name="loggers">To be added.</param>
+        <param name="remoteLoggers">To be added.</param>
+        <param name="toolsetDefinitionLocations">To be added.</param>
+        <param name="maxNodeCount">To be added.</param>
+        <param name="onlyLogCriticalEvents">To be added.</param>
+        <param name="loadProjectsReadOnly">To be added.</param>
+        <param name="useAsynchronousLogging">To be added.</param>
+        <param name="reuseProjectRootElementCache">To be added.</param>
+        <param name="enableTargetOutputLogging">To be added.</param>
+        <param name="parseConfigDirectory">To be added.</param>
+        <summary>
+            Instantiates a project collection with the specified parameters and a directory to search
+            for a Directory.Parse.config file (walked upward from the given directory).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AddToolset">
       <MemberSignature Language="C#" Value="public void AddToolset (Microsoft.Build.Evaluation.Toolset toolset);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddToolset(class Microsoft.Build.Evaluation.Toolset toolset) cil managed" />

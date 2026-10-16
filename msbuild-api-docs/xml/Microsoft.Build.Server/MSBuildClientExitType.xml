@@ -1,0 +1,170 @@
+<Type Name="MSBuildClientExitType" FullName="Microsoft.Build.Server.MSBuildClientExitType">
+  <TypeSignature Language="C#" Value="public enum MSBuildClientExitType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MSBuildClientExitType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Server.MSBuildClientExitType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MSBuildClientExitType" />
+  <TypeSignature Language="F#" Value="type MSBuildClientExitType = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class MSBuildClientExitType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Enumeration of the various ways in which an <see cref="T:Microsoft.Build.Server.MSBuildClient" /> execution can exit.
+            </summary>
+    <remarks>
+            This type is public only so that the MSBuild command-line application can host the MSBuild server;
+            third-party use is not expected or supported. The server APIs only work to wrap the MSBuild CLI,
+            so invoke the CLI instead.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LaunchError">
+      <MemberSignature Language="C#" Value="LaunchError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType LaunchError = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.LaunchError" />
+      <MemberSignature Language="VB.NET" Value="LaunchError" />
+      <MemberSignature Language="F#" Value="LaunchError = 3" Usage="Microsoft.Build.Server.MSBuildClientExitType.LaunchError" />
+      <MemberSignature Language="C++ CLI" Value="LaunchError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Client was unable to launch the server. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerBusy">
+      <MemberSignature Language="C#" Value="ServerBusy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType ServerBusy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.ServerBusy" />
+      <MemberSignature Language="VB.NET" Value="ServerBusy" />
+      <MemberSignature Language="F#" Value="ServerBusy = 1" Usage="Microsoft.Build.Server.MSBuildClientExitType.ServerBusy" />
+      <MemberSignature Language="C++ CLI" Value="ServerBusy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Server is busy. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.Success" />
+      <MemberSignature Language="VB.NET" Value="Success" />
+      <MemberSignature Language="F#" Value="Success = 0" Usage="Microsoft.Build.Server.MSBuildClientExitType.Success" />
+      <MemberSignature Language="C++ CLI" Value="Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The MSBuild client successfully processed the build request.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnableToConnect">
+      <MemberSignature Language="C#" Value="UnableToConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType UnableToConnect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.UnableToConnect" />
+      <MemberSignature Language="VB.NET" Value="UnableToConnect" />
+      <MemberSignature Language="F#" Value="UnableToConnect = 2" Usage="Microsoft.Build.Server.MSBuildClientExitType.UnableToConnect" />
+      <MemberSignature Language="C++ CLI" Value="UnableToConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Client was unable to connect to the server. This would invoke a fallback behavior.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unexpected">
+      <MemberSignature Language="C#" Value="Unexpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType Unexpected = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.Unexpected" />
+      <MemberSignature Language="VB.NET" Value="Unexpected" />
+      <MemberSignature Language="F#" Value="Unexpected = 4" Usage="Microsoft.Build.Server.MSBuildClientExitType.Unexpected" />
+      <MemberSignature Language="C++ CLI" Value="Unexpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The build stopped unexpectedly, for example,
+            because a named pipe between the server and the client was unexpectedly closed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownServerState">
+      <MemberSignature Language="C#" Value="UnknownServerState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Server.MSBuildClientExitType UnknownServerState = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Server.MSBuildClientExitType.UnknownServerState" />
+      <MemberSignature Language="VB.NET" Value="UnknownServerState" />
+      <MemberSignature Language="F#" Value="UnknownServerState = 5" Usage="Microsoft.Build.Server.MSBuildClientExitType.UnknownServerState" />
+      <MemberSignature Language="C++ CLI" Value="UnknownServerState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Server.MSBuildClientExitType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The client is not able to identify the server state.
+            </summary>
+        <remarks>
+            This may happen when mutex that is regulating the server state throws.
+            See: https://github.com/dotnet/msbuild/issues/7993.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

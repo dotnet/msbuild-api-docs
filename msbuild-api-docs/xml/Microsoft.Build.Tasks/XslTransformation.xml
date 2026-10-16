@@ -194,6 +194,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ProhibitDtd">
+      <MemberSignature Language="C#" Value="public bool ProhibitDtd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProhibitDtd" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XslTransformation.ProhibitDtd" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProhibitDtd As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ProhibitDtd : bool with get, set" Usage="Microsoft.Build.Tasks.XslTransformation.ProhibitDtd" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProhibitDtd { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prohibits loading XML with embedded DTD. When true (default), an error is raised if a DTD is present.
+            When false, DTDs are ignored. Never set to false for untrusted input.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TaskEnvironment">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskEnvironment TaskEnvironment { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.TaskEnvironment TaskEnvironment" />

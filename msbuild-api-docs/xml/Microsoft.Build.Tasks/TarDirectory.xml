@@ -1,0 +1,357 @@
+<Type Name="TarDirectory" FullName="Microsoft.Build.Tasks.TarDirectory">
+  <TypeSignature Language="C#" Value="public sealed class TarDirectory : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework.IIncrementalTask, Microsoft.Build.Framework.IMultiThreadableTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TarDirectory extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.IIncrementalTask, class Microsoft.Build.Framework.IMultiThreadableTask, class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.TarDirectory" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TarDirectory&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask, IIncrementalTask, IMultiThreadableTask" />
+  <TypeSignature Language="F#" Value="type TarDirectory = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask&#xA;    interface IIncrementalTask&#xA;    interface IMultiThreadableTask" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TarDirectory sealed : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask, Microsoft::Build::Framework::IIncrementalTask, Microsoft::Build::Framework::IMultiThreadableTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ICancelableTask</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IIncrementalTask</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IMultiThreadableTask</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[Microsoft.Build.Framework.MSBuildMultiThreadableTask]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.MSBuildMultiThreadableTask&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a task that can create a tar archive from a directory.
+            </summary>
+    <remarks>
+            This task uses the <see cref="N:System.Formats.Tar" /> APIs which are only available when MSBuild
+            runs on .NET (not .NET Framework). It is therefore registered to run only on the .NET runtime and
+            is unavailable in Visual Studio / MSBuild.exe.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TarDirectory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.TarDirectory.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TarDirectory();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.TarDirectory.Cancel" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Cancel ()" />
+      <MemberSignature Language="F#" Value="abstract member Cancel : unit -&gt; unit&#xA;override this.Cancel : unit -&gt; unit" Usage="tarDirectory.Cancel " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.ICancelableTask.Cancel</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.Build.Framework.ICancelableTask.Cancel" />
+      </Docs>
+    </Member>
+    <Member MemberName="Compression">
+      <MemberSignature Language="C#" Value="public string? Compression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Compression" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.Compression" />
+      <MemberSignature Language="VB.NET" Value="Public Property Compression As String" />
+      <MemberSignature Language="F#" Value="member this.Compression : string with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.Compression" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Compression { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the compression to apply to the tar archive. Supported values are <c>None</c> (the default),
+            <c>GZip</c> and <c>ZStandard</c>, matched case-insensitively.
+            This parameter is optional; when empty, no compression is applied.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Like <see cref="P:Microsoft.Build.Tasks.TarDirectory.Format" />, this is typed as <see cref="T:System.String" /> rather than <see cref="T:Microsoft.Build.Tasks.TarDirectory.TarCompression" />.
+            When .NET Framework MSBuild dispatches this task to the .NET task host it resolves each parameter type in
+            the parent process by assembly-qualified name; <see cref="T:Microsoft.Build.Tasks.TarDirectory.TarCompression" /> is nested in this task, which
+            exists only in the .NET build of Microsoft.Build.Tasks.Core, so the lookup would bind against the .NET
+            Framework build of that assembly and fail.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem DestinationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem DestinationFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.DestinationFile" />
+      <MemberSignature Language="VB.NET" Value="Public Property DestinationFile As ITaskItem" />
+      <MemberSignature Language="F#" Value="member this.DestinationFile : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.DestinationFile" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ DestinationFile { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
+          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a <see cref="T:Microsoft.Build.Framework.ITaskItem" /> with the path to the destination file to create.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterministicTimestamp">
+      <MemberSignature Language="C#" Value="public string? DeterministicTimestamp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeterministicTimestamp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.DeterministicTimestamp" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeterministicTimestamp As String" />
+      <MemberSignature Language="F#" Value="member this.DeterministicTimestamp : string with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.DeterministicTimestamp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DeterministicTimestamp { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets an optional timestamp to stamp on every entry in the archive in place of the source files'
+            last-write times. Supplying this value makes the produced archive reproducible across machines and runs.
+            The value may be an RFC 3339 date-time (for example, <c>2024-01-01T00:00:00Z</c>) or an integer number of
+            seconds since the Unix epoch (for example, <c>1704067200</c>, which is also the form of <c>SOURCE_DATE_EPOCH</c>).
+            When empty, each entry keeps its source file's last-write time (entries are always written in a
+            deterministic order regardless of this value).
+            This parameter is optional.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.TarDirectory.Execute" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="tarDirectory.Execute " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailIfNotIncremental">
+      <MemberSignature Language="C#" Value="public bool FailIfNotIncremental { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailIfNotIncremental" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.FailIfNotIncremental" />
+      <MemberSignature Language="VB.NET" Value="Public Property FailIfNotIncremental As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FailIfNotIncremental : bool with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.FailIfNotIncremental" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailIfNotIncremental { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Question the incremental nature of this task.
+            </summary>
+        <value>To be added.</value>
+        <remarks>This task does not support incremental build and will error out instead.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string? Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.Format" />
+      <MemberSignature Language="VB.NET" Value="Public Property Format As String" />
+      <MemberSignature Language="F#" Value="member this.Format : string with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.Format" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Format { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the tar entry format to use for the archive. Supported values are <c>Pax</c> (the default),
+            <c>Ustar</c>, <c>V7</c> and <c>Gnu</c>, matched case-insensitively.
+            This parameter is optional; when empty, <see cref="F:System.Formats.Tar.TarEntryFormat.Pax" /> is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is deliberately typed as <see cref="T:System.String" /> rather than <see cref="T:System.Formats.Tar.TarEntryFormat" />. When .NET
+            Framework MSBuild dispatches this task to the .NET task host it must still reflect over the task's
+            parameters in the parent process, resolving parameter types through a <c>MetadataLoadContext</c> whose
+            resolver only spans the task assembly's own directory, the MSBuild directory and the .NET Framework
+            runtime directory. System.Formats.Tar ships in the shared framework and is in none of those, so exposing
+            a type from it here would make the parameter unresolvable and fail the load in the parent.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overwrite">
+      <MemberSignature Language="C#" Value="public bool Overwrite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Overwrite" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.Overwrite" />
+      <MemberSignature Language="VB.NET" Value="Public Property Overwrite As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Overwrite : bool with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.Overwrite" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Overwrite { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether the destination file should be overwritten.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceDirectory">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem SourceDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem SourceDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.SourceDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public Property SourceDirectory As ITaskItem" />
+      <MemberSignature Language="F#" Value="member this.SourceDirectory : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.SourceDirectory" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ SourceDirectory { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Microsoft.Build.Framework.Required]</AttributeName>
+          <AttributeName Language="F#">[&lt;Microsoft.Build.Framework.Required&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a <see cref="T:Microsoft.Build.Framework.ITaskItem" /> with the path to the source directory to create a tar archive from.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskEnvironment">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskEnvironment TaskEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.TaskEnvironment TaskEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TarDirectory.TaskEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Property TaskEnvironment As TaskEnvironment" />
+      <MemberSignature Language="F#" Value="member this.TaskEnvironment : Microsoft.Build.Framework.TaskEnvironment with get, set" Usage="Microsoft.Build.Tasks.TarDirectory.TaskEnvironment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::TaskEnvironment ^ TaskEnvironment { Microsoft::Build::Framework::TaskEnvironment ^ get(); void set(Microsoft::Build::Framework::TaskEnvironment ^ value); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Build.Framework.IMultiThreadableTask.TaskEnvironment</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.Core</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
