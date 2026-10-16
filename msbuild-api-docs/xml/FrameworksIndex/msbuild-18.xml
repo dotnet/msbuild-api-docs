@@ -7,6 +7,7 @@
     <Assembly Name="Microsoft.Build.Framework" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Tasks.Core" Version="15.1.0.0" />
     <Assembly Name="Microsoft.Build.Utilities.Core" Version="15.1.0.0" />
+    <Assembly Name="Microsoft.NET.StringTools" Version="1.0.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Build.BackEnd.SdkResolution">
     <Type Name="Microsoft.Build.BackEnd.SdkResolution.SdkResolverException" Id="T:Microsoft.Build.BackEnd.SdkResolution.SdkResolverException">
@@ -1062,6 +1063,7 @@
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord},Microsoft.Build.Evaluation.ToolsetDefinitionLocations,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.AddToolset(Microsoft.Build.Evaluation.Toolset)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.ContainsToolset(System.String)" />
       <Member Id="M:Microsoft.Build.Evaluation.ProjectCollection.Dispose" />
@@ -2109,35 +2111,6 @@
       <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.ReadWrite" />
       <Member Id="F:Microsoft.Build.Experimental.FileAccess.RequestedAccess.Write" />
     </Type>
-  </Namespace>
-  <Namespace Name="Microsoft.Build.Experimental">
-    <Type Name="Microsoft.Build.Experimental.MSBuildClient" Id="T:Microsoft.Build.Experimental.MSBuildClient">
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String)" />
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.#ctor(System.String[],System.String,System.Boolean,System.Boolean)" />
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.Execute(System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
-    </Type>
-    <Type Name="Microsoft.Build.Experimental.MSBuildClientExitResult" Id="T:Microsoft.Build.Experimental.MSBuildClientExitResult">
-      <Member Id="M:Microsoft.Build.Experimental.MSBuildClientExitResult.#ctor" />
-      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildAppExitTypeString" />
-      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.MSBuildClientExitType" />
-      <Member Id="P:Microsoft.Build.Experimental.MSBuildClientExitResult.ServerProcessExitCode" />
-    </Type>
-    <Type Name="Microsoft.Build.Experimental.MSBuildClientExitType" Id="T:Microsoft.Build.Experimental.MSBuildClientExitType">
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.LaunchError" />
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.ServerBusy" />
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Success" />
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnableToConnect" />
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.Unexpected" />
-      <Member Id="F:Microsoft.Build.Experimental.MSBuildClientExitType.UnknownServerState" />
-    </Type>
-    <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode">
-      <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.#ctor(Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback)" />
-      <Member Id="M:Microsoft.Build.Experimental.OutOfProcServerNode.Run(System.Exception@)" />
-      <Member Id="P:Microsoft.Build.Experimental.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
-    </Type>
-    <Type Name="Microsoft.Build.Experimental.OutOfProcServerNode/BuildCallback" Id="T:Microsoft.Build.Experimental.OutOfProcServerNode.BuildCallback" />
   </Namespace>
   <Namespace Name="Microsoft.Build.Experimental.ProjectCache">
     <Type Name="Microsoft.Build.Experimental.ProjectCache.CacheContext" Id="T:Microsoft.Build.Experimental.ProjectCache.CacheContext">
@@ -4203,6 +4176,35 @@
       <Member Id="P:Microsoft.Build.ProjectCache.ProxyTargets.ProxyTargetToRealTargetMap" />
     </Type>
   </Namespace>
+  <Namespace Name="Microsoft.Build.Server">
+    <Type Name="Microsoft.Build.Server.MSBuildClient" Id="T:Microsoft.Build.Server.MSBuildClient">
+      <Member Id="M:Microsoft.Build.Server.MSBuildClient.#ctor(System.String[],System.String)" />
+      <Member Id="M:Microsoft.Build.Server.MSBuildClient.#ctor(System.String[],System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Server.MSBuildClient.#ctor(System.String[],System.String,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Build.Server.MSBuildClient.Execute(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Build.Server.MSBuildClient.ShutdownServer(System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Build.Server.MSBuildClientExitResult" Id="T:Microsoft.Build.Server.MSBuildClientExitResult">
+      <Member Id="M:Microsoft.Build.Server.MSBuildClientExitResult.#ctor" />
+      <Member Id="P:Microsoft.Build.Server.MSBuildClientExitResult.MSBuildAppExitTypeString" />
+      <Member Id="P:Microsoft.Build.Server.MSBuildClientExitResult.MSBuildClientExitType" />
+      <Member Id="P:Microsoft.Build.Server.MSBuildClientExitResult.ServerProcessExitCode" />
+    </Type>
+    <Type Name="Microsoft.Build.Server.MSBuildClientExitType" Id="T:Microsoft.Build.Server.MSBuildClientExitType">
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.LaunchError" />
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.ServerBusy" />
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.Success" />
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.UnableToConnect" />
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.Unexpected" />
+      <Member Id="F:Microsoft.Build.Server.MSBuildClientExitType.UnknownServerState" />
+    </Type>
+    <Type Name="Microsoft.Build.Server.OutOfProcServerNode" Id="T:Microsoft.Build.Server.OutOfProcServerNode">
+      <Member Id="M:Microsoft.Build.Server.OutOfProcServerNode.#ctor(Microsoft.Build.Server.OutOfProcServerNode.BuildCallback,System.String)" />
+      <Member Id="M:Microsoft.Build.Server.OutOfProcServerNode.Run(System.Exception@)" />
+      <Member Id="P:Microsoft.Build.Server.OutOfProcServerNode.CurrentBuildShutsDownServerNode" />
+    </Type>
+    <Type Name="Microsoft.Build.Server.OutOfProcServerNode/BuildCallback" Id="T:Microsoft.Build.Server.OutOfProcServerNode.BuildCallback" />
+  </Namespace>
   <Namespace Name="Microsoft.Build.Shared">
     <Type Name="Microsoft.Build.Shared.IMSBuildElementLocation" Id="T:Microsoft.Build.Shared.IMSBuildElementLocation">
       <Member Id="P:Microsoft.Build.Shared.IMSBuildElementLocation.Column" />
@@ -4742,6 +4744,7 @@
       <Member Id="M:Microsoft.Build.Tasks.GetAssembliesMetadata.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssembliesMetadata" />
       <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.AssemblyPaths" />
+      <Member Id="P:Microsoft.Build.Tasks.GetAssembliesMetadata.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.GetAssemblyIdentity" Id="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
       <Member Id="M:Microsoft.Build.Tasks.GetAssemblyIdentity.#ctor" />
@@ -5070,6 +5073,7 @@
       <Member Id="P:Microsoft.Build.Tasks.ResolveCodeAnalysisRuleSet.CodeAnalysisRuleSetDirectories" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveCodeAnalysisRuleSet.MSBuildProjectDirectory" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveCodeAnalysisRuleSet.ResolvedCodeAnalysisRuleSet" />
+      <Member Id="P:Microsoft.Build.Tasks.ResolveCodeAnalysisRuleSet.TaskEnvironment" />
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveComReference" Id="T:Microsoft.Build.Tasks.ResolveComReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveComReference.#ctor" />
@@ -5387,6 +5391,7 @@
       <Member Id="M:Microsoft.Build.Tasks.XmlPoke.#ctor" />
       <Member Id="M:Microsoft.Build.Tasks.XmlPoke.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Namespaces" />
+      <Member Id="P:Microsoft.Build.Tasks.XmlPoke.ProhibitDtd" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Query" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.XmlPoke.Value" />
@@ -5398,6 +5403,7 @@
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.OutputPaths" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.Parameters" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.PreserveWhitespace" />
+      <Member Id="P:Microsoft.Build.Tasks.XslTransformation.ProhibitDtd" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.TaskEnvironment" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.UseTrustedSettings" />
       <Member Id="P:Microsoft.Build.Tasks.XslTransformation.XmlContent" />
@@ -6749,6 +6755,51 @@
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version170" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.Version180" />
       <Member Id="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.NET.StringTools">
+    <Type Name="Microsoft.NET.StringTools.FowlerNollVo1aHash" Id="T:Microsoft.NET.StringTools.FowlerNollVo1aHash">
+      <Member Id="M:Microsoft.NET.StringTools.FowlerNollVo1aHash.Combine64(System.Int64,System.Int64)" />
+      <Member Id="M:Microsoft.NET.StringTools.FowlerNollVo1aHash.ComputeHash32(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.FowlerNollVo1aHash.ComputeHash32Fast(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.FowlerNollVo1aHash.ComputeHash64(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.FowlerNollVo1aHash.ComputeHash64Fast(System.String)" />
+    </Type>
+    <Type Name="Microsoft.NET.StringTools.SpanBasedStringBuilder" Id="T:Microsoft.NET.StringTools.SpanBasedStringBuilder">
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.#ctor(System.Int32)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.#ctor(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.ReadOnlyMemory{System.Char})" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Append(System.String,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Clear" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Dispose" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.ReadOnlySpan{System.Char})" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.ReadOnlySpan{System.Char},System.StringComparison)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.String)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Equals(System.String,System.StringComparison)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.GetEnumerator" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.ToString" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Trim" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Trim(System.Char)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimEnd" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimEnd(System.Char)" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimStart" />
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.TrimStart(System.Char)" />
+      <Member Id="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Capacity" />
+      <Member Id="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Item(System.Int32)" />
+      <Member Id="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Length" />
+    </Type>
+    <Type Name="Microsoft.NET.StringTools.SpanBasedStringBuilder/Enumerator" Id="T:Microsoft.NET.StringTools.SpanBasedStringBuilder.Enumerator">
+      <Member Id="M:Microsoft.NET.StringTools.SpanBasedStringBuilder.Enumerator.MoveNext" />
+      <Member Id="P:Microsoft.NET.StringTools.SpanBasedStringBuilder.Enumerator.Current" />
+    </Type>
+    <Type Name="Microsoft.NET.StringTools.Strings" Id="T:Microsoft.NET.StringTools.Strings">
+      <Member Id="M:Microsoft.NET.StringTools.Strings.ClearCachedStrings" />
+      <Member Id="M:Microsoft.NET.StringTools.Strings.CreateDiagnosticReport" />
+      <Member Id="M:Microsoft.NET.StringTools.Strings.EnableDiagnostics" />
+      <Member Id="M:Microsoft.NET.StringTools.Strings.GetSpanBasedStringBuilder" />
+      <Member Id="M:Microsoft.NET.StringTools.Strings.WeakIntern(System.ReadOnlySpan{System.Char})" />
+      <Member Id="M:Microsoft.NET.StringTools.Strings.WeakIntern(System.String)" />
     </Type>
   </Namespace>
   <Namespace Name="System.Deployment.Internal.CodeSigning">
