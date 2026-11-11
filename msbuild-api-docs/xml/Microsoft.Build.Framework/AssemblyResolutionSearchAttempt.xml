@@ -1,0 +1,195 @@
+<Type Name="AssemblyResolutionSearchAttempt" FullName="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyResolutionSearchAttempt" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AssemblyResolutionSearchAttempt extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AssemblyResolutionSearchAttempt" />
+  <TypeSignature Language="F#" Value="type AssemblyResolutionSearchAttempt = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AssemblyResolutionSearchAttempt sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes one candidate considered while resolving an assembly reference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string? AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.AssemblyName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssemblyName As String" />
+      <MemberSignature Language="F#" Value="member this.AssemblyName : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.AssemblyName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AssemblyName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the identity read from the candidate assembly when its fusion name did not match.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileNameAttempted">
+      <MemberSignature Language="C#" Value="public string? FileNameAttempted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileNameAttempted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.FileNameAttempted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FileNameAttempted As String" />
+      <MemberSignature Language="F#" Value="member this.FileNameAttempted : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.FileNameAttempted" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FileNameAttempted { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the candidate file name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssemblyFoldersExSearch">
+      <MemberSignature Language="C#" Value="public bool IsAssemblyFoldersExSearch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssemblyFoldersExSearch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.IsAssemblyFoldersExSearch" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAssemblyFoldersExSearch As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAssemblyFoldersExSearch : bool" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.IsAssemblyFoldersExSearch" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAssemblyFoldersExSearch { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this attempt represents a summarized AssemblyFoldersEx search.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentAssembly">
+      <MemberSignature Language="C#" Value="public string? ParentAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParentAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ParentAssembly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentAssembly As String" />
+      <MemberSignature Language="F#" Value="member this.ParentAssembly : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ParentAssembly" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParentAssembly { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parent assembly that contributed the search path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public string? ProcessorArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ProcessorArchitecture" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProcessorArchitecture As String" />
+      <MemberSignature Language="F#" Value="member this.ProcessorArchitecture : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ProcessorArchitecture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProcessorArchitecture { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the candidate processor architecture, when relevant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AssemblyResolutionSearchResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult Result" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.Result" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Result As AssemblyResolutionSearchResult" />
+      <MemberSignature Language="F#" Value="member this.Result : Microsoft.Build.Framework.AssemblyResolutionSearchResult" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.Result" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::AssemblyResolutionSearchResult Result { Microsoft::Build::Framework::AssemblyResolutionSearchResult get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the result of considering the candidate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchPath">
+      <MemberSignature Language="C#" Value="public string? SearchPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SearchPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.SearchPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SearchPath As String" />
+      <MemberSignature Language="F#" Value="member this.SearchPath : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.SearchPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SearchPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the search path that produced the candidate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

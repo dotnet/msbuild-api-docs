@@ -1,0 +1,81 @@
+<Type Name="AssemblyConflictDependee" FullName="Microsoft.Build.Framework.AssemblyConflictDependee">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyConflictDependee" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AssemblyConflictDependee extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyConflictDependee" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AssemblyConflictDependee" />
+  <TypeSignature Language="F#" Value="type AssemblyConflictDependee = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AssemblyConflictDependee sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes a reference that required the conflicting assembly.
+            It also identifies the project items that caused MSBuild to resolve the reference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DependeeFullPath">
+      <MemberSignature Language="C#" Value="public string DependeeFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DependeeFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictDependee.DependeeFullPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DependeeFullPath As String" />
+      <MemberSignature Language="F#" Value="member this.DependeeFullPath : string" Usage="Microsoft.Build.Framework.AssemblyConflictDependee.DependeeFullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DependeeFullPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the full path of the reference that depended on the conflicting assembly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceItemSpecs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; SourceItemSpecs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; SourceItemSpecs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictDependee.SourceItemSpecs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceItemSpecs As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SourceItemSpecs : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Framework.AssemblyConflictDependee.SourceItemSpecs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ SourceItemSpecs { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the item specs of the project items that caused <see cref="P:Microsoft.Build.Framework.AssemblyConflictDependee.DependeeFullPath" /> to be resolved.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

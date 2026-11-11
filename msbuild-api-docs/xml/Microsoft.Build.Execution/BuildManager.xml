@@ -172,7 +172,9 @@
             Prepares the BuildManager to receive build requests.
             </summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException">Thrown if a build is already in progress.</exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if a build is already in progress, or if file-access reporting and multi-threaded mode are both enabled.
+            </exception>
       </Docs>
     </Member>
     <Member MemberName="Build">

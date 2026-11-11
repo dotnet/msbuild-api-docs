@@ -2208,6 +2208,7 @@
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.#ctor(System.String,Microsoft.Build.Framework.AbsolutePath)" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.Equals(Microsoft.Build.Framework.AbsolutePath)" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Build.Framework.AbsolutePath.GetCanonicalForm" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.GetHashCode" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.op_Equality(Microsoft.Build.Framework.AbsolutePath,Microsoft.Build.Framework.AbsolutePath)" />
       <Member Id="M:Microsoft.Build.Framework.AbsolutePath.op_Implicit(Microsoft.Build.Framework.AbsolutePath)~System.String" />
@@ -2217,6 +2218,40 @@
       <Member Id="P:Microsoft.Build.Framework.AbsolutePath.Value" />
     </Type>
     <Type Name="Microsoft.Build.Framework.AnyEventHandler" Id="T:Microsoft.Build.Framework.AnyEventHandler" />
+    <Type Name="Microsoft.Build.Framework.AssemblyConflictDependee" Id="T:Microsoft.Build.Framework.AssemblyConflictDependee">
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictDependee.DependeeFullPath" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictDependee.SourceItemSpecs" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs" Id="T:Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs.FormatMessage(System.Globalization.CultureInfo)" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs.Message" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs.Victim" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictDependencyDetailsMessageEventArgs.Victor" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyConflictLossReason" Id="T:Microsoft.Build.Framework.AssemblyConflictLossReason">
+      <Member Id="F:Microsoft.Build.Framework.AssemblyConflictLossReason.DidNotLose" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyConflictLossReason.FusionEquivalentWithSameVersion" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyConflictLossReason.HadLowerVersion" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyConflictLossReason.InsolubleConflict" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyConflictLossReason.WasNotPrimary" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyConflictReferenceDetails" Id="T:Microsoft.Build.Framework.AssemblyConflictReferenceDetails">
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.Dependees" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FullPath" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FusionName" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsPrimary" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsResolved" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.PrimarySourceItemSpecs" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.UnresolvedPrimaryItemSpec" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyConflictWarningEventArgs" Id="T:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.FormatMessage(System.Globalization.CultureInfo)" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.LossReason" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.Message" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.SimpleAssemblyName" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.Victim" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyConflictWarningEventArgs.Victor" />
+    </Type>
     <Type Name="Microsoft.Build.Framework.AssemblyLoadBuildEventArgs" Id="T:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs">
       <Member Id="M:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.#ctor" />
       <Member Id="M:Microsoft.Build.Framework.AssemblyLoadBuildEventArgs.#ctor(Microsoft.Build.Framework.AssemblyLoadingContext,System.String,System.String,System.String,System.Guid,System.String,Microsoft.Build.Framework.MessageImportance)" />
@@ -2233,6 +2268,31 @@
       <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.LoggerInitialization" />
       <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.SdkResolution" />
       <Member Id="F:Microsoft.Build.Framework.AssemblyLoadingContext.TaskRun" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyResolutionSearchAttempt" Id="T:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt">
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.AssemblyName" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.FileNameAttempted" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.IsAssemblyFoldersExSearch" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ParentAssembly" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.ProcessorArchitecture" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.Result" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchAttempt.SearchPath" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyResolutionSearchResult" Id="T:Microsoft.Build.Framework.AssemblyResolutionSearchResult">
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.FileNotFound" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.FusionNamesDidNotMatch" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotAFileNameOnDisk" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotInGac" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.ProcessorArchitectureDoesNotMatch" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.TargetHadNoFusionName" />
+      <Member Id="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.Unknown" />
+    </Type>
+    <Type Name="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs" Id="T:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs">
+      <Member Id="M:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.FormatMessage(System.Globalization.CultureInfo)" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.Message" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.RequestedAssemblyName" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.SearchAttempts" />
+      <Member Id="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.TargetProcessorArchitecture" />
     </Type>
     <Type Name="Microsoft.Build.Framework.BuildCanceledEventArgs" Id="T:Microsoft.Build.Framework.BuildCanceledEventArgs">
       <Member Id="M:Microsoft.Build.Framework.BuildCanceledEventArgs.#ctor(System.String)" />
@@ -2951,6 +3011,7 @@
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariable(System.String)" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetEnvironmentVariables" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetProcessStartInfo" />
+      <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.GetTempPath" />
       <Member Id="M:Microsoft.Build.Framework.TaskEnvironment.SetEnvironmentVariable(System.String,System.String)" />
       <Member Id="P:Microsoft.Build.Framework.TaskEnvironment.Fallback" />
       <Member Id="P:Microsoft.Build.Framework.TaskEnvironment.ProjectDirectory" />
@@ -3343,7 +3404,10 @@
       <Member Id="P:Microsoft.Build.Logging.BinaryLogReaderErrorEventArgs.RecordKind" />
     </Type>
     <Type Name="Microsoft.Build.Logging.BinaryLogRecordKind" Id="T:Microsoft.Build.Logging.BinaryLogRecordKind">
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyConflictDependencyDetails" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyConflictWarning" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyLoad" />
+      <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.AssemblyResolutionSearchTrace" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCanceled" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCheckAcquisition" />
       <Member Id="F:Microsoft.Build.Logging.BinaryLogRecordKind.BuildCheckError" />
@@ -4765,6 +4829,7 @@
     </Type>
     <Type Name="Microsoft.Build.Tasks.ResolveAssemblyReference" Id="T:Microsoft.Build.Tasks.ResolveAssemblyReference">
       <Member Id="M:Microsoft.Build.Tasks.ResolveAssemblyReference.#ctor" />
+      <Member Id="M:Microsoft.Build.Tasks.ResolveAssemblyReference.Cancel" />
       <Member Id="M:Microsoft.Build.Tasks.ResolveAssemblyReference.Execute" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedAssemblyExtensions" />
       <Member Id="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedRelatedFileExtensions" />
