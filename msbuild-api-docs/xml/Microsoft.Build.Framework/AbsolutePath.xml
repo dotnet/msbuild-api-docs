@@ -150,6 +150,40 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetCanonicalForm">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath GetCanonicalForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Framework.AbsolutePath GetCanonicalForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AbsolutePath.GetCanonicalForm" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCanonicalForm () As AbsolutePath" />
+      <MemberSignature Language="F#" Value="member this.GetCanonicalForm : unit -&gt; Microsoft.Build.Framework.AbsolutePath" Usage="absolutePath.GetCanonicalForm " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::AbsolutePath GetCanonicalForm();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AbsolutePath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the canonical form of this path, equivalent to calling <see cref="M:System.IO.Path.GetFullPath(System.String)" />.
+            </summary>
+        <returns>
+            An <see cref="T:Microsoft.Build.Framework.AbsolutePath" /> representing the canonical form of the path.
+            </returns>
+        <remarks>
+          <para>
+            The canonical form of a path is exactly what <see cref="M:System.IO.Path.GetFullPath(System.String)" /> would produce,
+            with the following properties:
+            <list type="bullet"><item>All relative path segments ("." and "..") are resolved.</item><item>Directory separators are normalized to the platform convention (backslash on Windows).</item><item>Invalid path characters are rejected.</item></list></para>
+          <para>
+            Preserves the OriginalValue of the current instance.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetHashCode">
       <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />

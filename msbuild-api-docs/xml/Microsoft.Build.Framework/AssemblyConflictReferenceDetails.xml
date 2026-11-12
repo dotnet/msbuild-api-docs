@@ -1,0 +1,212 @@
+<Type Name="AssemblyConflictReferenceDetails" FullName="Microsoft.Build.Framework.AssemblyConflictReferenceDetails">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyConflictReferenceDetails" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AssemblyConflictReferenceDetails extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyConflictReferenceDetails" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AssemblyConflictReferenceDetails" />
+  <TypeSignature Language="F#" Value="type AssemblyConflictReferenceDetails = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AssemblyConflictReferenceDetails sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes the victor or victim of an assembly conflict.
+            It includes the references and project items that caused assembly resolution.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dependees">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyConflictDependee&gt; Dependees { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Framework.AssemblyConflictDependee&gt; Dependees" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.Dependees" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Dependees As IReadOnlyList(Of AssemblyConflictDependee)" />
+      <MemberSignature Language="F#" Value="member this.Dependees : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyConflictDependee&gt;" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.Dependees" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::AssemblyConflictDependee ^&gt; ^ Dependees { System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::AssemblyConflictDependee ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyConflictDependee&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the dependee references that required this reference.
+            Each entry also contains the project items that caused MSBuild to resolve the dependee.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string? FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FullPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullPath As String" />
+      <MemberSignature Language="F#" Value="member this.FullPath : string" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FullPath { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the resolved full path of this reference, when known.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FusionName">
+      <MemberSignature Language="C#" Value="public string FusionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FusionName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FusionName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FusionName As String" />
+      <MemberSignature Language="F#" Value="member this.FusionName : string" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.FusionName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FusionName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display identity (fusion name) of this reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimary">
+      <MemberSignature Language="C#" Value="public bool IsPrimary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsPrimary" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPrimary As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPrimary : bool" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsPrimary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPrimary { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value that indicates whether the project directly specified this primary reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsResolved">
+      <MemberSignature Language="C#" Value="public bool IsResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsResolved" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsResolved" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsResolved As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsResolved : bool" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsResolved" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsResolved { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value that indicates whether MSBuild resolved this reference to a file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimarySourceItemSpecs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;string&gt; PrimarySourceItemSpecs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; PrimarySourceItemSpecs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.PrimarySourceItemSpecs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrimarySourceItemSpecs As IReadOnlyList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.PrimarySourceItemSpecs : System.Collections.Generic.IReadOnlyList&lt;string&gt;" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.PrimarySourceItemSpecs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ PrimarySourceItemSpecs { System::Collections::Generic::IReadOnlyList&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the project items that caused MSBuild to resolve this primary reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnresolvedPrimaryItemSpec">
+      <MemberSignature Language="C#" Value="public string? UnresolvedPrimaryItemSpec { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UnresolvedPrimaryItemSpec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.UnresolvedPrimaryItemSpec" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UnresolvedPrimaryItemSpec As String" />
+      <MemberSignature Language="F#" Value="member this.UnresolvedPrimaryItemSpec : string" Usage="Microsoft.Build.Framework.AssemblyConflictReferenceDetails.UnresolvedPrimaryItemSpec" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UnresolvedPrimaryItemSpec { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the escaped include of the unresolved primary source item.
+            This value matches the text from the item's <c>ToString()</c> method.
+            The value is available when <see cref="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsPrimary" /> is <see langword="true" /> and <see cref="P:Microsoft.Build.Framework.AssemblyConflictReferenceDetails.IsResolved" /> is <see langword="false" />.
+            Otherwise, the value is <see langword="null" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

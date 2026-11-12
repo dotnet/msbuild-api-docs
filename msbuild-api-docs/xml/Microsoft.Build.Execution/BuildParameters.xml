@@ -887,7 +887,11 @@
             Enables running build in multiple in-proc nodes.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Multi-threaded builds use an empty sentinel current directory and check for process-directory
+            changes and unresolved relative-path writes when change wave 18.12 is enabled.
+            Cannot be enabled together with <c>ReportFileAccesses</c>.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="NodeExeLocation">
@@ -1125,7 +1129,7 @@
             Gets or sets a value indicating whether file accesses should be reported to any configured project cache plugins.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>Cannot be enabled together with <see cref="P:Microsoft.Build.Execution.BuildParameters.MultiThreaded" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ResetCaches">
