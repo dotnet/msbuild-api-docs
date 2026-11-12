@@ -1,0 +1,168 @@
+<Type Name="AssemblyResolutionSearchTraceEventArgs" FullName="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyResolutionSearchTraceEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AssemblyResolutionSearchTraceEventArgs extends Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AssemblyResolutionSearchTraceEventArgs&#xA;Inherits BuildMessageEventArgs" />
+  <TypeSignature Language="F#" Value="type AssemblyResolutionSearchTraceEventArgs = class&#xA;    inherit BuildMessageEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AssemblyResolutionSearchTraceEventArgs sealed : Microsoft::Build::Framework::BuildMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildMessageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="msbuild-18-netcore">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes all candidates considered while resolving one assembly reference.
+            </summary>
+    <remarks>
+            The <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" /> is rendered using the invariant culture.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormatMessage">
+      <MemberSignature Language="C#" Value="public string FormatMessage (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string FormatMessage(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.FormatMessage(System.Globalization.CultureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FormatMessage (culture As CultureInfo) As String" />
+      <MemberSignature Language="F#" Value="member this.FormatMessage : System.Globalization.CultureInfo -&gt; string" Usage="assemblyResolutionSearchTraceEventArgs.FormatMessage culture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ FormatMessage(System::Globalization::CultureInfo ^ culture);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">The culture to use when formatting the message.</param>
+        <summary>
+            Formats the message using resources and argument formatting for the specified culture.
+            </summary>
+        <returns>The formatted message.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="culture" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string? Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.Message" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Message { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedAssemblyName">
+      <MemberSignature Language="C#" Value="public string RequestedAssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestedAssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.RequestedAssemblyName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestedAssemblyName As String" />
+      <MemberSignature Language="F#" Value="member this.RequestedAssemblyName : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.RequestedAssemblyName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RequestedAssemblyName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the assembly identity being resolved.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchAttempts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyResolutionSearchAttempt&gt; SearchAttempts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.Build.Framework.AssemblyResolutionSearchAttempt&gt; SearchAttempts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.SearchAttempts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SearchAttempts As IReadOnlyList(Of AssemblyResolutionSearchAttempt)" />
+      <MemberSignature Language="F#" Value="member this.SearchAttempts : System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyResolutionSearchAttempt&gt;" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.SearchAttempts" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::AssemblyResolutionSearchAttempt ^&gt; ^ SearchAttempts { System::Collections::Generic::IReadOnlyList&lt;Microsoft::Build::Framework::AssemblyResolutionSearchAttempt ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.Build.Framework.AssemblyResolutionSearchAttempt&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the candidates considered while resolving this reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public string? TargetProcessorArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.TargetProcessorArchitecture" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetProcessorArchitecture As String" />
+      <MemberSignature Language="F#" Value="member this.TargetProcessorArchitecture : string" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchTraceEventArgs.TargetProcessorArchitecture" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetProcessorArchitecture { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="msbuild-18-netcore">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the targeted processor architecture.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

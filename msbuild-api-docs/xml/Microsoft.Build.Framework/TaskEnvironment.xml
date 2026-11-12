@@ -205,6 +205,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetTempPath">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath GetTempPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Build.Framework.AbsolutePath GetTempPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskEnvironment.GetTempPath" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTempPath () As AbsolutePath" />
+      <MemberSignature Language="F#" Value="member this.GetTempPath : unit -&gt; Microsoft.Build.Framework.AbsolutePath" Usage="taskEnvironment.GetTempPath " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Framework::AbsolutePath GetTempPath();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AbsolutePath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the temporary folder path for this task environment.
+            </summary>
+        <returns>The absolute temporary folder path, ending with a directory separator.</returns>
+        <remarks>
+            In multithreaded mode, this method resolves environment variables from the task-local environment.
+            The fallback environment uses the process environment.
+            This method does not verify that the path exists or that it is accessible.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ProjectDirectory">
       <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.AbsolutePath ProjectDirectory { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.AbsolutePath ProjectDirectory" />

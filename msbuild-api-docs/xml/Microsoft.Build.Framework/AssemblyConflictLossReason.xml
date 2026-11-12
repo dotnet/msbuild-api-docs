@@ -1,0 +1,134 @@
+<Type Name="AssemblyConflictLossReason" FullName="Microsoft.Build.Framework.AssemblyConflictLossReason">
+  <TypeSignature Language="C#" Value="public enum AssemblyConflictLossReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AssemblyConflictLossReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyConflictLossReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AssemblyConflictLossReason" />
+  <TypeSignature Language="F#" Value="type AssemblyConflictLossReason = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class AssemblyConflictLossReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Describes why a reference lost a conflict with another reference of the same simple name.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DidNotLose">
+      <MemberSignature Language="C#" Value="DidNotLose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyConflictLossReason DidNotLose = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyConflictLossReason.DidNotLose" />
+      <MemberSignature Language="VB.NET" Value="DidNotLose" />
+      <MemberSignature Language="F#" Value="DidNotLose = 0" Usage="Microsoft.Build.Framework.AssemblyConflictLossReason.DidNotLose" />
+      <MemberSignature Language="C++ CLI" Value="DidNotLose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyConflictLossReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The reference did not lose a conflict.
+            This value represents the internal "no conflict" state and does not occur in logged conflict events.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FusionEquivalentWithSameVersion">
+      <MemberSignature Language="C#" Value="FusionEquivalentWithSameVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyConflictLossReason FusionEquivalentWithSameVersion = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyConflictLossReason.FusionEquivalentWithSameVersion" />
+      <MemberSignature Language="VB.NET" Value="FusionEquivalentWithSameVersion" />
+      <MemberSignature Language="F#" Value="FusionEquivalentWithSameVersion = 4" Usage="Microsoft.Build.Framework.AssemblyConflictLossReason.FusionEquivalentWithSameVersion" />
+      <MemberSignature Language="C++ CLI" Value="FusionEquivalentWithSameVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyConflictLossReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The two references were equivalent according to fusion and also have the same version.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HadLowerVersion">
+      <MemberSignature Language="C#" Value="HadLowerVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyConflictLossReason HadLowerVersion = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyConflictLossReason.HadLowerVersion" />
+      <MemberSignature Language="VB.NET" Value="HadLowerVersion" />
+      <MemberSignature Language="F#" Value="HadLowerVersion = 1" Usage="Microsoft.Build.Framework.AssemblyConflictLossReason.HadLowerVersion" />
+      <MemberSignature Language="C++ CLI" Value="HadLowerVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyConflictLossReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The reference matched another assembly that had a higher version number.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InsolubleConflict">
+      <MemberSignature Language="C#" Value="InsolubleConflict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyConflictLossReason InsolubleConflict = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyConflictLossReason.InsolubleConflict" />
+      <MemberSignature Language="VB.NET" Value="InsolubleConflict" />
+      <MemberSignature Language="F#" Value="InsolubleConflict = 2" Usage="Microsoft.Build.Framework.AssemblyConflictLossReason.InsolubleConflict" />
+      <MemberSignature Language="C++ CLI" Value="InsolubleConflict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyConflictLossReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The two assemblies cannot be reconciled.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WasNotPrimary">
+      <MemberSignature Language="C#" Value="WasNotPrimary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyConflictLossReason WasNotPrimary = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyConflictLossReason.WasNotPrimary" />
+      <MemberSignature Language="VB.NET" Value="WasNotPrimary" />
+      <MemberSignature Language="F#" Value="WasNotPrimary = 3" Usage="Microsoft.Build.Framework.AssemblyConflictLossReason.WasNotPrimary" />
+      <MemberSignature Language="C++ CLI" Value="WasNotPrimary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyConflictLossReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            This reference was a dependency. The other reference was a primary reference that the project specified directly.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

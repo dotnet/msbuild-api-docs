@@ -1,0 +1,177 @@
+<Type Name="AssemblyResolutionSearchResult" FullName="Microsoft.Build.Framework.AssemblyResolutionSearchResult">
+  <TypeSignature Language="C#" Value="public enum AssemblyResolutionSearchResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AssemblyResolutionSearchResult extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AssemblyResolutionSearchResult" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AssemblyResolutionSearchResult" />
+  <TypeSignature Language="F#" Value="type AssemblyResolutionSearchResult = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class AssemblyResolutionSearchResult" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>15.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Describes why a candidate assembly did not resolve a reference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FileNotFound">
+      <MemberSignature Language="C#" Value="FileNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult FileNotFound = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.FileNotFound" />
+      <MemberSignature Language="VB.NET" Value="FileNotFound" />
+      <MemberSignature Language="F#" Value="FileNotFound = 1" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.FileNotFound" />
+      <MemberSignature Language="C++ CLI" Value="FileNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The candidate file did not exist.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FusionNamesDidNotMatch">
+      <MemberSignature Language="C#" Value="FusionNamesDidNotMatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult FusionNamesDidNotMatch = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.FusionNamesDidNotMatch" />
+      <MemberSignature Language="VB.NET" Value="FusionNamesDidNotMatch" />
+      <MemberSignature Language="F#" Value="FusionNamesDidNotMatch = 2" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.FusionNamesDidNotMatch" />
+      <MemberSignature Language="C++ CLI" Value="FusionNamesDidNotMatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The candidate assembly identity did not match the requested identity.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAFileNameOnDisk">
+      <MemberSignature Language="C#" Value="NotAFileNameOnDisk" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult NotAFileNameOnDisk = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotAFileNameOnDisk" />
+      <MemberSignature Language="VB.NET" Value="NotAFileNameOnDisk" />
+      <MemberSignature Language="F#" Value="NotAFileNameOnDisk = 5" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotAFileNameOnDisk" />
+      <MemberSignature Language="C++ CLI" Value="NotAFileNameOnDisk" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The candidate could not be treated as a file on disk.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotInGac">
+      <MemberSignature Language="C#" Value="NotInGac" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult NotInGac = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotInGac" />
+      <MemberSignature Language="VB.NET" Value="NotInGac" />
+      <MemberSignature Language="F#" Value="NotInGac = 4" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.NotInGac" />
+      <MemberSignature Language="C++ CLI" Value="NotInGac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The candidate assembly was not in the global assembly cache.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorArchitectureDoesNotMatch">
+      <MemberSignature Language="C#" Value="ProcessorArchitectureDoesNotMatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult ProcessorArchitectureDoesNotMatch = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.ProcessorArchitectureDoesNotMatch" />
+      <MemberSignature Language="VB.NET" Value="ProcessorArchitectureDoesNotMatch" />
+      <MemberSignature Language="F#" Value="ProcessorArchitectureDoesNotMatch = 6" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.ProcessorArchitectureDoesNotMatch" />
+      <MemberSignature Language="C++ CLI" Value="ProcessorArchitectureDoesNotMatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            The candidate processor architecture did not match the targeted architecture.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetHadNoFusionName">
+      <MemberSignature Language="C#" Value="TargetHadNoFusionName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult TargetHadNoFusionName = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.TargetHadNoFusionName" />
+      <MemberSignature Language="VB.NET" Value="TargetHadNoFusionName" />
+      <MemberSignature Language="F#" Value="TargetHadNoFusionName = 3" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.TargetHadNoFusionName" />
+      <MemberSignature Language="C++ CLI" Value="TargetHadNoFusionName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The candidate file did not have an assembly identity.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.AssemblyResolutionSearchResult Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.AssemblyResolutionSearchResult.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="Microsoft.Build.Framework.AssemblyResolutionSearchResult.Unknown" />
+      <MemberSignature Language="C++ CLI" Value="Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>15.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.AssemblyResolutionSearchResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The reason is unknown.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
